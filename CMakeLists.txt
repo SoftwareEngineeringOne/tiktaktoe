@@ -15,21 +15,24 @@ target_sources(
     entry_c.h
     entry_c.c
     main.c
-    hal_low/register_access.h
-    hal_low/register_access.c
+    hal_high/nvic.h
     hal_high/random.h
     hal_high/random.c
-    hal_high/uart.h
-    hal_high/uart.c
-    hal_high/nvic.h
     hal_high/timer.h
     hal_high/timer.c
-    output/field.c
+    hal_high/uart.h
+    hal_high/uart.c
+    hal_low/register_access.h
+    hal_low/register_access.c
+    interrupts/input.h
+    interrupts/input.c
+    interrupts/time.h
+    interrupts/time.c
     output/field.h
-    logic/game.c
+    output/field.c
     logic/game.h
-    interrupts/interrupt1.c
-    interrupts/interrupt1.h)
+    logic/game.c
+)
 
 target_link_libraries( testApp PRIVATE gcc )
 

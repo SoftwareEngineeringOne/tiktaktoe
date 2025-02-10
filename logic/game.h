@@ -10,7 +10,7 @@ typedef enum CursorDirection {
     DOWN,
     LEFT,
     RIGHT
-  } Timer;
+  } CursorDirection;
 
 /**
  * @brief Tries to move the cursor into the given direction

@@ -3,7 +3,7 @@
 #include "timer.h"
 #include "nvic.h"
 #include "uart.h"
-#include "register_access.h"
+#include "../hal_low/register_access.h"
 
 static const uint32_t TimerBase[3] =
 {

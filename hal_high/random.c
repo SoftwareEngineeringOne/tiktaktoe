@@ -1,6 +1,6 @@
 #include "random.h"
 
-#include "register_access.h"
+#include "../hal_low/register_access.h"
 
 #include <stdint.h>
 

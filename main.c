@@ -2,9 +2,9 @@
 // Created by infohoschie on 09.12.24.
 //
 
-#include "devices/random.h"
-#include "devices/uart.h"
-#include "devices/timer.h"
+#include "hal_high/random.h"
+#include "hal_high/uart.h"
+#include "hal_high/timer.h"
 
 #include <stdbool.h>
 

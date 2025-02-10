@@ -6,7 +6,13 @@ cmake_minimum_required( VERSION 3.22 )
 project( arm_cortex_m0_start LANGUAGES ASM C )
 
 # Define all Files:
-add_executable( testApp )
+add_executable( testApp
+        output/field.c
+        output/field.h
+        logic/game.c
+        logic/game.h
+        interrupts/interrupt1.c
+        interrupts/interrupt1.h)
 
 target_sources(
   testApp
@@ -23,15 +29,15 @@ target_sources(
     fibonacci.c
     faculty.h
     faculty.c
-    devices/register_access.h
-    devices/register_access.c
-    devices/random.h
-    devices/random.c
-    devices/uart.h
-    devices/uart.c
-    devices/nvic.h
-    devices/timer.h
-    devices/timer.c )
+        hal_low/register_access.h
+        hal_low/register_access.c
+        hal_high/random.h
+        hal_high/random.c
+        hal_high/uart.h
+        hal_high/uart.c
+        hal_high/nvic.h
+        hal_high/timer.h
+        hal_high/timer.c)
 
 target_link_libraries( testApp PRIVATE gcc )
 

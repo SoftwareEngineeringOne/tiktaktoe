@@ -11,7 +11,7 @@
  * @brief Generic Register-Access
  **/
 
-#include "register_access.h"
+#include "hal/register_access.h"
 
 void register_write(uint32_t address, uint32_t value)
 {

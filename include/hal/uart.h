@@ -1,4 +1,6 @@
 #include <stdint.h>
+#include <stdbool.h>
+#include "hal/interrupts.h"
 
 // Definitions ----------------------------------------------------------------
 
@@ -49,7 +51,7 @@
  * @brief Initializing the UART with the following Settings:
  * 115200-8-N-1
  */
-void uart_init();
+void uart_init(bool with_interrupts, interrupt_function on_rxrdy);
 
 /**
  * @brief Writes/Sends a byte over the serial Port

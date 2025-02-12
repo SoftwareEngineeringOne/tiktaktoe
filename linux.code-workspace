@@ -26,7 +26,7 @@
                 {
                     "name": "$(sync) (Re)start Qemu",
                     "color": "turquoise",
-                    "command": "qemu-system-arm -M microbit -device loader,file=build-cortex-m0/testApp.elf -nographic -S -s -serial mon:stdio",
+                    "command": "qemu-system-arm -M microbit -device loader,file=build-cortex-m0/game.elf -nographic -S -s -serial mon:stdio",
                     "singleInstance": true
                 },
                 {
@@ -49,7 +49,7 @@
                 "name": "Attach to qemu",
                 /* Depending on your Distribution, the gdb executable can be "gdb" or "gdb-multiarch" */
                 "gdbpath": "gdb-multiarch",
-                "executable": "./build-cortex-m0/testApp.elf",
+                "executable": "./build-cortex-m0/game.elf",
                 "target": "localhost:1234",
                 "remote": true,
                 "cwd": "${workspaceRoot}",
@@ -69,7 +69,7 @@
                     "-M",
                     "microbit",
                     "-device",
-                    "loader,file=build-cortex-m0/testApp.elf",
+                    "loader,file=build-cortex-m0/game.elf",
                     "-nographic",
                     "-S",
                     "-s",

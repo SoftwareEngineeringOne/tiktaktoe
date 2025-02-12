@@ -1,24 +1,11 @@
 #include <stdint.h>
 
-#include "uart.h"
-#include "timer.h"
-#include "../hal_low/register_access.h"
-#include "nvic.h"
+#include "hal/nvic.h"
+#include "hal/register_access.h"
+#include "hal/uart.h"
+#include "hal/interrupts.h"
 
-void Interrupt2_Handler(void);
-
-void Interrupt2_Handler(void)
-{
-  register_write(UART_BASE_ADDRESS | UART_RXDRDY, 0 );
-  register_write( Interrupt_ICPR, Interrupt_ID2 );
-
-  uart_readByte();
-  uart_writeByte('X');
-  timer_stop( TIMER0 );
-}
-
-void uart_init()
-{
+void uart_init(bool with_interrupts, interrupt_function on_rxrdy) {
 
   // set Flow-Controll and/or Parity (see Table 288, page 156) --------------
   // Hardware flow control: Disabled = 0 (default)
@@ -45,50 +32,48 @@ void uart_init()
   // register_write((UART_BASE_ADDRESS + UART_BAUDRATE), 0x01D7E000);
 
   // Enable UART ------------------------------------------------------------
-  register_write( ( UART_BASE_ADDRESS + UART_ENABLE ), 4 );
-
+  register_write((UART_BASE_ADDRESS + UART_ENABLE), 4);
 
   // Fire the START event for the Transmitter: ------------------------------
-  register_write( ( UART_BASE_ADDRESS + UART_STARTTX ), UART_TASK_START );
+  register_write((UART_BASE_ADDRESS + UART_STARTTX), UART_TASK_START);
 
   // Fire the START event for the Receiver: ---------------------------------
-  register_write( ( UART_BASE_ADDRESS + UART_STARTRX ), UART_TASK_START );
+  register_write((UART_BASE_ADDRESS + UART_STARTRX), UART_TASK_START);
 
+  if (with_interrupts) {
+    // Enable Interrupt
+    register_write((UART_BASE_ADDRESS | UART_INTENSET),
+                   UART_INT_RXDRDY); // Interrupt on Compare[0]
 
-  // Enable Interrupt
-  register_write((UART_BASE_ADDRESS | UART_INTENSET), UART_INT_RXDRDY ); // Interrupt on Compare[0]
+    // Enable User-Interrupt from Cortex-M0
+    // ID2 ist der UART
+    register_write(Interrupt_Set_Enable, Interrupt_ID2);
 
-  // Enable User-Interrupt from Cortex-M0
-  // ID2 ist der UART
-  register_write( Interrupt_Set_Enable, Interrupt_ID2 );
+    interrupt2 = on_rxrdy;
+  }
 }
 
-void uart_writeByte( uint8_t data )
-{
+void uart_writeByte(uint8_t data) {
   // write the data to the TXD register
-  register_write( ( UART_BASE_ADDRESS + UART_TXD ), data );
+  register_write((UART_BASE_ADDRESS + UART_TXD), data);
 
   // need to "wait" until its transmitted
 }
 
-uint8_t uart_readByte()
-{
+
+uint8_t uart_readByte() {
 
   // if not ready, return 0
-  uint32_t receiveIsReady =
-    register_read( ( UART_BASE_ADDRESS + UART_RXDRDY ) );
+  uint32_t receiveIsReady = register_read((UART_BASE_ADDRESS + UART_RXDRDY));
 
-  if ( receiveIsReady )
-  {
+  if (receiveIsReady) {
 
     // we have to CLEAR the event before reading out from RXD
-    register_write( ( UART_BASE_ADDRESS + UART_RXDRDY ), UART_EVENT_CLEAR );
+    register_write((UART_BASE_ADDRESS + UART_RXDRDY), UART_EVENT_CLEAR);
 
     // FIFO is ready to read something out of it
-    return register_read( ( UART_BASE_ADDRESS + UART_RXD ) );
-  }
-  else
-  {
+    return register_read((UART_BASE_ADDRESS + UART_RXD));
+  } else {
 
     // FIFO is not ready to read,
     // so return 0 instead
@@ -96,9 +81,7 @@ uint8_t uart_readByte()
   }
 }
 
-
-uint8_t uart_readByteBlocking()
-{
+uint8_t uart_readByteBlocking() {
 
   // TODO: Maybe this is a good idea ?
   // OR
@@ -109,16 +92,11 @@ uint8_t uart_readByteBlocking()
   return 0;
 }
 
-void uart_writeString( const char * string )
-{
-  while ( *string != '\0' )
-  {
-    uart_writeByte( *string );
+void uart_writeString(const char *string) {
+  while (*string != '\0') {
+    uart_writeByte(*string);
     ++string;
   }
 }
 
-void uart_writeNumber( uint8_t number )
-{
-  (void)number;
-}
+void uart_writeNumber(uint8_t number) { (void)number; }

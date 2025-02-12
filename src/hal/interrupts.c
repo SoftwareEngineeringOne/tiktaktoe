@@ -6,15 +6,16 @@
 
 #include <stddef.h>
 #include <hal/timer.h>
+#include "logic/input.h"
 
 interrupt_function interrupt2 = &default_handler;
 
 void Interrupt2_Handler(void) {
-  if(interrupt2 != NULL) {
+  /*if(interrupt2 != NULL) {
     interrupt2();
-  }
+  }*/
 
-  register_write(UART_BASE_ADDRESS | UART_RXDRDY, 0);
+  input_callFunction(uart_readByte());
   register_write(Interrupt_ICPR, Interrupt_ID2);
 }
 

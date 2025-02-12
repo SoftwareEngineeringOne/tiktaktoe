@@ -2,6 +2,7 @@
 #include "hal/timer.h"
 #include "hal/uart.h"
 #include "presentation/print.h"
+#include "presentation/field.h"
 
 #include <stdbool.h>
 
@@ -59,12 +60,8 @@ int main(void) {
   int_to_str(UINT32_MAX, buf2, sizeof(buf2));
   println_styled(buf2, &style2);
 
-  //  char myARRAY[]={ 'A','B','C' };
-  //  uart_writeString( myARRAY );
-
-  // randomNumberTest();
-
-  /* timerTest(); */
+  clear_console();
+  output_drawField();
 }
 
 static void waitRelease(void) {

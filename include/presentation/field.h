@@ -7,6 +7,8 @@
 
 #include <stdint.h>
 
+#define FIELD_SIZE 4
+
 /**
  * @brief Initial drawing of the playing field
  **/

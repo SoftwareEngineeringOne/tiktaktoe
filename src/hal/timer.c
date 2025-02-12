@@ -36,16 +36,6 @@ static const uint32_t TimerCaptureTaskOffset[4] =
   TIMER_CAPTURE_3
 };
 
-void Interrupt8_Handler(void);
-
-void Interrupt8_Handler(void)
-{
-  register_write( TIMER0_BASE_ADDRESS | TIMER_COMPARE_0, 0 );
-  register_write( Interrupt_ICPR, Interrupt_ID8 );
-
-  uart_writeString( ".\n");
-}
-
 void timer_init( Timer const timer )
 {
   // Init Timer with an interval of ~4sek

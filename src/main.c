@@ -80,8 +80,8 @@ static void randomNumberTest(void) {
   while (true) {
     uint8_t randomNumber = rng_getRandomValue_waiting();
 
-    uart_writeNumber(randomNumber);
-    uart_writeString("\n");
+    //uart_writeNumber(randomNumber);
+    //uart_writeString("\n");
   }
 }
 

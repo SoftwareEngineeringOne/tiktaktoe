@@ -3,47 +3,36 @@
 
 cmake_minimum_required( VERSION 3.22 )
 
-project( arm_cortex_m0_start LANGUAGES ASM C )
+project( game LANGUAGES ASM C )
 
 # Define all Files:
-add_executable( testApp )
+FILE(GLOB_RECURSE SOURCES "src/*.c")
+add_executable( game ${SOURCES} )
 
 target_sources(
-  testApp
+  game
   PRIVATE
-    entry.S
-    entry_c.h
-    entry_c.c
-    main.c
-    hal_high/nvic.h
-    hal_high/random.h
-    hal_high/random.c
-    hal_high/timer.h
-    hal_high/timer.c
-    hal_high/uart.h
-    hal_high/uart.c
-    hal_low/register_access.h
-    hal_low/register_access.c
-    interrupts/input.h
-    interrupts/input.c
-    interrupts/time.h
-    interrupts/time.c
-    output/field.h
-    output/field.c
-    logic/game.h
-    logic/game.c
+    ${CMAKE_SOURCE_DIR}/entry/entry.S
+    ${CMAKE_SOURCE_DIR}/entry/entry_c.c
+    ${CMAKE_SOURCE_DIR}/entry/entry_c.h
 )
 
-target_link_libraries( testApp PRIVATE gcc )
+target_include_directories(
+  game
+  PRIVATE
+  include
+)
+
+target_link_libraries( game PRIVATE gcc )
 
 target_link_options(
-  testApp
+  game
   PRIVATE
-    -Wl,-Map=testApp.map
-    -T ${CMAKE_SOURCE_DIR}/linker_script.lds )
+    -Wl,-Map=game.map
+    -T ${CMAKE_SOURCE_DIR}/entry/linker_script.lds )
 set_target_properties(
-  testApp
-  PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/linker_script.lds )
+  game
+  PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/entry/linker_script.lds )
 
 
 #####################################################################
@@ -55,11 +44,11 @@ set_target_properties(
 #arm-none-eabi-objcopy -O binary base.elf output.bin
 
 add_custom_command(
-  TARGET testApp
+  TARGET game
   POST_BUILD
   COMMAND "${OBJ_COPY}"
-  ARGS -O binary $<TARGET_FILE:testApp> $<TARGET_FILE_BASE_NAME:testApp>.bin )
+  ARGS -O binary $<TARGET_FILE:game> $<TARGET_FILE_BASE_NAME:game>.bin )
 
 set_target_properties(
-  testApp
-  PROPERTIES ADDITIONAL_CLEAN_FILES $<TARGET_FILE_BASE_NAME:testApp>.bin )
+  game
+  PROPERTIES ADDITIONAL_CLEAN_FILES $<TARGET_FILE_BASE_NAME:game>.bin )

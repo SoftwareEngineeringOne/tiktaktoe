@@ -29,9 +29,9 @@ __attribute__((used)) void entry_c( void )
   main();
 
   // endless loop
-  for (;;)
-  {
-  }
+  /* for (;;) */
+  /* { */
+  /* } */
 }
 static void zeroBss( void )
 {

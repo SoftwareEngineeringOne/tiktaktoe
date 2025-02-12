@@ -5,12 +5,12 @@
 #ifndef GAME_H
 #define GAME_H
 
-typedef enum CursorDirection {
+enum CursorDirection{
     UP,
     DOWN,
     LEFT,
     RIGHT
-  } CursorDirection;
+};
 
 /**
  * @brief Tries to move the cursor into the given direction

@@ -1,9 +1,9 @@
 #include <stdint.h>
 
-#include "timer.h"
-#include "nvic.h"
-#include "uart.h"
-#include "../hal_low/register_access.h"
+#include "hal/timer.h"
+#include "hal/nvic.h"
+#include "hal/uart.h"
+#include "hal/register_access.h"
 
 static const uint32_t TimerBase[3] =
 {

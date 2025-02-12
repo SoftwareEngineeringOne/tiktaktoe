@@ -66,7 +66,3 @@ void uart_writeByte(uint8_t data);
  * @return uint8_t received Byte or 0 (zero) if nothing was received
  */
 uint8_t uart_readByte();
-
-void uart_writeString( const char * string );
-
-void uart_writeNumber( uint8_t number );

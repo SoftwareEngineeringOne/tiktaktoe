@@ -91,12 +91,3 @@ uint8_t uart_readByteBlocking() {
 
   return 0;
 }
-
-void uart_writeString(const char *string) {
-  while (*string != '\0') {
-    uart_writeByte(*string);
-    ++string;
-  }
-}
-
-void uart_writeNumber(uint8_t number) { (void)number; }

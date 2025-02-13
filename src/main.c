@@ -32,9 +32,10 @@ int main(void) {
   // waitRelease();
 
   uart_init(true, &on_rxrdy_interrupt);
+  /* output_initFields(); */
   /* uart_writeString( "Hello World!\n" ); */
-  print("Hello,");
-  println(" World!");
+  print("Hello,"); println(" World!");
+
 
   Style style1 = {
       .fg_color = FG_GREEN,
@@ -47,18 +48,6 @@ int main(void) {
       .bg_color = DEFAULT,
       .font_style = DEFAULT,
   };
-
-  clear_console();
-  char buf[12];
-  int_to_str(0, buf, sizeof(buf));
-  print("Zero: ");
-  char output[256];
-  println_styled(buf, &style1);
-  print(RESET);
-  char buf2[12];
-  print("Max: ");
-  int_to_str(UINT32_MAX, buf2, sizeof(buf2));
-  println_styled(buf2, &style2);
 
   clear_console();
   output_drawField();

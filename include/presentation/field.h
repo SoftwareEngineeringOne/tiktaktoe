@@ -7,7 +7,30 @@
 
 #include <stdint.h>
 
-#define FIELD_SIZE 4
+#define FIELDS_PER_ROW 4
+#define FIELDS_PER_COL 4
+
+#define FIELD_HEIGHT 3
+#define FIELD_WIDTH 3
+
+#define CORNER_TOP_LEFT "┌"
+#define CORNER_TOP_RIGHT "┐"
+#define CORNER_BOTTOM_LEFT "└"
+#define CORNER_BOTTOM_RIGHT "┘"
+#define SIDE "│"    
+#define TOP_BOTTOM "─"
+
+typedef struct {
+  uint16_t top;
+  uint16_t left;
+    char* color;
+} Field;
+
+static Field fields[FIELDS_PER_ROW][FIELDS_PER_COL];
+
+void output_initFields();
+
+void output_changeFieldColor(Field field, char* color);
 
 /**
  * @brief Initial drawing of the playing field
@@ -44,4 +67,8 @@ void output_setField(uint8_t posX, uint8_t posY, char symbol);
  **/
 void output_setTimer(uint8_t seconds);
 
+
+// Private stuff
+void assignChar(uint8_t row, uint8_t col, uint16_t top, uint16_t left, char* color);
+void updateField(Field field);
 #endif //FIELD_H

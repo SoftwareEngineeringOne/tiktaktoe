@@ -8,40 +8,65 @@
 #include <stddef.h>
 #include <stdint.h>
 
-void output_drawField() {
-    const uint8_t row_length = (FIELDS_PER_ROW * FIELD_WIDTH);
-    char* divider[row_length + 8];
-    char* non_divider[row_length + 8];
-
-    uint8_t offset = 0;
+void print_row(char** row, size_t row_length) {
     for(uint8_t i = 0; i < row_length; i++) {
-        if(i % ((FIELD_WIDTH)) == 0) {
-            divider[i + offset] = "┼";
-            non_divider[i + offset] = SIDE;
-        } else if(i % ((FIELD_WIDTH) + 1) == 0) {
-            divider[i + offset] = "┼";
-            non_divider[i + offset] = SIDE;
-            offset++;
-            i--;
+        print(row[i]);
+    }
+    print("\n");
+}
+
+void output_drawField() {
+    const uint8_t row_length = (FIELDS_PER_ROW * FIELD_WIDTH) + 1;
+    char* divider[row_length];
+    char* top_divider[row_length];
+    char* bot_divider[row_length];
+    char* non_divider[row_length];
+
+    for(uint8_t i = 0; i < row_length; i++) {
+        if(i == 0) {
+            divider[i] = "├";
+            top_divider[i] = "┌";
+            bot_divider[i] = "└";
+            non_divider[i] = "│";
+        } else if(i == (row_length -1 )) {
+            divider[i] = "┤";
+            top_divider[i] = "┐";
+            bot_divider[i] = "┘";
+            non_divider[i] = "│";
+
+        } else if(i % ((FIELD_WIDTH)) == 0) {
+            divider[i] = "┼";
+            top_divider[i] = "┬";
+            bot_divider[i] = "┴";
+            non_divider[i] = "│";
         } else {
-            divider[i + offset] = TOP_BOTTOM;
-            non_divider[i + offset] = " ";
+            divider[i] = "─";
+            top_divider[i] = "─";
+            bot_divider[i] = "─";
+            non_divider[i] = " ";
         }
          
         
     }
 
-    divider[row_length] = "\0";
-    non_divider[row_length] = "\0";
+    /* print_row(divider, row_length); */
+    /* print_row(non_divider, row_length); */
+    print_row(top_divider, row_length);
 
-    for(uint8_t y = 0; y < FIELDS_PER_COL; y++) {
-        println(divider);
-        println(non_divider);
-        println(divider);
+    uint8_t first = 0;
+    for(uint8_t i = 0; i < FIELDS_PER_COL; i++) {
+        if(first == 0) {
+            first = 1;
+        } else {
+            print_row(divider, row_length);
+        }
+        for(uint8_t j = 0; j < FIELD_HEIGHT - 2; j++) {
+            print_row(non_divider, row_length);
+        }
     }
-
-
+    print_row(bot_divider, row_length);
 }
+
 
 /* void updateField(Field field) { */
 /*         for (uint8_t row = 0; row < FIELD_HEIGHT; row++) { */

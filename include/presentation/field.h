@@ -7,8 +7,8 @@
 
 #include <stdint.h>
 
-#define FIELDS_PER_ROW 4
-#define FIELDS_PER_COL 4
+#define FIELDS_PER_ROW 5
+#define FIELDS_PER_COL 5
 
 #define FIELD_HEIGHT 3
 #define FIELD_WIDTH 3

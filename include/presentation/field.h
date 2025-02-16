@@ -6,69 +6,58 @@
 #define FIELD_H
 
 #include <stdint.h>
+#include <stddef.h>
+#include "def.h"
+#include "presentation/cell.h"
 
-#define FIELDS_PER_ROW 5
-#define FIELDS_PER_COL 5
+#define CELLS_PER_ROW 4
+#define CELLS_PER_COL 4
 
-#define FIELD_HEIGHT 3
-#define FIELD_WIDTH 3
+#define FIELD_X_OFFSET 1
+#define FIELD_Y_OFFSET 1
 
-#define CORNER_TOP_LEFT "┌"
-#define CORNER_TOP_RIGHT "┐"
-#define CORNER_BOTTOM_LEFT "└"
-#define CORNER_BOTTOM_RIGHT "┘"
-#define SIDE "│"    
+
+#define UNICODE// if not UNICODE then ascii automatically
+
+#ifdef UNICODE
+#define CORNER_TOP_LEFT "╭"
+#define CORNER_BOT_LEFT "╰"
+#define CORNER_TOP_RIGHT "╮"
+#define CORNER_BOT_RIGHT "╯"
+
+#define T_LEFT "├"
+#define T_RIGHT "┤"
+#define T_TOP "┬"
+#define T_BOT "┴"
+
+#define CROSS "┼"
+
+#define SIDE "│"
 #define TOP_BOTTOM "─"
+#define EMPTY " "
+#else
+#define CORNER_TOP_LEFT "+"
+#define CORNER_BOT_LEFT "+"
+#define CORNER_TOP_RIGHT "+"
+#define CORNER_BOT_RIGHT "+"
 
-typedef struct {
-  uint16_t top;
-  uint16_t left;
-    char* color;
-} Field;
+#define T_LEFT "+"
+#define T_RIGHT "+"
+#define T_TOP "+"
+#define T_BOT "+"
 
-static Field fields[FIELDS_PER_ROW][FIELDS_PER_COL];
+#define CROSS "+"
 
-void output_initFields();
-
-void output_changeFieldColor(Field field, char* color);
+#define SIDE "|"
+#define TOP_BOTTOM "-"
+#define EMPTY " "
+#endif
 
 /**
  * @brief Initial drawing of the playing field
  **/
-void output_drawField();
+void field_redraw();
 
-/**
- * @brief Draws the cursor of the player on the given field
- *
- * @param[in] posX
- *   X coordinate
- * @param[in] posY
- *   Y coordinate
- **/
-void output_setCursor(uint8_t posX, uint8_t posY);
+static void printRow(char **row, const size_t row_length);
 
-/**
- * @brief Draws the given character on the given field
- *
- * @param[in] posX
- *   X coordinate
- * @param[in] posY
- *   Y coordinate
- * @param[in] symbol
- *   Character to draw
- **/
-void output_setField(uint8_t posX, uint8_t posY, char symbol);
-
-/**
- * @brief Draws the new time on the screen
- *
- * @param[in] seconds
- *   Time in seconds
- **/
-void output_setTimer(uint8_t seconds);
-
-
-// Private stuff
-void assignChar(uint8_t row, uint8_t col, uint16_t top, uint16_t left, char* color);
-void updateField(Field field);
-#endif //FIELD_H
+#endif// FIELD_H

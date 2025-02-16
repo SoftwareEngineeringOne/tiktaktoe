@@ -1,10 +1,8 @@
-//
-// Created by paul on 2/12/25.
-//
-
 #ifndef INPUT_H
 #define INPUT_H
 
-void input_callFunction(char input);
+#include "logic/game.h"
 
-#endif //INPUT_H
+void input_handleEscapeSequence(Cell *selected_cell);
+
+#endif// !INPUT_H

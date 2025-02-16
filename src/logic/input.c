@@ -1,25 +1,34 @@
-//
-// Created by paul on 2/12/25.
-//
-
 #include "logic/input.h"
+#include "hal_high/input_buf.h"
+#include "presentation/cell.h"
 
-#include "logic/game.h"
-#include "presentation/field.h"
-#include "presentation/print.h"
+void input_handleEscapeSequence(Cell *selected_cell)
+{
+    uint8_t input = '\0';
+    if(!input_getNext(&input_buf, &input) || input != '[')
+    {
+        return;
+    }
 
-int x = 0;
-int y = 0;
-void input_callFunction(char input){
-    print("Hello");
-    
-  /*   if(++x > 4) { */
-  /*   x = 0; */
-  /*   y++; */
-  /* } */
-  /* clear_console(); */
-  /* output_drawField(); */
-    /* switch (input){ */
-    /*   case ' ': logic_markPosition(); */
-    /* } */
+    if(!input_getNext(&input_buf, &input))
+    {
+        return;
+    }
+
+    switch(input)
+    {
+        case 'A':
+            cell_moveUp(selected_cell);
+            break;
+        case 'B':
+            cell_moveDown(selected_cell);
+            break;
+        case 'C':
+            cell_moveRight(selected_cell);
+            break;
+        case 'D':
+            cell_moveLeft(selected_cell);
+            break;
+        default:;
+    }
 }

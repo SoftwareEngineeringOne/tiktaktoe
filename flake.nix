@@ -19,6 +19,7 @@
           nativeBuildInputs = with pkgs; [
             gcc-arm-embedded
             gdb
+            clang-tools_19
             cmake
           ];
 

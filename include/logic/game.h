@@ -5,34 +5,35 @@
 #ifndef GAME_H
 #define GAME_H
 
-enum CursorDirection{
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
-};
+#include "hal_high/input_buf.h"
+#include <stdint.h>
 
-/**
- * @brief Tries to move the cursor into the given direction
- *
- * @param[in] direction
- *   One of the main directions
- **/
-void logic_moveCursor(enum CursorDirection direction);
+typedef enum
+{
+    Human,
+    Computer,
+    None
+} Mark;
+
+typedef struct
+{
+        uint16_t col;
+        uint16_t row;
+        Mark marked_by;
+} Cell;
+
+extern volatile InputBuffer input_buf;
+
+void game_run();
 
 /**
  * @brief Tries to mark the current position
  **/
-void logic_markPosition();
+void game_markPosition();
 
 /**
  * @brief Increase the clock by one second
  **/
-void logic_updateTime();
+void game_updateTime();
 
-/**
- * @brief Exits the game
- **/
-void logic_quit();
-
-#endif //GAME_H
+#endif// GAME_H

@@ -18,19 +18,29 @@
 
 #define BOLD "\e[1m"
 
-typedef struct {
-    char* fg_color;
-    char* bg_color;
-    char* font_style;
+#define INVERSE "\e[7m"
+
+#define HIDE_CURSOR "\e[?25l"
+#define SHOW_CURSOR "\e[?25h"
+
+#define ASCII_NUM_OFFSET 48
+
+typedef struct
+{
+        char *fg_color;
+        char *bg_color;
+        char *font_style;
 } Style;
 
-void clear_console();
-void print(const char* string);
-void println(const char* string);
+void clearConsole();
+void print(const char *string);
+void println(const char *string);
 
-void print_styled(const char* string, const Style* style);
-void println_styled(const char* string, const Style* style);
+void printStyled(const char *string, const Style *style);
+void printlnStyled(const char *string, const Style *style);
 
-int8_t int_to_str(uint32_t num, char* buf, size_t buf_size);
+int8_t int_to_str(uint32_t num, char *buf, size_t buf_size);
 
-#endif // !PRINT_H
+char int_to_char(uint8_t num);
+
+#endif// !PRINT_H

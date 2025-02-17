@@ -1,10 +1,12 @@
 #include "logic/game.h"
 
+#include "hal_low/nvic.h"
 #include "hal_high/input_buf.h"
 #include "logic/input.h"
 #include "presentation/cell.h"
 #include "presentation/field.h"
 #include "presentation/print.h"
+
 
 void game_run()
 {
@@ -23,7 +25,9 @@ void game_run()
     cell_select(&cell);
     while(true)
     {
-        while(!input_getNext(&input_buf, &input)) {}
+        while(!input_getNext(&input_buf, &input)) {
+            __WFI();
+        }
 
         bool should_redraw = false;
         bool should_quit = false;

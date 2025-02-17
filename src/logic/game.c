@@ -6,6 +6,7 @@
 #include "presentation/cell.h"
 #include "presentation/field.h"
 #include "presentation/print.h"
+#include "logic/time.h"
 
 
 void game_run()
@@ -21,6 +22,7 @@ void game_run()
     };
 
     clearConsole();
+    time_init();
     field_redraw();
     cell_select(&cell);
     while(true)
@@ -73,4 +75,12 @@ void game_run()
 
 void game_markPosition()
 {
+}
+
+void game_updateTime() {
+    if (time_roundTicks == (TICKS_PER_ROUND-1)) {
+        time_roundTicks = 0;
+        //TODO: Change player
+    }
+    time_update();
 }

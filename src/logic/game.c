@@ -1,13 +1,14 @@
 #include "logic/game.h"
 
 #include "hal_low/nvic.h"
+#include "hal_low/uart.h"
 #include "hal_high/input_buf.h"
 #include "logic/input.h"
 #include "presentation/cell.h"
+#include "presentation/cursor.h"
 #include "presentation/field.h"
 #include "presentation/print.h"
 #include "logic/time.h"
-
 
 void game_run()
 {
@@ -16,10 +17,11 @@ void game_run()
 
     static uint8_t input;
 
-    Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
-    for (int y=0; y<CELLS_PER_COL; y++) {
-        for (int x=0; x<CELLS_PER_ROW; x++) {
-            cells[y][x] = (Cell) {
+    for(int y = 0; y < CELLS_PER_COL; y++)
+    {
+        for(int x = 0; x < CELLS_PER_ROW; x++)
+        {
+            cells[y][x] = (Cell){
                 .col = x,
                 .row = y,
                 .marked_by = None,
@@ -27,37 +29,38 @@ void game_run()
         }
     }
 
-    Cell *cell = &cells[0][0];
+    Cell *selected_cell = &cells[2][2];
 
     clearConsole();
     time_init();
     field_redraw();
-    cell_select(cell);
+    cell_select(selected_cell);
     while(true)
     {
-        while(!input_getNext(&input_buf, &input)) {
+        while(!input_getNext(&input_buf, &input))
+        {
             __WFI();
         }
 
-        bool should_redraw = false;
+        bool should_redraw_field = false;
         bool should_quit = false;
         switch(input)
         {
             case '\e':
-                input_handleEscapeSequence(cells, cell);
+                input_handleEscapeSequence(cells, &selected_cell);
                 break;
             case ' ':
-                cell->marked_by = Human;
+                selected_cell->marked_by = Human;
                 break;
             case 'w':
                 CELL_HEIGHT += 1;
                 CELL_WIDTH += 1;
-                should_redraw = true;
+                should_redraw_field = true;
                 break;
             case 's':
                 CELL_HEIGHT -= 1;
                 CELL_WIDTH -= 1;
-                should_redraw = true;
+                should_redraw_field = true;
                 break;
             case 'q':
                 should_quit = true;
@@ -71,28 +74,44 @@ void game_run()
             break;
         }
 
-        if(should_redraw)
+        if(should_redraw_field)
         {
             clearConsole();
             field_redraw();
         }
 
-        cell_select(cell);
+        // For Debug
+        const char selected_col = int_to_char(selected_cell->col);
+        const char selected_row = int_to_char(selected_cell->row);
+        cursor_moveTo(1, 20);
+        print("Col: ");
+        uart_writeByte(selected_col);
+        print("\nRow: ");
+        uart_writeByte(selected_row);
+        // End Debug
+
+        cell_select(selected_cell);
     }
     println("Thanks for playing! Soon you'll see a menu here...");
     println("For now you can press \"CTR + A\" and then \"x\" to exit qemu!");
     print(SHOW_CURSOR);
-    __WFI();
+    while(true)
+    {
+        // Für deine CPU Usage noch besser :))
+        __WFI();
+    }
 }
 
 void game_markPosition()
 {
 }
 
-void game_updateTime() {
-    if (time_roundTicks == (TICKS_PER_ROUND-1)) {
+void game_updateTime()
+{
+    if(time_roundTicks == TICKS_PER_ROUND - 1)
+    {
         time_roundTicks = 0;
-        //TODO: Change player
+        // TODO: Change player
     }
     time_update();
 }

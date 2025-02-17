@@ -1,3 +1,4 @@
+#include "logic/game.h"
 #include "presentation/cursor.h"
 #include "presentation/field.h"
 #include "presentation/cell.h"
@@ -10,6 +11,7 @@ void cell_select(Cell *cell)
 {
     static uint16_t prev_top = 0;
     static uint16_t prev_left = 0;
+    static Mark prev_mark;
     static bool has_prev = false;
 
     // with +1 to account for top/left divider
@@ -18,7 +20,7 @@ void cell_select(Cell *cell)
     // with -2 account for dividers
     if(has_prev)
     {
-        redrawCell(prev_top, prev_left, RESET, cell->marked_by);
+        redrawCell(prev_top, prev_left, RESET, prev_mark);
     }
     else
     {
@@ -29,6 +31,7 @@ void cell_select(Cell *cell)
 
     prev_top = top;
     prev_left = left;
+    prev_mark = cell->marked_by;
 }
 
 void redrawCell(uint16_t top, uint16_t left, char *modifier, Mark marked_by)
@@ -43,7 +46,7 @@ void redrawCell(uint16_t top, uint16_t left, char *modifier, Mark marked_by)
 
         for(uint8_t j = 0; j < (CELL_WIDTH - 1); j++)
         {
-            switch (marked_by)
+            switch(marked_by)
             {
                 case Human:
                     print("X");
@@ -51,8 +54,9 @@ void redrawCell(uint16_t top, uint16_t left, char *modifier, Mark marked_by)
                 case Computer:
                     print("O");
                     break;
-                default:
+                case None:
                     print(" ");
+                    break;
             }
         }
 

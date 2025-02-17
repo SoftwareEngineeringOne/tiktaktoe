@@ -29,7 +29,7 @@ void game_run()
         }
     }
 
-    Cell *selected_cell = &cells[2][2];
+    Cell *selected_cell = &cells[0][0];
 
     clearConsole();
     time_init();

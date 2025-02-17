@@ -65,39 +65,3 @@ void redrawCell(uint16_t top, uint16_t left, char *modifier, Mark marked_by)
         print(RESET);
     }
 }
-
-bool cell_moveUp(Cell *selected_field)
-{
-    if(selected_field->row == 0)
-    {
-        return false;
-    }
-    return true;
-}
-
-bool cell_moveDown(Cell *selected_field)
-{
-    if(selected_field->row == (CELLS_PER_COL - 1))
-    {
-        return false;
-    }
-    return true;
-}
-
-bool cell_moveLeft(Cell *selected_field)
-{
-    if(selected_field->col == 0)
-    {
-        return false;
-    }
-    return true;
-}
-
-bool cell_moveRight(Cell *selected_field)
-{
-    if(selected_field->col == (CELLS_PER_ROW - 1))
-    {
-        return false;
-    }
-    return true;
-}

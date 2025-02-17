@@ -37,3 +37,5 @@
 // Useful for showing States and Pending Status
 
 #define ICSR 0xE000ED04// Interrupt Control and State Register
+
+inline void __WFI(void);

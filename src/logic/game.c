@@ -38,6 +38,9 @@ void game_run()
             case '\e':
                 input_handleEscapeSequence(&cell);
                 break;
+            case ' ':
+                cell.marked_by = Human;
+                break;
             case 'w':
                 CELL_HEIGHT += 1;
                 CELL_WIDTH += 1;

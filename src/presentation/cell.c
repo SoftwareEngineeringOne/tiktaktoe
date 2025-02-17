@@ -18,20 +18,20 @@ void cell_select(Cell *cell)
     // with -2 account for dividers
     if(has_prev)
     {
-        redrawCell(prev_top, prev_left, RESET);
+        redrawCell(prev_top, prev_left, RESET, cell->marked_by);
     }
     else
     {
         has_prev = true;
     }
 
-    redrawCell(top, left, INVERSE);
+    redrawCell(top, left, INVERSE, cell->marked_by);
 
     prev_top = top;
     prev_left = left;
 }
 
-void redrawCell(uint16_t top, uint16_t left, char *modifier)
+void redrawCell(uint16_t top, uint16_t left, char *modifier, Mark marked_by)
 {
     uint16_t bot = top + (CELL_HEIGHT - 2);
     uint16_t right = left + (CELL_WIDTH - 2);
@@ -43,7 +43,17 @@ void redrawCell(uint16_t top, uint16_t left, char *modifier)
 
         for(uint8_t j = 0; j < (CELL_WIDTH - 1); j++)
         {
-            print(" ");
+            switch (marked_by)
+            {
+                case Human:
+                    print("X");
+                    break;
+                case Computer:
+                    print("O");
+                    break;
+                default:
+                    print(" ");
+            }
         }
 
 

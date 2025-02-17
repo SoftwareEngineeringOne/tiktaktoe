@@ -7,8 +7,6 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include "def.h"
-#include "presentation/cell.h"
 
 #define CELLS_PER_ROW 4
 #define CELLS_PER_COL 4
@@ -58,6 +56,6 @@
  **/
 void field_redraw();
 
-static void printRow(char **row, const size_t row_length);
+static void printRow(char **row, size_t row_length);
 
 #endif// FIELD_H

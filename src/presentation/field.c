@@ -1,5 +1,6 @@
 #include "presentation/field.h"
 
+#include "presentation/cell.h"
 #include "presentation/print.h"
 #include <stddef.h>
 #include <stdint.h>

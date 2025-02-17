@@ -14,4 +14,4 @@ void time_init();
 
 void time_update();
 
-#endif //TIME_H
+#endif// TIME_H

@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include "def.h"
 #include "logic/game.h"
+#include "presentation/field.h"
 
 extern uint8_t CELL_WIDTH;
 extern uint8_t CELL_HEIGHT;

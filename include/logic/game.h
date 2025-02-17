@@ -6,6 +6,7 @@
 #define GAME_H
 
 #include "hal_high/input_buf.h"
+#include "presentation/field.h"
 #include <stdint.h>
 
 typedef enum
@@ -23,6 +24,8 @@ typedef struct
 } Cell;
 
 extern volatile InputBuffer input_buf;
+
+static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
 
 void game_run();
 

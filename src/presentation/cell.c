@@ -68,7 +68,6 @@ bool cell_moveUp(Cell *selected_field)
     {
         return false;
     }
-    selected_field->row -= 1;
     return true;
 }
 
@@ -78,7 +77,6 @@ bool cell_moveDown(Cell *selected_field)
     {
         return false;
     }
-    selected_field->row += 1;
     return true;
 }
 
@@ -88,7 +86,6 @@ bool cell_moveLeft(Cell *selected_field)
     {
         return false;
     }
-    selected_field->col -= 1;
     return true;
 }
 
@@ -98,6 +95,5 @@ bool cell_moveRight(Cell *selected_field)
     {
         return false;
     }
-    selected_field->col += 1;
     return true;
 }

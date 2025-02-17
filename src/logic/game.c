@@ -15,16 +15,24 @@ void game_run()
     print(HIDE_CURSOR);
 
     static uint8_t input;
-    static Cell cell = {
-        .col = 0,
-        .row = 0,
-        .marked_by = None,
-    };
+
+    Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
+    for (int y=0; y<CELLS_PER_COL; y++) {
+        for (int x=0; x<CELLS_PER_ROW; x++) {
+            cells[y][x] = (Cell) {
+                .col = x,
+                .row = y,
+                .marked_by = None,
+            };
+        }
+    }
+
+    Cell *cell = &cells[0][0];
 
     clearConsole();
     time_init();
     field_redraw();
-    cell_select(&cell);
+    cell_select(cell);
     while(true)
     {
         while(!input_getNext(&input_buf, &input)) {
@@ -36,10 +44,10 @@ void game_run()
         switch(input)
         {
             case '\e':
-                input_handleEscapeSequence(&cell);
+                input_handleEscapeSequence(cells, cell);
                 break;
             case ' ':
-                cell.marked_by = Human;
+                cell->marked_by = Human;
                 break;
             case 'w':
                 CELL_HEIGHT += 1;
@@ -69,7 +77,7 @@ void game_run()
             field_redraw();
         }
 
-        cell_select(&cell);
+        cell_select(cell);
     }
     println("Thanks for playing! Soon you'll see a menu here...");
     println("For now you can press \"CTR + A\" and then \"x\" to exit qemu!");

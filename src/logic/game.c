@@ -71,6 +71,7 @@ void game_run()
     println("Thanks for playing! Soon you'll see a menu here...");
     println("For now you can press \"CTR + A\" and then \"x\" to exit qemu!");
     print(SHOW_CURSOR);
+    __WFI();
 }
 
 void game_markPosition()

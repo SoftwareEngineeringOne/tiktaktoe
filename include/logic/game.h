@@ -42,7 +42,7 @@ static Player checkForWinner();
 
 static void handleForcedMoveUpdate();
 
-static bool checkIfPlayerWon(const Cell * cell, uint8_t cellsToWin, Player mark);
+static bool checkIfPlayerWon(const Cell * cell, Player mark);
 
 static bool handleInput(const uint8_t *input);
 

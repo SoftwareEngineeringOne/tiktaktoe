@@ -6,6 +6,7 @@
 #include "hal_low/register_access.h"
 #include "hal_low/timer.h"
 #include "hal_low/uart.h"
+#include "logic/time.h"
 
 #include <stddef.h>
 
@@ -25,7 +26,7 @@ void Interrupt8_Handler(void)
 {
     register_write(TIMER0_BASE_ADDRESS | TIMER_COMPARE_0, 0);
     register_write(Interrupt_ICPR, Interrupt_ID8);
-    game_updateTime();
+    time_onInterrupt();
 }
 
 void default_handler()

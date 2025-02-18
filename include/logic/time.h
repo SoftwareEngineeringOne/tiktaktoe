@@ -12,6 +12,8 @@ extern volatile int time_roundTicks;
 
 void time_init();
 
-void time_update();
+void time_onInterrupt();
+
+void time_finishRound();
 
 #endif// TIME_H

@@ -7,22 +7,39 @@
 #include "logic/game.h"
 #include "presentation/field.h"
 
-extern uint8_t CELL_WIDTH;
-extern uint8_t CELL_HEIGHT;
+#define NUM_OF_SIZES 3
+#define INITIAL_INDEX 1
+#define INITIAL_WIDTH 8
+#define INITIAL_HEIGHT 5
 
-void cell_select(Cell *field);
+static uint8_t size_index = INITIAL_INDEX;
+extern uint8_t cell_width ;
+extern uint8_t cell_height ;
 
-void cell_redraw(uint16_t row, uint16_t col, char *modifier, Mark marked_by);
+typedef struct {
+        uint8_t width;
+        uint8_t height;
+} CellSize;
+
+static CellSize VALID_SIZES[] = {
+{.width = 4, .height = 3},
+{.width = 8, .height = 5},
+{.width = 10, .height = 6},
+};
+
+
+void cell_redraw(Cell *cell);
+
+void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL]);
+
+void cell_select(Cell *cell);
+
+void redrawCell(uint8_t row, uint8_t col, char *modifier, Mark marked_by);
 
 void cell_mark(Cell *cell);
 
-bool cell_moveUp(Cell *selected_field);
-
-bool cell_moveDown(Cell *selected_field);
-
-bool cell_moveLeft(Cell *selected_field);
-
-bool cell_moveRight(Cell *selected_field);
+void cell_increaseSize();
+void cell_decreaseSize();
 
 
 #endif// !CELL_H

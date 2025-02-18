@@ -13,6 +13,8 @@
 #include "logic/time.h"
 #include "logic/bot.h"
 
+volatile uint8_t current_turn = 0;
+
 void game_run()
 {
     input_init(&input_buf);
@@ -33,18 +35,27 @@ void game_run()
         }
     }
 
-    Cell *selected_cell = &cells[0][0];
+    selected_cell = &cells[0][0];
 
     clearConsole();
     time_init();
     field_redraw();
     cell_select(selected_cell);
+    ui_displayTimer(REMAINING_TIME);
+    ui_displayTurn(current_turn, "Player");
+    uint8_t last_update = 0;
+    cell_redraw(bot_makeTurn(cells));
     while(true)
     {
-        ui_displayTimer(TICKS_PER_ROUND - time_roundTicks);
         while(!input_getNext(&input_buf, &input))
         {
-            ui_displayTimer(TICKS_PER_ROUND - time_roundTicks);
+            if(current_turn != last_update) {
+                last_update = current_turn;
+                cell_select(bot_cell);
+                cell_select(selected_cell);
+                ui_updateTurn(current_turn, "Player");
+            }
+            ui_updateTimer(REMAINING_TIME);
             __WFI();
         }
 
@@ -56,19 +67,21 @@ void game_run()
                 input_handleEscapeSequence(cells, &selected_cell);
                 break;
             case ' ':
-                if (selected_cell->marked_by == None) {
+                if(selected_cell->marked_by == None)
+                {
                     selected_cell->marked_by = Human;
-                    bot_makeTurn(cells);
+                    cell_redraw(bot_makeTurn(cells));
+                    current_turn++;
+                    ui_updateTurn(current_turn, "Player");
+                    time_finishRound();
                 }
                 break;
-            case 'w':
-                CELL_HEIGHT += 1;
-                CELL_WIDTH += 1;
+            case '+':
+                cell_increaseSize();
                 should_redraw_field = true;
                 break;
-            case 's':
-                CELL_HEIGHT -= 1;
-                CELL_WIDTH -= 1;
+            case '-':
+                cell_decreaseSize();
                 should_redraw_field = true;
                 break;
             case 'q':
@@ -77,7 +90,7 @@ void game_run()
             default:;
         }
 
-        if(should_quit)
+        if(should_quit || current_turn >= (CELLS_PER_COL * CELLS_PER_ROW) / 2)
         {
             clearConsole();
             break;
@@ -86,18 +99,11 @@ void game_run()
         if(should_redraw_field)
         {
             clearConsole();
+            ui_displayTurn(current_turn, "Player");
+            ui_displayTimer(REMAINING_TIME);
             field_redraw();
+            cell_redrawAll(cells);
         }
-
-        // For Debug
-        const char selected_col = int_to_char(selected_cell->col);
-        const char selected_row = int_to_char(selected_cell->row);
-        cursor_moveTo(1, 20);
-        print("Col: ");
-        uart_writeByte(selected_col);
-        print("\nRow: ");
-        uart_writeByte(selected_row);
-        // End Debug
 
         cell_select(selected_cell);
     }
@@ -111,16 +117,9 @@ void game_run()
     }
 }
 
-void game_markPosition()
+void game_onTimeOut()
 {
-}
-
-void game_updateTime()
-{
-    if(time_roundTicks == TICKS_PER_ROUND - 1)
-    {
-        time_roundTicks = 0;
-        // TODO: Change player
-    }
-    time_update();
+    selected_cell = bot_makeHumanTurn(cells);
+    bot_cell = bot_makeTurn(cells);
+    current_turn++;
 }

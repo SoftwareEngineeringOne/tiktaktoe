@@ -54,6 +54,7 @@ void game_run()
                 cell_select(bot_cell);
                 cell_select(selected_cell);
                 ui_updateTurn(current_turn, "Player");
+                game_checkGameState();
             }
             ui_updateTimer(REMAINING_TIME);
             __WFI();
@@ -70,11 +71,11 @@ void game_run()
                 if(selected_cell->marked_by == None)
                 {
                     selected_cell->marked_by = Human;
-                    cell_redraw(bot_makeTurn(cells));
+                    bot_cell = bot_makeTurn(cells);
+                    cell_redraw(bot_cell);
                     current_turn++;
                     ui_updateTurn(current_turn, "Player");
                     time_finishRound();
-                    game_checkGameState();
                 }
                 break;
             case '+':
@@ -125,33 +126,44 @@ void game_checkGameState()
     const int8_t botX = bot_cell->col;
     const int8_t botY = bot_cell->row;
 
-    if(game_playerHasWon(playerX, playerY, cellsToWin, Human)) {
+    if(game_playerHasWon(playerX, playerY, cellsToWin, Human))
+    {
         print("Human has won!");
     }
-    if(game_playerHasWon(botX, botY, cellsToWin, Computer)) {
+    if(game_playerHasWon(botX, botY, cellsToWin, Computer))
+    {
         print("Computer has won!");
     }
 }
 
-uint8_t game_playerHasWon(uint8_t x, uint8_t y, uint8_t cellsToWin, Mark mark) {
+uint8_t game_playerHasWon(uint8_t x, uint8_t y, uint8_t cellsToWin, Mark mark)
+{
     uint8_t vert = 1, hori = 1, diag1 = 1, diag2 = 1;
-    for(int8_t i = 0; i < cellsToWin; i++) {
-        if(!(cells[i][x].marked_by==mark)) {
+    for(int8_t i = 0; i < cellsToWin; i++)
+    {
+        if(!(cells[i][x].marked_by==mark))
+        {
             vert = 0;
         }
-        if(!(cells[y][i].marked_by==mark)) {
+        if(!(cells[y][i].marked_by==mark))
+        {
             hori = 0;
         }
-        if(!(cells[i][i].marked_by==mark)) {
+        if(!(cells[i][i].marked_by==mark))
+        {
             diag1 = 0;
         }
-        if(!(cells[i][cellsToWin-1-i].marked_by==mark)) {
+        if(!(cells[i][cellsToWin-1-i].marked_by==mark))
+        {
             diag2 = 0;
         }
     }
-    if(vert || hori || diag1 || diag2) {
+    if(vert || hori || diag1 || diag2)
+    {
         return 1;
-    } else {
+    }
+    else
+    {
         return 0;
     }
 }

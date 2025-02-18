@@ -1,6 +1,7 @@
 #include "presentation/field.h"
 
 #include "presentation/cell.h"
+#include "presentation/cursor.h"
 #include "presentation/print.h"
 #include <stddef.h>
 #include <stdint.h>
@@ -46,6 +47,7 @@ void field_redraw()
         }
     }
 
+    cursor_moveTo(FIELD_X_OFFSET, FIELD_Y_OFFSET);
     printRow(top_divider, row_length);
 
     uint8_t first = 0;

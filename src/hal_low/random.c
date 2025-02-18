@@ -23,7 +23,7 @@ void rng_init(void)
  *
  * @return uint8_t random byte
  */
-uint8_t rng_getRandomValueImmediately(void)
+uint8_t rng_getRandomValue_immediately(void)
 {
     // Read 32-Bit Register containing the RNG Value
     uint32_t randomValue = register_read((RNG_BASE_ADDRESS | RNG_VALUE));
@@ -46,7 +46,7 @@ static volatile uint32_t notReadyCount = 0U;
  *
  * @return uint8_t (curently) always `0`
  **/
-uint8_t rng_getRandomValueWaiting()
+uint8_t rng_getRandomValue_waiting()
 {
     uint32_t notReadyCountLocal = 0U;
     for(volatile uint32_t valueReady = register_read((RNG_BASE_ADDRESS | RNG_VALRDY));
@@ -61,5 +61,5 @@ uint8_t rng_getRandomValueWaiting()
         notReadyCount = notReadyCountLocal;
     }
 
-    return rng_getRandomValueImmediately();
+    return rng_getRandomValue_immediately();
 }

@@ -106,14 +106,6 @@ void game_run()
 
         cell_select(selected_cell);
     }
-    println("Thanks for playing! Soon you'll see a menu here...");
-    println("For now you can press \"CTR + A\" and then \"x\" to exit qemu!");
-    print(SHOW_CURSOR);
-    while(true)
-    {
-        // Für deine CPU Usage noch besser :))
-        __WFI();
-    }
 }
 
 void game_onTimeOut()

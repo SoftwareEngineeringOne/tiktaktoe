@@ -3,7 +3,7 @@
 #include "presentation/cell.h"
 #include "presentation/field.h"
 
-void input_handleEscapeSequence(Cell cells[CELLS_PER_ROW][CELLS_PER_COL], Cell **selected_cell)
+void input_handleEscapeSequence(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Cell **selected_cell)
 {
     uint8_t input = '\0';
     if(!input_getNext(&input_buf, &input) || input != '[')

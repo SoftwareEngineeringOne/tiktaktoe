@@ -91,7 +91,7 @@ void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL]);
 
 void cell_select(Cell *cell);
 
-void redrawCell(uint8_t row, uint8_t col, char *modifier, Mark marked_by);
+void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by);
 
 void cell_mark(Cell *cell);
 

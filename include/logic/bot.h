@@ -7,6 +7,6 @@
 Cell* bot_makeTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
 Cell* bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
 
-static Cell* markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Mark mark_by);
+static Cell* markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player mark_by);
 
 #endif// BOT_H

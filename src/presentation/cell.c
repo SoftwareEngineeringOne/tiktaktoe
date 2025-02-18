@@ -17,7 +17,7 @@ void cell_select(Cell *cell)
 {
     static uint16_t prev_top = 0;
     static uint16_t prev_left = 0;
-    static Mark prev_mark;
+    static Player prev_mark;
     static bool has_prev = false;
 
     // with +1 to account for top/left divider
@@ -50,7 +50,7 @@ void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL])
     }
 }
 
-void redrawCell(uint8_t row, uint8_t col, char *modifier, Mark marked_by)
+void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by)
 {
     uint8_t top = (row * (cell_height - 1)) + 1;
     uint8_t left = (col * cell_width) + 1;

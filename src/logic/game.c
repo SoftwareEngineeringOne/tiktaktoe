@@ -73,6 +73,7 @@ void game_run()
                     current_turn++;
                     ui_updateTurn(current_turn, "Player");
                     time_finishRound();
+                    game_checkGameState();
                 }
                 break;
             case '+':
@@ -113,4 +114,43 @@ void game_onTimeOut()
     selected_cell = bot_makeHumanTurn(cells);
     bot_cell = bot_makeTurn(cells);
     current_turn++;
+}
+
+void game_checkGameState()
+{
+    const int8_t cellsToWin = min(CELLS_PER_COL, CELLS_PER_ROW);
+    const int8_t playerX = selected_cell->col;
+    const int8_t playerY = selected_cell->row;
+    const int8_t botX = selected_cell->col;
+    const int8_t botY = selected_cell->row;
+
+    if(game_playerHasWon(playerX, playerY, cellsToWin, Human)) {
+        print("Human has won!");
+    }
+    if(game_playerHasWon(playerX, playerY, cellsToWin, Computer)) {
+        print("Computer has won!");
+    }
+}
+
+uint8_t game_playerHasWon(uint8_t x, uint8_t y, uint8_t cellsToWin, Mark mark) {
+    uint8_t vert = 1, hori = 1, diag1 = 1, diag2 = 1;
+    for(int8_t i = 0; i < cellsToWin; i++) {
+        if(!(cells[i][x].marked_by==mark)) {
+            vert = 0;
+        }
+        if(!(cells[y][i].marked_by==mark)) {
+            hori = 0;
+        }
+        if(!(cells[i][i].marked_by==mark)) {
+            diag1 = 0;
+        }
+        if(!(cells[i][cellsToWin-1-i].marked_by==mark)) {
+            diag2 = 0;
+        }
+    }
+    if(vert || hori || diag1 || diag2) {
+        return 1;
+    } else {
+        return 0;
+    }
 }

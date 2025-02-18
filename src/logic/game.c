@@ -44,7 +44,6 @@ void game_run()
     ui_displayTimer(REMAINING_TIME);
     ui_displayTurn(current_turn, "Player");
     uint8_t last_update = 0;
-    cell_redraw(bot_makeTurn(cells));
     while(true)
     {
         while(!input_getNext(&input_buf, &input))

@@ -48,18 +48,12 @@ static volatile uint32_t notReadyCount = 0U;
  **/
 uint8_t rng_getRandomValue_waiting()
 {
-    uint32_t notReadyCountLocal = 0U;
-    for(volatile uint32_t valueReady = register_read((RNG_BASE_ADDRESS | RNG_VALRDY));
-        valueReady == 0U;
-        valueReady = register_read((RNG_BASE_ADDRESS | RNG_VALRDY)))
+    while(register_read((RNG_BASE_ADDRESS | RNG_VALRDY)) == 0)
     {
-        ++notReadyCountLocal;
+        // Wait until the Value is ready
     }
+    register_write((RNG_BASE_ADDRESS | RNG_VALRDY), 0);
 
-    if(notReadyCount < notReadyCountLocal)
-    {
-        notReadyCount = notReadyCountLocal;
-    }
-
-    return rng_getRandomValue_immediately();
+    return
+        rng_getRandomValue_immediately();
 }

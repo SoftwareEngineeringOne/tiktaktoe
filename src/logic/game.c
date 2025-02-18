@@ -12,6 +12,7 @@
 #include "presentation/ui.h"
 #include "logic/time.h"
 #include "logic/bot.h"
+#include "helper/math.h"
 
 volatile uint8_t current_turn = 0;
 
@@ -121,13 +122,13 @@ void game_checkGameState()
     const int8_t cellsToWin = min(CELLS_PER_COL, CELLS_PER_ROW);
     const int8_t playerX = selected_cell->col;
     const int8_t playerY = selected_cell->row;
-    const int8_t botX = selected_cell->col;
-    const int8_t botY = selected_cell->row;
+    const int8_t botX = bot_cell->col;
+    const int8_t botY = bot_cell->row;
 
     if(game_playerHasWon(playerX, playerY, cellsToWin, Human)) {
         print("Human has won!");
     }
-    if(game_playerHasWon(playerX, playerY, cellsToWin, Computer)) {
+    if(game_playerHasWon(botX, botY, cellsToWin, Computer)) {
         print("Computer has won!");
     }
 }

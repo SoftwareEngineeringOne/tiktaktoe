@@ -25,8 +25,6 @@
 
 #define ERASE_LINE_FROM_CURSOR "\e[0K"
 
-#define ASCII_NUM_OFFSET 48
-
 typedef struct
 {
         char *fg_color;

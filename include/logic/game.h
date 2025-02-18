@@ -11,8 +11,6 @@
 
 #define REMAINING_TIME TICKS_PER_ROUND - time_roundTicks
 
-#define min(a, b) a < b ? a : b
-
 typedef enum
 {
     Human,

@@ -6,6 +6,7 @@
 
 uint8_t cell_width = INITIAL_WIDTH;
 uint8_t cell_height = INITIAL_HEIGHT;
+Size current_size = INITIAL_SIZE;
 
 void cell_redraw(Cell *cell)
 {
@@ -70,24 +71,36 @@ void redrawCell(uint8_t row, uint8_t col, char *modifier, Mark marked_by)
             switch(marked_by)
             {
                 case Human:
-                    if(i == mid_row && left + j == mid_col)
+                    print(FG_GREEN);
+                    switch(current_size)
                     {
-                        print("X");
+                        case Small:
+                            print(SMALL_X[i - top][j]);
+                            break;
+                        case Medium:
+                            print(MEDIUM_X[i - top][j]);
+                            break;
+                        case Large:
+                            print(LARGE_X[i - top][j]);
+                            break;
                     }
-                    else
-                    {
-                        print(" ");
-                    }
+                    print("\e[37");
                     break;
                 case Computer:
-                    if(i == mid_row && left + j == mid_col)
+                    print(FG_MAGENTA);
+                    switch(current_size)
                     {
-                        print("O");
+                        case Small:
+                            print(SMALL_O[i - top][j]);
+                            break;
+                        case Medium:
+                            print(MEDIUM_O[i - top][j]);
+                            break;
+                        case Large:
+                            print(LARGE_O[i - top][j]);
+                            break;
                     }
-                    else
-                    {
-                        print(" ");
-                    }
+                    print("\e[37");
                     break;
                 case None:
                     print(" ");
@@ -103,23 +116,21 @@ void redrawCell(uint8_t row, uint8_t col, char *modifier, Mark marked_by)
 
 void cell_increaseSize()
 {
-    if(size_index + 1 >= NUM_OF_SIZES)
+    if(current_size + 1 >= Large + 1)
     {
         return;
     }
-    size_index++;
-    cell_width = VALID_SIZES[size_index].width;
-    cell_height = VALID_SIZES[size_index].height;
-    print("BREAK ME");
+    current_size++;
+    cell_width = VALID_SIZES[current_size].width;
+    cell_height = VALID_SIZES[current_size].height;
 }
 void cell_decreaseSize()
 {
-    if(size_index - 1 < 0)
+    if(current_size - 1 < Small)
     {
         return;
     }
-    size_index--;
-    cell_width = VALID_SIZES[size_index].width;
-    cell_height = VALID_SIZES[size_index].height;
-    print("BREAK ME");
+    current_size--;
+    cell_width = VALID_SIZES[current_size].width;
+    cell_height = VALID_SIZES[current_size].height;
 }

@@ -15,6 +15,7 @@ Cell* bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]) {
 
 static Cell* markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Mark mark_by) {
     for (;;) {
+
         uint8_t col = rng_getRandomValue_waiting() % CELLS_PER_ROW;
         uint8_t row = rng_getRandomValue_waiting() % CELLS_PER_COL;
 

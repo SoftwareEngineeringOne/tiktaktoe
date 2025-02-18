@@ -9,7 +9,7 @@
 
 void field_redraw()
 {
-    const uint8_t row_length = CELLS_PER_ROW * CELL_WIDTH + 1;
+    const uint8_t row_length = CELLS_PER_ROW * cell_width + 1;
     char *divider[row_length];
     char *top_divider[row_length];
     char *bot_divider[row_length];
@@ -31,7 +31,7 @@ void field_redraw()
             bot_divider[i] = CORNER_BOT_RIGHT;
             non_divider[i] = SIDE;
         }
-        else if(i % CELL_WIDTH == 0)
+        else if(i % cell_width == 0)
         {
             divider[i] = CROSS;
             top_divider[i] = T_TOP;
@@ -61,7 +61,7 @@ void field_redraw()
         {
             printRow(divider, row_length);
         }
-        for(uint8_t j = 0; j < CELL_HEIGHT - 2; j++)
+        for(uint8_t j = 0; j < cell_height - 2; j++)
         {
             printRow(non_divider, row_length);
         }

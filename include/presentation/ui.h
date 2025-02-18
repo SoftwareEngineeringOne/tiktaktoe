@@ -7,6 +7,9 @@
 #define TIMER_ROW 2
 
 void ui_displayTimer(uint16_t remaining_time);
+void ui_updateTimer(uint16_t remaining_time);
+
 void ui_displayTurn(uint8_t current_turn, char* playerName);
+void ui_updateTurn(uint8_t current_turn, char* playerName);
 
 #endif // !UI_H

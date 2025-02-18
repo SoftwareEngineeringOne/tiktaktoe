@@ -9,6 +9,8 @@
 #include "presentation/field.h"
 #include <stdint.h>
 
+#define REMAINING_TIME TICKS_PER_ROUND - time_roundTicks
+
 typedef enum
 {
     Human,
@@ -26,17 +28,11 @@ typedef struct
 extern volatile InputBuffer input_buf;
 
 static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
+static Cell* selected_cell;
+static Cell* bot_cell;
 
 void game_run();
 
-/**
- * @brief Tries to mark the current position
- **/
-void game_markPosition();
-
-/**
- * @brief Increase the clock by one second
- **/
-void game_updateTime();
+void game_onTimeOut();
 
 #endif// GAME_H

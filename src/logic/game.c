@@ -9,6 +9,7 @@
 #include "presentation/cursor.h"
 #include "presentation/field.h"
 #include "presentation/print.h"
+#include "presentation/ui.h"
 #include "logic/time.h"
 #include "logic/bot.h"
 
@@ -40,8 +41,10 @@ void game_run()
     cell_select(selected_cell);
     while(true)
     {
+        ui_displayTimer(TICKS_PER_ROUND - time_roundTicks);
         while(!input_getNext(&input_buf, &input))
         {
+            ui_displayTimer(TICKS_PER_ROUND - time_roundTicks);
             __WFI();
         }
 
@@ -55,7 +58,7 @@ void game_run()
             case ' ':
                 if (selected_cell->marked_by == None) {
                     selected_cell->marked_by = Human;
-                    bot_mark(cells);
+                    bot_makeTurn(cells);
                 }
                 break;
             case 'w':

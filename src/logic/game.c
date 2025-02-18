@@ -2,6 +2,7 @@
 
 #include "hal_low/nvic.h"
 #include "hal_low/uart.h"
+#include "hal_low/random.h"
 #include "hal_high/input_buf.h"
 #include "logic/input.h"
 #include "presentation/cell.h"
@@ -9,10 +10,12 @@
 #include "presentation/field.h"
 #include "presentation/print.h"
 #include "logic/time.h"
+#include "logic/bot.h"
 
 void game_run()
 {
     input_init(&input_buf);
+    rng_init();
     print(HIDE_CURSOR);
 
     static uint8_t input;
@@ -50,7 +53,10 @@ void game_run()
                 input_handleEscapeSequence(cells, &selected_cell);
                 break;
             case ' ':
-                selected_cell->marked_by = Human;
+                if (selected_cell->marked_by == None) {
+                    selected_cell->marked_by = Human;
+                    bot_mark(cells);
+                }
                 break;
             case 'w':
                 CELL_HEIGHT += 1;

@@ -197,70 +197,70 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
     //        / | \                | diagonal_1 | up right    | down left   |
     // DOWN     v     DOWN         | diagonal_2 | up left     | down right  |
     // LEFT    DOWN   RIGHT
-    const uint8_t diagonal_winCondition = min(CELLS_PER_COL, CELLS_PER_ROW);
-    const uint8_t maxCells = max(CELLS_PER_COL, CELLS_PER_ROW);
+    const uint8_t diagonal_win_condition = min(CELLS_PER_COL, CELLS_PER_ROW);
+    const uint8_t max_cells = max(CELLS_PER_COL, CELLS_PER_ROW);
     const uint8_t row = cell->row, col = cell->col;
-    const uint8_t maxRow = CELLS_PER_COL - 1, maxCol = CELLS_PER_ROW - 1;
+    const uint8_t max_row = CELLS_PER_COL - 1, max_col = CELLS_PER_ROW - 1;
     uint8_t diagonal_1_sum = 1, diagonal_2_sum = 1;
     bool vertical_match = true, horizontal_match = true;
-    bool diagonal_1_UpRight = true, diagonal_1_DownLeft = true, diagonal_2_UpLeft = true, diagonal_2_DownRight = true;
-    for(uint8_t i = 1, n = 0; n < maxCells; i++, n++)
+    bool diagonal_1_up_right = true, diagonal_1_down_left = true, diagonal_2_up_left = true, diagonal_2_down_right = true;
+    for(uint8_t i = 1, n = 0; n < max_cells; i++, n++)
     {
         // --- VERTICAL ---
         // downwards
-        if(n <= maxRow && cells[n][col].marked_by != player)
+        if(n <= max_row && cells[n][col].marked_by != player)
         {
             vertical_match = false;
         }
 
         // --- HORIZONTAL ---
         // to the right
-        if(n <= maxCol && cells[row][n].marked_by != player)
+        if(n <= max_col && cells[row][n].marked_by != player)
         {
              horizontal_match = false;
         }
 
         // --- 1st DIAGONAL ---
         // upwards to the right
-        if(diagonal_1_UpRight && row - i >= 0 && col + i <= maxCol && cells[row - i][col + i].marked_by == player)
+        if(diagonal_1_up_right && row - i >= 0 && col + i <= max_col && cells[row - i][col + i].marked_by == player)
         {
             diagonal_1_sum++;
         }
         else
         {
-            diagonal_1_UpRight = false;
+            diagonal_1_up_right = false;
         }
         // downwards to the left
-        if(diagonal_1_DownLeft && row + i <= maxRow && col - i >= 0 && cells[row + i][col - i].marked_by == player)
+        if(diagonal_1_down_left && row + i <= max_row && col - i >= 0 && cells[row + i][col - i].marked_by == player)
         {
             diagonal_1_sum++;
         }
         else
         {
-            diagonal_1_DownLeft = false;
+            diagonal_1_down_left = false;
         }
 
         // --- 2nd DIAGONAL ---
         // upwards to the left
-        if(diagonal_2_UpLeft && row - i >= 0 && col - i >= 0 && cells[row - i][col - i].marked_by == player)
+        if(diagonal_2_up_left && row - i >= 0 && col - i >= 0 && cells[row - i][col - i].marked_by == player)
         {
             diagonal_2_sum++;
         }
         else
         {
-            diagonal_2_UpLeft = false;
+            diagonal_2_up_left = false;
         }
         // downwards to the right
-        if(diagonal_2_DownRight && row + i <= maxRow && col + i <= maxCol && cells[row + i][col + i].marked_by == player)
+        if(diagonal_2_down_right && row + i <= max_row && col + i <= max_col && cells[row + i][col + i].marked_by == player)
         {
             diagonal_2_sum++;
         }
         else
         {
-            diagonal_2_DownRight = false;
+            diagonal_2_down_right = false;
         }
     }
-    if(vertical_match ||  horizontal_match  || diagonal_1_sum >= diagonal_winCondition  || diagonal_2_sum >= diagonal_winCondition )
+    if(vertical_match ||  horizontal_match  || diagonal_1_sum >= diagonal_win_condition  || diagonal_2_sum >= diagonal_win_condition )
     {
         return true;
     }

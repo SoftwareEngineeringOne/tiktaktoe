@@ -182,67 +182,47 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
     }
 
     // VICTORY ALGORITHM
-    // This algorithm starts at the given cell coordinates. It goes in 8 different direction and counts on 4 axes.
-    // The return value is true when one axis or more axes has / have reached the win condition (minimum of rows and columns).
+    // Vertical / Horizontal:
+    // The algorithm starts at the border and iterates to the other side. It goes in 2 different directions and counts on 2 axes.
+    // It runs in one of the directions till a cell is reached that is not marked by our player.
+    // Diagonal:
+    // The algorithm starts at the given cell coordinates. It goes in 4 different direction and counts on 2 axes.
     // Every step in one of the directions increments the dedicated axis until a cell is reached that is not marked by our player.
+    //
+    // The return value is true when one axis or more axes has / have reached the win condition (line to the other side).
     //  UP      UP     UP          | axis       | direction 1 | direction 2 |
-    // LEFT     ^     RIGHT        |------------+-------------+-------------|
-    //        \ | /                | vertical   | up          | down        |
-    // LEFT <---+---> RIGHT        | horizontal | left        | right       |
+    // LEFT           RIGHT        |------------+-------------+-------------|
+    //        \ | /                | vertical   | down        |             |
+    // LEFT  ---+---> RIGHT        | horizontal | right       |             |
     //        / | \                | diagonal_1 | up right    | down left   |
     // DOWN     v     DOWN         | diagonal_2 | up left     | down right  |
     // LEFT    DOWN   RIGHT
-    const uint8_t cellsToWin = min(CELLS_PER_COL, CELLS_PER_ROW);
+    const uint8_t diagonal_winCondition = min(CELLS_PER_COL, CELLS_PER_ROW);
+    const uint8_t maxCells = max(CELLS_PER_COL, CELLS_PER_ROW);
     const uint8_t row = cell->row, col = cell->col;
     const uint8_t maxRow = CELLS_PER_COL - 1, maxCol = CELLS_PER_ROW - 1;
-    uint8_t vertical_sum = 1, horizontal_sum = 1, diagonal_1_sum = 1, diagonal_2_sum = 1;
-    bool verticalUp = true, verticalDown = true, horizontalLeft = true, horizontalRight = true;
+    uint8_t diagonal_1_sum = 1, diagonal_2_sum = 1;
+    bool vertical_match = true, horizontal_match = true;
     bool diagonal_1_UpRight = true, diagonal_1_DownLeft = true, diagonal_2_UpLeft = true, diagonal_2_DownRight = true;
-    for(uint8_t i = 1; i < cellsToWin; i++)
+    for(uint8_t i = 1, n = 0; n < maxCells; i++, n++)
     {
         // --- VERTICAL ---
-        // upwards
-        if(verticalUp && row-i >= 0 && cells[row-i][col].marked_by == player)
-        {
-            vertical_sum++;
-        }
-        else
-        {
-            verticalUp = false;
-        }
         // downwards
-        if(verticalDown && row+i <= maxRow && cells[row+i][col].marked_by == player)
+        if(n <= maxRow && cells[n][col].marked_by != player)
         {
-            vertical_sum++;
-        }
-        else
-        {
-            verticalDown = false;
+            vertical_match = false;
         }
 
         // --- HORIZONTAL ---
-        // to the left
-        if(horizontalLeft && col-i >= 0 && cells[row][col-i].marked_by == player)
-        {
-             horizontal_sum++;
-        }
-        else
-        {
-            horizontalLeft = false;
-        }
         // to the right
-        if(horizontalRight && col+i <= maxCol && cells[row][col+i].marked_by == player)
+        if(n <= maxCol && cells[row][n].marked_by != player)
         {
-             horizontal_sum++;
-        }
-        else
-        {
-            horizontalRight = false;
+             horizontal_match = false;
         }
 
         // --- 1st DIAGONAL ---
         // upwards to the right
-        if(diagonal_1_UpRight && row-i >= 0 && col+i <= maxCol && cells[row - i][col + i].marked_by == player)
+        if(diagonal_1_UpRight && row - i >= 0 && col + i <= maxCol && cells[row - i][col + i].marked_by == player)
         {
             diagonal_1_sum++;
         }
@@ -251,7 +231,7 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_1_UpRight = false;
         }
         // downwards to the left
-        if(diagonal_1_DownLeft && row+i <= maxRow && col-i >= 0 && cells[row + i][col - i].marked_by == player)
+        if(diagonal_1_DownLeft && row + i <= maxRow && col - i >= 0 && cells[row + i][col - i].marked_by == player)
         {
             diagonal_1_sum++;
         }
@@ -262,7 +242,7 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
 
         // --- 2nd DIAGONAL ---
         // upwards to the left
-        if(diagonal_2_UpLeft && row-i >= 0 && col-i >= 0 && cells[row - i][col - i].marked_by == player)
+        if(diagonal_2_UpLeft && row - i >= 0 && col - i >= 0 && cells[row - i][col - i].marked_by == player)
         {
             diagonal_2_sum++;
         }
@@ -271,7 +251,7 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_2_UpLeft = false;
         }
         // downwards to the right
-        if(diagonal_2_DownRight && row+i <= maxRow && col+i <= maxCol && cells[row + i][col + i].marked_by == player)
+        if(diagonal_2_DownRight && row + i <= maxRow && col + i <= maxCol && cells[row + i][col + i].marked_by == player)
         {
             diagonal_2_sum++;
         }
@@ -280,7 +260,7 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_2_DownRight = false;
         }
     }
-    if(vertical_sum >= cellsToWin ||  horizontal_sum >= cellsToWin  || diagonal_1_sum >= cellsToWin  || diagonal_2_sum >= cellsToWin )
+    if(vertical_match ||  horizontal_match  || diagonal_1_sum >= diagonal_winCondition  || diagonal_2_sum >= diagonal_winCondition )
     {
         return true;
     }

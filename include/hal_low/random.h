@@ -1,3 +1,6 @@
+#ifndef RANDOM_H
+#define RANDOM_H
+
 #include <stdint.h>
 
 // Definitions ----------------------------------------------------------------
@@ -47,3 +50,5 @@ uint8_t rng_getRandomValue_immediately(void);
  * @return uint8_t always `0`
  */
 uint8_t rng_getRandomValue_waiting(void);
+
+#endif// RANDOM_H

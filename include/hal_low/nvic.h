@@ -2,6 +2,9 @@
 // These are to activate and debug Interrupts
 // Details on Chapter 4.2 Nested Vectored Interrupt Controller (Page 109)
 
+#ifndef NVIC_H
+#define NVIC_H
+
 #define Interrupt_Set_Enable_00 0xE000E100//  1 - Reset
 #define Interrupt_Set_Enable_01 0xE000E104//  2 - NMI
 #define Interrupt_Set_Enable_02 0xE000E108//  3 - Hard-Fault
@@ -45,3 +48,5 @@
  * It does nothing till the next interrupt happens
  */
 inline void __WFI(void);
+
+#endif// NVIC_H

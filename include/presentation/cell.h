@@ -134,4 +134,4 @@ void cell_increaseSize();
  */
 void cell_decreaseSize();
 
-#endif// !CELL_H
+#endif// CELL_H

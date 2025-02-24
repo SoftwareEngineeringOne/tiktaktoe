@@ -5,4 +5,4 @@
 #define false 0
 #define true 1
 
-#endif// !DEF_H
+#endif// DEF_H

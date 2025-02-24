@@ -60,4 +60,4 @@ void printStyled(const char *string, const Style *style);
  */
 void printlnStyled(const char *string, const Style *style);
 
-#endif// !PRINT_H
+#endif// PRINT_H

@@ -1,3 +1,6 @@
+#ifndef UART_H
+#define UART_H
+
 #include "def.h"
 #include <stdint.h>
 
@@ -65,3 +68,5 @@ void uart_writeByte(uint8_t data);
  * @return uint8_t received Byte or 0 (zero) if nothing was received
  */
 uint8_t uart_readByte();
+
+#endif// UART_H

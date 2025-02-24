@@ -1,8 +1,8 @@
 #ifndef CONVERTER_H
 #define CONVERTER_H
 
-#include <stdint.h>
 #include <stddef.h>
+#include <stdint.h>
 
 #define ASCII_NUM_OFFSET 48
 

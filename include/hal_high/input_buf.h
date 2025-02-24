@@ -2,6 +2,7 @@
 #define INPUT_BUF_H
 
 #include "def.h"
+
 #include <stdint.h>
 
 #define INPUT_BUF_SIZE 128

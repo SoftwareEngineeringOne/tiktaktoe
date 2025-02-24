@@ -1,7 +1,6 @@
 #ifndef FIELD_H
 #define FIELD_H
 
-#include <stdint.h>
 #include <stddef.h>
 
 #define CELLS_PER_ROW 8

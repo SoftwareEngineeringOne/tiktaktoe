@@ -1,9 +1,6 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-#include <stdint.h>
-#include <stddef.h>
-
 #define LINE_SEPERATOR '\n'
 
 #define CLEAR_SCREEN "\e[1;1H\e[2J"

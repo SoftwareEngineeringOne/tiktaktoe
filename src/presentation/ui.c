@@ -1,6 +1,8 @@
 #include "presentation/ui.h"
+
 #include "presentation/cursor.h"
 #include "presentation/print.h"
+
 #include <stddef.h>
 
 void ui_displayTimer(uint16_t remaining_time) {

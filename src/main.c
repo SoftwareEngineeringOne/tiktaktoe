@@ -1,10 +1,10 @@
 #include "def.h"
 #include "hal_high/input_buf.h"
+#include "hal_low/nvic.h"
 #include "hal_low/random.h"
 #include "hal_low/uart.h"
-#include "hal_low/nvic.h"
-#include "presentation/print.h"
 #include "logic/game.h"
+#include "presentation/print.h"
 
 extern volatile InputBuffer input_buf;
 

@@ -1,4 +1,5 @@
 #include "logic/input.h"
+
 #include "hal_high/input_buf.h"
 #include "presentation/cell.h"
 #include "presentation/field.h"

@@ -29,18 +29,12 @@
 
 #define Interrupt_ICPR 0xE000E280// Interrupt Clear-pending Register (on page 4-6)
 
-
 #define Interrupt_ID2 (1 << 2)  // Bit for User Interrupt ID: 2
 #define Interrupt_ID8 (1 << 8)  // Bit for User Interrupt ID: 8
 #define Interrupt_ID9 (1 << 9)  // Bit for User Interrupt ID: 9
 #define Interrupt_ID10 (1 << 10)// Bit for User Interrupt ID:10
 
-
-// From System Control Block:
-// Useful for showing States and Pending Status
-
 #define ICSR 0xE000ED04// Interrupt Control and State Register
-
 
 /**
  * @brief Activate the energy saving mode of the computer

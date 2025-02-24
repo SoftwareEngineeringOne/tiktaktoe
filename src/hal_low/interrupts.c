@@ -7,8 +7,6 @@
 #include "hal_low/uart.h"
 #include "logic/time.h"
 
-#include <stddef.h>
-
 void Interrupt2_Handler(void)
 {
     input_onInterrupt(uart_readByte());

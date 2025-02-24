@@ -47,14 +47,12 @@ void timer_init_detailed(
     // BitMode
     register_write(timerBase | TIMER_BITMODE, (uint32_t)bitMode);
 
-#if 1
     // Enable Interrupt
     register_write((TIMER0_BASE_ADDRESS | TIMER_INTENSET), INT_COMPARE0);// Interrupt on Compare[0]
 
     // Enable User-Interrupt from Cortex-M0
     // ID8 ist der Timer0
     register_write(Interrupt_Set_Enable, Interrupt_ID8);
-#endif
 }
 
 void timer_captureCompareSet(

@@ -26,5 +26,4 @@ static Cell* markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player mar
             return cell;
         }
     }
-
 }

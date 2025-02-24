@@ -143,14 +143,41 @@ void timer_captureCompareSet(
  **/
 uint32_t timer_captureCompareGet(Timer timer, TimerCaptureCompare captureCompare);
 
+/**
+ * @brief Starts the given timer
+ * @param [in] timer
+ * Number of the timer
+ */
 void timer_start(Timer timer);
 
+/**
+ * @brief Stops the given timer
+ * @param [in] timer
+ * Number of the timer
+ */
 void timer_stop(Timer timer);
 
+/**
+ * @brief Activate counting on the given timer
+ * @param [in] timer
+ * Number of the timer
+ */
 void timer_count(Timer timer);
 
+/**
+ * @brief Clear the time of the given timer
+ * @param [in] timer
+ * Number of the timer
+ */
 void timer_clear(Timer timer);
 
+/**
+ * @brief Capture the time of the given timer
+ * @param [in] timer
+ * Number of the timer
+ * @param [in] capture
+ * Number of the Capture Compare
+ */
 void timer_capture(Timer timer, TimerCaptureCompare capture);
 
 /**

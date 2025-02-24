@@ -32,15 +32,35 @@ typedef struct
         char *font_style;
 } Style;
 
+/**
+ * @brief Clear the whole terminal
+ */
 void clearConsole();
+
+/**
+ * @brief Prints the given string
+ * @param [in] string
+ */
 void print(const char *string);
+
+/**
+ * @brief Prints the given string with a new line character
+ * @param [in] string
+ */
 void println(const char *string);
 
+/**
+ * @brief Prints the given string with a predefined style
+ * @param [in] string
+ * @param [in] style
+ */
 void printStyled(const char *string, const Style *style);
+
+/**
+ * @brief Prints the given string with a predefined style and a new line character
+ * @param [in] string
+ * @param [in] style
+ */
 void printlnStyled(const char *string, const Style *style);
-
-int8_t int_to_str(uint32_t num, char *buf, size_t buf_size);
-
-char int_to_char(uint8_t num);
 
 #endif// !PRINT_H

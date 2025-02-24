@@ -1,7 +1,3 @@
-//
-// Created by paul on 2/10/25.
-//
-
 #ifndef FIELD_H
 #define FIELD_H
 
@@ -14,7 +10,7 @@
 #define FIELD_X_OFFSET 1
 #define FIELD_Y_OFFSET 3
 
-#define UNICODE// if not UNICODE then ascii automatically
+#define UNICODE // if not UNICODE then ascii automatically
 
 #ifdef UNICODE
 #define CORNER_TOP_LEFT "╭"
@@ -59,10 +55,17 @@
 #endif
 
 /**
- * @brief Initial drawing of the playing field
+ * @brief Redraw the whole 2D field
  **/
 void field_redraw();
 
+/**
+ * @brief Print one row
+ * @param [in] row
+ * String to print
+ * @param [in] row_length
+ * Length of string
+ */
 static void printRow(char **row, size_t row_length);
 
 #endif// FIELD_H

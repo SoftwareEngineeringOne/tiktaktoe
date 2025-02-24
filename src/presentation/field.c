@@ -3,9 +3,9 @@
 #include "presentation/cell.h"
 #include "presentation/cursor.h"
 #include "presentation/print.h"
+
 #include <stddef.h>
 #include <stdint.h>
-
 
 void field_redraw()
 {

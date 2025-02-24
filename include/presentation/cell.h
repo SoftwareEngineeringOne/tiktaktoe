@@ -1,11 +1,10 @@
 #ifndef CELL_H
 #define CELL_H
 
-#include <stdint.h>
-#include <stddef.h>
-#include "def.h"
 #include "logic/game.h"
 #include "presentation/field.h"
+
+#include <stdint.h>
 
 #define NUM_OF_SIZES 3
 #define INITIAL_INDEX 1

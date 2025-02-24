@@ -1,19 +1,18 @@
 #include "logic/game.h"
 
+#include "hal_high/input_buf.h"
 #include "hal_low/nvic.h"
-#include "hal_low/uart.h"
 #include "hal_low/random.h"
 #include "hal_low/timer.h"
-#include "hal_high/input_buf.h"
+#include "helper/math.h"
+#include "logic/bot.h"
 #include "logic/input.h"
+#include "logic/time.h"
 #include "presentation/cell.h"
 #include "presentation/cursor.h"
 #include "presentation/field.h"
 #include "presentation/print.h"
 #include "presentation/ui.h"
-#include "logic/time.h"
-#include "logic/bot.h"
-#include "helper/math.h"
 
 volatile uint8_t current_turn = 0;
 

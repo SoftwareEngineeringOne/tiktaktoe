@@ -1,6 +1,5 @@
 #include "hal_low/interrupts.h"
 
-#include "logic/game.h"
 #include "hal_high/input_buf.h"
 #include "hal_low/nvic.h"
 #include "hal_low/register_access.h"

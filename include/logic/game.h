@@ -3,6 +3,7 @@
 
 #include "hal_high/input_buf.h"
 #include "presentation/field.h"
+
 #include <stdint.h>
 
 #define REMAINING_TIME TICKS_PER_ROUND - time_roundTicks

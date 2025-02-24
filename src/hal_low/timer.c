@@ -1,8 +1,8 @@
 #include "hal_low/timer.h"
 
 #include "hal_low/nvic.h"
-#include "hal_low/uart.h"
 #include "hal_low/register_access.h"
+#include "hal_low/uart.h"
 
 #include <stdint.h>
 

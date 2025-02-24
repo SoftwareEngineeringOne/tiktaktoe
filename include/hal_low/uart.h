@@ -1,6 +1,5 @@
-#include <stdint.h>
 #include "def.h"
-#include "hal_low/interrupts.h"
+#include <stdint.h>
 
 // Definitions ----------------------------------------------------------------
 

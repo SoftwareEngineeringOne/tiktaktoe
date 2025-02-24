@@ -1,7 +1,8 @@
+#include "presentation/cell.h"
+
 #include "logic/game.h"
 #include "presentation/cursor.h"
 #include "presentation/field.h"
-#include "presentation/cell.h"
 #include "presentation/print.h"
 
 uint8_t cell_width = INITIAL_WIDTH;

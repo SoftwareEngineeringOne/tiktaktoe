@@ -45,10 +45,10 @@ void timer_init_detailed(
     register_write(timerBase | TIMER_PRESCALER, prescaler);
 
     // BitMode
-    register_write(timerBase | TIMER_BITMODE, (uint32_t)bitMode);
+    register_write(timerBase | TIMER_BITMODE, bitMode);
 
     // Enable Interrupt
-    register_write((TIMER0_BASE_ADDRESS | TIMER_INTENSET), INT_COMPARE0);// Interrupt on Compare[0]
+    register_write (TIMER0_BASE_ADDRESS | TIMER_INTENSET, INT_COMPARE0);// Interrupt on Compare[0]
 
     // Enable User-Interrupt from Cortex-M0
     // ID8 ist der Timer0
@@ -56,10 +56,10 @@ void timer_init_detailed(
 }
 
 void timer_captureCompareSet(
-    Timer timer,
-    TimerCaptureCompare captureCompare,
-    uint32_t value,
-    bool shortcutClear)
+    const Timer timer,
+    const TimerCaptureCompare captureCompare,
+    const uint32_t value,
+    const bool shortcutClear)
 {
     const uint32_t timerBase = TimerBase[timer];
     const uint32_t ccAddress = timerBase | TimerCCOffset[captureCompare];
@@ -72,7 +72,7 @@ void timer_captureCompareSet(
     register_write(timerBase | TIMER_SHORTS, oldValue | (shortcutClear ? 1 : 0) << captureCompare);
 }
 
-uint32_t timer_captureCompareGet(Timer timer, TimerCaptureCompare captureCompare)
+uint32_t timer_captureCompareGet(const Timer timer, const TimerCaptureCompare captureCompare)
 {
     const uint32_t timerBase = TimerBase[timer];
     const uint32_t ccAddress = timerBase | TimerCCOffset[captureCompare];
@@ -80,35 +80,35 @@ uint32_t timer_captureCompareGet(Timer timer, TimerCaptureCompare captureCompare
     return register_read(ccAddress);
 }
 
-void timer_start(Timer timer)
+void timer_start(const Timer timer)
 {
     const uint32_t timerBase = TimerBase[timer];
 
     register_write(timerBase | TIMER_START, TIMER_TASK_START);
 }
 
-void timer_stop(Timer timer)
+void timer_stop(const Timer timer)
 {
     const uint32_t timerBase = TimerBase[timer];
 
     register_write(timerBase | TIMER_STOP, TIMER_TASK_START);
 }
 
-void timer_count(Timer timer)
+void timer_count(const Timer timer)
 {
     const uint32_t timerBase = TimerBase[timer];
 
     register_write(timerBase | TIMER_COUNT, TIMER_TASK_START);
 }
 
-void timer_clear(Timer timer)
+void timer_clear(const Timer timer)
 {
     const uint32_t timerBase = TimerBase[timer];
 
     register_write(timerBase | TIMER_CLEAR, TIMER_TASK_START);
 }
 
-void timer_capture(Timer timer, TimerCaptureCompare capture)
+void timer_capture(const Timer timer, const TimerCaptureCompare capture)
 {
     const uint32_t timerBase = TimerBase[timer];
     const uint32_t timerCaptureTaskOffset = timerBase | TimerCaptureTaskOffset[capture];
@@ -116,7 +116,7 @@ void timer_capture(Timer timer, TimerCaptureCompare capture)
     register_write(timerCaptureTaskOffset, TIMER_TASK_START);
 }
 
-void timer_clearCompareEvent(Timer timer)
+void timer_clearCompareEvent(const Timer timer)
 {
     const uint32_t timerBase = TimerBase[timer];
 

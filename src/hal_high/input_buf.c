@@ -4,7 +4,7 @@
 
 volatile InputBuffer input_buf;
 
-void input_onInterrupt(uint8_t input)
+void input_onInterrupt(const uint8_t input)
 {
     if(!putIntoBuf(&input_buf, input))
     {
@@ -25,7 +25,7 @@ bool input_isEmpty(volatile InputBuffer *ib)
 
 bool input_isFull(volatile InputBuffer *ib)
 {
-    return ((ib->head + 1) % INPUT_BUF_SIZE) == ib->tail;
+    return (ib->head + 1) % INPUT_BUF_SIZE == ib->tail;
 }
 
 bool input_getNext(volatile InputBuffer *ib, uint8_t *byte)
@@ -39,7 +39,7 @@ bool input_getNext(volatile InputBuffer *ib, uint8_t *byte)
     return true;
 }
 
-bool putIntoBuf(volatile InputBuffer *ib, uint8_t byte)
+bool putIntoBuf(volatile InputBuffer *ib, const uint8_t byte)
 {
     if(input_isFull(ib))
     {

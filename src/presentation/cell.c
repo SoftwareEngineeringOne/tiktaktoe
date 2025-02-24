@@ -45,7 +45,7 @@ void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL])
     {
         for(uint8_t col = 0; col < CELLS_PER_COL; col++)
         {
-            Cell *cell = &cells[row][col];
+            const Cell *cell = &cells[row][col];
             redrawCell(cell->row, cell->col, "", cell->marked_by);
         }
     }
@@ -53,21 +53,17 @@ void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL])
 
 void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by)
 {
-    uint8_t top = (row * (cell_height - 1)) + 1;
-    uint8_t left = (col * cell_width) + 1;
-    uint8_t bot = top + (cell_height - 2);
-    uint8_t right = left + (cell_width - 2);
+    const uint8_t top = row * (cell_height - 1) + 1;
+    const uint8_t left = col * cell_width + 1;
+    const uint8_t bot = top + (cell_height - 2);
+    const uint8_t right = left + (cell_width - 2);
 
-    uint8_t mid_row = (top + bot) / 2;
-    uint8_t mid_col = (left + right) / 2;
-    char mid_char = int_to_char(mid_row);
-    char mid_char_2 = int_to_char(mid_col);
     for(uint8_t i = top; i < bot; i++)
     {
         cursor_moveTo(left + FIELD_X_OFFSET, i + FIELD_Y_OFFSET);
         print(modifier);
 
-        for(uint8_t j = 0; j < (cell_width - 1); j++)
+        for(uint8_t j = 0; j < cell_width - 1; j++)
         {
             switch(marked_by)
             {

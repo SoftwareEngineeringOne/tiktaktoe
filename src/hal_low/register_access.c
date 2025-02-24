@@ -13,7 +13,7 @@
 
 #include "hal_low/register_access.h"
 
-void register_write(uint32_t address, uint32_t value)
+void register_write(const uint32_t address, const uint32_t value)
 {
     // Assign pointer to given address:
     uint32_t * const pointer_to_address = (uint32_t *)address;
@@ -22,7 +22,7 @@ void register_write(uint32_t address, uint32_t value)
     *pointer_to_address = value;
 }
 
-uint32_t register_read(uint32_t address)
+uint32_t register_read(const uint32_t address)
 {
     // Assign pointer to given address:
     uint32_t const * const pointer_to_address = (uint32_t *)address;

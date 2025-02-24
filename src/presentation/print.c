@@ -2,8 +2,6 @@
 
 #include "hal_low/uart.h"
 
-
-
 void clearConsole()
 {
     print(CLEAR_SCREEN);

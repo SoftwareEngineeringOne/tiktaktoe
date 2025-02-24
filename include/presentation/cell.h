@@ -83,7 +83,6 @@ static CellSize VALID_SIZES[] = {
     {.width = 10, .height = 7},
 };
 
-
 /**
  * @brief Redraws the given cell
  * @param [in] cell

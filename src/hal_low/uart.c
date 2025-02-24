@@ -61,7 +61,6 @@ void uart_writeByte(uint8_t data)
     // need to "wait" until its transmitted
 }
 
-
 uint8_t uart_readByte()
 {
     // if not ready, return 0

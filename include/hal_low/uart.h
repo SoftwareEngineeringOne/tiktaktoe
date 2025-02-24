@@ -4,8 +4,6 @@
 #include "def.h"
 #include <stdint.h>
 
-// Definitions ----------------------------------------------------------------
-
 // Base Address (Instance)
 #define UART_BASE_ADDRESS 0x40002000
 
@@ -46,8 +44,6 @@
 #define UART_EVENT_CLEAR 0  // Value for clearing/stopping an Event
 
 #define UART_INT_RXDRDY (1 << 2)
-
-// C Function Definitions -----------------------------------------------------
 
 /**
  * @brief Initializing the UART with the following Settings:

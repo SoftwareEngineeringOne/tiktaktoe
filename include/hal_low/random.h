@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-// Definitions ----------------------------------------------------------------
-
 // Base Address (Instance)
 #define RNG_BASE_ADDRESS 0x4000D000
 

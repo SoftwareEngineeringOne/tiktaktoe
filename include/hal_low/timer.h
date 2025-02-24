@@ -5,35 +5,6 @@
 
 #include <stdint.h>
 
-typedef enum Timer
-{
-    TIMER0,
-    TIMER1,
-    TIMER2
-} Timer;
-
-typedef enum TimerMode
-{
-    TIMER_MODE_TIMER = 0,
-    TIMER_MODE_COUNTER = 1
-} TimerMode;
-
-typedef enum TimerBitMode
-{
-    TIMER_BIT_MODE_16 = 0,
-    TIMER_BIT_MODE_8 = 1,
-    TIMER_BIT_MODE_24 = 2,
-    TIMER_BIT_MODE_32 = 3,
-} TimerBitMode;
-
-typedef enum TimerCaptureCompare
-{
-    CC0,
-    CC1,
-    CC2,
-    CC3
-} TimerCaptureCompare;
-
 // Base Address (Instance)
 #define TIMER0_BASE_ADDRESS 0x40008000
 #define TIMER1_BASE_ADDRESS 0x40009000
@@ -90,7 +61,34 @@ typedef enum TimerCaptureCompare
 #define INT_COMPARE2 (1 << 18)// Enable/Disable Interrupt on COMPARE[2] event
 #define INT_COMPARE3 (1 << 19)// Enable/Disable Interrupt on COMPARE[3] event
 
-// C Function Definitions -----------------------------------------------------
+typedef enum Timer
+{
+  TIMER0,
+  TIMER1,
+  TIMER2
+} Timer;
+
+typedef enum TimerMode
+{
+  TIMER_MODE_TIMER = 0,
+  TIMER_MODE_COUNTER = 1
+} TimerMode;
+
+typedef enum TimerBitMode
+{
+  TIMER_BIT_MODE_16 = 0,
+  TIMER_BIT_MODE_8 = 1,
+  TIMER_BIT_MODE_24 = 2,
+  TIMER_BIT_MODE_32 = 3,
+} TimerBitMode;
+
+typedef enum TimerCaptureCompare
+{
+  CC0,
+  CC1,
+  CC2,
+  CC3
+} TimerCaptureCompare;
 
 /**
  * @brief Default Initialisation of Timer.

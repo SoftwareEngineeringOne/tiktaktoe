@@ -6,10 +6,6 @@
 #include "logic/game.h"
 #include "presentation/print.h"
 
-extern volatile InputBuffer input_buf;
-
-#define min(a, b) a < b ? a : b
-
 void menu_todo()
 {
     clearConsole();
@@ -19,7 +15,6 @@ void menu_todo()
         __WFI();
     }
 }
-
 
 int main(void)
 {

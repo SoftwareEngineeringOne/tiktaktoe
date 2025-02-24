@@ -85,18 +85,54 @@ static CellSize VALID_SIZES[] = {
 };
 
 
+/**
+ * @brief Redraws the given cell
+ * @param [in] cell
+ * Cell to redraw
+ */
 void cell_redraw(Cell *cell);
 
+/**
+ * @brief Redraws the whole field
+ * @param [in] cells
+ * 2D field of cells
+ */
 void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL]);
 
+/**
+ * @brief Selects the given cell
+ * @param [in] cell
+ * Cell to select
+ */
 void cell_select(Cell *cell);
 
+/**
+ * @brief Redraw one cell
+ * @param [in] row
+ * Y-Position
+ * @param [in] col
+ * X-Position
+ * @param [in] modifier
+ * @param [in] marked_by
+ * Player to mark by
+ */
 void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by);
 
+/**
+ * @brief Marks the given cell
+ * @param [in] cell
+ * Cell to mark
+ */
 void cell_mark(Cell *cell);
 
+/**
+ * @brief Increases the field size
+ */
 void cell_increaseSize();
-void cell_decreaseSize();
 
+/**
+ * @brief Decreases the field size
+ */
+void cell_decreaseSize();
 
 #endif// !CELL_H

@@ -1,7 +1,3 @@
-//
-// Created by paul on 2/17/25.
-//
-
 #include "logic/time.h"
 #include "logic/game.h"
 #include "presentation/print.h"

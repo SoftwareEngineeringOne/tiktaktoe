@@ -38,4 +38,10 @@
 
 #define ICSR 0xE000ED04// Interrupt Control and State Register
 
+
+/**
+ * @brief Activate the energy saving mode of the computer
+ *
+ * It does nothing till the next interrupt happens
+ */
 inline void __WFI(void);

@@ -10,18 +10,12 @@
 
 #include <stddef.h>
 
-/**
- * UART interrupt handler
- */
 void Interrupt2_Handler(void)
 {
     input_onInterrupt(uart_readByte());
     register_write(Interrupt_ICPR, Interrupt_ID2);
 }
 
-/**
- * Timer interrupt handler
- */
 void Interrupt8_Handler(void)
 {
     register_write(TIMER0_BASE_ADDRESS | TIMER_COMPARE_0, 0);

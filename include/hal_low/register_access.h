@@ -36,4 +36,4 @@ void register_write(uint32_t address, uint32_t value);
  **/
 uint32_t register_read(uint32_t address);
 
-#endif
+#endif// REGISTERACCESS_H

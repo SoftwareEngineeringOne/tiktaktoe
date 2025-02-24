@@ -189,4 +189,4 @@ void timer_capture(Timer timer, TimerCaptureCompare capture);
  */
 void timer_clearCompareEvent(Timer timer);
 
-#endif
+#endif// TIMER_H

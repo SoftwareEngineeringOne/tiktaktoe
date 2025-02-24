@@ -3,7 +3,7 @@
 #include "helper/converter.h"
 #include "presentation/print.h"
 
-void cursor_moveTo(uint8_t x, uint8_t y)
+void cursor_moveTo(const uint8_t x, const uint8_t y)
 {
     // uint8_t has max 3 digits + null terminator
     static char conversion_buf[4];
@@ -29,7 +29,7 @@ void cursor_moveTo(uint8_t x, uint8_t y)
     print(escape_seq);
 }
 
-void writeNumToBuf(uint8_t num, char *num_buf, char *buf, uint8_t *buf_pos)
+void writeNumToBuf(const uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)
 {
     buf[(*buf_pos)++] = num_buf[0];
     if(num > 9)

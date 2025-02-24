@@ -22,7 +22,7 @@ void game_run()
 
     uint8_t input;
     uint8_t last_update = 0;
-    Player winner = None;
+    Player winner;
     while(true)
     {
         while(!input_getNext(&input_buf, &input))
@@ -42,7 +42,7 @@ void game_run()
 
         winner = checkForWinner();
 
-        if(winner != None || input == 'q' || current_turn >= (CELLS_PER_COL * CELLS_PER_ROW) / 2)
+        if(winner != None || input == 'q' || current_turn >= CELLS_PER_COL * CELLS_PER_ROW / 2)
         {
             timer_stop(TIMER0);
             break;
@@ -259,12 +259,11 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_2_down_right = false;
         }
     }
-    if(vertical_match ||  horizontal_match  || diagonal_1_sum >= diagonal_win_condition  || diagonal_2_sum >= diagonal_win_condition )
-    {
+    if (vertical_match || horizontal_match
+        || diagonal_1_sum >= diagonal_win_condition
+        || diagonal_2_sum >= diagonal_win_condition)
+      {
         return true;
-    }
-    else
-    {
-        return false;
-    }
+      }
+    return false;
 }

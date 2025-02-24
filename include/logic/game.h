@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#define REMAINING_TIME TICKS_PER_ROUND - time_roundTicks
+#define REMAINING_TIME (TICKS_PER_ROUND - time_roundTicks)
 
 typedef enum
 {
@@ -26,8 +26,6 @@ typedef struct
         uint16_t row;
         Player marked_by;
 } Cell;
-
-extern volatile InputBuffer input_buf;
 
 static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
 static Cell* selected_cell;
@@ -64,11 +62,11 @@ static void handleForcedMoveUpdate();
  * @brief Checks if the given player has won
  * @param [in] cell
  * Newest marked cell of the player
- * @param [in] mark
+ * @param [in] player
  * Player it is looking for
  * @return True when player won
  */
-static bool checkIfPlayerWon(const Cell * cell, Player mark);
+static bool checkIfPlayerWon(const Cell * cell, Player player);
 
 /**
  * @brief Does certain things on input

@@ -2,6 +2,7 @@
 
 #include "presentation/cursor.h"
 #include "presentation/print.h"
+#include "helper/converter.h"
 
 #include <stddef.h>
 

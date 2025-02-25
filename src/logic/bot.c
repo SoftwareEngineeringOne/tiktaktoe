@@ -7,12 +7,12 @@
 
 Cell *bot_makeTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW])
 {
-    return markRandomCell(cells, Computer);
+    return markRandomCell(cells, Cross);
 }
 
-Cell *bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW])
+Cell *bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player marked_by)
 {
-    return markRandomCell(cells, Human);
+    return markRandomCell(cells, marked_by);
 }
 
 static Cell *markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player marked_by)

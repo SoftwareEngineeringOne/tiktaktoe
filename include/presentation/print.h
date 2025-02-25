@@ -1,6 +1,8 @@
 #ifndef PRINT_H
 #define PRINT_H
 
+#include <stdint.h>
+
 #define LINE_SEPERATOR '\n'
 
 #define CLEAR_SCREEN "\e[1;1H\e[2J"
@@ -41,10 +43,22 @@ void clearConsole();
 void print(const char *string);
 
 /**
+ * @brief Prints the given integer
+ * @param [in] number
+ */
+void print_integer(const uint32_t number);
+
+/**
  * @brief Prints the given string with a new line character
  * @param [in] string
  */
 void println(const char *string);
+
+/**
+ * @brief Prints the given integer with a new line character
+ * @param [in] number
+ */
+void println_integer(const uint32_t number);
 
 /**
  * @brief Prints the given string with a predefined style

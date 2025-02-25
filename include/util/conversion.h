@@ -1,5 +1,5 @@
-#ifndef CONVERTER_H
-#define CONVERTER_H
+#ifndef CONVERSION_H
+#define CONVERSION_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -26,4 +26,4 @@ int8_t int_to_str(uint32_t num, char *buf, const size_t buf_size);
  */
 char int_to_char(uint8_t num);
 
-#endif// CONVERTER_H
+#endif// CONVERSION_H

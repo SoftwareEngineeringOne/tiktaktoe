@@ -39,14 +39,17 @@ void cell_select(Cell *cell)
     prev_mark = cell->marked_by;
 }
 
-void cell_redrawAll(Cell cells[CELLS_PER_COL][CELLS_PER_ROW])
+void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW])
 {
-    for(uint8_t row = 0; row < CELLS_PER_ROW; row++)
+    Cell *cell = NULL;
+    for(uint8_t row = 0; row < CELLS_PER_COL; row++)
     {
-        for(uint8_t col = 0; col < CELLS_PER_COL; col++)
+        for(uint8_t col = 0; col < CELLS_PER_ROW; col++)
         {
-            const Cell *cell = &cells[row][col];
+            cell = &all_cells[row][col];
             redrawCell(cell->row, cell->col, "", cell->marked_by);
+            int test = 8;
+            int test2 = 8;
         }
     }
 }

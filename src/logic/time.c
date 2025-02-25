@@ -1,9 +1,9 @@
 #include "logic/time.h"
 
-#include "logic/game.h"
-#include "presentation/print.h"
-#include "presentation/cursor.h"
 #include "hal_low/timer.h"
+#include "logic/game.h"
+#include "presentation/cursor.h"
+#include "presentation/print.h"
 
 volatile int time_sumTicks = 0;
 volatile int time_roundTicks = 0;

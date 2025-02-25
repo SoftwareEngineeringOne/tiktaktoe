@@ -92,10 +92,10 @@ void cell_redraw(Cell *cell);
 
 /**
  * @brief Redraws the whole field
- * @param [in] cells
+ * @param [in] all_cells
  * 2D field of cells
  */
-void cell_redrawAll(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
+void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW]);
 
 /**
  * @brief Selects the given cell

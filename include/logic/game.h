@@ -7,7 +7,6 @@
 #include <stdint.h>
 
 #define REMAINING_TIME (TICKS_PER_ROUND - time_roundTicks)
-#define CURRENT_PLAYER_STR (current_player == Cross ? "Circle" : "Cross")
 #define FIRST_TURN 1
 
 typedef enum

@@ -1,9 +1,8 @@
 #include "presentation/print.h"
 
 #include "hal_low/uart.h"
-
-#include <hal_low/nvic.h>
-#include <helper/converter.h>
+#include "hal_low/nvic.h"
+#include "util/conversion.h"
 
 void clearConsole()
 {
@@ -19,10 +18,10 @@ void print(const char *string)
     }
 }
 
-void print_integer(const uint32_t number)
+void print_int(const uint32_t number)
 {
-    char string[10];
-    int_to_str(number, string, 10);
+    static char string[11];
+    int_to_str(number, string, 11);
     print(string);
 }
 
@@ -32,9 +31,9 @@ void println(const char *string)
     uart_writeByte(LINE_SEPERATOR);
 }
 
-void println_integer(const uint32_t number)
+void println_int(const uint32_t number)
 {
-     print_integer(number);
+     print_int(number);
      uart_writeByte(LINE_SEPERATOR);
 }
 

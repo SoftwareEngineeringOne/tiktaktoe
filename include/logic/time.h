@@ -2,7 +2,7 @@
 #define TIME_H
 
 #define TICKS_PER_ROUND 20
-#define TICK_SPEED 11
+#define TICK_SPEED 10
 
 extern volatile int time_sumTicks;
 extern volatile int time_roundTicks;

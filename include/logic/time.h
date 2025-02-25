@@ -1,7 +1,7 @@
 #ifndef TIME_H
 #define TIME_H
 
-#define TICKS_PER_ROUND 1
+#define TICKS_PER_ROUND 20
 #define TICK_SPEED 11
 
 extern volatile int time_sumTicks;

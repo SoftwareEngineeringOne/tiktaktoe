@@ -75,18 +75,18 @@ void game_onTimeOut()
 {
     if(game_mode == PVE)
     {
-        last_marked_circle = bot_makeHumanTurn(cells, Circle);
-        last_marked_cross = bot_makeTurn(cells);
+        last_marked_circle = bot_markRandomCell(cells, Circle);
+        last_marked_cross = bot_markRandomCell(cells, Cross);
         turn_number++;
     }
     else if(current_player == Circle)
     {
-        last_marked_circle = bot_makeHumanTurn(cells, Circle);
+        last_marked_circle = bot_markRandomCell(cells, Circle);
         current_player = Cross;
     }
     else if(current_player == Cross)
     {
-        last_marked_cross = bot_makeHumanTurn(cells, Cross);
+        last_marked_cross = bot_markRandomCell(cells, Cross);
         current_player = Circle;
         turn_number++;
     }
@@ -140,7 +140,7 @@ bool handleInput(const uint8_t *input)
             if(game_mode == PVE)
             {
                 selected_cell->marked_by = Circle;
-                last_marked_cross = bot_makeTurn(cells);
+                last_marked_cross = bot_markRandomCell(cells, Cross);
                 last_marked_circle = selected_cell;
                 cell_redraw(last_marked_cross);
                 turn_number++;

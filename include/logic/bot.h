@@ -10,7 +10,7 @@
  * 2D field of cells
  * @return Marked cell
  */
-Cell* bot_makeTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
+Cell *bot_makeTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
 
 /**
  * @brief Mark some random cell for the human player
@@ -18,7 +18,7 @@ Cell* bot_makeTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
  * 2D field of cells
  * @return Marked cell
  */
-Cell* bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
+Cell *bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
 
 /**
  * @brief some random cell
@@ -28,6 +28,6 @@ Cell* bot_makeHumanTurn(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
  * Player to be marked by
  * @return Marked cell
  */
-static Cell* markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player mark_by);
+static Cell *markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player mark_by);
 
 #endif// BOT_H

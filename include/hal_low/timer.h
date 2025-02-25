@@ -63,31 +63,31 @@
 
 typedef enum Timer
 {
-  TIMER0,
-  TIMER1,
-  TIMER2
+    TIMER0,
+    TIMER1,
+    TIMER2
 } Timer;
 
 typedef enum TimerMode
 {
-  TIMER_MODE_TIMER = 0,
-  TIMER_MODE_COUNTER = 1
+    TIMER_MODE_TIMER = 0,
+    TIMER_MODE_COUNTER = 1
 } TimerMode;
 
 typedef enum TimerBitMode
 {
-  TIMER_BIT_MODE_16 = 0,
-  TIMER_BIT_MODE_8 = 1,
-  TIMER_BIT_MODE_24 = 2,
-  TIMER_BIT_MODE_32 = 3,
+    TIMER_BIT_MODE_16 = 0,
+    TIMER_BIT_MODE_8 = 1,
+    TIMER_BIT_MODE_24 = 2,
+    TIMER_BIT_MODE_32 = 3,
 } TimerBitMode;
 
 typedef enum TimerCaptureCompare
 {
-  CC0,
-  CC1,
-  CC2,
-  CC3
+    CC0,
+    CC1,
+    CC2,
+    CC3
 } TimerCaptureCompare;
 
 /**

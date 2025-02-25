@@ -182,13 +182,14 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
 
     // VICTORY ALGORITHM
     // Vertical / Horizontal:
-    // The algorithm starts at the border and iterates to the other side. It goes in 2 different directions and counts on 2 axes.
-    // It runs in one of the directions till a cell is reached that is not marked by our player.
-    // Diagonal:
-    // The algorithm starts at the given cell coordinates. It goes in 4 different direction and counts on 2 axes.
-    // Every step in one of the directions increments the dedicated axis until a cell is reached that is not marked by our player.
+    // The algorithm starts at the border and iterates to the other side. It goes in 2 different
+    // directions and counts on 2 axes. It runs in one of the directions till a cell is reached that
+    // is not marked by our player. Diagonal: The algorithm starts at the given cell coordinates. It
+    // goes in 4 different direction and counts on 2 axes. Every step in one of the directions
+    // increments the dedicated axis until a cell is reached that is not marked by our player.
     //
-    // The return value is true when one axis or more axes has / have reached the win condition (line to the other side).
+    // The return value is true when one axis or more axes has / have reached the win condition
+    // (line to the other side).
     //  UP      UP     UP          | axis       | direction 1 | direction 2 |
     // LEFT           RIGHT        |------------+-------------+-------------|
     //        \ | /                | vertical   | down        |             |
@@ -202,7 +203,8 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
     const uint8_t max_row = CELLS_PER_COL - 1, max_col = CELLS_PER_ROW - 1;
     uint8_t diagonal_1_sum = 1, diagonal_2_sum = 1;
     bool vertical_match = true, horizontal_match = true;
-    bool diagonal_1_up_right = true, diagonal_1_down_left = true, diagonal_2_up_left = true, diagonal_2_down_right = true;
+    bool diagonal_1_up_right = true, diagonal_1_down_left = true, diagonal_2_up_left = true,
+         diagonal_2_down_right = true;
     for(uint8_t i = 1, n = 0; n < max_cells; i++, n++)
     {
         // --- VERTICAL ---
@@ -216,12 +218,13 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
         // to the right
         if(n <= max_col && cells[row][n].marked_by != player)
         {
-             horizontal_match = false;
+            horizontal_match = false;
         }
 
         // --- 1st DIAGONAL ---
         // upwards to the right
-        if(diagonal_1_up_right && row - i >= 0 && col + i <= max_col && cells[row - i][col + i].marked_by == player)
+        if(diagonal_1_up_right && row - i >= 0 && col + i <= max_col
+           && cells[row - i][col + i].marked_by == player)
         {
             diagonal_1_sum++;
         }
@@ -230,7 +233,8 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_1_up_right = false;
         }
         // downwards to the left
-        if(diagonal_1_down_left && row + i <= max_row && col - i >= 0 && cells[row + i][col - i].marked_by == player)
+        if(diagonal_1_down_left && row + i <= max_row && col - i >= 0
+           && cells[row + i][col - i].marked_by == player)
         {
             diagonal_1_sum++;
         }
@@ -241,7 +245,8 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
 
         // --- 2nd DIAGONAL ---
         // upwards to the left
-        if(diagonal_2_up_left && row - i >= 0 && col - i >= 0 && cells[row - i][col - i].marked_by == player)
+        if(diagonal_2_up_left && row - i >= 0 && col - i >= 0
+           && cells[row - i][col - i].marked_by == player)
         {
             diagonal_2_sum++;
         }
@@ -250,7 +255,8 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_2_up_left = false;
         }
         // downwards to the right
-        if(diagonal_2_down_right && row + i <= max_row && col + i <= max_col && cells[row + i][col + i].marked_by == player)
+        if(diagonal_2_down_right && row + i <= max_row && col + i <= max_col
+           && cells[row + i][col + i].marked_by == player)
         {
             diagonal_2_sum++;
         }
@@ -259,11 +265,10 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
             diagonal_2_down_right = false;
         }
     }
-    if (vertical_match || horizontal_match
-        || diagonal_1_sum >= diagonal_win_condition
-        || diagonal_2_sum >= diagonal_win_condition)
-      {
+    if(vertical_match || horizontal_match || diagonal_1_sum >= diagonal_win_condition
+       || diagonal_2_sum >= diagonal_win_condition)
+    {
         return true;
-      }
+    }
     return false;
 }

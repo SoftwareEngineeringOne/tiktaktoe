@@ -32,18 +32,19 @@ void uart_init(const bool with_interrupts)
     // register_write((UART_BASE_ADDRESS + UART_BAUDRATE), 0x01D7E000);
 
     // Enable UART ------------------------------------------------------------
-    register_write (UART_BASE_ADDRESS + UART_ENABLE, 4);
+    register_write(UART_BASE_ADDRESS + UART_ENABLE, 4);
 
     // Fire the START event for the Transmitter: ------------------------------
-    register_write (UART_BASE_ADDRESS + UART_STARTTX, UART_TASK_START);
+    register_write(UART_BASE_ADDRESS + UART_STARTTX, UART_TASK_START);
 
     // Fire the START event for the Receiver: ---------------------------------
-    register_write (UART_BASE_ADDRESS + UART_STARTRX, UART_TASK_START);
+    register_write(UART_BASE_ADDRESS + UART_STARTRX, UART_TASK_START);
 
     if(with_interrupts)
     {
         // Enable Interrupt
-        register_write (UART_BASE_ADDRESS | UART_INTENSET,
+        register_write(
+            UART_BASE_ADDRESS | UART_INTENSET,
             UART_INT_RXDRDY);// Interrupt on Compare[0]
 
         // Enable User-Interrupt from Cortex-M0
@@ -55,7 +56,7 @@ void uart_init(const bool with_interrupts)
 void uart_writeByte(const uint8_t data)
 {
     // write the data to the TXD register
-    register_write (UART_BASE_ADDRESS + UART_TXD, data);
+    register_write(UART_BASE_ADDRESS + UART_TXD, data);
 
     // need to "wait" until its transmitted
 }
@@ -63,16 +64,16 @@ void uart_writeByte(const uint8_t data)
 uint8_t uart_readByte()
 {
     // if not ready, return 0
-    const uint32_t receiveIsReady = register_read (UART_BASE_ADDRESS + UART_RXDRDY);
+    const uint32_t receiveIsReady = register_read(UART_BASE_ADDRESS + UART_RXDRDY);
 
-    if (receiveIsReady)
-      {
+    if(receiveIsReady)
+    {
         // we have to CLEAR the event before reading out from RXD
-        register_write (UART_BASE_ADDRESS + UART_RXDRDY, UART_EVENT_CLEAR);
+        register_write(UART_BASE_ADDRESS + UART_RXDRDY, UART_EVENT_CLEAR);
 
         // FIFO is ready to read something out of it
-        return register_read (UART_BASE_ADDRESS + UART_RXD);
-      }
+        return register_read(UART_BASE_ADDRESS + UART_RXD);
+    }
     // FIFO is not ready to read,
     // so return 0 instead
     return 0;

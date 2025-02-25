@@ -28,9 +28,9 @@ typedef struct
 } Cell;
 
 static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
-static Cell* selected_cell;
-static Cell* last_marked_bot;
-static Cell* last_marked_human;
+static Cell *selected_cell;
+static Cell *last_marked_bot;
+static Cell *last_marked_human;
 
 /**
  * @brief Start the main game
@@ -66,7 +66,7 @@ static void handleForcedMoveUpdate();
  * Player it is looking for
  * @return True when player won
  */
-static bool checkIfPlayerWon(const Cell * cell, Player player);
+static bool checkIfPlayerWon(const Cell *cell, Player player);
 
 /**
  * @brief Does certain things on input

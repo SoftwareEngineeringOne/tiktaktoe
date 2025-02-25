@@ -48,7 +48,7 @@ void timer_init_detailed(
     register_write(timerBase | TIMER_BITMODE, bitMode);
 
     // Enable Interrupt
-    register_write (TIMER0_BASE_ADDRESS | TIMER_INTENSET, INT_COMPARE0);// Interrupt on Compare[0]
+    register_write(TIMER0_BASE_ADDRESS | TIMER_INTENSET, INT_COMPARE0);// Interrupt on Compare[0]
 
     // Enable User-Interrupt from Cortex-M0
     // ID8 ist der Timer0

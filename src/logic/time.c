@@ -19,11 +19,13 @@ void time_onInterrupt()
 {
     time_sumTicks++;
     time_roundTicks = (time_roundTicks + 1) % TICKS_PER_ROUND;
-    if(time_roundTicks == TICKS_PER_ROUND - 1) {
+    if(time_roundTicks == TICKS_PER_ROUND - 1)
+    {
         game_onTimeOut();
     }
 }
 
-void time_finishRound() {
+void time_finishRound()
+{
     time_roundTicks = 0;
 }

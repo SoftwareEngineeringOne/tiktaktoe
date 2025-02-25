@@ -21,6 +21,20 @@ int main(void)
     uart_init(true);
     input_init(&input_buf);
 
+    print("HardFault incoming...");
+
+    // char test[3];
+    // int i = 0;
+    // while(true)
+    // {
+    //     if(i < 0)
+    //     {
+    //         break;
+    //     }
+    //     test[i++] = 5;
+    //
+    // }
+
 
     uint8_t input;
     while(true)
@@ -28,10 +42,11 @@ int main(void)
         clearConsole();
         print("\e[H");
         println("Arrows to move");
-        println("1. Play");
-        println("2. Settings");
-        println("3. Credits");
-        println("4. Quit (not really hahahahaha)");
+        println("1. Player vs Player");
+        println("2. Player vs Computer");
+        println("3. Settings");
+        println("4. Credits");
+        println("5. Quit (not really hahahahaha)");
 
         while(!input_getNext(&input_buf, &input))
         {
@@ -42,15 +57,18 @@ int main(void)
         switch(input)
         {
             case '1':
-                game_run();
+                game_run(PVP);
                 break;
             case '2':
-                menu_todo();
+                game_run(PVE);
                 break;
             case '3':
                 menu_todo();
                 break;
             case '4':
+                menu_todo();
+                break;
+            case '5':
                 should_quit = true;
                 break;
             default:

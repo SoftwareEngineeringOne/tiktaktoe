@@ -67,7 +67,7 @@ void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by)
         {
             switch(marked_by)
             {
-                case Human:
+                case Circle:
                     print(FG_GREEN);
                     switch(current_size)
                     {
@@ -83,7 +83,7 @@ void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by)
                     }
                     print("\e[37");
                     break;
-                case Computer:
+                case Cross:
                     print(FG_MAGENTA);
                     switch(current_size)
                     {

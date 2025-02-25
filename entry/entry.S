@@ -71,6 +71,7 @@ endless_loop:
 .weak    HardFault_Handler
 /* .fnstart */
 HardFault_Handler:
+    BL print_hardFault
     b        .
 /* .fnend */
 .size    HardFault_Handler, . - HardFault_Handler

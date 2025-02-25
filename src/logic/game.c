@@ -14,23 +14,20 @@
 #include "presentation/print.h"
 #include "presentation/ui.h"
 
-volatile uint8_t current_turn = 0;
-
-void game_run()
+void game_run(const Mode mode)
 {
-    init();
+    init(mode);
 
     uint8_t input;
-    uint8_t last_update = 0;
     Player winner;
     while(true)
     {
         while(!input_getNext(&input_buf, &input))
         {
             // If true, Move was forced due to inactivity
-            if(current_turn != last_update)
+            if(turn_number != last_ui_update)
             {
-                last_update = current_turn;
+                last_ui_update = turn_number;
                 handleForcedMoveUpdate();
                 break;
             }
@@ -43,8 +40,7 @@ void game_run()
         winner = checkForWinner();
 
         cell_select(selected_cell);
-
-        if(winner != None || input == 'q' || current_turn >= CELLS_PER_COL * CELLS_PER_ROW / 2)
+        if(winner != None || input == 'q' || turn_number >= CELLS_PER_COL * CELLS_PER_ROW / 2)
         {
             timer_stop(TIMER0);
             break;
@@ -60,10 +56,10 @@ void game_run()
     cursor_moveTo(1, CELLS_PER_COL * cell_height);
     switch(winner)
     {
-        case Human:
+        case Circle:
             println("Congratulations for winning!");
             break;
-        case Computer:
+        case Cross:
             println("Better luck next time!");
             break;
         default:;
@@ -77,14 +73,30 @@ void game_run()
 
 void game_onTimeOut()
 {
-    last_marked_human = bot_makeHumanTurn(cells);
-    last_marked_bot = bot_makeTurn(cells);
-    current_turn++;
+    if(game_mode == PVE)
+    {
+        last_marked_circle = bot_makeHumanTurn(cells, Circle);
+        last_marked_cross = bot_makeTurn(cells);
+        turn_number++;
+    }
+    else if(current_player == Circle)
+    {
+        last_marked_circle = bot_makeHumanTurn(cells, Circle);
+        current_player = Cross;
+    }
+    else if(current_player == Cross)
+    {
+        last_marked_cross = bot_makeHumanTurn(cells, Cross);
+        current_player = Circle;
+        turn_number++;
+    }
 }
 
-void init()
+void init(const Mode mode)
 {
-    current_turn = 0;
+    turn_number = FIRST_TURN;
+    last_ui_update = turn_number;
+    game_mode = mode;
     input_init(&input_buf);
     rng_init();
     print(HIDE_CURSOR);
@@ -109,7 +121,7 @@ void init()
     field_redraw();
     cell_select(selected_cell);
     ui_displayTimer(REMAINING_TIME);
-    ui_displayTurn(current_turn, "Player");
+    ui_displayTurn(turn_number, CURRENT_PLAYER_STR);
 }
 
 bool handleInput(const uint8_t *input)
@@ -120,16 +132,37 @@ bool handleInput(const uint8_t *input)
             input_handleEscapeSequence(cells, &selected_cell);
             break;
         case ' ':
-            if(selected_cell->marked_by == None)
+            if(selected_cell->marked_by != None)
             {
-                selected_cell->marked_by = Human;
-                last_marked_bot = bot_makeTurn(cells);
-                last_marked_human = selected_cell;
-                cell_redraw(last_marked_bot);
-                current_turn++;
-                ui_updateTurn(current_turn, "Player");
-                time_finishRound();
+                break;
             }
+
+            if(game_mode == PVE)
+            {
+                selected_cell->marked_by = Circle;
+                last_marked_cross = bot_makeTurn(cells);
+                last_marked_circle = selected_cell;
+                cell_redraw(last_marked_cross);
+                turn_number++;
+            }
+            else
+            {
+                selected_cell->marked_by = current_player;
+                if(current_player == Circle)
+                {
+                    last_marked_circle = selected_cell;
+                }
+                else
+                {
+                    last_marked_cross = selected_cell;
+                    turn_number++;
+                }
+                current_player = current_player == Circle ? Cross : Circle;
+            }
+
+            ui_updateTurn(turn_number, CURRENT_PLAYER_STR);
+            last_ui_update = turn_number;
+            time_finishRound();
             break;
         case '+':
             cell_increaseSize();
@@ -145,7 +178,7 @@ bool handleInput(const uint8_t *input)
 void redrawField()
 {
     clearConsole();
-    ui_displayTurn(current_turn, "Player");
+    ui_displayTurn(turn_number, CURRENT_PLAYER_STR);
     ui_displayTimer(REMAINING_TIME);
     field_redraw();
     cell_redrawAll(cells);
@@ -153,22 +186,29 @@ void redrawField()
 
 void handleForcedMoveUpdate()
 {
-    cell_select(last_marked_bot);
-    cell_select(last_marked_human);
-    ui_updateTurn(current_turn, "Player");
+    cell_select(last_marked_cross);
+    cell_select(last_marked_circle);
+    ui_updateTurn(turn_number, CURRENT_PLAYER_STR);
 
-    selected_cell = last_marked_human;
+    if(game_mode == PVE)
+    {
+        selected_cell = last_marked_circle;
+    }
+    else
+    {
+        selected_cell = current_player == Circle ? last_marked_cross : last_marked_circle;
+    }
 }
 
 Player checkForWinner()
 {
-    if(checkIfPlayerWon(last_marked_human, Human))
+    if(checkIfPlayerWon(last_marked_circle, Circle))
     {
-        return Human;
+        return Circle;
     }
-    if(checkIfPlayerWon(last_marked_bot, Computer))
+    if(checkIfPlayerWon(last_marked_cross, Cross))
     {
-        return Computer;
+        return Cross;
     }
     return None;
 }

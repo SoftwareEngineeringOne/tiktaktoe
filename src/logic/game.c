@@ -14,6 +14,8 @@
 #include "presentation/print.h"
 #include "presentation/ui.h"
 
+#include <helper/converter.h>
+
 void game_run(const Mode mode)
 {
     init(mode);
@@ -51,24 +53,7 @@ void game_run(const Mode mode)
             redrawField();
         }
     }
-
-
-    cursor_moveTo(1, CELLS_PER_COL * cell_height);
-    switch(winner)
-    {
-        case Circle:
-            println("Congratulations for winning!");
-            break;
-        case Cross:
-            println("Better luck next time!");
-            break;
-        default:;
-    }
-    println("Press any key to return to the menu...");
-    while(input_isEmpty(&input_buf))
-    {
-        __WFI();
-    }
+    printEndScreen(winner);
 }
 
 void game_onTimeOut()
@@ -311,4 +296,49 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
         return true;
     }
     return false;
+}
+
+void printEndScreen(Player winner)
+{
+
+    cursor_moveTo(1, CELLS_PER_COL * cell_height);
+    switch(winner)
+    {
+      case Circle:
+        println("The player with the circle has won!");
+        break;
+      case Cross:
+        println("The player with the cross has won!");
+        break;
+      default:;
+    }
+    println("Press any key to see the statistics...");
+
+  uint8_t input;
+    while(!input_getNext(&input_buf, &input))
+    {
+        __WFI();
+    }
+
+    clearConsole();
+
+    char string[3];
+
+    print("Turns: ");
+    int_to_str(turn_number, string, 3);
+    println(string);
+
+    print("Ticks: ");
+    int_to_str(time_sumTicks, string, 3);
+    println(string);
+
+    print("Ticks per round: ");
+    int_to_str(time_sumTicks / turn_number, string, 3);
+    println(string);
+
+    println("Press any key to return to the menu...");
+    while(input_isEmpty(&input_buf))
+    {
+        __WFI();
+    }
 }

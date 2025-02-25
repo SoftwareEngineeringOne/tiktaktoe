@@ -39,7 +39,7 @@ void cell_select(Cell *cell)
     prev_mark = cell->marked_by;
 }
 
-void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL])
+void cell_redrawAll(Cell cells[CELLS_PER_COL][CELLS_PER_ROW])
 {
     for(uint8_t row = 0; row < CELLS_PER_ROW; row++)
     {

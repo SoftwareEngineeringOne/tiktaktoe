@@ -92,4 +92,10 @@ static bool handleInput(const uint8_t *input);
  */
 static void redrawField();
 
+/**
+ * @brief Prints the winner and statistics
+ * @param [in] winner
+ */
+static void printEndScreen(Player winner);
+
 #endif// GAME_H

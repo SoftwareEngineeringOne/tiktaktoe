@@ -9,7 +9,7 @@
 #define FIELD_X_OFFSET 1
 #define FIELD_Y_OFFSET 3
 
-#define UNICODE // if not UNICODE then ascii automatically
+#define UNICODE// if not UNICODE then ascii automatically
 
 #ifdef UNICODE
 #define CORNER_TOP_LEFT "╭"

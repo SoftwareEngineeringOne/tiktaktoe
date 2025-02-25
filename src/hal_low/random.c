@@ -12,7 +12,7 @@
 void rng_init(void)
 {
     // Write a '1' to the Start Task, to start the generation of random numbers
-    register_write (RNG_BASE_ADDRESS | RNG_START, RNG_TASK_START);
+    register_write(RNG_BASE_ADDRESS | RNG_START, RNG_TASK_START);
 }
 
 
@@ -26,7 +26,7 @@ void rng_init(void)
 uint8_t rng_getRandomValue_immediately(void)
 {
     // Read 32-Bit Register containing the RNG Value
-    const uint32_t randomValue = register_read (RNG_BASE_ADDRESS | RNG_VALUE);
+    const uint32_t randomValue = register_read(RNG_BASE_ADDRESS | RNG_VALUE);
 
     // its actual just 8-Bit, so cast it.
     return randomValue;
@@ -52,6 +52,5 @@ uint8_t rng_getRandomValue_waiting()
     }
     register_write(RNG_BASE_ADDRESS | RNG_VALRDY, 0);
 
-    return
-        rng_getRandomValue_immediately();
+    return rng_getRandomValue_immediately();
 }

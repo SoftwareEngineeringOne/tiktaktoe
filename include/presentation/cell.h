@@ -95,7 +95,7 @@ void cell_redraw(Cell *cell);
  * @param [in] cells
  * 2D field of cells
  */
-void cell_redrawAll(Cell cells[CELLS_PER_ROW][CELLS_PER_COL]);
+void cell_redrawAll(Cell cells[CELLS_PER_COL][CELLS_PER_ROW]);
 
 /**
  * @brief Selects the given cell

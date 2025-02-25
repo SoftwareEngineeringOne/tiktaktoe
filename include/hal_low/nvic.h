@@ -41,6 +41,6 @@
  *
  * It does nothing till the next interrupt happens
  */
-inline void __WFI(void);
+void __WFI(void);
 
 #endif// NVIC_H

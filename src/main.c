@@ -16,36 +16,40 @@ void menu_todo()
     }
 }
 
+static char* HEADING = "\
+.___________. __   __  ___ .___________.    ___       __  ___ .___________.  ______    _______  \n\
+|           ||  | |  |/  / |           |   /   \\     |  |/  / |           | /  __  \\  |   ____| \n\
+`---|  |----`|  | |  '  /  `---|  |----`  /  ^  \\    |  '  /  `---|  |----`|  |  |  | |  |__    \n\
+    |  |     |  | |    <       |  |      /  /_\\  \\   |    <       |  |     |  |  |  | |   __|   \n\
+    |  |     |  | |  .  \\      |  |     /  _____  \\  |  .  \\      |  |     |  `--'  | |  |____  \n\
+    |__|     |__| |__|\\__\\     |__|    /__/     \\__\\ |__|\\__\\     |__|      \\______/  |_______| \n\
+_______________________________________________________________________________________________\n\
+";
+
 int main(void)
 {
     uart_init(true);
     input_init(&input_buf);
 
-    print("HardFault incoming...");
 
-    // char test[3];
-    // int i = 0;
-    // while(true)
-    // {
-    //     if(i < 0)
-    //     {
-    //         break;
-    //     }
-    //     test[i++] = 5;
-    //
-    // }
-
+    print(HIDE_CURSOR);
     uint8_t input;
     while(true)
     {
         clearConsole();
-        print("\e[H");
-        println("Arrows to move");
-        println("1. Player vs Player");
-        println("2. Player vs Computer");
-        println("3. Settings");
-        println("4. Credits");
-        println("5. Quit (not really hahahahaha)");
+        print(BOLD);
+        print(FG_GREEN);
+        print(HEADING);
+        print("\e[1E");
+        print(RESET);
+        print(BOLD);
+        println("Choose your option:\n");
+        print(RESET);
+        println("\t1. Player vs Player");
+        println("\t2. Player vs Computer");
+        println("\t3. Settings");
+        println("\t4. Credits");
+        println("\t5. Quit (not really hahahahaha)");
 
         while(!input_getNext(&input_buf, &input))
         {

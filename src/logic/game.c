@@ -4,7 +4,7 @@
 #include "hal_low/nvic.h"
 #include "hal_low/random.h"
 #include "hal_low/timer.h"
-#include "helper/math.h"
+#include "util/math.h"
 #include "logic/bot.h"
 #include "logic/input.h"
 #include "logic/time.h"
@@ -13,8 +13,9 @@
 #include "presentation/field.h"
 #include "presentation/print.h"
 #include "presentation/ui.h"
+#include "util/conversion.h"
 
-#include <helper/converter.h>
+volatile bool force_ui_update = false;
 
 void game_run(const Mode mode)
 {
@@ -27,13 +28,13 @@ void game_run(const Mode mode)
         while(!input_getNext(&input_buf, &input))
         {
             // If true, Move was forced due to inactivity
-            if(turn_number != last_ui_update)
+            if(force_ui_update)
             {
-                last_ui_update = turn_number;
                 handleForcedMoveUpdate();
+                force_ui_update = false;
                 break;
             }
-            ui_updateTimer(REMAINING_TIME);
+            ui_updateTimer(REMAINING_TIME, TICKS_PER_ROUND);
             __WFI();
         }
 
@@ -58,6 +59,7 @@ void game_run(const Mode mode)
 
 void game_onTimeOut()
 {
+    force_ui_update = true;
     if(game_mode == PVE)
     {
         last_marked_circle = bot_markRandomCell(cells, Circle);
@@ -68,13 +70,14 @@ void game_onTimeOut()
     {
         last_marked_circle = bot_markRandomCell(cells, Circle);
         current_player = Cross;
+        turn_number++;
     }
     else if(current_player == Cross)
     {
         last_marked_cross = bot_markRandomCell(cells, Cross);
         current_player = Circle;
-        turn_number++;
     }
+    time_finishRound();
 }
 
 void init(const Mode mode)
@@ -146,7 +149,7 @@ bool handleInput(const uint8_t *input)
                 current_player = current_player == Circle ? Cross : Circle;
             }
 
-            ui_updateTurn(turn_number, CURRENT_PLAYER_STR);
+            ui_updateTurn(turn_number, current_player);
             last_ui_update = turn_number;
             time_finishRound();
             break;
@@ -164,8 +167,8 @@ bool handleInput(const uint8_t *input)
 void redrawField()
 {
     clearConsole();
-    ui_displayTurn(turn_number, CURRENT_PLAYER_STR);
-    ui_displayTimer(REMAINING_TIME);
+    ui_displayTurn(turn_number, current_player);
+    ui_displayTimer(REMAINING_TIME, TICKS_PER_ROUND);
     field_redraw();
     cell_redrawAll(cells);
     cell_select(selected_cell);
@@ -175,7 +178,7 @@ void handleForcedMoveUpdate()
 {
     cell_select(last_marked_cross);
     cell_select(last_marked_circle);
-    ui_updateTurn(turn_number, CURRENT_PLAYER_STR);
+    ui_updateTurn(turn_number, current_player);
 
     if(game_mode == PVE)
     {
@@ -306,14 +309,36 @@ void printEndScreen(Player winner)
     switch(winner)
     {
         case Circle:
-            println("The player with the circle has won!");
+            print(BOLD);
+            print(FG_GREEN);
+            if(game_mode == PVE)
+            {
+                println("Congratulations, you have beaten the Computer!");
+            }
+            else
+            {
+                println("Congratulations, circle has won!");
+            }
+            print(RESET);
             break;
         case Cross:
-            println("The player with the cross has won!");
+            print(BOLD);
+            print(FG_MAGENTA);
+            if(game_mode == PVE)
+            {
+                println("Better luck next time! The Computer has beaten you...");
+            }
+            else
+            {
+                println("Congratulation, cross has won!");
+            }
+            print(RESET);
             break;
         default:;
     }
+    print(ITALIC);
     println("Press any key to see the statistics...");
+    print(RESET);
 
     uint8_t input;
     while(!input_getNext(&input_buf, &input))
@@ -323,22 +348,25 @@ void printEndScreen(Player winner)
 
     clearConsole();
 
-    char string[3];
+    print("Turns needed:\t");
+    print(BOLD);
+    println_int(turn_number);
+    print(RESET);
 
-    print("Turns: ");
-    int_to_str(turn_number, string, 3);
-    println(string);
+    print("Total ticks:\t");
+    print(BOLD);
+    println_int(time_sumTicks);
+    print(RESET);
 
-    print("Ticks: ");
-    int_to_str(time_sumTicks, string, 3);
-    println(string);
+    print("Ø ticks / round:\t");
+    print(BOLD);
+    println_int(time_sumTicks / turn_number);
+    print(RESET);
 
-    print("Ticks per round: ");
-    int_to_str(time_sumTicks / turn_number, string, 3);
-    println(string);
-
+    print(ITALIC);
     println("Press any key to return to the menu...");
-    while(input_isEmpty(&input_buf))
+    print(RESET);
+    while(!input_getNext(&input_buf, &input))
     {
         __WFI();
     }

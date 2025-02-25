@@ -9,14 +9,16 @@
 #define DEFAULT ""
 #define RESET "\e[0m"
 
+#define FG_RED "\e[31m"
 #define FG_GREEN "\e[32m"
+#define FG_YELLOW "\e[33m"
 #define FG_MAGENTA "\e[35m"
 
 #define BG_GREEN "\e[42m"
 #define BG_YELLOW "\e[43m"
 
 #define BOLD "\e[1m"
-
+#define ITALIC "\e[3m"
 #define INVERSE "\e[7m"
 
 #define HIDE_CURSOR "\e[?25l"
@@ -46,7 +48,7 @@ void print(const char *string);
  * @brief Prints the given integer
  * @param [in] number
  */
-void print_integer(const uint32_t number);
+void print_int(const uint32_t number);
 
 /**
  * @brief Prints the given string with a new line character
@@ -58,7 +60,7 @@ void println(const char *string);
  * @brief Prints the given integer with a new line character
  * @param [in] number
  */
-void println_integer(const uint32_t number);
+void println_int(const uint32_t number);
 
 /**
  * @brief Prints the given string with a predefined style

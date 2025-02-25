@@ -43,7 +43,8 @@ void print_hardFault()
     clearConsole();
     println("HardFault bitch");
     println("Press any key to continue...");
-    while(uart_readByte() == 0) {
+    while(uart_readByte() == 0)
+    {
         __WFI();
     }
     entry_c();

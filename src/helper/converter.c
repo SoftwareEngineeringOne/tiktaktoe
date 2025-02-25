@@ -1,7 +1,7 @@
 #include "helper/converter.h"
 
-#include <stdint.h>
 #include <stddef.h>
+#include <stdint.h>
 
 int8_t int_to_str(uint32_t num, char *buf, const size_t buf_size)
 {

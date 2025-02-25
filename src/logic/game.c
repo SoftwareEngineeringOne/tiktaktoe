@@ -99,14 +99,15 @@ void init(const Mode mode)
         }
     }
 
+    if(selected_cell != NULL)
+    {
+        cell_select(selected_cell);
+    }
     selected_cell = &cells[0][0];
 
     clearConsole();
     time_init();
-    field_redraw();
-    cell_select(selected_cell);
-    ui_displayTimer(REMAINING_TIME);
-    ui_displayTurn(turn_number, CURRENT_PLAYER_STR);
+    redrawField();
 }
 
 bool handleInput(const uint8_t *input)
@@ -167,6 +168,7 @@ void redrawField()
     ui_displayTimer(REMAINING_TIME);
     field_redraw();
     cell_redrawAll(cells);
+    cell_select(selected_cell);
 }
 
 void handleForcedMoveUpdate()
@@ -300,21 +302,20 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
 
 void printEndScreen(Player winner)
 {
-
     cursor_moveTo(1, CELLS_PER_COL * cell_height);
     switch(winner)
     {
-      case Circle:
-        println("The player with the circle has won!");
-        break;
-      case Cross:
-        println("The player with the cross has won!");
-        break;
-      default:;
+        case Circle:
+            println("The player with the circle has won!");
+            break;
+        case Cross:
+            println("The player with the cross has won!");
+            break;
+        default:;
     }
     println("Press any key to see the statistics...");
 
-  uint8_t input;
+    uint8_t input;
     while(!input_getNext(&input_buf, &input))
     {
         __WFI();

@@ -3,11 +3,13 @@
 #include "hal_low/uart.h"
 
 #include <hal_low/nvic.h>
+#include <helper/converter.h>
 
 void clearConsole()
 {
     print(CLEAR_SCREEN);
 }
+
 void print(const char *string)
 {
     while(*string != '\0')
@@ -16,10 +18,24 @@ void print(const char *string)
         string++;
     }
 }
+
+void print_integer(const uint32_t number)
+{
+    char string[10];
+    int_to_str(number, string, 10);
+    print(string);
+}
+
 void println(const char *string)
 {
     print(string);
     uart_writeByte(LINE_SEPERATOR);
+}
+
+void println_integer(const uint32_t number)
+{
+     print_integer(number);
+     uart_writeByte(LINE_SEPERATOR);
 }
 
 void printStyled(const char *string, const Style *style)

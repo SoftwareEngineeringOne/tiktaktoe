@@ -42,6 +42,8 @@ void game_run()
 
         winner = checkForWinner();
 
+        cell_select(selected_cell);
+
         if(winner != None || input == 'q' || current_turn >= CELLS_PER_COL * CELLS_PER_ROW / 2)
         {
             timer_stop(TIMER0);
@@ -52,8 +54,6 @@ void game_run()
         {
             redrawField();
         }
-
-        cell_select(selected_cell);
     }
 
 

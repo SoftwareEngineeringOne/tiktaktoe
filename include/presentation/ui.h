@@ -1,9 +1,9 @@
 #ifndef UI_H
 #define UI_H
 
-#include <stdint.h>
 #include "logic/game.h"
 #include "presentation/field.h"
+#include <stdint.h>
 
 #define TURN_ROW 1
 #define TIMER_ROW (CELLS_PER_COL * cell_height) - 1

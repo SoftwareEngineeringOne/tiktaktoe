@@ -1,9 +1,9 @@
 #include "presentation/ui.h"
 
 #include "hal_low/uart.h"
-#include "util/conversion.h"
 #include "presentation/cursor.h"
 #include "presentation/print.h"
+#include "util/conversion.h"
 
 #include <stddef.h>
 

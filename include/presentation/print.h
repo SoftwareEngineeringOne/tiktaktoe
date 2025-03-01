@@ -36,7 +36,7 @@ typedef struct
 /**
  * @brief Clear the whole terminal
  */
-void clearConsole();
+void print_clearConsole();
 
 /**
  * @brief Prints the given string
@@ -67,14 +67,14 @@ void println_int(const uint32_t number);
  * @param [in] string
  * @param [in] style
  */
-void printStyled(const char *string, const Style *style);
+void print_styled(const char *string, const Style *style);
 
 /**
  * @brief Prints the given string with a predefined style and a new line character
  * @param [in] string
  * @param [in] style
  */
-void printlnStyled(const char *string, const Style *style);
+void println_styled(const char *string, const Style *style);
 
 void print_hardFault();
 

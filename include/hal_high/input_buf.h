@@ -67,6 +67,6 @@ bool input_getNext(volatile InputBuffer *ib, uint8_t *byte);
  * Next Byte
  * @return False if full
  */
-static bool putIntoBuf(volatile InputBuffer *ib, uint8_t byte);
+static bool _putIntoBuf(volatile InputBuffer *ib, uint8_t byte);
 
 #endif// INPUT_BUF_H

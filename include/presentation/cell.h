@@ -104,17 +104,6 @@ void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW]);
  */
 void cell_select(Cell *cell);
 
-/**
- * @brief Redraw one cell
- * @param [in] row
- * Y-Position
- * @param [in] col
- * X-Position
- * @param [in] modifier
- * @param [in] marked_by
- * Player to mark by
- */
-void redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by);
 
 /**
  * @brief Marks the given cell
@@ -132,5 +121,17 @@ void cell_increaseSize();
  * @brief Decreases the field size
  */
 void cell_decreaseSize();
+
+/**
+ * @brief Redraw one cell
+ * @param [in] row
+ * Y-Position
+ * @param [in] col
+ * X-Position
+ * @param [in] modifier
+ * @param [in] marked_by
+ * Player to mark by
+ */
+static void _redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by);
 
 #endif// CELL_H

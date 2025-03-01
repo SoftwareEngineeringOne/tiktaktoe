@@ -22,7 +22,15 @@ Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 - The architecture is documented in this README
 - Every file must have a short description at the beginning
 - Every function must have a doc comment with a short description
-- Not self describing code must be commented
+- Not self describing code must be commented (should be avoided)
 - Public functions start with the package name followed by an underscore
 - Private functions should therefore not be called from outside
 - Private functions should follow the public functions in the header files
+
+### Naming
+#### Functions
+- public functions should be prefixed with "`module_[...]`"
+- private functions should be marked as `static` and prefixed with "`_[...]`"
+- the function name itself should be written in `camelCase`
+- a specialization may follow as a suffix, such as "`[...]_waiting`"
+

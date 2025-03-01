@@ -1,7 +1,7 @@
 #include "presentation/cursor.h"
 
-#include "util/conversion.h"
 #include "presentation/print.h"
+#include "util/conversion.h"
 
 void cursor_moveTo(const uint8_t x, const uint8_t y)
 {

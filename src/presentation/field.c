@@ -48,7 +48,7 @@ void field_redraw()
     }
 
     cursor_moveTo(FIELD_X_OFFSET, FIELD_Y_OFFSET);
-    printRow(top_divider, row_length);
+    _printRow(top_divider, row_length);
 
     uint8_t first = 0;
     for(uint8_t i = 0; i < CELLS_PER_COL; i++)
@@ -59,18 +59,18 @@ void field_redraw()
         }
         else
         {
-            printRow(divider, row_length);
+            _printRow(divider, row_length);
         }
         for(uint8_t j = 0; j < cell_height - 2; j++)
         {
-            printRow(non_divider, row_length);
+            _printRow(non_divider, row_length);
         }
     }
-    printRow(bot_divider, row_length);
+    _printRow(bot_divider, row_length);
 }
 
 
-void printRow(char **row, const size_t row_length)
+void _printRow(char **row, const size_t row_length)
 {
     for(size_t i = 0; i < row_length; i++)
     {

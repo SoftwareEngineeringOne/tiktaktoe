@@ -4,7 +4,6 @@
 #include "hal_low/nvic.h"
 #include "hal_low/random.h"
 #include "hal_low/timer.h"
-#include "util/math.h"
 #include "logic/bot.h"
 #include "logic/input.h"
 #include "logic/time.h"
@@ -14,12 +13,13 @@
 #include "presentation/print.h"
 #include "presentation/ui.h"
 #include "util/conversion.h"
+#include "util/math.h"
 
 volatile bool force_ui_update = false;
 
 void game_run(const Mode mode)
 {
-    init(mode);
+    _init(mode);
 
     uint8_t input;
     Player winner;
@@ -30,7 +30,7 @@ void game_run(const Mode mode)
             // If true, Move was forced due to inactivity
             if(force_ui_update)
             {
-                handleForcedMoveUpdate();
+                _handleForcedMoveUpdate();
                 force_ui_update = false;
                 break;
             }
@@ -38,9 +38,9 @@ void game_run(const Mode mode)
             __WFI();
         }
 
-        const bool should_redraw_field = handleInput(&input);
+        const bool should_redraw_field = _handleInput(&input);
 
-        winner = checkForWinner();
+        winner = _checkForWinner();
 
         cell_select(selected_cell);
         if(winner != None || input == 'q' || turn_number >= CELLS_PER_COL * CELLS_PER_ROW / 2)
@@ -51,10 +51,10 @@ void game_run(const Mode mode)
 
         if(should_redraw_field)
         {
-            redrawField();
+            _redrawField();
         }
     }
-    printEndScreen(winner);
+    _printEndScreen(winner);
 }
 
 void game_onTimeOut()
@@ -80,7 +80,7 @@ void game_onTimeOut()
     time_finishRound();
 }
 
-void init(const Mode mode)
+void _init(const Mode mode)
 {
     turn_number = FIRST_TURN;
     last_ui_update = turn_number;
@@ -108,12 +108,12 @@ void init(const Mode mode)
     }
     selected_cell = &cells[0][0];
 
-    clearConsole();
+    print_clearConsole();
     time_init();
-    redrawField();
+    _redrawField();
 }
 
-bool handleInput(const uint8_t *input)
+bool _handleInput(const uint8_t *input)
 {
     switch(*input)
     {
@@ -164,9 +164,9 @@ bool handleInput(const uint8_t *input)
     return false;
 }
 
-void redrawField()
+void _redrawField()
 {
-    clearConsole();
+    print_clearConsole();
     ui_displayTurn(turn_number, current_player);
     ui_displayTimer(REMAINING_TIME, TICKS_PER_ROUND);
     field_redraw();
@@ -174,7 +174,7 @@ void redrawField()
     cell_select(selected_cell);
 }
 
-void handleForcedMoveUpdate()
+void _handleForcedMoveUpdate()
 {
     cell_select(last_marked_cross);
     cell_select(last_marked_circle);
@@ -190,20 +190,20 @@ void handleForcedMoveUpdate()
     }
 }
 
-Player checkForWinner()
+Player _checkForWinner()
 {
-    if(checkIfPlayerWon(last_marked_circle, Circle))
+    if(_checkIfPlayerWon(last_marked_circle, Circle))
     {
         return Circle;
     }
-    if(checkIfPlayerWon(last_marked_cross, Cross))
+    if(_checkIfPlayerWon(last_marked_cross, Cross))
     {
         return Cross;
     }
     return None;
 }
 
-bool checkIfPlayerWon(const Cell *cell, const Player player)
+bool _checkIfPlayerWon(const Cell *cell, const Player player)
 {
     if(cell == NULL)
     {
@@ -303,7 +303,7 @@ bool checkIfPlayerWon(const Cell *cell, const Player player)
     return false;
 }
 
-void printEndScreen(Player winner)
+void _printEndScreen(Player winner)
 {
     cursor_moveTo(1, CELLS_PER_COL * cell_height);
     switch(winner)
@@ -346,7 +346,7 @@ void printEndScreen(Player winner)
         __WFI();
     }
 
-    clearConsole();
+    print_clearConsole();
 
     print("Turns needed:\t");
     print(BOLD);

@@ -8,7 +8,7 @@
 
 void menu_todo()
 {
-    clearConsole();
+    print_clearConsole();
     println("Not yet implemented, any key to continue...");
     while(input_isEmpty(&input_buf))
     {
@@ -16,7 +16,7 @@ void menu_todo()
     }
 }
 
-static char* HEADING = "\
+static char *HEADING = "\
 .___________. __   __  ___ .___________.    ___       __  ___ .___________.  ______    _______  \n\
 |           ||  | |  |/  / |           |   /   \\     |  |/  / |           | /  __  \\  |   ____| \n\
 `---|  |----`|  | |  '  /  `---|  |----`  /  ^  \\    |  '  /  `---|  |----`|  |  |  | |  |__    \n\
@@ -36,7 +36,7 @@ int main(void)
     uint8_t input;
     while(true)
     {
-        clearConsole();
+        print_clearConsole();
         print(BOLD);
         print(FG_GREEN);
         print(HEADING);

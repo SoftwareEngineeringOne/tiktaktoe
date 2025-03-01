@@ -57,18 +57,18 @@ void game_onTimeOut();
 /**
  * @brief Initializes several things at the game start
  */
-static void init(const Mode mode);
+static void _init(const Mode mode);
 
 /**
  * @brief Checks at the end of the round if someone has won
  * @return The player who won
  */
-static Player checkForWinner();
+static Player _checkForWinner();
 
 /**
  * @brief Handles the presentation update in case of a automatic round
  */
-static void handleForcedMoveUpdate();
+static void _handleForcedMoveUpdate();
 
 /**
  * @brief Checks if the given player has won
@@ -78,23 +78,23 @@ static void handleForcedMoveUpdate();
  * Player it is looking for
  * @return True when player won
  */
-static bool checkIfPlayerWon(const Cell *cell, Player player);
+static bool _checkIfPlayerWon(const Cell *cell, Player player);
 
 /**
  * @brief Does certain things on input
  * @param [in] input
  */
-static bool handleInput(const uint8_t *input);
+static bool _handleInput(const uint8_t *input);
 
 /**
  * @brief Refreshes the whole UI
  */
-static void redrawField();
+static void _redrawField();
 
 /**
  * @brief Prints the winner and statistics
  * @param [in] winner
  */
-static void printEndScreen(Player winner);
+static void _printEndScreen(Player winner);
 
 #endif// GAME_H

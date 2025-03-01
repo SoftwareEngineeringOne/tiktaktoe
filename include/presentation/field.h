@@ -65,6 +65,6 @@ void field_redraw();
  * @param [in] row_length
  * Length of string
  */
-static void printRow(char **row, size_t row_length);
+static void _printRow(char **row, size_t row_length);
 
 #endif// FIELD_H

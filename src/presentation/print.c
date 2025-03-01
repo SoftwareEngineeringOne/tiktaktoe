@@ -1,10 +1,10 @@
 #include "presentation/print.h"
 
-#include "hal_low/uart.h"
 #include "hal_low/nvic.h"
+#include "hal_low/uart.h"
 #include "util/conversion.h"
 
-void clearConsole()
+void print_clearConsole()
 {
     print(CLEAR_SCREEN);
 }
@@ -33,11 +33,11 @@ void println(const char *string)
 
 void println_int(const uint32_t number)
 {
-     print_int(number);
-     uart_writeByte(LINE_SEPERATOR);
+    print_int(number);
+    uart_writeByte(LINE_SEPERATOR);
 }
 
-void printStyled(const char *string, const Style *style)
+void print_styled(const char *string, const Style *style)
 {
     print(style->fg_color);
     print(style->bg_color);
@@ -46,16 +46,16 @@ void printStyled(const char *string, const Style *style)
     print(RESET);
 }
 
-void printlnStyled(const char *string, const Style *style)
+void println_styled(const char *string, const Style *style)
 {
-    printStyled(string, style);
+    print_styled(string, style);
     uart_writeByte(LINE_SEPERATOR);
 }
 
 void entry_c(void);
 void print_hardFault()
 {
-    clearConsole();
+    print_clearConsole();
     println("HardFault bitch");
     println("Press any key to continue...");
     while(uart_readByte() == 0)

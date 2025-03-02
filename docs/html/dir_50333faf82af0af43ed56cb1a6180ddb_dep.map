@@ -1,9 +1,0 @@
-<map id="hal_high" name="hal_high">
-<area shape="rect" id="node1" href="dir_50333faf82af0af43ed56cb1a6180ddb.html" title="hal_high" alt="" coords="75,5,151,33"/>
-<area shape="rect" id="node2" href="dir_125447c92e2d7c7fbb49f13fdd370274.html" title="presentation" alt="" coords="5,81,109,109"/>
-<area shape="poly" id="edge1" href="dir_000001_000006.html" alt="" coords="105,35,78,70,74,67,101,32"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000001_000006.html" title="1" alt="" coords="81,63,89,80"/>
-<area shape="rect" id="node3" href="dir_379e7395918bdddf5544f1f5badb427e.html" title="hal_high" alt="" coords="132,81,208,109"/>
-<area shape="poly" id="edge2" href="dir_000001_000000.html" alt="" coords="125,32,153,67,149,70,121,35"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000001_000000.html" title="1" alt="" coords="152,53,160,70"/>
-</map>

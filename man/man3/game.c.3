@@ -1,0 +1,184 @@
+.TH "logic/game.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/game.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'config\&.h'\fP
+.br
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'hal_low/nvic\&.h'\fP
+.br
+\fR#include 'hal_low/random\&.h'\fP
+.br
+\fR#include 'hal_low/timer\&.h'\fP
+.br
+\fR#include 'logic/bot\&.h'\fP
+.br
+\fR#include 'logic/input\&.h'\fP
+.br
+\fR#include 'logic/time\&.h'\fP
+.br
+\fR#include 'logic/winning\&.h'\fP
+.br
+\fR#include 'presentation/cell\&.h'\fP
+.br
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include 'presentation/menu\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+\fR#include 'presentation/ui\&.h'\fP
+.br
+\fR#include 'util/math\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinit\fP (\fBMode\fP mode)"
+.br
+.RI "Initializes several things at the game start\&. "
+.ti -1c
+.RI "static void \fBhandleForcedMoveUpdate\fP ()"
+.br
+.RI "Handles the presentation update in case of a automatic round\&. "
+.ti -1c
+.RI "static void \fBredrawField\fP ()"
+.br
+.RI "Refreshes the whole UI\&. "
+.ti -1c
+.RI "static void \fBcalculateSummary\fP ()"
+.br
+.ti -1c
+.RI "void \fBgame_run\fP (const \fBMode\fP mode)"
+.br
+.RI "Start the main game\&. "
+.ti -1c
+.RI "void \fBgame_onTimeOut\fP ()"
+.br
+.RI "Automatic turn in case the round time is over\&. "
+.ti -1c
+.RI "void \fBgame_endTurn\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "volatile \fBbool\fP \fBforce_ui_update\fP = \fBfalse\fP"
+.br
+.ti -1c
+.RI "static \fBGameState\fP \fBgame_state\fP"
+.br
+.ti -1c
+.RI "static \fBCellState\fP \fBcell_state\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBgame\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "static void calculateSummary ()\fR [static]\fP"
+
+.PP
+Definition at line \fB211\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBGameState::average_ticks\fP, \fBCircle\fP, \fBGameState::circle_average_ticks\fP, \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross_average_ticks\fP, \fBGameState::cross_total_ticks\fP, \fBg_timer\fP, \fBgame_state\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBGameTimer::ticks_total\fP, \fBGameState::total_ticks\fP, and \fBGameState::winner\fP\&.
+.SS "void game_endTurn ()"
+
+.PP
+Definition at line \fB138\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBtime_finishTurn()\fP\&.
+.SS "void game_onTimeOut ()"
+
+.PP
+Automatic turn in case the round time is over\&. 
+.PP
+Definition at line \fB118\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBforce_ui_update\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, and \fBPVE\fP\&.
+.SS "void game_run (const \fBMode\fP mode)"
+
+.PP
+Start the main game\&. 
+.PP
+Definition at line \fB62\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBNone\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
+.SS "void handleForcedMoveUpdate ()\fR [static]\fP"
+
+.PP
+Handles the presentation update in case of a automatic round\&. 
+.PP
+Definition at line \fB251\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCircle\fP, \fBGameState::current_player\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBui_updateTurn()\fP\&.
+.SS "void init (\fBMode\fP mode)\fR [static]\fP"
+
+.PP
+Initializes several things at the game start\&. 
+.PP
+Definition at line \fB167\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCross\fP, \fBFIRST_ROUND\fP, \fBg_input_buf\fP, \fBgame_state\fP, \fBHIDE_CURSOR\fP, \fBinput_init()\fP, \fBCell::marked_by\fP, \fBNone\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBredrawField()\fP, \fBrng_init()\fP, \fBCellState::selected\fP, and \fBtime_init()\fP\&.
+.SS "void redrawField ()\fR [static]\fP"
+
+.PP
+Refreshes the whole UI\&. 
+.PP
+Definition at line \fB240\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBGameState::current_player\fP, \fBfield_redraw()\fP, \fBgame_state\fP, \fBprint_clearConsole()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBui_displayTimer()\fP, \fBui_displayTurn()\fP, and \fBui_printHeading()\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBCellState\fP cell_state\fR [static]\fP"
+
+.PP
+Definition at line \fB41\fP of file \fBgame\&.c\fP\&.
+.SS "volatile \fBbool\fP force_ui_update = \fBfalse\fP"
+
+.PP
+Definition at line \fB39\fP of file \fBgame\&.c\fP\&.
+.SS "\fBGameState\fP game_state\fR [static]\fP"
+
+.PP
+Definition at line \fB40\fP of file \fBgame\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

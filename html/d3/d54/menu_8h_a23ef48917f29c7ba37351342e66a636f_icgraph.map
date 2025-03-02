@@ -1,0 +1,14 @@
+<map id="menu_showControls" name="menu_showControls">
+<area shape="rect" id="Node000001" title=" " alt="" coords="742,5,881,31"/>
+<area shape="rect" id="Node000002" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,21,255,21,255,16,726,16"/>
+<area shape="rect" id="Node000004" href="$d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="597,31,694,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="727,34,695,39,694,34,726,29"/>
+<area shape="rect" id="Node000003" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000005" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="428,31,549,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="581,46,549,46,549,41,581,41"/>
+<area shape="rect" id="Node000006" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,31,380,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="413,46,381,46,381,41,413,41"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="286,38,254,33,255,27,287,32"/>
+</map>

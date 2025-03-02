@@ -1,0 +1,16 @@
+<map id="time_pause" name="time_pause">
+<area shape="rect" id="Node000001" title=" " alt="" coords="789,31,877,56"/>
+<area shape="rect" id="Node000002" href="$d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="597,5,741,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="773,37,741,32,741,27,774,32"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="620,55,718,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="774,55,719,63,718,58,773,49"/>
+<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="428,31,549,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="581,33,549,38,549,32,581,28"/>
+<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,31,380,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="413,46,381,46,381,41,413,41"/>
+<area shape="rect" id="Node000005" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,31,254,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="286,46,254,46,254,41,286,41"/>
+<area shape="rect" id="Node000006" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,46,55,46,55,41,87,41"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="605,62,549,54,549,49,605,56"/>
+</map>

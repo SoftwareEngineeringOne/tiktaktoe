@@ -1,0 +1,165 @@
+\doxysection{hal\+\_\+low/random.c File Reference}
+\hypertarget{random_8c}{}\label{random_8c}\index{hal\_low/random.c@{hal\_low/random.c}}
+{\ttfamily \#include "{}hal\+\_\+low/random.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/register\+\_\+access.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for random.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d8a/random_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{random_8c_ad5a3df3d0092f55f6ea54ccaa7daf3dc}{rng\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Enables the generation of random numbers. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{random_8c_a10ddbdc45f7f1a0a55ec5e0cb7bf683a}{rng\+\_\+get\+Random\+Value\+\_\+immediately}} (void)
+\begin{DoxyCompactList}\small\item\em Get the Random Value from the generator immediately. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{random_8c_a0cc8207c13dfa65a8279450efa1751d3}{rng\+\_\+get\+Random\+Value\+\_\+waiting}} ()
+\begin{DoxyCompactList}\small\item\em \# THIS FUNCTION IS A STUB! \# \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{random_8c_a10ddbdc45f7f1a0a55ec5e0cb7bf683a}\index{random.c@{random.c}!rng\_getRandomValue\_immediately@{rng\_getRandomValue\_immediately}}
+\index{rng\_getRandomValue\_immediately@{rng\_getRandomValue\_immediately}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{rng\_getRandomValue\_immediately()}{rng\_getRandomValue\_immediately()}}
+{\footnotesize\ttfamily \label{random_8c_a10ddbdc45f7f1a0a55ec5e0cb7bf683a} 
+uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+immediately (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Random Value from the generator immediately. 
+
+The function is {\bfseries{NOT}} waiting until the next value is generated!
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t random byte 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00043}{43}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{random_8h_source_l00023}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{random_8h_source_l00040}{RNG\+\_\+\+VALUE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{dc/de5/random_8c_a10ddbdc45f7f1a0a55ec5e0cb7bf683a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de5/random_8c_a10ddbdc45f7f1a0a55ec5e0cb7bf683a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{random_8c_a0cc8207c13dfa65a8279450efa1751d3}\index{random.c@{random.c}!rng\_getRandomValue\_waiting@{rng\_getRandomValue\_waiting}}
+\index{rng\_getRandomValue\_waiting@{rng\_getRandomValue\_waiting}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{rng\_getRandomValue\_waiting()}{rng\_getRandomValue\_waiting()}}
+{\footnotesize\ttfamily \label{random_8c_a0cc8207c13dfa65a8279450efa1751d3} 
+uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+waiting (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\# THIS FUNCTION IS A STUB! \# 
+
+This is a function stub. Implement it, if needed.
+
+TODO\+: Implement it, if you need it
+
+Things it should do here\+:
+\begin{DoxyItemize}
+\item Get the Random Value from the generator by polling and waiting.
+\item The function should be {\bfseries{blocking}} until the next value is generated
+\item it should return the random byte
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t (curently) always {\ttfamily 0} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00064}{64}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{random_8h_source_l00023}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{random_8c_source_l00043}{rng\+\_\+get\+Random\+Value\+\_\+immediately()}}, and \mbox{\hyperlink{random_8h_source_l00031}{RNG\+\_\+\+VALRDY}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de5/random_8c_a0cc8207c13dfa65a8279450efa1751d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de5/random_8c_a0cc8207c13dfa65a8279450efa1751d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{random_8c_ad5a3df3d0092f55f6ea54ccaa7daf3dc}\index{random.c@{random.c}!rng\_init@{rng\_init}}
+\index{rng\_init@{rng\_init}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{rng\_init()}{rng\_init()}}
+{\footnotesize\ttfamily \label{random_8c_ad5a3df3d0092f55f6ea54ccaa7daf3dc} 
+void rng\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Enables the generation of random numbers. 
+
+This is done by writing a {\ttfamily 1} to the {\ttfamily START\+\_\+\+TASK} of the RNG peripheral. 
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00029}{29}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{random_8h_source_l00023}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{random_8h_source_l00027}{RNG\+\_\+\+START}}, and \mbox{\hyperlink{random_8h_source_l00043}{RNG\+\_\+\+TASK\+\_\+\+START}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{dc/de5/random_8c_ad5a3df3d0092f55f6ea54ccaa7daf3dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de5/random_8c_ad5a3df3d0092f55f6ea54ccaa7daf3dc_icgraph}
+\end{center}
+\end{figure}

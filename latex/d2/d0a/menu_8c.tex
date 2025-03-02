@@ -1,0 +1,270 @@
+\doxysection{presentation/menu.c File Reference}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{presentation/menu.c@{presentation/menu.c}}
+{\ttfamily \#include "{}presentation/menu.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+high/input\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/nvic.\+h"{}}\newline
+{\ttfamily \#include "{}logic/game.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ascii\+\_\+art.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/cell.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ui.\+h"{}}\newline
+Include dependency graph for menu.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dd0/menu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8}{print\+Winner\+Banner}} (const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}game\+\_\+info)
+\item 
+void \mbox{\hyperlink{menu_8c_a44d00693dd3847774cbd76bc27d44b3f}{any\+Key\+To\+Continue}} (const char \texorpdfstring{$\ast$}{*}continue\+\_\+hint)
+\item 
+void \mbox{\hyperlink{menu_8c_af9dce1973196a5934ee5ec20ea417324}{print\+Main\+Menu}} ()
+\item 
+\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{menu_8c_a1692d3cd85ed442706f90d6b6f60613f}{menu\+\_\+show\+Main\+Menu}} ()
+\item 
+void \mbox{\hyperlink{menu_8c_ab82b49f40989dd1c5b11264bca838492}{menu\+\_\+show\+Game\+Over}} (const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}game\+\_\+info)
+\item 
+void \mbox{\hyperlink{menu_8c_a54a22faf156830dd16ee4e3c52835881}{menu\+\_\+show\+Credits}} ()
+\item 
+void \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\+\_\+show\+Controls}} (const char \texorpdfstring{$\ast$}{*}continue\+\_\+hint)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8c_a44d00693dd3847774cbd76bc27d44b3f}\index{menu.c@{menu.c}!anyKeyToContinue@{anyKeyToContinue}}
+\index{anyKeyToContinue@{anyKeyToContinue}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{anyKeyToContinue()}{anyKeyToContinue()}}
+{\footnotesize\ttfamily \label{menu_8c_a44d00693dd3847774cbd76bc27d44b3f} 
+void any\+Key\+To\+Continue (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{continue\+\_\+hint}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00222}{222}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00061}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{input__buf_8c_source_l00050}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, and \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a44d00693dd3847774cbd76bc27d44b3f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a44d00693dd3847774cbd76bc27d44b3f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a23ef48917f29c7ba37351342e66a636f}\index{menu.c@{menu.c}!menu\_showControls@{menu\_showControls}}
+\index{menu\_showControls@{menu\_showControls}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_showControls()}{menu\_showControls()}}
+{\footnotesize\ttfamily \label{menu_8c_a23ef48917f29c7ba37351342e66a636f} 
+void menu\+\_\+show\+Controls (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{continue\+\_\+hint}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00138}{138}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{menu_8h_source_l00017}{ARROW\+\_\+\+DOWN}}, \mbox{\hyperlink{menu_8h_source_l00014}{ARROW\+\_\+\+LEFT}}, \mbox{\hyperlink{menu_8h_source_l00016}{ARROW\+\_\+\+RIGHT}}, \mbox{\hyperlink{menu_8h_source_l00015}{ARROW\+\_\+\+UP}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a23ef48917f29c7ba37351342e66a636f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a23ef48917f29c7ba37351342e66a636f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a54a22faf156830dd16ee4e3c52835881}\index{menu.c@{menu.c}!menu\_showCredits@{menu\_showCredits}}
+\index{menu\_showCredits@{menu\_showCredits}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_showCredits()}{menu\_showCredits()}}
+{\footnotesize\ttfamily \label{menu_8c_a54a22faf156830dd16ee4e3c52835881} 
+void menu\+\_\+show\+Credits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00129}{129}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a54a22faf156830dd16ee4e3c52835881_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a54a22faf156830dd16ee4e3c52835881_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ab82b49f40989dd1c5b11264bca838492}\index{menu.c@{menu.c}!menu\_showGameOver@{menu\_showGameOver}}
+\index{menu\_showGameOver@{menu\_showGameOver}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_showGameOver()}{menu\_showGameOver()}}
+{\footnotesize\ttfamily \label{menu_8c_ab82b49f40989dd1c5b11264bca838492} 
+void menu\+\_\+show\+Game\+Over (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+info}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00077}{77}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::average\+\_\+ticks}}, \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{game_8h_source_l00069}{Game\+State\+::circle\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00068}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::cross\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00007}{DEFAULT\+\_\+\+ITALIC}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{cell_8c_source_l00026}{g\+\_\+cell\+\_\+size}}, \mbox{\hyperlink{ascii__art_8h_source_l00004}{HEADING\+\_\+\+LINES}}, \mbox{\hyperlink{cell_8h_source_l00044}{Cell\+Size\+::height}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00052}{println\+\_\+int()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{menu_8c_source_l00205}{print\+Winner\+Banner()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00062}{Game\+State\+::total\+\_\+ticks}}, \mbox{\hyperlink{ui_8c_source_l00116}{ui\+\_\+game\+Over()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_ab82b49f40989dd1c5b11264bca838492_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_ab82b49f40989dd1c5b11264bca838492_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a1692d3cd85ed442706f90d6b6f60613f}\index{menu.c@{menu.c}!menu\_showMainMenu@{menu\_showMainMenu}}
+\index{menu\_showMainMenu@{menu\_showMainMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_showMainMenu()}{menu\_showMainMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_a1692d3cd85ed442706f90d6b6f60613f} 
+\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} menu\+\_\+show\+Main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00036}{36}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00061}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{game_8c_source_l00062}{game\+\_\+run()}}, \mbox{\hyperlink{style_8h_source_l00046}{HIDE\+\_\+\+CURSOR}}, \mbox{\hyperlink{input__buf_8c_source_l00050}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{menu_8c_source_l00138}{menu\+\_\+show\+Controls()}}, \mbox{\hyperlink{menu_8c_source_l00129}{menu\+\_\+show\+Credits()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{menu_8c_source_l00186}{print\+Main\+Menu()}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00031}{PVP}}, and \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a1692d3cd85ed442706f90d6b6f60613f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{d2/d0a/menu_8c_a1692d3cd85ed442706f90d6b6f60613f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_af9dce1973196a5934ee5ec20ea417324}\index{menu.c@{menu.c}!printMainMenu@{printMainMenu}}
+\index{printMainMenu@{printMainMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{printMainMenu()}{printMainMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_af9dce1973196a5934ee5ec20ea417324} 
+void print\+Main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00186}{186}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_af9dce1973196a5934ee5ec20ea417324_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_af9dce1973196a5934ee5ec20ea417324_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8}\index{menu.c@{menu.c}!printWinnerBanner@{printWinnerBanner}}
+\index{printWinnerBanner@{printWinnerBanner}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{printWinnerBanner()}{printWinnerBanner()}}
+{\footnotesize\ttfamily \label{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8} 
+void print\+Winner\+Banner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+info}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menu_8c_source_l00205}{205}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00015}{BOLD\+\_\+\+DIM}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{ascii__art_8h_source_l00039}{CIRCLE\+\_\+\+WINS}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{ascii__art_8h_source_l00030}{CROSS\+\_\+\+WINS}}, \mbox{\hyperlink{ascii__art_8h_source_l00048}{ITS\+\_\+\+A\+\_\+\+TIE}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, and \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0a/menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8_icgraph}
+\end{center}
+\end{figure}

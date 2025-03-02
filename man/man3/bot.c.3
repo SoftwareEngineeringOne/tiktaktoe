@@ -1,0 +1,75 @@
+.TH "logic/bot.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/bot.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/bot\&.h'\fP
+.br
+\fR#include 'hal_low/random\&.h'\fP
+.br
+\fR#include 'logic/game\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCell\fP * \fBbot_markRandomCell\fP (\fBCell\fP cells[\fBCELLS_PER_COL\fP][\fBCELLS_PER_ROW\fP], const \fBPlayer\fP marked_by)"
+.br
+.RI "Mark some random cell\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBbot\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBCell\fP * bot_markRandomCell (\fBCell\fP cells[CELLS_PER_COL][CELLS_PER_ROW], \fBPlayer\fP marked_by)"
+
+.PP
+Mark some random cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcells\fP 2D field of cells 
+.br
+\fImarked_by\fP Player to be marked by
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Marked cell 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBbot\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBNone\fP, and \fBrng_getRandomValue_waiting()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

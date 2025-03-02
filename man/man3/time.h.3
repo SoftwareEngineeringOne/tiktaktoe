@@ -1,0 +1,121 @@
+.TH "logic/time.h" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/time.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGameTimer\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtime_init\fP ()"
+.br
+.RI "Initializes the timer\&. "
+.ti -1c
+.RI "void \fBtime_onInterrupt\fP ()"
+.br
+.RI "Increments the ticks and can finish the round\&. "
+.ti -1c
+.RI "void \fBtime_finishTurn\fP (\fBGameState\fP *\fBgame_state\fP)"
+.br
+.RI "Resets the ticks\&. "
+.ti -1c
+.RI "void \fBtime_pause\fP ()"
+.br
+.ti -1c
+.RI "void \fBtime_resume\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBGameTimer\fP \fBg_timer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBtime\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void time_finishTurn (\fBGameState\fP * game_state)"
+
+.PP
+Resets the ticks\&. 
+.PP
+Definition at line \fB47\fP of file \fBtime\&.c\fP\&.
+.PP
+References \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross_total_ticks\fP, \fBGameState::current_player\fP, \fBg_timer\fP, \fBgame_state\fP, and \fBGameTimer::ticks_turn\fP\&.
+.SS "void time_init ()"
+
+.PP
+Initializes the timer\&. 
+.PP
+Definition at line \fB30\fP of file \fBtime\&.c\fP\&.
+.PP
+References \fBCC0\fP, \fBTICK_SPEED\fP, \fBTIMER0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, \fBTIMER_MODE_TIMER\fP, and \fBtimer_start()\fP\&.
+.SS "void time_onInterrupt ()"
+
+.PP
+Increments the ticks and can finish the round\&. 
+.PP
+Definition at line \fB37\fP of file \fBtime\&.c\fP\&.
+.PP
+References \fBg_timer\fP, \fBgame_onTimeOut()\fP, \fBTICKS_PER_TURN\fP, \fBGameTimer::ticks_total\fP, and \fBGameTimer::ticks_turn\fP\&.
+.SS "void time_pause ()"
+
+.PP
+Definition at line \fB63\fP of file \fBtime\&.c\fP\&.
+.PP
+References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_stop()\fP\&.
+.SS "void time_resume ()"
+
+.PP
+Definition at line \fB69\fP of file \fBtime\&.c\fP\&.
+.PP
+References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_start()\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBGameTimer\fP g_timer\fR [extern]\fP"
+
+.PP
+Definition at line \fB24\fP of file \fBtime\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

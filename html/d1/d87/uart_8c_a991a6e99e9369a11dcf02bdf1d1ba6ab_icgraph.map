@@ -1,0 +1,11 @@
+<map id="uart_readByte" name="uart_readByte">
+<area shape="rect" id="Node000001" title="Read/Receive a byte from the serial Port." alt="" coords="406,55,507,80"/>
+<area shape="rect" id="Node000002" href="$da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="251,29,337,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,60,337,51,338,46,391,55"/>
+<area shape="rect" id="Node000005" href="$d8/d22/interrupts_8c.html#add4c333e4b7c9a2d571899bbbc9643e5" title="UART interrupt handler." alt="" coords="230,79,358,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="391,80,359,85,358,79,390,75"/>
+<area shape="rect" id="Node000003" href="$da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7" title=" " alt="" coords="35,5,152,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,38,152,28,152,22,235,33"/>
+<area shape="rect" id="Node000004" href="$da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126" title=" " alt="" coords="5,55,182,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="235,52,183,59,182,54,235,47"/>
+</map>

@@ -1,0 +1,225 @@
+.TH "hal_low/nvic.h" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/nvic.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_00\fP   0xE000E100"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_01\fP   0xE000E104"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_02\fP   0xE000E108"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_03\fP   0xE000E10C"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_04\fP   0xE000E110"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_05\fP   0xE000E114"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_06\fP   0xE000E118"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_07\fP   0xE000E11C"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_08\fP   0xE000E120"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_09\fP   0xE000E124"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_10\fP   0xE000E128"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_11\fP   0xE000E12C"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_12\fP   0xE000E130"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_13\fP   0xE000E134"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_14\fP   0xE000E138"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable_15\fP   0xE000E13C"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_Set_Enable\fP   0xE000E100"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ICPR\fP   0xE000E280"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ID1\fP   (1 << 1)"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ID2\fP   (1 << 2)"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ID8\fP   (1 << 8)"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ID9\fP   (1 << 9)"
+.br
+.ti -1c
+.RI "#define \fBInterrupt_ID10\fP   (1 << 10)"
+.br
+.ti -1c
+.RI "#define \fBICSR\fP   0xE000ED04"
+.br
+.ti -1c
+.RI "#define \fB__WFI\fP()"
+.br
+.RI "Activate the energy saving mode of the computer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBnvic\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __WFI()"
+\fBValue:\fP
+.nf
+__asm volatile("wfi" ::: "memory")
+.PP
+.fi
+
+.PP
+Activate the energy saving mode of the computer\&. It does nothing till the next interrupt happens 
+.PP
+Definition at line \fB61\fP of file \fBnvic\&.h\fP\&.
+.SS "#define ICSR   0xE000ED04"
+
+.PP
+Definition at line \fB54\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ICPR   0xE000E280"
+
+.PP
+Definition at line \fB46\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ID1   (1 << 1)"
+
+.PP
+Definition at line \fB48\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ID10   (1 << 10)"
+
+.PP
+Definition at line \fB52\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ID2   (1 << 2)"
+
+.PP
+Definition at line \fB49\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ID8   (1 << 8)"
+
+.PP
+Definition at line \fB50\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_ID9   (1 << 9)"
+
+.PP
+Definition at line \fB51\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable   0xE000E100"
+
+.PP
+Definition at line \fB44\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_00   0xE000E100"
+
+.PP
+Definition at line \fB24\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_01   0xE000E104"
+
+.PP
+Definition at line \fB25\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_02   0xE000E108"
+
+.PP
+Definition at line \fB26\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_03   0xE000E10C"
+
+.PP
+Definition at line \fB27\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_04   0xE000E110"
+
+.PP
+Definition at line \fB29\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_05   0xE000E114"
+
+.PP
+Definition at line \fB30\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_06   0xE000E118"
+
+.PP
+Definition at line \fB31\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_07   0xE000E11C"
+
+.PP
+Definition at line \fB32\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_08   0xE000E120"
+
+.PP
+Definition at line \fB34\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_09   0xE000E124"
+
+.PP
+Definition at line \fB35\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_10   0xE000E128"
+
+.PP
+Definition at line \fB36\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_11   0xE000E12C"
+
+.PP
+Definition at line \fB37\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_12   0xE000E130"
+
+.PP
+Definition at line \fB39\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_13   0xE000E134"
+
+.PP
+Definition at line \fB40\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_14   0xE000E138"
+
+.PP
+Definition at line \fB41\fP of file \fBnvic\&.h\fP\&.
+.SS "#define Interrupt_Set_Enable_15   0xE000E13C"
+
+.PP
+Definition at line \fB42\fP of file \fBnvic\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

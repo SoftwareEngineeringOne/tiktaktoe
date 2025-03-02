@@ -1,0 +1,48 @@
+.TH "logic/winning.h" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/winning.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'util/math\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP \fBwinning_checkForWinner\fP (\fBCellState\fP *\fBcell_state\fP, \fBCell\fP *winner_cells[\fBmax\fP(\fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP)])"
+.br
+.RI "Checks at the end of the round if someone has won\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBPlayer\fP winning_checkForWinner (\fBCellState\fP * cell_state, \fBCell\fP * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])"
+
+.PP
+Checks at the end of the round if someone has won\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell_state\fP 
+.br
+\fIwinner_cells\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The player who won 
+.RE
+.PP
+
+.PP
+Definition at line \fB39\fP of file \fBwinning\&.c\fP\&.
+.PP
+References \fBcell_state\fP, \fBcheckIfPlayerWon()\fP, \fBCircle\fP, \fBCross\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, and \fBNone\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

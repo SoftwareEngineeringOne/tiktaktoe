@@ -1,0 +1,72 @@
+.TH "main.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'def\&.h'\fP
+.br
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'hal_low/nvic\&.h'\fP
+.br
+\fR#include 'hal_low/random\&.h'\fP
+.br
+\fR#include 'hal_low/uart\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+\fR#include 'presentation/ui\&.h'\fP
+.br
+\fR#include <hal_low/system\&.h>\fP
+.br
+\fR#include <presentation/menu\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmain\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (void )"
+
+.PP
+Definition at line \fB30\fP of file \fBmain\&.c\fP\&.
+.PP
+References \fB__WFI\fP, \fBDEFAULT_BOLD\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBinput_init()\fP, \fBITALIC_DIM\fP, \fBmenu_showMainMenu()\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln_styled()\fP, \fBSHOW_CURSOR\fP, \fBsystem_offMode()\fP, \fBsystem_softReset()\fP, \fBuart_init()\fP, and \fBui_printHeading()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

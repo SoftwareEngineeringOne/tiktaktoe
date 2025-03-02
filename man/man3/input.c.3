@@ -1,0 +1,108 @@
+.TH "logic/input.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/input.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/input\&.h'\fP
+.br
+\fR#include 'config\&.h'\fP
+.br
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'logic/bot\&.h'\fP
+.br
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'logic/time\&.h'\fP
+.br
+\fR#include 'presentation/cell\&.h'\fP
+.br
+\fR#include 'presentation/menu\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+\fR#include 'presentation/ui\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBhandleEscapeSequence\fP (\fBCellState\fP *\fBcell_state\fP)"
+.br
+.ti -1c
+.RI "static void \fBhandleSetMark\fP (\fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
+.br
+.ti -1c
+.RI "static void \fBopenControls\fP ()"
+.br
+.ti -1c
+.RI "static \fBbool\fP \fBhandlePauseResume\fP (\fBCellState\fP *\fBcell_state\fP)"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBinput_handleByte\fP (uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBinput\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void handleEscapeSequence (\fBCellState\fP * cell_state)\fR [static]\fP"
+
+.PP
+Definition at line \fB67\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBCell::row\fP, and \fBCellState::selected\fP\&.
+.SS "static \fBbool\fP handlePauseResume (\fBCellState\fP * cell_state)\fR [static]\fP"
+
+.PP
+Definition at line \fB160\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_state\fP, \fBg_timer\fP, \fBHIDDEN\fP, \fBGameTimer::is_running\fP, \fBtime_pause()\fP, and \fBtime_resume()\fP\&.
+.SS "static void handleSetMark (\fBGameState\fP * game_state, \fBCellState\fP * cell_state)\fR [static]\fP"
+
+.PP
+Definition at line \fB113\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_redraw()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBg_timer\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBCell::marked_by\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBui_updateTurn()\fP\&.
+.SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
+
+.PP
+Definition at line \fB37\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBcell_decreaseSize()\fP, \fBcell_increaseSize()\fP, \fBcell_state\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleEscapeSequence()\fP, \fBhandlePauseResume()\fP, \fBhandleSetMark()\fP, \fBGameTimer::is_running\fP, and \fBopenControls()\fP\&.
+.SS "static void openControls ()\fR [static]\fP"
+
+.PP
+Definition at line \fB146\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBmenu_showControls()\fP, \fBtime_pause()\fP, and \fBtime_resume()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

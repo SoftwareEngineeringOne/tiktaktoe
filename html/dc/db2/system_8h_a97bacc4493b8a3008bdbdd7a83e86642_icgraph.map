@@ -1,0 +1,11 @@
+<map id="system_softReset" name="system_softReset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="364,55,490,80"/>
+<area shape="rect" id="Node000002" href="$da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="230,29,316,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,57,316,52,317,47,349,52"/>
+<area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="248,79,298,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="349,82,298,90,297,85,348,77"/>
+<area shape="rect" id="Node000003" href="$da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7" title=" " alt="" coords="35,5,152,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,37,152,29,153,23,215,32"/>
+<area shape="rect" id="Node000004" href="$da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126" title=" " alt="" coords="5,55,182,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="215,53,183,58,182,52,214,48"/>
+</map>

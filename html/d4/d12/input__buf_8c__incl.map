@@ -1,0 +1,14 @@
+<map id="hal_high/input_buf.c" name="hal_high/input_buf.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="84,5,220,31"/>
+<area shape="rect" id="Node000002" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="5,79,142,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,34,100,70,96,66,137,30"/>
+<area shape="rect" id="Node000005" href="$d5/d77/print_8h.html" title=" " alt="" coords="165,79,296,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="167,30,208,66,205,70,164,34"/>
+<area shape="rect" id="Node000003" href="$d4/da4/def_8h.html" title=" " alt="" coords="26,153,76,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,106,62,138,57,137,67,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="99,153,162,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="85,103,114,139,110,142,81,107"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="215,107,162,145,159,141,212,103"/>
+<area shape="rect" id="Node000006" href="$de/d12/style_8h.html" title=" " alt="" coords="187,153,320,178"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="237,104,248,137,242,138,232,106"/>
+</map>

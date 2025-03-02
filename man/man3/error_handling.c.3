@@ -1,0 +1,57 @@
+.TH "util/error_handling.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+util/error_handling.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'util/error_handling\&.h'\fP
+.br
+\fR#include <hal_high/input_buf\&.h>\fP
+.br
+\fR#include <hal_low/system\&.h>\fP
+.br
+\fR#include <hal_low/uart\&.h>\fP
+.br
+\fR#include <presentation/print\&.h>\fP
+.br
+\fR#include <presentation/style\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBhandleError\fP (const char *hint)"
+.br
+.ti -1c
+.RI "void \fBhandleHardFault\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandleUnexpectedInterrupt\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static void handleError (const char * hint)\fR [static]\fP"
+
+.PP
+Definition at line \fB23\fP of file \fBerror_handling\&.c\fP\&.
+.PP
+References \fBBOLD\fP, \fBDIM\fP, \fBFG_RED\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRESET\fP, \fBsystem_softReset()\fP, and \fBuart_readByte()\fP\&.
+.SS "void handleHardFault ()"
+
+.PP
+Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
+.PP
+References \fBhandleError()\fP\&.
+.SS "void handleUnexpectedInterrupt ()"
+
+.PP
+Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+.PP
+References \fBhandleError()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

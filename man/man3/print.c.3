@@ -1,0 +1,190 @@
+.TH "presentation/print.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/print.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'hal_low/uart\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+\fR#include 'util/conversion\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprint_clearConsole\fP ()"
+.br
+.RI "Clear the whole terminal\&. "
+.ti -1c
+.RI "void \fBprint\fP (const char *string)"
+.br
+.RI "Prints the given string\&. "
+.ti -1c
+.RI "void \fBprint_int\fP (const uint32_t number)"
+.br
+.RI "Prints the given integer\&. "
+.ti -1c
+.RI "void \fBprintln\fP (const char *string)"
+.br
+.RI "Prints the given string with a new line character\&. "
+.ti -1c
+.RI "void \fBprintln_int\fP (const uint32_t number)"
+.br
+.RI "Prints the given integer with a new line character\&. "
+.ti -1c
+.RI "void \fBprint_styled\fP (const char *string, const \fBStyle\fP *style)"
+.br
+.RI "Prints the given string with a predefined style\&. "
+.ti -1c
+.RI "void \fBprintln_styled\fP (const char *string, const \fBStyle\fP *style)"
+.br
+.RI "Prints the given string with a predefined style and a new line character\&. "
+.ti -1c
+.RI "void \fBprintStyle\fP (const \fBStyle\fP *style)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBprint\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void print (const char * string)"
+
+.PP
+Prints the given string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB30\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBuart_writeByte()\fP\&.
+.SS "void print_clearConsole ()"
+
+.PP
+Clear the whole terminal\&. 
+.PP
+Definition at line \fB25\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBCLEAR_SCREEN\fP, and \fBprint()\fP\&.
+.SS "void print_int (const uint32_t number)"
+
+.PP
+Prints the given integer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB39\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBint_to_str()\fP, and \fBprint()\fP\&.
+.SS "void print_styled (const char * string, const \fBStyle\fP * style)"
+
+.PP
+Prints the given string with a predefined style\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.br
+\fIstyle\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB58\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBprint()\fP, \fBprintStyle()\fP, and \fBRESET\fP\&.
+.SS "void println (const char * string)"
+
+.PP
+Prints the given string with a new line character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB46\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBLINE_SEPERATOR\fP, \fBprint()\fP, and \fBuart_writeByte()\fP\&.
+.SS "void println_int (const uint32_t number)"
+
+.PP
+Prints the given integer with a new line character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB52\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBLINE_SEPERATOR\fP, \fBprint_int()\fP, and \fBuart_writeByte()\fP\&.
+.SS "void println_styled (const char * string, const \fBStyle\fP * style)"
+
+.PP
+Prints the given string with a predefined style and a new line character\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.br
+\fIstyle\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB65\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBLINE_SEPERATOR\fP, \fBprint_styled()\fP, and \fBuart_writeByte()\fP\&.
+.SS "void printStyle (const \fBStyle\fP * style)"
+
+.PP
+Definition at line \fB71\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBStyle::bg_color\fP, \fBStyle::fg_color\fP, \fBStyle::font_style\fP, and \fBprint()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

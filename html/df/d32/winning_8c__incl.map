@@ -1,0 +1,24 @@
+<map id="logic/winning.c" name="logic/winning.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="182,5,288,31"/>
+<area shape="rect" id="Node000002" href="$d7/df5/winning_8h.html" title=" " alt="" coords="182,79,288,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,31,238,63,232,63,232,31"/>
+<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title=" " alt="" coords="132,153,226,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,107,200,142,196,139,223,103"/>
+<area shape="rect" id="Node000011" href="$df/db1/math_8h.html" title=" " alt="" coords="250,153,332,178"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="246,103,274,139,270,142,242,107"/>
+<area shape="rect" id="Node000004" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="5,226,142,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="162,181,105,220,102,215,159,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="83,308,146,333"/>
+<area shape="poly" id="edge10_Node000003_Node000006" title=" " alt="" coords="179,179,170,213,156,253,133,295,129,293,151,251,165,211,174,178"/>
+<area shape="rect" id="Node000007" href="$d5/d5a/field_8h.html" title=" " alt="" coords="237,226,366,252"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="201,177,269,216,267,221,198,181"/>
+<area shape="rect" id="Node000005" href="$d4/da4/def_8h.html" title=" " alt="" coords="10,308,60,333"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="70,254,50,295,45,292,65,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="82,251,104,292,99,295,77,254"/>
+<area shape="rect" id="Node000008" href="$db/d16/config_8h.html" title=" " alt="" coords="170,308,236,333"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="288,255,231,300,228,296,285,250"/>
+<area shape="rect" id="Node000009" href="$d2/d5a/ascii__art_8h.html" title=" " alt="" coords="260,300,383,341"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="307,252,315,284,310,286,302,253"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="408,308,475,333"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="324,250,408,297,406,302,321,255"/>
+</map>

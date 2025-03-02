@@ -1,0 +1,244 @@
+.TH "presentation/cell.h" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/cell.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCellSize\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNUM_OF_SIZES\fP   3"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_INDEX\fP   1"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_WIDTH\fP   8"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_HEIGHT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBINITIAL_SIZE\fP   \fBMedium\fP"
+.br
+.ti -1c
+.RI "#define \fBFIELD_HEIGHT\fP   (\fBCELLS_PER_COL\fP * g_cell_size\&.height)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSize\fP { \fBSmall\fP = 0, \fBMedium\fP = 1, \fBLarge\fP = 2 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcell_redraw\fP (const \fBCell\fP *cell)"
+.br
+.RI "Redraws the given cell\&. "
+.ti -1c
+.RI "void \fBcell_redraw_withModifier\fP (const \fBCell\fP *cell, const char *modifier)"
+.br
+.ti -1c
+.RI "void \fBcell_redrawAll\fP (\fBCell\fP all_cells[][\fBCELLS_PER_ROW\fP], const char *modifier)"
+.br
+.RI "Redraws the whole field\&. "
+.ti -1c
+.RI "void \fBcell_select\fP (const \fBCell\fP *cell)"
+.br
+.RI "Selects the given cell\&. "
+.ti -1c
+.RI "void \fBcell_mark\fP (\fBCell\fP *cell)"
+.br
+.RI "Marks the given cell\&. "
+.ti -1c
+.RI "void \fBcell_increaseSize\fP ()"
+.br
+.RI "Increases the field size\&. "
+.ti -1c
+.RI "void \fBcell_decreaseSize\fP ()"
+.br
+.RI "Decreases the field size\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBCellSize\fP \fBg_cell_size\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcell\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FIELD_HEIGHT   (\fBCELLS_PER_COL\fP * g_cell_size\&.height)"
+
+.PP
+Definition at line \fB30\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_HEIGHT   5"
+
+.PP
+Definition at line \fB28\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_INDEX   1"
+
+.PP
+Definition at line \fB26\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_SIZE   \fBMedium\fP"
+
+.PP
+Definition at line \fB29\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_WIDTH   8"
+
+.PP
+Definition at line \fB27\fP of file \fBcell\&.h\fP\&.
+.SS "#define NUM_OF_SIZES   3"
+
+.PP
+Definition at line \fB25\fP of file \fBcell\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSize\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BISmall \fP
+.TP
+\f(BIMedium \fP
+.TP
+\f(BILarge \fP
+.PP
+Definition at line \fB32\fP of file \fBcell\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cell_decreaseSize ()"
+
+.PP
+Decreases the field size\&. 
+.PP
+Definition at line \fB217\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_increaseSize ()"
+
+.PP
+Increases the field size\&. 
+.PP
+Definition at line \fB207\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBCellSize::size\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_mark (\fBCell\fP * cell)"
+
+.PP
+Marks the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to mark 
+.RE
+.PP
+
+.SS "void cell_redraw (const \fBCell\fP * cell)"
+
+.PP
+Redraws the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to redraw 
+.RE
+.PP
+
+.PP
+Definition at line \fB98\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redraw_withModifier (const \fBCell\fP * cell, const char * modifier)"
+
+.PP
+Definition at line \fB103\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redrawAll (\fBCell\fP all_cells[][CELLS_PER_ROW], const char * modifier)"
+
+.PP
+Redraws the whole field\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIall_cells\fP 2D field of cells 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_select (const \fBCell\fP * cell)"
+
+.PP
+Selects the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to select 
+.RE
+.PP
+
+.PP
+Definition at line \fB108\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBINVERSE\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBCellSize\fP g_cell_size\fR [extern]\fP"
+
+.PP
+Definition at line \fB26\fP of file \fBcell\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

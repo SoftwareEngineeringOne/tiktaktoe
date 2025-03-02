@@ -1,0 +1,101 @@
+.TH "hal_low/interrupts.h" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/interrupts.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInterrupt1_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt2_Handler\fP (void)"
+.br
+.RI "UART interrupt handler\&. "
+.ti -1c
+.RI "void \fBInterrupt3_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt4_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt5_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt6_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt7_Handler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt8_Handler\fP (void)"
+.br
+.RI "Timer interrupt handler\&. "
+.ti -1c
+.RI "void \fBInterrupt9_Handler\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBinterrupts\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void Interrupt1_Handler (void )"
+
+.SS "void Interrupt2_Handler (void )"
+
+.PP
+UART interrupt handler\&. 
+.PP
+Definition at line \fB27\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBinput_onInterrupt()\fP, \fBInterrupt_ICPR\fP, \fBInterrupt_ID2\fP, \fBregister_write()\fP, and \fBuart_readByte()\fP\&.
+.SS "void Interrupt3_Handler (void )"
+
+.SS "void Interrupt4_Handler (void )"
+
+.SS "void Interrupt5_Handler (void )"
+
+.SS "void Interrupt6_Handler (void )"
+
+.SS "void Interrupt7_Handler (void )"
+
+.SS "void Interrupt8_Handler (void )"
+
+.PP
+Timer interrupt handler\&. 
+.PP
+Definition at line \fB33\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBInterrupt_ICPR\fP, \fBInterrupt_ID8\fP, \fBregister_write()\fP, \fBtime_onInterrupt()\fP, \fBTIMER0_BASE_ADDRESS\fP, and \fBTIMER_COMPARE_0\fP\&.
+.SS "void Interrupt9_Handler (void )"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

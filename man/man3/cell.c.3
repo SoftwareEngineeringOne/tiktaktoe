@@ -1,0 +1,306 @@
+.TH "presentation/cell.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/cell.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/cell\&.h'\fP
+.br
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'presentation/cursor\&.h'\fP
+.br
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBredrawCell\fP (uint8_t row, uint8_t col, const char *modifier, \fBPlayer\fP marked_by)"
+.br
+.RI "Redraw one cell\&. "
+.ti -1c
+.RI "void \fBcell_redraw\fP (const \fBCell\fP *cell)"
+.br
+.RI "Redraws the given cell\&. "
+.ti -1c
+.RI "void \fBcell_redraw_withModifier\fP (const \fBCell\fP *cell, const char *modifier)"
+.br
+.ti -1c
+.RI "void \fBcell_select\fP (const \fBCell\fP *cell)"
+.br
+.RI "Selects the given cell\&. "
+.ti -1c
+.RI "void \fBcell_redrawAll\fP (\fBCell\fP all_cells[][\fBCELLS_PER_ROW\fP], const char *modifier)"
+.br
+.RI "Redraws the whole field\&. "
+.ti -1c
+.RI "void \fBcell_increaseSize\fP ()"
+.br
+.RI "Increases the field size\&. "
+.ti -1c
+.RI "void \fBcell_decreaseSize\fP ()"
+.br
+.RI "Decreases the field size\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBCellSize\fP \fBg_cell_size\fP"
+.br
+.ti -1c
+.RI "static char * \fBSMALL_X\fP [1][3] = {{' ', 'X', ' '}}"
+.br
+.ti -1c
+.RI "static char * \fBSMALL_O\fP [1][3] = {{' ', 'O', ' '}}"
+.br
+.ti -1c
+.RI "static char * \fBMEDIUM_X\fP [3][7]"
+.br
+.ti -1c
+.RI "static char * \fBMEDIUM_O\fP [3][7]"
+.br
+.ti -1c
+.RI "static char * \fBLARGE_X\fP [5][9]"
+.br
+.ti -1c
+.RI "static char * \fBLARGE_O\fP [5][9]"
+.br
+.ti -1c
+.RI "static \fBCellSize\fP \fBVALID_SIZES\fP []"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcell\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cell_decreaseSize ()"
+
+.PP
+Decreases the field size\&. 
+.PP
+Definition at line \fB217\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_increaseSize ()"
+
+.PP
+Increases the field size\&. 
+.PP
+Definition at line \fB207\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBCellSize::size\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_redraw (const \fBCell\fP * cell)"
+
+.PP
+Redraws the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to redraw 
+.RE
+.PP
+
+.PP
+Definition at line \fB98\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redraw_withModifier (const \fBCell\fP * cell, const char * modifier)"
+
+.PP
+Definition at line \fB103\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redrawAll (\fBCell\fP all_cells[][CELLS_PER_ROW], const char * modifier)"
+
+.PP
+Redraws the whole field\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIall_cells\fP 2D field of cells 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_select (const \fBCell\fP * cell)"
+
+.PP
+Selects the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to select 
+.RE
+.PP
+
+.PP
+Definition at line \fB108\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBINVERSE\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void redrawCell (uint8_t row, uint8_t col, const char * modifier, \fBPlayer\fP marked_by)\fR [static]\fP"
+
+.PP
+Redraw one cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP Y-Position 
+.br
+\fIcol\fP X-Position 
+.br
+\fImodifier\fP 
+.br
+\fImarked_by\fP Player to mark by 
+.RE
+.PP
+
+.PP
+Definition at line \fB146\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCircle\fP, \fBCross\fP, \fBcursor_moveTo()\fP, \fBDEFAULT_CIRCLE\fP, \fBDEFAULT_CROSS\fP, \fBFIELD_X_OFFSET\fP, \fBFIELD_Y_OFFSET\fP, \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBLARGE_O\fP, \fBLARGE_X\fP, \fBMedium\fP, \fBMEDIUM_O\fP, \fBMEDIUM_X\fP, \fBNone\fP, \fBprint()\fP, \fBprintStyle()\fP, \fBRESET\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBSMALL_O\fP, \fBSMALL_X\fP, and \fBCellSize::width\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBCellSize\fP g_cell_size"
+\fBInitial value:\fP
+.nf
+= (CellSize){
+    \&.size = INITIAL_SIZE,
+    \&.height = INITIAL_HEIGHT,
+    \&.width = INITIAL_WIDTH,
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB26\fP of file \fBcell\&.c\fP\&.
+.SS "char* LARGE_O[5][9]\fR [static]\fP"
+\fBInitial value:\fP
+.nf
+= {
+    {" ",
+     CORNER_TOP_LEFT,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     CORNER_TOP_RIGHT,
+     " "},
+    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
+    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
+    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
+    {" ",
+     CORNER_BOT_LEFT,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     TOP_BOTTOM,
+     CORNER_BOT_RIGHT,
+     " "},
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB68\fP of file \fBcell\&.c\fP\&.
+.SS "char* LARGE_X[5][9]\fR [static]\fP"
+\fBInitial value:\fP
+.nf
+= {
+    {" ", " ", DIAGONAL_BW, " ", " ", " ", DIAGONAL_FW, " ", " "},
+    {" ", " ", " ", DIAGONAL_BW, " ", DIAGONAL_FW, " ", " ", " "},
+    {" ", " ", " ", " ", DIAGONAL_MID, " ", " ", " ", " "},
+    {" ", " ", " ", DIAGONAL_FW, " ", DIAGONAL_BW, " ", " ", " "},
+    {" ", " ", DIAGONAL_FW, " ", " ", " ", DIAGONAL_BW, " ", " "},
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB60\fP of file \fBcell\&.c\fP\&.
+.SS "char* MEDIUM_O[3][7]\fR [static]\fP"
+\fBInitial value:\fP
+.nf
+= {
+    {" ", CORNER_TOP_LEFT, TOP_BOTTOM, TOP_BOTTOM, TOP_BOTTOM, CORNER_TOP_RIGHT, " "},
+    {" ", SIDE, " ", " ", " ", SIDE, " "},
+    {" ", CORNER_BOT_LEFT, TOP_BOTTOM, TOP_BOTTOM, TOP_BOTTOM, CORNER_BOT_RIGHT, " "},
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB54\fP of file \fBcell\&.c\fP\&.
+.SS "char* MEDIUM_X[3][7]\fR [static]\fP"
+\fBInitial value:\fP
+.nf
+= {
+    {" ", " ", DIAGONAL_BW, " ", DIAGONAL_FW, " ", " "},
+    {" ", " ", " ", DIAGONAL_MID, " ", " ", " "},
+    {" ", " ", DIAGONAL_FW, " ", DIAGONAL_BW, " ", " "},
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB48\fP of file \fBcell\&.c\fP\&.
+.SS "char* SMALL_O[1][3] = {{' ', 'O', ' '}}\fR [static]\fP"
+
+.PP
+Definition at line \fB46\fP of file \fBcell\&.c\fP\&.
+.SS "char* SMALL_X[1][3] = {{' ', 'X', ' '}}\fR [static]\fP"
+
+.PP
+Definition at line \fB44\fP of file \fBcell\&.c\fP\&.
+.SS "\fBCellSize\fP VALID_SIZES[]\fR [static]\fP"
+\fBInitial value:\fP
+.nf
+= {
+    {\&.width = 4, \&.height = 3},
+    {\&.width = 8, \&.height = 5},
+    {\&.width = 10, \&.height = 7},
+}
+.PP
+.fi
+
+.PP
+Definition at line \fB92\fP of file \fBcell\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

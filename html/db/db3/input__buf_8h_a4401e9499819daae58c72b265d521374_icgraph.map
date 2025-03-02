@@ -1,0 +1,9 @@
+<map id="input_isFull" name="input_isFull">
+<area shape="rect" id="Node000001" title="Check if the buffer is full." alt="" coords="477,5,565,31"/>
+<area shape="rect" id="Node000002" href="$d7/dec/input__buf_8c.html#a94879a59b145834ad147b43c5f9ffbda" title="Put the next byte into the buffer." alt="" coords="348,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="462,21,430,21,430,16,462,16"/>
+<area shape="rect" id="Node000003" href="$d7/dec/input__buf_8c.html#a6f2425195e541bcea7e78d39ff1c1d54" title="Function to call in case of UART input interrupt." alt="" coords="182,5,300,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,21,300,21,300,16,333,16"/>
+<area shape="rect" id="Node000004" href="$d8/d22/interrupts_8c.html#add4c333e4b7c9a2d571899bbbc9643e5" title="UART interrupt handler." alt="" coords="5,5,134,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,21,134,21,134,16,166,16"/>
+</map>

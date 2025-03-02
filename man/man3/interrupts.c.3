@@ -1,0 +1,81 @@
+.TH "hal_low/interrupts.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/interrupts.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'hal_low/interrupts\&.h'\fP
+.br
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'hal_low/nvic\&.h'\fP
+.br
+\fR#include 'hal_low/register_access\&.h'\fP
+.br
+\fR#include 'hal_low/timer\&.h'\fP
+.br
+\fR#include 'hal_low/uart\&.h'\fP
+.br
+\fR#include 'logic/time\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInterrupt2_Handler\fP (void)"
+.br
+.RI "UART interrupt handler\&. "
+.ti -1c
+.RI "void \fBInterrupt8_Handler\fP (void)"
+.br
+.RI "Timer interrupt handler\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBinterrupts\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void Interrupt2_Handler (void )"
+
+.PP
+UART interrupt handler\&. 
+.PP
+Definition at line \fB27\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBinput_onInterrupt()\fP, \fBInterrupt_ICPR\fP, \fBInterrupt_ID2\fP, \fBregister_write()\fP, and \fBuart_readByte()\fP\&.
+.SS "void Interrupt8_Handler (void )"
+
+.PP
+Timer interrupt handler\&. 
+.PP
+Definition at line \fB33\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBInterrupt_ICPR\fP, \fBInterrupt_ID8\fP, \fBregister_write()\fP, \fBtime_onInterrupt()\fP, \fBTIMER0_BASE_ADDRESS\fP, and \fBTIMER_COMPARE_0\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

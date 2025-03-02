@@ -1,0 +1,55 @@
+<map id="openControls" name="openControls">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,511,103,536"/>
+<area shape="rect" id="Node000002" href="$d2/d0a/menu_8c.html#a23ef48917f29c7ba37351342e66a636f" title=" " alt="" coords="151,333,290,359"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,508,194,369,198,373,70,512"/>
+<area shape="rect" id="Node000018" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="176,511,264,536"/>
+<area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="103,521,161,521,161,526,103,526"/>
+<area shape="rect" id="Node000020" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="172,560,268,586"/>
+<area shape="poly" id="edge30_Node000001_Node000020" title=" " alt="" coords="101,534,160,552,159,558,99,540"/>
+<area shape="rect" id="Node000003" href="$d2/d0a/menu_8c.html#a44d00693dd3847774cbd76bc27d44b3f" title=" " alt="" coords="338,156,467,182"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,331,269,270,301,233,336,199,354,187,357,191,340,203,305,236,274,273,232,334"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#a02a20f9ab0165b4cbac365bb9e9aa823" title="Prints the given string with a predefined style and a new line character." alt="" coords="531,181,628,207"/>
+<area shape="poly" id="edge20_Node000002_Node000006" title=" " alt="" coords="238,331,282,301,337,270,429,234,515,208,517,213,431,239,339,275,285,306,241,335"/>
+<area shape="rect" id="Node000007" href="$d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="704,257,791,283"/>
+<area shape="poly" id="edge16_Node000002_Node000007" title=" " alt="" coords="290,338,452,321,643,293,688,283,689,288,644,298,452,326,291,343"/>
+<area shape="rect" id="Node000008" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="1030,359,1076,384"/>
+<area shape="poly" id="edge13_Node000002_Node000008" title=" " alt="" coords="260,357,320,376,399,396,488,413,578,420,749,420,823,415,896,405,1014,379,1015,384,897,410,823,421,749,425,578,425,487,418,398,402,319,381,258,362"/>
+<area shape="rect" id="Node000012" href="$d6/db1/print_8c.html#aa1dd7679332aa803a3febb63dc5dd825" title="Clear the whole terminal." alt="" coords="515,359,644,384"/>
+<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="291,348,500,363,500,369,290,354"/>
+<area shape="rect" id="Node000013" href="$d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a" title="Prints the given string with a new line character." alt="" coords="879,460,935,486"/>
+<area shape="poly" id="edge17_Node000002_Node000013" title=" " alt="" coords="235,358,277,400,307,422,339,438,410,461,485,476,560,485,634,489,767,486,864,476,864,482,767,491,634,494,560,490,484,481,409,466,337,443,304,426,274,404,231,362"/>
+<area shape="rect" id="Node000014" href="$dc/d78/ui_8c.html#ad7ec4b5965543c400031e14183eee496" title=" " alt="" coords="524,257,635,283"/>
+<area shape="poly" id="edge21_Node000002_Node000014" title=" " alt="" coords="250,330,291,314,337,300,426,282,508,273,509,278,427,288,339,305,293,319,252,335"/>
+<area shape="rect" id="Node000004" href="$d7/dec/input__buf_8c.html#a3e03a367ae13ea8f68021a964efbef90" title="Get the next byte from the buffer." alt="" coords="529,132,630,158"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="468,157,513,151,514,156,468,163"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="468,175,516,182,515,188,467,181"/>
+<area shape="rect" id="Node000005" href="$d7/dec/input__buf_8c.html#aaec1348b29929f537c59bc6b5718bd4e" title="Check if the buffer is empty." alt="" coords="696,5,798,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="593,129,635,91,690,48,707,37,710,42,693,52,639,96,597,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="611,205,705,248,702,253,609,210"/>
+<area shape="rect" id="Node000009" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="1143,397,1247,423"/>
+<area shape="poly" id="edge12_Node000006_Node000009" title=" " alt="" coords="615,178,850,92,909,80,934,81,965,92,1009,120,1048,155,1082,194,1112,236,1158,318,1186,381,1181,384,1153,320,1108,239,1078,197,1044,158,1005,124,962,97,933,86,909,85,852,97,617,183"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="791,265,873,270,920,278,964,293,1002,317,1033,345,1029,349,999,321,962,298,919,283,873,275,791,271"/>
+<area shape="rect" id="Node000011" href="$d6/db1/print_8c.html#a2b33af16d6bf86c3623a6ed14f4115f2" title=" " alt="" coords="870,308,945,334"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="791,281,856,302,854,307,790,286"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1077,375,1131,390,1130,395,1076,380"/>
+<area shape="rect" id="Node000010" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="1295,511,1394,536"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1215,421,1316,499,1312,503,1212,426"/>
+<area shape="poly" id="edge11_Node000011_Node000008" title=" " alt="" coords="946,331,1016,356,1014,361,944,336"/>
+<area shape="poly" id="edge15_Node000012_Node000008" title=" " alt="" coords="644,369,1015,369,1015,374,644,374"/>
+<area shape="poly" id="edge18_Node000013_Node000008" title=" " alt="" coords="932,457,962,439,1023,392,1026,396,965,443,934,462"/>
+<area shape="poly" id="edge19_Node000013_Node000009" title=" " alt="" coords="935,464,1127,422,1128,427,936,469"/>
+<area shape="poly" id="edge26_Node000014_Node000007" title=" " alt="" coords="636,268,688,268,688,273,636,273"/>
+<area shape="rect" id="Node000015" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move cursor to the given coordinates." alt="" coords="692,181,803,207"/>
+<area shape="poly" id="edge22_Node000014_Node000015" title=" " alt="" coords="609,254,702,211,705,216,611,259"/>
+<area shape="poly" id="edge24_Node000015_Node000008" title=" " alt="" coords="804,201,883,223,925,240,965,263,988,281,1008,302,1038,344,1034,347,1004,306,984,285,962,267,923,245,882,228,803,206"/>
+<area shape="rect" id="Node000016" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title=" " alt="" coords="870,107,945,132"/>
+<area shape="poly" id="edge23_Node000015_Node000016" title=" " alt="" coords="774,178,850,141,859,137,862,142,852,146,776,183"/>
+<area shape="rect" id="Node000017" href="$dd/dfa/cursor_8c.html#ab2e17d032152e3e552ba1471a41b6c18" title="TODO: ?????" alt="" coords="851,156,963,182"/>
+<area shape="poly" id="edge25_Node000015_Node000017" title=" " alt="" coords="803,183,835,178,836,183,804,188"/>
+<area shape="rect" id="Node000019" href="$df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="1154,511,1236,536"/>
+<area shape="poly" id="edge28_Node000018_Node000019" title=" " alt="" coords="265,521,578,521,908,521,1138,521,1138,526,908,526,578,526,265,526"/>
+<area shape="poly" id="edge29_Node000019_Node000010" title=" " alt="" coords="1236,521,1280,521,1280,526,1236,526"/>
+<area shape="rect" id="Node000021" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="1011,561,1095,587"/>
+<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="269,570,578,572,749,572,996,572,996,577,749,577,578,577,269,576"/>
+<area shape="poly" id="edge32_Node000021_Node000010" title=" " alt="" coords="1095,568,1166,559,1246,546,1282,538,1283,543,1248,551,1167,565,1095,573"/>
+</map>

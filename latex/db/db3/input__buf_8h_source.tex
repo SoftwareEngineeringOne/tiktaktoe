@@ -1,0 +1,36 @@
+\doxysection{input\+\_\+buf.\+h}
+\hypertarget{input__buf_8h_source}{}\label{input__buf_8h_source}\index{hal\_high/input\_buf.h@{hal\_high/input\_buf.h}}
+\mbox{\hyperlink{input__buf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00018}00018\ \textcolor{preprocessor}{\#ifndef\ INPUT\_BUF\_H}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ INPUT\_BUF\_H}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{def_8h}{def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00025}\mbox{\hyperlink{input__buf_8h_a8f53190540130db759820c0d9ab78f60}{00025}}\ \textcolor{preprocessor}{\#define\ INPUT\_BUF\_SIZE\ 128}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00030}\mbox{\hyperlink{structInputBuffer}{00030}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00032}\mbox{\hyperlink{structInputBuffer_aa5f88492a54fcb88dcdb92e17a0ee37f}{00032}}\ \ \ \ \ \ \ \ \ uint8\_t\ data[\mbox{\hyperlink{input__buf_8h_a8f53190540130db759820c0d9ab78f60}{INPUT\_BUF\_SIZE}}];}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00033}\mbox{\hyperlink{structInputBuffer_a0f312d29fb9925a12849950e3d1dbaf0}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint16\_t\ \mbox{\hyperlink{structInputBuffer_a0f312d29fb9925a12849950e3d1dbaf0}{head}};}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00034}\mbox{\hyperlink{structInputBuffer_ad2253db99c19c5f92aa00750a0897866}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint16\_t\ \mbox{\hyperlink{structInputBuffer_ad2253db99c19c5f92aa00750a0897866}{tail}};}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00035}00035\ \}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}};}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00037}00037\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ \mbox{\hyperlink{input__buf_8h_a3e797155e2d8f73914a02d047ea39a37}{g\_input\_buf}};}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00044}00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__buf_8h_ae603712ba6220d13a4389c08ea5fbed2}{input\_onInterrupt}}(uint8\_t\ input);}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00051}00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__buf_8h_a9bb68967ad751f4b307afa735a3501ff}{input\_init}}(\textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ *ib);}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00059}00059\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input__buf_8h_aaec1348b29929f537c59bc6b5718bd4e}{input\_isEmpty}}(\textcolor{keyword}{const}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ *ib);}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00067}00067\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input__buf_8h_a4401e9499819daae58c72b265d521374}{input\_isFull}}(\textcolor{keyword}{const}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ *ib);}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00077}00077\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input__buf_8h_a3e03a367ae13ea8f68021a964efbef90}{input\_getNext}}(\textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ *ib,\ uint8\_t\ *\textcolor{keywordtype}{byte});}
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8h_source_l00079}00079\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ INPUT\_BUF\_H}}
+
+\end{DoxyCode}

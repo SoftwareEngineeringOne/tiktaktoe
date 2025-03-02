@@ -1,0 +1,83 @@
+\doxysection{hal\+\_\+low/system.c File Reference}
+\hypertarget{system_8c}{}\label{system_8c}\index{hal\_low/system.c@{hal\_low/system.c}}
+{\ttfamily \#include "{}hal\+\_\+low/system.\+h"{}}\newline
+{\ttfamily \#include "{}def.\+h"{}}\newline
+{\ttfamily \#include $<$hal\+\_\+low/register\+\_\+access.\+h$>$}\newline
+Include dependency graph for system.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d4a/system_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\+\_\+soft\+Reset}} ()
+\item 
+void \mbox{\hyperlink{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\+\_\+off\+Mode}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9}\index{system.c@{system.c}!system\_offMode@{system\_offMode}}
+\index{system\_offMode@{system\_offMode}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{system\_offMode()}{system\_offMode()}}
+{\footnotesize\ttfamily \label{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9} 
+void system\+\_\+off\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{system_8c_source_l00015}{15}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00008}{SYS\+\_\+\+POWER}}, and \mbox{\hyperlink{system_8h_source_l00009}{SYS\+\_\+\+SYSTEMOFF}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}\index{system.c@{system.c}!system\_softReset@{system\_softReset}}
+\index{system\_softReset@{system\_softReset}!system.c@{system.c}}
+\doxysubsubsection{\texorpdfstring{system\_softReset()}{system\_softReset()}}
+{\footnotesize\ttfamily \label{system_8c_a97bacc4493b8a3008bdbdd7a83e86642} 
+void system\+\_\+soft\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{system_8c_source_l00006}{6}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00004}{SYS\+\_\+\+AIRCR}}, \mbox{\hyperlink{system_8h_source_l00006}{SYS\+\_\+\+SYSRESETREQ}}, and \mbox{\hyperlink{system_8h_source_l00005}{SYS\+\_\+\+VECTKEY}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{d4/dfd/system_8c_a97bacc4493b8a3008bdbdd7a83e86642_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dfd/system_8c_a97bacc4493b8a3008bdbdd7a83e86642_icgraph}
+\end{center}
+\end{figure}

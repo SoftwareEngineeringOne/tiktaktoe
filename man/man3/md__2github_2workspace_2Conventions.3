@@ -1,0 +1,88 @@
+.TH "md__2github_2workspace_2Conventions" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__2github_2workspace_2Conventions \- Coding Conventions 
+.PP
+
+
+.PP
+.IP "\(bu" 2
+Conventional Commits (https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+.IP "\(bu" 2
+The architecture is documented in this README
+.IP "\(bu" 2
+Every file must have a short description at the beginning
+.IP "\(bu" 2
+Every function must have a doc comment with a short description
+.IP "\(bu" 2
+Not self describing code must be commented (should be avoided)
+.IP "\(bu" 2
+Public functions start with the package name followed by an underscore
+.IP "\(bu" 2
+Private functions should therefore not be called from outside
+.IP "\(bu" 2
+Private functions should be defined in the beginning of the source files
+.IP "\(bu" 2
+Private functions should be implemented in the source file, following the public functions
+.PP
+.SH "File structure"
+.PP
+All files should follow a common structure as defined below\&. Exceptions may be made, however these should be explicitely explained\&.
+.SS "Header file structure"
+.IP "1." 4
+Module comment
+.IP "2." 4
+Defines
+.IP "3." 4
+global constants
+.IP "4." 4
+global variables
+.IP "5." 4
+structs
+.IP "6." 4
+public function prototypes
+.PP
+.SS "Source file structure"
+.IP "1." 4
+Module comment (may reference header comment and add information if needed)
+.IP "2." 4
+module constants
+.IP "3." 4
+module variables
+.IP "4." 4
+private function prototypes
+.IP "5." 4
+public function implementations
+.IP "6." 4
+private function implementations
+.PP
+.SS "Naming"
+.SS "Functions"
+.IP "\(bu" 2
+public functions should be prefixed with '`module_[\&.\&.\&.]`'
+.IP "\(bu" 2
+private functions should be marked as \fRstatic\fP and prefixed with '`_[\&.\&.\&.]`'
+.IP "\(bu" 2
+the function name itself should be written in \fRcamelCase\fP
+.IP "\(bu" 2
+a specialization may follow as a suffix, such as '`[\&.\&.\&.]_waiting`'
+.PP
+.SH "Documentation"
+.PP
+.IP "\(bu" 2
+All files should contain a top level comment structured similiar to this: 
+.PP
+.nf
+
+
+
+.fi
+.PP
+
+.IP "\(bu" 2
+All public functions should be documented in the header file
+.IP "\(bu" 2
+All private functions should be documented at the definition in the source files 
+.PP
+

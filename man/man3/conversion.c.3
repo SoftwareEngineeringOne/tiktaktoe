@@ -1,0 +1,95 @@
+.TH "util/conversion.c" 3 "Sun Mar 2 2025 23:35:50" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+util/conversion.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'util/conversion\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int8_t \fBint_to_str\fP (uint32_t num, char *buf, const size_t buf_size)"
+.br
+.ti -1c
+.RI "char \fBint_to_char\fP (uint8_t num)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBconversion\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "char int_to_char (uint8_t num)"
+Converts an integer to a character 
+.PP
+\fBParameters\fP
+.RS 4
+\fInum\fP Integer to convert 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Suitable character 
+.RE
+.PP
+
+.PP
+Definition at line \fB58\fP of file \fBconversion\&.c\fP\&.
+.PP
+References \fBASCII_NUM_OFFSET\fP\&.
+.SS "int8_t int_to_str (uint32_t num, char * buf, const size_t buf_size)"
+Converts an integer to a string 
+.PP
+\fBParameters\fP
+.RS 4
+\fInum\fP Integer to convert 
+.br
+\fIbuf\fP String 
+.br
+\fIbuf_size\fP Size of the string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TODO ??False??? when no error occurred 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBconversion\&.c\fP\&.
+.PP
+References \fBASCII_NUM_OFFSET\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

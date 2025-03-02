@@ -1,0 +1,24 @@
+<map id="ui_updateTurn" name="ui_updateTurn">
+<area shape="rect" id="Node000001" title="Updates the turn number on the screen." alt="" coords="974,56,1078,82"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a5ba143de5d686da017fc2281274d7729" title="Handles the presentation update in case of a automatic round." alt="" coords="428,5,602,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="965,54,926,46,840,35,754,28,602,21,602,16,754,22,841,30,927,41,966,49"/>
+<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="818,56,926,82"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="959,72,927,72,927,66,959,66"/>
+<area shape="rect" id="Node000008" href="$dc/d78/ui_8c.html#a5bca51cc044ff3d5ae62598e420cc159" title="Writes the turn text to the screen." alt="" coords="820,105,924,131"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="970,90,916,107,914,102,968,85"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,81,380,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,39,429,53,368,83,366,78,427,48,460,34"/>
+<area shape="rect" id="Node000004" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,81,254,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,97,254,97,254,92,286,92"/>
+<area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,81,55,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,97,55,97,55,92,87,92"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="650,56,770,82"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="803,72,770,72,770,66,803,66"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="634,77,381,94,381,89,634,71"/>
+<area shape="rect" id="Node000009" href="$d1/dcb/game_8c.html#a4938becaec0f17690ab3a575fcb0bd4a" title="Refreshes the whole UI." alt="" coords="666,107,754,132"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="804,121,754,122,754,116,804,116"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="650,118,381,99,381,94,650,113"/>
+<area shape="rect" id="Node000010" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="496,157,534,183"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="651,137,535,168,534,163,650,132"/>
+<area shape="poly" id="edge12_Node000010_Node000003" title=" " alt="" coords="481,162,427,141,366,110,368,105,429,136,483,157"/>
+</map>

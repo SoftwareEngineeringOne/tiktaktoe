@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,16 +17,9 @@
 #ifndef INPUT_H
 #define INPUT_H
 
+#include "def.h"
 #include "logic/game.h"
-#include "presentation/field.h"
 
-/**
- * @brief Do certain things on input with escape sequences
- * @param [inout] cells
- * 2D field of cells
- * @param [inout] selected_cell
- * Selected cell
- */
-void input_handleEscapeSequence(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Cell **selected_cell);
+bool input_handleByte(uint8_t *byte, GameState *game_state, CellState *cell_state);
 
-#endif// !INPUT_H
+#endif// INPUT_H

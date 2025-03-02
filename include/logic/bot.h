@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -22,12 +22,11 @@
 
 /**
  * @brief Mark some random cell
- * @param [inout] cells
- * 2D field of cells
- * @param mark_by
- * Player to be marked by
+ * @param [inout] cells 2D field of cells
+ * @param [in] marked_by Player to be marked by
+ *
  * @return Marked cell
  */
-Cell *bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player mark_by);
+Cell *bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player marked_by);
 
 #endif// BOT_H

@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -16,8 +16,6 @@
  */
 #ifndef INTERRUPTS_H
 #define INTERRUPTS_H
-
-void default_handler(void);
 
 void Interrupt1_Handler(void);
 

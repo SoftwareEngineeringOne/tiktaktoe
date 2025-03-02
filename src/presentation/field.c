@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -32,11 +32,11 @@
  * @param [in] row_length Length of string
  *
  */
-static void _printRow(char **row, size_t row_length);
+static void printRow(char **row, size_t row_length);
 
 void field_redraw()
 {
-    const uint8_t row_length = CELLS_PER_ROW * cell_width + 1;
+    const uint8_t row_length = CELLS_PER_ROW * g_cell_size.width + 1;
     char *divider[row_length];
     char *top_divider[row_length];
     char *bot_divider[row_length];
@@ -58,7 +58,7 @@ void field_redraw()
             bot_divider[i] = CORNER_BOT_RIGHT;
             non_divider[i] = SIDE;
         }
-        else if(i % cell_width == 0)
+        else if(i % g_cell_size.width == 0)
         {
             divider[i] = CROSS;
             top_divider[i] = T_TOP;
@@ -75,7 +75,7 @@ void field_redraw()
     }
 
     cursor_moveTo(FIELD_X_OFFSET, FIELD_Y_OFFSET);
-    _printRow(top_divider, row_length);
+    printRow(top_divider, row_length);
 
     uint8_t first = 0;
     for(uint8_t i = 0; i < CELLS_PER_COL; i++)
@@ -86,18 +86,18 @@ void field_redraw()
         }
         else
         {
-            _printRow(divider, row_length);
+            printRow(divider, row_length);
         }
-        for(uint8_t j = 0; j < cell_height - 2; j++)
+        for(uint8_t j = 0; j < g_cell_size.height - 2; j++)
         {
-            _printRow(non_divider, row_length);
+            printRow(non_divider, row_length);
         }
     }
-    _printRow(bot_divider, row_length);
+    printRow(bot_divider, row_length);
 }
 
 
-void _printRow(char **row, const size_t row_length)
+void printRow(char **row, const size_t row_length)
 {
     for(size_t i = 0; i < row_length; i++)
     {

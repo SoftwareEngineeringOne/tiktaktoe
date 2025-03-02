@@ -1,13 +1,13 @@
 ﻿/**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -34,7 +34,7 @@ typedef struct
         volatile uint16_t tail;
 } InputBuffer;
 
-extern volatile InputBuffer input_buf;
+extern volatile InputBuffer g_input_buf;
 
 /**
  * @brief Function to call in case of UART input interrupt
@@ -56,7 +56,7 @@ void input_init(volatile InputBuffer *ib);
  * InputBuffer
  * @return True if empty
  */
-bool input_isEmpty(volatile InputBuffer *ib);
+bool input_isEmpty(const volatile InputBuffer *ib);
 
 /**
  * @brief Check if the buffer is full
@@ -64,7 +64,7 @@ bool input_isEmpty(volatile InputBuffer *ib);
  * InputBuffer
  * @return True if full
  */
-bool input_isFull(volatile InputBuffer *ib);
+bool input_isFull(const volatile InputBuffer *ib);
 
 /**
  * @brief Get the next byte from the buffer

@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -20,88 +20,41 @@
 #include "hal_low/nvic.h"
 #include "hal_low/random.h"
 #include "hal_low/uart.h"
-#include "logic/game.h"
 #include "presentation/print.h"
 #include "presentation/style.h"
+#include "presentation/ui.h"
 
-void menu_todo()
-{
-    print_clearConsole();
-    println("Not yet implemented, any key to continue...");
-    while(input_isEmpty(&input_buf))
-    {
-        __WFI();
-    }
-}
-
-static char *HEADING = "\
-.___________. __   __  ___ .___________.    ___       __  ___ .___________.  ______    _______  \n\
-|           ||  | |  |/  / |           |   /   \\     |  |/  / |           | /  __  \\  |   ____| \n\
-`---|  |----`|  | |  '  /  `---|  |----`  /  ^  \\    |  '  /  `---|  |----`|  |  |  | |  |__    \n\
-    |  |     |  | |    <       |  |      /  /_\\  \\   |    <       |  |     |  |  |  | |   __|   \n\
-    |  |     |  | |  .  \\      |  |     /  _____  \\  |  .  \\      |  |     |  `--'  | |  |____  \n\
-    |__|     |__| |__|\\__\\     |__|    /__/     \\__\\ |__|\\__\\     |__|      \\______/  |_______| \n\
-_______________________________________________________________________________________________\n\
-";
+#include <hal_low/system.h>
+#include <presentation/menu.h>
 
 int main(void)
 {
     uart_init(true);
-    input_init(&input_buf);
+    input_init(&g_input_buf);
 
-    print(HIDE_CURSOR);
-    uint8_t input;
-    while(true)
+    if(menu_showMainMenu())
     {
         print_clearConsole();
-        print(BOLD);
-        print(FG_GREEN);
-        print(HEADING);
-        print("\e[1E");
-        print(RESET);
-        print(BOLD);
-        println("Choose your option:\n");
-        print(RESET);
-        println("\t1. Player vs Player");
-        println("\t2. Player vs Computer");
-        println("\t3. Settings");
-        println("\t4. Credits");
-        println("\t5. Quit (not really hahahahaha)");
+        ui_printHeading();
+        println_styled("The game will be reset...", &DEFAULT_BOLD);
+        println_styled("Press any key to continue...", &ITALIC_DIM);
 
-        while(!input_getNext(&input_buf, &input))
+        static uint8_t input;
+        while(!input_getNext(&g_input_buf, &input))
         {
             __WFI();
         }
-
-        bool should_quit = false;
-        switch(input)
-        {
-            case '1':
-                game_run(PVP);
-                break;
-            case '2':
-                game_run(PVE);
-                break;
-            case '3':
-                menu_todo();
-                break;
-            case '4':
-                menu_todo();
-                break;
-            case '5':
-                should_quit = true;
-                break;
-            default:
-                continue;
-        }
-
-        if(should_quit)
-        {
-            break;
-        }
+        system_softReset();
     }
-    println("Thanks for playing!");
-    println("For now you can press \"CTR + A\" and then \"x\" to exit qemu!");
-
-    print(SHOW_CURSOR);
+    else
+    {
+        print_clearConsole();
+        ui_printHeading();
+        println_styled("Thanks for playing!", &DEFAULT_BOLD);
+        println_styled(
+            "Hint: If you are using the qemu emulator, you can exit using \"<CTR> + a,  x\".\n",
+            &ITALIC_DIM);
+        print(SHOW_CURSOR);
+        system_offMode();
+    }
 }

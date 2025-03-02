@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -27,6 +27,7 @@
 #define INITIAL_WIDTH 8
 #define INITIAL_HEIGHT 5
 #define INITIAL_SIZE Medium
+#define FIELD_HEIGHT (CELLS_PER_COL * g_cell_size.height)
 
 typedef enum
 {
@@ -35,15 +36,15 @@ typedef enum
     Large = 2,
 } Size;
 
-extern Size current_size;
-extern uint8_t cell_width;
-extern uint8_t cell_height;
 
 typedef struct
 {
+        Size size;
         uint8_t width;
         uint8_t height;
 } CellSize;
+
+extern CellSize g_cell_size;
 
 
 /**
@@ -51,21 +52,23 @@ typedef struct
  * @param [in] cell
  * Cell to redraw
  */
-void cell_redraw(Cell *cell);
+void cell_redraw(const Cell *cell);
+
+void cell_redraw_withModifier(const Cell *cell, const char *modifier);
 
 /**
  * @brief Redraws the whole field
  * @param [in] all_cells
  * 2D field of cells
  */
-void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW]);
+void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW], const char *modifier);
 
 /**
  * @brief Selects the given cell
  * @param [in] cell
  * Cell to select
  */
-void cell_select(Cell *cell);
+void cell_select(const Cell *cell);
 
 
 /**

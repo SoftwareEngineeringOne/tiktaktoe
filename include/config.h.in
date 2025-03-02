@@ -25,4 +25,8 @@
 #define CELLS_PER_ROW @CELLS_PER_ROW@
 #define CELLS_PER_COL @CELLS_PER_COL@
 
+// game speed
+#define TICKS_PER_TURN @TICKS_PER_TURN@
+#define TICK_SPEED @TICK_SPEED@
+
 #endif //CONFIG_H

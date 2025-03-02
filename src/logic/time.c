@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -19,12 +19,13 @@
 
 #include "hal_low/timer.h"
 #include "logic/game.h"
-#include "presentation/cursor.h"
-#include "presentation/print.h"
 #include <stdint.h>
 
-volatile uint32_t time_sumTicks = 0;
-volatile uint32_t time_roundTicks = 0;
+GameTimer g_timer = (GameTimer){
+    .ticks_total = 0,
+    .ticks_turn = 0,
+    .is_running = true,
+};
 
 void time_init()
 {
@@ -35,15 +36,38 @@ void time_init()
 
 void time_onInterrupt()
 {
-    time_sumTicks++;
-    time_roundTicks = (time_roundTicks + 1) % TICKS_PER_ROUND;
-    if(time_roundTicks == TICKS_PER_ROUND - 1)
+    g_timer.ticks_total++;
+    g_timer.ticks_turn = (g_timer.ticks_turn + 1) % TICKS_PER_TURN;
+    if(g_timer.ticks_turn == TICKS_PER_TURN - 1)
     {
         game_onTimeOut();
     }
 }
 
-void time_finishRound()
+void time_finishTurn(GameState *game_state)
 {
-    time_roundTicks = 0;
+    const uint32_t ticks = g_timer.ticks_turn;
+
+    if(game_state->current_player == Cross)
+    {
+        game_state->cross_total_ticks += ticks;
+    }
+    else
+    {
+        game_state->circle_total_ticks += ticks;
+    }
+
+    g_timer.ticks_turn = 0;
+}
+
+void time_pause()
+{
+    timer_stop(TIMER0);
+    g_timer.is_running = false;
+}
+
+void time_resume()
+{
+    timer_start(TIMER0);
+    g_timer.is_running = true;
 }

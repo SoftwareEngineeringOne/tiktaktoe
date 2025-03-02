@@ -9,6 +9,10 @@ set(GENERATED_WARNING "!! This file has been generated automatically, any change
 
 set(CELLS_PER_ROW 4 CACHE STRING "Number of cells in each row")
 set(CELLS_PER_COL 4 CACHE STRING "Number of cells in each column")
+
+set(TICKS_PER_TURN 20 CACHE STRING "Number of ticks per round")
+set(TICK_SPEED 12 CACHE STRING "Speed of each tick in milliseconds")
+
 option(ENABLE_UNICODE "Enable Unicode support" ON)
 
 configure_file(

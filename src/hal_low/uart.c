@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -83,17 +83,18 @@ uint8_t uart_readByte()
     // if not ready, return 0
     const uint32_t receiveIsReady = register_read(UART_BASE_ADDRESS + UART_RXDRDY);
 
-    if(receiveIsReady)
+    if(!receiveIsReady)
     {
-        // we have to CLEAR the event before reading out from RXD
-        register_write(UART_BASE_ADDRESS + UART_RXDRDY, UART_EVENT_CLEAR);
-
-        // FIFO is ready to read something out of it
-        return register_read(UART_BASE_ADDRESS + UART_RXD);
+        // FIFO is not ready to read,
+        // so return 0 instead
+        return 0;
     }
-    // FIFO is not ready to read,
-    // so return 0 instead
-    return 0;
+
+    // we have to CLEAR the event before reading out from RXD
+    register_write(UART_BASE_ADDRESS + UART_RXDRDY, UART_EVENT_CLEAR);
+
+    // FIFO is ready to read something out of it
+    return register_read(UART_BASE_ADDRESS + UART_RXD);
 }
 
 uint8_t uart_readByteBlocking()

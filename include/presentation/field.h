@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,11 +17,12 @@
 #ifndef FIELD_H
 #define FIELD_H
 
-#include <stddef.h>
 #include "config.h"
+#include "presentation/ascii_art.h"
+#include <stddef.h>
 
 #define FIELD_X_OFFSET 1
-#define FIELD_Y_OFFSET 2
+#define FIELD_Y_OFFSET 2 + HEADING_LINES
 
 
 #ifdef ENABLE_UNICODE

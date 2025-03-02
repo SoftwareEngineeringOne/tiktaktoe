@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
  * @author Thomas Vogt
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -47,9 +47,9 @@ __attribute__((used)) void entry_c(void)
 static void zeroBss(void)
 {
     // Symbol is located on start of BSS Section
-    extern uint32_t __bss_start__;
+    extern uint32_t __bss_start__;// NOLINT
     // Symbol is located on end of BSS Section
-    extern uint32_t __bss_end__;
+    extern uint32_t __bss_end__;// NOLINT
 
     /* loop over BSS Section and set to Zero */
     for(uint32_t *bssPos = &__bss_start__; bssPos < &__bss_end__; ++bssPos)
@@ -61,11 +61,11 @@ static void zeroBss(void)
 static void copyData(void)
 {
     // Symbol is located on start of Data Section
-    extern uint32_t __data_start__;
+    extern uint32_t __data_start__;// NOLINT
     // Symbol is located on end of Data Section
-    extern uint32_t __data_end__;
+    extern uint32_t __data_end__;// NOLINT
     // Symbol is located on start of LMA Data Section located in Flash
-    extern const uint32_t __data_start_rom__;
+    extern const uint32_t __data_start_rom__;// NOLINT
 
     // Source of Data (in Flash)
     uint32_t const *dataCopyPos = &__data_start_rom__;

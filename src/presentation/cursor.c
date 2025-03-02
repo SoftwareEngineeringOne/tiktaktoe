@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -27,7 +27,7 @@
  * @param buf
  * @param buf_pos
  */
-static void _writeNumToBuf(uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos);
+static void writeNumToBuf(uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos);
 
 void cursor_moveTo(const uint8_t x, const uint8_t y)
 {
@@ -42,12 +42,12 @@ void cursor_moveTo(const uint8_t x, const uint8_t y)
     escape_seq[pos++] = '[';
 
     int_to_str(y, conversion_buf, size);
-    _writeNumToBuf(y, conversion_buf, escape_seq, &pos);
+    writeNumToBuf(y, conversion_buf, escape_seq, &pos);
 
     escape_seq[pos++] = ';';
 
     int_to_str(x, conversion_buf, size);
-    _writeNumToBuf(x, conversion_buf, escape_seq, &pos);
+    writeNumToBuf(x, conversion_buf, escape_seq, &pos);
 
     escape_seq[pos++] = 'H';
     escape_seq[pos] = '\0';
@@ -55,7 +55,7 @@ void cursor_moveTo(const uint8_t x, const uint8_t y)
     print(escape_seq);
 }
 
-void _writeNumToBuf(const uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)
+void writeNumToBuf(const uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)
 {
     buf[(*buf_pos)++] = num_buf[0];
     if(num > 9)

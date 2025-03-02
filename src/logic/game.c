@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -18,7 +18,6 @@
 #include "logic/game.h"
 
 #include "config.h"
-#include "presentation/style.h"
 #include "hal_high/input_buf.h"
 #include "hal_low/nvic.h"
 #include "hal_low/random.h"
@@ -26,96 +25,74 @@
 #include "logic/bot.h"
 #include "logic/input.h"
 #include "logic/time.h"
+#include "logic/winning.h"
 #include "presentation/cell.h"
-#include "presentation/cursor.h"
 #include "presentation/field.h"
+#include "presentation/menu.h"
 #include "presentation/print.h"
+#include "presentation/style.h"
 #include "presentation/ui.h"
-#include "util/conversion.h"
 #include "util/math.h"
+#include <stdint.h>
+
 
 volatile bool force_ui_update = false;
+static GameState game_state;
+static CellState cell_state;
 
 /**
  * @brief Initializes several things at the game start
  */
-static void _init(const Mode mode);
-
-/**
- * @brief Checks at the end of the round if someone has won
- * @return The player who won
- */
-static Player _checkForWinner();
+static void init(Mode mode);
 
 /**
  * @brief Handles the presentation update in case of a automatic round
  */
-static void _handleForcedMoveUpdate();
-
-/**
- * @brief Checks if the given player has won
- * @param [in] cell
- * Newest marked cell of the player
- * @param [in] player
- * Player it is looking for
- * @return True when player won
- */
-static bool _checkIfPlayerWon(const Cell *cell, Player player);
-
-/**
- * @brief Does certain things on input
- * @param [in] input
- */
-static bool _handleInput(const uint8_t *input);
+static void handleForcedMoveUpdate();
 
 /**
  * @brief Refreshes the whole UI
  */
-static void _redrawField();
+static void redrawField();
 
-/**
- * @brief Prints the winner and statistics
- * @param [in] winner
- */
-static void _printEndScreen(Player winner);
 
-static Mode game_mode;
-static Player current_player;
-static volatile uint8_t turn_number;
-static uint8_t last_ui_update;
+static void calculateSummary();
 
-static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
-static Cell *selected_cell;
-static Cell *last_marked_cross;
-static Cell *last_marked_circle;
 
 void game_run(const Mode mode)
 {
-    _init(mode);
+    init(mode);
+
+    Cell *winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)] = {0};// NOLINT
 
     uint8_t input;
-    Player winner;
     while(true)
     {
-        while(!input_getNext(&input_buf, &input))
+        while(!input_getNext(&g_input_buf, &input))
         {
             // If true, Move was forced due to inactivity
             if(force_ui_update)
             {
-                _handleForcedMoveUpdate();
+                handleForcedMoveUpdate();
                 force_ui_update = false;
+                input = 0;
                 break;
             }
-            ui_updateTimer(REMAINING_TIME, TICKS_PER_ROUND);
+            ui_updateTimer(REMAINING_TIME, TICKS_PER_TURN);
             __WFI();
         }
 
-        const bool should_redraw_field = _handleInput(&input);
+        const bool should_redraw_field = input_handleByte(&input, &game_state, &cell_state);
 
-        winner = _checkForWinner();
+        game_state.winner = winning_checkForWinner(&cell_state, winner_cells);
 
-        cell_select(selected_cell);
-        if(winner != None || input == 'q' || turn_number >= CELLS_PER_COL * CELLS_PER_ROW / 2)
+        if(g_timer.is_running)
+        {
+            cell_select(cell_state.selected);
+        }
+
+        if(game_state.winner != None || input == 'q' || input == 'Q'
+           || game_state.fields_marked >= CELLS_PER_COL * CELLS_PER_ROW)
         {
             timer_stop(TIMER0);
             break;
@@ -123,41 +100,90 @@ void game_run(const Mode mode)
 
         if(should_redraw_field)
         {
-            _redrawField();
+            redrawField();
         }
     }
-    _printEndScreen(winner);
+
+    cell_redrawAll(cell_state.all, "\e[0;2m");
+    for(uint8_t i = 0; i < (max(CELLS_PER_COL, CELLS_PER_ROW)) && winner_cells[i] != NULL;
+        i++)// NOLINT
+    {
+        cell_redraw_withModifier(winner_cells[i], BOLD);
+    }
+
+    calculateSummary();
+    menu_showGameOver(&game_state);
 }
 
 void game_onTimeOut()
 {
     force_ui_update = true;
-    if(game_mode == PVE)
+    if(game_state.mode == PVE)
     {
-        last_marked_circle = bot_markRandomCell(cells, Circle);
-        last_marked_cross = bot_markRandomCell(cells, Cross);
-        turn_number++;
+        cell_state.last_cross = bot_markRandomCell(cell_state.all, Cross);
+        cell_state.last_circle = bot_markRandomCell(cell_state.all, Circle);
     }
-    else if(current_player == Circle)
+    else if(game_state.current_player == Cross)
     {
-        last_marked_circle = bot_markRandomCell(cells, Circle);
-        current_player = Cross;
-        turn_number++;
+        cell_state.last_cross = bot_markRandomCell(cell_state.all, Cross);
     }
-    else if(current_player == Cross)
+    else if(game_state.current_player == Circle)
     {
-        last_marked_cross = bot_markRandomCell(cells, Cross);
-        current_player = Circle;
+        cell_state.last_circle = bot_markRandomCell(cell_state.all, Circle);
     }
-    time_finishRound();
+
+    game_endTurn();
 }
 
-void _init(const Mode mode)
+void game_endTurn()
 {
-    turn_number = FIRST_TURN;
-    last_ui_update = turn_number;
-    game_mode = mode;
-    input_init(&input_buf);
+    if(game_state.mode == PVE)
+    {
+        time_finishTurn(&game_state);
+        game_state.round++;
+        game_state.fields_marked += 2;
+    }
+    else
+    {
+        time_finishTurn(&game_state);
+        if(game_state.current_player == Cross)
+        {
+            game_state.current_player = Circle;
+            cell_state.selected =
+                cell_state.last_circle != NULL ? cell_state.last_circle : cell_state.selected;
+            game_state.fields_marked++;
+        }
+        else
+        {
+            game_state.current_player = Cross;
+            cell_state.selected =
+                cell_state.last_cross != NULL ? cell_state.last_cross : cell_state.selected;
+            game_state.round++;
+            game_state.fields_marked++;
+        }
+    }
+}
+
+void init(const Mode mode)
+{
+    // When starting a second game in a session an artifact bug occurred,
+    // reelecting here fixes this.
+    if(cell_state.selected != NULL)
+    {
+        cell_state.selected->marked_by = None;
+        cell_select(cell_state.selected);
+    }
+
+    game_state = (GameState){
+        .winner = None,
+        .mode = mode,
+        .round = FIRST_ROUND,
+        .current_player = Cross,
+    };
+
+    cell_state = (CellState){};
+
+    input_init(&g_input_buf);
     rng_init();
     print(HIDE_CURSOR);
 
@@ -166,7 +192,7 @@ void _init(const Mode mode)
     {
         for(int x = 0; x < CELLS_PER_ROW; x++)
         {
-            cells[y][x] = (Cell){
+            cell_state.all[y][x] = (Cell){
                 .col = x,
                 .row = y,
                 .marked_by = None,
@@ -174,207 +200,72 @@ void _init(const Mode mode)
         }
     }
 
-    if(selected_cell != NULL)
-    {
-        cell_select(selected_cell);
-    }
-    selected_cell = &cells[0][0];
+    cell_state.selected = &cell_state.all[0][0];
 
     print_clearConsole();
     time_init();
-    _redrawField();
+    redrawField();
 }
 
-bool _handleInput(const uint8_t *input)
+
+static void calculateSummary()
 {
-    switch(*input)
+    game_state.total_ticks = g_timer.ticks_total;
+
+    if(game_state.mode == PVE)
     {
-        case '\e':
-            input_handleEscapeSequence(cells, &selected_cell);
-            break;
-        case ' ':
-            if(selected_cell->marked_by != None)
-            {
-                break;
-            }
-
-            if(game_mode == PVE)
-            {
-                selected_cell->marked_by = Circle;
-                last_marked_cross = bot_markRandomCell(cells, Cross);
-                last_marked_circle = selected_cell;
-                cell_redraw(last_marked_cross);
-                turn_number++;
-            }
-            else
-            {
-                selected_cell->marked_by = current_player;
-                if(current_player == Circle)
-                {
-                    last_marked_circle = selected_cell;
-                }
-                else
-                {
-                    last_marked_cross = selected_cell;
-                    turn_number++;
-                }
-                current_player = current_player == Circle ? Cross : Circle;
-            }
-
-            ui_updateTurn(turn_number, current_player);
-            last_ui_update = turn_number;
-            time_finishRound();
-            break;
-        case '+':
-            cell_increaseSize();
-            return true;
-        case '-':
-            cell_decreaseSize();
-            return true;
-        default:;
-    }
-    return false;
-}
-
-void _redrawField()
-{
-    print_clearConsole();
-    ui_displayTurn(turn_number, current_player);
-    ui_displayTimer(REMAINING_TIME, TICKS_PER_ROUND);
-    field_redraw();
-    cell_redrawAll(cells);
-    cell_select(selected_cell);
-}
-
-void _handleForcedMoveUpdate()
-{
-    cell_select(last_marked_cross);
-    cell_select(last_marked_circle);
-    ui_updateTurn(turn_number, current_player);
-
-    if(game_mode == PVE)
-    {
-        selected_cell = last_marked_circle;
+        game_state.average_ticks = g_timer.ticks_total / 2 / game_state.round;
     }
     else
     {
-        selected_cell = current_player == Circle ? last_marked_cross : last_marked_circle;
+        game_state.average_ticks = g_timer.ticks_total / game_state.round;
     }
+
+    // the loser made one turn less
+    uint8_t cross_rounds = game_state.round;
+    uint8_t circle_rounds = game_state.round;
+    if(game_state.winner == Cross)
+    {
+        circle_rounds--;
+    }
+    else if(game_state.winner == Circle)
+    {
+        cross_rounds--;
+    }
+
+    game_state.cross_average_ticks = game_state.cross_total_ticks / cross_rounds;
+    game_state.circle_average_ticks = game_state.circle_total_ticks / circle_rounds;
 }
 
-Player _checkForWinner()
+void redrawField()
 {
-    if(_checkIfPlayerWon(last_marked_circle, Circle))
-    {
-        return Circle;
-    }
-    if(_checkIfPlayerWon(last_marked_cross, Cross))
-    {
-        return Cross;
-    }
-    return None;
+    print_clearConsole();
+    ui_printHeading();
+    ui_displayTurn(game_state.round, game_state.current_player);
+    ui_displayTimer(REMAINING_TIME, TICKS_PER_TURN);
+    field_redraw();
+    cell_redrawAll(cell_state.all, "");
+    cell_select(cell_state.selected);
 }
 
-bool _checkIfPlayerWon(const Cell *cell, const Player player)
+void handleForcedMoveUpdate()
 {
-    if(cell == NULL)
+    cell_select(cell_state.last_cross);
+    cell_select(cell_state.last_circle);
+    ui_updateTurn(game_state.round, game_state.current_player);
+
+    if(game_state.mode == PVE)
     {
-        return false;
+        cell_state.selected = cell_state.last_circle;
     }
-
-    // VICTORY ALGORITHM
-    // Vertical / Horizontal:
-    // The algorithm starts at the border and iterates to the other side. It goes in 2 different
-    // directions and counts on 2 axes. It runs in one of the directions till a cell is reached that
-    // is not marked by our player. Diagonal: The algorithm starts at the given cell coordinates. It
-    // goes in 4 different direction and counts on 2 axes. Every step in one of the directions
-    // increments the dedicated axis until a cell is reached that is not marked by our player.
-    //
-    // The return value is true when one axis or more axes has / have reached the win condition
-    // (line to the other side).
-    //  UP      UP     UP          | axis       | direction 1 | direction 2 |
-    // LEFT           RIGHT        |------------+-------------+-------------|
-    //        \ | /                | vertical   | down        |             |
-    // LEFT  ---+---> RIGHT        | horizontal | right       |             |
-    //        / | \                | diagonal_1 | up right    | down left   |
-    // DOWN     v     DOWN         | diagonal_2 | up left     | down right  |
-    // LEFT    DOWN   RIGHT
-    const uint8_t diagonal_win_condition = min(CELLS_PER_COL, CELLS_PER_ROW);
-    const uint8_t max_cells = max(CELLS_PER_COL, CELLS_PER_ROW);
-    const uint8_t row = cell->row, col = cell->col;
-    const uint8_t max_row = CELLS_PER_COL - 1, max_col = CELLS_PER_ROW - 1;
-    uint8_t diagonal_1_sum = 1, diagonal_2_sum = 1;
-    bool vertical_match = true, horizontal_match = true;
-    bool diagonal_1_up_right = true, diagonal_1_down_left = true, diagonal_2_up_left = true,
-         diagonal_2_down_right = true;
-    for(uint8_t i = 1, n = 0; n < max_cells; i++, n++)
+    else
     {
-        // --- VERTICAL ---
-        // downwards
-        if(n <= max_row && cells[n][col].marked_by != player)
+        // inverted to select from previous turn
+        cell_state.selected =
+            game_state.current_player == Circle ? cell_state.last_circle : cell_state.last_cross;
+        if(cell_state.selected == NULL)
         {
-            vertical_match = false;
-        }
-
-        // --- HORIZONTAL ---
-        // to the right
-        if(n <= max_col && cells[row][n].marked_by != player)
-        {
-            horizontal_match = false;
-        }
-
-        // --- 1st DIAGONAL ---
-        // upwards to the right
-        if(diagonal_1_up_right && row - i >= 0 && col + i <= max_col
-           && cells[row - i][col + i].marked_by == player)
-        {
-            diagonal_1_sum++;
-        }
-        else
-        {
-            diagonal_1_up_right = false;
-        }
-        // downwards to the left
-        if(diagonal_1_down_left && row + i <= max_row && col - i >= 0
-           && cells[row + i][col - i].marked_by == player)
-        {
-            diagonal_1_sum++;
-        }
-        else
-        {
-            diagonal_1_down_left = false;
-        }
-
-        // --- 2nd DIAGONAL ---
-        // upwards to the left
-        if(diagonal_2_up_left && row - i >= 0 && col - i >= 0
-           && cells[row - i][col - i].marked_by == player)
-        {
-            diagonal_2_sum++;
-        }
-        else
-        {
-            diagonal_2_up_left = false;
-        }
-        // downwards to the right
-        if(diagonal_2_down_right && row + i <= max_row && col + i <= max_col
-           && cells[row + i][col + i].marked_by == player)
-        {
-            diagonal_2_sum++;
-        }
-        else
-        {
-            diagonal_2_down_right = false;
+            cell_state.selected = &cell_state.all[0][0];
         }
     }
-    if(vertical_match || horizontal_match || diagonal_1_sum >= diagonal_win_condition
-       || diagonal_2_sum >= diagonal_win_condition)
-    {
-        return true;
-    }
-    return false;
-}
-
-void _printEndScreen(Player winner)
-{
 }

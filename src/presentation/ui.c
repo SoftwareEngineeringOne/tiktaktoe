@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -18,88 +18,113 @@
 #include "presentation/ui.h"
 
 #include "hal_low/uart.h"
+#include "logic/time.h"
+#include "presentation/ascii_art.h"
 #include "presentation/cursor.h"
 #include "presentation/print.h"
 #include "presentation/style.h"
-#include "util/conversion.h"
 
-#include <stddef.h>
-
-
-void ui_displayTimer(uint16_t remaining_time, uint16_t total_time)
+void ui_displayTimer(const uint16_t remaining_time, const uint16_t total_time)
 {
-    cursor_moveTo(1, TIMER_ROW);
-    print("Remaining: ");
+    cursor_moveTo(2, TIMER_ROW);
+    print("");
     ui_updateTimer(remaining_time, total_time);
+
+    cursor_moveTo(2, TIMER_ROW + 2);
+    print_styled("Hint: Press \"?\" to see all controls!", &ITALIC_DIM);
 }
 
-void ui_updateTimer(uint16_t remaining_time, uint16_t total_time)
+void ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time)
 {
-    cursor_moveTo(1 + 11, TIMER_ROW);
+    cursor_moveTo(2, TIMER_ROW);
     print(ERASE_LINE_FROM_CURSOR);
     print(BOLD);
-    uint8_t percent = ((float)remaining_time / (float)total_time) * 100;
-    if(percent > 66)
+
+
+    static Style style;
+    const uint8_t percent = ((float)remaining_time / (float)total_time) * 100;// NOLINT
+    if(!g_timer.is_running)
     {
-        print(FG_GREEN);
+        style = (Style){.font_style = DIM};
+    }
+    else if(percent > 66)
+    {
+        style = (Style){.fg_color = FG_GREEN};
     }
     else if(percent > 33)
     {
-        print(FG_YELLOW);
+        style = (Style){.fg_color = FG_YELLOW};
     }
     else
     {
-        print(FG_RED);
+        style = (Style){.fg_color = FG_RED};
     }
 
     for(uint16_t i = 0; i < total_time; i++)
     {
         if(i < remaining_time)
         {
-            print("█");
+            print_styled("█", &style);
         }
         else if(i == remaining_time)
         {
-            print("▆");
+            print_styled("▆", &style);
         }
         else
         {
-            print("▁");
+            print_styled("▁", &style);
         }
     }
+
+    cursor_moveTo(2, TIMER_ROW + 1);
+    if(!g_timer.is_running)
+    {
+        println_styled("Paused...", &ITALIC_DIM);
+        return;
+    }
+    print(ERASE_LINE_FROM_CURSOR);
     uart_writeByte('\n');
-    print(RESET);
 }
-void ui_displayTurn(uint8_t current_turn, Player player)
+void ui_displayTurn(const uint8_t current_turn, const Player player)
 {
     cursor_moveTo(1, TURN_ROW);
 
-    print(BOLD);
-    print("Turn");
-    print(RESET);
-    cursor_moveTo(1 + 5 + 3, TURN_ROW);
-    print(ITALIC);
-    print(" Waiting for ");
-    print(RESET);
+    print_styled("Round", &DEFAULT_BOLD);
+    cursor_moveTo(1 + 6 + 3, TURN_ROW);
+    print_styled(" Waiting for ", &DEFAULT_ITALIC);
     ui_updateTurn(current_turn, player);
 }
 
-void ui_updateTurn(uint8_t current_turn, Player player)
+void ui_updateTurn(const uint8_t current_turn, const Player player)
 {
-    cursor_moveTo(1 + 5, TURN_ROW);
-    print(BOLD);
+    cursor_moveTo(1 + 6, TURN_ROW);
     print_int(current_turn);
 
-    cursor_moveTo(1 + 5 + 3 + 13, TURN_ROW);
+    cursor_moveTo(1 + 6 + 3 + 13, TURN_ROW);
     if(player == Circle)
     {
-        print(FG_GREEN);
-        print("Cross... ");
+        print(FG_MAGENTA);
+        print_styled("Circle... ", &BOLD_CIRCLE);
     }
     else if(player == Cross)
     {
-        print(FG_MAGENTA);
-        print("Circle...");
+        print(FG_GREEN);
+        print_styled("Cross...", &BOLD_CROSS);
     }
-    print(RESET);
+}
+
+void ui_gameOver()
+{
+    cursor_moveTo(1, TURN_ROW);
+    print(ERASE_LINE_FROM_CURSOR);
+    print_styled("Game Over!", &DEFAULT_BOLD);
+
+    cursor_moveTo(0, TIMER_ROW);
+    print(ERASE_LINE_FROM_CURSOR);
+}
+
+void ui_printHeading()
+{
+    cursor_moveTo(0, 0);
+    print_styled(HEADING, &HEADING_STYLE);
 }

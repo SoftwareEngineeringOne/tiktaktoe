@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,12 +17,17 @@
 #ifndef TIME_H
 #define TIME_H
 
+#include "logic/game.h"
 #include <stdint.h>
-#define TICKS_PER_ROUND 20
-#define TICK_SPEED 10
 
-extern volatile uint32_t time_sumTicks;
-extern volatile uint32_t time_roundTicks;
+typedef struct
+{
+        bool is_running;
+        volatile uint32_t ticks_total;
+        volatile uint32_t ticks_turn;
+} GameTimer;
+
+extern GameTimer g_timer;
 
 /**
  * @brief Initializes the timer
@@ -37,6 +42,10 @@ void time_onInterrupt();
 /**
  * @brief Resets the ticks
  */
-void time_finishRound();
+void time_finishTurn(GameState *game_state);
+
+void time_pause();
+
+void time_resume();
 
 #endif// TIME_H

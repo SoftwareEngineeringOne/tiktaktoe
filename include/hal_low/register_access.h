@@ -1,14 +1,14 @@
 /**
- * @file 
+ * @file
  *
  * @author Thomas Vogt
  * @author Sven Reis
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

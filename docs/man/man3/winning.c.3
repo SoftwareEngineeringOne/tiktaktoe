@@ -1,0 +1,78 @@
+.TH "logic/winning.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/winning.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/winning\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBbool\fP \fBcheckIfPlayerWon\fP (const \fBCell\fP *cell, \fBPlayer\fP player, \fBCellState\fP *\fBcell_state\fP, \fBCell\fP *winner_cells[\fBmax\fP(\fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP)])"
+.br
+.RI "Checks if the given player has won\&. "
+.ti -1c
+.RI "\fBPlayer\fP \fBwinning_checkForWinner\fP (\fBCellState\fP *\fBcell_state\fP, \fBCell\fP *winner_cells[\fBmax\fP(\fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP)])"
+.br
+.RI "Checks at the end of the round if someone has won\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBbool\fP checkIfPlayerWon (const \fBCell\fP * cell, \fBPlayer\fP player, \fBCellState\fP * cell_state, \fBCell\fP * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])\fR [static]\fP"
+
+.PP
+Checks if the given player has won\&. VICTORY ALGORITHM Vertical / Horizontal: The algorithm starts at the border and iterates to the other side\&. It goes in 2 different directions and counts on 2 axes\&. It runs in one of the directions till a cell is reached that is not marked by our player\&. Diagonal: The algorithm starts at the given cell coordinates\&. It goes in 4 different direction and counts on 2 axes\&. Every step in one of the directions increments the dedicated axis until a cell is reached that is not marked by our player\&.
+.PP
+The return value is true when one axis or more axes has / have reached the win condition (line to the other side)\&. UP UP UP | axis | direction 1 | direction 2 | LEFT RIGHT |------------+-------------+-------------| \\ | / | vertical | down | | LEFT ---+---> RIGHT | horizontal | right | | / | \\ | diagonal_1 | up right | down left | DOWN v DOWN | diagonal_2 | up left | down right | LEFT DOWN RIGHT
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP Last marked cell of the player 
+.br
+\fIplayer\fP Player it is looking for 
+.br
+\fIcell_state\fP 
+.br
+\fIwinner_cells\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if player won 
+.RE
+.PP
+
+.PP
+Definition at line \fB55\fP of file \fBwinning\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBCell::marked_by\fP, \fBmax\fP, \fBmin\fP, and \fBCell::row\fP\&.
+.SS "\fBPlayer\fP winning_checkForWinner (\fBCellState\fP * cell_state, \fBCell\fP * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])"
+
+.PP
+Checks at the end of the round if someone has won\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell_state\fP 
+.br
+\fIwinner_cells\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The player who won 
+.RE
+.PP
+
+.PP
+Definition at line \fB39\fP of file \fBwinning\&.c\fP\&.
+.PP
+References \fBcell_state\fP, \fBcheckIfPlayerWon()\fP, \fBCircle\fP, \fBCross\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, and \fBNone\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

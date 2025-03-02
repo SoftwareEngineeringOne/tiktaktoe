@@ -1,0 +1,186 @@
+.TH "presentation/field.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/field.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'config\&.h'\fP
+.br
+\fR#include 'presentation/ascii_art\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFIELD_X_OFFSET\fP   1"
+.br
+.ti -1c
+.RI "#define \fBFIELD_Y_OFFSET\fP   2 + \fBHEADING_LINES\fP"
+.br
+.ti -1c
+.RI "#define \fBCORNER_TOP_LEFT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBCORNER_BOT_LEFT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBCORNER_TOP_RIGHT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBCORNER_BOT_RIGHT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBT_LEFT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBT_RIGHT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBT_TOP\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBT_BOT\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBCROSS\fP   '+'"
+.br
+.ti -1c
+.RI "#define \fBSIDE\fP   '|'"
+.br
+.ti -1c
+.RI "#define \fBTOP_BOTTOM\fP   '\-'"
+.br
+.ti -1c
+.RI "#define \fBEMPTY\fP   ' '"
+.br
+.ti -1c
+.RI "#define \fBDIAGONAL_FW\fP   '/'"
+.br
+.ti -1c
+.RI "#define \fBDIAGONAL_BW\fP   '\\\\'"
+.br
+.ti -1c
+.RI "#define \fBDIAGONAL_MID\fP   'X'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfield_redraw\fP ()"
+.br
+.RI "Redraw the whole 2D field\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBfield\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CORNER_BOT_LEFT   '+'"
+
+.PP
+Definition at line \fB50\fP of file \fBfield\&.h\fP\&.
+.SS "#define CORNER_BOT_RIGHT   '+'"
+
+.PP
+Definition at line \fB52\fP of file \fBfield\&.h\fP\&.
+.SS "#define CORNER_TOP_LEFT   '+'"
+
+.PP
+Definition at line \fB49\fP of file \fBfield\&.h\fP\&.
+.SS "#define CORNER_TOP_RIGHT   '+'"
+
+.PP
+Definition at line \fB51\fP of file \fBfield\&.h\fP\&.
+.SS "#define CROSS   '+'"
+
+.PP
+Definition at line \fB59\fP of file \fBfield\&.h\fP\&.
+.SS "#define DIAGONAL_BW   '\\\\'"
+
+.PP
+Definition at line \fB66\fP of file \fBfield\&.h\fP\&.
+.SS "#define DIAGONAL_FW   '/'"
+
+.PP
+Definition at line \fB65\fP of file \fBfield\&.h\fP\&.
+.SS "#define DIAGONAL_MID   'X'"
+
+.PP
+Definition at line \fB67\fP of file \fBfield\&.h\fP\&.
+.SS "#define EMPTY   ' '"
+
+.PP
+Definition at line \fB63\fP of file \fBfield\&.h\fP\&.
+.SS "#define FIELD_X_OFFSET   1"
+
+.PP
+Definition at line \fB24\fP of file \fBfield\&.h\fP\&.
+.SS "#define FIELD_Y_OFFSET   2 + \fBHEADING_LINES\fP"
+
+.PP
+Definition at line \fB25\fP of file \fBfield\&.h\fP\&.
+.SS "#define SIDE   '|'"
+
+.PP
+Definition at line \fB61\fP of file \fBfield\&.h\fP\&.
+.SS "#define T_BOT   '+'"
+
+.PP
+Definition at line \fB57\fP of file \fBfield\&.h\fP\&.
+.SS "#define T_LEFT   '+'"
+
+.PP
+Definition at line \fB54\fP of file \fBfield\&.h\fP\&.
+.SS "#define T_RIGHT   '+'"
+
+.PP
+Definition at line \fB55\fP of file \fBfield\&.h\fP\&.
+.SS "#define T_TOP   '+'"
+
+.PP
+Definition at line \fB56\fP of file \fBfield\&.h\fP\&.
+.SS "#define TOP_BOTTOM   '\-'"
+
+.PP
+Definition at line \fB62\fP of file \fBfield\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void field_redraw ()"
+
+.PP
+Redraw the whole 2D field\&. 
+.PP
+Definition at line \fB37\fP of file \fBfield\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCORNER_BOT_LEFT\fP, \fBCORNER_BOT_RIGHT\fP, \fBCORNER_TOP_LEFT\fP, \fBCORNER_TOP_RIGHT\fP, \fBCROSS\fP, \fBcursor_moveTo()\fP, \fBEMPTY\fP, \fBFIELD_X_OFFSET\fP, \fBFIELD_Y_OFFSET\fP, \fBg_cell_size\fP, \fBCellSize::height\fP, \fBprintRow()\fP, \fBSIDE\fP, \fBT_BOT\fP, \fBT_LEFT\fP, \fBT_RIGHT\fP, \fBT_TOP\fP, \fBTOP_BOTTOM\fP, and \fBCellSize::width\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

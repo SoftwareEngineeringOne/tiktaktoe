@@ -1,0 +1,13 @@
+<map id="input_onInterrupt" name="input_onInterrupt">
+<area shape="rect" id="Node000001" title="Function to call in case of UART input interrupt." alt="" coords="5,32,139,60"/>
+<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="206,5,257,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,32,190,23,191,29,140,37"/>
+<area shape="rect" id="Node000005" href="$d7/dec/input__buf_8c.html#a94879a59b145834ad147b43c5f9ffbda" title="Put the next byte into the buffer." alt="" coords="187,57,276,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="140,54,172,59,171,64,139,59"/>
+<area shape="rect" id="Node000003" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="324,5,441,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,16,308,16,308,22,258,22"/>
+<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="489,5,601,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="442,16,473,16,473,22,442,22"/>
+<area shape="rect" id="Node000006" href="$d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="335,57,430,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="276,68,319,68,319,74,276,74"/>
+</map>

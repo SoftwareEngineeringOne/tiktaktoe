@@ -1,0 +1,152 @@
+.TH "logic/game.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/game.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCell\fP"
+.br
+.RI "One cell on the field\&. "
+.ti -1c
+.RI "struct \fBGameState\fP"
+.br
+.ti -1c
+.RI "struct \fBCellState\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBREMAINING_TIME\fP   (\fBTICKS_PER_TURN\fP \- g_timer\&.ticks_turn)"
+.br
+.ti -1c
+.RI "#define \fBFIRST_ROUND\fP   1"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMode\fP { \fBPVE\fP, \fBPVP\fP }"
+.br
+.ti -1c
+.RI "enum \fBPlayer\fP { \fBCircle\fP = 0, \fBCross\fP = 1, \fBNone\fP = 2 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgame_run\fP (const \fBMode\fP mode)"
+.br
+.RI "Start the main game\&. "
+.ti -1c
+.RI "void \fBgame_onTimeOut\fP ()"
+.br
+.RI "Automatic turn in case the round time is over\&. "
+.ti -1c
+.RI "void \fBgame_endTurn\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBgame\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FIRST_ROUND   1"
+
+.PP
+Definition at line \fB26\fP of file \fBgame\&.h\fP\&.
+.SS "#define REMAINING_TIME   (\fBTICKS_PER_TURN\fP \- g_timer\&.ticks_turn)"
+
+.PP
+Definition at line \fB25\fP of file \fBgame\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBMode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPVE \fP\fP
+.TP
+\fB\fIPVP \fP\fP
+.PP
+Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
+.SS "enum \fBPlayer\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICircle \fP\fP
+.TP
+\fB\fICross \fP\fP
+.TP
+\fB\fINone \fP\fP
+.PP
+Definition at line \fB34\fP of file \fBgame\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void game_endTurn ()"
+
+.PP
+Definition at line \fB138\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBtime_finishTurn()\fP\&.
+.SS "void game_onTimeOut ()"
+
+.PP
+Automatic turn in case the round time is over\&. 
+.PP
+Definition at line \fB118\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBforce_ui_update\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, and \fBPVE\fP\&.
+.SS "void game_run (const \fBMode\fP mode)"
+
+.PP
+Start the main game\&. 
+.PP
+Definition at line \fB62\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBNone\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

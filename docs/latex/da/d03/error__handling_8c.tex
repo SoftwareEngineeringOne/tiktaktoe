@@ -1,0 +1,102 @@
+\doxysection{util/error\+\_\+handling.c File Reference}
+\hypertarget{error__handling_8c}{}\label{error__handling_8c}\index{util/error\_handling.c@{util/error\_handling.c}}
+{\ttfamily \#include "{}util/error\+\_\+handling.\+h"{}}\newline
+{\ttfamily \#include $<$hal\+\_\+high/input\+\_\+buf.\+h$>$}\newline
+{\ttfamily \#include $<$hal\+\_\+low/system.\+h$>$}\newline
+{\ttfamily \#include $<$hal\+\_\+low/uart.\+h$>$}\newline
+{\ttfamily \#include $<$presentation/print.\+h$>$}\newline
+{\ttfamily \#include $<$presentation/style.\+h$>$}\newline
+Include dependency graph for error\+\_\+handling.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db3/error__handling_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handle\+Error}} (const char \texorpdfstring{$\ast$}{*}hint)
+\item 
+void \mbox{\hyperlink{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7}{handle\+Hard\+Fault}} ()
+\item 
+void \mbox{\hyperlink{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126}{handle\+Unexpected\+Interrupt}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}\label{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c} 
+\index{error\_handling.c@{error\_handling.c}!handleError@{handleError}}
+\index{handleError@{handleError}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{handleError()}{handleError()}}
+{\footnotesize\ttfamily static void handle\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00023}{23}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8h_source_l00040}{BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8h_source_l00031}{FG\+\_\+\+RED}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{system_8c_source_l00006}{system\+\_\+soft\+Reset()}}, and \mbox{\hyperlink{uart_8c_source_l00081}{uart\+\_\+read\+Byte()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7}\label{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7} 
+\index{error\_handling.c@{error\_handling.c}!handleHardFault@{handleHardFault}}
+\index{handleHardFault@{handleHardFault}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{handleHardFault()}{handleHardFault()}}
+{\footnotesize\ttfamily void handle\+Hard\+Fault (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00011}{11}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126}\label{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126} 
+\index{error\_handling.c@{error\_handling.c}!handleUnexpectedInterrupt@{handleUnexpectedInterrupt}}
+\index{handleUnexpectedInterrupt@{handleUnexpectedInterrupt}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{handleUnexpectedInterrupt()}{handleUnexpectedInterrupt()}}
+{\footnotesize\ttfamily void handle\+Unexpected\+Interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00017}{17}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a32df003a1a5daf382d75e8b06d31b126_cgraph}
+\end{center}
+\end{figure}

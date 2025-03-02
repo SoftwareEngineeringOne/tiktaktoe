@@ -1,0 +1,357 @@
+\doxysection{presentation/print.c File Reference}
+\hypertarget{print_8c}{}\label{print_8c}\index{presentation/print.c@{presentation/print.c}}
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/uart.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+{\ttfamily \#include "{}util/conversion.\+h"{}}\newline
+Include dependency graph for print.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dab/print_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{print_8c_aa1dd7679332aa803a3febb63dc5dd825}{print\+\_\+clear\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Clear the whole terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Prints the given string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a351314bfb5d5cfeaac8ffaea06ca6e8c}{print\+\_\+int}} (const uint32\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Prints the given integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a0955e0c88609d4769ade150a1834b22a}{println}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Prints the given string with a new line character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a5ec3fe142f65005eea1c8400632aae78}{println\+\_\+int}} (const uint32\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Prints the given integer with a new line character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a334f851ea1e7bad8e04d74dbb5e6ed44}{print\+\_\+styled}} (const char \texorpdfstring{$\ast$}{*}string, const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}style)
+\begin{DoxyCompactList}\small\item\em Prints the given string with a predefined style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}{println\+\_\+styled}} (const char \texorpdfstring{$\ast$}{*}string, const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}style)
+\begin{DoxyCompactList}\small\item\em Prints the given string with a predefined style and a new line character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8c_a2b33af16d6bf86c3623a6ed14f4115f2}{print\+Style}} (const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}style)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{print_8c_ae2dd7886efd463e815dadf10eb54777e}\label{print_8c_ae2dd7886efd463e815dadf10eb54777e} 
+\index{print.c@{print.c}!print@{print}}
+\index{print@{print}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Prints the given string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em string} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00030}{30}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{uart_8c_source_l00073}{uart\+\_\+write\+Byte()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_ae2dd7886efd463e815dadf10eb54777e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_ae2dd7886efd463e815dadf10eb54777e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_aa1dd7679332aa803a3febb63dc5dd825}\label{print_8c_aa1dd7679332aa803a3febb63dc5dd825} 
+\index{print.c@{print.c}!print\_clearConsole@{print\_clearConsole}}
+\index{print\_clearConsole@{print\_clearConsole}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{print\_clearConsole()}{print\_clearConsole()}}
+{\footnotesize\ttfamily void print\+\_\+clear\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the whole terminal. 
+
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00025}{25}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8h_source_l00027}{CLEAR\+\_\+\+SCREEN}}, and \mbox{\hyperlink{print_8c_source_l00030}{print()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_aa1dd7679332aa803a3febb63dc5dd825_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_aa1dd7679332aa803a3febb63dc5dd825_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a351314bfb5d5cfeaac8ffaea06ca6e8c}\label{print_8c_a351314bfb5d5cfeaac8ffaea06ca6e8c} 
+\index{print.c@{print.c}!print\_int@{print\_int}}
+\index{print\_int@{print\_int}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{print\_int()}{print\_int()}}
+{\footnotesize\ttfamily void print\+\_\+int (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+
+
+Prints the given integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00039}{39}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{conversion_8c_source_l00023}{int\+\_\+to\+\_\+str()}}, and \mbox{\hyperlink{print_8c_source_l00030}{print()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a351314bfb5d5cfeaac8ffaea06ca6e8c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a351314bfb5d5cfeaac8ffaea06ca6e8c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a334f851ea1e7bad8e04d74dbb5e6ed44}\label{print_8c_a334f851ea1e7bad8e04d74dbb5e6ed44} 
+\index{print.c@{print.c}!print\_styled@{print\_styled}}
+\index{print\_styled@{print\_styled}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{print\_styled()}{print\_styled()}}
+{\footnotesize\ttfamily void print\+\_\+styled (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string,  }\item[{const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}}]{style }\end{DoxyParamCaption})}
+
+
+
+Prints the given string with a predefined style. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em string} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em style} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00058}{58}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00071}{print\+Style()}}, and \mbox{\hyperlink{style_8h_source_l00029}{RESET}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a334f851ea1e7bad8e04d74dbb5e6ed44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a334f851ea1e7bad8e04d74dbb5e6ed44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a0955e0c88609d4769ade150a1834b22a}\label{print_8c_a0955e0c88609d4769ade150a1834b22a} 
+\index{print.c@{print.c}!println@{println}}
+\index{println@{println}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{println()}{println()}}
+{\footnotesize\ttfamily void println (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Prints the given string with a new line character. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em string} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00046}{46}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{print_8h_source_l00023}{LINE\+\_\+\+SEPERATOR}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, and \mbox{\hyperlink{uart_8c_source_l00073}{uart\+\_\+write\+Byte()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a0955e0c88609d4769ade150a1834b22a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a0955e0c88609d4769ade150a1834b22a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a5ec3fe142f65005eea1c8400632aae78}\label{print_8c_a5ec3fe142f65005eea1c8400632aae78} 
+\index{print.c@{print.c}!println\_int@{println\_int}}
+\index{println\_int@{println\_int}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{println\_int()}{println\_int()}}
+{\footnotesize\ttfamily void println\+\_\+int (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+
+
+Prints the given integer with a new line character. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00052}{52}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{print_8h_source_l00023}{LINE\+\_\+\+SEPERATOR}}, \mbox{\hyperlink{print_8c_source_l00039}{print\+\_\+int()}}, and \mbox{\hyperlink{uart_8c_source_l00073}{uart\+\_\+write\+Byte()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a5ec3fe142f65005eea1c8400632aae78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a5ec3fe142f65005eea1c8400632aae78_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}\label{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823} 
+\index{print.c@{print.c}!println\_styled@{println\_styled}}
+\index{println\_styled@{println\_styled}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{println\_styled()}{println\_styled()}}
+{\footnotesize\ttfamily void println\+\_\+styled (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string,  }\item[{const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}}]{style }\end{DoxyParamCaption})}
+
+
+
+Prints the given string with a predefined style and a new line character. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em string} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em style} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00065}{65}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{print_8h_source_l00023}{LINE\+\_\+\+SEPERATOR}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, and \mbox{\hyperlink{uart_8c_source_l00073}{uart\+\_\+write\+Byte()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a02a20f9ab0165b4cbac365bb9e9aa823_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a02a20f9ab0165b4cbac365bb9e9aa823_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print_8c_a2b33af16d6bf86c3623a6ed14f4115f2}\label{print_8c_a2b33af16d6bf86c3623a6ed14f4115f2} 
+\index{print.c@{print.c}!printStyle@{printStyle}}
+\index{printStyle@{printStyle}!print.c@{print.c}}
+\doxysubsubsection{\texorpdfstring{printStyle()}{printStyle()}}
+{\footnotesize\ttfamily void print\+Style (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structStyle}{Style}} \texorpdfstring{$\ast$}{*}}]{style }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{print_8c_source_l00071}{71}} of file \mbox{\hyperlink{print_8c_source}{print.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8h_source_l00023}{Style\+::bg\+\_\+color}}, \mbox{\hyperlink{style_8h_source_l00022}{Style\+::fg\+\_\+color}}, \mbox{\hyperlink{style_8h_source_l00024}{Style\+::font\+\_\+style}}, and \mbox{\hyperlink{print_8c_source_l00030}{print()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a2b33af16d6bf86c3623a6ed14f4115f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db1/print_8c_a2b33af16d6bf86c3623a6ed14f4115f2_icgraph}
+\end{center}
+\end{figure}

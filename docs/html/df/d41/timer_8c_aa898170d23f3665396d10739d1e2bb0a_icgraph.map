@@ -1,0 +1,25 @@
+<map id="timer_start" name="timer_start">
+<area shape="rect" id="Node000001" title="Starts the given timer." alt="" coords="1000,57,1094,85"/>
+<area shape="rect" id="Node000002" href="$df/d73/time_8c.html#a04352ea8ee003992baa1d4e993b50dae" title="Initializes the timer." alt="" coords="859,5,938,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="990,54,938,36,940,31,992,49"/>
+<area shape="rect" id="Node000007" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="845,57,952,85"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="985,74,953,74,953,68,985,68"/>
+<area shape="rect" id="Node000011" href="$df/d41/timer_8c.html#acd2972fffc78d5b8bfeda05701882565" title="Default Initialisation of Timer." alt="" coords="856,109,941,137"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="992,93,941,111,939,106,990,88"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="504,5,546,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="843,22,547,22,547,16,843,16"/>
+<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,32,409,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,28,410,41,409,36,488,23"/>
+<area shape="rect" id="Node000005" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="108,32,275,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="308,48,275,48,275,43,308,43"/>
+<area shape="rect" id="Node000006" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,32,60,60"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="92,48,60,48,60,43,92,43"/>
+<area shape="rect" id="Node000008" href="$d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="641,57,797,85"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="830,74,797,74,797,68,830,68"/>
+<area shape="rect" id="Node000010" href="$d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="665,109,772,137"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="834,92,770,111,769,106,833,87"/>
+<area shape="rect" id="Node000009" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="457,57,593,85"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="625,74,593,74,593,68,625,68"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="442,61,409,55,410,50,443,55"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="649,107,579,88,580,83,651,102"/>
+</map>

@@ -1,0 +1,91 @@
+\doxysection{logic/bot.h File Reference}
+\hypertarget{bot_8h}{}\label{bot_8h}\index{logic/bot.h@{logic/bot.h}}
+{\ttfamily \#include "{}logic/game.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/field.\+h"{}}\newline
+Include dependency graph for bot.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/daa/bot_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d1/d32/bot_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bot_8h_a54e3d0f1283055e089a09213936f5c43}{bot\+\_\+mark\+Random\+Cell}} (\mbox{\hyperlink{structCell}{Cell}} cells\mbox{[}\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\+\_\+\+PER\+\_\+\+COL}}\mbox{]}\mbox{[}\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\+\_\+\+PER\+\_\+\+ROW}}\mbox{]}, \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} marked\+\_\+by)
+\begin{DoxyCompactList}\small\item\em Mark some random cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{bot_8h_source}{bot.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bot_8h_a54e3d0f1283055e089a09213936f5c43}\label{bot_8h_a54e3d0f1283055e089a09213936f5c43} 
+\index{bot.h@{bot.h}!bot\_markRandomCell@{bot\_markRandomCell}}
+\index{bot\_markRandomCell@{bot\_markRandomCell}!bot.h@{bot.h}}
+\doxysubsubsection{\texorpdfstring{bot\_markRandomCell()}{bot\_markRandomCell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*} bot\+\_\+mark\+Random\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCell}{Cell}}}]{cells\mbox{[}\+CELLS\+\_\+\+PER\+\_\+\+COL\mbox{]}\mbox{[}\+CELLS\+\_\+\+PER\+\_\+\+ROW\mbox{]},  }\item[{\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}}]{marked\+\_\+by }\end{DoxyParamCaption})}
+
+
+
+Mark some random cell. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em cells} & 2D field of cells \\
+\hline
+\mbox{\texttt{ in}}  & {\em marked\+\_\+by} & Player to be marked by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Marked cell 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{bot_8c_source_l00023}{23}} of file \mbox{\hyperlink{bot_8c_source}{bot.\+c}}.
+
+
+
+References \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00025}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, and \mbox{\hyperlink{random_8c_source_l00064}{rng\+\_\+get\+Random\+Value\+\_\+waiting()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_icgraph}
+\end{center}
+\end{figure}

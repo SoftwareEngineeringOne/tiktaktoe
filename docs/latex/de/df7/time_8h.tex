@@ -1,0 +1,232 @@
+\doxysection{logic/time.h File Reference}
+\hypertarget{time_8h}{}\label{time_8h}\index{logic/time.h@{logic/time.h}}
+{\ttfamily \#include "{}logic/game.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for time.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d13/time_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dd9/time_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structGameTimer}{Game\+Timer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{time_8h_a04352ea8ee003992baa1d4e993b50dae}{time\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa}{time\+\_\+on\+Interrupt}} ()
+\begin{DoxyCompactList}\small\item\em Increments the ticks and can finish the round. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{time_8h_a90e96cefd66715b9740be8f0dbab0042}{time\+\_\+finish\+Turn}} (\mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}})
+\begin{DoxyCompactList}\small\item\em Resets the ticks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{time_8h_a5ad5fe91a14f332c6acc40870c980fae}{time\+\_\+pause}} ()
+\item 
+void \mbox{\hyperlink{time_8h_aa626af1fe4486ff2f05529894b807e5a}{time\+\_\+resume}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGameTimer}{Game\+Timer}} \mbox{\hyperlink{time_8h_a5c31952f8992f7d8f3d22c625761e217}{g\+\_\+timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{time_8h_a90e96cefd66715b9740be8f0dbab0042}\label{time_8h_a90e96cefd66715b9740be8f0dbab0042} 
+\index{time.h@{time.h}!time\_finishTurn@{time\_finishTurn}}
+\index{time\_finishTurn@{time\_finishTurn}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{time\_finishTurn()}{time\_finishTurn()}}
+{\footnotesize\ttfamily void time\+\_\+finish\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Resets the ticks. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00047}{47}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00068}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00059}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, and \mbox{\hyperlink{time_8h_source_l00027}{Game\+Timer\+::ticks\+\_\+turn}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_a90e96cefd66715b9740be8f0dbab0042_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{time_8h_a04352ea8ee003992baa1d4e993b50dae}\label{time_8h_a04352ea8ee003992baa1d4e993b50dae} 
+\index{time.h@{time.h}!time\_init@{time\_init}}
+\index{time\_init@{time\_init}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{time\_init()}{time\_init()}}
+{\footnotesize\ttfamily void time\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the timer. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00030}{30}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+
+
+
+References \mbox{\hyperlink{timer_8h_source_l00103}{CC0}}, \mbox{\hyperlink{config_8h_source_l00030}{TICK\+\_\+\+SPEED}}, \mbox{\hyperlink{timer_8h_source_l00082}{TIMER0}}, \mbox{\hyperlink{timer_8h_source_l00098}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32}}, \mbox{\hyperlink{timer_8c_source_l00075}{timer\+\_\+capture\+Compare\+Set()}}, \mbox{\hyperlink{timer_8c_source_l00052}{timer\+\_\+init\+\_\+detailed()}}, \mbox{\hyperlink{timer_8h_source_l00089}{TIMER\+\_\+\+MODE\+\_\+\+TIMER}}, and \mbox{\hyperlink{timer_8c_source_l00100}{timer\+\_\+start()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_a04352ea8ee003992baa1d4e993b50dae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_a04352ea8ee003992baa1d4e993b50dae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa}\label{time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa} 
+\index{time.h@{time.h}!time\_onInterrupt@{time\_onInterrupt}}
+\index{time\_onInterrupt@{time\_onInterrupt}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{time\_onInterrupt()}{time\_onInterrupt()}}
+{\footnotesize\ttfamily void time\+\_\+on\+Interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments the ticks and can finish the round. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00037}{37}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+
+
+
+References \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00118}{game\+\_\+on\+Time\+Out()}}, \mbox{\hyperlink{config_8h_source_l00029}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{time_8h_source_l00026}{Game\+Timer\+::ticks\+\_\+total}}, and \mbox{\hyperlink{time_8h_source_l00027}{Game\+Timer\+::ticks\+\_\+turn}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{de/df7/time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{time_8h_a5ad5fe91a14f332c6acc40870c980fae}\label{time_8h_a5ad5fe91a14f332c6acc40870c980fae} 
+\index{time.h@{time.h}!time\_pause@{time\_pause}}
+\index{time\_pause@{time\_pause}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{time\_pause()}{time\_pause()}}
+{\footnotesize\ttfamily void time\+\_\+pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00063}{63}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+
+
+
+References \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{time_8h_source_l00025}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{timer_8h_source_l00082}{TIMER0}}, and \mbox{\hyperlink{timer_8c_source_l00107}{timer\+\_\+stop()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{time_8h_aa626af1fe4486ff2f05529894b807e5a}\label{time_8h_aa626af1fe4486ff2f05529894b807e5a} 
+\index{time.h@{time.h}!time\_resume@{time\_resume}}
+\index{time\_resume@{time\_resume}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{time\_resume()}{time\_resume()}}
+{\footnotesize\ttfamily void time\+\_\+resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00069}{69}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+
+
+
+References \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{time_8h_source_l00025}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{timer_8h_source_l00082}{TIMER0}}, and \mbox{\hyperlink{timer_8c_source_l00100}{timer\+\_\+start()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{time_8h_a5c31952f8992f7d8f3d22c625761e217}\label{time_8h_a5c31952f8992f7d8f3d22c625761e217} 
+\index{time.h@{time.h}!g\_timer@{g\_timer}}
+\index{g\_timer@{g\_timer}!time.h@{time.h}}
+\doxysubsubsection{\texorpdfstring{g\_timer}{g\_timer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGameTimer}{Game\+Timer}} g\+\_\+timer\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{time_8c_source_l00024}{24}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
+

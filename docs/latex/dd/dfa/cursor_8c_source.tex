@@ -1,0 +1,52 @@
+\doxysection{cursor.\+c}
+\hypertarget{cursor_8c_source}{}\label{cursor_8c_source}\index{presentation/cursor.c@{presentation/cursor.c}}
+\mbox{\hyperlink{cursor_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{presentation/cursor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{print_8h}{presentation/print.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{conversion_8h}{util/conversion.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00030}00030\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8c_ab2e17d032152e3e552ba1471a41b6c18}{writeNumToBuf}}(uint8\_t\ num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *num\_buf,\ \textcolor{keywordtype}{char}\ *buf,\ uint8\_t\ *buf\_pos);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00032}\mbox{\hyperlink{cursor_8c_a599725458bf000c7fc08432a74602fac}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8c_a599725458bf000c7fc08432a74602fac}{cursor\_moveTo}}(\textcolor{keyword}{const}\ uint8\_t\ x,\ \textcolor{keyword}{const}\ uint8\_t\ y)}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ uint8\_t\ has\ max\ 3\ digits\ +\ null\ terminator}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ conversion\_buf[4];}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ size\ =\ \textcolor{keyword}{sizeof}(conversion\_buf);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ \(\backslash\)e\ (1)\ +\ [\ (1)\ +\ 000\ (3)\ +\ ;\ (1)\ +\ 000\ (3)\ +\ H\ (1)\ =>\ 10}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ escape\_seq[10];}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00040}00040\ \ \ \ \ uint8\_t\ pos\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00041}00041\ \ \ \ \ escape\_seq[pos++]\ =\ \textcolor{charliteral}{'\(\backslash\)e'};}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00042}00042\ \ \ \ \ escape\_seq[pos++]\ =\ \textcolor{charliteral}{'['};}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{conversion_8c_a10b90e654db54d6aad3fb7c1ba84b5db}{int\_to\_str}}(y,\ conversion\_buf,\ size);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{cursor_8c_ab2e17d032152e3e552ba1471a41b6c18}{writeNumToBuf}}(y,\ conversion\_buf,\ escape\_seq,\ \&pos);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00047}00047\ \ \ \ \ escape\_seq[pos++]\ =\ \textcolor{charliteral}{';'};}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{conversion_8c_a10b90e654db54d6aad3fb7c1ba84b5db}{int\_to\_str}}(x,\ conversion\_buf,\ size);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{cursor_8c_ab2e17d032152e3e552ba1471a41b6c18}{writeNumToBuf}}(x,\ conversion\_buf,\ escape\_seq,\ \&pos);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00052}00052\ \ \ \ \ escape\_seq[pos++]\ =\ \textcolor{charliteral}{'H'};}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00053}00053\ \ \ \ \ escape\_seq[pos]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(escape\_seq);}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00058}\mbox{\hyperlink{cursor_8c_ab2e17d032152e3e552ba1471a41b6c18}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8c_ab2e17d032152e3e552ba1471a41b6c18}{writeNumToBuf}}(\textcolor{keyword}{const}\ uint8\_t\ num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *num\_buf,\ \textcolor{keywordtype}{char}\ *buf,\ uint8\_t\ *buf\_pos)}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00059}00059\ \{}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00060}00060\ \ \ \ \ buf[(*buf\_pos)++]\ =\ num\_buf[0];}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}(num\ >\ 9)}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ buf[(*buf\_pos)++]\ =\ num\_buf[1];}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}(num\ >\ 99)}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ buf[(*buf\_pos)++]\ =\ num\_buf[2];}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00069}00069\ \}}
+
+\end{DoxyCode}

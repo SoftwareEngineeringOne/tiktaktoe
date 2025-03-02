@@ -1,0 +1,33 @@
+<map id="handlePauseResume" name="handlePauseResume">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,201,162,229"/>
+<area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the whole field." alt="" coords="210,125,323,153"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,198,216,157,218,162,120,203"/>
+<area shape="rect" id="Node000011" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="218,201,315,229"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="162,212,202,212,202,218,162,218"/>
+<area shape="rect" id="Node000013" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="213,253,320,281"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="136,227,201,246,200,251,134,232"/>
+<area shape="rect" id="Node000003" href="$db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370" title="Redraw one cell." alt="" coords="372,113,463,141"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,132,356,129,357,135,324,137"/>
+<area shape="rect" id="Node000004" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move cursor to the given coordinates." alt="" coords="512,51,632,78"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="453,110,521,82,523,87,455,115"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="715,121,766,149"/>
+<area shape="poly" id="edge9_Node000003_Node000006" title=" " alt="" coords="464,126,699,132,699,137,464,131"/>
+<area shape="rect" id="Node000010" href="$d6/db1/print_8c.html#a2b33af16d6bf86c3623a6ed14f4115f2" title=" " alt="" coords="530,152,614,180"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="464,136,516,149,514,154,463,141"/>
+<area shape="rect" id="Node000005" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title=" " alt="" coords="699,5,782,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="626,47,684,32,685,37,627,53"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="608,77,702,116,699,121,606,81"/>
+<area shape="rect" id="Node000009" href="$dd/dfa/cursor_8c.html#ab2e17d032152e3e552ba1471a41b6c18" title="TODO: ?????" alt="" coords="680,57,801,85"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="632,64,664,65,664,71,632,70"/>
+<area shape="rect" id="Node000007" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="849,127,966,154"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="766,133,833,135,833,141,766,139"/>
+<area shape="rect" id="Node000008" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="1014,203,1126,230"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="941,153,1026,193,1023,198,938,157"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="614,156,699,140,700,145,615,161"/>
+<area shape="rect" id="Node000012" href="$df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="862,203,953,230"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="315,213,846,214,846,219,315,218"/>
+<area shape="poly" id="edge14_Node000012_Node000008" title=" " alt="" coords="954,214,999,214,999,219,954,219"/>
+<area shape="rect" id="Node000014" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="371,253,464,281"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="320,264,355,264,355,270,320,270"/>
+<area shape="poly" id="edge17_Node000014_Node000008" title=" " alt="" coords="465,265,682,263,823,255,966,239,1003,232,1004,237,967,244,824,260,682,268,465,271"/>
+</map>

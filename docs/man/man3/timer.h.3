@@ -1,0 +1,630 @@
+.TH "hal_low/timer.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/timer.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'def\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIMER0_BASE_ADDRESS\fP   0x40008000"
+.br
+.ti -1c
+.RI "#define \fBTIMER1_BASE_ADDRESS\fP   0x40009000"
+.br
+.ti -1c
+.RI "#define \fBTIMER2_BASE_ADDRESS\fP   0x4000A000"
+.br
+.ti -1c
+.RI "#define \fBTIMER_START\fP   0x000"
+.br
+.ti -1c
+.RI "#define \fBTIMER_STOP\fP   0x004"
+.br
+.ti -1c
+.RI "#define \fBTIMER_COUNT\fP   0x008"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CLEAR\fP   0x00C"
+.br
+.ti -1c
+.RI "#define \fBTIMER_SHUTDOWN\fP   0x010"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CAPTURE_0\fP   0x040"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CAPTURE_1\fP   0x044"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CAPTURE_2\fP   0x048"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CAPTURE_3\fP   0x04C"
+.br
+.ti -1c
+.RI "#define \fBTIMER_COMPARE_0\fP   0x140"
+.br
+.ti -1c
+.RI "#define \fBTIMER_COMPARE_1\fP   0x144"
+.br
+.ti -1c
+.RI "#define \fBTIMER_COMPARE_2\fP   0x148"
+.br
+.ti -1c
+.RI "#define \fBTIMER_COMPARE_3\fP   0x14C"
+.br
+.ti -1c
+.RI "#define \fBTIMER_SHORTS\fP   0x200"
+.br
+.ti -1c
+.RI "#define \fBTIMER_INTENSET\fP   0x304"
+.br
+.ti -1c
+.RI "#define \fBTIMER_INTENCLR\fP   0x308"
+.br
+.ti -1c
+.RI "#define \fBTIMER_MODE\fP   0x504"
+.br
+.ti -1c
+.RI "#define \fBTIMER_BITMODE\fP   0x508"
+.br
+.ti -1c
+.RI "#define \fBTIMER_PRESCALER\fP   0x510"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CC_0\fP   0x540"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CC_1\fP   0x544"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CC_2\fP   0x548"
+.br
+.ti -1c
+.RI "#define \fBTIMER_CC_3\fP   0x54C"
+.br
+.ti -1c
+.RI "#define \fBTIMER_TASK_START\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTIMER_EVENT_TRIGGER\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTIMER_EVENT_CLEAR\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE0_CLEAR_ENABLE\fP   (1 << 0)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE0_CLEAR_DISABLE\fP   (0 << 0)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE1_CLEAR_ENABLE\fP   (1 << 1)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE1_CLEAR_DISABLE\fP   (0 << 1)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE0_STOP_ENABLE\fP   (1 << 8)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE0_STOP_DISABLE\fP   (0 << 8)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE1_STOP_ENABLE\fP   (1 << 9)"
+.br
+.ti -1c
+.RI "#define \fBSHORTS_COMPARE1_STOP_DISABLE\fP   (0 << 9)"
+.br
+.ti -1c
+.RI "#define \fBINT_COMPARE0\fP   (1 << 16)"
+.br
+.ti -1c
+.RI "#define \fBINT_COMPARE1\fP   (1 << 17)"
+.br
+.ti -1c
+.RI "#define \fBINT_COMPARE2\fP   (1 << 18)"
+.br
+.ti -1c
+.RI "#define \fBINT_COMPARE3\fP   (1 << 19)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBTimer\fP \fBTimer\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBTimerMode\fP \fBTimerMode\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBTimerBitMode\fP \fBTimerBitMode\fP"
+.br
+.ti -1c
+.RI "typedef enum \fBTimerCaptureCompare\fP \fBTimerCaptureCompare\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTimer\fP { \fBTIMER0\fP, \fBTIMER1\fP, \fBTIMER2\fP }"
+.br
+.ti -1c
+.RI "enum \fBTimerMode\fP { \fBTIMER_MODE_TIMER\fP = 0, \fBTIMER_MODE_COUNTER\fP = 1 }"
+.br
+.ti -1c
+.RI "enum \fBTimerBitMode\fP { \fBTIMER_BIT_MODE_16\fP = 0, \fBTIMER_BIT_MODE_8\fP = 1, \fBTIMER_BIT_MODE_24\fP = 2, \fBTIMER_BIT_MODE_32\fP = 3 }"
+.br
+.ti -1c
+.RI "enum \fBTimerCaptureCompare\fP { \fBCC0\fP, \fBCC1\fP, \fBCC2\fP, \fBCC3\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtimer_init\fP (\fBTimer\fP timer)"
+.br
+.RI "Default Initialisation of Timer\&. "
+.ti -1c
+.RI "void \fBtimer_init_detailed\fP (\fBTimer\fP timer, uint8_t prescaler, \fBTimerMode\fP mode, \fBTimerBitMode\fP bitMode)"
+.br
+.RI "Initialises the Timer\&. "
+.ti -1c
+.RI "void \fBtimer_captureCompareSet\fP (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare, uint32_t value, \fBbool\fP shortcutClear)"
+.br
+.RI "Set the Capture/ Compare Register of the Timer\&. "
+.ti -1c
+.RI "uint32_t \fBtimer_captureCompareGet\fP (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare)"
+.br
+.RI "Gets the Capture Compare Register of Timer\&. "
+.ti -1c
+.RI "void \fBtimer_start\fP (\fBTimer\fP timer)"
+.br
+.RI "Starts the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_stop\fP (\fBTimer\fP timer)"
+.br
+.RI "Stops the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_count\fP (\fBTimer\fP timer)"
+.br
+.RI "Activate counting on the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_clear\fP (\fBTimer\fP timer)"
+.br
+.RI "Clear the time of the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_capture\fP (\fBTimer\fP timer, \fBTimerCaptureCompare\fP capture)"
+.br
+.RI "Capture the time of the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_clearCompareEvent\fP (\fBTimer\fP timer)"
+.br
+.RI "Clears the Compare Event for CC[0]\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBtimer\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define INT_COMPARE0   (1 << 16)"
+
+.PP
+Definition at line \fB75\fP of file \fBtimer\&.h\fP\&.
+.SS "#define INT_COMPARE1   (1 << 17)"
+
+.PP
+Definition at line \fB76\fP of file \fBtimer\&.h\fP\&.
+.SS "#define INT_COMPARE2   (1 << 18)"
+
+.PP
+Definition at line \fB77\fP of file \fBtimer\&.h\fP\&.
+.SS "#define INT_COMPARE3   (1 << 19)"
+
+.PP
+Definition at line \fB78\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE0_CLEAR_DISABLE   (0 << 0)"
+
+.PP
+Definition at line \fB66\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE0_CLEAR_ENABLE   (1 << 0)"
+
+.PP
+Definition at line \fB65\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE0_STOP_DISABLE   (0 << 8)"
+
+.PP
+Definition at line \fB71\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE0_STOP_ENABLE   (1 << 8)"
+
+.PP
+Definition at line \fB70\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE1_CLEAR_DISABLE   (0 << 1)"
+
+.PP
+Definition at line \fB68\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE1_CLEAR_ENABLE   (1 << 1)"
+
+.PP
+Definition at line \fB67\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE1_STOP_DISABLE   (0 << 9)"
+
+.PP
+Definition at line \fB73\fP of file \fBtimer\&.h\fP\&.
+.SS "#define SHORTS_COMPARE1_STOP_ENABLE   (1 << 9)"
+
+.PP
+Definition at line \fB72\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER0_BASE_ADDRESS   0x40008000"
+
+.PP
+Definition at line \fB25\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER1_BASE_ADDRESS   0x40009000"
+
+.PP
+Definition at line \fB26\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER2_BASE_ADDRESS   0x4000A000"
+
+.PP
+Definition at line \fB27\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_BITMODE   0x508"
+
+.PP
+Definition at line \fB53\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CAPTURE_0   0x040"
+
+.PP
+Definition at line \fB37\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CAPTURE_1   0x044"
+
+.PP
+Definition at line \fB38\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CAPTURE_2   0x048"
+
+.PP
+Definition at line \fB39\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CAPTURE_3   0x04C"
+
+.PP
+Definition at line \fB40\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CC_0   0x540"
+
+.PP
+Definition at line \fB55\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CC_1   0x544"
+
+.PP
+Definition at line \fB56\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CC_2   0x548"
+
+.PP
+Definition at line \fB57\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CC_3   0x54C"
+
+.PP
+Definition at line \fB58\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_CLEAR   0x00C"
+
+.PP
+Definition at line \fB34\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_COMPARE_0   0x140"
+
+.PP
+Definition at line \fB43\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_COMPARE_1   0x144"
+
+.PP
+Definition at line \fB44\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_COMPARE_2   0x148"
+
+.PP
+Definition at line \fB45\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_COMPARE_3   0x14C"
+
+.PP
+Definition at line \fB46\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_COUNT   0x008"
+
+.PP
+Definition at line \fB33\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_EVENT_CLEAR   0"
+
+.PP
+Definition at line \fB63\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_EVENT_TRIGGER   1"
+
+.PP
+Definition at line \fB62\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_INTENCLR   0x308"
+
+.PP
+Definition at line \fB51\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_INTENSET   0x304"
+
+.PP
+Definition at line \fB50\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_MODE   0x504"
+
+.PP
+Definition at line \fB52\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_PRESCALER   0x510"
+
+.PP
+Definition at line \fB54\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_SHORTS   0x200"
+
+.PP
+Definition at line \fB49\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_SHUTDOWN   0x010"
+
+.PP
+Definition at line \fB35\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_START   0x000"
+
+.PP
+Definition at line \fB31\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_STOP   0x004"
+
+.PP
+Definition at line \fB32\fP of file \fBtimer\&.h\fP\&.
+.SS "#define TIMER_TASK_START   1"
+
+.PP
+Definition at line \fB61\fP of file \fBtimer\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBTimer\fP \fBTimer\fP"
+
+.SS "typedef enum \fBTimerBitMode\fP \fBTimerBitMode\fP"
+
+.SS "typedef enum \fBTimerCaptureCompare\fP \fBTimerCaptureCompare\fP"
+
+.SS "typedef enum \fBTimerMode\fP \fBTimerMode\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBTimer\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITIMER0 \fP\fP
+.TP
+\fB\fITIMER1 \fP\fP
+.TP
+\fB\fITIMER2 \fP\fP
+.PP
+Definition at line \fB80\fP of file \fBtimer\&.h\fP\&.
+.SS "enum \fBTimerBitMode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITIMER_BIT_MODE_16 \fP\fP
+.TP
+\fB\fITIMER_BIT_MODE_8 \fP\fP
+.TP
+\fB\fITIMER_BIT_MODE_24 \fP\fP
+.TP
+\fB\fITIMER_BIT_MODE_32 \fP\fP
+.PP
+Definition at line \fB93\fP of file \fBtimer\&.h\fP\&.
+.SS "enum \fBTimerCaptureCompare\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICC0 \fP\fP
+.TP
+\fB\fICC1 \fP\fP
+.TP
+\fB\fICC2 \fP\fP
+.TP
+\fB\fICC3 \fP\fP
+.PP
+Definition at line \fB101\fP of file \fBtimer\&.h\fP\&.
+.SS "enum \fBTimerMode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITIMER_MODE_TIMER \fP\fP
+.TP
+\fB\fITIMER_MODE_COUNTER \fP\fP
+.PP
+Definition at line \fB87\fP of file \fBtimer\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void timer_capture (\fBTimer\fP timer, \fBTimerCaptureCompare\fP capture)"
+
+.PP
+Capture the time of the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.br
+\fIcapture\fP Number of the Capture Compare 
+.RE
+.PP
+
+.PP
+Definition at line \fB128\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_TASK_START\fP, \fBTimerBase\fP, and \fBTimerCaptureTaskOffset\fP\&.
+.SS "uint32_t timer_captureCompareGet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare)"
+
+.PP
+Gets the Capture Compare Register of Timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP 
+.br
+\fIcaptureCompare\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line \fB92\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_read()\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
+.SS "void timer_captureCompareSet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare, uint32_t value, \fBbool\fP shortcutClear)"
+
+.PP
+Set the Capture/ Compare Register of the Timer\&. It also enables the shortcut between CC[0] and CLEAR, so that the timer is cleared, when the compared value is reached\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Timer 
+.br
+\fIcaptureCompare\fP Capture Compare Register 
+.br
+\fIvalue\fP New Value 
+.br
+\fIshortcutClear\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB75\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_read()\fP, \fBregister_write()\fP, \fBTIMER_SHORTS\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
+.SS "void timer_clear (\fBTimer\fP timer)"
+
+.PP
+Clear the time of the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB121\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_CLEAR\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_clearCompareEvent (\fBTimer\fP timer)"
+
+.PP
+Clears the Compare Event for CC[0]\&. This could be useful for stopping the timer from pulling the interrupt-line\&. 
+.PP
+Definition at line \fB136\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_COMPARE_0\fP, \fBTIMER_EVENT_CLEAR\fP, and \fBTimerBase\fP\&.
+.SS "void timer_count (\fBTimer\fP timer)"
+
+.PP
+Activate counting on the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB114\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_COUNT\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_init (\fBTimer\fP timer)"
+
+.PP
+Default Initialisation of Timer\&. Initializes the Timer Peripheral to a value ~4sek\&. This is just for demonstration and could be changed to your needs 
+.PP
+Definition at line \fB44\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBCC0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, \fBTIMER_MODE_TIMER\fP, and \fBtimer_start()\fP\&.
+.SS "void timer_init_detailed (\fBTimer\fP timer, uint8_t prescaler, \fBTimerMode\fP mode, \fBTimerBitMode\fP bitMode)"
+
+.PP
+Initialises the Timer\&. Compare Value set is for CC[0]
+.PP
+\fBParameters\fP
+.RS 4
+\fIprescaler\fP Register value according to \fRTable 147: PRESCALER\fP\&. value 0\&.\&.9 is valid ==> 2^0 \&.\&. 2^9 
+.br
+\fIbitmode\fP Bit Mode\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB52\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBINT_COMPARE0\fP, \fBInterrupt_ID8\fP, \fBInterrupt_Set_Enable\fP, \fBregister_write()\fP, \fBTIMER0_BASE_ADDRESS\fP, \fBTIMER_BITMODE\fP, \fBTIMER_INTENSET\fP, \fBTIMER_PRESCALER\fP, and \fBTimerBase\fP\&.
+.SS "void timer_start (\fBTimer\fP timer)"
+
+.PP
+Starts the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB100\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_START\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_stop (\fBTimer\fP timer)"
+
+.PP
+Stops the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB107\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_STOP\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

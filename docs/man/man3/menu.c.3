@@ -1,0 +1,128 @@
+.TH "presentation/menu.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/menu.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/menu\&.h'\fP
+.br
+\fR#include 'config\&.h'\fP
+.br
+\fR#include 'hal_high/input_buf\&.h'\fP
+.br
+\fR#include 'hal_low/nvic\&.h'\fP
+.br
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'presentation/ascii_art\&.h'\fP
+.br
+\fR#include 'presentation/cell\&.h'\fP
+.br
+\fR#include 'presentation/cursor\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+\fR#include 'presentation/ui\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprintWinnerBanner\fP (const \fBGameState\fP *game_info)"
+.br
+.ti -1c
+.RI "void \fBanyKeyToContinue\fP (const char *continue_hint)"
+.br
+.ti -1c
+.RI "void \fBprintMainMenu\fP ()"
+.br
+.ti -1c
+.RI "\fBbool\fP \fBmenu_showMainMenu\fP ()"
+.br
+.ti -1c
+.RI "void \fBmenu_showGameOver\fP (const \fBGameState\fP *game_info)"
+.br
+.ti -1c
+.RI "void \fBmenu_showCredits\fP ()"
+.br
+.ti -1c
+.RI "void \fBmenu_showControls\fP (const char *continue_hint)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmenu\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void anyKeyToContinue (const char * continue_hint)"
+
+.PP
+Definition at line \fB222\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fB__WFI\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBITALIC_DIM\fP, and \fBprintln_styled()\fP\&.
+.SS "void menu_showControls (const char * continue_hint)"
+
+.PP
+Definition at line \fB138\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fBanyKeyToContinue()\fP, \fBARROW_DOWN\fP, \fBARROW_LEFT\fP, \fBARROW_RIGHT\fP, \fBARROW_UP\fP, \fBBOLD_CROSS\fP, \fBDEFAULT_BOLD\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, and \fBui_printHeading()\fP\&.
+.SS "void menu_showCredits ()"
+
+.PP
+Definition at line \fB129\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fBanyKeyToContinue()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRETURN_MENU_HINT\fP, and \fBui_printHeading()\fP\&.
+.SS "void menu_showGameOver (const \fBGameState\fP * game_info)"
+
+.PP
+Definition at line \fB77\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fBanyKeyToContinue()\fP, \fBGameState::average_ticks\fP, \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBCELLS_PER_COL\fP, \fBGameState::circle_average_ticks\fP, \fBGameState::circle_total_ticks\fP, \fBGameState::cross_average_ticks\fP, \fBGameState::cross_total_ticks\fP, \fBcursor_moveTo()\fP, \fBDEFAULT_BOLD\fP, \fBDEFAULT_ITALIC\fP, \fBGameState::fields_marked\fP, \fBg_cell_size\fP, \fBHEADING_LINES\fP, \fBCellSize::height\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln_int()\fP, \fBprintln_styled()\fP, \fBprintWinnerBanner()\fP, \fBRESET\fP, \fBRETURN_MENU_HINT\fP, \fBGameState::round\fP, \fBGameState::total_ticks\fP, \fBui_gameOver()\fP, and \fBui_printHeading()\fP\&.
+.SS "\fBbool\fP menu_showMainMenu ()"
+
+.PP
+Definition at line \fB36\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fB__WFI\fP, \fBg_input_buf\fP, \fBgame_run()\fP, \fBHIDE_CURSOR\fP, \fBinput_getNext()\fP, \fBmenu_showControls()\fP, \fBmenu_showCredits()\fP, \fBprint()\fP, \fBprintMainMenu()\fP, \fBPVE\fP, \fBPVP\fP, and \fBRETURN_MENU_HINT\fP\&.
+.SS "void printMainMenu ()"
+
+.PP
+Definition at line \fB186\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fBDEFAULT_BOLD\fP, \fBDIM\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, \fBRESET\fP, and \fBui_printHeading()\fP\&.
+.SS "void printWinnerBanner (const \fBGameState\fP * game_info)"
+
+.PP
+Definition at line \fB205\fP of file \fBmenu\&.c\fP\&.
+.PP
+References \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBBOLD_DIM\fP, \fBCircle\fP, \fBCIRCLE_WINS\fP, \fBCross\fP, \fBCROSS_WINS\fP, \fBITS_A_TIE\fP, \fBNone\fP, \fBprint_styled()\fP, and \fBGameState::winner\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

@@ -1,0 +1,47 @@
+.TH "InputBuffer" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InputBuffer \- RingBuffer for fixed memory footprint\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <input_buf\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBdata\fP [\fBINPUT_BUF_SIZE\fP]"
+.br
+.ti -1c
+.RI "volatile uint16_t \fBhead\fP"
+.br
+.ti -1c
+.RI "volatile uint16_t \fBtail\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RingBuffer for fixed memory footprint\&. 
+.PP
+Definition at line \fB30\fP of file \fBinput_buf\&.h\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t InputBuffer::data[\fBINPUT_BUF_SIZE\fP]"
+
+.PP
+Definition at line \fB32\fP of file \fBinput_buf\&.h\fP\&.
+.SS "volatile uint16_t InputBuffer::head"
+
+.PP
+Definition at line \fB33\fP of file \fBinput_buf\&.h\fP\&.
+.SS "volatile uint16_t InputBuffer::tail"
+
+.PP
+Definition at line \fB34\fP of file \fBinput_buf\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

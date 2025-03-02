@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -35,10 +35,4 @@ void Interrupt8_Handler(void)
     register_write(TIMER0_BASE_ADDRESS | TIMER_COMPARE_0, 0);
     register_write(Interrupt_ICPR, Interrupt_ID8);
     time_onInterrupt();
-}
-
-void default_handler()
-{
-    uart_writeByte('F');
-    for(;;) {}
 }

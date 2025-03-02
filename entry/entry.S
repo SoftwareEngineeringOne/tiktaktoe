@@ -80,8 +80,8 @@ endless_loop:
 .weak    HardFault_Handler
 /* .fnstart */
 HardFault_Handler:
-    BL print_hardFault
-    b        .
+    BL handleHardFault
+
 /* .fnend */
 .size    HardFault_Handler, . - HardFault_Handler
 
@@ -90,7 +90,7 @@ HardFault_Handler:
 .weak    Default_Handler
 /* .fnstart */
 Default_Handler:
-    b        .
+    BL handleUnexpectedInterrupt
 /* .fnend */
 .size    Default_Handler, . - Default_Handler
 

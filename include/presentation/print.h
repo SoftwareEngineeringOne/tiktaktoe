@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,16 +17,10 @@
 #ifndef PRINT_H
 #define PRINT_H
 
+#include "presentation/style.h"
 #include <stdint.h>
 
 #define LINE_SEPERATOR '\n'
-
-typedef struct
-{
-        char *fg_color;
-        char *bg_color;
-        char *font_style;
-} Style;
 
 /**
  * @brief Clear the whole terminal
@@ -70,6 +64,8 @@ void print_styled(const char *string, const Style *style);
  * @param [in] style
  */
 void println_styled(const char *string, const Style *style);
+
+void printStyle(const Style *style);
 
 void print_hardFault();
 

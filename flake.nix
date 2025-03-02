@@ -18,6 +18,8 @@
         devShell = pkgs.mkShell {
           packages = with pkgs; [
             entr
+            doxygen
+            graphviz
           ];
           nativeBuildInputs = with pkgs; [
             gcc-arm-embedded

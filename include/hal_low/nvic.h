@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -45,6 +45,7 @@
 
 #define Interrupt_ICPR 0xE000E280// Interrupt Clear-pending Register (on page 4-6)
 
+#define Interrupt_ID1 (1 << 1)  // Bit for User Interrupt ID: 1
 #define Interrupt_ID2 (1 << 2)  // Bit for User Interrupt ID: 2
 #define Interrupt_ID8 (1 << 8)  // Bit for User Interrupt ID: 8
 #define Interrupt_ID9 (1 << 9)  // Bit for User Interrupt ID: 9
@@ -57,6 +58,7 @@
  *
  * It does nothing till the next interrupt happens
  */
-void __WFI(void);
+#define __WFI() __asm volatile("wfi" ::: "memory")
+
 
 #endif// NVIC_H

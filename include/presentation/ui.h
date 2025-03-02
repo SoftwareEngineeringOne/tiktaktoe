@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -18,13 +18,13 @@
 #define UI_H
 
 #include "logic/game.h"
-#include "presentation/field.h"
+#include "presentation/ascii_art.h"
+#include "presentation/cell.h"
 #include <stdint.h>
 
-#define TURN_ROW 1
-#define TIMER_ROW (CELLS_PER_COL * cell_height) - 1
+#define TURN_ROW 1 + HEADING_LINES
+#define TIMER_ROW FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES
 
-extern uint8_t cell_height;
 
 /**
  * @brief Writes the timer text to the screen
@@ -51,5 +51,9 @@ void ui_displayTurn(uint8_t current_turn, Player player);
  * @param [in] playerName
  */
 void ui_updateTurn(uint8_t current_turn, Player player);
+
+void ui_printHeading();
+
+void ui_gameOver();
 
 #endif// UI_H

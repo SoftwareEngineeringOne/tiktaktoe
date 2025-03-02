@@ -1,13 +1,13 @@
 /**
- * @file 
+ * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -22,8 +22,8 @@
 
 #include <stdint.h>
 
-#define REMAINING_TIME (TICKS_PER_ROUND - time_roundTicks)
-#define FIRST_TURN 1
+#define REMAINING_TIME (TICKS_PER_TURN - g_timer.ticks_turn)
+#define FIRST_ROUND 1
 
 typedef enum
 {
@@ -50,14 +50,32 @@ typedef struct
         Player marked_by;
 } Cell;
 
-typedef struct 
+typedef struct
 {
-    Player winner;
-    Mode mode;
-    uint8_t turn;
-    uint32_t total_ticks;
-    uint32_t average_ticks;
-} GameInfo;
+        Player winner;
+        Mode mode;
+        volatile uint8_t round;
+        volatile uint8_t fields_marked;
+        Player current_player;
+
+        // Relevant for summary
+        uint32_t total_ticks;
+        uint32_t average_ticks;
+
+        uint32_t cross_total_ticks;
+        uint32_t cross_average_ticks;
+
+        uint32_t circle_total_ticks;
+        uint32_t circle_average_ticks;
+} GameState;
+
+typedef struct
+{
+        Cell all[CELLS_PER_COL][CELLS_PER_ROW];
+        Cell *selected;
+        Cell *last_cross;
+        Cell *last_circle;
+} CellState;
 
 
 /**
@@ -69,6 +87,8 @@ void game_run(const Mode mode);
  * @brief Automatic turn in case the round time is over
  */
 void game_onTimeOut();
+
+void game_endTurn();
 
 
 #endif// GAME_H

@@ -15,6 +15,8 @@ Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 The project has a few options that can be changed before compilation.
 - Number of rows (default is 4)
 - Number of columns (default is 4)
+- Ticks per turn (default is 20)
+- Tick speed (default is 12, lower is faster)
 - Unicode support (default is "ON")
 
 These can be set by:
@@ -23,13 +25,18 @@ When configuring the project the default command `cmake --preset arm-cortex-m0-{
 appended by:
 - for the number of rows: `[...] --DCELLS_PER_COL=$(NUMBER)`
 - for the number of cols: `[...] --DCELLS_PER_ROW=$(NUMBER)`
+- for ticks per turn: `[...] --DTICKS_PER_TURN=$(NUMBER)`
+- for tick speed: `[...] --DTICK_SPEED=$(NUMBER)`
 - for unicode support: `[...] --DENABLE_UNICODE=$(ON/OFF)`
 
 ### Using the included Makefile
 When using the Makefile to configure/build the project variables can be passed like this:
 - for the number of rows: `make ROWS=$(NUMBER)`
 - for the number of cols: `make COLS=$(NUMBER)`
+- for ticks per turn: `make TICKS_PER_TURN=$(NUMBER)`
+- for tick speed: `make TICK_SPEED=$(NUMBER)`
 - for unicode support: `make UNICODE=$(ON/OFF)`
+_All options can be combined._
 
 Due to the way the Makefile is structured, these may also be passed when using e.g. `make run`.
 However please note, that in order for changes to take affect the build directory may have to be deleted.

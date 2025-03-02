@@ -1,5 +1,24 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "logic/game.h"
 
+#include "config.h"
+#include "presentation/style.h"
 #include "hal_high/input_buf.h"
 #include "hal_low/nvic.h"
 #include "hal_low/random.h"
@@ -16,6 +35,59 @@
 #include "util/math.h"
 
 volatile bool force_ui_update = false;
+
+/**
+ * @brief Initializes several things at the game start
+ */
+static void _init(const Mode mode);
+
+/**
+ * @brief Checks at the end of the round if someone has won
+ * @return The player who won
+ */
+static Player _checkForWinner();
+
+/**
+ * @brief Handles the presentation update in case of a automatic round
+ */
+static void _handleForcedMoveUpdate();
+
+/**
+ * @brief Checks if the given player has won
+ * @param [in] cell
+ * Newest marked cell of the player
+ * @param [in] player
+ * Player it is looking for
+ * @return True when player won
+ */
+static bool _checkIfPlayerWon(const Cell *cell, Player player);
+
+/**
+ * @brief Does certain things on input
+ * @param [in] input
+ */
+static bool _handleInput(const uint8_t *input);
+
+/**
+ * @brief Refreshes the whole UI
+ */
+static void _redrawField();
+
+/**
+ * @brief Prints the winner and statistics
+ * @param [in] winner
+ */
+static void _printEndScreen(Player winner);
+
+static Mode game_mode;
+static Player current_player;
+static volatile uint8_t turn_number;
+static uint8_t last_ui_update;
+
+static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
+static Cell *selected_cell;
+static Cell *last_marked_cross;
+static Cell *last_marked_circle;
 
 void game_run(const Mode mode)
 {
@@ -305,69 +377,4 @@ bool _checkIfPlayerWon(const Cell *cell, const Player player)
 
 void _printEndScreen(Player winner)
 {
-    cursor_moveTo(1, CELLS_PER_COL * cell_height);
-    switch(winner)
-    {
-        case Circle:
-            print(BOLD);
-            print(FG_GREEN);
-            if(game_mode == PVE)
-            {
-                println("Congratulations, you have beaten the Computer!");
-            }
-            else
-            {
-                println("Congratulations, circle has won!");
-            }
-            print(RESET);
-            break;
-        case Cross:
-            print(BOLD);
-            print(FG_MAGENTA);
-            if(game_mode == PVE)
-            {
-                println("Better luck next time! The Computer has beaten you...");
-            }
-            else
-            {
-                println("Congratulation, cross has won!");
-            }
-            print(RESET);
-            break;
-        default:;
-    }
-    print(ITALIC);
-    println("Press any key to see the statistics...");
-    print(RESET);
-
-    uint8_t input;
-    while(!input_getNext(&input_buf, &input))
-    {
-        __WFI();
-    }
-
-    print_clearConsole();
-
-    print("Turns needed:\t");
-    print(BOLD);
-    println_int(turn_number);
-    print(RESET);
-
-    print("Total ticks:\t");
-    print(BOLD);
-    println_int(time_sumTicks);
-    print(RESET);
-
-    print("Ø ticks / round:\t");
-    print(BOLD);
-    println_int(time_sumTicks / turn_number);
-    print(RESET);
-
-    print(ITALIC);
-    println("Press any key to return to the menu...");
-    print(RESET);
-    while(!input_getNext(&input_buf, &input))
-    {
-        __WFI();
-    }
 }

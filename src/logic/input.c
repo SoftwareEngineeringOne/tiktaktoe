@@ -1,8 +1,26 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "logic/input.h"
 
 #include "hal_high/input_buf.h"
 #include "presentation/cell.h"
 #include "presentation/field.h"
+#include "config.h"
 
 void input_handleEscapeSequence(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Cell **selected_cell)
 {

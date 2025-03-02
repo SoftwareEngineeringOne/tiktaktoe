@@ -1,11 +1,38 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "presentation/field.h"
 
 #include "presentation/cell.h"
 #include "presentation/cursor.h"
 #include "presentation/print.h"
 
+#include "config.h"
+
 #include <stddef.h>
 #include <stdint.h>
+
+/**
+ * @brief Print one row
+ * @param [in] row String to print
+ * @param [in] row_length Length of string
+ *
+ */
+static void _printRow(char **row, size_t row_length);
 
 void field_redraw()
 {

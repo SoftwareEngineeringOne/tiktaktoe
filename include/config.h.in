@@ -1,5 +1,6 @@
+/*! @GENERATED_WARNING@ !*/
 /**
- * @file 
+ * @file
  *
  * @author 
  *
@@ -13,11 +14,15 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
-#include "hal_low/nvic.h"
+#ifndef CONFIG_H
+#define CONFIG_H
 
-void __WFI(void)
-{
-    __asm volatile("wfi" ::: "memory");
-}
+// if UNICODE is not defined, ascii characters are used
+#cmakedefine ENABLE_UNICODE
+
+// size of the field
+#define CELLS_PER_ROW @CELLS_PER_ROW@
+#define CELLS_PER_COL @CELLS_PER_COL@
+
+#endif //CONFIG_H

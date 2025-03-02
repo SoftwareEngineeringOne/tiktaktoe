@@ -1,12 +1,30 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "logic/time.h"
 
 #include "hal_low/timer.h"
 #include "logic/game.h"
 #include "presentation/cursor.h"
 #include "presentation/print.h"
+#include <stdint.h>
 
-volatile int time_sumTicks = 0;
-volatile int time_roundTicks = 0;
+volatile uint32_t time_sumTicks = 0;
+volatile uint32_t time_roundTicks = 0;
 
 void time_init()
 {

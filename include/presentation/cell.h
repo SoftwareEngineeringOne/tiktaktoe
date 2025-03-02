@@ -1,3 +1,19 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 #ifndef CELL_H
 #define CELL_H
 
@@ -23,65 +39,12 @@ extern Size current_size;
 extern uint8_t cell_width;
 extern uint8_t cell_height;
 
-static char *SMALL_X[1][3] = {{" ", "X", " "}};
-
-static char *SMALL_O[1][3] = {{" ", "O", " "}};
-
-static char *MEDIUM_X[3][7] = {
-    {" ", " ", DIAGONAL_BW, " ", DIAGONAL_FW, " ", " "},
-    {" ", " ", " ", DIAGONAL_MID, " ", " ", " "},
-    {" ", " ", DIAGONAL_FW, " ", DIAGONAL_BW, " ", " "},
-};
-
-static char *MEDIUM_O[3][7] = {
-    {" ", CORNER_TOP_LEFT, TOP_BOTTOM, TOP_BOTTOM, TOP_BOTTOM, CORNER_TOP_RIGHT, " "},
-    {" ", SIDE, " ", " ", " ", SIDE, " "},
-    {" ", CORNER_BOT_LEFT, TOP_BOTTOM, TOP_BOTTOM, TOP_BOTTOM, CORNER_BOT_RIGHT, " "},
-};
-
-static char *LARGE_X[5][9] = {
-    {" ", " ", DIAGONAL_BW, " ", " ", " ", DIAGONAL_FW, " ", " "},
-    {" ", " ", " ", DIAGONAL_BW, " ", DIAGONAL_FW, " ", " ", " "},
-    {" ", " ", " ", " ", DIAGONAL_MID, " ", " ", " ", " "},
-    {" ", " ", " ", DIAGONAL_FW, " ", DIAGONAL_BW, " ", " ", " "},
-    {" ", " ", DIAGONAL_FW, " ", " ", " ", DIAGONAL_BW, " ", " "},
-};
-
-static char *LARGE_O[5][9] = {
-    {" ",
-     CORNER_TOP_LEFT,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     CORNER_TOP_RIGHT,
-     " "},
-    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
-    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
-    {" ", SIDE, " ", " ", " ", " ", " ", SIDE, " "},
-    {" ",
-     CORNER_BOT_LEFT,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     TOP_BOTTOM,
-     CORNER_BOT_RIGHT,
-     " "},
-};
-
 typedef struct
 {
         uint8_t width;
         uint8_t height;
 } CellSize;
 
-static CellSize VALID_SIZES[] = {
-    {.width = 4, .height = 3},
-    {.width = 8, .height = 5},
-    {.width = 10, .height = 7},
-};
 
 /**
  * @brief Redraws the given cell
@@ -122,16 +85,5 @@ void cell_increaseSize();
  */
 void cell_decreaseSize();
 
-/**
- * @brief Redraw one cell
- * @param [in] row
- * Y-Position
- * @param [in] col
- * X-Position
- * @param [in] modifier
- * @param [in] marked_by
- * Player to mark by
- */
-static void _redrawCell(uint8_t row, uint8_t col, char *modifier, Player marked_by);
 
 #endif// CELL_H

@@ -1,3 +1,19 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 #ifndef CURSOR_H
 #define CURSOR_H
 
@@ -12,13 +28,5 @@
  */
 void cursor_moveTo(uint8_t x, uint8_t y);
 
-/**
- * @brief TODO: ?????
- * @param num
- * @param num_buf
- * @param buf
- * @param buf_pos
- */
-static void _writeNumToBuf(uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos);
 
 #endif// CURSOR_H

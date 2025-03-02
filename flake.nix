@@ -16,6 +16,9 @@
       in
       {
         devShell = pkgs.mkShell {
+          packages = with pkgs; [
+            entr
+          ];
           nativeBuildInputs = with pkgs; [
             gcc-arm-embedded
             gdb

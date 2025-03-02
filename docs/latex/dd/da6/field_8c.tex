@@ -1,0 +1,121 @@
+\doxysection{presentation/field.c File Reference}
+\hypertarget{field_8c}{}\label{field_8c}\index{presentation/field.c@{presentation/field.c}}
+{\ttfamily \#include "{}presentation/field.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/cell.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for field.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d88/field_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{field_8c_ab51eda1e84a93a35d01dcf7b83f6e5f3}{print\+Row}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}row, size\+\_\+t row\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Print one row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{field_8c_a3d0c2012ab22c49c338449956fc0dd68}{field\+\_\+redraw}} ()
+\begin{DoxyCompactList}\small\item\em Redraw the whole 2D field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{field_8c_source}{field.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{field_8c_a3d0c2012ab22c49c338449956fc0dd68}\label{field_8c_a3d0c2012ab22c49c338449956fc0dd68} 
+\index{field.c@{field.c}!field\_redraw@{field\_redraw}}
+\index{field\_redraw@{field\_redraw}!field.c@{field.c}}
+\doxysubsubsection{\texorpdfstring{field\_redraw()}{field\_redraw()}}
+{\footnotesize\ttfamily void field\+\_\+redraw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Redraw the whole 2D field. 
+
+
+
+Definition at line \mbox{\hyperlink{field_8c_source_l00037}{37}} of file \mbox{\hyperlink{field_8c_source}{field.\+c}}.
+
+
+
+References \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00025}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{field_8h_source_l00050}{CORNER\+\_\+\+BOT\+\_\+\+LEFT}}, \mbox{\hyperlink{field_8h_source_l00052}{CORNER\+\_\+\+BOT\+\_\+\+RIGHT}}, \mbox{\hyperlink{field_8h_source_l00049}{CORNER\+\_\+\+TOP\+\_\+\+LEFT}}, \mbox{\hyperlink{field_8h_source_l00051}{CORNER\+\_\+\+TOP\+\_\+\+RIGHT}}, \mbox{\hyperlink{field_8h_source_l00059}{CROSS}}, \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{field_8h_source_l00063}{EMPTY}}, \mbox{\hyperlink{field_8h_source_l00024}{FIELD\+\_\+\+X\+\_\+\+OFFSET}}, \mbox{\hyperlink{field_8h_source_l00025}{FIELD\+\_\+\+Y\+\_\+\+OFFSET}}, \mbox{\hyperlink{cell_8c_source_l00026}{g\+\_\+cell\+\_\+size}}, \mbox{\hyperlink{cell_8h_source_l00044}{Cell\+Size\+::height}}, \mbox{\hyperlink{field_8c_source_l00100}{print\+Row()}}, \mbox{\hyperlink{field_8h_source_l00061}{SIDE}}, \mbox{\hyperlink{field_8h_source_l00057}{T\+\_\+\+BOT}}, \mbox{\hyperlink{field_8h_source_l00054}{T\+\_\+\+LEFT}}, \mbox{\hyperlink{field_8h_source_l00055}{T\+\_\+\+RIGHT}}, \mbox{\hyperlink{field_8h_source_l00056}{T\+\_\+\+TOP}}, \mbox{\hyperlink{field_8h_source_l00062}{TOP\+\_\+\+BOTTOM}}, and \mbox{\hyperlink{cell_8h_source_l00043}{Cell\+Size\+::width}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{field_8c_ab51eda1e84a93a35d01dcf7b83f6e5f3}\label{field_8c_ab51eda1e84a93a35d01dcf7b83f6e5f3} 
+\index{field.c@{field.c}!printRow@{printRow}}
+\index{printRow@{printRow}!field.c@{field.c}}
+\doxysubsubsection{\texorpdfstring{printRow()}{printRow()}}
+{\footnotesize\ttfamily void print\+Row (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{row,  }\item[{size\+\_\+t}]{row\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print one row. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em row} & String to print \\
+\hline
+\mbox{\texttt{ in}}  & {\em row\+\_\+length} & Length of string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{field_8c_source_l00100}{100}} of file \mbox{\hyperlink{field_8c_source}{field.\+c}}.
+
+
+
+References \mbox{\hyperlink{print_8c_source_l00030}{print()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/da6/field_8c_ab51eda1e84a93a35d01dcf7b83f6e5f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/da6/field_8c_ab51eda1e84a93a35d01dcf7b83f6e5f3_icgraph}
+\end{center}
+\end{figure}

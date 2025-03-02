@@ -1,0 +1,46 @@
+\doxysection{hal\+\_\+low/memset.c File Reference}
+\hypertarget{memset_8c}{}\label{memset_8c}\index{hal\_low/memset.c@{hal\_low/memset.c}}
+{\ttfamily \#include "{}hal\+\_\+low/memset.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for memset.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{dd/de1/memset_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{memset_8c_a5a47c79a43fa854fe23bf03450cb3af8}{memset}} (void \texorpdfstring{$\ast$}{*}ptr, const int x, size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Sets the first n bytes of the block of memory pointed by ptr to the specified value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{memset_8c_a5a47c79a43fa854fe23bf03450cb3af8}\label{memset_8c_a5a47c79a43fa854fe23bf03450cb3af8} 
+\index{memset.c@{memset.c}!memset@{memset}}
+\index{memset@{memset}!memset.c@{memset.c}}
+\doxysubsubsection{\texorpdfstring{memset()}{memset()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} memset (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{int}]{x,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the first n bytes of the block of memory pointed by ptr to the specified value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to the block of memory to fill \\
+\hline
+\mbox{\texttt{ in}}  & {\em x} & Value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Number of bytes to be set to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the memory area ptr 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{memset_8c_source_l00005}{5}} of file \mbox{\hyperlink{memset_8c_source}{memset.\+c}}.
+

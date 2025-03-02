@@ -1,0 +1,167 @@
+\doxysection{hal\+\_\+low/uart.c File Reference}
+\hypertarget{uart_8c}{}\label{uart_8c}\index{hal\_low/uart.c@{hal\_low/uart.c}}
+{\ttfamily \#include "{}hal\+\_\+low/uart.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/nvic.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/register\+\_\+access.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for uart.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d56/uart_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8c_a4576a80256ec582cab4eb85919c0905a}{uart\+\_\+init}} (const \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} with\+\_\+interrupts)
+\begin{DoxyCompactList}\small\item\em Initializing the UART with the following Settings\+: 115200-\/8-\/N-\/1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_ac0cdef9b393ad8c650295aba6aa5a7ea}{uart\+\_\+write\+Byte}} (const uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Writes/\+Sends a byte over the serial Port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\_\+read\+Byte}} ()
+\begin{DoxyCompactList}\small\item\em Read/\+Receive a byte from the serial Port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_aecddad57ac6ce9dbf9e5dd6ac458724b}{uart\+\_\+read\+Byte\+Blocking}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{uart_8c_a4576a80256ec582cab4eb85919c0905a}\label{uart_8c_a4576a80256ec582cab4eb85919c0905a} 
+\index{uart.c@{uart.c}!uart\_init@{uart\_init}}
+\index{uart\_init@{uart\_init}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_init()}{uart\_init()}}
+{\footnotesize\ttfamily void uart\+\_\+init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}}}]{with\+\_\+interrupts }\end{DoxyParamCaption})}
+
+
+
+Initializing the UART with the following Settings\+: 115200-\/8-\/N-\/1. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00025}{25}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00049}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00044}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00046}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00028}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00012}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00014}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00042}{UART\+\_\+\+TASK\+\_\+\+START}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{d1/d87/uart_8c_a4576a80256ec582cab4eb85919c0905a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{d1/d87/uart_8c_a4576a80256ec582cab4eb85919c0905a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab}\label{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab} 
+\index{uart.c@{uart.c}!uart\_readByte@{uart\_readByte}}
+\index{uart\_readByte@{uart\_readByte}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_readByte()}{uart\_readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+\_\+read\+Byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read/\+Receive a byte from the serial Port. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t received Byte or 0 (zero) if nothing was received 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00081}{81}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00044}{UART\+\_\+\+EVENT\+\_\+\+CLEAR}}, \mbox{\hyperlink{uart_8h_source_l00036}{UART\+\_\+\+RXD}}, and \mbox{\hyperlink{uart_8h_source_l00021}{UART\+\_\+\+RXDRDY}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{d1/d87/uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d87/uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8c_aecddad57ac6ce9dbf9e5dd6ac458724b}\label{uart_8c_aecddad57ac6ce9dbf9e5dd6ac458724b} 
+\index{uart.c@{uart.c}!uart\_readByteBlocking@{uart\_readByteBlocking}}
+\index{uart\_readByteBlocking@{uart\_readByteBlocking}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_readByteBlocking()}{uart\_readByteBlocking()}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+\_\+read\+Byte\+Blocking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00100}{100}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+\Hypertarget{uart_8c_ac0cdef9b393ad8c650295aba6aa5a7ea}\label{uart_8c_ac0cdef9b393ad8c650295aba6aa5a7ea} 
+\index{uart.c@{uart.c}!uart\_writeByte@{uart\_writeByte}}
+\index{uart\_writeByte@{uart\_writeByte}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_writeByte()}{uart\_writeByte()}}
+{\footnotesize\ttfamily void uart\+\_\+write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes/\+Sends a byte over the serial Port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & byte to send (ASCII) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00073}{73}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{uart_8h_source_l00037}{UART\+\_\+\+TXD}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d1/d87/uart_8c_ac0cdef9b393ad8c650295aba6aa5a7ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d87/uart_8c_ac0cdef9b393ad8c650295aba6aa5a7ea_icgraph}
+\end{center}
+\end{figure}

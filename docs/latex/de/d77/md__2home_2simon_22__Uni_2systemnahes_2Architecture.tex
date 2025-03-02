@@ -1,0 +1,13 @@
+\chapter{Architecture}
+\hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture}{}\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture}\index{Architecture@{Architecture}}
+\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md10}%
+\Hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md10}%
+
+\begin{DoxyEnumerate}
+\item Main initializes the program (UART etc.) and prints the first output
+\item Infinity loop in main
+\item The game is interrupt based. Interrupts are defined in "{}interrupts"{}. They will call functions in "{}logic"{}. The logic is based on "{}hal\+\_\+high"{} and "{}output"{}
+\end{DoxyEnumerate}\hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md11}{}\doxysection{\texorpdfstring{Hardware Abstraction Layer (hal\+\_\+high and hal\+\_\+low)}{Hardware Abstraction Layer (hal\+\_\+high and hal\+\_\+low)}}\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md11}
+\hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md12}{}\doxysection{\texorpdfstring{Interrupt handling (interrupts)}{Interrupt handling (interrupts)}}\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md12}
+\hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md13}{}\doxysection{\texorpdfstring{Game Logic (logic)}{Game Logic (logic)}}\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md13}
+\hypertarget{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md14}{}\doxysection{\texorpdfstring{Output (output)}{Output (output)}}\label{md__2home_2simon_22__Uni_2systemnahes_2Architecture_autotoc_md14}

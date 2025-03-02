@@ -1,0 +1,26 @@
+<map id="handleHardFault" name="handleHardFault">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,133,109"/>
+<area shape="rect" id="Node000002" href="$da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="181,81,277,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,92,165,92,165,97,133,97"/>
+<area shape="rect" id="Node000003" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="543,29,595,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,79,275,45,298,28,324,15,379,4,435,5,486,14,529,26,528,31,485,19,434,11,379,9,326,20,301,32,278,49,244,82"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#aa1dd7679332aa803a3febb63dc5dd825" title="Clear the whole terminal." alt="" coords="325,29,467,57"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="275,78,334,59,336,64,277,83"/>
+<area shape="rect" id="Node000007" href="$d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a" title="Prints the given string with a new line character." alt="" coords="364,81,428,109"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="277,92,349,92,349,97,277,97"/>
+<area shape="rect" id="Node000008" href="$d4/dfd/system_8c.html#a97bacc4493b8a3008bdbdd7a83e86642" title=" " alt="" coords="671,132,808,159"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="277,107,325,117,413,129,501,136,655,143,655,148,501,142,412,134,325,123,276,112"/>
+<area shape="rect" id="Node000009" href="$d1/d87/uart_8c.html#a991a6e99e9369a11dcf02bdf1d1ba6ab" title="Read/Receive a byte from the serial Port." alt="" coords="340,182,453,210"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="249,107,284,134,326,162,347,173,345,178,324,166,281,138,246,111"/>
+<area shape="rect" id="Node000004" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="681,80,798,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="596,48,676,72,675,77,594,53"/>
+<area shape="rect" id="Node000005" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="856,132,967,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="789,105,850,124,848,129,787,110"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="468,40,528,40,528,45,468,45"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="428,83,528,52,530,57,429,88"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="428,92,665,91,665,96,428,97"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="808,143,840,143,840,148,808,148"/>
+<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="453,193,613,188,710,180,808,168,845,161,846,166,808,173,711,185,613,193,453,199"/>
+<area shape="rect" id="Node000010" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="515,233,623,261"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="447,208,506,225,504,231,445,213"/>
+</map>

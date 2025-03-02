@@ -1,0 +1,49 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{def_8h}{def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input__buf_8h}{hal\_high/input\_buf.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{nvic_8h}{hal\_low/nvic.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{random_8h}{hal\_low/random.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{uart_8h}{hal\_low/uart.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{print_8h}{presentation/print.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{style_8h}{presentation/style.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ui_8h}{presentation/ui.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{system_8h}{hal\_low/system.h}}>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{menu_8h}{presentation/menu.h}}>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{00030}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{uart_8c_a4576a80256ec582cab4eb85919c0905a}{uart\_init}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{input__buf_8c_a9bb68967ad751f4b307afa735a3501ff}{input\_init}}(\&\mbox{\hyperlink{input__buf_8c_a3e797155e2d8f73914a02d047ea39a37}{g\_input\_buf}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{menu_8c_a1692d3cd85ed442706f90d6b6f60613f}{menu\_showMainMenu}}())}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_aa1dd7679332aa803a3febb63dc5dd825}{print\_clearConsole}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ui_8c_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}{println\_styled}}(\textcolor{stringliteral}{"{}The\ game\ will\ be\ reset..."{}},\ \&\mbox{\hyperlink{style_8c_a90f113db0341b3df7fba02479d15d812}{DEFAULT\_BOLD}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}{println\_styled}}(\textcolor{stringliteral}{"{}Press\ any\ key\ to\ continue..."{}},\ \&\mbox{\hyperlink{style_8c_adf22a9f4586b51943e85588d102ffa3f}{ITALIC\_DIM}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ input;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!\mbox{\hyperlink{input__buf_8c_a3e03a367ae13ea8f68021a964efbef90}{input\_getNext}}(\&\mbox{\hyperlink{input__buf_8c_a3e797155e2d8f73914a02d047ea39a37}{g\_input\_buf}},\ \&input))}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{nvic_8h_ab28e2b328c4cf23c917ab18a23194f8e}{\_\_WFI}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\_softReset}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_aa1dd7679332aa803a3febb63dc5dd825}{print\_clearConsole}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ui_8c_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}{println\_styled}}(\textcolor{stringliteral}{"{}Thanks\ for\ playing!"{}},\ \&\mbox{\hyperlink{style_8c_a90f113db0341b3df7fba02479d15d812}{DEFAULT\_BOLD}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_a02a20f9ab0165b4cbac365bb9e9aa823}{println\_styled}}(}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Hint:\ If\ you\ are\ using\ the\ qemu\ emulator,\ you\ can\ exit\ using\ \(\backslash\)"{}<CTR>\ +\ a,\ \ x\(\backslash\)"{}.\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{style_8c_adf22a9f4586b51943e85588d102ffa3f}{ITALIC\_DIM}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_a09ec0b302bee7262f9959add53ccd0c4}{SHOW\_CURSOR}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\_offMode}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \}}
+
+\end{DoxyCode}

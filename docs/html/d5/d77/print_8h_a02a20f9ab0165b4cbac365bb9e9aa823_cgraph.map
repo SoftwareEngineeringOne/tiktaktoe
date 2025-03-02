@@ -1,0 +1,15 @@
+<map id="println_styled" name="println_styled">
+<area shape="rect" id="Node000001" title="Prints the given string with a predefined style and a new line character." alt="" coords="5,47,116,74"/>
+<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="164,21,262,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,49,148,43,149,48,117,54"/>
+<area shape="rect" id="Node000004" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="542,47,659,74"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="116,58,526,58,526,63,116,63"/>
+<area shape="rect" id="Node000003" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="442,21,494,49"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,18,310,7,352,3,395,7,428,16,427,21,394,12,352,8,310,12,260,23"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#a2b33af16d6bf86c3623a6ed14f4115f2" title=" " alt="" coords="310,21,394,49"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="262,32,294,32,294,38,262,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="494,37,527,44,526,49,493,42"/>
+<area shape="rect" id="Node000005" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="707,47,818,74"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="659,58,691,58,691,63,659,63"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="395,32,427,32,427,38,395,38"/>
+</map>

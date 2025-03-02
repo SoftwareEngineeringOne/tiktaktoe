@@ -1,0 +1,155 @@
+.TH "presentation/ui.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/ui.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/ui\&.h'\fP
+.br
+\fR#include 'hal_low/uart\&.h'\fP
+.br
+\fR#include 'logic/time\&.h'\fP
+.br
+\fR#include 'presentation/ascii_art\&.h'\fP
+.br
+\fR#include 'presentation/cursor\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'presentation/style\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBui_displayTimer\fP (const uint16_t remaining_time, const uint16_t total_time)"
+.br
+.RI "Writes the timer text to the screen\&. "
+.ti -1c
+.RI "void \fBui_updateTimer\fP (const uint16_t remaining_time, const uint16_t total_time)"
+.br
+.RI "Updates the time on the screen\&. "
+.ti -1c
+.RI "void \fBui_displayTurn\fP (const uint8_t current_turn, const \fBPlayer\fP player)"
+.br
+.RI "Writes the turn text to the screen\&. "
+.ti -1c
+.RI "void \fBui_updateTurn\fP (const uint8_t current_turn, const \fBPlayer\fP player)"
+.br
+.RI "Updates the turn number on the screen\&. "
+.ti -1c
+.RI "void \fBui_gameOver\fP ()"
+.br
+.ti -1c
+.RI "void \fBui_printHeading\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBui\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void ui_displayTimer (uint16_t remaining_time, uint16_t total_time)"
+
+.PP
+Writes the timer text to the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIremaining_time\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB27\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBcursor_moveTo()\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_styled()\fP, \fBTIMER_ROW\fP, and \fBui_updateTimer()\fP\&.
+.SS "void ui_displayTurn (uint8_t current_turn, \fBPlayer\fP player)"
+
+.PP
+Writes the turn text to the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_turn\fP 
+.br
+\fIplayerName\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB88\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBcursor_moveTo()\fP, \fBDEFAULT_BOLD\fP, \fBDEFAULT_ITALIC\fP, \fBprint_styled()\fP, \fBTURN_ROW\fP, and \fBui_updateTurn()\fP\&.
+.SS "void ui_gameOver ()"
+
+.PP
+Definition at line \fB116\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBcursor_moveTo()\fP, \fBDEFAULT_BOLD\fP, \fBERASE_LINE_FROM_CURSOR\fP, \fBprint()\fP, \fBprint_styled()\fP, \fBTIMER_ROW\fP, and \fBTURN_ROW\fP\&.
+.SS "void ui_printHeading ()"
+
+.PP
+Definition at line \fB126\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBcursor_moveTo()\fP, \fBHEADING\fP, \fBHEADING_STYLE\fP, and \fBprint_styled()\fP\&.
+.SS "void ui_updateTimer (uint16_t remaining_time, uint16_t total_time)"
+
+.PP
+Updates the time on the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIremaining_time\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBBOLD\fP, \fBcursor_moveTo()\fP, \fBDIM\fP, \fBERASE_LINE_FROM_CURSOR\fP, \fBStyle::fg_color\fP, \fBFG_GREEN\fP, \fBFG_RED\fP, \fBFG_YELLOW\fP, \fBStyle::font_style\fP, \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_styled()\fP, \fBprintln_styled()\fP, \fBTIMER_ROW\fP, and \fBuart_writeByte()\fP\&.
+.SS "void ui_updateTurn (uint8_t current_turn, \fBPlayer\fP player)"
+
+.PP
+Updates the turn number on the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_turn\fP 
+.br
+\fIplayerName\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB98\fP of file \fBui\&.c\fP\&.
+.PP
+References \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBCircle\fP, \fBCross\fP, \fBcursor_moveTo()\fP, \fBFG_GREEN\fP, \fBFG_MAGENTA\fP, \fBprint()\fP, \fBprint_int()\fP, \fBprint_styled()\fP, and \fBTURN_ROW\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

@@ -1,0 +1,10 @@
+<map id="rng_getRandomValue_waiting" name="rng_getRandomValue_waiting">
+<area shape="rect" id="Node000001" title="This is a function stub. Implement it, if needed." alt="" coords="5,15,166,60"/>
+<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="422,29,529,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,17,213,10,294,3,374,10,423,21,422,27,374,15,294,8,214,15,167,22"/>
+<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="238,24,350,52"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,35,223,35,223,40,166,40"/>
+<area shape="rect" id="Node000004" href="$dc/de5/random_8c.html#a10ddbdc45f7f1a0a55ec5e0cb7bf683a" title="Get the Random Value from the generator immediately." alt="" coords="214,75,374,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,58,200,68,198,73,164,63"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="369,72,412,59,414,64,371,77"/>
+</map>

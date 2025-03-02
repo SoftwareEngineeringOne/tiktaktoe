@@ -1,0 +1,20 @@
+<map id="time_onInterrupt" name="time_onInterrupt">
+<area shape="rect" id="Node000001" title="Increments the ticks and can finish the round." alt="" coords="5,55,136,82"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="184,55,321,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,66,168,66,168,71,136,71"/>
+<area shape="rect" id="Node000003" href="$df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="369,27,531,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,56,353,51,354,57,322,61"/>
+<area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="392,80,508,108"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="322,74,377,82,376,87,321,80"/>
+<area shape="rect" id="Node000004" href="$dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="# THIS FUNCTION IS A STUB! #" alt="" coords="579,15,740,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,37,564,36,564,42,532,42"/>
+<area shape="rect" id="Node000005" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="996,29,1103,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="740,17,787,10,868,3,948,10,997,21,996,27,948,15,868,8,788,15,741,22"/>
+<area shape="rect" id="Node000006" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="812,24,924,52"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="740,35,797,35,797,40,740,40"/>
+<area shape="rect" id="Node000007" href="$dc/de5/random_8c.html#a10ddbdc45f7f1a0a55ec5e0cb7bf683a" title="Get the Random Value from the generator immediately." alt="" coords="788,75,948,120"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="740,58,774,68,772,73,738,63"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="943,72,986,59,988,64,945,77"/>
+<area shape="rect" id="Node000009" href="$df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="599,84,720,112"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="509,92,584,94,584,99,508,97"/>
+</map>

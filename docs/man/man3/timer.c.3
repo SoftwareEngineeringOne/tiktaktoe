@@ -1,0 +1,293 @@
+.TH "hal_low/timer.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/timer.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'hal_low/timer\&.h'\fP
+.br
+\fR#include 'hal_low/nvic\&.h'\fP
+.br
+\fR#include 'hal_low/register_access\&.h'\fP
+.br
+\fR#include 'hal_low/uart\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtimer_init\fP (\fBTimer\fP const timer)"
+.br
+.RI "Default Initialisation of Timer\&. "
+.ti -1c
+.RI "void \fBtimer_init_detailed\fP (\fBTimer\fP const timer, uint8_t const prescaler, \fBTimerMode\fP const mode, \fBTimerBitMode\fP const bitMode)"
+.br
+.RI "Initialises the Timer\&. "
+.ti -1c
+.RI "void \fBtimer_captureCompareSet\fP (const \fBTimer\fP timer, const \fBTimerCaptureCompare\fP captureCompare, const uint32_t value, const \fBbool\fP shortcutClear)"
+.br
+.RI "Set the Capture/ Compare Register of the Timer\&. "
+.ti -1c
+.RI "uint32_t \fBtimer_captureCompareGet\fP (const \fBTimer\fP timer, const \fBTimerCaptureCompare\fP captureCompare)"
+.br
+.RI "Gets the Capture Compare Register of Timer\&. "
+.ti -1c
+.RI "void \fBtimer_start\fP (const \fBTimer\fP timer)"
+.br
+.RI "Starts the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_stop\fP (const \fBTimer\fP timer)"
+.br
+.RI "Stops the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_count\fP (const \fBTimer\fP timer)"
+.br
+.RI "Activate counting on the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_clear\fP (const \fBTimer\fP timer)"
+.br
+.RI "Clear the time of the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_capture\fP (const \fBTimer\fP timer, const \fBTimerCaptureCompare\fP capture)"
+.br
+.RI "Capture the time of the given timer\&. "
+.ti -1c
+.RI "void \fBtimer_clearCompareEvent\fP (const \fBTimer\fP timer)"
+.br
+.RI "Clears the Compare Event for CC[0]\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fBTimerBase\fP [3]"
+.br
+.ti -1c
+.RI "static const uint32_t \fBTimerCCOffset\fP [4]"
+.br
+.ti -1c
+.RI "static const uint32_t \fBTimerCaptureTaskOffset\fP [4]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBtimer\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void timer_capture (\fBTimer\fP timer, \fBTimerCaptureCompare\fP capture)"
+
+.PP
+Capture the time of the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.br
+\fIcapture\fP Number of the Capture Compare 
+.RE
+.PP
+
+.PP
+Definition at line \fB128\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_TASK_START\fP, \fBTimerBase\fP, and \fBTimerCaptureTaskOffset\fP\&.
+.SS "uint32_t timer_captureCompareGet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare)"
+
+.PP
+Gets the Capture Compare Register of Timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP 
+.br
+\fIcaptureCompare\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line \fB92\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_read()\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
+.SS "void timer_captureCompareSet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare, uint32_t value, \fBbool\fP shortcutClear)"
+
+.PP
+Set the Capture/ Compare Register of the Timer\&. It also enables the shortcut between CC[0] and CLEAR, so that the timer is cleared, when the compared value is reached\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Timer 
+.br
+\fIcaptureCompare\fP Capture Compare Register 
+.br
+\fIvalue\fP New Value 
+.br
+\fIshortcutClear\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB75\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_read()\fP, \fBregister_write()\fP, \fBTIMER_SHORTS\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
+.SS "void timer_clear (\fBTimer\fP timer)"
+
+.PP
+Clear the time of the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB121\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_CLEAR\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_clearCompareEvent (\fBTimer\fP timer)"
+
+.PP
+Clears the Compare Event for CC[0]\&. This could be useful for stopping the timer from pulling the interrupt-line\&. 
+.PP
+Definition at line \fB136\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_COMPARE_0\fP, \fBTIMER_EVENT_CLEAR\fP, and \fBTimerBase\fP\&.
+.SS "void timer_count (\fBTimer\fP timer)"
+
+.PP
+Activate counting on the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB114\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_COUNT\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_init (\fBTimer\fP timer)"
+
+.PP
+Default Initialisation of Timer\&. Initializes the Timer Peripheral to a value ~4sek\&. This is just for demonstration and could be changed to your needs 
+.PP
+Definition at line \fB44\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBCC0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, \fBTIMER_MODE_TIMER\fP, and \fBtimer_start()\fP\&.
+.SS "void timer_init_detailed (\fBTimer\fP timer, uint8_t prescaler, \fBTimerMode\fP mode, \fBTimerBitMode\fP bitMode)"
+
+.PP
+Initialises the Timer\&. Compare Value set is for CC[0]
+.PP
+\fBParameters\fP
+.RS 4
+\fIprescaler\fP Register value according to \fRTable 147: PRESCALER\fP\&. value 0\&.\&.9 is valid ==> 2^0 \&.\&. 2^9 
+.br
+\fIbitmode\fP Bit Mode\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB52\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBINT_COMPARE0\fP, \fBInterrupt_ID8\fP, \fBInterrupt_Set_Enable\fP, \fBregister_write()\fP, \fBTIMER0_BASE_ADDRESS\fP, \fBTIMER_BITMODE\fP, \fBTIMER_INTENSET\fP, \fBTIMER_PRESCALER\fP, and \fBTimerBase\fP\&.
+.SS "void timer_start (\fBTimer\fP timer)"
+
+.PP
+Starts the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB100\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_START\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SS "void timer_stop (\fBTimer\fP timer)"
+
+.PP
+Stops the given timer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimer\fP Number of the timer 
+.RE
+.PP
+
+.PP
+Definition at line \fB107\fP of file \fBtimer\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBTIMER_STOP\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const uint32_t TimerBase[3]\fR [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+    TIMER0_BASE_ADDRESS,
+    TIMER1_BASE_ADDRESS,
+    TIMER2_BASE_ADDRESS}
+.fi
+
+.PP
+Definition at line \fB26\fP of file \fBtimer\&.c\fP\&.
+.SS "const uint32_t TimerCaptureTaskOffset[4]\fR [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+=
+    {TIMER_CAPTURE_0, TIMER_CAPTURE_1, TIMER_CAPTURE_2, TIMER_CAPTURE_3}
+.fi
+
+.PP
+Definition at line \fB41\fP of file \fBtimer\&.c\fP\&.
+.SS "const uint32_t TimerCCOffset[4]\fR [static]\fP"
+\fBInitial value:\fP.PP
+.nf
+= {
+    TIMER_CC_0,
+    TIMER_CC_1,
+    TIMER_CC_2,
+    TIMER_CC_3,
+}
+.fi
+
+.PP
+Definition at line \fB31\fP of file \fBtimer\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

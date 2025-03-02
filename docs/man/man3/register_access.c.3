@@ -1,0 +1,92 @@
+.TH "hal_low/register_access.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal_low/register_access.c \- Generic Register-Access\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'hal_low/register_access\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBregister_write\fP (const uint32_t address, const uint32_t value)"
+.br
+.RI "Write Value to Register\&. "
+.ti -1c
+.RI "uint32_t \fBregister_read\fP (const uint32_t address)"
+.br
+.RI "Read from Register\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Generic Register-Access\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Thomas Vogt 
+.PP
+Sven Reis
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBregister_access\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t register_read (uint32_t address)"
+
+.PP
+Read from Register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddress\fP Register Address
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Register Value 
+.RE
+.PP
+
+.PP
+Definition at line \fB31\fP of file \fBregister_access\&.c\fP\&.
+.SS "void register_write (uint32_t address, uint32_t value)"
+
+.PP
+Write Value to Register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddress\fP Register Address 
+.br
+\fIvalue\fP Register Value 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBregister_access\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

@@ -1,0 +1,29 @@
+\doxysection{register\+\_\+access.\+c}
+\hypertarget{register__access_8c_source}{}\label{register__access_8c_source}\index{hal\_low/register\_access.c@{hal\_low/register\_access.c}}
+\mbox{\hyperlink{register__access_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{register__access_8h}{hal\_low/register\_access.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00022}\mbox{\hyperlink{register__access_8c_a53fb0d9bb1b0c3e72ab6760c69cad891}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{register__access_8c_a53fb0d9bb1b0c3e72ab6760c69cad891}{register\_write}}(\textcolor{keyword}{const}\ uint32\_t\ address,\ \textcolor{keyword}{const}\ uint32\_t\ value)}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Assign\ pointer\ to\ given\ address:}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00025}00025\ \ \ \ \ uint32\_t\ *\ \textcolor{keyword}{const}\ pointer\_to\_address\ =\ (uint32\_t\ *)address;}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Write\ to\ the\ End\ of\ the\ Pointer}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00028}00028\ \ \ \ \ *pointer\_to\_address\ =\ value;}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00031}\mbox{\hyperlink{register__access_8c_a5a3f22e14522fbf55469425a4a48a5cc}{00031}}\ uint32\_t\ \mbox{\hyperlink{register__access_8c_a5a3f22e14522fbf55469425a4a48a5cc}{register\_read}}(\textcolor{keyword}{const}\ uint32\_t\ address)}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Assign\ pointer\ to\ given\ address:}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00034}00034\ \ \ \ \ uint32\_t\ \textcolor{keyword}{const}\ *\ \textcolor{keyword}{const}\ pointer\_to\_address\ =\ (uint32\_t\ *)address;}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ Read\ from\ the\ End\ of\ the\ Pointer}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ value\ =\ *pointer\_to\_address;}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ read\ value}}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{register__access_8c_source_l00041}00041\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,12 @@
+<map id="logic" name="logic">
+<area shape="rect" id="node1" href="dir_701344d99a520edc46b3f16735b55bde.html" title="logic" alt="" coords="144,5,196,33"/>
+<area shape="rect" id="node2" href="dir_125447c92e2d7c7fbb49f13fdd370274.html" title="presentation" alt="" coords="5,81,109,109"/>
+<area shape="poly" id="edge1" href="dir_000004_000006.html" alt="" coords="152,36,91,75,88,70,149,31"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000004_000006.html" title="2" alt="" coords="93,69,101,86"/>
+<area shape="rect" id="node3" href="dir_379e7395918bdddf5544f1f5badb427e.html" title="hal_high" alt="" coords="132,81,208,109"/>
+<area shape="poly" id="edge2" href="dir_000004_000000.html" alt="" coords="173,34,173,65,168,65,168,34"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000004_000000.html" title="1" alt="" coords="175,54,183,71"/>
+<area shape="rect" id="node4" href="dir_586ad3c2f85d776b984733890d824e3e.html" title="util" alt="" coords="233,81,276,109"/>
+<area shape="poly" id="edge3" href="dir_000004_000008.html" alt="" coords="187,32,230,69,226,73,184,36"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000004_000008.html" title="1" alt="" coords="227,54,235,71"/>
+</map>

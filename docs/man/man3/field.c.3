@@ -1,0 +1,90 @@
+.TH "presentation/field.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/field.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include 'presentation/cell\&.h'\fP
+.br
+\fR#include 'presentation/cursor\&.h'\fP
+.br
+\fR#include 'presentation/print\&.h'\fP
+.br
+\fR#include 'config\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBprintRow\fP (char **row, size_t row_length)"
+.br
+.RI "Print one row\&. "
+.ti -1c
+.RI "void \fBfield_redraw\fP ()"
+.br
+.RI "Redraw the whole 2D field\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+
+.RE
+.PP
+\fBDate\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBfield\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void field_redraw ()"
+
+.PP
+Redraw the whole 2D field\&. 
+.PP
+Definition at line \fB37\fP of file \fBfield\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCORNER_BOT_LEFT\fP, \fBCORNER_BOT_RIGHT\fP, \fBCORNER_TOP_LEFT\fP, \fBCORNER_TOP_RIGHT\fP, \fBCROSS\fP, \fBcursor_moveTo()\fP, \fBEMPTY\fP, \fBFIELD_X_OFFSET\fP, \fBFIELD_Y_OFFSET\fP, \fBg_cell_size\fP, \fBCellSize::height\fP, \fBprintRow()\fP, \fBSIDE\fP, \fBT_BOT\fP, \fBT_LEFT\fP, \fBT_RIGHT\fP, \fBT_TOP\fP, \fBTOP_BOTTOM\fP, and \fBCellSize::width\fP\&.
+.SS "void printRow (char ** row, size_t row_length)\fR [static]\fP"
+
+.PP
+Print one row\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP String to print 
+.br
+\fIrow_length\fP Length of string 
+.RE
+.PP
+
+.PP
+Definition at line \fB100\fP of file \fBfield\&.c\fP\&.
+.PP
+References \fBprint()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

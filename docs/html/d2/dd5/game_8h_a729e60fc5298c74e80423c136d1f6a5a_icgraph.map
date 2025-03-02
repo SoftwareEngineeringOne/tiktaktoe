@@ -1,0 +1,19 @@
+<map id="game_endTurn" name="game_endTurn">
+<area shape="rect" id="Node000001" title=" " alt="" coords="883,32,999,60"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="698,5,835,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="867,37,835,32,836,27,868,32"/>
+<area shape="rect" id="Node000005" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="707,57,826,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="868,59,827,65,826,60,867,54"/>
+<area shape="rect" id="Node000003" href="$df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="517,5,647,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="682,22,647,22,647,16,682,16"/>
+<area shape="rect" id="Node000004" href="$d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737" title="Timer interrupt handler." alt="" coords="323,5,466,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="501,22,467,22,467,16,501,16"/>
+<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="514,57,650,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="691,74,650,74,650,68,691,68"/>
+<area shape="rect" id="Node000007" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="352,57,438,85"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="499,74,438,74,438,68,499,68"/>
+<area shape="rect" id="Node000008" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="108,57,275,85"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="336,74,276,74,276,68,336,68"/>
+<area shape="rect" id="Node000009" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,57,60,85"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="92,74,60,74,60,68,92,68"/>
+</map>

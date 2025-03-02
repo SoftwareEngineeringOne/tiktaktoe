@@ -1,0 +1,21 @@
+<map id="logic/bot.h" name="logic/bot.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="205,5,294,33"/>
+<area shape="rect" id="Node000002" href="$d2/dd5/game_8h.html" title=" " alt="" coords="152,81,257,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,35,223,69,218,66,239,32"/>
+<area shape="rect" id="Node000006" href="$d5/d5a/field_8h.html" title=" " alt="" coords="232,157,379,184"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="257,32,298,141,293,143,252,34"/>
+<area shape="rect" id="Node000003" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="5,157,158,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,112,118,151,115,146,181,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="89,241,159,268"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="203,110,190,145,172,186,145,230,140,227,167,183,185,143,198,108"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="224,107,277,145,274,150,221,111"/>
+<area shape="rect" id="Node000004" href="$d4/da4/def_8h.html" title=" " alt="" coords="12,241,66,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,186,55,228,50,226,72,184"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="91,184,113,226,108,228,86,186"/>
+<area shape="rect" id="Node000007" href="$db/d16/config_8h.html" title=" " alt="" coords="184,241,256,268"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="294,187,246,232,243,228,290,183"/>
+<area shape="rect" id="Node000008" href="$d2/d5a/ascii__art_8h.html" title=" " alt="" coords="281,232,418,277"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="315,184,333,217,328,220,310,186"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="442,241,516,268"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="334,183,438,231,436,236,332,187"/>
+</map>

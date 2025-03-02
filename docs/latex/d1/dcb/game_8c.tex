@@ -1,0 +1,331 @@
+\doxysection{logic/game.c File Reference}
+\hypertarget{game_8c}{}\label{game_8c}\index{logic/game.c@{logic/game.c}}
+{\ttfamily \#include "{}logic/game.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+high/input\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/nvic.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/random.\+h"{}}\newline
+{\ttfamily \#include "{}hal\+\_\+low/timer.\+h"{}}\newline
+{\ttfamily \#include "{}logic/bot.\+h"{}}\newline
+{\ttfamily \#include "{}logic/input.\+h"{}}\newline
+{\ttfamily \#include "{}logic/time.\+h"{}}\newline
+{\ttfamily \#include "{}logic/winning.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/cell.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/field.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/menu.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ui.\+h"{}}\newline
+{\ttfamily \#include "{}util/math.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for game.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/de8/game_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{game_8c_a387f7e30d5af50e10db36dbf0ea4b04b}{init}} (\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Initializes several things at the game start. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{game_8c_a5ba143de5d686da017fc2281274d7729}{handle\+Forced\+Move\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Handles the presentation update in case of a automatic round. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{game_8c_a4938becaec0f17690ab3a575fcb0bd4a}{redraw\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the whole UI. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{game_8c_a518b849acc5ec6c771aa17706ac9c3b3}{calculate\+Summary}} ()
+\item 
+void \mbox{\hyperlink{game_8c_a99a6ceced9c8b9648cc11a086603d66e}{game\+\_\+run}} (const \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Start the main game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a664affa156a0a5fa033bad0b88bb6c72}{game\+\_\+on\+Time\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Automatic turn in case the round time is over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a729e60fc5298c74e80423c136d1f6a5a}{game\+\_\+end\+Turn}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{game_8c_a287ea08db9d5fa1a3c003fd565a654f9}{force\+\_\+ui\+\_\+update}} = \mbox{\hyperlink{def_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static \mbox{\hyperlink{structGameState}{Game\+State}} \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}}
+\item 
+static \mbox{\hyperlink{structCellState}{Cell\+State}} \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8c_a518b849acc5ec6c771aa17706ac9c3b3}\label{game_8c_a518b849acc5ec6c771aa17706ac9c3b3} 
+\index{game.c@{game.c}!calculateSummary@{calculateSummary}}
+\index{calculateSummary@{calculateSummary}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{calculateSummary()}{calculateSummary()}}
+{\footnotesize\ttfamily static void calculate\+Summary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00211}{211}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{game_8h_source_l00069}{Game\+State\+::circle\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00068}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::cross\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{time_8h_source_l00026}{Game\+Timer\+::ticks\+\_\+total}}, \mbox{\hyperlink{game_8h_source_l00062}{Game\+State\+::total\+\_\+ticks}}, and \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a518b849acc5ec6c771aa17706ac9c3b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a729e60fc5298c74e80423c136d1f6a5a}\label{game_8c_a729e60fc5298c74e80423c136d1f6a5a} 
+\index{game.c@{game.c}!game\_endTurn@{game\_endTurn}}
+\index{game\_endTurn@{game\_endTurn}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_endTurn()}{game\_endTurn()}}
+{\footnotesize\ttfamily void game\+\_\+end\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00138}{138}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{game_8h_source_l00059}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00077}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00076}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00075}{Cell\+State\+::selected}}, and \mbox{\hyperlink{time_8c_source_l00047}{time\+\_\+finish\+Turn()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d1/dcb/game_8c_a729e60fc5298c74e80423c136d1f6a5a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a729e60fc5298c74e80423c136d1f6a5a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a664affa156a0a5fa033bad0b88bb6c72}\label{game_8c_a664affa156a0a5fa033bad0b88bb6c72} 
+\index{game.c@{game.c}!game\_onTimeOut@{game\_onTimeOut}}
+\index{game\_onTimeOut@{game\_onTimeOut}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_onTimeOut()}{game\_onTimeOut()}}
+{\footnotesize\ttfamily void game\+\_\+on\+Time\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Automatic turn in case the round time is over. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00118}{118}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00074}{Cell\+State\+::all}}, \mbox{\hyperlink{bot_8c_source_l00023}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{game_8h_source_l00059}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{game_8c_source_l00138}{game\+\_\+end\+Turn()}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00077}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00076}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::mode}}, and \mbox{\hyperlink{game_8h_source_l00030}{PVE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a664affa156a0a5fa033bad0b88bb6c72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a664affa156a0a5fa033bad0b88bb6c72_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a99a6ceced9c8b9648cc11a086603d66e}\label{game_8c_a99a6ceced9c8b9648cc11a086603d66e} 
+\index{game.c@{game.c}!game\_run@{game\_run}}
+\index{game\_run@{game\_run}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_run()}{game\_run()}}
+{\footnotesize\ttfamily void game\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Start the main game. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00062}{62}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00061}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{game_8h_source_l00074}{Cell\+State\+::all}}, \mbox{\hyperlink{style_8h_source_l00040}{BOLD}}, \mbox{\hyperlink{game_8c_source_l00211}{calculate\+Summary()}}, \mbox{\hyperlink{cell_8c_source_l00103}{cell\+\_\+redraw\+\_\+with\+Modifier()}}, \mbox{\hyperlink{cell_8c_source_l00133}{cell\+\_\+redraw\+All()}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00025}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8c_source_l00251}{handle\+Forced\+Move\+Update()}}, \mbox{\hyperlink{game_8c_source_l00167}{init()}}, \mbox{\hyperlink{input__buf_8c_source_l00050}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{input_8c_source_l00037}{input\+\_\+handle\+Byte()}}, \mbox{\hyperlink{time_8h_source_l00025}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{math_8h_source_l00038}{max}}, \mbox{\hyperlink{menu_8c_source_l00077}{menu\+\_\+show\+Game\+Over()}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{game_8c_source_l00240}{redraw\+Field()}}, \mbox{\hyperlink{game_8h_source_l00025}{REMAINING\+\_\+\+TIME}}, \mbox{\hyperlink{game_8h_source_l00075}{Cell\+State\+::selected}}, \mbox{\hyperlink{config_8h_source_l00029}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{timer_8h_source_l00082}{TIMER0}}, \mbox{\hyperlink{timer_8c_source_l00107}{timer\+\_\+stop()}}, \mbox{\hyperlink{ui_8c_source_l00037}{ui\+\_\+update\+Timer()}}, \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}, and \mbox{\hyperlink{winning_8c_source_l00039}{winning\+\_\+check\+For\+Winner()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a99a6ceced9c8b9648cc11a086603d66e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a99a6ceced9c8b9648cc11a086603d66e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a5ba143de5d686da017fc2281274d7729}\label{game_8c_a5ba143de5d686da017fc2281274d7729} 
+\index{game.c@{game.c}!handleForcedMoveUpdate@{handleForcedMoveUpdate}}
+\index{handleForcedMoveUpdate@{handleForcedMoveUpdate}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{handleForcedMoveUpdate()}{handleForcedMoveUpdate()}}
+{\footnotesize\ttfamily void handle\+Forced\+Move\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles the presentation update in case of a automatic round. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00251}{251}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00074}{Cell\+State\+::all}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{game_8h_source_l00059}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00077}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00076}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00075}{Cell\+State\+::selected}}, and \mbox{\hyperlink{ui_8c_source_l00098}{ui\+\_\+update\+Turn()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a5ba143de5d686da017fc2281274d7729_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a5ba143de5d686da017fc2281274d7729_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a387f7e30d5af50e10db36dbf0ea4b04b}\label{game_8c_a387f7e30d5af50e10db36dbf0ea4b04b} 
+\index{game.c@{game.c}!init@{init}}
+\index{init@{init}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes several things at the game start. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00167}{167}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00074}{Cell\+State\+::all}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00025}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00048}{Cell\+::col}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{game_8h_source_l00026}{FIRST\+\_\+\+ROUND}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{style_8h_source_l00046}{HIDE\+\_\+\+CURSOR}}, \mbox{\hyperlink{input__buf_8c_source_l00034}{input\+\_\+init()}}, \mbox{\hyperlink{game_8h_source_l00050}{Cell\+::marked\+\_\+by}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{game_8c_source_l00240}{redraw\+Field()}}, \mbox{\hyperlink{random_8c_source_l00029}{rng\+\_\+init()}}, \mbox{\hyperlink{game_8h_source_l00075}{Cell\+State\+::selected}}, \mbox{\hyperlink{time_8c_source_l00030}{time\+\_\+init()}}, and \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a387f7e30d5af50e10db36dbf0ea4b04b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a387f7e30d5af50e10db36dbf0ea4b04b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a4938becaec0f17690ab3a575fcb0bd4a}\label{game_8c_a4938becaec0f17690ab3a575fcb0bd4a} 
+\index{game.c@{game.c}!redrawField@{redrawField}}
+\index{redrawField@{redrawField}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{redrawField()}{redrawField()}}
+{\footnotesize\ttfamily void redraw\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Refreshes the whole UI. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00240}{240}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00074}{Cell\+State\+::all}}, \mbox{\hyperlink{cell_8c_source_l00133}{cell\+\_\+redraw\+All()}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00059}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{field_8c_source_l00037}{field\+\_\+redraw()}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{game_8h_source_l00025}{REMAINING\+\_\+\+TIME}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00075}{Cell\+State\+::selected}}, \mbox{\hyperlink{config_8h_source_l00029}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{ui_8c_source_l00027}{ui\+\_\+display\+Timer()}}, \mbox{\hyperlink{ui_8c_source_l00088}{ui\+\_\+display\+Turn()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a4938becaec0f17690ab3a575fcb0bd4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dcb/game_8c_a4938becaec0f17690ab3a575fcb0bd4a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{game_8c_a6d775e66faffca9c94176dacd93a7e26}\label{game_8c_a6d775e66faffca9c94176dacd93a7e26} 
+\index{game.c@{game.c}!cell\_state@{cell\_state}}
+\index{cell\_state@{cell\_state}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{cell\_state}{cell\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCellState}{Cell\+State}} cell\+\_\+state\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00041}{41}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\Hypertarget{game_8c_a287ea08db9d5fa1a3c003fd565a654f9}\label{game_8c_a287ea08db9d5fa1a3c003fd565a654f9} 
+\index{game.c@{game.c}!force\_ui\_update@{force\_ui\_update}}
+\index{force\_ui\_update@{force\_ui\_update}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{force\_ui\_update}{force\_ui\_update}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} force\+\_\+ui\+\_\+update = \mbox{\hyperlink{def_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00039}{39}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+\Hypertarget{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}\label{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51} 
+\index{game.c@{game.c}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_state}{game\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGameState}{Game\+State}} game\+\_\+state\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00040}{40}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+

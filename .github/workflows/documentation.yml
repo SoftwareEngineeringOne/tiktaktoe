@@ -18,11 +18,6 @@ jobs:
 
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.12.0
-      with:
-        enable-latex: true
-
-    - name: Copy PDF
-      run: cp docs/latex/refman.pdf docs/Documentation.pdf
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3

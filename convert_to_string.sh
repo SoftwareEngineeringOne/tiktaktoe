@@ -22,14 +22,14 @@ If ascii_art.txt contains:
 
 The script outputs:
 
-static char *MEDIUM_X = "\\
+#define MEDIUM_X "\\
 .___________. __   __  ___ .___________.    ___       __  ___ .___________.  ______    _______ \n\\
 |           ||  | |  |/  / |           |   /   \\     |  |/  / |           | /  __  \\  |   ____| \n\\
 \`---|  |----\`|  | |  '  /  \`---|  |----\`  /  ^  \\    |  '  /  \`---|  |----\`|  |  |  | |  |__   \\n\\
     |  |     |  | |    <       |  |      /  /_\\  \\   |    <       |  |     |  |  |  | |   __|   \n\\
     |  |     |  | |  .  \\      |  |     /  _____  \\  |  .  \\      |  |     |  \`--'  | |  |____  \n\\
     |__|     |__| |__|\\__\\     |__|    /__/     \\__\\ |__|\\__\\     |__|      \\______/  |_______| \n\\
-";
+"
 EOF
 }
 
@@ -42,7 +42,7 @@ input_file="$1"
 varname="$2"
 
 # Begin output: note the backslash at the end of the first line for multi-line C string literal
-echo "static char *$varname = \"\\"
+echo "#define $varname \"\\"
 
 # Process each line of the input file
 while IFS= read -r line; do
@@ -55,4 +55,4 @@ while IFS= read -r line; do
 done < "$input_file"
 
 # End the C variable declaration
-echo "\";"
+echo "\""

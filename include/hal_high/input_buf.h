@@ -1,4 +1,21 @@
-﻿#ifndef INPUT_BUF_H
+﻿/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
+#ifndef INPUT_BUF_H
 #define INPUT_BUF_H
 
 #include "def.h"
@@ -58,15 +75,5 @@ bool input_isFull(volatile InputBuffer *ib);
  * @return False if empty
  */
 bool input_getNext(volatile InputBuffer *ib, uint8_t *byte);
-
-/**
- * @brief Put the next byte into the buffer
- * @param[inout] ib
- * InputBuffer
- * @param[out] byte
- * Next Byte
- * @return False if full
- */
-static bool _putIntoBuf(volatile InputBuffer *ib, uint8_t byte);
 
 #endif// INPUT_BUF_H

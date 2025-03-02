@@ -1,3 +1,20 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "def.h"
 #include "hal_high/input_buf.h"
 #include "hal_low/nvic.h"
@@ -5,6 +22,7 @@
 #include "hal_low/uart.h"
 #include "logic/game.h"
 #include "presentation/print.h"
+#include "presentation/style.h"
 
 void menu_todo()
 {
@@ -30,7 +48,6 @@ int main(void)
 {
     uart_init(true);
     input_init(&input_buf);
-
 
     print(HIDE_CURSOR);
     uint8_t input;

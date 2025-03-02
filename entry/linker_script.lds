@@ -1,14 +1,20 @@
 /**
- * @file
- * @copyright
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ * @file 
  *
  * @author Thomas Vogt
  *
+ * @date 
+ *
  * @brief ARM Cortex-M4 Linker Script.
- **/
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 
 /*---------------------- Flash Configuration ----------------------------------
   <h> Flash Configuration

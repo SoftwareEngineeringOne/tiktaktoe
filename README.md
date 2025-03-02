@@ -4,33 +4,40 @@ Fork of https://github.com/infohoschie/arm-cortex-m0-cmake-start
 
 Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 
-## Architecture description
-1. Main initializes the program (UART etc.) and prints the first output
-2. Infinity loop in main
-3. The game is interrupt based. Interrupts are defined in "interrupts". They will call functions in "logic". The logic is based on "hal_high" and "output"
+## How to build/run the project
+### Using CMake and qemu directly
 
-### Hardware Abstraction Layer (hal_high and hal_low)
+### Using the provided Makefile
 
-### Interrupt handling (interrupts)
+### Using Docker
 
-### Game Logic (logic)
+## Compile time configurations
+The project has a few options that can be changed before compilation.
+- Number of rows (default is 4)
+- Number of columns (default is 4)
+- Unicode support (default is "ON")
 
-### Output (output)
+These can be set by:
+### Directly passing to CMake
+When configuring the project the default command `cmake --preset arm-cortex-m0-{unix/mingw}` can be
+appended by:
+- for the number of rows: `[...] --DCELLS_PER_COL=$(NUMBER)`
+- for the number of cols: `[...] --DCELLS_PER_ROW=$(NUMBER)`
+- for unicode support: `[...] --DENABLE_UNICODE=$(ON/OFF)`
 
-## Coding Conventions
-- Conventional Commits (https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
-- The architecture is documented in this README
-- Every file must have a short description at the beginning
-- Every function must have a doc comment with a short description
-- Not self describing code must be commented (should be avoided)
-- Public functions start with the package name followed by an underscore
-- Private functions should therefore not be called from outside
-- Private functions should follow the public functions in the header files
+### Using the included Makefile
+When using the Makefile to configure/build the project variables can be passed like this:
+- for the number of rows: `make ROWS=$(NUMBER)`
+- for the number of cols: `make COLS=$(NUMBER)`
+- for unicode support: `make UNICODE=$(ON/OFF)`
 
-### Naming
-#### Functions
-- public functions should be prefixed with "`module_[...]`"
-- private functions should be marked as `static` and prefixed with "`_[...]`"
-- the function name itself should be written in `camelCase`
-- a specialization may follow as a suffix, such as "`[...]_waiting`"
+Due to the way the Makefile is structured, these may also be passed when using e.g. `make run`.
+However please note, that in order for changes to take affect the build directory may have to be deleted.
+This can be done using `make clean` or by manually deleting the directory.
 
+
+## Architecture
+See [Architecture.md](Architecture.md)
+
+## Conventions
+See [Conventions.md](Conventions.md)

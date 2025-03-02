@@ -1,3 +1,20 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "hal_low/timer.h"
 
 #include "hal_low/nvic.h"
@@ -18,8 +35,8 @@ static const uint32_t TimerCCOffset[4] = {
     TIMER_CC_3,
 };
 
-static const uint32_t TimerCompareEventOffset[4] =
-    {TIMER_COMPARE_0, TIMER_COMPARE_1, TIMER_COMPARE_2, TIMER_COMPARE_3};
+/* static const uint32_t TimerCompareEventOffset[4] = */
+/*     {TIMER_COMPARE_0, TIMER_COMPARE_1, TIMER_COMPARE_2, TIMER_COMPARE_3}; */
 
 static const uint32_t TimerCaptureTaskOffset[4] =
     {TIMER_CAPTURE_0, TIMER_CAPTURE_1, TIMER_CAPTURE_2, TIMER_CAPTURE_3};

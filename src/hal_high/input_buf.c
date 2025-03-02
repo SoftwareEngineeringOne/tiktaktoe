@@ -1,12 +1,31 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ */
 #include "hal_high/input_buf.h"
 
 #include "presentation/print.h"
 
 volatile InputBuffer input_buf;
 
+static bool _putIntoBuf(volatile InputBuffer *ib, const uint8_t byte);
+
 void input_onInterrupt(const uint8_t input)
 {
-    if(!putIntoBuf(&input_buf, input))
+    if(!_putIntoBuf(&input_buf, input))
     {
         print("INPUT BUFFER OVERFLOW");
     }
@@ -39,7 +58,15 @@ bool input_getNext(volatile InputBuffer *ib, uint8_t *byte)
     return true;
 }
 
-bool putIntoBuf(volatile InputBuffer *ib, const uint8_t byte)
+/**
+ * @brief Put the next byte into the buffer
+ * @param[inout] ib
+ * InputBuffer
+ * @param[out] byte
+ * Next Byte
+ * @return False if full
+ */
+bool _putIntoBuf(volatile InputBuffer *ib, const uint8_t byte)
 {
     if(input_isFull(ib))
     {

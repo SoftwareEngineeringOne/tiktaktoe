@@ -1,3 +1,19 @@
+/**
+ * @file 
+ *
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 #ifndef GAME_H
 #define GAME_H
 
@@ -34,15 +50,15 @@ typedef struct
         Player marked_by;
 } Cell;
 
-static Mode game_mode;
-static Player current_player;
-static volatile uint8_t turn_number;
-static uint8_t last_ui_update;
+typedef struct 
+{
+    Player winner;
+    Mode mode;
+    uint8_t turn;
+    uint32_t total_ticks;
+    uint32_t average_ticks;
+} GameInfo;
 
-static Cell cells[CELLS_PER_COL][CELLS_PER_ROW];
-static Cell *selected_cell;
-static Cell *last_marked_cross;
-static Cell *last_marked_circle;
 
 /**
  * @brief Start the main game
@@ -54,47 +70,5 @@ void game_run(const Mode mode);
  */
 void game_onTimeOut();
 
-/**
- * @brief Initializes several things at the game start
- */
-static void _init(const Mode mode);
-
-/**
- * @brief Checks at the end of the round if someone has won
- * @return The player who won
- */
-static Player _checkForWinner();
-
-/**
- * @brief Handles the presentation update in case of a automatic round
- */
-static void _handleForcedMoveUpdate();
-
-/**
- * @brief Checks if the given player has won
- * @param [in] cell
- * Newest marked cell of the player
- * @param [in] player
- * Player it is looking for
- * @return True when player won
- */
-static bool _checkIfPlayerWon(const Cell *cell, Player player);
-
-/**
- * @brief Does certain things on input
- * @param [in] input
- */
-static bool _handleInput(const uint8_t *input);
-
-/**
- * @brief Refreshes the whole UI
- */
-static void _redrawField();
-
-/**
- * @brief Prints the winner and statistics
- * @param [in] winner
- */
-static void _printEndScreen(Player winner);
 
 #endif// GAME_H

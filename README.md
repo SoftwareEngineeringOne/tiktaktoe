@@ -59,8 +59,6 @@ docker run ghcr.io/softwareengineeringone/tiktaktoe:latest
 docker build -t [TAGNAME] .
 docker run [TAGNAME]
 ```
-
-ST182165
 ## Compile time configurations
 The project has a few options that can be changed before compilation.
 - Number of rows (default is 4)
@@ -68,6 +66,7 @@ The project has a few options that can be changed before compilation.
 - Ticks per turn (default is 20)
 - Tick speed (default is 12, lower is faster)
 - Unicode support (default is "ON")
+- ASCII Art (default is "ON", may look broken on small screens) 
 
 These can be set by:
 ### Directly passing to CMake
@@ -77,7 +76,10 @@ appended by:
 - for the number of cols: `[...] --DCELLS_PER_ROW=$(NUMBER)`
 - for ticks per turn: `[...] --DTICKS_PER_TURN=$(NUMBER)`
 - for tick speed: `[...] --DTICK_SPEED=$(NUMBER)`
-- for unicode support: `[...] --DENABLE_UNICODE=$(ON/OFF)`
+- for unicode: `[...] --DENABLE_UNICODE=$(ON/OFF)`
+- for ascii art: `[...] --DENABLE_ASCII_ART=$(ON/OFF)`
+_All options can be combined._
+
 
 ### Using the included Makefile
 When using the Makefile to configure/build the project variables can be passed like this:
@@ -85,7 +87,8 @@ When using the Makefile to configure/build the project variables can be passed l
 - for the number of cols: `make COLS=$(NUMBER)`
 - for ticks per turn: `make TICKS_PER_TURN=$(NUMBER)`
 - for tick speed: `make TICK_SPEED=$(NUMBER)`
-- for unicode support: `make UNICODE=$(ON/OFF)`
+- for unicode: `make UNICODE=$(ON/OFF)`
+- for ascii art: `make ASCII_ART=$(ON/OFF)`
 _All options can be combined._
 
 Due to the way the Makefile is structured, these may also be passed when using e.g. `make run`.

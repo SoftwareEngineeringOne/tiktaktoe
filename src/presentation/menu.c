@@ -75,6 +75,11 @@ bool menu_showMainMenu()
 void menu_showGameOver(const GameState *game_info)
 {
     ui_gameOver();
+
+    // avoid artifact when ascii art is disabled
+    cursor_moveTo(1, (CELLS_PER_COL * g_cell_size.height + HEADING_LINES) + 1);
+    print(ERASE_LINE_FROM_CURSOR);
+
     cursor_moveTo(1, CELLS_PER_COL * g_cell_size.height + HEADING_LINES);
     printWinnerBanner(game_info);
 

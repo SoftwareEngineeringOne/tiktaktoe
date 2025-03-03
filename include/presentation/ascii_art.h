@@ -1,6 +1,7 @@
 #ifndef ASCII_ART_H
 #define ASCII_ART_H
 
+#ifdef ENABLE_ASCII_ART
 #define HEADING_LINES 9
 
 #ifdef ENABLE_UNICODE
@@ -54,7 +55,8 @@ ________________________________________________________________________________
 |___|\\__| |___/  \\__,_|   |_| |_|\\___(_)\n\
 "
 
-#define PLAYER_STARTS "\
+#define PLAYER_STARTS \
+    "\
  ____  _                             _             _       _ \n\
 |  _ \\| | __ _ _   _  ___ _ __   ___| |_ __ _ _ __| |_ ___| |\n\
 | |_) | |/ _` | | | |/ _ \\ '__| / __| __/ _` | '__| __/ __| |\n\
@@ -63,7 +65,8 @@ ________________________________________________________________________________
                |___/                                         \n\
 "
 
-#define COMPUTER_STARTS "\
+#define COMPUTER_STARTS \
+    "\
   ____                            _                  _             _       _ \n\
  / ___|___  _ __ ___  _ __  _   _| |_ ___ _ __   ___| |_ __ _ _ __| |_ ___| |\n\
 | |   / _ \\| '_ ` _ \\| '_ \\| | | | __/ _ \\ '__| / __| __/ _` | '__| __/ __| |\n\
@@ -72,7 +75,8 @@ ________________________________________________________________________________
                      |_|                                                     \n\
 "
 
-#define CIRCLE_STARTS "\
+#define CIRCLE_STARTS \
+    "\
   ____ _          _            _             _       _ \n\
  / ___(_)_ __ ___| | ___   ___| |_ __ _ _ __| |_ ___| |\n\
 | |   | | '__/ __| |/ _ \\ / __| __/ _` | '__| __/ __| |\n\
@@ -80,12 +84,35 @@ ________________________________________________________________________________
  \\____|_|_|  \\___|_|\\___| |___/\\__\\__,_|_|   \\__|___(_)\n\
 "
 
-#define CROSS_STARTS "\
+#define CROSS_STARTS \
+    "\
   ____                         _             _       _ \n\
  / ___|_ __ ___  ___ ___   ___| |_ __ _ _ __| |_ ___| |\n\
 | |   | '__/ _ \\/ __/ __| / __| __/ _` | '__| __/ __| |\n\
 | |___| | | (_) \\__ \\__ \\ \\__ \\ || (_| | |  | |_\\__ \\_|\n\
  \\____|_|  \\___/|___/___/ |___/\\__\\__,_|_|   \\__|___(_)\n\
 "
+
+#else
+
+#define HEADING_LINES 3
+
+#define HEADING "\n TikTakToe \n"
+
+#define CROSS_WINS "\n Cross Wins! \n"
+
+#define CIRCLE_WINS "\n Circle Wins! \n"
+
+#define ITS_A_TIE "\n It's a Tie! \n"
+
+#define PLAYER_STARTS "\n Player starts! \n"
+
+#define COMPUTER_STARTS "\n Computer starts! \n"
+
+#define CIRCLE_STARTS "\n Circle starts! \n"
+
+#define CROSS_STARTS "\n Cross starts! \n"
+
+#endif
 
 #endif// !ASCII_ART_H

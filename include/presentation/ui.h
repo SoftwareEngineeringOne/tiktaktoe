@@ -25,6 +25,18 @@
 #define TURN_ROW 1 + HEADING_LINES
 #define TIMER_ROW FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES
 
+#ifdef ENABLE_UNICODE
+#define FULL_PROGRESS_ELEMENT "█"
+#define HALF_PROGRESS_ELEMENT "▆"
+#define EMPTY_PROGRESS_ELEMENT "▁"
+
+#else
+#define FULL_PROGRESS_ELEMENT "-"
+#define HALF_PROGRESS_ELEMENT "_"
+#define EMPTY_PROGRESS_ELEMENT ""
+
+#endif
+
 
 /**
  * @brief Writes the timer text to the screen

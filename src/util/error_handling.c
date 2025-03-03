@@ -1,4 +1,5 @@
 #include "util/error_handling.h"
+#include "presentation/ui.h"
 
 #include <hal_high/input_buf.h>
 #include <hal_low/system.h>
@@ -23,6 +24,7 @@ void handleUnexpectedInterrupt()
 static void handleError(const char *hint)
 {
     print_clearConsole();
+    ui_printHeading();
     print(FG_RED);
     print(BOLD);
     print("Ooops, something went very wrong!\n");

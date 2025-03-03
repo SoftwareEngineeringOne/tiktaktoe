@@ -48,17 +48,21 @@ make generate_documentation
 Docker can be used to build and run the application without the need
 for external dependencies. For this you have to options:
 #### Use the image from Dockerhub
-```sh
+```bash
 # Using DockerHub
-docker run definitelynotsimon13/tiktaktoe:latest
+docker run -it definitelynotsimon13/tiktaktoe:latest
 # Using GitHub Container Registry
-docker run ghcr.io/softwareengineeringone/tiktaktoe:latest
+docker run -it ghcr.io/softwareengineeringone/tiktaktoe:latest
 ```
 #### Build the image locally
-```sh
+```bash
 docker build -t [TAGNAME] .
-docker run [TAGNAME]
+docker run -it [TAGNAME]
 ```
+
+> [!NOTE]
+> In either case the `-it` flags are required to properly
+> capture input from STDIN!
 ## Compile time configurations
 The project has a few options that can be changed before compilation.
 - Number of rows (default is 4)
@@ -104,11 +108,11 @@ See [Conventions.md](Conventions.md)
 
 ## Dependencies (TODO: CHECK CORRECT)
 ### Ubuntu/Debian
-```sh
+```bash
 sudo apt install gcc-arm-none-eabi cmake qemu-system-arm
 ```
 ### Arch
-```sh
+```bash
 # Using yay
 yay -S gcc-arm-none-eabi-bin cmake qemu-system-arm
 # Using paru
@@ -120,13 +124,13 @@ sudo pacman -S ?GCC? cmake qemu-system-arm
 ### Nix / NixOS
 You can either use the provided [Flake](flake.nix), or add the following
 packages:
-```nix
+```
 gcc-arm-embedded
 cmake
 qemu
 ```
 ### macOS
-```sh
+```bash
 brew install gcc-arm-embedded cmake qemu
 ```
 ### Windows

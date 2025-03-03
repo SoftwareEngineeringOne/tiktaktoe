@@ -52,6 +52,8 @@ void ui_displayTurn(uint8_t current_turn, Player player);
  */
 void ui_updateTurn(uint8_t current_turn, Player player);
 
+void ui_printStartingPlayer(Player starting_player, Mode mode);
+
 void ui_printHeading();
 
 void ui_gameOver();

@@ -27,11 +27,9 @@
 #include "presentation/ui.h"
 
 
-void printWinnerBanner(const GameState *game_info);
+static void printWinnerBanner(const GameState *game_info);
 
-void anyKeyToContinue(const char *continue_hint);
-
-void printMainMenu();
+static void printMainMenu();
 
 bool menu_showMainMenu()
 {
@@ -80,7 +78,7 @@ void menu_showGameOver(const GameState *game_info)
     cursor_moveTo(1, CELLS_PER_COL * g_cell_size.height + HEADING_LINES);
     printWinnerBanner(game_info);
 
-    anyKeyToContinue("\nPress any key to see the summary...");
+    menu_anyKeyToContinue("\nPress any key to see the summary...");
 
     print_clearConsole();
     ui_printHeading();
@@ -123,7 +121,7 @@ void menu_showGameOver(const GameState *game_info)
     println_int(game_info->circle_average_ticks);
     print(RESET);
 
-    anyKeyToContinue(RETURN_MENU_HINT);
+    menu_anyKeyToContinue(RETURN_MENU_HINT);
 }
 
 void menu_showCredits()
@@ -132,7 +130,7 @@ void menu_showCredits()
     ui_printHeading();
     println("Credits");
 
-    anyKeyToContinue(RETURN_MENU_HINT);
+    menu_anyKeyToContinue(RETURN_MENU_HINT);
 }
 
 void menu_showControls(const char *continue_hint)
@@ -180,7 +178,7 @@ void menu_showControls(const char *continue_hint)
     print_styled("\t?", &BOLD_CROSS);
     println("\t Open this overview");
 
-    anyKeyToContinue(continue_hint);
+    menu_anyKeyToContinue(continue_hint);
 }
 
 void printMainMenu()
@@ -219,7 +217,7 @@ void printWinnerBanner(const GameState *game_info)
     }
 }
 
-void anyKeyToContinue(const char *continue_hint)
+void menu_anyKeyToContinue(const char *continue_hint)
 {
     println_styled(continue_hint, &ITALIC_DIM);
     uint8_t input;

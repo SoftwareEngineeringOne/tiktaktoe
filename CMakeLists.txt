@@ -14,6 +14,7 @@ set(TICKS_PER_TURN 20 CACHE STRING "Number of ticks per round")
 set(TICK_SPEED 12 CACHE STRING "Speed of each tick in milliseconds")
 
 option(ENABLE_UNICODE "Enable Unicode support" ON)
+option(ENABLE_ASCII_ART "Enable ASCII Art" ON)
 
 configure_file(
         ${CMAKE_SOURCE_DIR}/include/config.h.in

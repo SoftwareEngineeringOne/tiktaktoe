@@ -2,13 +2,13 @@
 /**
  * @file
  *
- * @author
+ * @author 
  *
- * @date
+ * @date 
  *
- * @brief
+ * @brief 
  *
- * @see
+ * @see 
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -21,6 +21,8 @@
 // if UNICODE is not defined, ascii characters are used
 #define ENABLE_UNICODE
 
+/* #undef ENABLE_ASCII_ART */
+
 // size of the field
 #define CELLS_PER_ROW 4
 #define CELLS_PER_COL 4
@@ -29,4 +31,4 @@
 #define TICKS_PER_TURN 20
 #define TICK_SPEED 12
 
-#endif// CONFIG_H
+#endif //CONFIG_H

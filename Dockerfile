@@ -16,7 +16,7 @@ RUN cmake --preset arm-cortex-m0-unix && \
     cmake --build --preset arm-cortex-m0-unix
 
 # Stage 2: Runtime stage
-FROM alpine:3.21.3
+FROM alpine:3.21.3 AS runner
 
 RUN apk add --no-cache qemu-system-arm
 

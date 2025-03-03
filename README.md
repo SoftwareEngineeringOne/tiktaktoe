@@ -16,7 +16,10 @@ Docker can be used to build and run the application without the need
 for external dependencies. For this you have to options:
 #### Use the image from Dockerhub
 ```sh
+# Using DockerHub
 docker run definitelynotsimon13/tiktaktoe:latest
+# Using GitHub Container Registry
+docker run
 ```
 #### Build the image locally
 ```sh

@@ -27,4 +27,6 @@ COPY --from=builder /app/build-cortex-m0/game.elf /app/game.elf
 
 CMD ["qemu-system-arm", "-machine", "microbit", "-device", "loader,file=/app/game.elf", "-s", "-nographic", "-serial", "mon:stdio"]
 
-LABEL "org.opencontainers.image.description"="Build and run a TikTakToe game writte for the arm-cortex-m0 processor"
+LABEL org.opencontainers.image.description="Build and run a TikTakToe game writte for the arm-cortex-m0 processor"
+LABEL org.opencontainers.image.source=https://github.com/SoftwareEngineeringOne/tiktaktoe
+LABEL org.opencontainers.image.licenses=MPL-2.0

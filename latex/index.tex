@@ -45,19 +45,24 @@ Docker can be used to build and run the application without the need for externa
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\#\ Using\ DockerHub}
-\DoxyCodeLine{docker\ run\ definitelynotsimon13/tiktaktoe:latest}
+\DoxyCodeLine{docker\ run\ -\/it\ definitelynotsimon13/tiktaktoe:latest}
 \DoxyCodeLine{\#\ Using\ GitHub\ Container\ Registry}
-\DoxyCodeLine{docker\ run\ ghcr.io/softwareengineeringone/tiktaktoe:latest}
+\DoxyCodeLine{docker\ run\ -\/it\ ghcr.io/softwareengineeringone/tiktaktoe:latest}
 
 \end{DoxyCode}
  \hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Build the image locally}{Build the image locally}}\label{index_autotoc_md10}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{docker\ build\ -\/t\ [TAGNAME]\ .}
-\DoxyCodeLine{docker\ run\ [TAGNAME]}
+\DoxyCodeLine{docker\ run\ -\/it\ [TAGNAME]}
 
 \end{DoxyCode}
- \hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Compile time configurations}{Compile time configurations}}\label{index_autotoc_md11}
+
+
+\begin{DoxyNote}{Note}
+In either case the {\ttfamily -\/it} flags are required to properly capture input from STDIN! 
+\end{DoxyNote}
+\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Compile time configurations}{Compile time configurations}}\label{index_autotoc_md11}
 The project has a few options that can be changed before compilation.
 \begin{DoxyItemize}
 \item Number of rows (default is 4)

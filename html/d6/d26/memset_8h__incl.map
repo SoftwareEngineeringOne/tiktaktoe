@@ -1,5 +1,5 @@
-<map id="hal_low/memset.h" name="hal_low/memset.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,132,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="35,79,102,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,31,71,63,66,63,66,31"/>
+<map id="hal/memset.h" name="hal/memset.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,105,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="21,79,89,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,31,58,63,52,63,52,31"/>
 </map>

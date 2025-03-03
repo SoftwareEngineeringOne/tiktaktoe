@@ -27,7 +27,7 @@ var NAVTREE =
   [ "TikTakToe", "index.html", [
     [ "TicTacToe project", "index.html", "index" ],
     [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Hardware Abstraction Layer (hal_high and hal_low)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23", null ],
+      [ "Hardware Abstraction Layer (util and hal)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23", null ],
       [ "Interrupt handling (interrupts)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24", null ],
       [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25", null ],
       [ "Output (output)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26", null ]
@@ -69,7 +69,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/dd0/timer_8h.html#a78b8ded5d5b07f2d4ef5bb4bf3d46d07",
-"de/d12/style_8h.html#a24d680a54d499effe2f19d9798739613"
+"de/d12/style_8h.html#a266aa539aa271da1b1f711d2413b1bfa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

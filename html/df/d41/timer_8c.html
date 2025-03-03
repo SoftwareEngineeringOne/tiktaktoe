@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: hal_low/timer.c File Reference</title>
+<title>TikTakToe: hal/timer.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -105,33 +105,33 @@ $(function(){initNavTree('df/d41/timer_8c.html','../../'); initResizable(true); 
   <div class="headertitle"><div class="title">timer.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d5/dd0/timer_8h_source.html">hal_low/timer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../da/d7e/nvic_8h_source.html">hal_low/nvic.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../dd/d33/register__access_8h_source.html">hal_low/register_access.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d2/d86/uart_8h_source.html">hal_low/uart.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d5/dd0/timer_8h_source.html">hal/timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d7e/nvic_8h_source.html">hal/nvic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d33/register__access_8h_source.html">hal/register_access.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d2/d86/uart_8h_source.html">hal/uart.h</a>&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for timer.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d1/d56/timer_8c__incl.png" border="0" usemap="#ahal__low_2timer_8c" alt=""/></div>
-<map name="ahal__low_2timer_8c" id="ahal__low_2timer_8c">
-<area shape="rect" title=" " alt="" coords="295,5,404,31"/>
-<area shape="rect" href="../../d5/dd0/timer_8h.html" title=" " alt="" coords="131,79,240,105"/>
-<area shape="poly" title=" " alt="" coords="323,34,228,75,226,70,320,29"/>
-<area shape="rect" title=" " alt="" coords="206,153,269,178"/>
-<area shape="poly" title=" " alt="" coords="384,29,413,43,439,60,454,82,455,94,449,106,422,125,380,140,285,160,284,155,378,135,420,120,445,103,449,93,449,83,435,64,410,47,382,34"/>
-<area shape="rect" href="../../da/d7e/nvic_8h.html" title=" " alt="" coords="510,79,613,105"/>
-<area shape="poly" title=" " alt="" coords="386,29,512,71,510,76,384,34"/>
-<area shape="rect" href="../../dd/d33/register__access_8h.html" title=" " alt="" coords="264,79,435,105"/>
-<area shape="poly" title=" " alt="" coords="352,31,352,63,347,63,347,31"/>
-<area shape="rect" href="../../d2/d86/uart_8h.html" title=" " alt="" coords="5,79,107,105"/>
-<area shape="poly" title=" " alt="" coords="300,34,121,77,120,72,299,29"/>
-<area shape="rect" href="../../d4/da4/def_8h.html" title=" " alt="" coords="109,153,158,178"/>
-<area shape="poly" title=" " alt="" coords="179,106,153,142,149,138,175,103"/>
-<area shape="poly" title=" " alt="" coords="196,103,222,138,217,142,192,106"/>
-<area shape="poly" title=" " alt="" coords="332,107,271,146,268,142,329,103"/>
-<area shape="poly" title=" " alt="" coords="71,103,111,140,107,144,67,107"/>
-<area shape="poly" title=" " alt="" coords="88,103,193,144,191,149,86,108"/>
+<div class="center"><img src="../../d1/d56/timer_8c__incl.png" border="0" usemap="#ahal_2timer_8c" alt=""/></div>
+<map name="ahal_2timer_8c" id="ahal_2timer_8c">
+<area shape="rect" title=" " alt="" coords="240,5,322,31"/>
+<area shape="rect" href="../../d5/dd0/timer_8h.html" title=" " alt="" coords="103,79,184,105"/>
+<area shape="poly" title=" " alt="" coords="259,34,182,74,180,69,257,29"/>
+<area shape="rect" title=" " alt="" coords="158,153,221,178"/>
+<area shape="poly" title=" " alt="" coords="310,29,336,43,359,61,372,82,373,94,367,106,340,132,306,150,270,160,237,165,236,160,269,155,304,145,337,128,363,103,367,93,367,84,355,65,333,48,308,34"/>
+<area shape="rect" href="../../da/d7e/nvic_8h.html" title=" " alt="" coords="428,79,505,105"/>
+<area shape="poly" title=" " alt="" coords="314,29,422,71,420,75,312,34"/>
+<area shape="rect" href="../../dd/d33/register__access_8h.html" title=" " alt="" coords="209,79,353,105"/>
+<area shape="poly" title=" " alt="" coords="284,31,284,63,278,63,278,31"/>
+<area shape="rect" href="../../d2/d86/uart_8h.html" title=" " alt="" coords="5,79,80,105"/>
+<area shape="poly" title=" " alt="" coords="241,34,96,78,94,72,240,29"/>
+<area shape="rect" href="../../d4/da4/def_8h.html" title=" " alt="" coords="74,153,123,178"/>
+<area shape="poly" title=" " alt="" coords="139,106,116,141,112,138,134,103"/>
+<area shape="poly" title=" " alt="" coords="154,103,176,138,171,141,149,106"/>
+<area shape="poly" title=" " alt="" coords="267,107,218,145,215,141,264,103"/>
+<area shape="poly" title=" " alt="" coords="54,103,82,139,78,142,50,107"/>
+<area shape="poly" title=" " alt="" coords="69,103,152,143,149,148,66,108"/>
 </map>
 </div>
 </div>
@@ -819,8 +819,8 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_a699ffc1b5d8061d9242ee9dbcf4765b.html">hal_low</a></li><li class="navelem"><a class="el" href="../../df/d41/timer_8c.html">timer.c</a></li>
-    <li class="footer">Generated on Mon Mar 3 2025 15:36:11 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="navelem"><a class="el" href="../../dir_4ce6a7f885e2866a554ba9e7335035f1.html">hal</a></li><li class="navelem"><a class="el" href="../../df/d41/timer_8c.html">timer.c</a></li>
+    <li class="footer">Generated on Mon Mar 3 2025 16:29:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

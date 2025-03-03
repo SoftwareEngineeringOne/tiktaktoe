@@ -1,4 +1,4 @@
-.TH "md__2github_2workspace_2Architecture" 3 "Mon Mar 3 2025 15:36:11" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "md__2github_2workspace_2Architecture" 3 "Mon Mar 3 2025 16:29:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,9 +12,9 @@ Main initializes the program (UART etc\&.) and prints the first output
 .IP "2." 4
 Infinity loop in main
 .IP "3." 4
-The game is interrupt based\&. Interrupts are defined in 'interrupts'\&. They will call functions in 'logic'\&. The logic is based on 'hal_high' and 'output'
+The game is interrupt based (not really thouh)\&. Interrupts are defined in 'interrupts'\&. They will call functions in 'logic'\&. The logic is based on 'hal' and 'output'(also wrong tbh)
 .PP
-.SH "Hardware Abstraction Layer (hal_high and hal_low)"
+.SH "Hardware Abstraction Layer (util and hal)"
 .PP
 .SH "Interrupt handling (interrupts)"
 .PP

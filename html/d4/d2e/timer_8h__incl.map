@@ -1,5 +1,5 @@
-<map id="hal_low/timer.h" name="hal_low/timer.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="16,5,124,31"/>
+<map id="hal/timer.h" name="hal/timer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,5,111,31"/>
 <area shape="rect" id="Node000002" href="$d4/da4/def_8h.html" title=" " alt="" coords="5,79,55,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,33,46,67,42,64,61,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="78,79,142,105"/>

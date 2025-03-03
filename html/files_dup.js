@@ -1,9 +1,7 @@
 var files_dup =
 [
-    [ "hal_high", "dir_379e7395918bdddf5544f1f5badb427e.html", "dir_379e7395918bdddf5544f1f5badb427e" ],
-    [ "hal_high", "dir_50333faf82af0af43ed56cb1a6180ddb.html", "dir_50333faf82af0af43ed56cb1a6180ddb" ],
-    [ "hal_low", "dir_7bedaf62fd1d2aeb36af24ca0b4a199b.html", "dir_7bedaf62fd1d2aeb36af24ca0b4a199b" ],
-    [ "hal_low", "dir_a699ffc1b5d8061d9242ee9dbcf4765b.html", "dir_a699ffc1b5d8061d9242ee9dbcf4765b" ],
+    [ "hal", "dir_a413b7f902cba5167b433a6fe834d5bd.html", "dir_a413b7f902cba5167b433a6fe834d5bd" ],
+    [ "hal", "dir_4ce6a7f885e2866a554ba9e7335035f1.html", "dir_4ce6a7f885e2866a554ba9e7335035f1" ],
     [ "logic", "dir_701344d99a520edc46b3f16735b55bde.html", "dir_701344d99a520edc46b3f16735b55bde" ],
     [ "logic", "dir_3d2e4578fe4cc3b7fa6177047437af5b.html", "dir_3d2e4578fe4cc3b7fa6177047437af5b" ],
     [ "presentation", "dir_125447c92e2d7c7fbb49f13fdd370274.html", "dir_125447c92e2d7c7fbb49f13fdd370274" ],

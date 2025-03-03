@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['abstraction_20layer_20hal_5fhigh_20and_20hal_5flow_0',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]],
+  ['abstraction_20layer_20util_20and_20hal_0',['Hardware Abstraction Layer (util and hal)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]],
   ['all_1',['all',['../de/d19/structCellState.html#a110860b72d8fa79b546bbc2066235c11',1,'CellState']]],
-  ['and_20hal_5flow_2',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]],
+  ['and_20hal_2',['Hardware Abstraction Layer (util and hal)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]],
   ['and_20qemu_20directly_3',['Using CMake and qemu directly',['../index.html#autotoc_md2',1,'']]],
   ['arch_4',['Arch',['../index.html#autotoc_md18',1,'']]],
   ['architecture_5',['Architecture',['../d7/d5e/md__2github_2workspace_2Architecture.html',1,'Architecture'],['../index.html#autotoc_md14',1,'Architecture']]],

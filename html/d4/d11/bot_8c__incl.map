@@ -1,27 +1,27 @@
 <map id="logic/bot.c" name="logic/bot.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="132,5,212,31"/>
-<area shape="rect" id="Node000002" href="$da/de8/bot_8h.html" title=" " alt="" coords="209,79,289,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,30,227,66,223,70,183,34"/>
-<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title=" " alt="" coords="163,153,258,178"/>
-<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="178,31,206,137,201,138,172,32"/>
-<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title=" " alt="" coords="5,153,128,178"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="165,33,86,141,82,138,161,30"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,106,227,140,222,138,240,104"/>
-<area shape="rect" id="Node000007" href="$d5/d5a/field_8h.html" title=" " alt="" coords="303,226,432,252"/>
-<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="261,103,351,213,346,216,257,107"/>
-<area shape="rect" id="Node000004" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="142,226,279,252"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,179,213,211,208,211,208,179"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="74,308,137,333"/>
-<area shape="poly" id="edge10_Node000003_Node000006" title=" " alt="" coords="188,181,159,201,133,228,118,260,110,293,105,291,113,258,128,225,156,197,185,177"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="238,176,328,217,326,222,236,181"/>
-<area shape="rect" id="Node000005" href="$d4/da4/def_8h.html" title=" " alt="" coords="172,308,222,333"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,253,204,293,199,292,206,252"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="196,255,135,300,132,296,193,250"/>
-<area shape="rect" id="Node000008" href="$db/d16/config_8h.html" title=" " alt="" coords="486,308,551,333"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="392,250,483,298,481,302,389,255"/>
-<area shape="rect" id="Node000009" href="$d2/d5a/ascii__art_8h.html" title=" " alt="" coords="246,300,370,341"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="361,254,334,289,330,286,357,251"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="394,308,462,333"/>
-<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="379,251,412,294,407,297,375,254"/>
-<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="72,178,89,251,100,292,95,293,84,253,66,179"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="336,5,417,31"/>
+<area shape="rect" id="Node000002" href="$da/de8/bot_8h.html" title=" " alt="" coords="259,79,340,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="365,34,325,70,322,66,362,30"/>
+<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title=" " alt="" coords="307,153,401,178"/>
+<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="377,32,361,138,356,137,372,31"/>
+<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title=" " alt="" coords="436,153,531,178"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="388,30,468,138,463,141,383,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,103,338,139,334,142,306,107"/>
+<area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title=" " alt="" coords="148,226,277,252"/>
+<area shape="poly" id="edge11_Node000002_Node000004" title=" " alt="" coords="295,106,230,214,225,212,290,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="331,181,252,221,249,217,329,176"/>
+<area shape="rect" id="Node000008" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="301,226,407,252"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="357,179,357,211,351,211,351,179"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="413,308,476,333"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="374,177,399,197,422,225,436,259,444,292,439,293,431,260,417,228,395,201,370,181"/>
+<area shape="rect" id="Node000005" href="$db/d16/config_8h.html" title=" " alt="" coords="5,308,71,333"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,255,79,303,77,298,185,250"/>
+<area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title=" " alt="" coords="95,300,218,341"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="206,254,181,289,177,286,202,251"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="243,308,310,333"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="224,251,259,293,255,297,220,254"/>
+<area shape="rect" id="Node000009" href="$d4/da4/def_8h.html" title=" " alt="" coords="335,308,384,333"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="357,252,360,292,355,292,352,253"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="370,250,421,295,418,299,366,254"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="483,179,466,253,455,293,450,292,461,251,478,178"/>
 </map>

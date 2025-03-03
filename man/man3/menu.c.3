@@ -1,4 +1,4 @@
-.TH "presentation/menu.c" 3 "Mon Mar 3 2025 15:36:11" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/menu.c" 3 "Mon Mar 3 2025 16:29:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,9 +10,7 @@ presentation/menu.c
 .br
 \fR#include 'config\&.h'\fP
 .br
-\fR#include 'hal_high/input_buf\&.h'\fP
-.br
-\fR#include 'hal_low/nvic\&.h'\fP
+\fR#include 'hal/nvic\&.h'\fP
 .br
 \fR#include 'logic/game\&.h'\fP
 .br
@@ -27,6 +25,8 @@ presentation/menu.c
 \fR#include 'presentation/style\&.h'\fP
 .br
 \fR#include 'presentation/ui\&.h'\fP
+.br
+\fR#include 'util/input_buf\&.h'\fP
 .br
 
 .SS "Functions"

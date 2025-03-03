@@ -1,4 +1,4 @@
-.TH "main.c" 3 "Mon Mar 3 2025 15:36:11" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "main.c" 3 "Mon Mar 3 2025 16:29:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,13 +8,11 @@ main.c
 .PP
 \fR#include 'def\&.h'\fP
 .br
-\fR#include 'hal_high/input_buf\&.h'\fP
+\fR#include 'hal/nvic\&.h'\fP
 .br
-\fR#include 'hal_low/nvic\&.h'\fP
+\fR#include 'hal/random\&.h'\fP
 .br
-\fR#include 'hal_low/random\&.h'\fP
-.br
-\fR#include 'hal_low/uart\&.h'\fP
+\fR#include 'hal/uart\&.h'\fP
 .br
 \fR#include 'presentation/print\&.h'\fP
 .br
@@ -22,9 +20,11 @@ main.c
 .br
 \fR#include 'presentation/ui\&.h'\fP
 .br
-\fR#include <hal_low/system\&.h>\fP
+\fR#include 'util/input_buf\&.h'\fP
 .br
-\fR#include <presentation/menu\&.h>\fP
+\fR#include 'hal/system\&.h'\fP
+.br
+\fR#include 'presentation/menu\&.h'\fP
 .br
 
 .SS "Functions"

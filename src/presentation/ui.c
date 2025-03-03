@@ -65,15 +65,15 @@ void ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time)
     {
         if(i < remaining_time)
         {
-            print_styled("█", &style);
+            print_styled(FULL_PROGRESS_ELEMENT, &style);
         }
         else if(i == remaining_time)
         {
-            print_styled("▆", &style);
+            print_styled(HALF_PROGRESS_ELEMENT, &style);
         }
         else
         {
-            print_styled("▁", &style);
+            print_styled(EMPTY_PROGRESS_ELEMENT, &style);
         }
     }
 

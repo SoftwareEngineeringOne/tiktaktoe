@@ -38,7 +38,7 @@ jobs:
               id: meta
               uses: docker/metadata-action@v5
               with:
-                images: ${{ secrets.DOCKERHUB_USERNAME}}/${{ env.DR_IMAGE_NAME }}
+                images: ${{ vars.DOCKERHUB_USERNAME}}/${{ env.DR_IMAGE_NAME }}
                 tags:
                   type=raw,value=latest,enable={{is_default_branch}}
 
@@ -50,6 +50,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                 context: .
+                push: true
                 tags: ${{ steps.meta.outputs.tags }}
                 labels: ${{ steps.meta.outputs.labels }}
                 annotations: ${{ steps.meta.outputs.annotations }}
@@ -59,7 +60,7 @@ jobs:
             - name: Generate artifact attestation
               uses: actions/attest-build-provenance@v2
               with:
-                subject-name: ${{ env.DR }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ env.DR_IMAGE_NAME }}
+                subject-name: ${{ env.DR }}/${{ vars.DOCKERHUB_USERNAME }}/${{ env.DR_IMAGE_NAME }}
                 subject-digest: ${{ steps.push.outputs.digest }}
                 push-to-registry: true
 

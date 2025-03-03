@@ -25,4 +25,6 @@ void menu_showCredits();
 
 void menu_showGameOver(const GameState *game_info);
 
+void menu_anyKeyToContinue(const char *continue_hint);
+
 #endif// MENU_H

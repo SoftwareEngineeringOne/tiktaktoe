@@ -58,14 +58,27 @@ static void redrawField();
 
 static void calculateSummary();
 
+static Player startingPlayer();
+
 
 void game_run(const Mode mode)
 {
     init(mode);
 
     Cell *winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)] = {0};// NOLINT
-
     uint8_t input;
+
+    if(game_state.mode == PVE && game_state.current_player == Circle)
+    {
+        cell_state.last_circle = bot_markRandomCell(cell_state.all, Circle);
+        game_state.current_player = Cross;
+        game_state.fields_marked++;
+
+        cell_select(cell_state.last_circle);
+        cell_select(&cell_state.all[0][0]);
+        ui_updateTurn(game_state.round, game_state.current_player);
+    }
+
     while(true)
     {
         while(!input_getNext(&g_input_buf, &input))
@@ -174,17 +187,19 @@ void init(const Mode mode)
         cell_select(cell_state.selected);
     }
 
+    input_init(&g_input_buf);
+    rng_init();
+
     game_state = (GameState){
         .winner = None,
         .mode = mode,
         .round = FIRST_ROUND,
-        .current_player = Cross,
+        .current_player = startingPlayer(),
     };
+
 
     cell_state = (CellState){};
 
-    input_init(&g_input_buf);
-    rng_init();
     print(HIDE_CURSOR);
 
 
@@ -201,6 +216,8 @@ void init(const Mode mode)
     }
 
     cell_state.selected = &cell_state.all[0][0];
+
+    ui_printStartingPlayer(game_state.current_player, mode);
 
     print_clearConsole();
     time_init();
@@ -268,4 +285,12 @@ void handleForcedMoveUpdate()
             cell_state.selected = &cell_state.all[0][0];
         }
     }
+}
+
+Player startingPlayer()
+{
+    uint8_t rand = rng_getRandomValue_waiting();
+
+    // 0 is Cross, 1 is Circle - mod 2 returns 0 or 1
+    return (Player)(rand % 2);
 }

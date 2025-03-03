@@ -1,4 +1,4 @@
-.TH "util/error_handling.c" 3 "Sun Mar 2 2025 23:39:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/error_handling.c" 3 "Mon Mar 3 2025 08:06:03" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,6 +7,8 @@ util/error_handling.c
 .br
 .PP
 \fR#include 'util/error_handling\&.h'\fP
+.br
+\fR#include 'presentation/ui\&.h'\fP
 .br
 \fR#include <hal_high/input_buf\&.h>\fP
 .br
@@ -37,19 +39,19 @@ util/error_handling.c
 .SS "static void handleError (const char * hint)\fR [static]\fP"
 
 .PP
-Definition at line \fB23\fP of file \fBerror_handling\&.c\fP\&.
+Definition at line \fB24\fP of file \fBerror_handling\&.c\fP\&.
 .PP
-References \fBBOLD\fP, \fBDIM\fP, \fBFG_RED\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRESET\fP, \fBsystem_softReset()\fP, and \fBuart_readByte()\fP\&.
+References \fBBOLD\fP, \fBDIM\fP, \fBFG_RED\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRESET\fP, \fBsystem_softReset()\fP, \fBuart_readByte()\fP, and \fBui_printHeading()\fP\&.
 .SS "void handleHardFault ()"
 
 .PP
-Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
+Definition at line \fB12\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SS "void handleUnexpectedInterrupt ()"
 
 .PP
-Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+Definition at line \fB18\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SH "Author"

@@ -109,11 +109,21 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 How to build/run the project</h1>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Using CMake and qemu directly</h2>
+<p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Using the provided Makefile</h2>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Using Docker</h2>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options: </p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Use the image from Dockerhub</h3>
+<div class="fragment"><div class="line">docker run definitelynotsimon13/tiktaktoe:latest</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md6"></a>
+Build the image locally</h3>
+<div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
+<div class="line">docker run [TAGNAME]</div>
+</div><!-- fragment --><p>ST182165 </p>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Compile time configurations</h1>
 <p>The project has a few options that can be changed before compilation.</p><ul>
 <li>Number of rows (default is 4)</li>
@@ -123,7 +133,7 @@ Compile time configurations</h1>
 <li>Unicode support (default is "ON")</li>
 </ul>
 <p>These can be set by: </p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Directly passing to CMake</h2>
 <p>When configuring the project the default command <code>cmake --preset arm-cortex-m0-{unix/mingw}</code> can be appended by:</p><ul>
 <li>for the number of rows: <code>[...] --DCELLS_PER_COL=$(NUMBER)</code></li>
@@ -132,7 +142,7 @@ Directly passing to CMake</h2>
 <li>for tick speed: <code>[...] --DTICK_SPEED=$(NUMBER)</code></li>
 <li>for unicode support: <code>[...] --DENABLE_UNICODE=$(ON/OFF)</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Using the included Makefile</h2>
 <p>When using the Makefile to configure/build the project variables can be passed like this:</p><ul>
 <li>for the number of rows: <code>make ROWS=$(NUMBER)</code></li>
@@ -142,12 +152,14 @@ Using the included Makefile</h2>
 <li>for unicode support: <code>make UNICODE=$(ON/OFF)</code> <em>All options can be combined.</em></li>
 </ul>
 <p>Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Architecture</h1>
 <p>See <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a></p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Conventions</h1>
-<p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a> </p>
+<p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a></p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Dependencies</h1>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
@@ -155,7 +167,7 @@ Conventions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Mar 2 2025 23:39:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Mar 3 2025 08:06:03 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

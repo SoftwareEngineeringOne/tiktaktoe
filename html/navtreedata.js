@@ -27,20 +27,20 @@ var NAVTREE =
   [ "TikTakToe", "index.html", [
     [ "TicTacToe project", "index.html", "index" ],
     [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Hardware Abstraction Layer (hal_high and hal_low)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md11", null ],
-      [ "Interrupt handling (interrupts)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md12", null ],
-      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md13", null ],
-      [ "Output (output)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md14", null ]
+      [ "Hardware Abstraction Layer (hal_high and hal_low)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md14", null ],
+      [ "Interrupt handling (interrupts)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md15", null ],
+      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md16", null ],
+      [ "Output (output)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md17", null ]
     ] ],
     [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
-      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md16", [
-        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md17", null ],
-        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18", null ],
-        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", [
-          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20", null ]
+      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", [
+        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20", null ],
+        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21", null ],
+        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md22", [
+          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md23", null ]
         ] ]
       ] ],
-      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21", null ]
+      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md24", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

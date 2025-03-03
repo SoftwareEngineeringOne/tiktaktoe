@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['abstraction_20layer_20hal_5fhigh_20and_20hal_5flow_0',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md11',1,'']]],
+  ['abstraction_20layer_20hal_5fhigh_20and_20hal_5flow_0',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md14',1,'']]],
   ['all_1',['all',['../de/d19/structCellState.html#a110860b72d8fa79b546bbc2066235c11',1,'CellState']]],
-  ['and_20hal_5flow_2',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md11',1,'']]],
+  ['and_20hal_5flow_2',['Hardware Abstraction Layer (hal_high and hal_low)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md14',1,'']]],
   ['and_20qemu_20directly_3',['Using CMake and qemu directly',['../index.html#autotoc_md2',1,'']]],
   ['anykeytocontinue_4',['anyKeyToContinue',['../d2/d0a/menu_8c.html#a44d00693dd3847774cbd76bc27d44b3f',1,'menu.c']]],
-  ['architecture_5',['Architecture',['../d7/d5e/md__2github_2workspace_2Architecture.html',1,'Architecture'],['../index.html#autotoc_md8',1,'Architecture']]],
+  ['architecture_5',['Architecture',['../d7/d5e/md__2github_2workspace_2Architecture.html',1,'Architecture'],['../index.html#autotoc_md10',1,'Architecture']]],
   ['architecture_2emd_6',['Architecture.md',['../dc/d10/Architecture_8md.html',1,'']]],
   ['arrow_5fdown_7',['ARROW_DOWN',['../d3/d54/menu_8h.html#a3710616ea12e5437f6ff15170e3bbdc6',1,'menu.h']]],
   ['arrow_5fleft_8',['ARROW_LEFT',['../d3/d54/menu_8h.html#a972990573657c6767160574e40bf664e',1,'menu.h']]],

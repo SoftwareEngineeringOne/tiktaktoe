@@ -1,6 +1,7 @@
 \doxysection{util/error\+\_\+handling.c File Reference}
 \hypertarget{error__handling_8c}{}\label{error__handling_8c}\index{util/error\_handling.c@{util/error\_handling.c}}
 {\ttfamily \#include "{}util/error\+\_\+handling.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ui.\+h"{}}\newline
 {\ttfamily \#include $<$hal\+\_\+high/input\+\_\+buf.\+h$>$}\newline
 {\ttfamily \#include $<$hal\+\_\+low/system.\+h$>$}\newline
 {\ttfamily \#include $<$hal\+\_\+low/uart.\+h$>$}\newline
@@ -34,11 +35,11 @@ static void handle\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfst
 
 
 
-Definition at line \mbox{\hyperlink{error__handling_8c_source_l00023}{23}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00024}{24}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
 
 
 
-References \mbox{\hyperlink{style_8h_source_l00040}{BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8h_source_l00031}{FG\+\_\+\+RED}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{system_8c_source_l00006}{system\+\_\+soft\+Reset()}}, and \mbox{\hyperlink{uart_8c_source_l00081}{uart\+\_\+read\+Byte()}}.
+References \mbox{\hyperlink{style_8h_source_l00040}{BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8h_source_l00031}{FG\+\_\+\+RED}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{system_8c_source_l00006}{system\+\_\+soft\+Reset()}}, \mbox{\hyperlink{uart_8c_source_l00081}{uart\+\_\+read\+Byte()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -64,11 +65,11 @@ void handle\+Hard\+Fault (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{error__handling_8c_source_l00011}{11}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00012}{12}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
 
 
 
-References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+References \mbox{\hyperlink{error__handling_8c_source_l00024}{handle\+Error()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -86,11 +87,11 @@ void handle\+Unexpected\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 
 
-Definition at line \mbox{\hyperlink{error__handling_8c_source_l00017}{17}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00018}{18}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
 
 
 
-References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+References \mbox{\hyperlink{error__handling_8c_source_l00024}{handle\+Error()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

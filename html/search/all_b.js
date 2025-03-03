@@ -2,7 +2,7 @@ var searchData=
 [
   ['main_0',['main',['../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
   ['main_2ec_1',['main.c',['../d0/d29/main_8c.html',1,'']]],
-  ['makefile_2',['Makefile',['../index.html#autotoc_md7',1,'Using the included Makefile'],['../index.html#autotoc_md3',1,'Using the provided Makefile']]],
+  ['makefile_2',['Makefile',['../index.html#autotoc_md9',1,'Using the included Makefile'],['../index.html#autotoc_md3',1,'Using the provided Makefile']]],
   ['marked_5fby_3',['marked_by',['../df/df1/structCell.html#aff8c5b2510befa854230104cca89cb77',1,'Cell']]],
   ['math_2ec_4',['math.c',['../d6/da3/math_8c.html',1,'']]],
   ['math_2eh_5',['math.h',['../df/db1/math_8h.html',1,'']]],

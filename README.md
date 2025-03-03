@@ -8,8 +8,41 @@ Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 ### Using CMake and qemu directly
 To build the project using CMake and qemu some dependencies,
 which can be found under [dependencies] are required.
+#### Linux
+```sh
+# 1. Configure the cmake project
+cmake --preset arm-cortex-m0-unix
+
+# 2. Build the project
+cmake --build --preset arm-cortex-m0-unix
+
+# 3. Run the project
+qemu-system-arm -M microbit -device loader,file=build-cortex-m0/game.elf -nographic -s -serial mon:stdio
+```
+
+#### Windows
+!TODO!
 
 ### Using the provided Makefile
+#### Linux
+The provided [Makefile](Makefile) can be used to easily build and run
+the project using a single command.
+```sh
+# Configure, build and run the project
+make run
+
+# Configure and build the project
+make 
+
+# Remove the build directory
+make clean
+
+# Generate doxygen documentation (requires doxygen installed)
+make generate_documentation
+```
+
+#### Windows
+!TODO!
 
 ### Using Docker
 Docker can be used to build and run the application without the need
@@ -19,7 +52,7 @@ for external dependencies. For this you have to options:
 # Using DockerHub
 docker run definitelynotsimon13/tiktaktoe:latest
 # Using GitHub Container Registry
-docker run
+docker run ghcr.io/softwareengineeringone/tiktaktoe:latest
 ```
 #### Build the image locally
 ```sh
@@ -66,5 +99,32 @@ See [Architecture.md](Architecture.md)
 ## Conventions
 See [Conventions.md](Conventions.md)
 
-## Dependencies
-
+## Dependencies (TODO: CHECK CORRECT)
+### Ubuntu/Debian
+```sh
+sudo apt install gcc-arm-none-eabi cmake qemu-system-arm
+```
+### Arch
+```sh
+# Using yay
+yay -S gcc-arm-none-eabi-bin cmake qemu-system-arm
+# Using paru
+paru -S gcc-arm-none-eabi-bin cmake qemu-system-arm
+# Using pacman
+sudo pacman -S ?GCC? cmake qemu-system-arm
+```
+!TODO - gcc for arm gotta be in the main repo?
+### Nix / NixOS
+You can either use the provided [Flake](flake.nix), or add the following
+packages:
+```nix
+gcc-arm-embedded
+cmake
+qemu
+```
+### macOS
+```sh
+brew install gcc-arm-embedded cmake qemu
+```
+### Windows
+TODO/CHECK

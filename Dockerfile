@@ -9,17 +9,16 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
+
 COPY . /app
 
 RUN cmake --preset arm-cortex-m0-unix && \
     cmake --build --preset arm-cortex-m0-unix
 
 # Stage 2: Runtime stage
-FROM ubuntu:24.04
+FROM alpine:3.21.3
 
-RUN apt-get update && apt-get install -y \
-    qemu-system-arm \
- && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache qemu-system-arm
 
 WORKDIR /app
 
@@ -27,6 +26,5 @@ COPY --from=builder /app/build-cortex-m0/game.elf /app/game.elf
 
 CMD ["qemu-system-arm", "-machine", "microbit", "-device", "loader,file=/app/game.elf", "-s", "-nographic", "-serial", "mon:stdio"]
 
-LABEL org.opencontainers.image.description="My container image"
 LABEL org.opencontainers.image.source=https://github.com/SoftwareEngineeringOne/tiktaktoe
 LABEL org.opencontainers.image.licenses=MPL-2.0

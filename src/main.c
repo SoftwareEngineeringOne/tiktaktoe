@@ -16,16 +16,16 @@
  *
  */
 #include "def.h"
-#include "hal_high/input_buf.h"
-#include "hal_low/nvic.h"
-#include "hal_low/random.h"
-#include "hal_low/uart.h"
+#include "hal/nvic.h"
+#include "hal/random.h"
+#include "hal/uart.h"
 #include "presentation/print.h"
 #include "presentation/style.h"
 #include "presentation/ui.h"
+#include "util/input_buf.h"
 
-#include <hal_low/system.h>
-#include <presentation/menu.h>
+#include "hal/system.h"
+#include "presentation/menu.h"
 
 int main(void)
 {

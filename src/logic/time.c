@@ -17,7 +17,7 @@
  */
 #include "logic/time.h"
 
-#include "hal_low/timer.h"
+#include "hal/timer.h"
 #include "logic/game.h"
 #include <stdint.h>
 

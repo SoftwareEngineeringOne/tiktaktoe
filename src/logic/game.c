@@ -18,10 +18,9 @@
 #include "logic/game.h"
 
 #include "config.h"
-#include "hal_high/input_buf.h"
-#include "hal_low/nvic.h"
-#include "hal_low/random.h"
-#include "hal_low/timer.h"
+#include "hal/nvic.h"
+#include "hal/random.h"
+#include "hal/timer.h"
 #include "logic/bot.h"
 #include "logic/input.h"
 #include "logic/time.h"
@@ -32,6 +31,7 @@
 #include "presentation/print.h"
 #include "presentation/style.h"
 #include "presentation/ui.h"
+#include "util/input_buf.h"
 #include "util/math.h"
 #include <stdint.h>
 

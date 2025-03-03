@@ -15,14 +15,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  */
-#include "hal_low/interrupts.h"
+#include "hal/interrupts.h"
 
-#include "hal_high/input_buf.h"
-#include "hal_low/nvic.h"
-#include "hal_low/register_access.h"
-#include "hal_low/timer.h"
-#include "hal_low/uart.h"
+#include "hal/nvic.h"
+#include "hal/register_access.h"
+#include "hal/timer.h"
+#include "hal/uart.h"
 #include "logic/time.h"
+#include "util/input_buf.h"
 
 void Interrupt2_Handler(void)
 {

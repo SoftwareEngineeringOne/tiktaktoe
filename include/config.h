@@ -21,7 +21,7 @@
 // if UNICODE is not defined, ascii characters are used
 #define ENABLE_UNICODE
 
-/* #undef ENABLE_ASCII_ART */
+#define ENABLE_ASCII_ART
 
 // size of the field
 #define CELLS_PER_ROW 4

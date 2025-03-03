@@ -15,9 +15,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  */
-#include "hal_low/random.h"
+#include "hal/random.h"
 
-#include "hal_low/register_access.h"
+#include "hal/register_access.h"
 
 #include <stdint.h>
 

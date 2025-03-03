@@ -17,7 +17,7 @@
  */
 #include "presentation/ui.h"
 
-#include "hal_low/uart.h"
+#include "hal/uart.h"
 #include "logic/time.h"
 #include "presentation/ascii_art.h"
 #include "presentation/cursor.h"
@@ -130,26 +130,36 @@ void ui_printHeading()
     print_styled(HEADING, &HEADING_STYLE);
 }
 
-void ui_printStartingPlayer(Player starting_player, Mode mode) {
+void ui_printStartingPlayer(Player starting_player, Mode mode)
+{
     print_clearConsole();
     ui_printHeading();
-    switch(starting_player) {
+    switch(starting_player)
+    {
         case Cross:
-            if(mode == PVE) {
+            if(mode == PVE)
+            {
                 print_styled(PLAYER_STARTS, &DEFAULT_CROSS);
-            } else {
+            }
+            else
+            {
                 print_styled(CROSS_STARTS, &DEFAULT_CROSS);
             }
             break;
         case Circle:
-            if(mode == PVE) {
+            if(mode == PVE)
+            {
                 print_styled(COMPUTER_STARTS, &DEFAULT_CIRCLE);
-            } else {
+            }
+            else
+            {
                 print_styled(CIRCLE_STARTS, &DEFAULT_CIRCLE);
             }
             break;
         case None:
-            print_styled("Something went very wrong...", &(Style){.font_style = BOLD, .fg_color = FG_RED});
+            print_styled(
+                "Something went very wrong...",
+                &(Style){.font_style = BOLD, .fg_color = FG_RED});
     }
     menu_anyKeyToContinue("Press any key to start the game...");
 }

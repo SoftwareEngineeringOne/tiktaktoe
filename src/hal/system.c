@@ -1,7 +1,7 @@
-#include "hal_low/system.h"
+#include "hal/system.h"
 
 #include "def.h"
-#include <hal_low/register_access.h>
+#include "hal/register_access.h"
 
 void system_softReset()
 {

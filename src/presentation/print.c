@@ -17,7 +17,7 @@
  */
 #include "presentation/print.h"
 
-#include "hal_low/uart.h"
+#include "hal/uart.h"
 #include "presentation/style.h"
 #include "util/conversion.h"
 

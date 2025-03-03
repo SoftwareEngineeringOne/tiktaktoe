@@ -17,8 +17,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "hal_high/input_buf.h"
 #include "presentation/field.h"
+#include "util/input_buf.h"
 
 #include <stdint.h>
 

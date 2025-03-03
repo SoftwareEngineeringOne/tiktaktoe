@@ -17,7 +17,7 @@
  *
  */
 
-#include "hal_low/register_access.h"
+#include "hal/register_access.h"
 
 void register_write(const uint32_t address, const uint32_t value)
 {

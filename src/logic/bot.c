@@ -17,7 +17,7 @@
  */
 #include "logic/bot.h"
 
-#include "hal_low/random.h"
+#include "hal/random.h"
 #include "logic/game.h"
 
 Cell *bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], const Player marked_by)

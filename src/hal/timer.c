@@ -15,11 +15,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  */
-#include "hal_low/timer.h"
+#include "hal/timer.h"
 
-#include "hal_low/nvic.h"
-#include "hal_low/register_access.h"
-#include "hal_low/uart.h"
+#include "hal/nvic.h"
+#include "hal/register_access.h"
+#include "hal/uart.h"
 
 #include <stdint.h>
 

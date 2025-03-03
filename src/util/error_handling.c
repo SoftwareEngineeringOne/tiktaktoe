@@ -1,11 +1,10 @@
 #include "util/error_handling.h"
 #include "presentation/ui.h"
 
-#include <hal_high/input_buf.h>
-#include <hal_low/system.h>
-#include <hal_low/uart.h>
-#include <presentation/print.h>
-#include <presentation/style.h>
+#include "hal/system.h"
+#include "hal/uart.h"
+#include "presentation/print.h"
+#include "presentation/style.h"
 
 static void handleError(const char *hint);
 

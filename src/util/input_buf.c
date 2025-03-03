@@ -15,7 +15,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  */
-#include "hal_high/input_buf.h"
+#include "util/input_buf.h"
 
 #include "presentation/print.h"
 

@@ -18,7 +18,6 @@
 #include "logic/input.h"
 
 #include "config.h"
-#include "hal_high/input_buf.h"
 #include "logic/bot.h"
 #include "logic/game.h"
 #include "logic/time.h"
@@ -26,6 +25,7 @@
 #include "presentation/menu.h"
 #include "presentation/style.h"
 #include "presentation/ui.h"
+#include "util/input_buf.h"
 
 static void handleEscapeSequence(CellState *cell_state);
 

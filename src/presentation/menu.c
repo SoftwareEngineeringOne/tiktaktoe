@@ -16,8 +16,7 @@
  */
 #include "presentation/menu.h"
 #include "config.h"
-#include "hal_high/input_buf.h"
-#include "hal_low/nvic.h"
+#include "hal/nvic.h"
 #include "logic/game.h"
 #include "presentation/ascii_art.h"
 #include "presentation/cell.h"
@@ -25,6 +24,7 @@
 #include "presentation/print.h"
 #include "presentation/style.h"
 #include "presentation/ui.h"
+#include "util/input_buf.h"
 
 
 static void printWinnerBanner(const GameState *game_info);

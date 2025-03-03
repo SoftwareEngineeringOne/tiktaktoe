@@ -109,21 +109,52 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 How to build/run the project</h1>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Using CMake and qemu directly</h2>
-<p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required. </p>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Linux</h3>
+<div class="fragment"><div class="line"># 1. Configure the cmake project</div>
+<div class="line">cmake --preset arm-cortex-m0-unix</div>
+<div class="line"> </div>
+<div class="line"># 2. Build the project</div>
+<div class="line">cmake --build --preset arm-cortex-m0-unix</div>
+<div class="line"> </div>
+<div class="line"># 3. Run the project</div>
+<div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/game.elf -nographic -s -serial mon:stdio</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md4"></a>
+Windows</h3>
+<p>!TODO!</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Using the provided Makefile</h2>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Linux</h3>
+<p>The provided [Makefile](Makefile) can be used to easily build and run the project using a single command. </p><div class="fragment"><div class="line"># Configure, build and run the project</div>
+<div class="line">make run</div>
+<div class="line"> </div>
+<div class="line"># Configure and build the project</div>
+<div class="line">make </div>
+<div class="line"> </div>
+<div class="line"># Remove the build directory</div>
+<div class="line">make clean</div>
+<div class="line"> </div>
+<div class="line"># Generate doxygen documentation (requires doxygen installed)</div>
+<div class="line">make generate_documentation</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
+Windows</h3>
+<p>!TODO!</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Using Docker</h2>
 <p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options: </p>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md9"></a>
 Use the image from Dockerhub</h3>
-<div class="fragment"><div class="line">docker run definitelynotsimon13/tiktaktoe:latest</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md6"></a>
+<div class="fragment"><div class="line"># Using DockerHub</div>
+<div class="line">docker run definitelynotsimon13/tiktaktoe:latest</div>
+<div class="line"># Using GitHub Container Registry</div>
+<div class="line">docker run ghcr.io/softwareengineeringone/tiktaktoe:latest</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md10"></a>
 Build the image locally</h3>
 <div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
 <div class="line">docker run [TAGNAME]</div>
-</div><!-- fragment --><p>ST182165 </p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md11"></a>
 Compile time configurations</h1>
 <p>The project has a few options that can be changed before compilation.</p><ul>
 <li>Number of rows (default is 4)</li>
@@ -131,35 +162,61 @@ Compile time configurations</h1>
 <li>Ticks per turn (default is 20)</li>
 <li>Tick speed (default is 12, lower is faster)</li>
 <li>Unicode support (default is "ON")</li>
+<li>ASCII Art (default is "ON", may look broken on small screens)</li>
 </ul>
 <p>These can be set by: </p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Directly passing to CMake</h2>
 <p>When configuring the project the default command <code>cmake --preset arm-cortex-m0-{unix/mingw}</code> can be appended by:</p><ul>
 <li>for the number of rows: <code>[...] --DCELLS_PER_COL=$(NUMBER)</code></li>
 <li>for the number of cols: <code>[...] --DCELLS_PER_ROW=$(NUMBER)</code></li>
 <li>for ticks per turn: <code>[...] --DTICKS_PER_TURN=$(NUMBER)</code></li>
 <li>for tick speed: <code>[...] --DTICK_SPEED=$(NUMBER)</code></li>
-<li>for unicode support: <code>[...] --DENABLE_UNICODE=$(ON/OFF)</code></li>
+<li>for unicode: <code>[...] --DENABLE_UNICODE=$(ON/OFF)</code></li>
+<li>for ascii art: <code>[...] --DENABLE_ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Using the included Makefile</h2>
 <p>When using the Makefile to configure/build the project variables can be passed like this:</p><ul>
 <li>for the number of rows: <code>make ROWS=$(NUMBER)</code></li>
 <li>for the number of cols: <code>make COLS=$(NUMBER)</code></li>
 <li>for ticks per turn: <code>make TICKS_PER_TURN=$(NUMBER)</code></li>
 <li>for tick speed: <code>make TICK_SPEED=$(NUMBER)</code></li>
-<li>for unicode support: <code>make UNICODE=$(ON/OFF)</code> <em>All options can be combined.</em></li>
+<li>for unicode: <code>make UNICODE=$(ON/OFF)</code></li>
+<li>for ascii art: <code>make ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
 </ul>
 <p>Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Architecture</h1>
 <p>See <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a></p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Conventions</h1>
 <p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a></p>
-<h1><a class="anchor" id="autotoc_md12"></a>
-Dependencies</h1>
+<h1><a class="anchor" id="autotoc_md16"></a>
+Dependencies (TODO: CHECK CORRECT)</h1>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Ubuntu/Debian</h2>
+<div class="fragment"><div class="line">sudo apt install gcc-arm-none-eabi cmake qemu-system-arm</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md18"></a>
+Arch</h2>
+<div class="fragment"><div class="line"># Using yay</div>
+<div class="line">yay -S gcc-arm-none-eabi-bin cmake qemu-system-arm</div>
+<div class="line"># Using paru</div>
+<div class="line">paru -S gcc-arm-none-eabi-bin cmake qemu-system-arm</div>
+<div class="line"># Using pacman</div>
+<div class="line">sudo pacman -S ?GCC? cmake qemu-system-arm</div>
+</div><!-- fragment --><p> !TODO - gcc for arm gotta be in the main repo? </p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Nix / NixOS</h2>
+<p>You can either use the provided <a href="flake.nix">Flake</a>, or add the following packages: </p><div class="fragment"><div class="line">gcc-arm-embedded</div>
+<div class="line">cmake</div>
+<div class="line">qemu</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md20"></a>
+macOS</h2>
+<div class="fragment"><div class="line">brew install gcc-arm-embedded cmake qemu</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md21"></a>
+Windows</h2>
+<p>TODO/CHECK </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
@@ -167,7 +224,7 @@ Dependencies</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Mar 3 2025 08:08:04 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Mon Mar 3 2025 15:36:11 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

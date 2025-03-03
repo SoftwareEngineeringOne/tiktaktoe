@@ -5,6 +5,7 @@
 {\ttfamily \#include "{}logic/time.\+h"{}}\newline
 {\ttfamily \#include "{}presentation/ascii\+\_\+art.\+h"{}}\newline
 {\ttfamily \#include "{}presentation/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/menu.\+h"{}}\newline
 {\ttfamily \#include "{}presentation/print.\+h"{}}\newline
 {\ttfamily \#include "{}presentation/style.\+h"{}}\newline
 Include dependency graph for ui.\+c\+:
@@ -29,6 +30,8 @@ void \mbox{\hyperlink{ui_8c_ab109b310e2462d1f3317b8099c7063b4}{ui\+\_\+update\+T
 void \mbox{\hyperlink{ui_8c_aa7c37f269bcee19a98aea573289d9877}{ui\+\_\+game\+Over}} ()
 \item 
 void \mbox{\hyperlink{ui_8c_ad7ec4b5965543c400031e14183eee496}{ui\+\_\+print\+Heading}} ()
+\item 
+void \mbox{\hyperlink{ui_8c_ae1c1dad8845af014a8e35894e8842fb5}{ui\+\_\+print\+Starting\+Player}} (\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} starting\+\_\+player, \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} mode)
 \end{DoxyCompactItemize}
 
 
@@ -69,11 +72,11 @@ Writes the timer text to the screen.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00027}{27}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00028}{28}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 
-References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00026}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00037}{ui\+\_\+update\+Timer()}}.
+References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00026}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00038}{ui\+\_\+update\+Timer()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -110,11 +113,11 @@ Writes the turn text to the screen.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00088}{88}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00089}{89}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 
-References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00007}{DEFAULT\+\_\+\+ITALIC}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00025}{TURN\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00098}{ui\+\_\+update\+Turn()}}.
+References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00007}{DEFAULT\+\_\+\+ITALIC}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00025}{TURN\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00099}{ui\+\_\+update\+Turn()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -140,7 +143,7 @@ void ui\+\_\+game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00116}{116}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00117}{117}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 
@@ -170,11 +173,11 @@ void ui\+\_\+print\+Heading (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})
 
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00126}{126}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00127}{127}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 
-References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{ascii__art_8h_source_l00018}{HEADING}}, \mbox{\hyperlink{style_8c_source_l00043}{HEADING\+\_\+\+STYLE}}, and \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}.
+References \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{ascii__art_8h_source_l00100}{HEADING}}, \mbox{\hyperlink{style_8c_source_l00043}{HEADING\+\_\+\+STYLE}}, and \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -190,6 +193,36 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dc/d78/ui_8c_ad7ec4b5965543c400031e14183eee496_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{ui_8c_ae1c1dad8845af014a8e35894e8842fb5}\index{ui.c@{ui.c}!ui\_printStartingPlayer@{ui\_printStartingPlayer}}
+\index{ui\_printStartingPlayer@{ui\_printStartingPlayer}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{ui\_printStartingPlayer()}{ui\_printStartingPlayer()}}
+{\footnotesize\ttfamily \label{ui_8c_ae1c1dad8845af014a8e35894e8842fb5} 
+void ui\+\_\+print\+Starting\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}}]{starting\+\_\+player}{, }\item[{\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ui_8c_source_l00133}{133}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8h_source_l00040}{BOLD}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{ascii__art_8h_source_l00112}{CIRCLE\+\_\+\+STARTS}}, \mbox{\hyperlink{ascii__art_8h_source_l00110}{COMPUTER\+\_\+\+STARTS}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{ascii__art_8h_source_l00114}{CROSS\+\_\+\+STARTS}}, \mbox{\hyperlink{style_8c_source_l00025}{DEFAULT\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00034}{DEFAULT\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8h_source_l00031}{FG\+\_\+\+RED}}, \mbox{\hyperlink{menu_8c_source_l00225}{menu\+\_\+any\+Key\+To\+Continue()}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{ascii__art_8h_source_l00108}{PLAYER\+\_\+\+STARTS}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, and \mbox{\hyperlink{ui_8c_source_l00127}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d78/ui_8c_ae1c1dad8845af014a8e35894e8842fb5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d78/ui_8c_ae1c1dad8845af014a8e35894e8842fb5_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{ui_8c_ab07153d30b3acd0a53ca9d4043e27160}\index{ui.c@{ui.c}!ui\_updateTimer@{ui\_updateTimer}}
@@ -209,7 +242,7 @@ Updates the time on the screen.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00037}{37}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00038}{38}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 
@@ -250,7 +283,7 @@ Updates the turn number on the screen.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{ui_8c_source_l00098}{98}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
+Definition at line \mbox{\hyperlink{ui_8c_source_l00099}{99}} of file \mbox{\hyperlink{ui_8c_source}{ui.\+c}}.
 
 
 

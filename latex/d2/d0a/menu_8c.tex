@@ -22,11 +22,9 @@ Include dependency graph for menu.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8}{print\+Winner\+Banner}} (const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}game\+\_\+info)
+static void \mbox{\hyperlink{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8}{print\+Winner\+Banner}} (const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}game\+\_\+info)
 \item 
-void \mbox{\hyperlink{menu_8c_a44d00693dd3847774cbd76bc27d44b3f}{any\+Key\+To\+Continue}} (const char \texorpdfstring{$\ast$}{*}continue\+\_\+hint)
-\item 
-void \mbox{\hyperlink{menu_8c_af9dce1973196a5934ee5ec20ea417324}{print\+Main\+Menu}} ()
+static void \mbox{\hyperlink{menu_8c_af9dce1973196a5934ee5ec20ea417324}{print\+Main\+Menu}} ()
 \item 
 \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{menu_8c_a1692d3cd85ed442706f90d6b6f60613f}{menu\+\_\+show\+Main\+Menu}} ()
 \item 
@@ -35,6 +33,8 @@ void \mbox{\hyperlink{menu_8c_ab82b49f40989dd1c5b11264bca838492}{menu\+\_\+show\
 void \mbox{\hyperlink{menu_8c_a54a22faf156830dd16ee4e3c52835881}{menu\+\_\+show\+Credits}} ()
 \item 
 void \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\+\_\+show\+Controls}} (const char \texorpdfstring{$\ast$}{*}continue\+\_\+hint)
+\item 
+void \mbox{\hyperlink{menu_8c_aa8ce93493c2adb2ce4240b95e852793c}{menu\+\_\+any\+Key\+To\+Continue}} (const char \texorpdfstring{$\ast$}{*}continue\+\_\+hint)
 \end{DoxyCompactItemize}
 
 
@@ -58,15 +58,15 @@ Definition in file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{menu_8c_a44d00693dd3847774cbd76bc27d44b3f}\index{menu.c@{menu.c}!anyKeyToContinue@{anyKeyToContinue}}
-\index{anyKeyToContinue@{anyKeyToContinue}!menu.c@{menu.c}}
-\doxysubsubsection{\texorpdfstring{anyKeyToContinue()}{anyKeyToContinue()}}
-{\footnotesize\ttfamily \label{menu_8c_a44d00693dd3847774cbd76bc27d44b3f} 
-void any\+Key\+To\+Continue (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{continue\+\_\+hint}{}\end{DoxyParamCaption})}
+\Hypertarget{menu_8c_aa8ce93493c2adb2ce4240b95e852793c}\index{menu.c@{menu.c}!menu\_anyKeyToContinue@{menu\_anyKeyToContinue}}
+\index{menu\_anyKeyToContinue@{menu\_anyKeyToContinue}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_anyKeyToContinue()}{menu\_anyKeyToContinue()}}
+{\footnotesize\ttfamily \label{menu_8c_aa8ce93493c2adb2ce4240b95e852793c} 
+void menu\+\_\+any\+Key\+To\+Continue (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{continue\+\_\+hint}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00222}{222}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00225}{225}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
@@ -77,7 +77,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d2/d0a/menu_8c_a44d00693dd3847774cbd76bc27d44b3f_cgraph}
+\includegraphics[width=350pt]{d2/d0a/menu_8c_aa8ce93493c2adb2ce4240b95e852793c_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -85,7 +85,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d2/d0a/menu_8c_a44d00693dd3847774cbd76bc27d44b3f_icgraph}
+\includegraphics[width=350pt]{d2/d0a/menu_8c_aa8ce93493c2adb2ce4240b95e852793c_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{menu_8c_a23ef48917f29c7ba37351342e66a636f}\index{menu.c@{menu.c}!menu\_showControls@{menu\_showControls}}
@@ -96,11 +96,11 @@ void menu\+\_\+show\+Controls (\begin{DoxyParamCaption}\item[{const char \texorp
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00138}{138}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00141}{141}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{menu_8h_source_l00017}{ARROW\+\_\+\+DOWN}}, \mbox{\hyperlink{menu_8h_source_l00014}{ARROW\+\_\+\+LEFT}}, \mbox{\hyperlink{menu_8h_source_l00016}{ARROW\+\_\+\+RIGHT}}, \mbox{\hyperlink{menu_8h_source_l00015}{ARROW\+\_\+\+UP}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+References \mbox{\hyperlink{menu_8h_source_l00017}{ARROW\+\_\+\+DOWN}}, \mbox{\hyperlink{menu_8h_source_l00014}{ARROW\+\_\+\+LEFT}}, \mbox{\hyperlink{menu_8h_source_l00016}{ARROW\+\_\+\+RIGHT}}, \mbox{\hyperlink{menu_8h_source_l00015}{ARROW\+\_\+\+UP}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{menu_8c_source_l00225}{menu\+\_\+any\+Key\+To\+Continue()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, and \mbox{\hyperlink{ui_8c_source_l00127}{ui\+\_\+print\+Heading()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -126,11 +126,11 @@ void menu\+\_\+show\+Credits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00129}{129}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00132}{132}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+References \mbox{\hyperlink{menu_8c_source_l00225}{menu\+\_\+any\+Key\+To\+Continue()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, and \mbox{\hyperlink{ui_8c_source_l00127}{ui\+\_\+print\+Heading()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -156,11 +156,11 @@ void menu\+\_\+show\+Game\+Over (\begin{DoxyParamCaption}\item[{const \mbox{\hyp
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00077}{77}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00075}{75}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{menu_8c_source_l00222}{any\+Key\+To\+Continue()}}, \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::average\+\_\+ticks}}, \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{config_8h_source_l00026}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{game_8h_source_l00069}{Game\+State\+::circle\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00068}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::cross\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00007}{DEFAULT\+\_\+\+ITALIC}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{cell_8c_source_l00026}{g\+\_\+cell\+\_\+size}}, \mbox{\hyperlink{ascii__art_8h_source_l00004}{HEADING\+\_\+\+LINES}}, \mbox{\hyperlink{cell_8h_source_l00044}{Cell\+Size\+::height}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00052}{println\+\_\+int()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{menu_8c_source_l00205}{print\+Winner\+Banner()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00062}{Game\+State\+::total\+\_\+ticks}}, \mbox{\hyperlink{ui_8c_source_l00116}{ui\+\_\+game\+Over()}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+References \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::average\+\_\+ticks}}, \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{config_8h_source_l00028}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{game_8h_source_l00069}{Game\+State\+::circle\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00068}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::cross\+\_\+average\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{cursor_8c_source_l00032}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8c_source_l00007}{DEFAULT\+\_\+\+ITALIC}}, \mbox{\hyperlink{style_8h_source_l00049}{ERASE\+\_\+\+LINE\+\_\+\+FROM\+\_\+\+CURSOR}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{cell_8c_source_l00026}{g\+\_\+cell\+\_\+size}}, \mbox{\hyperlink{ascii__art_8h_source_l00098}{HEADING\+\_\+\+LINES}}, \mbox{\hyperlink{cell_8h_source_l00044}{Cell\+Size\+::height}}, \mbox{\hyperlink{menu_8c_source_l00225}{menu\+\_\+any\+Key\+To\+Continue()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00052}{println\+\_\+int()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{menu_8c_source_l00208}{print\+Winner\+Banner()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00062}{Game\+State\+::total\+\_\+ticks}}, \mbox{\hyperlink{ui_8c_source_l00117}{ui\+\_\+game\+Over()}}, and \mbox{\hyperlink{ui_8c_source_l00127}{ui\+\_\+print\+Heading()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -186,11 +186,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00036}{36}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00034}{34}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{nvic_8h_source_l00061}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{game_8c_source_l00062}{game\+\_\+run()}}, \mbox{\hyperlink{style_8h_source_l00046}{HIDE\+\_\+\+CURSOR}}, \mbox{\hyperlink{input__buf_8c_source_l00050}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{menu_8c_source_l00138}{menu\+\_\+show\+Controls()}}, \mbox{\hyperlink{menu_8c_source_l00129}{menu\+\_\+show\+Credits()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{menu_8c_source_l00186}{print\+Main\+Menu()}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00031}{PVP}}, and \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}.
+References \mbox{\hyperlink{nvic_8h_source_l00061}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{game_8c_source_l00064}{game\+\_\+run()}}, \mbox{\hyperlink{style_8h_source_l00046}{HIDE\+\_\+\+CURSOR}}, \mbox{\hyperlink{input__buf_8c_source_l00050}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{menu_8c_source_l00141}{menu\+\_\+show\+Controls()}}, \mbox{\hyperlink{menu_8c_source_l00132}{menu\+\_\+show\+Credits()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{menu_8c_source_l00189}{print\+Main\+Menu()}}, \mbox{\hyperlink{game_8h_source_l00030}{PVE}}, \mbox{\hyperlink{game_8h_source_l00031}{PVP}}, and \mbox{\hyperlink{menu_8h_source_l00006}{RETURN\+\_\+\+MENU\+\_\+\+HINT}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -212,15 +212,15 @@ Here is the caller graph for this function\+:
 \index{printMainMenu@{printMainMenu}!menu.c@{menu.c}}
 \doxysubsubsection{\texorpdfstring{printMainMenu()}{printMainMenu()}}
 {\footnotesize\ttfamily \label{menu_8c_af9dce1973196a5934ee5ec20ea417324} 
-void print\+Main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+void print\+Main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00186}{186}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00189}{189}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, and \mbox{\hyperlink{ui_8c_source_l00126}{ui\+\_\+print\+Heading()}}.
+References \mbox{\hyperlink{style_8c_source_l00003}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8h_source_l00041}{DIM}}, \mbox{\hyperlink{style_8c_source_l00020}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, \mbox{\hyperlink{print_8c_source_l00025}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00046}{println()}}, \mbox{\hyperlink{print_8c_source_l00065}{println\+\_\+styled()}}, \mbox{\hyperlink{style_8h_source_l00029}{RESET}}, and \mbox{\hyperlink{ui_8c_source_l00127}{ui\+\_\+print\+Heading()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -242,15 +242,15 @@ Here is the caller graph for this function\+:
 \index{printWinnerBanner@{printWinnerBanner}!menu.c@{menu.c}}
 \doxysubsubsection{\texorpdfstring{printWinnerBanner()}{printWinnerBanner()}}
 {\footnotesize\ttfamily \label{menu_8c_a2143804a7c8e1529eff8a242ad1a8fa8} 
-void print\+Winner\+Banner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+info}{}\end{DoxyParamCaption})}
+void print\+Winner\+Banner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{menu_8c_source_l00205}{205}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
+Definition at line \mbox{\hyperlink{menu_8c_source_l00208}{208}} of file \mbox{\hyperlink{menu_8c_source}{menu.\+c}}.
 
 
 
-References \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00015}{BOLD\+\_\+\+DIM}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{ascii__art_8h_source_l00039}{CIRCLE\+\_\+\+WINS}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{ascii__art_8h_source_l00030}{CROSS\+\_\+\+WINS}}, \mbox{\hyperlink{ascii__art_8h_source_l00048}{ITS\+\_\+\+A\+\_\+\+TIE}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, and \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}.
+References \mbox{\hyperlink{style_8c_source_l00029}{BOLD\+\_\+\+CIRCLE}}, \mbox{\hyperlink{style_8c_source_l00038}{BOLD\+\_\+\+CROSS}}, \mbox{\hyperlink{style_8c_source_l00015}{BOLD\+\_\+\+DIM}}, \mbox{\hyperlink{game_8h_source_l00036}{Circle}}, \mbox{\hyperlink{ascii__art_8h_source_l00104}{CIRCLE\+\_\+\+WINS}}, \mbox{\hyperlink{game_8h_source_l00037}{Cross}}, \mbox{\hyperlink{ascii__art_8h_source_l00102}{CROSS\+\_\+\+WINS}}, \mbox{\hyperlink{ascii__art_8h_source_l00106}{ITS\+\_\+\+A\+\_\+\+TIE}}, \mbox{\hyperlink{game_8h_source_l00038}{None}}, \mbox{\hyperlink{print_8c_source_l00058}{print\+\_\+styled()}}, and \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::winner}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

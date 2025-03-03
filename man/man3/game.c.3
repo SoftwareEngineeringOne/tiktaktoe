@@ -1,4 +1,4 @@
-.TH "logic/game.c" 3 "Mon Mar 3 2025 08:08:04" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.c" 3 "Mon Mar 3 2025 15:36:11" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -62,6 +62,9 @@ logic/game.c
 .RI "static void \fBcalculateSummary\fP ()"
 .br
 .ti -1c
+.RI "static \fBPlayer\fP \fBstartingPlayer\fP ()"
+.br
+.ti -1c
 .RI "void \fBgame_run\fP (const \fBMode\fP mode)"
 .br
 .RI "Start the main game\&. "
@@ -116,13 +119,13 @@ Definition in file \fBgame\&.c\fP\&.
 .SS "static void calculateSummary ()\fR [static]\fP"
 
 .PP
-Definition at line \fB211\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB228\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBGameState::average_ticks\fP, \fBCircle\fP, \fBGameState::circle_average_ticks\fP, \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross_average_ticks\fP, \fBGameState::cross_total_ticks\fP, \fBg_timer\fP, \fBgame_state\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBGameTimer::ticks_total\fP, \fBGameState::total_ticks\fP, and \fBGameState::winner\fP\&.
 .SS "void game_endTurn ()"
 
 .PP
-Definition at line \fB138\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB151\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBtime_finishTurn()\fP\&.
 .SS "void game_onTimeOut ()"
@@ -130,7 +133,7 @@ References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_pl
 .PP
 Automatic turn in case the round time is over\&. 
 .PP
-Definition at line \fB118\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB131\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBforce_ui_update\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, and \fBPVE\fP\&.
 .SS "void game_run (const \fBMode\fP mode)"
@@ -138,15 +141,15 @@ References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \
 .PP
 Start the main game\&. 
 .PP
-Definition at line \fB62\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB64\fP of file \fBgame\&.c\fP\&.
 .PP
-References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBNone\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
+References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBbot_markRandomCell()\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBui_updateTurn()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
 .SS "void handleForcedMoveUpdate ()\fR [static]\fP"
 
 .PP
 Handles the presentation update in case of a automatic round\&. 
 .PP
-Definition at line \fB251\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB268\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCircle\fP, \fBGameState::current_player\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBui_updateTurn()\fP\&.
 .SS "void init (\fBMode\fP mode)\fR [static]\fP"
@@ -154,17 +157,23 @@ References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCircl
 .PP
 Initializes several things at the game start\&. 
 .PP
-Definition at line \fB167\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB180\fP of file \fBgame\&.c\fP\&.
 .PP
-References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCross\fP, \fBFIRST_ROUND\fP, \fBg_input_buf\fP, \fBgame_state\fP, \fBHIDE_CURSOR\fP, \fBinput_init()\fP, \fBCell::marked_by\fP, \fBNone\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBredrawField()\fP, \fBrng_init()\fP, \fBCellState::selected\fP, and \fBtime_init()\fP\&.
+References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBGameState::current_player\fP, \fBFIRST_ROUND\fP, \fBg_input_buf\fP, \fBgame_state\fP, \fBHIDE_CURSOR\fP, \fBinput_init()\fP, \fBCell::marked_by\fP, \fBNone\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBredrawField()\fP, \fBrng_init()\fP, \fBCellState::selected\fP, \fBstartingPlayer()\fP, \fBtime_init()\fP, and \fBui_printStartingPlayer()\fP\&.
 .SS "void redrawField ()\fR [static]\fP"
 
 .PP
 Refreshes the whole UI\&. 
 .PP
-Definition at line \fB240\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB257\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBGameState::current_player\fP, \fBfield_redraw()\fP, \fBgame_state\fP, \fBprint_clearConsole()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBui_displayTimer()\fP, \fBui_displayTurn()\fP, and \fBui_printHeading()\fP\&.
+.SS "\fBPlayer\fP startingPlayer ()\fR [static]\fP"
+
+.PP
+Definition at line \fB290\fP of file \fBgame\&.c\fP\&.
+.PP
+References \fBrng_getRandomValue_waiting()\fP\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBCellState\fP cell_state\fR [static]\fP"

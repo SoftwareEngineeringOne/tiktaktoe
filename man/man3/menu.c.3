@@ -1,4 +1,4 @@
-.TH "presentation/menu.c" 3 "Mon Mar 3 2025 08:08:04" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/menu.c" 3 "Mon Mar 3 2025 15:36:11" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,13 +33,10 @@ presentation/menu.c
 
 .in +1c
 .ti -1c
-.RI "void \fBprintWinnerBanner\fP (const \fBGameState\fP *game_info)"
+.RI "static void \fBprintWinnerBanner\fP (const \fBGameState\fP *game_info)"
 .br
 .ti -1c
-.RI "void \fBanyKeyToContinue\fP (const char *continue_hint)"
-.br
-.ti -1c
-.RI "void \fBprintMainMenu\fP ()"
+.RI "static void \fBprintMainMenu\fP ()"
 .br
 .ti -1c
 .RI "\fBbool\fP \fBmenu_showMainMenu\fP ()"
@@ -52,6 +49,9 @@ presentation/menu.c
 .br
 .ti -1c
 .RI "void \fBmenu_showControls\fP (const char *continue_hint)"
+.br
+.ti -1c
+.RI "void \fBmenu_anyKeyToContinue\fP (const char *continue_hint)"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -81,46 +81,46 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBmenu\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void anyKeyToContinue (const char * continue_hint)"
+.SS "void menu_anyKeyToContinue (const char * continue_hint)"
 
 .PP
-Definition at line \fB222\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB225\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBITALIC_DIM\fP, and \fBprintln_styled()\fP\&.
 .SS "void menu_showControls (const char * continue_hint)"
 
 .PP
-Definition at line \fB138\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB141\fP of file \fBmenu\&.c\fP\&.
 .PP
-References \fBanyKeyToContinue()\fP, \fBARROW_DOWN\fP, \fBARROW_LEFT\fP, \fBARROW_RIGHT\fP, \fBARROW_UP\fP, \fBBOLD_CROSS\fP, \fBDEFAULT_BOLD\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, and \fBui_printHeading()\fP\&.
+References \fBARROW_DOWN\fP, \fBARROW_LEFT\fP, \fBARROW_RIGHT\fP, \fBARROW_UP\fP, \fBBOLD_CROSS\fP, \fBDEFAULT_BOLD\fP, \fBITALIC_DIM\fP, \fBmenu_anyKeyToContinue()\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, and \fBui_printHeading()\fP\&.
 .SS "void menu_showCredits ()"
 
 .PP
-Definition at line \fB129\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB132\fP of file \fBmenu\&.c\fP\&.
 .PP
-References \fBanyKeyToContinue()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRETURN_MENU_HINT\fP, and \fBui_printHeading()\fP\&.
+References \fBmenu_anyKeyToContinue()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRETURN_MENU_HINT\fP, and \fBui_printHeading()\fP\&.
 .SS "void menu_showGameOver (const \fBGameState\fP * game_info)"
 
 .PP
-Definition at line \fB77\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB75\fP of file \fBmenu\&.c\fP\&.
 .PP
-References \fBanyKeyToContinue()\fP, \fBGameState::average_ticks\fP, \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBCELLS_PER_COL\fP, \fBGameState::circle_average_ticks\fP, \fBGameState::circle_total_ticks\fP, \fBGameState::cross_average_ticks\fP, \fBGameState::cross_total_ticks\fP, \fBcursor_moveTo()\fP, \fBDEFAULT_BOLD\fP, \fBDEFAULT_ITALIC\fP, \fBGameState::fields_marked\fP, \fBg_cell_size\fP, \fBHEADING_LINES\fP, \fBCellSize::height\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln_int()\fP, \fBprintln_styled()\fP, \fBprintWinnerBanner()\fP, \fBRESET\fP, \fBRETURN_MENU_HINT\fP, \fBGameState::round\fP, \fBGameState::total_ticks\fP, \fBui_gameOver()\fP, and \fBui_printHeading()\fP\&.
+References \fBGameState::average_ticks\fP, \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBCELLS_PER_COL\fP, \fBGameState::circle_average_ticks\fP, \fBGameState::circle_total_ticks\fP, \fBGameState::cross_average_ticks\fP, \fBGameState::cross_total_ticks\fP, \fBcursor_moveTo()\fP, \fBDEFAULT_BOLD\fP, \fBDEFAULT_ITALIC\fP, \fBERASE_LINE_FROM_CURSOR\fP, \fBGameState::fields_marked\fP, \fBg_cell_size\fP, \fBHEADING_LINES\fP, \fBCellSize::height\fP, \fBmenu_anyKeyToContinue()\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln_int()\fP, \fBprintln_styled()\fP, \fBprintWinnerBanner()\fP, \fBRESET\fP, \fBRETURN_MENU_HINT\fP, \fBGameState::round\fP, \fBGameState::total_ticks\fP, \fBui_gameOver()\fP, and \fBui_printHeading()\fP\&.
 .SS "\fBbool\fP menu_showMainMenu ()"
 
 .PP
-Definition at line \fB36\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB34\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBg_input_buf\fP, \fBgame_run()\fP, \fBHIDE_CURSOR\fP, \fBinput_getNext()\fP, \fBmenu_showControls()\fP, \fBmenu_showCredits()\fP, \fBprint()\fP, \fBprintMainMenu()\fP, \fBPVE\fP, \fBPVP\fP, and \fBRETURN_MENU_HINT\fP\&.
-.SS "void printMainMenu ()"
+.SS "void printMainMenu ()\fR [static]\fP"
 
 .PP
-Definition at line \fB186\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB189\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fBDEFAULT_BOLD\fP, \fBDIM\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, \fBRESET\fP, and \fBui_printHeading()\fP\&.
-.SS "void printWinnerBanner (const \fBGameState\fP * game_info)"
+.SS "void printWinnerBanner (const \fBGameState\fP * game_info)\fR [static]\fP"
 
 .PP
-Definition at line \fB205\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB208\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fBBOLD_CIRCLE\fP, \fBBOLD_CROSS\fP, \fBBOLD_DIM\fP, \fBCircle\fP, \fBCIRCLE_WINS\fP, \fBCross\fP, \fBCROSS_WINS\fP, \fBITS_A_TIE\fP, \fBNone\fP, \fBprint_styled()\fP, and \fBGameState::winner\fP\&.
 .SH "Author"

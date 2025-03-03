@@ -1,0 +1,21 @@
+<map id="menu_anyKeyToContinue" name="menu_anyKeyToContinue">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,174,56"/>
+<area shape="rect" id="Node000002" href="$d7/dec/input__buf_8c.html#a3e03a367ae13ea8f68021a964efbef90" title="Get the next byte from the buffer." alt="" coords="222,5,323,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,29,206,25,207,30,174,34"/>
+<area shape="rect" id="Node000004" href="$d6/db1/print_8c.html#a02a20f9ab0165b4cbac365bb9e9aa823" title="Prints the given string with a predefined style and a new line character." alt="" coords="224,55,321,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,52,208,56,208,62,174,57"/>
+<area shape="rect" id="Node000003" href="$d7/dec/input__buf_8c.html#aaec1348b29929f537c59bc6b5718bd4e" title="Check if the buffer is empty." alt="" coords="371,5,473,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,16,355,16,355,21,323,21"/>
+<area shape="rect" id="Node000005" href="$d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="378,55,466,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="321,65,363,65,363,70,321,70"/>
+<area shape="rect" id="Node000007" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="739,80,843,106"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="316,78,371,90,467,98,562,101,723,95,724,101,563,106,466,104,371,95,315,84"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="645,55,691,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="465,51,521,40,559,36,597,40,631,49,630,54,596,45,559,41,522,45,466,57"/>
+<area shape="rect" id="Node000009" href="$d6/db1/print_8c.html#a2b33af16d6bf86c3623a6ed14f4115f2" title=" " alt="" coords="521,55,597,80"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="466,65,505,65,505,70,466,70"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="692,70,724,76,723,82,691,75"/>
+<area shape="rect" id="Node000008" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="891,80,991,106"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="844,90,876,90,876,96,844,96"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="597,65,629,65,629,70,597,70"/>
+</map>

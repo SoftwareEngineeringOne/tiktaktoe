@@ -14,11 +14,11 @@ var searchData=
   ['field_5fx_5foffset_11',['FIELD_X_OFFSET',['../d5/d5a/field_8h.html#a5e97e248a9617cae814043283cb8f391',1,'field.h']]],
   ['field_5fy_5foffset_12',['FIELD_Y_OFFSET',['../d5/d5a/field_8h.html#abfe12b21a522c24d92a825c268f0da7a',1,'field.h']]],
   ['fields_5fmarked_13',['fields_marked',['../d2/d3d/structGameState.html#ab361219d03b1817f4a93fea087d3eb92',1,'GameState']]],
-  ['file_20structure_14',['File structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19',1,'']]],
-  ['file_20structure_15',['file structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20',1,'Header file structure'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21',1,'Source file structure']]],
+  ['file_20structure_14',['File structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md28',1,'']]],
+  ['file_20structure_15',['file structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md29',1,'Header file structure'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md30',1,'Source file structure']]],
   ['first_5fround_16',['FIRST_ROUND',['../d2/dd5/game_8h.html#a30f65389443e4dac0837d0a8260f216c',1,'game.h']]],
   ['font_5fstyle_17',['font_style',['../de/df7/structStyle.html#ae79c33fc2eb677c9f8b12bf02617edbe',1,'Style']]],
   ['force_5fui_5fupdate_18',['force_ui_update',['../d1/dcb/game_8c.html#a287ea08db9d5fa1a3c003fd565a654f9',1,'game.c']]],
-  ['from_20dockerhub_19',['Use the image from Dockerhub',['../index.html#autotoc_md5',1,'']]],
-  ['functions_20',['Functions',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md23',1,'']]]
+  ['from_20dockerhub_19',['Use the image from Dockerhub',['../index.html#autotoc_md9',1,'']]],
+  ['functions_20',['Functions',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32',1,'']]]
 ];

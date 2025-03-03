@@ -1,5 +1,8 @@
 var ui_8h =
 [
+    [ "EMPTY_PROGRESS_ELEMENT", "d9/d3b/ui_8h.html#ad7d5e58bd1b7c4066f87d8dd9cf9eb68", null ],
+    [ "FULL_PROGRESS_ELEMENT", "d9/d3b/ui_8h.html#acd01ff06f7444e97abb6ebb5a293166d", null ],
+    [ "HALF_PROGRESS_ELEMENT", "d9/d3b/ui_8h.html#ac2b3fd518c50122858e86bd5bd8b25f8", null ],
     [ "TIMER_ROW", "d9/d3b/ui_8h.html#a12e7933404f476fb69061fc8a8a705ff", null ],
     [ "TURN_ROW", "d9/d3b/ui_8h.html#adbeef5f5002bcfc3cbed2deb88012cc4", null ],
     [ "ui_displayTimer", "d9/d3b/ui_8h.html#ae4fe2414f32031d11e9c73b538bf1343", null ],

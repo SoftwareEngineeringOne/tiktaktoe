@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"de/d12/style_8h.html#a24d680a54d499effe2f19d9798739613":[4,0,4,6,24],
 "de/d12/style_8h.html#a266aa539aa271da1b1f711d2413b1bfa":[4,0,4,6,12],
 "de/d12/style_8h.html#a26cdbb1a00213c810caccf21cd33a631":[4,0,4,6,3],
 "de/d12/style_8h.html#a2d507a6a0b6c6c98acce772b8da4406c":[4,0,4,6,26],

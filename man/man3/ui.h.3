@@ -1,4 +1,4 @@
-.TH "presentation/ui.h" 3 "Mon Mar 3 2025 16:29:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/ui.h" 3 "Mon Mar 3 2025 16:55:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,6 +23,15 @@ presentation/ui.h
 .br
 .ti -1c
 .RI "#define \fBTIMER_ROW\fP   \fBFIELD_HEIGHT\fP + (\fBFIELD_HEIGHT\fP % 2) \- 1 + \fBHEADING_LINES\fP"
+.br
+.ti -1c
+.RI "#define \fBFULL_PROGRESS_ELEMENT\fP   '\-'"
+.br
+.ti -1c
+.RI "#define \fBHALF_PROGRESS_ELEMENT\fP   '_'"
+.br
+.ti -1c
+.RI "#define \fBEMPTY_PROGRESS_ELEMENT\fP   ''"
 .br
 .in -1c
 .SS "Functions"
@@ -81,6 +90,18 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBui\&.h\fP\&.
 .SH "Macro Definition Documentation"
 .PP 
+.SS "#define EMPTY_PROGRESS_ELEMENT   ''"
+
+.PP
+Definition at line \fB36\fP of file \fBui\&.h\fP\&.
+.SS "#define FULL_PROGRESS_ELEMENT   '\-'"
+
+.PP
+Definition at line \fB34\fP of file \fBui\&.h\fP\&.
+.SS "#define HALF_PROGRESS_ELEMENT   '_'"
+
+.PP
+Definition at line \fB35\fP of file \fBui\&.h\fP\&.
 .SS "#define TIMER_ROW   \fBFIELD_HEIGHT\fP + (\fBFIELD_HEIGHT\fP % 2) \- 1 + \fBHEADING_LINES\fP"
 
 .PP
@@ -155,7 +176,7 @@ Updates the time on the screen\&.
 .PP
 Definition at line \fB38\fP of file \fBui\&.c\fP\&.
 .PP
-References \fBBOLD\fP, \fBcursor_moveTo()\fP, \fBDIM\fP, \fBERASE_LINE_FROM_CURSOR\fP, \fBFG_GREEN\fP, \fBFG_RED\fP, \fBFG_YELLOW\fP, \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_styled()\fP, \fBprintln_styled()\fP, \fBTIMER_ROW\fP, and \fBuart_writeByte()\fP\&.
+References \fBBOLD\fP, \fBcursor_moveTo()\fP, \fBDIM\fP, \fBEMPTY_PROGRESS_ELEMENT\fP, \fBERASE_LINE_FROM_CURSOR\fP, \fBFG_GREEN\fP, \fBFG_RED\fP, \fBFG_YELLOW\fP, \fBFULL_PROGRESS_ELEMENT\fP, \fBg_timer\fP, \fBHALF_PROGRESS_ELEMENT\fP, \fBGameTimer::is_running\fP, \fBITALIC_DIM\fP, \fBprint()\fP, \fBprint_styled()\fP, \fBprintln_styled()\fP, \fBTIMER_ROW\fP, and \fBuart_writeByte()\fP\&.
 .SS "void ui_updateTurn (uint8_t current_turn, \fBPlayer\fP player)"
 
 .PP

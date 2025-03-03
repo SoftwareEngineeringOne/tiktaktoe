@@ -6,11 +6,25 @@ Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 
 ## How to build/run the project
 ### Using CMake and qemu directly
+To build the project using CMake and qemu some dependencies,
+which can be found under [dependencies] are required.
 
 ### Using the provided Makefile
 
 ### Using Docker
+Docker can be used to build and run the application without the need
+for external dependencies. For this you have to options:
+#### Use the image from Dockerhub
+```sh
+docker run definitelynotsimon13/tiktaktoe:latest
+```
+#### Build the image locally
+```sh
+docker build -t [TAGNAME] .
+docker run [TAGNAME]
+```
 
+ST182165
 ## Compile time configurations
 The project has a few options that can be changed before compilation.
 - Number of rows (default is 4)
@@ -48,3 +62,6 @@ See [Architecture.md](Architecture.md)
 
 ## Conventions
 See [Conventions.md](Conventions.md)
+
+## Dependencies
+

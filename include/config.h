@@ -2,13 +2,13 @@
 /**
  * @file
  *
- * @author 
+ * @author
  *
- * @date 
+ * @date
  *
- * @brief 
+ * @brief
  *
- * @see 
+ * @see
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -29,4 +29,4 @@
 #define TICKS_PER_TURN 20
 #define TICK_SPEED 12
 
-#endif //CONFIG_H
+#endif// CONFIG_H

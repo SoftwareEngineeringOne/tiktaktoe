@@ -6,6 +6,8 @@ EXECUTABLE := game.elf
 ROWS ?= 4
 COLS ?= 4
 
+PORT ?= 1234
+
 TICKS_PER_TURN ?= 20
 TICK_SPEED ?= 12
 
@@ -31,7 +33,7 @@ build: $(BUILD_DIR)
 	cmake --build --preset $(CMAKE_PRESET)
 
 run: build
-	qemu-system-arm -M microbit -device loader,file=$(BUILD_DIR)/$(EXECUTABLE) -nographic -s -serial mon:stdio
+	qemu-system-arm -M microbit -device loader,file=$(BUILD_DIR)/$(EXECUTABLE) -nographic -gdb tcp::$(PORT) -serial mon:stdio
 	@printf "\e[?25h"
 
 clean:

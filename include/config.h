@@ -19,16 +19,16 @@
 #define CONFIG_H
 
 // if UNICODE is not defined, ascii characters are used
-/* #undef ENABLE_UNICODE */
+#define ENABLE_UNICODE
 
-/* #undef ENABLE_ASCII_ART */
+#define ENABLE_ASCII_ART
 
 // size of the field
-#define CELLS_PER_ROW 7
+#define CELLS_PER_ROW 3
 #define CELLS_PER_COL 3
 
 // game speed
-#define TICKS_PER_TURN 30
-#define TICK_SPEED 11
+#define TICKS_PER_TURN 20
+#define TICK_SPEED 12
 
 #endif //CONFIG_H

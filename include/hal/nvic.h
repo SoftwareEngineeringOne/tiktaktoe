@@ -55,8 +55,6 @@
 
 /**
  * @brief Activate the energy saving mode of the computer
- *
- * It does nothing till the next interrupt happens
  */
 #define __WFI() __asm volatile("wfi" ::: "memory")
 

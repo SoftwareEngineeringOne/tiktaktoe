@@ -21,6 +21,7 @@
 #include "logic/bot.h"
 #include "logic/game.h"
 #include "logic/time.h"
+#include "logic/winning.h"
 #include "presentation/cell.h"
 #include "presentation/menu.h"
 #include "presentation/style.h"
@@ -122,7 +123,13 @@ static void handleSetMark(GameState *game_state, CellState *cell_state)
         cell_state->selected->marked_by = Cross;
         cell_state->last_cross = cell_state->selected;
 
-        // if bot started player makes the last turn
+        //TODO! Fix this better its ugly af
+        Cell tmp[20];
+        if(game_state->fields_marked >= 4 && winning_checkForWinner(cell_state, (Cell **)&tmp) != None) {
+            cell_redraw(cell_state->last_circle);
+            goto After;
+        }
+
         if(game_state->fields_marked + 1 < CELLS_PER_ROW * CELLS_PER_COL)
         {
             cell_state->last_circle = bot_markRandomCell(cell_state->all, Circle);
@@ -133,6 +140,7 @@ static void handleSetMark(GameState *game_state, CellState *cell_state)
             // by one, since it's increased by 2 later.
             game_state->fields_marked--;
         }
+After:
         cell_redraw(cell_state->last_circle);
     }
     else

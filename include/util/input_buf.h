@@ -76,4 +76,5 @@ bool input_isFull(const volatile InputBuffer *ib);
  */
 bool input_getNext(volatile InputBuffer *ib, uint8_t *byte);
 
+
 #endif// INPUT_BUF_H

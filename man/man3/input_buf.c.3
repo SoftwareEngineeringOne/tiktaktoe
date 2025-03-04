@@ -1,4 +1,4 @@
-.TH "util/input_buf.c" 3 "Mon Mar 3 2025 16:55:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/input_buf.c" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -92,7 +92,7 @@ False if empty
 .PP
 
 .PP
-Definition at line \fB50\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB51\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBINPUT_BUF_SIZE\fP, \fBinput_isEmpty()\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_init (volatile \fBInputBuffer\fP * ib)"
@@ -107,7 +107,7 @@ Initialize the given \fBInputBuffer\fP\&.
 .PP
 
 .PP
-Definition at line \fB34\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB35\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isEmpty (const volatile \fBInputBuffer\fP * ib)"
@@ -127,7 +127,7 @@ True if empty
 .PP
 
 .PP
-Definition at line \fB40\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB41\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isFull (const volatile \fBInputBuffer\fP * ib)"
@@ -147,7 +147,7 @@ True if full
 .PP
 
 .PP
-Definition at line \fB45\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB46\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_onInterrupt (uint8_t input)"
@@ -160,7 +160,7 @@ Function to call in case of UART input interrupt\&.
 \fIinput\fP Pure input from UART 
 .RE
 .PP
-
+TODO Handle error better
 .PP
 Definition at line \fB26\fP of file \fBinput_buf\&.c\fP\&.
 .PP
@@ -184,7 +184,7 @@ False if full
 .PP
 
 .PP
-Definition at line \fB69\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB70\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBinput_isFull()\fP\&.
 .SH "Variable Documentation"

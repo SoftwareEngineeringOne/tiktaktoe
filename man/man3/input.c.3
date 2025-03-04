@@ -1,4 +1,4 @@
-.TH "logic/input.c" 3 "Mon Mar 3 2025 16:55:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/input.c" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,6 +15,8 @@ logic/input.c
 \fR#include 'logic/game\&.h'\fP
 .br
 \fR#include 'logic/time\&.h'\fP
+.br
+\fR#include 'logic/winning\&.h'\fP
 .br
 \fR#include 'presentation/cell\&.h'\fP
 .br
@@ -76,31 +78,31 @@ Definition in file \fBinput\&.c\fP\&.
 .SS "void handleEscapeSequence (\fBCellState\fP * cell_state)\fR [static]\fP"
 
 .PP
-Definition at line \fB67\fP of file \fBinput\&.c\fP\&.
+Definition at line \fB68\fP of file \fBinput\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBCell::row\fP, and \fBCellState::selected\fP\&.
 .SS "static \fBbool\fP handlePauseResume (\fBCellState\fP * cell_state)\fR [static]\fP"
 
 .PP
-Definition at line \fB171\fP of file \fBinput\&.c\fP\&.
+Definition at line \fB179\fP of file \fBinput\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_state\fP, \fBg_timer\fP, \fBHIDDEN\fP, \fBGameTimer::is_running\fP, \fBtime_pause()\fP, and \fBtime_resume()\fP\&.
 .SS "static void handleSetMark (\fBGameState\fP * game_state, \fBCellState\fP * cell_state)\fR [static]\fP"
 
 .PP
-Definition at line \fB113\fP of file \fBinput\&.c\fP\&.
+Definition at line \fB114\fP of file \fBinput\&.c\fP\&.
 .PP
-References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_redraw()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBg_timer\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBCell::marked_by\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBui_updateTurn()\fP\&.
+References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_redraw()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBg_timer\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBCell::marked_by\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBui_updateTurn()\fP, and \fBwinning_checkForWinner()\fP\&.
 .SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
 
 .PP
-Definition at line \fB37\fP of file \fBinput\&.c\fP\&.
+Definition at line \fB38\fP of file \fBinput\&.c\fP\&.
 .PP
 References \fBcell_decreaseSize()\fP, \fBcell_increaseSize()\fP, \fBcell_state\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleEscapeSequence()\fP, \fBhandlePauseResume()\fP, \fBhandleSetMark()\fP, \fBGameTimer::is_running\fP, and \fBopenControls()\fP\&.
 .SS "static void openControls ()\fR [static]\fP"
 
 .PP
-Definition at line \fB157\fP of file \fBinput\&.c\fP\&.
+Definition at line \fB165\fP of file \fBinput\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBmenu_showControls()\fP, \fBtime_pause()\fP, and \fBtime_resume()\fP\&.
 .SH "Author"

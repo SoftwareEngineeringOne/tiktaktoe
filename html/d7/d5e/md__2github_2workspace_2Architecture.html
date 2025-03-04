@@ -103,26 +103,26 @@ $(function(){initNavTree('d7/d5e/md__2github_2workspace_2Architecture.html','../
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md22"></a></p>
-<ol type="1">
-<li>Main initializes the program (UART etc.) and prints the first output</li>
-<li>Infinity loop in main</li>
-<li>The game is interrupt based (not really thouh). Interrupts are defined in "interrupts". They will call functions in "logic". The logic is based on "hal" and "output"(also wrong tbh)</li>
-</ol>
+<p>The architecture is interrupt-based and with the use cases package divided. The program starts at <a class="el" href="../../d0/d29/main_8c.html">main.c</a>. This file is only used for restarting and shutting down the system. The program can run infinitely, dependent on the users actions. Package descriptions are following:</p>
 <h1><a class="anchor" id="autotoc_md23"></a>
-Hardware Abstraction Layer (util and hal)</h1>
+Hardware Abstraction Layer (<code>hal</code>)</h1>
+<p>The hardware abstraction layer package gives the developer the possibility to call neutral and machine-independent functions without knowing the hardware implementation. \ \ A specialty in this package are the interrupts. They make a user and time action-based system possible. It is the only component that calls functions outside the hal.</p>
 <h1><a class="anchor" id="autotoc_md24"></a>
-Interrupt handling (interrupts)</h1>
+Game Logic (<code>logic</code>)</h1>
+<p>The logic package is the most important part of the game. It manages the process of the game.</p>
 <h1><a class="anchor" id="autotoc_md25"></a>
-Game Logic (logic)</h1>
+Output (<code>presentation</code>)</h1>
+<p>The presentation package abstracts the whole output that is shown to the user. It simplifies the UART transmission.</p>
 <h1><a class="anchor" id="autotoc_md26"></a>
-Output (output)</h1>
+Utilities (<code>util</code>)</h1>
+<p>The util package includes independent (from another) helpers that are used from several packages. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Mar 3 2025 16:55:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Tue Mar 4 2025 13:27:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -27,10 +27,10 @@ var NAVTREE =
   [ "TikTakToe", "index.html", [
     [ "TicTacToe project", "index.html", "index" ],
     [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Hardware Abstraction Layer (util and hal)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23", null ],
-      [ "Interrupt handling (interrupts)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24", null ],
-      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25", null ],
-      [ "Output (output)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26", null ]
+      [ "Hardware Abstraction Layer (hal)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23", null ],
+      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24", null ],
+      [ "Output (presentation)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25", null ],
+      [ "Utilities (util)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26", null ]
     ] ],
     [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
       [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md28", [
@@ -69,7 +69,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/dd0/timer_8h.html#a78b8ded5d5b07f2d4ef5bb4bf3d46d07",
-"de/d12/style_8h.html#a24d680a54d499effe2f19d9798739613"
+"de/d12/style_8h.html#a15ca4b464989469fd7225ad828ac164a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

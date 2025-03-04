@@ -181,8 +181,10 @@ var NAVTREEINDEX1 =
 "db/d16/config_8h.html":[4,0,8],
 "db/d16/config_8h.html#a07b4f852ff896fc9831e6e4d3a8e9b60":[4,0,8,1],
 "db/d16/config_8h.html#a3747fdaf04721d720705ef97c22908cd":[4,0,8,0],
-"db/d16/config_8h.html#a61db32789eaf2d2642e3b16723284f0c":[4,0,8,3],
-"db/d16/config_8h.html#a7fc9eee9e9d18a32a09278686843798e":[4,0,8,2],
+"db/d16/config_8h.html#a525600f5742552e13230570a8dd7ece8":[4,0,8,3],
+"db/d16/config_8h.html#a61db32789eaf2d2642e3b16723284f0c":[4,0,8,5],
+"db/d16/config_8h.html#a7fc9eee9e9d18a32a09278686843798e":[4,0,8,4],
+"db/d16/config_8h.html#a9295819aec24973f85f0ea41a754be14":[4,0,8,2],
 "db/d16/config_8h_source.html":[4,0,8],
 "db/db3/input__buf_8h.html":[4,0,6,2],
 "db/db3/input__buf_8h.html#a3e03a367ae13ea8f68021a964efbef90":[4,0,6,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "dd/dfa/cursor_8c_source.html":[4,0,5,1],
 "de/d12/style_8h.html":[4,0,4,6],
 "de/d12/style_8h.html#a09ec0b302bee7262f9959add53ccd0c4":[4,0,4,6,18],
-"de/d12/style_8h.html#a0af1e03653ace4d21aebf3b2e03a6535":[4,0,4,6,9],
-"de/d12/style_8h.html#a15ca4b464989469fd7225ad828ac164a":[4,0,4,6,20],
-"de/d12/style_8h.html#a1dc5215d084174df6f00a9267cec2f17":[4,0,4,6,11]
+"de/d12/style_8h.html#a0af1e03653ace4d21aebf3b2e03a6535":[4,0,4,6,9]
 };

@@ -87,5 +87,10 @@ var searchData=
   ['top_5fbottom_84',['TOP_BOTTOM',['../d5/d5a/field_8h.html#a51f9204a833a932e19f6889824e9446b',1,'field.h']]],
   ['total_5fticks_85',['total_ticks',['../d2/d3d/structGameState.html#ab0861af55e220d7a5f1a1afeacecbdf4',1,'GameState']]],
   ['true_86',['true',['../d4/da4/def_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7',1,'def.h']]],
-  ['turn_5frow_87',['TURN_ROW',['../d9/d3b/ui_8h.html#adbeef5f5002bcfc3cbed2deb88012cc4',1,'ui.h']]]
+  ['tt_87',['tt',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24',1,'Game Logic (&lt;tt&gt;logic&lt;/tt&gt;)'],['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'Hardware Abstraction Layer (&lt;tt&gt;hal&lt;/tt&gt;)'],['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25',1,'Output (&lt;tt&gt;presentation&lt;/tt&gt;)'],['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26',1,'Utilities (&lt;tt&gt;util&lt;/tt&gt;)']]],
+  ['tt_20hal_20tt_88',['Hardware Abstraction Layer (&lt;tt&gt;hal&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]],
+  ['tt_20logic_20tt_89',['Game Logic (&lt;tt&gt;logic&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24',1,'']]],
+  ['tt_20presentation_20tt_90',['Output (&lt;tt&gt;presentation&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25',1,'']]],
+  ['tt_20util_20tt_91',['Utilities (&lt;tt&gt;util&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26',1,'']]],
+  ['turn_5frow_92',['TURN_ROW',['../d9/d3b/ui_8h.html#adbeef5f5002bcfc3cbed2deb88012cc4',1,'ui.h']]]
 ];

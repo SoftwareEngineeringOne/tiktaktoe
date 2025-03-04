@@ -1,4 +1,4 @@
-.TH "config.h" 3 "Mon Mar 3 2025 16:55:30" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "config.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,16 +10,22 @@ config.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBCELLS_PER_ROW\fP   7"
+.RI "#define \fBENABLE_UNICODE\fP"
+.br
+.ti -1c
+.RI "#define \fBENABLE_ASCII_ART\fP"
+.br
+.ti -1c
+.RI "#define \fBCELLS_PER_ROW\fP   3"
 .br
 .ti -1c
 .RI "#define \fBCELLS_PER_COL\fP   3"
 .br
 .ti -1c
-.RI "#define \fBTICKS_PER_TURN\fP   30"
+.RI "#define \fBTICKS_PER_TURN\fP   20"
 .br
 .ti -1c
-.RI "#define \fBTICK_SPEED\fP   11"
+.RI "#define \fBTICK_SPEED\fP   12"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -53,15 +59,23 @@ Definition in file \fBconfig\&.h\fP\&.
 
 .PP
 Definition at line \fB28\fP of file \fBconfig\&.h\fP\&.
-.SS "#define CELLS_PER_ROW   7"
+.SS "#define CELLS_PER_ROW   3"
 
 .PP
 Definition at line \fB27\fP of file \fBconfig\&.h\fP\&.
-.SS "#define TICK_SPEED   11"
+.SS "#define ENABLE_ASCII_ART"
+
+.PP
+Definition at line \fB24\fP of file \fBconfig\&.h\fP\&.
+.SS "#define ENABLE_UNICODE"
+
+.PP
+Definition at line \fB22\fP of file \fBconfig\&.h\fP\&.
+.SS "#define TICK_SPEED   12"
 
 .PP
 Definition at line \fB32\fP of file \fBconfig\&.h\fP\&.
-.SS "#define TICKS_PER_TURN   30"
+.SS "#define TICKS_PER_TURN   20"
 
 .PP
 Definition at line \fB31\fP of file \fBconfig\&.h\fP\&.

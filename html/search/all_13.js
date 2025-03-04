@@ -50,5 +50,6 @@ var searchData=
   ['using_20docker_47',['Using Docker',['../index.html#autotoc_md8',1,'']]],
   ['using_20the_20included_20makefile_48',['Using the included Makefile',['../index.html#autotoc_md13',1,'']]],
   ['using_20the_20provided_20makefile_49',['Using the provided Makefile',['../index.html#autotoc_md5',1,'']]],
-  ['util_20and_20hal_50',['Hardware Abstraction Layer (util and hal)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23',1,'']]]
+  ['util_20tt_50',['Utilities (&lt;tt&gt;util&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26',1,'']]],
+  ['utilities_20tt_20util_20tt_51',['Utilities (&lt;tt&gt;util&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26',1,'']]]
 ];

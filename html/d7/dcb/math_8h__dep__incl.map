@@ -1,10 +1,12 @@
 <map id="util/math.h" name="util/math.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="57,5,138,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="69,5,150,31"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title=" " alt="" coords="5,153,100,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,47,80,80,58,153,53,152,75,78,86,45"/>
-<area shape="rect" id="Node000003" href="$d7/df5/winning_8h.html" title=" " alt="" coords="90,79,196,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,42,138,77,133,80,111,45"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="118,117,69,154,66,150,114,112"/>
-<area shape="rect" id="Node000004" href="$d0/dfd/winning_8c.html" title=" " alt="" coords="123,153,230,178"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="158,117,173,151,168,153,153,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,46,60,153,55,151,97,44"/>
+<area shape="rect" id="Node000003" href="$d7/df5/winning_8h.html" title=" " alt="" coords="109,79,215,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,42,155,77,151,80,125,45"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="132,115,73,154,70,150,129,111"/>
+<area shape="rect" id="Node000004" href="$d1/d06/input_8c.html" title=" " alt="" coords="123,153,214,178"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="167,120,170,152,165,152,162,120"/>
+<area shape="rect" id="Node000005" href="$d0/dfd/winning_8c.html" title=" " alt="" coords="238,153,344,178"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="198,110,270,150,268,154,196,115"/>
 </map>

@@ -1,6 +1,10 @@
 # Präsentation 04.03.2025
 
-## Übersicht Aufbau
+## Einleitung > Ben oder Max
+
+- TikTakToe Projekt
+
+### Übersicht Aufbau
 1. Einleitung
 2. Grobe Überlick Architektur
 2. Überlick Spiel
@@ -8,10 +12,6 @@
 5. Compile time Optionen
 6. Building/Running
 7. Ausblick
-
-## Einleitung > Simon
-
-- TikTakToe Projekt
 
 ## Architektur > Paul
 ![Ansicht](https://github.com/user-attachments/assets/ac9f3c44-f19c-4fc7-9869-ddfb3f9d6aef)
@@ -76,25 +76,16 @@ __ANSICHT 3: input_buf.h SPLIT input_buf.c
 - Verwendung von RingBuffer
 - Head/Tail Pointer
 
-### Zellen Neumalen ohne alles zu refreshen
-![Ansicht 4](https://github.com/user-attachments/assets/b5082a71-1cc1-4ac8-9c3d-c77e437d55df)
-__ANSICHT 4: cell.c -> cell_select(), redrawCell() - alles andere folden
-- Nur Inhalt der aktuellen und letzten Zellen werden bei Bedarf neugemalt
-- erst cell_select zeigen, dann redrawCell (am besten anmerkden, dass bisschen tief genestet ist...)
-
-### Vergrößern/Verkleinern > Paul
+### Vergrößern/Verkleinern  > Simon
 ![Ansicht 5](https://github.com/user-attachments/assets/955efb78-c715-4db2-a573-dfee62834321)
-__ANSICHT 5: cell.h -> Size + CellSize, cell.c -> ARRAYS
+__ANSICHT 4: cell.h -> Size + CellSize, cell.c -> ARRAYS
 - 3 Größen verfügbar
 - Möglich durch entkoppelung von Logik (welche Zellen sind markiert) und Präsentation
-- Malen mit 2D Array statt string um alle Zellen in einer Schleife malen zu können
+- 2D Arrays erlauben malen nur in Zelle, so dass wie bereits angemerkt nicht alles neu
 
-### __WFI()
-![Ansicht 6](https://github.com/user-attachments/assets/8eefa502-3e72-44d7-bc14-799ebcd7061d)
-_\_ANSICHT 6: menu.c -> menu_showMainMenu() waiting loop, nvic.h -> definition von __WFI()
-- Hohe CPU Nutzung während Warteschleifen für Input aufgefallen
-    - Permanentes checken ob input verfügbar
-- Implementation von `wfi` Befehl um Prozessor in LowPowerMode bis nächsten Interrupt zu setzen
+### Winning Algoritmus
+__ANSICHT 6: winner.c
+
 
 ## Compile Time Optionen > Simon
 ![Ansicht 7](https://github.com/user-attachments/assets/1c1423d9-410f-4132-9b4c-136bc33f1651)

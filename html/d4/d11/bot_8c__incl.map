@@ -1,10 +1,10 @@
 <map id="logic/bot.c" name="logic/bot.c">
 <area shape="rect" id="Node000001" title=" " alt="" coords="336,5,417,31"/>
-<area shape="rect" id="Node000002" href="$da/de8/bot_8h.html" title="Contains function for random cell marking (a &quot;bot player&quot;)" alt="" coords="259,79,340,105"/>
+<area shape="rect" id="Node000002" href="$da/de8/bot_8h.html" title="Contains function for random cell marking." alt="" coords="259,79,340,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="365,34,325,70,322,66,362,30"/>
 <area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="307,153,401,178"/>
 <area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="377,32,361,138,356,137,372,31"/>
-<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title="Contains RNG constants and abstraction functions." alt="" coords="436,153,531,178"/>
+<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title="Contains constants and abstraction functions for the RNG device." alt="" coords="436,153,531,178"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="388,30,468,138,463,141,383,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,103,338,139,334,142,306,107"/>
 <area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="148,226,277,252"/>

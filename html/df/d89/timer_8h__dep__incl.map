@@ -1,5 +1,5 @@
 <map id="hal/timer.h" name="hal/timer.h">
-<area shape="rect" id="Node000001" title="Contains timer constants and abstraction functions." alt="" coords="191,5,272,31"/>
+<area shape="rect" id="Node000001" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="191,5,272,31"/>
 <area shape="rect" id="Node000002" href="$d8/d22/interrupts_8c.html" title=" " alt="" coords="5,79,112,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,40,89,81,87,76,187,35"/>
 <area shape="rect" id="Node000003" href="$df/d41/timer_8c.html" title=" " alt="" coords="135,79,216,105"/>

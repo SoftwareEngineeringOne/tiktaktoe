@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['passing_20to_20cmake_0',['Directly passing to CMake',['../index.html#autotoc_md12',1,'']]],
+  ['passing_20to_20cmake_0',['Directly passing to CMake',['../index.html#autotoc_md15',1,'']]],
   ['player_1',['Player',['../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9',1,'game.h']]],
   ['player_5fstarts_2',['PLAYER_STARTS',['../d2/d5a/ascii__art_8h.html#a7b9b090e85ba0f87ee680409deafc21b',1,'ascii_art.h']]],
-  ['presentation_20tt_3',['Output (&lt;tt&gt;presentation&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25',1,'']]],
+  ['presentation_20tt_3',['Output (&lt;tt&gt;presentation&lt;/tt&gt;)',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md29',1,'']]],
   ['print_4',['print',['../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e',1,'print(const char *string):&#160;print.c'],['../d5/d77/print_8h.html#ae2dd7886efd463e815dadf10eb54777e',1,'print(const char *string):&#160;print.c']]],
   ['print_2ec_5',['print.c',['../d6/db1/print_8c.html',1,'']]],
   ['print_2eh_6',['print.h',['../d5/d77/print_8h.html',1,'']]],
@@ -18,8 +18,8 @@ var searchData=
   ['printrow_15',['printRow',['../dd/da6/field_8c.html#ab51eda1e84a93a35d01dcf7b83f6e5f3',1,'field.c']]],
   ['printstyle_16',['printStyle',['../d6/db1/print_8c.html#a2b33af16d6bf86c3623a6ed14f4115f2',1,'printStyle(const Style *style):&#160;print.c'],['../d5/d77/print_8h.html#a2b33af16d6bf86c3623a6ed14f4115f2',1,'printStyle(const Style *style):&#160;print.c']]],
   ['printwinnerbanner_17',['printWinnerBanner',['../d2/d0a/menu_8c.html#a2143804a7c8e1529eff8a242ad1a8fa8',1,'menu.c']]],
-  ['project_18',['project',['../index.html#autotoc_md1',1,'How to build/run the project'],['../index.html',1,'TicTacToe project']]],
-  ['provided_20makefile_19',['Using the provided Makefile',['../index.html#autotoc_md5',1,'']]],
+  ['project_18',['Build and run the project',['../index.html#autotoc_md4',1,'']]],
+  ['provided_20makefile_19',['Using the provided Makefile',['../index.html#autotoc_md8',1,'']]],
   ['putintobuf_20',['putIntoBuf',['../d7/dec/input__buf_8c.html#a94879a59b145834ad147b43c5f9ffbda',1,'input_buf.c']]],
   ['pve_21',['PVE',['../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3',1,'game.h']]],
   ['pvp_22',['PVP',['../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f',1,'game.h']]]

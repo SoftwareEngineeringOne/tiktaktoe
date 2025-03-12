@@ -1,5 +1,5 @@
 <map id="time_resume" name="time_resume">
-<area shape="rect" id="Node000001" title="Resume the timer after a pause." alt="" coords="5,5,102,31"/>
+<area shape="rect" id="Node000001" title="Resume the timer when paused." alt="" coords="5,5,102,31"/>
 <area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="150,5,233,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
 <area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="281,5,380,31"/>

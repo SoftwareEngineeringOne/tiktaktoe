@@ -1,4 +1,4 @@
-.TH "GameState" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "GameState" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,6 +15,7 @@ GameState \- The current game state\&.
 .ti -1c
 .RI "\fBPlayer\fP \fBwinner\fP"
 .br
+.RI "None if tie or game not over\&. "
 .ti -1c
 .RI "\fBMode\fP \fBmode\fP"
 .br
@@ -52,53 +53,55 @@ The current game state\&.
 
 Contains important game information and several metrics 
 .PP
-Definition at line \fB52\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB60\fP of file \fBgame\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "uint32_t GameState::average_ticks"
 
 .PP
-Definition at line \fB62\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB70\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::circle_average_ticks"
 
 .PP
-Definition at line \fB68\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB76\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::circle_total_ticks"
 
 .PP
-Definition at line \fB67\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB75\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::cross_average_ticks"
 
 .PP
-Definition at line \fB65\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB73\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::cross_total_ticks"
 
 .PP
-Definition at line \fB64\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB72\fP of file \fBgame\&.h\fP\&.
 .SS "\fBPlayer\fP GameState::current_player"
 
 .PP
-Definition at line \fB58\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB66\fP of file \fBgame\&.h\fP\&.
 .SS "volatile uint8_t GameState::fields_marked"
 
 .PP
-Definition at line \fB57\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB65\fP of file \fBgame\&.h\fP\&.
 .SS "\fBMode\fP GameState::mode"
 
 .PP
-Definition at line \fB55\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB63\fP of file \fBgame\&.h\fP\&.
 .SS "volatile uint8_t GameState::round"
 
 .PP
-Definition at line \fB56\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB64\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::total_ticks"
 
 .PP
-Definition at line \fB61\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB69\fP of file \fBgame\&.h\fP\&.
 .SS "\fBPlayer\fP GameState::winner"
 
 .PP
-Definition at line \fB54\fP of file \fBgame\&.h\fP\&.
+None if tie or game not over\&. 
+.PP
+Definition at line \fB62\fP of file \fBgame\&.h\fP\&.
 
 .SH "Author"
 .PP 

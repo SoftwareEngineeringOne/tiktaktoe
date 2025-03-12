@@ -24,12 +24,12 @@ void \mbox{\hyperlink{time_8c_a90e96cefd66715b9740be8f0dbab0042}{time\+\_\+finis
 void \mbox{\hyperlink{time_8c_a5ad5fe91a14f332c6acc40870c980fae}{time\+\_\+pause}} ()
 \begin{DoxyCompactList}\small\item\em Pause the timer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{time_8c_aa626af1fe4486ff2f05529894b807e5a}{time\+\_\+resume}} ()
-\begin{DoxyCompactList}\small\item\em Resume the timer after a pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resume the timer when paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structGameTimer}{Game\+Timer}} \mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\+\_\+timer}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Global instance of the \doxylink{structGameTimer}{Game\+Timer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,12 +63,17 @@ void time\+\_\+finish\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{str
 Resets the ticks. 
 
 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em game\+\_\+state} & Current state of the game \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line \mbox{\hyperlink{time_8c_source_l00047}{47}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.
 
 
 
-References \mbox{\hyperlink{game_8h_source_l00067}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00031}{Cross}}, \mbox{\hyperlink{game_8h_source_l00064}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, and \mbox{\hyperlink{time_8h_source_l00024}{Game\+Timer\+::ticks\+\_\+turn}}.
+References \mbox{\hyperlink{game_8h_source_l00075}{Game\+State\+::circle\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00039}{Cross}}, \mbox{\hyperlink{game_8h_source_l00072}{Game\+State\+::cross\+\_\+total\+\_\+ticks}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, and \mbox{\hyperlink{time_8h_source_l00024}{Game\+Timer\+::ticks\+\_\+turn}}.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -188,7 +193,7 @@ void time\+\_\+resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Resume the timer after a pause. 
+Resume the timer when paused. 
 
 
 
@@ -232,6 +237,10 @@ Here is the caller graph for this function\+:
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
+
+
+Global instance of the \doxylink{structGameTimer}{Game\+Timer}. 
+
 
 
 Definition at line \mbox{\hyperlink{time_8c_source_l00024}{24}} of file \mbox{\hyperlink{time_8c_source}{time.\+c}}.

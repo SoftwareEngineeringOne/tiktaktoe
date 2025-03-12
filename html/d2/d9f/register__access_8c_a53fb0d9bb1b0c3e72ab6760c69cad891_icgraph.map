@@ -8,9 +8,9 @@
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2181,473,2145,465,2018,445,1889,440,1742,440,1612,448,1483,467,1367,491,1274,514,1273,509,1366,485,1482,461,1611,442,1742,435,1889,435,2018,440,2146,460,2182,468"/>
 <area shape="rect" id="Node000015" href="$dc/de5/random_8c.html#ad5a3df3d0092f55f6ea54ccaa7daf3dc" title="Enables the generation of random numbers." alt="" coords="1856,475,1920,501"/>
 <area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="2232,516,2200,569,2176,595,2147,614,2099,634,2058,642,2017,636,1971,614,1951,594,1942,572,1936,547,1923,522,1905,503,1908,499,1927,518,1941,545,1947,570,1955,591,1975,610,2019,631,2058,637,2098,629,2144,610,2172,591,2195,566,2228,514"/>
-<area shape="rect" id="Node000016" href="$d4/dfd/system_8c.html#a077a1d054ddfb6fb237fb8d288b3b1d9" title="Call the shutdown of the system." alt="" coords="308,6,424,32"/>
+<area shape="rect" id="Node000016" href="$d4/dfd/system_8c.html#a077a1d054ddfb6fb237fb8d288b3b1d9" title="Triggers &quot;off&quot; mode of the system." alt="" coords="308,6,424,32"/>
 <area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="2237,460,2228,367,2210,244,2198,182,2182,127,2164,82,2143,53,2113,29,2085,16,2057,9,2029,8,1966,16,1889,21,776,21,425,21,425,16,776,16,1889,16,1965,10,2028,3,2058,4,2087,11,2116,25,2147,49,2169,79,2187,125,2203,181,2215,243,2233,366,2242,459"/>
-<area shape="rect" id="Node000017" href="$d4/dfd/system_8c.html#a97bacc4493b8a3008bdbdd7a83e86642" title="Call the soft reset of the system." alt="" coords="1137,158,1264,184"/>
+<area shape="rect" id="Node000017" href="$d4/dfd/system_8c.html#a97bacc4493b8a3008bdbdd7a83e86642" title="Trigger a soft reset of the system." alt="" coords="1137,158,1264,184"/>
 <area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="2238,460,2231,409,2216,344,2204,311,2188,279,2168,249,2144,223,2112,200,2083,184,2056,175,2028,170,1966,171,1889,173,1571,173,1264,173,1264,168,1571,168,1889,168,1966,165,2028,165,2057,170,2086,179,2115,195,2147,219,2172,246,2192,276,2209,309,2221,343,2236,408,2243,460"/>
 <area shape="rect" id="Node000021" href="$df/d41/timer_8c.html#a3a07f4678518ae033c32482fd71486b8" title="Capture the time of the given timer." alt="" coords="2009,374,2109,400"/>
 <area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="2213,467,2181,444,2144,421,2101,403,2104,398,2147,416,2184,439,2216,463"/>
@@ -38,7 +38,7 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1114,559,1040,580,1039,575,1112,554"/>
 <area shape="rect" id="Node000013" href="$d1/dcb/game_8c.html#ac5d6665e8acc93ae4bb853799c795f3f" title=" " alt="" coords="728,679,828,705"/>
 <area shape="poly" id="edge14_Node000004_Node000013" title=" " alt="" coords="1136,562,1118,573,1104,585,1095,596,1085,607,1070,618,1008,647,943,667,881,681,829,689,828,684,880,676,941,662,1006,642,1067,614,1081,603,1091,593,1100,581,1115,569,1133,558"/>
-<area shape="rect" id="Node000006" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="716,578,840,604"/>
+<area shape="rect" id="Node000006" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="716,578,840,604"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="903,593,841,593,841,588,903,588"/>
 <area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,1490,405,1516"/>
 <area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="911,610,776,641,721,657,691,669,641,714,596,764,556,820,522,879,491,940,466,1003,425,1130,398,1250,382,1356,371,1490,365,1489,377,1355,393,1249,420,1128,461,1001,487,938,517,876,552,817,592,761,637,710,688,664,719,652,775,636,910,605"/>
@@ -75,7 +75,7 @@
 <area shape="poly" id="edge36_Node000028_Node000024" title=" " alt="" coords="1984,963,1975,971,1961,994,1951,1023,1940,1096,1938,1182,1942,1276,1949,1461,1944,1538,1937,1570,1927,1597,1912,1616,1907,1613,1923,1595,1932,1569,1939,1537,1944,1460,1936,1276,1933,1182,1934,1095,1945,1022,1956,992,1971,968,1980,959"/>
 <area shape="poly" id="edge38_Node000029_Node000023" title=" " alt="" coords="2043,1311,1893,985,1898,983,2048,1309"/>
 <area shape="poly" id="edge44_Node000029_Node000024" title=" " alt="" coords="2050,1366,2004,1472,1969,1536,1927,1598,1908,1617,1905,1613,1923,1594,1964,1533,1999,1469,2045,1364"/>
-<area shape="rect" id="Node000030" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="943,1895,1039,1921"/>
+<area shape="rect" id="Node000030" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer when paused." alt="" coords="943,1895,1039,1921"/>
 <area shape="poly" id="edge39_Node000029_Node000030" title=" " alt="" coords="2061,1366,2059,1430,2052,1520,2037,1626,2011,1736,1994,1789,1973,1840,1947,1886,1917,1927,1882,1962,1842,1988,1796,2005,1745,2011,1395,2011,1321,2001,1221,1978,1035,1924,1036,1919,1222,1972,1322,1996,1395,2005,1745,2005,1795,2000,1840,1983,1879,1958,1913,1924,1943,1883,1968,1837,1989,1787,2006,1734,2032,1625,2046,1520,2053,1430,2055,1366"/>
 <area shape="rect" id="Node000031" href="$d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="706,1945,850,1970"/>
 <area shape="poly" id="edge40_Node000030_Node000031" title=" " alt="" coords="928,1925,837,1947,836,1941,927,1920"/>

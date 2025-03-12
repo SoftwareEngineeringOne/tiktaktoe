@@ -12,11 +12,11 @@
 <area shape="poly" id="edge47_Node000001_Node000009" title=" " alt="" coords="695,21,874,40,965,56,1002,66,1030,77,1063,93,1089,109,1107,131,1114,164,1114,241,1111,265,1102,287,1089,307,1072,325,1033,355,994,377,991,372,1030,350,1068,321,1084,304,1097,284,1106,263,1109,240,1109,164,1103,133,1086,113,1060,97,1028,81,1001,71,964,61,873,45,695,26"/>
 <area shape="rect" id="Node000010" href="$da/d7e/nvic_8h.html" title="Contains interrupt constants." alt="" coords="274,79,351,105"/>
 <area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="600,32,366,82,365,77,599,27"/>
-<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title="Contains RNG constants and abstraction functions." alt="" coords="1357,226,1452,252"/>
+<area shape="rect" id="Node000011" href="$d1/d79/random_8h.html" title="Contains constants and abstraction functions for the RNG device." alt="" coords="1357,226,1452,252"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="695,18,851,23,1055,34,1240,52,1306,63,1343,77,1371,106,1389,142,1400,179,1405,210,1400,211,1394,180,1384,144,1366,109,1341,81,1305,68,1239,57,1054,40,851,29,695,23"/>
-<area shape="rect" id="Node000012" href="$d5/dd0/timer_8h.html" title="Contains timer constants and abstraction functions." alt="" coords="344,300,425,326"/>
+<area shape="rect" id="Node000012" href="$d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="344,300,425,326"/>
 <area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="600,22,511,24,406,33,356,40,311,51,275,64,252,81,238,104,235,126,240,150,251,177,271,212,298,243,354,289,350,293,294,247,267,215,246,179,235,151,229,126,233,102,248,77,273,59,309,46,355,35,406,28,511,19,599,17"/>
-<area shape="rect" id="Node000013" href="$da/de8/bot_8h.html" title="Contains function for random cell marking (a &quot;bot player&quot;)" alt="" coords="106,153,186,178"/>
+<area shape="rect" id="Node000013" href="$da/de8/bot_8h.html" title="Contains function for random cell marking." alt="" coords="106,153,186,178"/>
 <area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="600,21,495,23,367,30,304,38,247,48,201,63,169,81,159,93,153,107,148,138,143,137,148,106,155,90,166,77,199,58,246,43,303,33,366,25,495,17,600,16"/>
 <area shape="rect" id="Node000014" href="$de/ded/input_8h.html" title="Contains the input handling of the game." alt="" coords="261,153,351,178"/>
 <area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="600,22,514,25,412,33,364,41,321,51,286,64,264,81,258,94,261,110,270,125,283,140,279,144,266,129,256,112,253,94,260,77,284,60,319,46,363,36,412,28,514,20,600,17"/>

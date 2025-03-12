@@ -2,7 +2,7 @@
 \hypertarget{uart_8h}{}\label{uart_8h}\index{hal/uart.h@{hal/uart.h}}
 
 
-Contains UART constants and abstraction functions.  
+Contains constants and abstraction functions for the UART device.  
 
 
 {\ttfamily \#include "{}def.\+h"{}}\newline
@@ -96,7 +96,7 @@ uint8\+\_\+t \mbox{\hyperlink{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\
 
 
 \doxysubsection{Detailed Description}
-Contains UART constants and abstraction functions. 
+Contains constants and abstraction functions for the UART device. 
 
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -412,12 +412,17 @@ void uart\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{def_8h_abb4
 Initializing the UART with the following Settings\+: 115200-\/8-\/N-\/1. 
 
 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em with\+\_\+interrupts} & Wether or not interrupts should be triggered \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line \mbox{\hyperlink{uart_8c_source_l00025}{25}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
 
 
 
-References \mbox{\hyperlink{nvic_8h_source_l00043}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00038}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00018}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00041}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00056}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00038}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00022}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00024}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00052}{UART\+\_\+\+TASK\+\_\+\+START}}.
+References \mbox{\hyperlink{nvic_8h_source_l00045}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00040}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00018}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00041}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00056}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00038}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00022}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00024}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00052}{UART\+\_\+\+TASK\+\_\+\+START}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -483,8 +488,8 @@ void uart\+\_\+write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data}{
 Writes/\+Sends a byte over the serial Port. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em data} & byte to send (ASCII) \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & byte to send \\
 \hline
 \end{DoxyParams}
 

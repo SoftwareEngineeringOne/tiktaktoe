@@ -1,5 +1,5 @@
 <map id="hal/uart.h" name="hal/uart.h">
-<area shape="rect" id="Node000001" title="Contains UART constants and abstraction functions." alt="" coords="33,5,107,31"/>
+<area shape="rect" id="Node000001" title="Contains constants and abstraction functions for the UART device." alt="" coords="33,5,107,31"/>
 <area shape="rect" id="Node000002" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="5,79,55,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,33,46,67,42,64,61,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="78,79,142,105"/>

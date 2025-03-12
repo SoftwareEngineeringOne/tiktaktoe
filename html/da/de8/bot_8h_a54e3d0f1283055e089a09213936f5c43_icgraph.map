@@ -1,6 +1,6 @@
 <map id="bot_markRandomCell" name="bot_markRandomCell">
 <area shape="rect" id="Node000001" title="Mark some random cell." alt="" coords="819,56,964,82"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="827,54,757,34,758,29,829,49"/>
 <area shape="rect" id="Node000005" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,81,405,107"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="804,76,406,95,405,90,804,70"/>

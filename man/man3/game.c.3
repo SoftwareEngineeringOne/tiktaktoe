@@ -1,4 +1,4 @@
-.TH "logic/game.c" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.c" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,7 +71,7 @@ logic/game.c
 .ti -1c
 .RI "void \fBgame_onTimeOut\fP ()"
 .br
-.RI "Automatic turn in case the round time is over\&. "
+.RI "Automaticly end a turn in case the turn time is over\&. "
 .ti -1c
 .RI "void \fBgame_endTurn\fP ()"
 .br
@@ -134,7 +134,7 @@ References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_pl
 .SS "void game_onTimeOut ()"
 
 .PP
-Automatic turn in case the round time is over\&. 
+Automaticly end a turn in case the turn time is over\&. 
 .PP
 Definition at line \fB131\fP of file \fBgame\&.c\fP\&.
 .PP
@@ -143,6 +143,13 @@ References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \
 
 .PP
 Start the main game\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP Which mode the game should be played in\&. 
+.RE
+.PP
+
 .PP
 Definition at line \fB64\fP of file \fBgame\&.c\fP\&.
 .PP

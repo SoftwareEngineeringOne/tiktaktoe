@@ -46,19 +46,19 @@ struct \mbox{\hyperlink{structCellState}{Cell\+State}}
 enum \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} \{ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{PVE}}
 , \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{PVP}}
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Possible game modes. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} \{ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}} = 0
 , \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{Cross}} = 1
 , \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}} = 2
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum describing a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{game_8h_a99a6ceced9c8b9648cc11a086603d66e}{game\+\_\+run}} (const \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} mode)
 \begin{DoxyCompactList}\small\item\em Start the main game. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8h_a664affa156a0a5fa033bad0b88bb6c72}{game\+\_\+on\+Time\+Out}} ()
-\begin{DoxyCompactList}\small\item\em Automatic turn in case the round time is over. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Automaticly end a turn in case the turn time is over. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8h_a729e60fc5298c74e80423c136d1f6a5a}{game\+\_\+end\+Turn}} ()
 \begin{DoxyCompactList}\small\item\em Finish the current turn. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -105,25 +105,33 @@ Definition at line \mbox{\hyperlink{game_8h_source_l00019}{19}} of file \mbox{\h
 {\footnotesize\ttfamily \label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911} 
 enum \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}
 
-\begin{DoxyEnumFields}[2]{Enumerator}
+
+
+Possible game modes. 
+
+The game can be played in PVE or PVP mode \begin{DoxyEnumFields}[2]{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{PVE@{PVE}!game.h@{game.h}}\index{game.h@{game.h}!PVE@{PVE}}}\Hypertarget{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}\label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911} 
-PVE&\\
+PVE&Player vs Computer. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{PVP@{PVP}!game.h@{game.h}}\index{game.h@{game.h}!PVP@{PVP}}}\Hypertarget{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}\label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911} 
-PVP&\\
+PVP&Player vs Player. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00022}{22}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Definition at line \mbox{\hyperlink{game_8h_source_l00027}{27}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9}\index{game.h@{game.h}!Player@{Player}}
 \index{Player@{Player}!game.h@{game.h}}
 \doxysubsubsection{\texorpdfstring{Player}{Player}}
 {\footnotesize\ttfamily \label{game_8h_a9c8780378078e51e7c9041cbac392db9} 
 enum \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}}
+
+
+
+Enum describing a player. 
 
 \begin{DoxyEnumFields}[2]{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!game.h@{game.h}}\index{game.h@{game.h}!Circle@{Circle}}}\Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}\label{game_8h_a9c8780378078e51e7c9041cbac392db9} 
@@ -141,7 +149,7 @@ None&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00028}{28}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Definition at line \mbox{\hyperlink{game_8h_source_l00036}{36}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 
 
@@ -162,7 +170,7 @@ Definition at line \mbox{\hyperlink{game_8c_source_l00151}{151}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00030}{Circle}}, \mbox{\hyperlink{game_8h_source_l00031}{Cross}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00081}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00080}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00024}{PVE}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00079}{Cell\+State\+::selected}}, and \mbox{\hyperlink{time_8c_source_l00047}{time\+\_\+finish\+Turn()}}.
+References \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00038}{Circle}}, \mbox{\hyperlink{game_8h_source_l00039}{Cross}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00087}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00086}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00029}{PVE}}, \mbox{\hyperlink{game_8h_source_l00064}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00085}{Cell\+State\+::selected}}, and \mbox{\hyperlink{time_8c_source_l00047}{time\+\_\+finish\+Turn()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -188,7 +196,7 @@ void game\+\_\+on\+Time\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
-Automatic turn in case the round time is over. 
+Automaticly end a turn in case the turn time is over. 
 
 
 
@@ -196,7 +204,7 @@ Definition at line \mbox{\hyperlink{game_8c_source_l00131}{131}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{game_8h_source_l00078}{Cell\+State\+::all}}, \mbox{\hyperlink{bot_8c_source_l00023}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00030}{Circle}}, \mbox{\hyperlink{game_8h_source_l00031}{Cross}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{game_8c_source_l00151}{game\+\_\+end\+Turn()}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00081}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00080}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::mode}}, and \mbox{\hyperlink{game_8h_source_l00024}{PVE}}.
+References \mbox{\hyperlink{game_8h_source_l00084}{Cell\+State\+::all}}, \mbox{\hyperlink{bot_8c_source_l00023}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00038}{Circle}}, \mbox{\hyperlink{game_8h_source_l00039}{Cross}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{game_8c_source_l00151}{game\+\_\+end\+Turn()}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00087}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00086}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::mode}}, and \mbox{\hyperlink{game_8h_source_l00029}{PVE}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -225,12 +233,17 @@ void game\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{game_8
 Start the main game. 
 
 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mode} & Which mode the game should be played in. \\
+\hline
+\end{DoxyParams}
+
 
 Definition at line \mbox{\hyperlink{game_8c_source_l00064}{64}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
 
 
-References \mbox{\hyperlink{nvic_8h_source_l00055}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{game_8h_source_l00078}{Cell\+State\+::all}}, \mbox{\hyperlink{style_8h_source_l00034}{BOLD}}, \mbox{\hyperlink{bot_8c_source_l00023}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00228}{calculate\+Summary()}}, \mbox{\hyperlink{cell_8c_source_l00103}{cell\+\_\+redraw\+\_\+with\+Modifier()}}, \mbox{\hyperlink{cell_8c_source_l00133}{cell\+\_\+redraw\+All()}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00022}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00021}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00030}{Circle}}, \mbox{\hyperlink{game_8h_source_l00031}{Cross}}, \mbox{\hyperlink{game_8h_source_l00058}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00057}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8c_source_l00268}{handle\+Forced\+Move\+Update()}}, \mbox{\hyperlink{game_8c_source_l00180}{init()}}, \mbox{\hyperlink{input__buf_8c_source_l00051}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{input_8c_source_l00038}{input\+\_\+handle\+Byte()}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{game_8h_source_l00081}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{math_8h_source_l00032}{max}}, \mbox{\hyperlink{menu_8c_source_l00075}{menu\+\_\+show\+Game\+Over()}}, \mbox{\hyperlink{game_8h_source_l00055}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00032}{None}}, \mbox{\hyperlink{game_8h_source_l00024}{PVE}}, \mbox{\hyperlink{game_8c_source_l00257}{redraw\+Field()}}, \mbox{\hyperlink{game_8h_source_l00019}{REMAINING\+\_\+\+TIME}}, \mbox{\hyperlink{game_8h_source_l00056}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00079}{Cell\+State\+::selected}}, \mbox{\hyperlink{config_8h_source_l00025}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{timer_8h_source_l00076}{TIMER0}}, \mbox{\hyperlink{timer_8c_source_l00107}{timer\+\_\+stop()}}, \mbox{\hyperlink{ui_8c_source_l00038}{ui\+\_\+update\+Timer()}}, \mbox{\hyperlink{ui_8c_source_l00099}{ui\+\_\+update\+Turn()}}, \mbox{\hyperlink{game_8h_source_l00054}{Game\+State\+::winner}}, and \mbox{\hyperlink{winning_8c_source_l00039}{winning\+\_\+check\+For\+Winner()}}.
+References \mbox{\hyperlink{nvic_8h_source_l00058}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{game_8h_source_l00084}{Cell\+State\+::all}}, \mbox{\hyperlink{style_8h_source_l00034}{BOLD}}, \mbox{\hyperlink{bot_8c_source_l00023}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00228}{calculate\+Summary()}}, \mbox{\hyperlink{cell_8c_source_l00103}{cell\+\_\+redraw\+\_\+with\+Modifier()}}, \mbox{\hyperlink{cell_8c_source_l00133}{cell\+\_\+redraw\+All()}}, \mbox{\hyperlink{cell_8c_source_l00108}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00022}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00021}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00038}{Circle}}, \mbox{\hyperlink{game_8h_source_l00039}{Cross}}, \mbox{\hyperlink{game_8h_source_l00066}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00065}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00039}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{game_8c_source_l00268}{handle\+Forced\+Move\+Update()}}, \mbox{\hyperlink{game_8c_source_l00180}{init()}}, \mbox{\hyperlink{input__buf_8c_source_l00051}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{input_8c_source_l00038}{input\+\_\+handle\+Byte()}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{game_8h_source_l00087}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{math_8h_source_l00032}{max}}, \mbox{\hyperlink{menu_8c_source_l00075}{menu\+\_\+show\+Game\+Over()}}, \mbox{\hyperlink{game_8h_source_l00063}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00040}{None}}, \mbox{\hyperlink{game_8h_source_l00029}{PVE}}, \mbox{\hyperlink{game_8c_source_l00257}{redraw\+Field()}}, \mbox{\hyperlink{game_8h_source_l00019}{REMAINING\+\_\+\+TIME}}, \mbox{\hyperlink{game_8h_source_l00064}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00085}{Cell\+State\+::selected}}, \mbox{\hyperlink{config_8h_source_l00025}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{timer_8h_source_l00076}{TIMER0}}, \mbox{\hyperlink{timer_8c_source_l00107}{timer\+\_\+stop()}}, \mbox{\hyperlink{ui_8c_source_l00038}{ui\+\_\+update\+Timer()}}, \mbox{\hyperlink{ui_8c_source_l00099}{ui\+\_\+update\+Turn()}}, \mbox{\hyperlink{game_8h_source_l00062}{Game\+State\+::winner}}, and \mbox{\hyperlink{winning_8c_source_l00039}{winning\+\_\+check\+For\+Winner()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

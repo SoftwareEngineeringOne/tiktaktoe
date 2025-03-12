@@ -25,22 +25,54 @@
 var NAVTREE =
 [
   [ "TikTakToe", "index.html", [
-    [ "TicTacToe project", "index.html", "index" ],
-    [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Hardware Abstraction Layer (hal)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md23", null ],
-      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md24", null ],
-      [ "Output (presentation)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md25", null ],
-      [ "Utilities (util)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md26", null ]
-    ] ],
-    [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
-      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md28", [
-        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md29", null ],
-        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md30", null ],
-        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md31", [
-          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32", null ]
+    [ "TikTakToe", "index.html#autotoc_md0", [
+      [ "Acknowledgements", "index.html#autotoc_md1", null ],
+      [ "Architecture", "index.html#autotoc_md2", null ],
+      [ "Documentation", "index.html#autotoc_md3", null ],
+      [ "Build and run the project", "index.html#autotoc_md4", [
+        [ "Using CMake and qemu directly", "index.html#autotoc_md5", [
+          [ "Linux", "index.html#autotoc_md6", null ],
+          [ "Windows", "index.html#autotoc_md7", null ]
+        ] ],
+        [ "Using the provided Makefile", "index.html#autotoc_md8", [
+          [ "Linux", "index.html#autotoc_md9", null ],
+          [ "Windows", "index.html#autotoc_md10", null ]
+        ] ],
+        [ "Using Docker", "index.html#autotoc_md11", [
+          [ "Use the image from Dockerhub", "index.html#autotoc_md12", null ],
+          [ "Build the image locally", "index.html#autotoc_md13", null ]
         ] ]
       ] ],
-      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md33", null ]
+      [ "Compile time configurations", "index.html#autotoc_md14", [
+        [ "Directly passing to CMake", "index.html#autotoc_md15", null ],
+        [ "Using the included Makefile", "index.html#autotoc_md16", null ]
+      ] ],
+      [ "Features", "index.html#autotoc_md17", null ],
+      [ "Dependencies (TODO: CHECK CORRECT)", "index.html#autotoc_md18", [
+        [ "Ubuntu/Debian", "index.html#autotoc_md19", null ],
+        [ "Arch", "index.html#autotoc_md20", null ],
+        [ "Nix / NixOS", "index.html#autotoc_md21", null ],
+        [ "macOS", "index.html#autotoc_md22", null ],
+        [ "Windows", "index.html#autotoc_md23", null ]
+      ] ],
+      [ "Authors", "index.html#autotoc_md24", null ],
+      [ "Conventions", "index.html#autotoc_md25", null ]
+    ] ],
+    [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
+      [ "Hardware Abstraction Layer (hal)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md27", null ],
+      [ "Game Logic (logic)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md28", null ],
+      [ "Output (presentation)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md29", null ],
+      [ "Utilities (util)", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md30", null ]
+    ] ],
+    [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
+      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32", [
+        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md33", null ],
+        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md34", null ],
+        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md35", [
+          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md36", null ]
+        ] ]
+      ] ],
+      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md37", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -69,7 +101,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/dd0/timer_8h.html#a78b8ded5d5b07f2d4ef5bb4bf3d46d07",
-"de/d12/style_8h.html#a15ca4b464989469fd7225ad828ac164a"
+"de/d12/style_8h.html#a4e411f6bd6ac8d6c2bd23d866c097e91"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

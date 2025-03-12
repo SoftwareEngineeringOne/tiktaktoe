@@ -106,14 +106,14 @@ $(function(){initNavTree('dc/db2/system_8h.html','../../'); initResizable(true);
 </div><!--header-->
 <div class="contents">
 
-<p>Contains system calls to change the system status.  
+<p>Contains functions interacting with the microcontroller.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d37/system_8h__dep__incl.png" border="0" usemap="#ahal_2system_8hdep" alt=""/></div>
 <map name="ahal_2system_8hdep" id="ahal_2system_8hdep">
-<area shape="rect" title="Contains system calls to change the system status." alt="" coords="107,5,201,31"/>
+<area shape="rect" title="Contains functions interacting with the microcontroller." alt="" coords="107,5,201,31"/>
 <area shape="rect" href="../../d4/dfd/system_8c.html" title=" " alt="" coords="5,79,100,105"/>
 <area shape="poly" title=" " alt="" coords="126,43,71,81,68,76,123,38"/>
 <area shape="rect" href="../../d0/d29/main_8c.html" title=" " alt="" coords="124,79,184,105"/>
@@ -141,14 +141,14 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a97bacc4493b8a3008bdbdd7a83e86642" id="r_a97bacc4493b8a3008bdbdd7a83e86642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97bacc4493b8a3008bdbdd7a83e86642">system_softReset</a> ()</td></tr>
-<tr class="memdesc:a97bacc4493b8a3008bdbdd7a83e86642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the soft reset of the system.  <br /></td></tr>
+<tr class="memdesc:a97bacc4493b8a3008bdbdd7a83e86642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger a soft reset of the system.  <br /></td></tr>
 <tr class="separator:a97bacc4493b8a3008bdbdd7a83e86642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a077a1d054ddfb6fb237fb8d288b3b1d9" id="r_a077a1d054ddfb6fb237fb8d288b3b1d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a077a1d054ddfb6fb237fb8d288b3b1d9">system_offMode</a> ()</td></tr>
-<tr class="memdesc:a077a1d054ddfb6fb237fb8d288b3b1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the shutdown of the system.  <br /></td></tr>
+<tr class="memdesc:a077a1d054ddfb6fb237fb8d288b3b1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers "off" mode of the system.  <br /></td></tr>
 <tr class="separator:a077a1d054ddfb6fb237fb8d288b3b1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains system calls to change the system status. </p>
+<div class="textblock"><p>Contains functions interacting with the microcontroller. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
@@ -249,7 +249,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Call the shutdown of the system. </p>
+<p>Triggers "off" mode of the system. </p>
+<dl class="section note"><dt>Note</dt><dd><b>Never returns</b> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00015">15</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
 
@@ -259,7 +260,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph.png" border="0" usemap="#adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph" id="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph">
-<area shape="rect" title="Call the shutdown of the system." alt="" coords="5,5,122,31"/>
+<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="5,5,122,31"/>
 <area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="170,5,269,31"/>
 <area shape="poly" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
 </map>
@@ -269,7 +270,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph.png" border="0" usemap="#adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph" id="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph">
-<area shape="rect" title="Call the shutdown of the system." alt="" coords="103,5,219,31"/>
+<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="103,5,219,31"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -292,7 +293,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Call the soft reset of the system. </p>
+<p>Trigger a soft reset of the system. </p>
+<dl class="section note"><dt>Note</dt><dd><b>Never returns</b> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00006">6</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
 
@@ -302,7 +304,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph.png" border="0" usemap="#adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph" id="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph">
-<area shape="rect" title="Call the soft reset of the system." alt="" coords="5,5,132,31"/>
+<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="5,5,132,31"/>
 <area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="180,5,279,31"/>
 <area shape="poly" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
 </map>
@@ -312,7 +314,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph.png" border="0" usemap="#adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph" id="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph">
-<area shape="rect" title="Call the soft reset of the system." alt="" coords="364,55,490,80"/>
+<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="364,55,490,80"/>
 <area shape="rect" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="230,29,316,55"/>
 <area shape="poly" title=" " alt="" coords="348,57,316,52,317,47,349,52"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="248,79,298,104"/>
@@ -332,7 +334,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a413b7f902cba5167b433a6fe834d5bd.html">hal</a></li><li class="navelem"><a class="el" href="../../dc/db2/system_8h.html">system.h</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

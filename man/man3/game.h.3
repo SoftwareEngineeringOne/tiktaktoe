@@ -1,4 +1,4 @@
-.TH "logic/game.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,9 +46,11 @@ logic/game.h \- Contains the game logic\&.
 .ti -1c
 .RI "enum \fBMode\fP { \fBPVE\fP, \fBPVP\fP }"
 .br
+.RI "Possible game modes\&. "
 .ti -1c
 .RI "enum \fBPlayer\fP { \fBCircle\fP = 0, \fBCross\fP = 1, \fBNone\fP = 2 }"
 .br
+.RI "Enum describing a player\&. "
 .in -1c
 .SS "Functions"
 
@@ -60,7 +62,7 @@ logic/game.h \- Contains the game logic\&.
 .ti -1c
 .RI "void \fBgame_onTimeOut\fP ()"
 .br
-.RI "Automatic turn in case the round time is over\&. "
+.RI "Automaticly end a turn in case the turn time is over\&. "
 .ti -1c
 .RI "void \fBgame_endTurn\fP ()"
 .br
@@ -95,16 +97,22 @@ Definition at line \fB19\fP of file \fBgame\&.h\fP\&.
 .SS "enum \fBMode\fP"
 
 .PP
+Possible game modes\&. The game can be played in PVE or PVP mode 
+.PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \f(BIPVE \fP
+Player vs Computer\&. 
 .TP
 \f(BIPVP \fP
+Player vs Player\&. 
 .PP
-Definition at line \fB22\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB27\fP of file \fBgame\&.h\fP\&.
 .SS "enum \fBPlayer\fP"
 
+.PP
+Enum describing a player\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
@@ -115,7 +123,7 @@ Definition at line \fB22\fP of file \fBgame\&.h\fP\&.
 .TP
 \f(BINone \fP
 .PP
-Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB36\fP of file \fBgame\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void game_endTurn ()"
@@ -129,7 +137,7 @@ References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_pl
 .SS "void game_onTimeOut ()"
 
 .PP
-Automatic turn in case the round time is over\&. 
+Automaticly end a turn in case the turn time is over\&. 
 .PP
 Definition at line \fB131\fP of file \fBgame\&.c\fP\&.
 .PP
@@ -138,6 +146,13 @@ References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \
 
 .PP
 Start the main game\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP Which mode the game should be played in\&. 
+.RE
+.PP
+
 .PP
 Definition at line \fB64\fP of file \fBgame\&.c\fP\&.
 .PP

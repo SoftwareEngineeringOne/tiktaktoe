@@ -4,9 +4,9 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,34,294,78,293,73,489,29"/>
 <area shape="rect" id="Node000003" href="$d9/d3b/ui_8h.html" title="Contains different functions for the presentation of the in&#45;game user interface (everything besides t..." alt="" coords="316,79,432,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="516,34,418,75,416,70,514,29"/>
-<area shape="rect" id="Node000013" href="$dc/db2/system_8h.html" title="Contains system calls to change the system status." alt="" coords="456,79,550,105"/>
+<area shape="rect" id="Node000013" href="$dc/db2/system_8h.html" title="Contains functions interacting with the microcontroller." alt="" coords="456,79,550,105"/>
 <area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="540,33,520,67,515,64,535,30"/>
-<area shape="rect" id="Node000014" href="$d2/d86/uart_8h.html" title="Contains UART constants and abstraction functions." alt="" coords="552,300,627,326"/>
+<area shape="rect" id="Node000014" href="$d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="552,300,627,326"/>
 <area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="551,31,564,78,582,193,591,284,585,285,577,193,559,80,546,32"/>
 <area shape="rect" id="Node000015" href="$d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="624,79,755,105"/>
 <area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="570,29,652,69,650,74,568,34"/>

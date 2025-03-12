@@ -105,7 +105,7 @@ $(function(){initNavTree('da/de8/bot_8h.html','../../'); initResizable(true); })
 </div><!--header-->
 <div class="contents">
 
-<p>Contains function for random cell marking (a "bot player")  
+<p>Contains function for random cell marking.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d2/dd5/game_8h_source.html">logic/game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d5a/field_8h_source.html">presentation/field.h</a>&quot;</code><br />
@@ -114,7 +114,7 @@ Include dependency graph for bot.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/daa/bot_8h__incl.png" border="0" usemap="#alogic_2bot_8h" alt=""/></div>
 <map name="alogic_2bot_8h" id="alogic_2bot_8h">
-<area shape="rect" title="Contains function for random cell marking (a &quot;bot player&quot;)" alt="" coords="244,5,325,31"/>
+<area shape="rect" title="Contains function for random cell marking." alt="" coords="244,5,325,31"/>
 <area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="295,79,389,105"/>
 <area shape="poly" title=" " alt="" coords="296,30,325,65,321,68,292,33"/>
 <area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="151,153,280,178"/>
@@ -140,7 +140,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d32/bot_8h__dep__incl.png" border="0" usemap="#alogic_2bot_8hdep" alt=""/></div>
 <map name="alogic_2bot_8hdep" id="alogic_2bot_8hdep">
-<area shape="rect" title="Contains function for random cell marking (a &quot;bot player&quot;)" alt="" coords="117,5,198,31"/>
+<area shape="rect" title="Contains function for random cell marking." alt="" coords="117,5,198,31"/>
 <area shape="rect" href="../../df/d98/bot_8c.html" title=" " alt="" coords="5,79,86,105"/>
 <area shape="poly" title=" " alt="" coords="127,42,66,81,63,76,124,37"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="110,79,205,105"/>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
 <tr class="separator:a54e3d0f1283055e089a09213936f5c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains function for random cell marking (a "bot player") </p>
+<div class="textblock"><p>Contains function for random cell marking. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../da/de8/bot_8h_source.html">bot.h</a>.</p>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">cells</td><td>2D field of cells </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">marked_by</td><td>Player to be marked by</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marked_by</td><td>Which player should mark the cell</td></tr>
   </table>
   </dd>
 </dl>
@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d98/bot_8c_source.html#l00023">23</a> of file <a class="el" href="../../df/d98/bot_8c_source.html">bot.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d16/config_8h_source.html#l00022">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00021">CELLS_PER_ROW</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00032">None</a>, and <a class="el" href="../../dc/de5/random_8c_source.html#l00064">rng_getRandomValue_waiting()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d16/config_8h_source.html#l00022">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00021">CELLS_PER_ROW</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00040">None</a>, and <a class="el" href="../../dc/de5/random_8c_source.html#l00064">rng_getRandomValue_waiting()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -219,7 +219,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../da/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_icgraph.png" border="0" usemap="#ada/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_icgraph" alt=""/></div>
 <map name="ada/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_icgraph" id="ada/de8/bot_8h_a54e3d0f1283055e089a09213936f5c43_icgraph">
 <area shape="rect" title="Mark some random cell." alt="" coords="819,56,964,82"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" title=" " alt="" coords="827,54,757,34,758,29,829,49"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,81,405,107"/>
 <area shape="poly" title=" " alt="" coords="804,76,406,95,405,90,804,70"/>
@@ -247,7 +247,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li><li class="navelem"><a class="el" href="../../da/de8/bot_8h.html">bot.h</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -30,5 +30,5 @@ var searchData=
   ['rng_5fvalue_27',['RNG_VALUE',['../d1/d79/random_8h.html#aa6807bb4557dbb6e07850699d7400f8f',1,'random.h']]],
   ['round_28',['round',['../d2/d3d/structGameState.html#ae8ebeea829ef77885e6462b8da99639b',1,'GameState']]],
   ['row_29',['row',['../df/df1/structCell.html#a63529c4e83b6c51e7c198376a1909149',1,'Cell']]],
-  ['run_20the_20project_30',['How to build/run the project',['../index.html#autotoc_md1',1,'']]]
+  ['run_20the_20project_30',['Build and run the project',['../index.html#autotoc_md4',1,'']]]
 ];

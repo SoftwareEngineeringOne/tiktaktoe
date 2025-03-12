@@ -108,7 +108,7 @@ $(function(){initNavTree('d5/dd0/timer_8h.html','../../'); initResizable(true); 
 </div><!--header-->
 <div class="contents">
 
-<p>Contains timer constants and abstraction functions.  
+<p>Contains constants and abstraction functions for the COUNTER device.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d4/da4/def_8h_source.html">def.h</a>&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
@@ -117,7 +117,7 @@ Include dependency graph for timer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d2e/timer_8h__incl.png" border="0" usemap="#ahal_2timer_8h" alt=""/></div>
 <map name="ahal_2timer_8h" id="ahal_2timer_8h">
-<area shape="rect" title="Contains timer constants and abstraction functions." alt="" coords="29,5,111,31"/>
+<area shape="rect" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="29,5,111,31"/>
 <area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="5,79,55,105"/>
 <area shape="poly" title=" " alt="" coords="66,33,46,67,42,64,61,30"/>
 <area shape="rect" title=" " alt="" coords="78,79,142,105"/>
@@ -129,7 +129,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d89/timer_8h__dep__incl.png" border="0" usemap="#ahal_2timer_8hdep" alt=""/></div>
 <map name="ahal_2timer_8hdep" id="ahal_2timer_8hdep">
-<area shape="rect" title="Contains timer constants and abstraction functions." alt="" coords="191,5,272,31"/>
+<area shape="rect" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="191,5,272,31"/>
 <area shape="rect" href="../../d8/d22/interrupts_8c.html" title=" " alt="" coords="5,79,112,105"/>
 <area shape="poly" title=" " alt="" coords="189,40,89,81,87,76,187,35"/>
 <area shape="rect" href="../../df/d41/timer_8c.html" title=" " alt="" coords="135,79,216,105"/>
@@ -297,7 +297,7 @@ Functions</h2></td></tr>
 <tr class="separator:a4f5363f092c0a32120cc8ea1947f3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains timer constants and abstraction functions. </p>
+<div class="textblock"><p>Contains constants and abstraction functions for the COUNTER device. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d5/dd0/timer_8h_source.html">timer.h</a>.</p>
@@ -1168,7 +1168,7 @@ Here is the call graph for this function:</div>
 <p>Gets the Capture Compare Register of Timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timer</td><td></td></tr>
+    <tr><td class="paramname">timer</td><td>Timer </td></tr>
     <tr><td class="paramname">captureCompare</td><td></td></tr>
   </table>
   </dd>
@@ -1467,7 +1467,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00052">52</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d5/dd0/timer_8h_source.html#l00069">INT_COMPARE0</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00044">Interrupt_ID8</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00038">Interrupt_Set_Enable</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00019">TIMER0_BASE_ADDRESS</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00047">TIMER_BITMODE</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00044">TIMER_INTENSET</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00048">TIMER_PRESCALER</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00026">TimerBase</a>.</p>
+<p class="reference">References <a class="el" href="../../d5/dd0/timer_8h_source.html#l00069">INT_COMPARE0</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00046">Interrupt_ID8</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00040">Interrupt_Set_Enable</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00019">TIMER0_BASE_ADDRESS</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00047">TIMER_BITMODE</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00044">TIMER_INTENSET</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00048">TIMER_PRESCALER</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00026">TimerBase</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1519,7 +1519,7 @@ Here is the caller graph for this function:</div>
 <p>Starts the given timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timer</td><td>Number of the timer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timer</td><td>Timer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1545,7 +1545,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Starts the given timer." alt="" coords="933,55,1017,80"/>
 <area shape="rect" href="../../df/d73/time_8c.html#a04352ea8ee003992baa1d4e993b50dae" title="Initializes the timer." alt="" coords="802,5,872,31"/>
 <area shape="poly" title=" " alt="" coords="922,51,872,33,874,28,923,46"/>
-<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="789,55,885,80"/>
+<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer when paused." alt="" coords="789,55,885,80"/>
 <area shape="poly" title=" " alt="" coords="918,70,886,70,886,65,918,65"/>
 <area shape="rect" href="../../df/d41/timer_8c.html#acd2972fffc78d5b8bfeda05701882565" title="Default Initialisation of Timer." alt="" coords="800,104,874,130"/>
 <area shape="poly" title=" " alt="" coords="924,89,876,106,874,101,922,84"/>
@@ -1639,7 +1639,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a413b7f902cba5167b433a6fe834d5bd.html">hal</a></li><li class="navelem"><a class="el" href="../../d5/dd0/timer_8h.html">timer.h</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

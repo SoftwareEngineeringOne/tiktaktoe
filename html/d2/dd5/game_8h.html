@@ -144,7 +144,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title="Contains the game logic." alt="" coords="524,5,619,31"/>
 <area shape="rect" href="../../df/d98/bot_8c.html" title=" " alt="" coords="249,153,329,178"/>
 <area shape="poly" title=" " alt="" coords="510,24,468,29,422,40,377,56,336,81,320,97,308,117,294,153,289,151,304,115,316,94,333,77,374,52,420,35,467,24,509,19"/>
-<area shape="rect" href="../../da/de8/bot_8h.html" title="Contains function for random cell marking (a &quot;bot player&quot;)" alt="" coords="346,79,426,105"/>
+<area shape="rect" href="../../da/de8/bot_8h.html" title="Contains function for random cell marking." alt="" coords="346,79,426,105"/>
 <area shape="poly" title=" " alt="" coords="527,39,419,81,417,76,525,34"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="402,226,496,252"/>
 <area shape="poly" title=" " alt="" coords="509,23,437,31,397,40,357,52,320,69,287,91,259,119,240,154,236,175,244,193,260,206,284,217,343,230,402,235,402,240,342,235,282,222,257,211,239,196,231,176,234,152,255,116,283,87,317,64,355,47,396,34,436,26,508,18"/>
@@ -233,11 +233,13 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a46c8a310cf4c094f8c80e1cb8dc1f911" id="r_a46c8a310cf4c094f8c80e1cb8dc1f911"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> { <a class="el" href="#a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3">PVE</a>
 , <a class="el" href="#a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f">PVP</a>
  }</td></tr>
+<tr class="memdesc:a46c8a310cf4c094f8c80e1cb8dc1f911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible game modes.  <a href="#a46c8a310cf4c094f8c80e1cb8dc1f911">More...</a><br /></td></tr>
 <tr class="separator:a46c8a310cf4c094f8c80e1cb8dc1f911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c8780378078e51e7c9041cbac392db9" id="r_a9c8780378078e51e7c9041cbac392db9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c8780378078e51e7c9041cbac392db9">Player</a> { <a class="el" href="#a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489">Circle</a> = 0
 , <a class="el" href="#a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3">Cross</a> = 1
 , <a class="el" href="#a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af">None</a> = 2
  }</td></tr>
+<tr class="memdesc:a9c8780378078e51e7c9041cbac392db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing a player.  <a href="#a9c8780378078e51e7c9041cbac392db9">More...</a><br /></td></tr>
 <tr class="separator:a9c8780378078e51e7c9041cbac392db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -246,7 +248,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a99a6ceced9c8b9648cc11a086603d66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the main game.  <br /></td></tr>
 <tr class="separator:a99a6ceced9c8b9648cc11a086603d66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664affa156a0a5fa033bad0b88bb6c72" id="r_a664affa156a0a5fa033bad0b88bb6c72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a664affa156a0a5fa033bad0b88bb6c72">game_onTimeOut</a> ()</td></tr>
-<tr class="memdesc:a664affa156a0a5fa033bad0b88bb6c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic turn in case the round time is over.  <br /></td></tr>
+<tr class="memdesc:a664affa156a0a5fa033bad0b88bb6c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automaticly end a turn in case the turn time is over.  <br /></td></tr>
 <tr class="separator:a664affa156a0a5fa033bad0b88bb6c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a729e60fc5298c74e80423c136d1f6a5a" id="r_a729e60fc5298c74e80423c136d1f6a5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729e60fc5298c74e80423c136d1f6a5a">game_endTurn</a> ()</td></tr>
 <tr class="memdesc:a729e60fc5298c74e80423c136d1f6a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish the current turn.  <br /></td></tr>
@@ -302,12 +304,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Possible game modes. </p>
+<p>The game can be played in PVE or PVP mode </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3" name="a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3"></a>PVE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f" name="a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f"></a>PVP&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3" name="a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3"></a>PVE&#160;</td><td class="fielddoc"><p>Player vs Computer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f" name="a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f"></a>PVP&#160;</td><td class="fielddoc"><p>Player vs Player. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dd5/game_8h_source.html#l00022">22</a> of file <a class="el" href="../../d2/dd5/game_8h_source.html">game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dd5/game_8h_source.html#l00027">27</a> of file <a class="el" href="../../d2/dd5/game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>
@@ -322,13 +329,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum describing a player. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489" name="a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489"></a>Circle&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3" name="a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3"></a>Cross&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af" name="a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af"></a>None&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dd5/game_8h_source.html#l00028">28</a> of file <a class="el" href="../../d2/dd5/game_8h_source.html">game.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dd5/game_8h_source.html#l00036">36</a> of file <a class="el" href="../../d2/dd5/game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +361,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dcb/game_8c_source.html#l00151">151</a> of file <a class="el" href="../../d1/dcb/game_8c_source.html">game.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00030">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00031">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00058">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00057">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00081">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00080">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00055">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00024">PVE</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00056">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00079">CellState::selected</a>, and <a class="el" href="../../df/d73/time_8c_source.html#l00047">time_finishTurn()</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00038">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00039">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00066">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00065">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00087">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00086">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00063">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00029">PVE</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00064">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00085">CellState::selected</a>, and <a class="el" href="../../df/d73/time_8c_source.html#l00047">time_finishTurn()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -369,7 +378,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph.png" border="0" usemap="#ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph" alt=""/></div>
 <map name="ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph" id="ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph">
 <area shape="rect" title="Finish the current turn." alt="" coords="819,31,926,56"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" title=" " alt="" coords="803,36,771,30,772,25,804,30"/>
 <area shape="rect" href="../../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="655,55,763,80"/>
 <area shape="poly" title=" " alt="" coords="804,56,764,62,763,57,803,51"/>
@@ -405,17 +414,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Automatic turn in case the round time is over. </p>
+<p>Automaticly end a turn in case the turn time is over. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dcb/game_8c_source.html#l00131">131</a> of file <a class="el" href="../../d1/dcb/game_8c_source.html">game.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/dd5/game_8h_source.html#l00078">CellState::all</a>, <a class="el" href="../../df/d98/bot_8c_source.html#l00023">bot_markRandomCell()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00030">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00031">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00058">GameState::current_player</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00039">force_ui_update</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00151">game_endTurn()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00081">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00080">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00055">GameState::mode</a>, and <a class="el" href="../../d2/dd5/game_8h_source.html#l00024">PVE</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/dd5/game_8h_source.html#l00084">CellState::all</a>, <a class="el" href="../../df/d98/bot_8c_source.html#l00023">bot_markRandomCell()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00038">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00039">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00066">GameState::current_player</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00039">force_ui_update</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00151">game_endTurn()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00087">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00086">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00063">GameState::mode</a>, and <a class="el" href="../../d2/dd5/game_8h_source.html#l00029">PVE</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_cgraph.png" border="0" usemap="#ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_cgraph" alt=""/></div>
 <map name="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_cgraph" id="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_cgraph">
-<area shape="rect" title="Automatic turn in case the round time is over." alt="" coords="5,54,130,79"/>
+<area shape="rect" title="Automaticly end a turn in case the turn time is over." alt="" coords="5,54,130,79"/>
 <area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="178,27,323,53"/>
 <area shape="poly" title=" " alt="" coords="130,55,162,50,163,55,131,60"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="197,78,304,103"/>
@@ -438,7 +447,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph.png" border="0" usemap="#ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph" alt=""/></div>
 <map name="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph" id="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph">
-<area shape="rect" title="Automatic turn in case the round time is over." alt="" coords="345,5,469,31"/>
+<area shape="rect" title="Automaticly end a turn in case the turn time is over." alt="" coords="345,5,469,31"/>
 <area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="182,5,297,31"/>
 <area shape="poly" title=" " alt="" coords="330,21,298,21,298,16,330,16"/>
 <area shape="rect" href="../../d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737" title="Timer interrupt handler." alt="" coords="5,5,134,31"/>
@@ -464,10 +473,16 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Start the main game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>Which mode the game should be played in. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dcb/game_8c_source.html#l00064">64</a> of file <a class="el" href="../../d1/dcb/game_8c_source.html">game.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00055">__WFI</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00078">CellState::all</a>, <a class="el" href="../../de/d12/style_8h_source.html#l00034">BOLD</a>, <a class="el" href="../../df/d98/bot_8c_source.html#l00023">bot_markRandomCell()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00228">calculateSummary()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00103">cell_redraw_withModifier()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00133">cell_redrawAll()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00108">cell_select()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00022">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00021">CELLS_PER_ROW</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00030">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00031">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00058">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00057">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00039">force_ui_update</a>, <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00022">g_input_buf</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00268">handleForcedMoveUpdate()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00180">init()</a>, <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00051">input_getNext()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00038">input_handleByte()</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00022">GameTimer::is_running</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00081">CellState::last_circle</a>, <a class="el" href="../../df/db1/math_8h_source.html#l00032">max</a>, <a class="el" href="../../d2/d0a/menu_8c_source.html#l00075">menu_showGameOver()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00055">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00032">None</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00024">PVE</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00257">redrawField()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00019">REMAINING_TIME</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00056">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00079">CellState::selected</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00025">TICKS_PER_TURN</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00076">TIMER0</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00107">timer_stop()</a>, <a class="el" href="../../dc/d78/ui_8c_source.html#l00038">ui_updateTimer()</a>, <a class="el" href="../../dc/d78/ui_8c_source.html#l00099">ui_updateTurn()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00054">GameState::winner</a>, and <a class="el" href="../../d0/dfd/winning_8c_source.html#l00039">winning_checkForWinner()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00058">__WFI</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00084">CellState::all</a>, <a class="el" href="../../de/d12/style_8h_source.html#l00034">BOLD</a>, <a class="el" href="../../df/d98/bot_8c_source.html#l00023">bot_markRandomCell()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00228">calculateSummary()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00103">cell_redraw_withModifier()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00133">cell_redrawAll()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00108">cell_select()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00022">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00021">CELLS_PER_ROW</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00038">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00039">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00066">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00065">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00039">force_ui_update</a>, <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00022">g_input_buf</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00268">handleForcedMoveUpdate()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00180">init()</a>, <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00051">input_getNext()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00038">input_handleByte()</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00022">GameTimer::is_running</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00087">CellState::last_circle</a>, <a class="el" href="../../df/db1/math_8h_source.html#l00032">max</a>, <a class="el" href="../../d2/d0a/menu_8c_source.html#l00075">menu_showGameOver()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00063">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00040">None</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00029">PVE</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00257">redrawField()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00019">REMAINING_TIME</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00064">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00085">CellState::selected</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00025">TICKS_PER_TURN</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00076">TIMER0</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00107">timer_stop()</a>, <a class="el" href="../../dc/d78/ui_8c_source.html#l00038">ui_updateTimer()</a>, <a class="el" href="../../dc/d78/ui_8c_source.html#l00099">ui_updateTurn()</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00062">GameState::winner</a>, and <a class="el" href="../../d0/dfd/winning_8c_source.html#l00039">winning_checkForWinner()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -629,7 +644,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="432,1308,492,1099,531,981,548,939,562,916,580,904,583,909,566,920,553,942,536,983,497,1100,437,1310"/>
 <area shape="rect" href="../../df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="603,1635,692,1660"/>
 <area shape="poly" title=" " alt="" coords="454,1334,488,1360,519,1397,533,1429,538,1460,536,1516,535,1542,537,1568,547,1595,566,1622,590,1637,587,1641,562,1625,542,1597,532,1570,529,1543,531,1516,533,1460,528,1431,514,1400,484,1364,451,1338"/>
-<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="599,931,696,956"/>
+<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer when paused." alt="" coords="599,931,696,956"/>
 <area shape="poly" title=" " alt="" coords="429,1309,437,1247,457,1155,474,1104,497,1054,526,1007,563,965,584,952,587,957,566,970,531,1010,502,1056,479,1106,462,1156,442,1248,435,1309"/>
 <area shape="poly" title=" " alt="" coords="659,1659,781,1867,847,1975,843,1978,776,1870,654,1662"/>
 <area shape="poly" title=" " alt="" coords="904,1995,1064,1982,1270,1974,1532,1974,1548,1970,1564,1957,1580,1937,1596,1909,1626,1831,1654,1731,1680,1610,1703,1474,1745,1173,1778,861,1803,573,1829,198,1834,199,1808,573,1783,862,1750,1174,1709,1475,1685,1611,1659,1732,1631,1833,1601,1911,1585,1940,1568,1961,1551,1975,1532,1979,1270,1979,1064,1987,905,2001"/>
@@ -703,7 +718,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li><li class="navelem"><a class="el" href="../../d2/dd5/game_8h.html">game.h</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

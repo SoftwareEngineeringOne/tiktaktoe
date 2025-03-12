@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['macos_0',['macOS',['../index.html#autotoc_md20',1,'']]],
+  ['macos_0',['macOS',['../index.html#autotoc_md22',1,'']]],
   ['main_1',['main',['../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
   ['main_2ec_2',['main.c',['../d0/d29/main_8c.html',1,'']]],
-  ['makefile_3',['Makefile',['../index.html#autotoc_md13',1,'Using the included Makefile'],['../index.html#autotoc_md5',1,'Using the provided Makefile']]],
+  ['makefile_3',['Makefile',['../index.html#autotoc_md16',1,'Using the included Makefile'],['../index.html#autotoc_md8',1,'Using the provided Makefile']]],
   ['marked_5fby_4',['marked_by',['../df/df1/structCell.html#aff8c5b2510befa854230104cca89cb77',1,'Cell']]],
   ['math_2eh_5',['math.h',['../df/db1/math_8h.html',1,'']]],
   ['max_6',['max',['../df/db1/math_8h.html#affe776513b24d84b39af8ab0930fef7f',1,'math.h']]],

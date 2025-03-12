@@ -1,8 +1,8 @@
-.TH "hal/random.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/random.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/random.h \- Contains RNG constants and abstraction functions\&.  
+hal/random.h \- Contains constants and abstraction functions for the RNG device\&.  
 
 .SH SYNOPSIS
 .br
@@ -71,7 +71,7 @@ hal/random.h \- Contains RNG constants and abstraction functions\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains RNG constants and abstraction functions\&. 
+Contains constants and abstraction functions for the RNG device\&. 
 
 
 .PP
@@ -142,7 +142,15 @@ Definition at line \fB34\fP of file \fBrandom\&.h\fP\&.
 .SS "uint8_t rng_getRandomValue_immediately (void )"
 
 .PP
-Get the Random Value from the generator immediately\&. The function is \fBNOT\fP waiting until the next value is generated!
+Get the Random Value from the generator immediately\&. The function will \fBNOT\fP wait until the next value is generated!
+
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t A random byte
+.RE
+.PP
+The function is \fBNOT\fP waiting until the next value is generated!
 
 .PP
 \fBReturns\fP
@@ -162,7 +170,7 @@ This is a function stub\&. Implement it, if needed\&.
 .PP
 \fBReturns\fP
 .RS 4
-uint8_t always \fR0\fP
+uint8_t A random byte
 .RE
 .PP
 This is a function stub\&. Implement it, if needed\&.

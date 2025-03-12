@@ -123,9 +123,9 @@ Include dependency graph for interrupts.c:</div>
 <area shape="poly" title=" " alt="" coords="317,34,227,75,225,70,315,29"/>
 <area shape="rect" href="../../dd/d33/register__access_8h.html" title="Contains abstraction functions of the register access." alt="" coords="43,153,187,178"/>
 <area shape="poly" title=" " alt="" coords="332,34,291,68,238,107,159,148,157,144,235,102,288,64,328,29"/>
-<area shape="rect" href="../../d5/dd0/timer_8h.html" title="Contains timer constants and abstraction functions." alt="" coords="598,226,680,252"/>
+<area shape="rect" href="../../d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="598,226,680,252"/>
 <area shape="poly" title=" " alt="" coords="370,29,411,50,455,77,548,149,618,214,614,217,544,153,452,81,408,55,368,34"/>
-<area shape="rect" href="../../d2/d86/uart_8h.html" title="Contains UART constants and abstraction functions." alt="" coords="500,226,575,252"/>
+<area shape="rect" href="../../d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="500,226,575,252"/>
 <area shape="poly" title=" " alt="" coords="364,29,394,50,425,77,483,148,525,212,521,214,479,151,421,81,390,54,361,33"/>
 <area shape="rect" href="../../de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="299,79,387,105"/>
 <area shape="poly" title=" " alt="" coords="346,31,346,63,340,63,340,31"/>
@@ -191,10 +191,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>UART interrupt handler. </p>
+<p>!TODO! </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00027">27</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00026">input_onInterrupt()</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00040">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00043">Interrupt_ID2</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, and <a class="el" href="../../d1/d87/uart_8c_source.html#l00081">uart_readByte()</a>.</p>
+<p class="reference">References <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00026">input_onInterrupt()</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00045">Interrupt_ID2</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, and <a class="el" href="../../d1/d87/uart_8c_source.html#l00081">uart_readByte()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -240,10 +241,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Timer interrupt handler. </p>
+<p>@detail !TODO! </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00033">33</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00040">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00044">Interrupt_ID8</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00037">time_onInterrupt()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00019">TIMER0_BASE_ADDRESS</a>, and <a class="el" href="../../d5/dd0/timer_8h_source.html#l00037">TIMER_COMPARE_0</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00046">Interrupt_ID8</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00037">time_onInterrupt()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00019">TIMER0_BASE_ADDRESS</a>, and <a class="el" href="../../d5/dd0/timer_8h_source.html#l00037">TIMER_COMPARE_0</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -254,7 +256,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="134,32,260,20,406,13,591,13,912,15,912,20,591,18,406,18,260,25,135,38"/>
 <area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="182,56,297,82"/>
 <area shape="poly" title=" " alt="" coords="134,50,167,55,166,61,134,56"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="345,60,469,86"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="345,60,469,86"/>
 <area shape="poly" title=" " alt="" coords="298,68,329,68,329,74,297,73"/>
 <area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="517,60,663,86"/>
 <area shape="poly" title=" " alt="" coords="470,70,502,70,502,76,470,76"/>
@@ -281,7 +283,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4ce6a7f885e2866a554ba9e7335035f1.html">hal</a></li><li class="navelem"><a class="el" href="../../d8/d22/interrupts_8c.html">interrupts.c</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -6,9 +6,9 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="317,34,227,75,225,70,315,29"/>
 <area shape="rect" id="Node000004" href="$dd/d33/register__access_8h.html" title="Contains abstraction functions of the register access." alt="" coords="43,153,187,178"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,34,291,68,238,107,159,148,157,144,235,102,288,64,328,29"/>
-<area shape="rect" id="Node000006" href="$d5/dd0/timer_8h.html" title="Contains timer constants and abstraction functions." alt="" coords="598,226,680,252"/>
+<area shape="rect" id="Node000006" href="$d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="598,226,680,252"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="370,29,411,50,455,77,548,149,618,214,614,217,544,153,452,81,408,55,368,34"/>
-<area shape="rect" id="Node000008" href="$d2/d86/uart_8h.html" title="Contains UART constants and abstraction functions." alt="" coords="500,226,575,252"/>
+<area shape="rect" id="Node000008" href="$d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="500,226,575,252"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="364,29,394,50,425,77,483,148,525,212,521,214,479,151,421,81,390,54,361,33"/>
 <area shape="rect" id="Node000009" href="$de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="299,79,387,105"/>
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="346,31,346,63,340,63,340,31"/>

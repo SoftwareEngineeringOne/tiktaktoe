@@ -15,7 +15,7 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1028,84,980,79,981,74,1028,79"/>
 <area shape="rect" id="Node000013" href="$d1/dcb/game_8c.html#ac5d6665e8acc93ae4bb853799c795f3f" title=" " alt="" coords="857,107,957,132"/>
 <area shape="poly" id="edge13_Node000003_Node000013" title=" " alt="" coords="1028,105,958,115,957,110,1028,100"/>
-<area shape="rect" id="Node000005" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" id="Node000005" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="838,54,761,34,763,29,840,49"/>
 <area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,107,405,132"/>
 <area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="819,72,660,79,479,97,406,112,405,107,478,92,660,74,819,67"/>

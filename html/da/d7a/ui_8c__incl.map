@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="609,34,488,76,486,71,607,29"/>
 <area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="5,374,129,414"/>
 <area shape="poly" id="edge23_Node000001_Node000006" title=" " alt="" coords="585,24,434,33,344,42,252,55,168,73,99,98,73,112,53,128,41,145,36,164,36,240,43,303,58,358,53,360,38,304,31,241,31,164,36,143,49,124,70,107,97,93,167,68,251,50,343,36,434,27,584,18"/>
-<area shape="rect" id="Node000012" href="$d2/d86/uart_8h.html" title="Contains UART constants and abstraction functions." alt="" coords="275,300,350,326"/>
+<area shape="rect" id="Node000012" href="$d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="275,300,350,326"/>
 <area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="585,23,535,28,479,38,422,55,368,81,348,96,334,111,324,129,315,153,307,188,305,223,310,284,305,285,300,223,302,187,310,152,319,127,329,108,344,92,366,77,420,50,478,32,535,22,584,18"/>
 <area shape="rect" id="Node000013" href="$de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="653,153,740,178"/>
 <area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="652,30,673,78,692,137,687,139,669,80,647,33"/>

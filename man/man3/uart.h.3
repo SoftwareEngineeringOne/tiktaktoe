@@ -1,8 +1,8 @@
-.TH "hal/uart.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/uart.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/uart.h \- Contains UART constants and abstraction functions\&.  
+hal/uart.h \- Contains constants and abstraction functions for the UART device\&.  
 
 .SH SYNOPSIS
 .br
@@ -121,7 +121,7 @@ hal/uart.h \- Contains UART constants and abstraction functions\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains UART constants and abstraction functions\&. 
+Contains constants and abstraction functions for the UART device\&. 
 
 
 .PP
@@ -258,6 +258,13 @@ Definition at line \fB32\fP of file \fBuart\&.h\fP\&.
 .PP
 Initializing the UART with the following Settings: 115200-8-N-1\&. 
 .PP
+\fBParameters\fP
+.RS 4
+\fIwith_interrupts\fP Wether or not interrupts should be triggered 
+.RE
+.PP
+
+.PP
 Definition at line \fB25\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBInterrupt_ID2\fP, \fBInterrupt_Set_Enable\fP, \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, \fBUART_ENABLE\fP, \fBUART_INT_RXDRDY\fP, \fBUART_INTENSET\fP, \fBUART_STARTRX\fP, \fBUART_STARTTX\fP, and \fBUART_TASK_START\fP\&.
@@ -283,7 +290,7 @@ Writes/Sends a byte over the serial Port\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIdata\fP byte to send (ASCII) 
+\fIdata\fP byte to send 
 .RE
 .PP
 

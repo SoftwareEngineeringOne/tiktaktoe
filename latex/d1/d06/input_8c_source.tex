@@ -111,69 +111,76 @@
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}}-\/>\mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{marked\_by}}\ =\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{Cross}};}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}}\ =\ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00125}00125\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO!\ Fix\ this\ better\ its\ ugly\ af}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ tmp[20];}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}\ >=\ 4\ \&\&\ \mbox{\hyperlink{winning_8c_af938c2e846f22abb47204c30c0bc316c}{winning\_checkForWinner}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}},\ (\mbox{\hyperlink{structCell}{Cell}}\ **)\&tmp)\ !=\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}})\ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a3945952c9b76c87175d1ae905f01b07a}{cell\_redraw}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{goto}\ After;}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00132}00132\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}\ +\ 1\ <\ \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}\ *\ \mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}})}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}}\ =\ \mbox{\hyperlink{bot_8c_a35e54b11b140786344c2cf1a75251f5f}{bot\_markRandomCell}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{all}},\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ avoid\ a\ check\ in\ game\_endTurn()\ fields\_marked\ is\ subtracted}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ by\ one,\ since\ it's\ increased\ by\ 2\ later.}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}-\/-\/;}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00143}00143\ After:}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a3945952c9b76c87175d1ae905f01b07a}{cell\_redraw}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00145}00145\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00147}00147\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}}-\/>\mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{marked\_by}}\ =\ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}}\ ==\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}})}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}}\ =\ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a457332dae4bea1ebce89e8d8379dd3ab}{cell\_select}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}}\ =\ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a457332dae4bea1ebce89e8d8379dd3ab}{cell\_select}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00159}00159\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00160}00160\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00161}00161\ \ \ \ \ \mbox{\hyperlink{game_8c_a729e60fc5298c74e80423c136d1f6a5a}{game\_endTurn}}();}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00162}00162\ \ \ \ \ \mbox{\hyperlink{ui_8c_ab109b310e2462d1f3317b8099c7063b4}{ui\_updateTurn}}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{round}},\ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00163}00163\ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00164}00164\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00165}\mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{00165}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{openControls}}()}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00166}00166\ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}}.\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}})}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00168}00168\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_a5ad5fe91a14f332c6acc40870c980fae}{time\_pause}}();}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\_showControls}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ return\ to\ the\ match..."{}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00172}00172\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00173}00173\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00174}00174\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\_showControls}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ return\ to\ the\ match..."{}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00176}00176\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00177}00177\ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00178}00178\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00179}\mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{00179}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{handlePauseResume}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00180}00180\ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}}.\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}})}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00182}00182\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_a5ad5fe91a14f332c6acc40870c980fae}{time\_pause}}();}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00184}00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a58542af15ec3ebf1a4e50c34789aa317}{cell\_redrawAll}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{all}},\ \mbox{\hyperlink{style_8h_ab42ef41116f8f2fe447484e2844cf0df}{HIDDEN}});}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00186}00186\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{time_8c_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00188}00188\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00189}00189\ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Avoid\ a\ bug\ where\ the\ bot\ unfairly\ wins,\ if\ the\ player\ started}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ both\ the\ player\ and\ the\ bot\ could\ win\ in\ the\ same\ round}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasWinner\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}\ >=\ (\mbox{\hyperlink{math_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}}(\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}},\ \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}})))}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structCell}{Cell}}\ winningCells[\mbox{\hyperlink{math_8h_affe776513b24d84b39af8ab0930fef7f}{max}}(\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}},\ \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}})];}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{winning_8c_af938c2e846f22abb47204c30c0bc316c}{winning\_checkForWinner}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}},\ (\mbox{\hyperlink{structCell}{Cell}}\ **)\&winningCells)\ !=\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasWinner\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!hasWinner)}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}\ +\ 1\ <\ \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}\ *\ \mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}}\ =\ \mbox{\hyperlink{bot_8c_a35e54b11b140786344c2cf1a75251f5f}{bot\_markRandomCell}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{all}},\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a3945952c9b76c87175d1ae905f01b07a}{cell\_redraw}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00152}00152\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00154}00154\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}}-\/>\mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{marked\_by}}\ =\ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}}\ ==\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00157}00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}}\ =\ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a457332dae4bea1ebce89e8d8379dd3ab}{cell\_select}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00162}00162\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}}\ =\ \mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a457332dae4bea1ebce89e8d8379dd3ab}{cell\_select}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00165}00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00166}00166\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00168}00168\ \ \ \ \ \mbox{\hyperlink{game_8c_a729e60fc5298c74e80423c136d1f6a5a}{game\_endTurn}}();}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{ui_8c_ab109b310e2462d1f3317b8099c7063b4}{ui\_updateTurn}}(\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{round}},\ \mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}}-\/>\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00170}00170\ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00172}\mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{00172}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{openControls}}()}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00173}00173\ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00174}00174\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}}.\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00175}00175\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_a5ad5fe91a14f332c6acc40870c980fae}{time\_pause}}();}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\_showControls}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ return\ to\ the\ match..."{}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00180}00180\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00181}00181\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8c_a23ef48917f29c7ba37351342e66a636f}{menu\_showControls}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ return\ to\ the\ match..."{}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00186}\mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{00186}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{handlePauseResume}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00187}00187\ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00188}00188\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}}.\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00189}00189\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00190}00190\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8c_a5ad5fe91a14f332c6acc40870c980fae}{time\_pause}}();}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8c_a58542af15ec3ebf1a4e50c34789aa317}{cell\_redrawAll}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}}-\/>\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{all}},\ \mbox{\hyperlink{style_8h_ab42ef41116f8f2fe447484e2844cf0df}{HIDDEN}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00194}00194\ \ \ \ \ \mbox{\hyperlink{time_8c_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00196}00196\ \}}
 
 \end{DoxyCode}

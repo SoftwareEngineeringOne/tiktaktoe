@@ -106,7 +106,7 @@ $(function(){initNavTree('d1/d79/random_8h.html','../../'); initResizable(true);
 </div><!--header-->
 <div class="contents">
 
-<p>Contains RNG constants and abstraction functions.  
+<p>Contains constants and abstraction functions for the RNG device.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -114,7 +114,7 @@ Include dependency graph for random.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/dfa/random_8h__incl.png" border="0" usemap="#ahal_2random_8h" alt=""/></div>
 <map name="ahal_2random_8h" id="ahal_2random_8h">
-<area shape="rect" title="Contains RNG constants and abstraction functions." alt="" coords="5,5,101,31"/>
+<area shape="rect" title="Contains constants and abstraction functions for the RNG device." alt="" coords="5,5,101,31"/>
 <area shape="rect" title=" " alt="" coords="21,79,85,105"/>
 <area shape="poly" title=" " alt="" coords="56,31,56,63,50,63,50,31"/>
 </map>
@@ -124,7 +124,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d46/random_8h__dep__incl.png" border="0" usemap="#ahal_2random_8hdep" alt=""/></div>
 <map name="ahal_2random_8hdep" id="ahal_2random_8hdep">
-<area shape="rect" title="Contains RNG constants and abstraction functions." alt="" coords="173,5,269,31"/>
+<area shape="rect" title="Contains constants and abstraction functions for the RNG device." alt="" coords="173,5,269,31"/>
 <area shape="rect" href="../../dc/de5/random_8c.html" title=" " alt="" coords="5,79,101,105"/>
 <area shape="poly" title=" " alt="" coords="180,40,83,81,81,76,177,35"/>
 <area shape="rect" href="../../df/d98/bot_8c.html" title=" " alt="" coords="125,79,205,105"/>
@@ -180,7 +180,7 @@ Functions</h2></td></tr>
 <tr class="separator:a0b0e7c9eefaf33e9333cb2511be4addf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains RNG constants and abstraction functions. </p>
+<div class="textblock"><p>Contains constants and abstraction functions for the RNG device. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d1/d79/random_8h_source.html">random.h</a>.</p>
@@ -410,6 +410,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the Random Value from the generator immediately. </p>
+<p>The function will <b>NOT</b> wait until the next value is generated!</p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t A random byte</dd></dl>
 <p>The function is <b>NOT</b> waiting until the next value is generated!</p>
 <dl class="section return"><dt>Returns</dt><dd>uint8_t random byte </dd></dl>
 
@@ -438,7 +440,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="997,111,965,106,965,101,997,105"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#ac5d6665e8acc93ae4bb853799c795f3f" title=" " alt="" coords="842,131,942,156"/>
 <area shape="poly" title=" " alt="" coords="998,133,943,140,942,135,997,128"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" title=" " alt="" coords="844,77,741,34,743,29,846,72"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,107,405,132"/>
 <area shape="poly" title=" " alt="" coords="803,91,652,88,565,90,479,97,406,111,405,106,478,92,564,85,651,82,804,86"/>
@@ -479,7 +481,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>This is a function stub. Implement it, if needed. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint8_t always <code>0</code></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t A random byte</dd></dl>
 <p>This is a function stub. Implement it, if needed.</p>
 <p>TODO: Implement it, if you need it</p>
 <p>Things it should do here:</p><ul>
@@ -517,7 +519,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="997,111,965,106,965,101,997,105"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#ac5d6665e8acc93ae4bb853799c795f3f" title=" " alt="" coords="842,131,942,156"/>
 <area shape="poly" title=" " alt="" coords="998,133,943,140,942,135,997,128"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" title=" " alt="" coords="844,77,741,34,743,29,846,72"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,107,405,132"/>
 <area shape="poly" title=" " alt="" coords="803,91,652,88,565,90,479,97,406,111,405,106,478,92,564,85,651,82,804,86"/>
@@ -598,7 +600,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a413b7f902cba5167b433a6fe834d5bd.html">hal</a></li><li class="navelem"><a class="el" href="../../d1/d79/random_8h.html">random.h</a></li>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

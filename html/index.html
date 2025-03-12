@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: TicTacToe project</title>
+<title>TikTakToe: TikTakToe</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,19 +99,33 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">TicTacToe project </div></div>
+  <div class="headertitle"><div class="title">TikTakToe </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a></p>
-<p>Fork of <a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">https://github.com/infohoschie/arm-cortex-m0-cmake-start</a></p>
-<p>Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-How to build/run the project</h1>
+<p><a href="https://choosealicense.com/licenses/mpl-2.0/"><img src="https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe" alt="MPL-2.0 License" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+TikTakToe</h1>
+<p>A TikTakToe game written for the <code>arm-cortex-m0</code> microcontroller.</p>
+<p>Authors: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Acknowledgements</h2>
+<ul>
+<li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> </li>
+</ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
-Using CMake and qemu directly</h2>
+Architecture</h2>
+<p>See <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a> </p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Documentation</h2>
+<p>[Documentation](TODO)</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Build and run the project</h2>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Using CMake and qemu directly</h3>
 <p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required. </p>
-<h3><a class="anchor" id="autotoc_md3"></a>
-Linux</h3>
+<h4><a class="anchor" id="autotoc_md6"></a>
+Linux</h4>
 <div class="fragment"><div class="line"># 1. Configure the cmake project</div>
 <div class="line">cmake --preset arm-cortex-m0-unix</div>
 <div class="line"> </div>
@@ -120,13 +134,13 @@ Linux</h3>
 <div class="line"> </div>
 <div class="line"># 3. Run the project</div>
 <div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/game.elf -nographic -s -serial mon:stdio</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md4"></a>
-Windows</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md7"></a>
+Windows</h4>
 <p>!TODO!</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Using the provided Makefile</h2>
-<h3><a class="anchor" id="autotoc_md6"></a>
-Linux</h3>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Using the provided Makefile</h3>
+<h4><a class="anchor" id="autotoc_md9"></a>
+Linux</h4>
 <p>The provided [Makefile](Makefile) can be used to easily build and run the project using a single command. </p><div class="fragment"><div class="line"># Configure, build and run the project</div>
 <div class="line">make run</div>
 <div class="line"> </div>
@@ -138,25 +152,25 @@ Linux</h3>
 <div class="line"> </div>
 <div class="line"># Generate doxygen documentation (requires doxygen installed)</div>
 <div class="line">make generate_documentation</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md7"></a>
-Windows</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md10"></a>
+Windows</h4>
 <p>!TODO!</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Using Docker</h2>
+<h3><a class="anchor" id="autotoc_md11"></a>
+Using Docker</h3>
 <p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options: </p>
-<h3><a class="anchor" id="autotoc_md9"></a>
-Use the image from Dockerhub</h3>
+<h4><a class="anchor" id="autotoc_md12"></a>
+Use the image from Dockerhub</h4>
 <div class="fragment"><div class="line"># Using DockerHub</div>
 <div class="line">docker run -it definitelynotsimon13/tiktaktoe:latest</div>
 <div class="line"># Using GitHub Container Registry</div>
 <div class="line">docker run -it ghcr.io/softwareengineeringone/tiktaktoe:latest</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md10"></a>
-Build the image locally</h3>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md13"></a>
+Build the image locally</h4>
 <div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
 <div class="line">docker run -it [TAGNAME]</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In either case the <code>-it</code> flags are required to properly capture input from STDIN! </dd></dl>
-<h1><a class="anchor" id="autotoc_md11"></a>
-Compile time configurations</h1>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Compile time configurations</h2>
 <p>The project has a few options that can be changed before compilation.</p><ul>
 <li>Number of rows (default is 4)</li>
 <li>Number of columns (default is 4)</li>
@@ -166,8 +180,8 @@ Compile time configurations</h1>
 <li>ASCII Art (default is "ON", may look broken on small screens)</li>
 </ul>
 <p>These can be set by: </p>
-<h2><a class="anchor" id="autotoc_md12"></a>
-Directly passing to CMake</h2>
+<h3><a class="anchor" id="autotoc_md15"></a>
+Directly passing to CMake</h3>
 <p>When configuring the project the default command <code>cmake --preset arm-cortex-m0-{unix/mingw}</code> can be appended by:</p><ul>
 <li>for the number of rows: <code>[...] --DCELLS_PER_COL=$(NUMBER)</code></li>
 <li>for the number of cols: <code>[...] --DCELLS_PER_ROW=$(NUMBER)</code></li>
@@ -176,8 +190,8 @@ Directly passing to CMake</h2>
 <li>for unicode: <code>[...] --DENABLE_UNICODE=$(ON/OFF)</code></li>
 <li>for ascii art: <code>[...] --DENABLE_ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Using the included Makefile</h2>
+<h3><a class="anchor" id="autotoc_md16"></a>
+Using the included Makefile</h3>
 <p>When using the Makefile to configure/build the project variables can be passed like this:</p><ul>
 <li>for the number of rows: <code>make ROWS=$(NUMBER)</code></li>
 <li>for the number of cols: <code>make COLS=$(NUMBER)</code></li>
@@ -187,19 +201,21 @@ Using the included Makefile</h2>
 <li>for ascii art: <code>make ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
 </ul>
 <p>Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
-<h1><a class="anchor" id="autotoc_md14"></a>
-Architecture</h1>
-<p>See <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a></p>
-<h1><a class="anchor" id="autotoc_md15"></a>
-Conventions</h1>
-<p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a></p>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Dependencies (TODO: CHECK CORRECT)</h1>
 <h2><a class="anchor" id="autotoc_md17"></a>
-Ubuntu/Debian</h2>
+Features</h2>
+<ul>
+<li>Light/dark mode toggle</li>
+<li>Live previews</li>
+<li>Fullscreen mode</li>
+<li>Cross platform</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Dependencies (TODO: CHECK CORRECT)</h2>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Ubuntu/Debian</h3>
 <div class="fragment"><div class="line">sudo apt install gcc-arm-none-eabi cmake qemu-system-arm</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md18"></a>
-Arch</h2>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md20"></a>
+Arch</h3>
 <div class="fragment"><div class="line"># Using yay</div>
 <div class="line">yay -S gcc-arm-none-eabi-bin cmake qemu-system-arm</div>
 <div class="line"># Using paru</div>
@@ -207,17 +223,28 @@ Arch</h2>
 <div class="line"># Using pacman</div>
 <div class="line">sudo pacman -S ?GCC? cmake qemu-system-arm</div>
 </div><!-- fragment --><p> !TODO - gcc for arm gotta be in the main repo? </p>
-<h2><a class="anchor" id="autotoc_md19"></a>
-Nix / NixOS</h2>
+<h3><a class="anchor" id="autotoc_md21"></a>
+Nix / NixOS</h3>
 <p>You can either use the provided <a href="flake.nix">Flake</a>, or add the following packages: </p><div class="fragment"><div class="line">gcc-arm-embedded</div>
 <div class="line">cmake</div>
 <div class="line">qemu</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md20"></a>
-macOS</h2>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md22"></a>
+macOS</h3>
 <div class="fragment"><div class="line">brew install gcc-arm-embedded cmake qemu</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md21"></a>
-Windows</h2>
-<p>TODO/CHECK </p>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md23"></a>
+Windows</h3>
+<p>TODO/CHECK</p>
+<h2><a class="anchor" id="autotoc_md24"></a>
+Authors</h2>
+<ul>
+<li><a href="https://www.github.com/DefinitelyNotSimon13">Simon Blum</a></li>
+<li><a href="https://github.com/benoeckl">Ben Oeckl</a></li>
+<li><a href="https://github.com/DosKobold">Paul Stöckle</a></li>
+<li><a href="https://github.com/MaxRodler">Max Rodler</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md25"></a>
+Conventions</h2>
+<p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a> </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
@@ -225,7 +252,7 @@ Windows</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 14:09:10 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

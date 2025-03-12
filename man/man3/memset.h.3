@@ -1,8 +1,8 @@
-.TH "hal/memset.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/memset.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/memset.h \- Contains memset\&.  
+hal/memset.h \- Contains a simple implementation of memset\&.  
 
 .SH SYNOPSIS
 .br
@@ -16,22 +16,12 @@ hal/memset.h \- Contains memset\&.
 .ti -1c
 .RI "void * \fBmemset\fP (void *ptr, int x, size_t n)"
 .br
-.RI "Sets the first n bytes of the block of memory pointed by ptr to the specified value\&. "
+.RI "Simple implementation of memset\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains memset\&. 
+Contains a simple implementation of memset\&. 
 
-
-.PP
-\fBAuthor\fP
-.RS 4
-Thomas Vogt 
-
-.PP
-Sven Reis
-.RE
-.PP
 
 .PP
 \fBCopyright\fP
@@ -47,7 +37,8 @@ Definition in file \fBmemset\&.h\fP\&.
 .SS "void * memset (void * ptr, int x, size_t n)"
 
 .PP
-Sets the first n bytes of the block of memory pointed by ptr to the specified value\&. 
+Simple implementation of memset\&. Sets the first \fBn\fP bytes of the block of memory pointed to by \fBptr\fP to the specified value \fBx\fP
+
 .PP
 \fBParameters\fP
 .RS 4
@@ -60,7 +51,7 @@ Sets the first n bytes of the block of memory pointed by ptr to the specified va
 .PP
 \fBReturns\fP
 .RS 4
-A pointer to the memory area ptr 
+A pointer to the memory area 
 .RE
 .PP
 

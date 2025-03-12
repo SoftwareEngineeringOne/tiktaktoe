@@ -2,7 +2,7 @@
 \hypertarget{random_8h}{}\label{random_8h}\index{hal/random.h@{hal/random.h}}
 
 
-Contains RNG constants and abstraction functions.  
+Contains constants and abstraction functions for the RNG device.  
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
@@ -63,7 +63,7 @@ uint8\+\_\+t \mbox{\hyperlink{random_8h_a0b0e7c9eefaf33e9333cb2511be4addf}{rng\+
 
 
 \doxysubsection{Detailed Description}
-Contains RNG constants and abstraction functions. 
+Contains constants and abstraction functions for the RNG device. 
 
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -218,6 +218,11 @@ uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+immediately (\begin{DoxyParamCapti
 
 Get the Random Value from the generator immediately. 
 
+The function will {\bfseries{NOT}} wait until the next value is generated!
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t A random byte
+\end{DoxyReturn}
 The function is {\bfseries{NOT}} waiting until the next value is generated!
 
 \begin{DoxyReturn}{Returns}
@@ -258,7 +263,7 @@ uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+waiting (\begin{DoxyParamCaption}\
 This is a function stub. Implement it, if needed. 
 
 \begin{DoxyReturn}{Returns}
-uint8\+\_\+t always {\ttfamily 0}
+uint8\+\_\+t A random byte
 \end{DoxyReturn}
 This is a function stub. Implement it, if needed.
 

@@ -2,7 +2,7 @@
 \hypertarget{system_8h}{}\label{system_8h}\index{hal/system.h@{hal/system.h}}
 
 
-Contains system calls to change the system status.  
+Contains functions interacting with the microcontroller.  
 
 
 This graph shows which files directly or indirectly include this file\+:
@@ -30,13 +30,13 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{system_8h_a97bacc4493b8a3008bdbdd7a83e86642}{system\+\_\+soft\+Reset}} ()
-\begin{DoxyCompactList}\small\item\em Call the soft reset of the system. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Trigger a soft reset of the system. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\+\_\+off\+Mode}} ()
-\begin{DoxyCompactList}\small\item\em Call the shutdown of the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Triggers "{}off"{} mode of the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Contains system calls to change the system status. 
+Contains functions interacting with the microcontroller. 
 
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -109,8 +109,11 @@ void system\+\_\+off\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Call the shutdown of the system. 
+Triggers "{}off"{} mode of the system. 
 
+\begin{DoxyNote}{Note}
+{\bfseries{Never returns}} 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{system_8c_source_l00015}{15}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
@@ -143,8 +146,11 @@ void system\+\_\+soft\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
-Call the soft reset of the system. 
+Trigger a soft reset of the system. 
 
+\begin{DoxyNote}{Note}
+{\bfseries{Never returns}} 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{system_8c_source_l00006}{6}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.

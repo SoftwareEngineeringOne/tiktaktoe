@@ -6,7 +6,7 @@
 <area shape="poly" id="edge15_Node000001_Node000003" title=" " alt="" coords="457,32,428,138,423,137,452,31"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="462,308,526,333"/>
 <area shape="poly" id="edge16_Node000001_Node000010" title=" " alt="" coords="496,29,530,48,545,61,558,78,569,106,572,137,570,168,562,198,539,254,513,296,509,294,534,251,557,196,564,167,567,137,564,108,553,80,542,65,527,52,494,34"/>
-<area shape="rect" id="Node000011" href="$d5/dd0/timer_8h.html" title="Contains timer constants and abstraction functions." alt="" coords="245,226,327,252"/>
+<area shape="rect" id="Node000011" href="$d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="245,226,327,252"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="451,33,306,216,302,213,447,30"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,107,445,144,441,140,484,103"/>
 <area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="502,105,497,293,492,292,496,105"/>

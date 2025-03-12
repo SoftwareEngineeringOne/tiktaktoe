@@ -1,4 +1,4 @@
-.TH "hal/uart.c" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/uart.c" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -61,10 +61,17 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBuart\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void uart_init (const \fBbool\fP with_interrupts)"
+.SS "void uart_init (\fBbool\fP with_interrupts)"
 
 .PP
 Initializing the UART with the following Settings: 115200-8-N-1\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwith_interrupts\fP Wether or not interrupts should be triggered 
+.RE
+.PP
+
 .PP
 Definition at line \fB25\fP of file \fBuart\&.c\fP\&.
 .PP
@@ -95,7 +102,7 @@ Writes/Sends a byte over the serial Port\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIdata\fP byte to send (ASCII) 
+\fIdata\fP byte to send 
 .RE
 .PP
 

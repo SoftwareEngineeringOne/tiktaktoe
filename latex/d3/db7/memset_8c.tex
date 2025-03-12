@@ -14,7 +14,7 @@ Include dependency graph for memset.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{memset_8c_a5a47c79a43fa854fe23bf03450cb3af8}{memset}} (void \texorpdfstring{$\ast$}{*}ptr, const int x, size\+\_\+t n)
-\begin{DoxyCompactList}\small\item\em Sets the first n bytes of the block of memory pointed by ptr to the specified value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Simple implementation of memset. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -26,7 +26,9 @@ void \texorpdfstring{$\ast$}{*} memset (\begin{DoxyParamCaption}\item[{void \tex
 
 
 
-Sets the first n bytes of the block of memory pointed by ptr to the specified value. 
+Simple implementation of memset. 
+
+Sets the first {\bfseries{n}} bytes of the block of memory pointed to by {\bfseries{ptr}} to the specified value {\bfseries{x}}
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -38,7 +40,7 @@ Sets the first n bytes of the block of memory pointed by ptr to the specified va
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pointer to the memory area ptr 
+A pointer to the memory area 
 \end{DoxyReturn}
 
 

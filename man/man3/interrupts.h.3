@@ -1,4 +1,4 @@
-.TH "hal/interrupts.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/interrupts.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,34 +11,13 @@ hal/interrupts.h \- Contains interrupt handlers\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBInterrupt1_Handler\fP (void)"
-.br
-.ti -1c
 .RI "void \fBInterrupt2_Handler\fP (void)"
 .br
 .RI "UART interrupt handler\&. "
 .ti -1c
-.RI "void \fBInterrupt3_Handler\fP (void)"
-.br
-.ti -1c
-.RI "void \fBInterrupt4_Handler\fP (void)"
-.br
-.ti -1c
-.RI "void \fBInterrupt5_Handler\fP (void)"
-.br
-.ti -1c
-.RI "void \fBInterrupt6_Handler\fP (void)"
-.br
-.ti -1c
-.RI "void \fBInterrupt7_Handler\fP (void)"
-.br
-.ti -1c
 .RI "void \fBInterrupt8_Handler\fP (void)"
 .br
 .RI "Timer interrupt handler\&. "
-.ti -1c
-.RI "void \fBInterrupt9_Handler\fP (void)"
-.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -56,36 +35,22 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBinterrupts\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void Interrupt1_Handler (void )"
-
 .SS "void Interrupt2_Handler (void )"
 
 .PP
-UART interrupt handler\&. 
+UART interrupt handler\&. !TODO! 
 .PP
 Definition at line \fB27\fP of file \fBinterrupts\&.c\fP\&.
 .PP
 References \fBinput_onInterrupt()\fP, \fBInterrupt_ICPR\fP, \fBInterrupt_ID2\fP, \fBregister_write()\fP, and \fBuart_readByte()\fP\&.
-.SS "void Interrupt3_Handler (void )"
-
-.SS "void Interrupt4_Handler (void )"
-
-.SS "void Interrupt5_Handler (void )"
-
-.SS "void Interrupt6_Handler (void )"
-
-.SS "void Interrupt7_Handler (void )"
-
 .SS "void Interrupt8_Handler (void )"
 
 .PP
-Timer interrupt handler\&. 
+Timer interrupt handler\&. @detail !TODO! 
 .PP
 Definition at line \fB33\fP of file \fBinterrupts\&.c\fP\&.
 .PP
 References \fBInterrupt_ICPR\fP, \fBInterrupt_ID8\fP, \fBregister_write()\fP, \fBtime_onInterrupt()\fP, \fBTIMER0_BASE_ADDRESS\fP, and \fBTIMER_COMPARE_0\fP\&.
-.SS "void Interrupt9_Handler (void )"
-
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

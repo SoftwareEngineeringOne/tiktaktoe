@@ -1,4 +1,4 @@
-.TH "logic/time.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/time.h" 3 "Wed Mar 12 2025 14:09:10" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,7 +42,7 @@ logic/time.h \- Contains time functions needed for the game\&.
 .ti -1c
 .RI "void \fBtime_resume\fP ()"
 .br
-.RI "Resume the timer after a pause\&. "
+.RI "Resume the timer when paused\&. "
 .in -1c
 .SS "Variables"
 
@@ -50,6 +50,7 @@ logic/time.h \- Contains time functions needed for the game\&.
 .ti -1c
 .RI "\fBGameTimer\fP \fBg_timer\fP"
 .br
+.RI "Global instance of the \fBGameTimer\fP\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -71,6 +72,13 @@ Definition in file \fBtime\&.h\fP\&.
 
 .PP
 Resets the ticks\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgame_state\fP Current state of the game 
+.RE
+.PP
+
 .PP
 Definition at line \fB47\fP of file \fBtime\&.c\fP\&.
 .PP
@@ -102,7 +110,7 @@ References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtime
 .SS "void time_resume ()"
 
 .PP
-Resume the timer after a pause\&. 
+Resume the timer when paused\&. 
 .PP
 Definition at line \fB69\fP of file \fBtime\&.c\fP\&.
 .PP
@@ -111,6 +119,8 @@ References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtime
 .PP 
 .SS "\fBGameTimer\fP g_timer\fR [extern]\fP"
 
+.PP
+Global instance of the \fBGameTimer\fP\&. 
 .PP
 Definition at line \fB24\fP of file \fBtime\&.c\fP\&.
 .SH "Author"

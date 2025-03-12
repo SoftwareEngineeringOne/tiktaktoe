@@ -1,14 +1,10 @@
 /**
- * @file
+ * @file register_access.h
  *
  * @author Thomas Vogt
  * @author Sven Reis
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains abstraction functions of the register access
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

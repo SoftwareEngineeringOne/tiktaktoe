@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file def.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains very basic and general definitions 
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

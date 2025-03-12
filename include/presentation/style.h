@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file style.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains several constants to simplify the styling of output
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

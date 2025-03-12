@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file conversion.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains several different simple and independent conversion functions
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

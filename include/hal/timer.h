@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file timer.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains timer constants and abstraction functions
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file cell.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains functions for changing the presentation of cells
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

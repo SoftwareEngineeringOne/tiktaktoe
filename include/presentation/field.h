@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file field.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains constants and one function to draw the whole field
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

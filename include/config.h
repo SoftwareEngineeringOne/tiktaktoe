@@ -1,14 +1,8 @@
 /*! !! This file has been generated automatically, any changes may be overridden !! !*/
 /**
- * @file
+ * @file config.h
  *
- * @author 
- *
- * @date 
- *
- * @brief 
- *
- * @see 
+ * @brief Contains important compile-time options
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

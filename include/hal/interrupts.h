@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file interrupts.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains interrupt handlers
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

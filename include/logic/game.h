@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file game.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains the game logic
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -50,6 +44,11 @@ typedef struct
         Player marked_by;
 } Cell;
 
+/**
+ * @brief The current game state
+ *
+ * Contains important game information and several metrics
+ */
 typedef struct
 {
         Player winner;
@@ -69,6 +68,11 @@ typedef struct
         uint32_t circle_average_ticks;
 } GameState;
 
+/**
+ * @brief The current state of the cells
+ *
+ * Contains all cells and the current important ones extra
+ */
 typedef struct
 {
         Cell all[CELLS_PER_COL][CELLS_PER_ROW];
@@ -88,6 +92,9 @@ void game_run(const Mode mode);
  */
 void game_onTimeOut();
 
+/**
+ * @brief Finish the current turn
+ */
 void game_endTurn();
 
 

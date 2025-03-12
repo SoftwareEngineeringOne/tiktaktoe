@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file time.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains time functions needed for the game
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -20,6 +14,9 @@
 #include "logic/game.h"
 #include <stdint.h>
 
+/**
+ * @brief Time information of the current game
+ */
 typedef struct
 {
         bool is_running;
@@ -44,8 +41,14 @@ void time_onInterrupt();
  */
 void time_finishTurn(GameState *game_state);
 
+/**
+ * @brief Pause the timer
+ */
 void time_pause();
 
+/**
+ * @brief Resume the timer after a pause
+ */
 void time_resume();
 
 #endif// TIME_H

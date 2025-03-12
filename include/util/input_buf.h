@@ -1,13 +1,7 @@
 ﻿/**
- * @file
+ * @file input_buf.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains everything for the input buffer
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file cursor.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains function for moving the presentation of the cursor
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

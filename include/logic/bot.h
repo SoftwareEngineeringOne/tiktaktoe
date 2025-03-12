@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file bot.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains function for random cell marking (a "bot player")
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

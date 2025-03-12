@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file random.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains RNG constants and abstraction functions
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

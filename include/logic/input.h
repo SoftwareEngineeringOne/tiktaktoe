@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file input.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains the input handling of the game
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -20,6 +14,17 @@
 #include "def.h"
 #include "logic/game.h"
 
+/**
+ * @brief Handle a input byte with current states
+ *
+ * @param [in] byte
+ * @param [inout] game_state
+ * @param [inout] cell_state
+ *
+ * @return True in case a field redraw is needed
+ *
+ * Decides what to do on the given input and change the given states
+ */
 bool input_handleByte(uint8_t *byte, GameState *game_state, CellState *cell_state);
 
 #endif// INPUT_H

@@ -1,4 +1,4 @@
-.TH "logic/input.c" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/input.c" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,6 +47,7 @@ logic/input.c
 .ti -1c
 .RI "\fBbool\fP \fBinput_handleByte\fP (uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
 .br
+.RI "Handle a input byte with current states\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -95,6 +96,24 @@ Definition at line \fB114\fP of file \fBinput\&.c\fP\&.
 References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_redraw()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBg_timer\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBCell::marked_by\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBui_updateTurn()\fP, and \fBwinning_checkForWinner()\fP\&.
 .SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
 
+.PP
+Handle a input byte with current states\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbyte\fP 
+.br
+\fIgame_state\fP 
+.br
+\fIcell_state\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True in case a field redraw is needed
+.RE
+.PP
+Decides what to do on the given input and change the given states 
 .PP
 Definition at line \fB38\fP of file \fBinput\&.c\fP\&.
 .PP

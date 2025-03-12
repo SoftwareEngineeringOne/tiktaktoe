@@ -1,5 +1,10 @@
 \doxysection{hal/uart.h File Reference}
 \hypertarget{uart_8h}{}\label{uart_8h}\index{hal/uart.h@{hal/uart.h}}
+
+
+Contains UART constants and abstraction functions.  
+
+
 {\ttfamily \#include "{}def.\+h"{}}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 Include dependency graph for uart.\+h\+:
@@ -90,6 +95,18 @@ uint8\+\_\+t \mbox{\hyperlink{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\
 \begin{DoxyCompactList}\small\item\em Read/\+Receive a byte from the serial Port. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Contains UART constants and abstraction functions. 
+
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+
+
 \doxysubsection{Macro Definition Documentation}
 \Hypertarget{uart_8h_a0c9e0649d549fffb69c5f2dd11792a50}\index{uart.h@{uart.h}!UART\_BASE\_ADDRESS@{UART\_BASE\_ADDRESS}}
 \index{UART\_BASE\_ADDRESS@{UART\_BASE\_ADDRESS}!uart.h@{uart.h}}
@@ -99,7 +116,7 @@ uint8\+\_\+t \mbox{\hyperlink{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00008}{8}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00018}{18}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a2c7ed0283bd6f2f9d791860d6254ef4f}\index{uart.h@{uart.h}!UART\_BAUDRATE@{UART\_BAUDRATE}}
 \index{UART\_BAUDRATE@{UART\_BAUDRATE}!uart.h@{uart.h}}
@@ -109,7 +126,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00008}{8}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00038}{38}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00048}{48}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_acd8bb09dd5fa3c053ab3473d094b6dd1}\index{uart.h@{uart.h}!UART\_CONFIG@{UART\_CONFIG}}
 \index{UART\_CONFIG@{UART\_CONFIG}!uart.h@{uart.h}}
@@ -119,7 +136,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00038}{38}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00039}{39}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00049}{49}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a5bc79c66a459104df30ee65f45f90ccb}\index{uart.h@{uart.h}!UART\_CTS@{UART\_CTS}}
 \index{UART\_CTS@{UART\_CTS}!uart.h@{uart.h}}
@@ -129,7 +146,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00039}{39}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00019}{19}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00029}{29}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_aaaf6c77e3b8fec12ad625225a08c4f28}\index{uart.h@{uart.h}!UART\_ENABLE@{UART\_ENABLE}}
 \index{UART\_ENABLE@{UART\_ENABLE}!uart.h@{uart.h}}
@@ -139,7 +156,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00019}{19}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00031}{31}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00041}{41}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a7e3562e7931cf51b41a32d8109072251}\index{uart.h@{uart.h}!UART\_ERROR@{UART\_ERROR}}
 \index{UART\_ERROR@{UART\_ERROR}!uart.h@{uart.h}}
@@ -149,7 +166,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00031}{31}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00023}{23}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00033}{33}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_aad83c771db123703c81d3bfc95027749}\index{uart.h@{uart.h}!UART\_ERRORSRC@{UART\_ERRORSRC}}
 \index{UART\_ERRORSRC@{UART\_ERRORSRC}!uart.h@{uart.h}}
@@ -159,7 +176,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00023}{23}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00030}{30}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00040}{40}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a6ae1781451737df3d86cac06e68ecc82}\index{uart.h@{uart.h}!UART\_EVENT\_CLEAR@{UART\_EVENT\_CLEAR}}
 \index{UART\_EVENT\_CLEAR@{UART\_EVENT\_CLEAR}!uart.h@{uart.h}}
@@ -169,7 +186,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00030}{30}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00044}{44}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00054}{54}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a18ee312d0b2a815b51a05be85a7eef93}\index{uart.h@{uart.h}!UART\_EVENT\_TRIGGER@{UART\_EVENT\_TRIGGER}}
 \index{UART\_EVENT\_TRIGGER@{UART\_EVENT\_TRIGGER}!uart.h@{uart.h}}
@@ -179,7 +196,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00044}{44}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00043}{43}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00053}{53}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a4bd4af56cdc06cc4636939d48ca9e3f6}\index{uart.h@{uart.h}!UART\_INT\_RXDRDY@{UART\_INT\_RXDRDY}}
 \index{UART\_INT\_RXDRDY@{UART\_INT\_RXDRDY}!uart.h@{uart.h}}
@@ -189,7 +206,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00043}{43}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00046}{46}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00056}{56}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a98eda3507a244bf3c420da55d0d4891f}\index{uart.h@{uart.h}!UART\_INTEN@{UART\_INTEN}}
 \index{UART\_INTEN@{UART\_INTEN}!uart.h@{uart.h}}
@@ -199,7 +216,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00046}{46}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00027}{27}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00037}{37}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a5767ccf2003948119bc7135026689631}\index{uart.h@{uart.h}!UART\_INTENCLR@{UART\_INTENCLR}}
 \index{UART\_INTENCLR@{UART\_INTENCLR}!uart.h@{uart.h}}
@@ -209,7 +226,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00027}{27}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00029}{29}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00039}{39}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_ac02520a24ed985dc1c73cd402db10f9c}\index{uart.h@{uart.h}!UART\_INTENSET@{UART\_INTENSET}}
 \index{UART\_INTENSET@{UART\_INTENSET}!uart.h@{uart.h}}
@@ -219,7 +236,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00029}{29}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00028}{28}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00038}{38}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_aac3f33057926204bfee77bb6526bfbe9}\index{uart.h@{uart.h}!UART\_NCTS@{UART\_NCTS}}
 \index{UART\_NCTS@{UART\_NCTS}!uart.h@{uart.h}}
@@ -229,7 +246,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00028}{28}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00020}{20}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00030}{30}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a397709cb1934aacfd4e70d297a569117}\index{uart.h@{uart.h}!UART\_PSELCTS@{UART\_PSELCTS}}
 \index{UART\_PSELCTS@{UART\_PSELCTS}!uart.h@{uart.h}}
@@ -239,7 +256,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00020}{20}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00034}{34}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00044}{44}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a72cf6b73351bcfc27a4a48fc2183df2c}\index{uart.h@{uart.h}!UART\_PSELRTS@{UART\_PSELRTS}}
 \index{UART\_PSELRTS@{UART\_PSELRTS}!uart.h@{uart.h}}
@@ -249,7 +266,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00034}{34}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00032}{32}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00042}{42}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a4bf4b4bcca5cc6675839754ad527dc64}\index{uart.h@{uart.h}!UART\_PSELRXD@{UART\_PSELRXD}}
 \index{UART\_PSELRXD@{UART\_PSELRXD}!uart.h@{uart.h}}
@@ -259,7 +276,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00032}{32}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00035}{35}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00045}{45}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a4d6e18ad6cefe93d80e17c8c37d73b1a}\index{uart.h@{uart.h}!UART\_PSELTXD@{UART\_PSELTXD}}
 \index{UART\_PSELTXD@{UART\_PSELTXD}!uart.h@{uart.h}}
@@ -269,7 +286,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00035}{35}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00033}{33}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00043}{43}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a89e30ef9081c8bdc9c7799990a57c133}\index{uart.h@{uart.h}!UART\_RXD@{UART\_RXD}}
 \index{UART\_RXD@{UART\_RXD}!uart.h@{uart.h}}
@@ -279,7 +296,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00033}{33}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00036}{36}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00046}{46}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a53cef6d14ac8edc7cc0c3799882ef08d}\index{uart.h@{uart.h}!UART\_RXDRDY@{UART\_RXDRDY}}
 \index{UART\_RXDRDY@{UART\_RXDRDY}!uart.h@{uart.h}}
@@ -289,7 +306,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00036}{36}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00021}{21}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00031}{31}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a607cba7979bafd90a119ba16a17a880c}\index{uart.h@{uart.h}!UART\_RXTO@{UART\_RXTO}}
 \index{UART\_RXTO@{UART\_RXTO}!uart.h@{uart.h}}
@@ -299,7 +316,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00021}{21}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00024}{24}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00034}{34}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a2e5856627fda6759e7bf18140cf33bc9}\index{uart.h@{uart.h}!UART\_STARTRX@{UART\_STARTRX}}
 \index{UART\_STARTRX@{UART\_STARTRX}!uart.h@{uart.h}}
@@ -309,7 +326,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00024}{24}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00012}{12}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00022}{22}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_aba22845d60f423ea9e2d41071e7ff992}\index{uart.h@{uart.h}!UART\_STARTTX@{UART\_STARTTX}}
 \index{UART\_STARTTX@{UART\_STARTTX}!uart.h@{uart.h}}
@@ -319,7 +336,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00012}{12}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00014}{14}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00024}{24}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a1cef388fd95709520e4d199ea62f7b4d}\index{uart.h@{uart.h}!UART\_STOPRX@{UART\_STOPRX}}
 \index{UART\_STOPRX@{UART\_STOPRX}!uart.h@{uart.h}}
@@ -329,7 +346,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00014}{14}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00013}{13}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00023}{23}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a286911205b396bd2f0076db6e5f45d96}\index{uart.h@{uart.h}!UART\_STOPTX@{UART\_STOPTX}}
 \index{UART\_STOPTX@{UART\_STOPTX}!uart.h@{uart.h}}
@@ -339,7 +356,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00013}{13}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00015}{15}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00025}{25}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a7aa5af25376c5d34c8a83913c4d35bbd}\index{uart.h@{uart.h}!UART\_SUSPEND@{UART\_SUSPEND}}
 \index{UART\_SUSPEND@{UART\_SUSPEND}!uart.h@{uart.h}}
@@ -349,7 +366,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00015}{15}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00016}{16}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00026}{26}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a09c2bf120db802296753dc07a78d559c}\index{uart.h@{uart.h}!UART\_TASK\_START@{UART\_TASK\_START}}
 \index{UART\_TASK\_START@{UART\_TASK\_START}!uart.h@{uart.h}}
@@ -359,7 +376,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00016}{16}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00042}{42}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00052}{52}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_a92a783385325f2ce25693bc5beafc49c}\index{uart.h@{uart.h}!UART\_TXD@{UART\_TXD}}
 \index{UART\_TXD@{UART\_TXD}!uart.h@{uart.h}}
@@ -369,7 +386,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00042}{42}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00037}{37}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00047}{47}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 \Hypertarget{uart_8h_adb34fbd67b19b7888bebc8079903eb9b}\index{uart.h@{uart.h}!UART\_TXDRDY@{UART\_TXDRDY}}
 \index{UART\_TXDRDY@{UART\_TXDRDY}!uart.h@{uart.h}}
@@ -379,7 +396,7 @@ Definition at line \mbox{\hyperlink{uart_8h_source_l00037}{37}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{uart_8h_source_l00022}{22}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+Definition at line \mbox{\hyperlink{uart_8h_source_l00032}{32}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
 
 
 
@@ -400,7 +417,7 @@ Definition at line \mbox{\hyperlink{uart_8c_source_l00025}{25}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{nvic_8h_source_l00049}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00044}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00046}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00028}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00012}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00014}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00042}{UART\+\_\+\+TASK\+\_\+\+START}}.
+References \mbox{\hyperlink{nvic_8h_source_l00043}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00038}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00018}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00041}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00056}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00038}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00022}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00024}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00052}{UART\+\_\+\+TASK\+\_\+\+START}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -437,7 +454,7 @@ Definition at line \mbox{\hyperlink{uart_8c_source_l00081}{81}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00044}{UART\+\_\+\+EVENT\+\_\+\+CLEAR}}, \mbox{\hyperlink{uart_8h_source_l00036}{UART\+\_\+\+RXD}}, and \mbox{\hyperlink{uart_8h_source_l00021}{UART\+\_\+\+RXDRDY}}.
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00018}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00054}{UART\+\_\+\+EVENT\+\_\+\+CLEAR}}, \mbox{\hyperlink{uart_8h_source_l00046}{UART\+\_\+\+RXD}}, and \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+RXDRDY}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -476,7 +493,7 @@ Definition at line \mbox{\hyperlink{uart_8c_source_l00073}{73}} of file \mbox{\h
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00008}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{uart_8h_source_l00037}{UART\+\_\+\+TXD}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00018}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{uart_8h_source_l00047}{UART\+\_\+\+TXD}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

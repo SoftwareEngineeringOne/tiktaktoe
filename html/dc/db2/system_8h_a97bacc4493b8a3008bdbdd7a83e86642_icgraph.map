@@ -1,5 +1,5 @@
 <map id="system_softReset" name="system_softReset">
-<area shape="rect" id="Node000001" title=" " alt="" coords="364,55,490,80"/>
+<area shape="rect" id="Node000001" title="Call the soft reset of the system." alt="" coords="364,55,490,80"/>
 <area shape="rect" id="Node000002" href="$da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="230,29,316,55"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,57,316,52,317,47,349,52"/>
 <area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="248,79,298,104"/>

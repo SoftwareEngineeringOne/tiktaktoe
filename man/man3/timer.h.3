@@ -1,8 +1,9 @@
-.TH "hal/timer.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/timer.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/timer.h
+hal/timer.h \- Contains timer constants and abstraction functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -216,20 +217,9 @@ hal/timer.h
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains timer constants and abstraction functions\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -244,167 +234,167 @@ Definition in file \fBtimer\&.h\fP\&.
 .SS "#define INT_COMPARE0   (1 << 16)"
 
 .PP
-Definition at line \fB75\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB69\fP of file \fBtimer\&.h\fP\&.
 .SS "#define INT_COMPARE1   (1 << 17)"
 
 .PP
-Definition at line \fB76\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB70\fP of file \fBtimer\&.h\fP\&.
 .SS "#define INT_COMPARE2   (1 << 18)"
 
 .PP
-Definition at line \fB77\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB71\fP of file \fBtimer\&.h\fP\&.
 .SS "#define INT_COMPARE3   (1 << 19)"
 
 .PP
-Definition at line \fB78\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB72\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE0_CLEAR_DISABLE   (0 << 0)"
 
 .PP
-Definition at line \fB66\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB60\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE0_CLEAR_ENABLE   (1 << 0)"
 
 .PP
-Definition at line \fB65\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB59\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE0_STOP_DISABLE   (0 << 8)"
 
 .PP
-Definition at line \fB71\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB65\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE0_STOP_ENABLE   (1 << 8)"
 
 .PP
-Definition at line \fB70\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB64\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE1_CLEAR_DISABLE   (0 << 1)"
 
 .PP
-Definition at line \fB68\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB62\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE1_CLEAR_ENABLE   (1 << 1)"
 
 .PP
-Definition at line \fB67\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB61\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE1_STOP_DISABLE   (0 << 9)"
 
 .PP
-Definition at line \fB73\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB67\fP of file \fBtimer\&.h\fP\&.
 .SS "#define SHORTS_COMPARE1_STOP_ENABLE   (1 << 9)"
 
 .PP
-Definition at line \fB72\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB66\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER0_BASE_ADDRESS   0x40008000"
 
 .PP
-Definition at line \fB25\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB19\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER1_BASE_ADDRESS   0x40009000"
 
 .PP
-Definition at line \fB26\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB20\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER2_BASE_ADDRESS   0x4000A000"
 
 .PP
-Definition at line \fB27\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB21\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_BITMODE   0x508"
 
 .PP
-Definition at line \fB53\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB47\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CAPTURE_0   0x040"
 
 .PP
-Definition at line \fB37\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB31\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CAPTURE_1   0x044"
 
 .PP
-Definition at line \fB38\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB32\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CAPTURE_2   0x048"
 
 .PP
-Definition at line \fB39\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB33\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CAPTURE_3   0x04C"
 
 .PP
-Definition at line \fB40\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB34\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CC_0   0x540"
 
 .PP
-Definition at line \fB55\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB49\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CC_1   0x544"
 
 .PP
-Definition at line \fB56\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB50\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CC_2   0x548"
 
 .PP
-Definition at line \fB57\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB51\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CC_3   0x54C"
 
 .PP
-Definition at line \fB58\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB52\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_CLEAR   0x00C"
 
 .PP
-Definition at line \fB34\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB28\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_COMPARE_0   0x140"
 
 .PP
-Definition at line \fB43\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB37\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_COMPARE_1   0x144"
 
 .PP
-Definition at line \fB44\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB38\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_COMPARE_2   0x148"
 
 .PP
-Definition at line \fB45\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB39\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_COMPARE_3   0x14C"
 
 .PP
-Definition at line \fB46\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB40\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_COUNT   0x008"
 
 .PP
-Definition at line \fB33\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB27\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_EVENT_CLEAR   0"
 
 .PP
-Definition at line \fB63\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB57\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_EVENT_TRIGGER   1"
 
 .PP
-Definition at line \fB62\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB56\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_INTENCLR   0x308"
 
 .PP
-Definition at line \fB51\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB45\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_INTENSET   0x304"
 
 .PP
-Definition at line \fB50\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB44\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_MODE   0x504"
 
 .PP
-Definition at line \fB52\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB46\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_PRESCALER   0x510"
 
 .PP
-Definition at line \fB54\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB48\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_SHORTS   0x200"
 
 .PP
-Definition at line \fB49\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB43\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_SHUTDOWN   0x010"
 
 .PP
-Definition at line \fB35\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB29\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_START   0x000"
 
 .PP
-Definition at line \fB31\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB25\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_STOP   0x004"
 
 .PP
-Definition at line \fB32\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB26\fP of file \fBtimer\&.h\fP\&.
 .SS "#define TIMER_TASK_START   1"
 
 .PP
-Definition at line \fB61\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB55\fP of file \fBtimer\&.h\fP\&.
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef enum \fBTimer\fP \fBTimer\fP"
@@ -429,7 +419,7 @@ Definition at line \fB61\fP of file \fBtimer\&.h\fP\&.
 .TP
 \f(BITIMER2 \fP
 .PP
-Definition at line \fB80\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB74\fP of file \fBtimer\&.h\fP\&.
 .SS "enum \fBTimerBitMode\fP"
 
 .PP
@@ -444,7 +434,7 @@ Definition at line \fB80\fP of file \fBtimer\&.h\fP\&.
 .TP
 \f(BITIMER_BIT_MODE_32 \fP
 .PP
-Definition at line \fB93\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB87\fP of file \fBtimer\&.h\fP\&.
 .SS "enum \fBTimerCaptureCompare\fP"
 
 .PP
@@ -459,7 +449,7 @@ Definition at line \fB93\fP of file \fBtimer\&.h\fP\&.
 .TP
 \f(BICC3 \fP
 .PP
-Definition at line \fB101\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB95\fP of file \fBtimer\&.h\fP\&.
 .SS "enum \fBTimerMode\fP"
 
 .PP
@@ -470,7 +460,7 @@ Definition at line \fB101\fP of file \fBtimer\&.h\fP\&.
 .TP
 \f(BITIMER_MODE_COUNTER \fP
 .PP
-Definition at line \fB87\fP of file \fBtimer\&.h\fP\&.
+Definition at line \fB81\fP of file \fBtimer\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void timer_capture (\fBTimer\fP timer, \fBTimerCaptureCompare\fP capture)"

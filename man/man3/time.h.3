@@ -1,8 +1,9 @@
-.TH "logic/time.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/time.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/time.h
+logic/time.h \- Contains time functions needed for the game\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -17,6 +18,7 @@ logic/time.h
 .ti -1c
 .RI "struct \fBGameTimer\fP"
 .br
+.RI "Time information of the current game\&. "
 .in -1c
 .SS "Functions"
 
@@ -36,9 +38,11 @@ logic/time.h
 .ti -1c
 .RI "void \fBtime_pause\fP ()"
 .br
+.RI "Pause the timer\&. "
 .ti -1c
 .RI "void \fBtime_resume\fP ()"
 .br
+.RI "Resume the timer after a pause\&. "
 .in -1c
 .SS "Variables"
 
@@ -49,20 +53,9 @@ logic/time.h
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains time functions needed for the game\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -101,11 +94,15 @@ References \fBg_timer\fP, \fBgame_onTimeOut()\fP, \fBTICKS_PER_TURN\fP, \fBGameT
 .SS "void time_pause ()"
 
 .PP
+Pause the timer\&. 
+.PP
 Definition at line \fB63\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_stop()\fP\&.
 .SS "void time_resume ()"
 
+.PP
+Resume the timer after a pause\&. 
 .PP
 Definition at line \fB69\fP of file \fBtime\&.c\fP\&.
 .PP

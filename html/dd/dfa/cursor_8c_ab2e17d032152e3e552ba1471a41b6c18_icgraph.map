@@ -42,7 +42,7 @@
 <area shape="poly" id="edge23_Node000010_Node000017" title=" " alt="" coords="1093,381,1011,360,1012,355,1094,376"/>
 <area shape="rect" id="Node000012" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="702,234,810,259"/>
 <area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="910,286,810,262,811,257,911,281"/>
-<area shape="rect" id="Node000013" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="478,386,598,411"/>
+<area shape="rect" id="Node000013" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="478,386,598,411"/>
 <area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="725,271,560,387,557,383,722,266"/>
 <area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="473,383,394,361,396,356,475,378"/>
 <area shape="poly" id="edge17_Node000014_Node000005" title=" " alt="" coords="521,699,360,362,365,360,526,697"/>

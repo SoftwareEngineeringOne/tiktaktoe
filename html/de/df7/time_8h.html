@@ -106,6 +106,9 @@ $(function(){initNavTree('de/df7/time_8h.html','../../'); initResizable(true); }
   <div class="headertitle"><div class="title">time.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains time functions needed for the game.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d2/dd5/game_8h_source.html">logic/game.h</a>&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -113,23 +116,23 @@ Include dependency graph for time.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d13/time_8h__incl.png" border="0" usemap="#alogic_2time_8h" alt=""/></div>
 <map name="alogic_2time_8h" id="alogic_2time_8h">
-<area shape="rect" title=" " alt="" coords="381,5,468,31"/>
-<area shape="rect" href="../../d2/dd5/game_8h.html" title=" " alt="" coords="336,79,430,105"/>
+<area shape="rect" title="Contains time functions needed for the game." alt="" coords="381,5,468,31"/>
+<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="336,79,430,105"/>
 <area shape="poly" title=" " alt="" coords="420,33,400,67,396,64,416,30"/>
 <area shape="rect" title=" " alt="" coords="413,234,476,260"/>
 <area shape="poly" title=" " alt="" coords="432,31,445,79,450,154,449,218,444,218,445,155,439,79,427,32"/>
-<area shape="rect" href="../../d5/d5a/field_8h.html" title=" " alt="" coords="120,153,249,178"/>
+<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="120,153,249,178"/>
 <area shape="poly" title=" " alt="" coords="351,108,234,150,232,144,349,103"/>
-<area shape="rect" href="../../db/db3/input__buf_8h.html" title=" " alt="" coords="301,153,407,178"/>
+<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="301,153,407,178"/>
 <area shape="poly" title=" " alt="" coords="381,106,367,139,362,137,376,104"/>
 <area shape="poly" title=" " alt="" coords="394,104,422,152,442,218,437,220,417,154,390,106"/>
-<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="5,234,71,260"/>
+<area shape="rect" href="../../db/d16/config_8h.html" title="Contains important compile&#45;time options." alt="" coords="5,234,71,260"/>
 <area shape="poly" title=" " alt="" coords="164,181,75,228,73,224,161,176"/>
-<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title=" " alt="" coords="95,226,218,267"/>
+<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="95,226,218,267"/>
 <area shape="poly" title=" " alt="" coords="183,180,171,213,166,211,178,178"/>
 <area shape="rect" title=" " alt="" coords="243,234,310,260"/>
 <area shape="poly" title=" " alt="" coords="200,177,253,222,249,226,197,181"/>
-<area shape="rect" href="../../d4/da4/def_8h.html" title=" " alt="" coords="335,234,384,260"/>
+<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="335,234,384,260"/>
 <area shape="poly" title=" " alt="" coords="357,179,360,218,355,219,352,179"/>
 <area shape="poly" title=" " alt="" coords="370,177,421,222,418,226,366,181"/>
 </map>
@@ -139,7 +142,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/dd9/time_8h__dep__incl.png" border="0" usemap="#alogic_2time_8hdep" alt=""/></div>
 <map name="alogic_2time_8hdep" id="alogic_2time_8hdep">
-<area shape="rect" title=" " alt="" coords="255,5,342,31"/>
+<area shape="rect" title="Contains time functions needed for the game." alt="" coords="255,5,342,31"/>
 <area shape="rect" href="../../d8/d22/interrupts_8c.html" title=" " alt="" coords="5,79,112,105"/>
 <area shape="poly" title=" " alt="" coords="244,38,100,81,99,76,243,33"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="135,79,230,105"/>
@@ -158,6 +161,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8b/structGameTimer.html">GameTimer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time information of the current game.  <a href="../../d7/d8b/structGameTimer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -172,8 +176,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a90e96cefd66715b9740be8f0dbab0042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the ticks.  <br /></td></tr>
 <tr class="separator:a90e96cefd66715b9740be8f0dbab0042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad5fe91a14f332c6acc40870c980fae" id="r_a5ad5fe91a14f332c6acc40870c980fae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ad5fe91a14f332c6acc40870c980fae">time_pause</a> ()</td></tr>
+<tr class="memdesc:a5ad5fe91a14f332c6acc40870c980fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the timer.  <br /></td></tr>
 <tr class="separator:a5ad5fe91a14f332c6acc40870c980fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa626af1fe4486ff2f05529894b807e5a" id="r_aa626af1fe4486ff2f05529894b807e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa626af1fe4486ff2f05529894b807e5a">time_resume</a> ()</td></tr>
+<tr class="memdesc:aa626af1fe4486ff2f05529894b807e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the timer after a pause.  <br /></td></tr>
 <tr class="separator:aa626af1fe4486ff2f05529894b807e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -182,9 +188,7 @@ Variables</h2></td></tr>
 <tr class="separator:a5c31952f8992f7d8f3d22c625761e217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section see"><dt>See also</dt><dd></dd></dl>
+<div class="textblock"><p>Contains time functions needed for the game. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
@@ -208,14 +212,14 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d73/time_8c_source.html#l00047">47</a> of file <a class="el" href="../../df/d73/time_8c_source.html">time.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/dd5/game_8h_source.html#l00068">GameState::circle_total_ticks</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00037">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00065">GameState::cross_total_ticks</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00059">GameState::current_player</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, and <a class="el" href="../../de/df7/time_8h_source.html#l00027">GameTimer::ticks_turn</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/dd5/game_8h_source.html#l00067">GameState::circle_total_ticks</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00031">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00064">GameState::cross_total_ticks</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00058">GameState::current_player</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, and <a class="el" href="../../de/df7/time_8h_source.html#l00024">GameTimer::ticks_turn</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/df7/time_8h_a90e96cefd66715b9740be8f0dbab0042_icgraph.png" border="0" usemap="#ade/df7/time_8h_a90e96cefd66715b9740be8f0dbab0042_icgraph" alt=""/></div>
 <map name="ade/df7/time_8h_a90e96cefd66715b9740be8f0dbab0042_icgraph" id="ade/df7/time_8h_a90e96cefd66715b9740be8f0dbab0042_icgraph">
 <area shape="rect" title="Resets the ticks." alt="" coords="974,31,1084,56"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="819,31,926,56"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="819,31,926,56"/>
 <area shape="poly" title=" " alt="" coords="959,46,927,46,927,41,959,41"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" title=" " alt="" coords="803,36,771,30,772,25,804,30"/>
@@ -225,7 +229,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="631,21,596,21,596,16,631,16"/>
 <area shape="rect" href="../../d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737" title="Timer interrupt handler." alt="" coords="302,5,430,31"/>
 <area shape="poly" title=" " alt="" coords="465,21,430,21,430,16,465,16"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="478,55,599,80"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="478,55,599,80"/>
 <area shape="poly" title=" " alt="" coords="639,70,599,70,599,65,639,65"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,55,405,80"/>
 <area shape="poly" title=" " alt="" coords="463,70,406,70,406,65,463,65"/>
@@ -257,7 +261,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d73/time_8c_source.html#l00030">30</a> of file <a class="el" href="../../df/d73/time_8c_source.html">time.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d5/dd0/timer_8h_source.html#l00103">CC0</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00032">TICK_SPEED</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00082">TIMER0</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00098">TIMER_BIT_MODE_32</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00075">timer_captureCompareSet()</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00052">timer_init_detailed()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00089">TIMER_MODE_TIMER</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00100">timer_start()</a>.</p>
+<p class="reference">References <a class="el" href="../../d5/dd0/timer_8h_source.html#l00097">CC0</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00026">TICK_SPEED</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00076">TIMER0</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00092">TIMER_BIT_MODE_32</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00075">timer_captureCompareSet()</a>, <a class="el" href="../../df/d41/timer_8c_source.html#l00052">timer_init_detailed()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00083">TIMER_MODE_TIMER</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00100">timer_start()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -316,7 +320,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d73/time_8c_source.html#l00037">37</a> of file <a class="el" href="../../df/d73/time_8c_source.html">time.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00131">game_onTimeOut()</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00031">TICKS_PER_TURN</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00026">GameTimer::ticks_total</a>, and <a class="el" href="../../de/df7/time_8h_source.html#l00027">GameTimer::ticks_turn</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00131">game_onTimeOut()</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00025">TICKS_PER_TURN</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00023">GameTimer::ticks_total</a>, and <a class="el" href="../../de/df7/time_8h_source.html#l00024">GameTimer::ticks_turn</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -327,7 +331,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="121,64,153,64,153,69,121,69"/>
 <area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="341,27,486,53"/>
 <area shape="poly" title=" " alt="" coords="293,55,325,50,326,55,294,60"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="360,78,467,103"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="360,78,467,103"/>
 <area shape="poly" title=" " alt="" coords="294,72,345,79,344,84,293,77"/>
 <area shape="rect" href="../../dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="# THIS FUNCTION IS A STUB! #" alt="" coords="534,17,680,58"/>
 <area shape="poly" title=" " alt="" coords="487,36,519,36,519,41,487,42"/>
@@ -370,15 +374,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Pause the timer. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../df/d73/time_8c_source.html#l00063">63</a> of file <a class="el" href="../../df/d73/time_8c_source.html">time.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00025">GameTimer::is_running</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00082">TIMER0</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00107">timer_stop()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00022">GameTimer::is_running</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00076">TIMER0</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00107">timer_stop()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_cgraph.png" border="0" usemap="#ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_cgraph" alt=""/></div>
 <map name="ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_cgraph" id="ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,94,31"/>
+<area shape="rect" title="Pause the timer." alt="" coords="5,5,94,31"/>
 <area shape="rect" href="../../df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="142,5,224,31"/>
 <area shape="poly" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
 <area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="272,5,371,31"/>
@@ -390,12 +396,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_icgraph.png" border="0" usemap="#ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_icgraph" alt=""/></div>
 <map name="ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_icgraph" id="ade/df7/time_8h_a5ad5fe91a14f332c6acc40870c980fae_icgraph">
-<area shape="rect" title=" " alt="" coords="789,31,877,56"/>
+<area shape="rect" title="Pause the timer." alt="" coords="789,31,877,56"/>
 <area shape="rect" href="../../d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="597,5,741,31"/>
 <area shape="poly" title=" " alt="" coords="773,37,741,32,741,27,774,32"/>
 <area shape="rect" href="../../d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="620,55,718,80"/>
 <area shape="poly" title=" " alt="" coords="774,55,719,63,718,58,773,49"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="428,31,549,56"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="428,31,549,56"/>
 <area shape="poly" title=" " alt="" coords="581,33,549,38,549,32,581,28"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,31,380,56"/>
 <area shape="poly" title=" " alt="" coords="413,46,381,46,381,41,413,41"/>
@@ -424,15 +430,17 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Resume the timer after a pause. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../df/d73/time_8c_source.html#l00069">69</a> of file <a class="el" href="../../df/d73/time_8c_source.html">time.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00025">GameTimer::is_running</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00082">TIMER0</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00100">timer_start()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00022">GameTimer::is_running</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00076">TIMER0</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00100">timer_start()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_cgraph.png" border="0" usemap="#ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_cgraph" alt=""/></div>
 <map name="ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_cgraph" id="ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,102,31"/>
+<area shape="rect" title="Resume the timer after a pause." alt="" coords="5,5,102,31"/>
 <area shape="rect" href="../../df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="150,5,233,31"/>
 <area shape="poly" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
 <area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="281,5,380,31"/>
@@ -444,12 +452,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_icgraph.png" border="0" usemap="#ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_icgraph" alt=""/></div>
 <map name="ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_icgraph" id="ade/df7/time_8h_aa626af1fe4486ff2f05529894b807e5a_icgraph">
-<area shape="rect" title=" " alt="" coords="789,31,885,56"/>
+<area shape="rect" title="Resume the timer after a pause." alt="" coords="789,31,885,56"/>
 <area shape="rect" href="../../d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="597,5,741,31"/>
 <area shape="poly" title=" " alt="" coords="773,37,741,32,742,26,774,31"/>
 <area shape="rect" href="../../d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="620,55,718,80"/>
 <area shape="poly" title=" " alt="" coords="774,55,718,63,717,58,773,50"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="428,31,549,56"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="428,31,549,56"/>
 <area shape="poly" title=" " alt="" coords="581,33,549,38,549,32,581,28"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,31,380,56"/>
 <area shape="poly" title=" " alt="" coords="413,46,381,46,381,41,413,41"/>
@@ -494,7 +502,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li><li class="navelem"><a class="el" href="../../de/df7/time_8h.html">time.h</a></li>
-    <li class="footer">Generated on Tue Mar 4 2025 13:27:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

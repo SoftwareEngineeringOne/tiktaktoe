@@ -103,50 +103,50 @@ $(function(){initNavTree('d9/d3b/ui_8h_source.html','../../'); initResizable(tru
 </div><!--header-->
 <div class="contents">
 <a href="../../d9/d3b/ui_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef UI_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define UI_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef UI_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define UI_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dd5/game_8h.html">logic/game.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d5a/ascii__art_8h.html">presentation/ascii_art.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">presentation/cell.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dd5/game_8h.html">logic/game.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d5a/ascii__art_8h.html">presentation/ascii_art.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/ddd/cell_8h.html">presentation/cell.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#adbeef5f5002bcfc3cbed2deb88012cc4">   25</a></span><span class="preprocessor">#define TURN_ROW 1 + HEADING_LINES</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#a12e7933404f476fb69061fc8a8a705ff">   26</a></span><span class="preprocessor">#define TIMER_ROW FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#adbeef5f5002bcfc3cbed2deb88012cc4">   20</a></span><span class="preprocessor">#define TURN_ROW 1 + HEADING_LINES</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#a12e7933404f476fb69061fc8a8a705ff">   21</a></span><span class="preprocessor">#define TIMER_ROW FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifdef ENABLE_UNICODE</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define FULL_PROGRESS_ELEMENT &quot;█&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define HALF_PROGRESS_ELEMENT &quot;▆&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define EMPTY_PROGRESS_ELEMENT &quot;▁&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifdef ENABLE_UNICODE</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define FULL_PROGRESS_ELEMENT &quot;█&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define HALF_PROGRESS_ELEMENT &quot;▆&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define EMPTY_PROGRESS_ELEMENT &quot;▁&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#acd01ff06f7444e97abb6ebb5a293166d">   29</a></span><span class="preprocessor">#define FULL_PROGRESS_ELEMENT &quot;-&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#ac2b3fd518c50122858e86bd5bd8b25f8">   30</a></span><span class="preprocessor">#define HALF_PROGRESS_ELEMENT &quot;_&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#ad7d5e58bd1b7c4066f87d8dd9cf9eb68">   31</a></span><span class="preprocessor">#define EMPTY_PROGRESS_ELEMENT &quot;&quot;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#acd01ff06f7444e97abb6ebb5a293166d">   34</a></span><span class="preprocessor">#define FULL_PROGRESS_ELEMENT &quot;-&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#ac2b3fd518c50122858e86bd5bd8b25f8">   35</a></span><span class="preprocessor">#define HALF_PROGRESS_ELEMENT &quot;_&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d9/d3b/ui_8h.html#ad7d5e58bd1b7c4066f87d8dd9cf9eb68">   36</a></span><span class="preprocessor">#define EMPTY_PROGRESS_ELEMENT &quot;&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ae4fe2414f32031d11e9c73b538bf1343">ui_displayTimer</a>(uint16_t remaining_time, uint16_t total_time);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#aeb1f8edc41404d3650def3e0c4b8d700">ui_updateTimer</a>(uint16_t remaining_time, uint16_t total_time);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#a2b115d6ebc0e14751195c93efd7aafdb">ui_displayTurn</a>(uint8_t current_turn, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> player);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#a358e03c0e369343f9beab07d771f0bcb">ui_updateTurn</a>(uint8_t current_turn, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> player);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ae1c1dad8845af014a8e35894e8842fb5">ui_printStartingPlayer</a>(<a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> starting_player, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> mode);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ad7ec4b5965543c400031e14183eee496">ui_printHeading</a>();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#aa7c37f269bcee19a98aea573289d9877">ui_gameOver</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span><span class="comment">// UI_H</span></div>
-<div class="ttc" id="aascii__art_8h_html"><div class="ttname"><a href="../../d2/d5a/ascii__art_8h.html">ascii_art.h</a></div></div>
-<div class="ttc" id="acell_8h_html"><div class="ttname"><a href="../../d0/ddd/cell_8h.html">cell.h</a></div></div>
-<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="../../d2/dd5/game_8h.html">game.h</a></div></div>
-<div class="ttc" id="agame_8h_html_a46c8a310cf4c094f8c80e1cb8dc1f911"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00028">game.h:29</a></div></div>
-<div class="ttc" id="agame_8h_html_a9c8780378078e51e7c9041cbac392db9"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a></div><div class="ttdeci">Player</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00034">game.h:35</a></div></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ae4fe2414f32031d11e9c73b538bf1343">ui_displayTimer</a>(uint16_t remaining_time, uint16_t total_time);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#aeb1f8edc41404d3650def3e0c4b8d700">ui_updateTimer</a>(uint16_t remaining_time, uint16_t total_time);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#a2b115d6ebc0e14751195c93efd7aafdb">ui_displayTurn</a>(uint8_t current_turn, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> player);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#a358e03c0e369343f9beab07d771f0bcb">ui_updateTurn</a>(uint8_t current_turn, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> player);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ae1c1dad8845af014a8e35894e8842fb5">ui_printStartingPlayer</a>(<a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a> starting_player, <a class="code hl_enumeration" href="../../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a> mode);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#ad7ec4b5965543c400031e14183eee496">ui_printHeading</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d3b/ui_8h.html#aa7c37f269bcee19a98aea573289d9877">ui_gameOver</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span><span class="comment">// UI_H</span></div>
+<div class="ttc" id="aascii__art_8h_html"><div class="ttname"><a href="../../d2/d5a/ascii__art_8h.html">ascii_art.h</a></div><div class="ttdoc">Contains several ascii art constants.</div></div>
+<div class="ttc" id="acell_8h_html"><div class="ttname"><a href="../../d0/ddd/cell_8h.html">cell.h</a></div><div class="ttdoc">Contains functions for changing the presentation of cells.</div></div>
+<div class="ttc" id="agame_8h_html"><div class="ttname"><a href="../../d2/dd5/game_8h.html">game.h</a></div><div class="ttdoc">Contains the game logic.</div></div>
+<div class="ttc" id="agame_8h_html_a46c8a310cf4c094f8c80e1cb8dc1f911"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911">Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00022">game.h:23</a></div></div>
+<div class="ttc" id="agame_8h_html_a9c8780378078e51e7c9041cbac392db9"><div class="ttname"><a href="../../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9">Player</a></div><div class="ttdeci">Player</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00028">game.h:29</a></div></div>
 <div class="ttc" id="aui_8h_html_a2b115d6ebc0e14751195c93efd7aafdb"><div class="ttname"><a href="../../d9/d3b/ui_8h.html#a2b115d6ebc0e14751195c93efd7aafdb">ui_displayTurn</a></div><div class="ttdeci">void ui_displayTurn(uint8_t current_turn, Player player)</div><div class="ttdoc">Writes the turn text to the screen.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d78/ui_8c_source.html#l00089">ui.c:89</a></div></div>
 <div class="ttc" id="aui_8h_html_a358e03c0e369343f9beab07d771f0bcb"><div class="ttname"><a href="../../d9/d3b/ui_8h.html#a358e03c0e369343f9beab07d771f0bcb">ui_updateTurn</a></div><div class="ttdeci">void ui_updateTurn(uint8_t current_turn, Player player)</div><div class="ttdoc">Updates the turn number on the screen.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d78/ui_8c_source.html#l00099">ui.c:99</a></div></div>
 <div class="ttc" id="aui_8h_html_aa7c37f269bcee19a98aea573289d9877"><div class="ttname"><a href="../../d9/d3b/ui_8h.html#aa7c37f269bcee19a98aea573289d9877">ui_gameOver</a></div><div class="ttdeci">void ui_gameOver()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d78/ui_8c_source.html#l00117">ui.c:117</a></div></div>
@@ -160,7 +160,7 @@ $(function(){initNavTree('d9/d3b/ui_8h_source.html','../../'); initResizable(tru
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_125447c92e2d7c7fbb49f13fdd370274.html">presentation</a></li><li class="navelem"><a class="el" href="../../d9/d3b/ui_8h.html">ui.h</a></li>
-    <li class="footer">Generated on Tue Mar 4 2025 13:27:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

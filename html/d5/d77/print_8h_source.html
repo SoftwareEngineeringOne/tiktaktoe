@@ -103,33 +103,33 @@ $(function(){initNavTree('d5/d77/print_8h_source.html','../../'); initResizable(
 </div><!--header-->
 <div class="contents">
 <a href="../../d5/d77/print_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef PRINT_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define PRINT_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d12/style_8h.html">presentation/style.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d5/d77/print_8h.html#af402181ae1edb8e2b266467b0091575d">   23</a></span><span class="preprocessor">#define LINE_SEPERATOR &#39;\n&#39;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#aa1dd7679332aa803a3febb63dc5dd825">print_clearConsole</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef PRINT_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define PRINT_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d12/style_8h.html">presentation/style.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d5/d77/print_8h.html#af402181ae1edb8e2b266467b0091575d">   17</a></span><span class="preprocessor">#define LINE_SEPERATOR &#39;\n&#39;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#aa1dd7679332aa803a3febb63dc5dd825">print_clearConsole</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#ae2dd7886efd463e815dadf10eb54777e">print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#ae2dd7886efd463e815dadf10eb54777e">print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a351314bfb5d5cfeaac8ffaea06ca6e8c">print_int</a>(<span class="keyword">const</span> uint32_t number);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a351314bfb5d5cfeaac8ffaea06ca6e8c">print_int</a>(<span class="keyword">const</span> uint32_t number);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a0955e0c88609d4769ade150a1834b22a">println</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a0955e0c88609d4769ade150a1834b22a">println</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a5ec3fe142f65005eea1c8400632aae78">println_int</a>(<span class="keyword">const</span> uint32_t number);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a5ec3fe142f65005eea1c8400632aae78">println_int</a>(<span class="keyword">const</span> uint32_t number);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a334f851ea1e7bad8e04d74dbb5e6ed44">print_styled</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>, <span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a02a20f9ab0165b4cbac365bb9e9aa823">println_styled</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>, <span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a2b33af16d6bf86c3623a6ed14f4115f2">printStyle</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d5/d77/print_8h.html#a19741d882755474a378c3580ffa0cf86">   70</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a19741d882755474a378c3580ffa0cf86">print_hardFault</a>();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span><span class="comment">// PRINT_H</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a334f851ea1e7bad8e04d74dbb5e6ed44">print_styled</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>, <span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a02a20f9ab0165b4cbac365bb9e9aa823">println_styled</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">string</span>, <span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a2b33af16d6bf86c3623a6ed14f4115f2">printStyle</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> *style);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d5/d77/print_8h.html#a19741d882755474a378c3580ffa0cf86">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d77/print_8h.html#a19741d882755474a378c3580ffa0cf86">print_hardFault</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span><span class="comment">// PRINT_H</span></div>
 <div class="ttc" id="aprint_8h_html_a02a20f9ab0165b4cbac365bb9e9aa823"><div class="ttname"><a href="../../d5/d77/print_8h.html#a02a20f9ab0165b4cbac365bb9e9aa823">println_styled</a></div><div class="ttdeci">void println_styled(const char *string, const Style *style)</div><div class="ttdoc">Prints the given string with a predefined style and a new line character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00065">print.c:65</a></div></div>
 <div class="ttc" id="aprint_8h_html_a0955e0c88609d4769ade150a1834b22a"><div class="ttname"><a href="../../d5/d77/print_8h.html#a0955e0c88609d4769ade150a1834b22a">println</a></div><div class="ttdeci">void println(const char *string)</div><div class="ttdoc">Prints the given string with a new line character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00046">print.c:46</a></div></div>
 <div class="ttc" id="aprint_8h_html_a19741d882755474a378c3580ffa0cf86"><div class="ttname"><a href="../../d5/d77/print_8h.html#a19741d882755474a378c3580ffa0cf86">print_hardFault</a></div><div class="ttdeci">void print_hardFault()</div></div>
@@ -139,15 +139,15 @@ $(function(){initNavTree('d5/d77/print_8h_source.html','../../'); initResizable(
 <div class="ttc" id="aprint_8h_html_a5ec3fe142f65005eea1c8400632aae78"><div class="ttname"><a href="../../d5/d77/print_8h.html#a5ec3fe142f65005eea1c8400632aae78">println_int</a></div><div class="ttdeci">void println_int(const uint32_t number)</div><div class="ttdoc">Prints the given integer with a new line character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00052">print.c:52</a></div></div>
 <div class="ttc" id="aprint_8h_html_aa1dd7679332aa803a3febb63dc5dd825"><div class="ttname"><a href="../../d5/d77/print_8h.html#aa1dd7679332aa803a3febb63dc5dd825">print_clearConsole</a></div><div class="ttdeci">void print_clearConsole()</div><div class="ttdoc">Clear the whole terminal.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00025">print.c:25</a></div></div>
 <div class="ttc" id="aprint_8h_html_ae2dd7886efd463e815dadf10eb54777e"><div class="ttname"><a href="../../d5/d77/print_8h.html#ae2dd7886efd463e815dadf10eb54777e">print</a></div><div class="ttdeci">void print(const char *string)</div><div class="ttdoc">Prints the given string.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00030">print.c:30</a></div></div>
-<div class="ttc" id="astructStyle_html"><div class="ttname"><a href="../../de/df7/structStyle.html">Style</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d12/style_8h_source.html#l00020">style.h:21</a></div></div>
-<div class="ttc" id="astyle_8h_html"><div class="ttname"><a href="../../de/d12/style_8h.html">style.h</a></div></div>
+<div class="ttc" id="astructStyle_html"><div class="ttname"><a href="../../de/df7/structStyle.html">Style</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d12/style_8h_source.html#l00014">style.h:15</a></div></div>
+<div class="ttc" id="astyle_8h_html"><div class="ttname"><a href="../../de/d12/style_8h.html">style.h</a></div><div class="ttdoc">Contains several constants to simplify the styling of output.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_125447c92e2d7c7fbb49f13fdd370274.html">presentation</a></li><li class="navelem"><a class="el" href="../../d5/d77/print_8h.html">print.h</a></li>
-    <li class="footer">Generated on Tue Mar 4 2025 13:27:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

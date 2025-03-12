@@ -3,31 +3,31 @@
 \mbox{\hyperlink{time_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{time_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ TIME\_H}}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ TIME\_H}}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00023}\mbox{\hyperlink{structGameTimer}{00023}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00025}\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}};}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00026}\mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{ticks\_total}};}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00027}\mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{ticks\_turn}};}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00028}00028\ \}\ \mbox{\hyperlink{structGameTimer}{GameTimer}};}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00030}00030\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structGameTimer}{GameTimer}}\ \mbox{\hyperlink{time_8h_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}};}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00035}00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_a04352ea8ee003992baa1d4e993b50dae}{time\_init}}();}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa}{time\_onInterrupt}}();}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00045}00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_a90e96cefd66715b9740be8f0dbab0042}{time\_finishTurn}}(\mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}});}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ TIME\_H}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ TIME\_H}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00020}\mbox{\hyperlink{structGameTimer}{00020}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00022}\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}};}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00023}\mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{ticks\_total}};}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00024}\mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{ticks\_turn}};}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00025}00025\ \}\ \mbox{\hyperlink{structGameTimer}{GameTimer}};}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00027}00027\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structGameTimer}{GameTimer}}\ \mbox{\hyperlink{time_8h_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}};}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00032}00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_a04352ea8ee003992baa1d4e993b50dae}{time\_init}}();}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_ac55568b0a64c8b18a2d2ffc7d50eacaa}{time\_onInterrupt}}();}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_a90e96cefd66715b9740be8f0dbab0042}{time\_finishTurn}}(\mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}});}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00043}00043\ }
 \DoxyCodeLine{\Hypertarget{time_8h_source_l00047}00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_a5ad5fe91a14f332c6acc40870c980fae}{time\_pause}}();}
 \DoxyCodeLine{\Hypertarget{time_8h_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00049}00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{time_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ TIME\_H}}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00052}00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{time_8h_aa626af1fe4486ff2f05529894b807e5a}{time\_resume}}();}
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{time_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ TIME\_H}}
 
 \end{DoxyCode}

@@ -1,8 +1,9 @@
-.TH "hal/random.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/random.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/random.h
+hal/random.h \- Contains RNG constants and abstraction functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -70,20 +71,9 @@ hal/random.h
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains RNG constants and abstraction functions\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -98,55 +88,55 @@ Definition in file \fBrandom\&.h\fP\&.
 .SS "#define RNG_BASE_ADDRESS   0x4000D000"
 
 .PP
-Definition at line \fB23\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB17\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_CONFIG   0x504"
 
 .PP
-Definition at line \fB39\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB33\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_EVENT_CLEAR   0"
 
 .PP
-Definition at line \fB45\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB39\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_EVENT_TRIGGER   1"
 
 .PP
-Definition at line \fB44\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB38\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_INTEN   0x300"
 
 .PP
-Definition at line \fB36\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB30\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_INTENCLR   0x308"
 
 .PP
-Definition at line \fB38\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB32\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_INTENSET   0x304"
 
 .PP
-Definition at line \fB37\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB31\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_SHORTS   0x200"
 
 .PP
-Definition at line \fB35\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB29\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_START   0x000"
 
 .PP
-Definition at line \fB27\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB21\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_STOP   0x004"
 
 .PP
-Definition at line \fB28\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB22\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_TASK_START   1"
 
 .PP
-Definition at line \fB43\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB37\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_VALRDY       0x100"
 
 .PP
-Definition at line \fB31\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB25\fP of file \fBrandom\&.h\fP\&.
 .SS "#define RNG_VALUE   0x508"
 
 .PP
-Definition at line \fB40\fP of file \fBrandom\&.h\fP\&.
+Definition at line \fB34\fP of file \fBrandom\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "uint8_t rng_getRandomValue_immediately (void )"

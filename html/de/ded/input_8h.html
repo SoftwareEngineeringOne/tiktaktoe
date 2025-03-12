@@ -104,6 +104,9 @@ $(function(){initNavTree('de/ded/input_8h.html','../../'); initResizable(true); 
   <div class="headertitle"><div class="title">input.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains the input handling of the game.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d4/da4/def_8h_source.html">def.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/dd5/game_8h_source.html">logic/game.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -111,20 +114,20 @@ Include dependency graph for input.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d9b/input_8h__incl.png" border="0" usemap="#alogic_2input_8h" alt=""/></div>
 <map name="alogic_2input_8h" id="alogic_2input_8h">
-<area shape="rect" title=" " alt="" coords="18,5,108,31"/>
-<area shape="rect" href="../../d4/da4/def_8h.html" title=" " alt="" coords="5,234,55,260"/>
+<area shape="rect" title="Contains the input handling of the game." alt="" coords="18,5,108,31"/>
+<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="5,234,55,260"/>
 <area shape="poly" title=" " alt="" coords="64,32,37,219,31,218,59,31"/>
-<area shape="rect" href="../../d2/dd5/game_8h.html" title=" " alt="" coords="107,79,201,105"/>
+<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="107,79,201,105"/>
 <area shape="poly" title=" " alt="" coords="80,29,129,67,125,72,77,34"/>
-<area shape="rect" href="../../d5/d5a/field_8h.html" title=" " alt="" coords="237,153,367,178"/>
+<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="237,153,367,178"/>
 <area shape="poly" title=" " alt="" coords="180,103,264,143,262,148,178,108"/>
-<area shape="rect" href="../../db/db3/input__buf_8h.html" title=" " alt="" coords="56,153,161,178"/>
+<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="56,153,161,178"/>
 <area shape="poly" title=" " alt="" coords="149,106,127,141,122,138,144,103"/>
 <area shape="rect" title=" " alt="" coords="84,234,147,260"/>
 <area shape="poly" title=" " alt="" coords="164,104,177,138,180,159,177,179,162,204,144,225,140,222,158,201,171,177,175,159,172,139,159,106"/>
-<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="269,234,335,260"/>
+<area shape="rect" href="../../db/d16/config_8h.html" title="Contains important compile&#45;time options." alt="" coords="269,234,335,260"/>
 <area shape="poly" title=" " alt="" coords="305,179,305,218,299,218,299,179"/>
-<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title=" " alt="" coords="359,226,482,267"/>
+<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="359,226,482,267"/>
 <area shape="poly" title=" " alt="" coords="321,177,380,215,377,220,319,181"/>
 <area shape="rect" title=" " alt="" coords="178,234,245,260"/>
 <area shape="poly" title=" " alt="" coords="290,181,238,226,235,222,286,177"/>
@@ -137,7 +140,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d01/input_8h__dep__incl.png" border="0" usemap="#alogic_2input_8hdep" alt=""/></div>
 <map name="alogic_2input_8hdep" id="alogic_2input_8hdep">
-<area shape="rect" title=" " alt="" coords="65,5,155,31"/>
+<area shape="rect" title="Contains the input handling of the game." alt="" coords="65,5,155,31"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="5,79,100,105"/>
 <area shape="poly" title=" " alt="" coords="93,45,64,80,60,77,89,41"/>
 <area shape="rect" href="../../d1/d06/input_8c.html" title=" " alt="" coords="123,79,214,105"/>
@@ -150,12 +153,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a866c488857b6c0702ef9278c5c83e73e" id="r_a866c488857b6c0702ef9278c5c83e73e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/da4/def_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866c488857b6c0702ef9278c5c83e73e">input_handleByte</a> (uint8_t *byte, <a class="el" href="../../d2/d3d/structGameState.html">GameState</a> *<a class="el" href="../../d1/dcb/game_8c.html#ab8c8a2816ae974e5a2df22ec1e87fa51">game_state</a>, <a class="el" href="../../de/d19/structCellState.html">CellState</a> *<a class="el" href="../../d1/dcb/game_8c.html#a6d775e66faffca9c94176dacd93a7e26">cell_state</a>)</td></tr>
+<tr class="memdesc:a866c488857b6c0702ef9278c5c83e73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a input byte with current states.  <br /></td></tr>
 <tr class="separator:a866c488857b6c0702ef9278c5c83e73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section see"><dt>See also</dt><dd></dd></dl>
+<div class="textblock"><p>Contains the input handling of the game. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../de/ded/input_8h_source.html">input.h</a>.</p>
@@ -184,15 +186,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handle a input byte with current states. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td></td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">game_state</td><td></td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cell_state</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True in case a field redraw is needed</dd></dl>
+<p>Decides what to do on the given input and change the given states </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d1/d06/input_8c_source.html#l00038">38</a> of file <a class="el" href="../../d1/d06/input_8c_source.html">input.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/dcc/cell_8c_source.html#l00217">cell_decreaseSize()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00207">cell_increaseSize()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00068">handleEscapeSequence()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00179">handlePauseResume()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00114">handleSetMark()</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00025">GameTimer::is_running</a>, and <a class="el" href="../../d1/d06/input_8c_source.html#l00165">openControls()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/dcc/cell_8c_source.html#l00217">cell_decreaseSize()</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00207">cell_increaseSize()</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00041">cell_state</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00024">g_timer</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">game_state</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00068">handleEscapeSequence()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00179">handlePauseResume()</a>, <a class="el" href="../../d1/d06/input_8c_source.html#l00114">handleSetMark()</a>, <a class="el" href="../../de/df7/time_8h_source.html#l00022">GameTimer::is_running</a>, and <a class="el" href="../../d1/d06/input_8c_source.html#l00165">openControls()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_cgraph.png" border="0" usemap="#ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_cgraph" alt=""/></div>
 <map name="ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_cgraph" id="ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,377,126,402"/>
+<area shape="rect" title="Handle a input byte with current states." alt="" coords="5,377,126,402"/>
 <area shape="rect" href="../../db/dcc/cell_8c.html#ac37a7db30665215c6cafea5b9b0d6788" title="Decreases the field size." alt="" coords="183,226,309,252"/>
 <area shape="poly" title=" " alt="" coords="72,375,111,320,139,288,172,261,179,256,182,261,175,265,143,292,115,323,77,378"/>
 <area shape="rect" href="../../db/dcc/cell_8c.html#ab9e31dcd2aaecf6c26bba4fc29a2e882" title="Increases the field size." alt="" coords="185,275,307,301"/>
@@ -211,9 +225,9 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="925,740,1011,740,1011,745,925,745"/>
 <area shape="rect" href="../../db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the whole field." alt="" coords="607,374,710,400"/>
 <area shape="poly" title=" " alt="" coords="318,407,592,388,592,394,319,412"/>
-<area shape="rect" href="../../df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="402,427,490,453"/>
+<area shape="rect" href="../../df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="402,427,490,453"/>
 <area shape="poly" title=" " alt="" coords="319,421,387,430,386,435,318,426"/>
-<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="398,477,494,502"/>
+<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="398,477,494,502"/>
 <area shape="poly" title=" " alt="" coords="277,426,367,463,384,469,382,474,365,468,275,431"/>
 <area shape="rect" href="../../db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370" title="Redraw one cell." alt="" coords="1036,325,1119,350"/>
 <area shape="poly" title=" " alt="" coords="710,381,823,372,957,357,1021,346,1022,352,957,363,824,378,710,386"/>
@@ -245,7 +259,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="714,246,815,269,814,275,712,251"/>
 <area shape="rect" href="../../db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="832,322,916,348"/>
 <area shape="poly" title=" " alt="" coords="681,247,731,277,792,308,819,318,817,323,790,313,728,282,679,252"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="820,86,928,112"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="820,86,928,112"/>
 <area shape="poly" title=" " alt="" coords="673,221,723,180,789,134,823,116,826,121,792,138,726,184,676,225"/>
 <area shape="rect" href="../../dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="822,223,926,249"/>
 <area shape="poly" title=" " alt="" coords="713,233,806,233,806,239,713,239"/>
@@ -307,7 +321,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_icgraph.png" border="0" usemap="#ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_icgraph" alt=""/></div>
 <map name="ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_icgraph" id="ade/ded/input_8h_a866c488857b6c0702ef9278c5c83e73e_icgraph">
-<area shape="rect" title=" " alt="" coords="428,5,549,31"/>
+<area shape="rect" title="Handle a input byte with current states." alt="" coords="428,5,549,31"/>
 <area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
 <area shape="poly" title=" " alt="" coords="413,21,381,21,381,16,413,16"/>
 <area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
@@ -325,7 +339,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_701344d99a520edc46b3f16735b55bde.html">logic</a></li><li class="navelem"><a class="el" href="../../de/ded/input_8h.html">input.h</a></li>
-    <li class="footer">Generated on Tue Mar 4 2025 13:27:31 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Wed Mar 12 2025 11:27:55 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

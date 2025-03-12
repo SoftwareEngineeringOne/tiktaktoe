@@ -1,5 +1,5 @@
 <map id="presentation/menu.h" name="presentation/menu.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="198,5,336,31"/>
+<area shape="rect" id="Node000001" title="Contains functions for presentation of the menu." alt="" coords="198,5,336,31"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title=" " alt="" coords="5,79,100,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,39,90,81,88,76,216,34"/>
 <area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title=" " alt="" coords="123,79,214,105"/>

@@ -1,5 +1,5 @@
 <map id="GameTimer" name="GameTimer">
-<area shape="rect" id="Node000001" title=" " alt="" coords="30,109,119,135"/>
+<area shape="rect" id="Node000001" title="Time information of the current game." alt="" coords="30,109,119,135"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,51,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="26,46,27,66,32,84,42,96,54,106,51,111,38,100,28,86,22,66,21,47"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="88,5,155,31"/>

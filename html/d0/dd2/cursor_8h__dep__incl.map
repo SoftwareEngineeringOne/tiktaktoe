@@ -1,5 +1,5 @@
 <map id="presentation/cursor.h" name="presentation/cursor.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="316,5,458,31"/>
+<area shape="rect" id="Node000001" title="Contains function for moving the presentation of the cursor." alt="" coords="316,5,458,31"/>
 <area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html" title=" " alt="" coords="5,79,132,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,38,123,81,122,76,317,32"/>
 <area shape="rect" id="Node000003" href="$dd/dfa/cursor_8c.html" title=" " alt="" coords="156,79,298,105"/>

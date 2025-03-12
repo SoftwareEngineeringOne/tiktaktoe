@@ -1,5 +1,5 @@
 <map id="game_endTurn" name="game_endTurn">
-<area shape="rect" id="Node000001" title=" " alt="" coords="819,31,926,56"/>
+<area shape="rect" id="Node000001" title="Finish the current turn." alt="" coords="819,31,926,56"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatic turn in case the round time is over." alt="" coords="647,5,771,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="803,36,771,30,772,25,804,30"/>
 <area shape="rect" id="Node000005" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="655,55,763,80"/>
@@ -8,7 +8,7 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="631,21,596,21,596,16,631,16"/>
 <area shape="rect" id="Node000004" href="$d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737" title="Timer interrupt handler." alt="" coords="302,5,430,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="465,21,430,21,430,16,465,16"/>
-<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="478,55,599,80"/>
+<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="478,55,599,80"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="639,70,599,70,599,65,639,65"/>
 <area shape="rect" id="Node000007" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,55,405,80"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="463,70,406,70,406,65,463,65"/>

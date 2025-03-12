@@ -15,9 +15,9 @@ Include dependency graph for system.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\+\_\+soft\+Reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Call the soft reset of the system. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\+\_\+off\+Mode}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Call the shutdown of the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -29,11 +29,15 @@ void system\+\_\+off\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
+Call the shutdown of the system. 
+
+
+
 Definition at line \mbox{\hyperlink{system_8c_source_l00015}{15}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00008}{SYS\+\_\+\+POWER}}, and \mbox{\hyperlink{system_8h_source_l00009}{SYS\+\_\+\+SYSTEMOFF}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00018}{SYS\+\_\+\+POWER}}, and \mbox{\hyperlink{system_8h_source_l00019}{SYS\+\_\+\+SYSTEMOFF}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -59,11 +63,15 @@ void system\+\_\+soft\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
+Call the soft reset of the system. 
+
+
+
 Definition at line \mbox{\hyperlink{system_8c_source_l00006}{6}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00004}{SYS\+\_\+\+AIRCR}}, \mbox{\hyperlink{system_8h_source_l00006}{SYS\+\_\+\+SYSRESETREQ}}, and \mbox{\hyperlink{system_8h_source_l00005}{SYS\+\_\+\+VECTKEY}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00014}{SYS\+\_\+\+AIRCR}}, \mbox{\hyperlink{system_8h_source_l00016}{SYS\+\_\+\+SYSRESETREQ}}, and \mbox{\hyperlink{system_8h_source_l00015}{SYS\+\_\+\+VECTKEY}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

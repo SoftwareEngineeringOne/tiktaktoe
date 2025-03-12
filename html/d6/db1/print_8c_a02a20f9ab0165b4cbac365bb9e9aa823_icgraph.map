@@ -23,7 +23,7 @@
 <area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="648,296,746,322"/>
 <area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="826,345,745,324,747,319,827,340"/>
 <area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="149,238,45,147,48,143,152,234"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="456,296,577,322"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="456,296,577,322"/>
 <area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="633,312,577,312,577,307,633,307"/>
 <area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="316,170,394,196"/>
 <area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="485,289,371,198,375,194,488,285"/>

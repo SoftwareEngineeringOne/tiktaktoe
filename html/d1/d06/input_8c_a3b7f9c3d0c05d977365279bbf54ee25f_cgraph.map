@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,511,103,536"/>
 <area shape="rect" id="Node000002" href="$d2/d0a/menu_8c.html#a23ef48917f29c7ba37351342e66a636f" title=" " alt="" coords="151,333,290,359"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,508,194,369,198,373,70,512"/>
-<area shape="rect" id="Node000018" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="176,511,264,536"/>
+<area shape="rect" id="Node000018" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="176,511,264,536"/>
 <area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="103,521,161,521,161,526,103,526"/>
-<area shape="rect" id="Node000020" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="172,560,268,586"/>
+<area shape="rect" id="Node000020" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="172,560,268,586"/>
 <area shape="poly" id="edge30_Node000001_Node000020" title=" " alt="" coords="101,534,160,552,159,558,99,540"/>
 <area shape="rect" id="Node000003" href="$d2/d0a/menu_8c.html#aa8ce93493c2adb2ce4240b95e852793c" title=" " alt="" coords="338,156,506,182"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,332,268,269,300,232,336,199,358,186,361,190,340,203,303,235,272,272,231,334"/>

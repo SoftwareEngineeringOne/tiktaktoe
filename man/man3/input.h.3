@@ -1,8 +1,9 @@
-.TH "logic/input.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/input.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/input.h
+logic/input.h \- Contains the input handling of the game\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -17,23 +18,13 @@ logic/input.h
 .ti -1c
 .RI "\fBbool\fP \fBinput_handleByte\fP (uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
 .br
+.RI "Handle a input byte with current states\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains the input handling of the game\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -47,6 +38,24 @@ Definition in file \fBinput\&.h\fP\&.
 .PP 
 .SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
 
+.PP
+Handle a input byte with current states\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbyte\fP 
+.br
+\fIgame_state\fP 
+.br
+\fIcell_state\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True in case a field redraw is needed
+.RE
+.PP
+Decides what to do on the given input and change the given states 
 .PP
 Definition at line \fB38\fP of file \fBinput\&.c\fP\&.
 .PP

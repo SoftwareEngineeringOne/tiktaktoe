@@ -13,7 +13,7 @@
 <area shape="rect" id="Node000004" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,101,55,126"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,116,55,116,55,111,87,111"/>
 <area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="454,83,381,105,380,100,453,78"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="650,101,770,126"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="650,101,770,126"/>
 <area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="803,116,770,116,770,111,803,111"/>
 <area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="634,116,381,116,381,111,634,111"/>
 <area shape="rect" id="Node000009" href="$d1/dcb/game_8c.html#a4938becaec0f17690ab3a575fcb0bd4a" title="Refreshes the whole UI." alt="" coords="666,151,754,177"/>

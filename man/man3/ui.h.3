@@ -1,8 +1,9 @@
-.TH "presentation/ui.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/ui.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-presentation/ui.h
+presentation/ui.h \- Contains different functions for the presentation of the in-game user interface (everything besides the actual game field)  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -65,20 +66,9 @@ presentation/ui.h
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains different functions for the presentation of the in-game user interface (everything besides the actual game field) 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -93,23 +83,23 @@ Definition in file \fBui\&.h\fP\&.
 .SS "#define EMPTY_PROGRESS_ELEMENT   ''"
 
 .PP
-Definition at line \fB36\fP of file \fBui\&.h\fP\&.
+Definition at line \fB31\fP of file \fBui\&.h\fP\&.
 .SS "#define FULL_PROGRESS_ELEMENT   '\-'"
 
 .PP
-Definition at line \fB34\fP of file \fBui\&.h\fP\&.
+Definition at line \fB29\fP of file \fBui\&.h\fP\&.
 .SS "#define HALF_PROGRESS_ELEMENT   '_'"
 
 .PP
-Definition at line \fB35\fP of file \fBui\&.h\fP\&.
+Definition at line \fB30\fP of file \fBui\&.h\fP\&.
 .SS "#define TIMER_ROW   \fBFIELD_HEIGHT\fP + (\fBFIELD_HEIGHT\fP % 2) \- 1 + \fBHEADING_LINES\fP"
 
 .PP
-Definition at line \fB26\fP of file \fBui\&.h\fP\&.
+Definition at line \fB21\fP of file \fBui\&.h\fP\&.
 .SS "#define TURN_ROW   1 + \fBHEADING_LINES\fP"
 
 .PP
-Definition at line \fB25\fP of file \fBui\&.h\fP\&.
+Definition at line \fB20\fP of file \fBui\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void ui_displayTimer (uint16_t remaining_time, uint16_t total_time)"

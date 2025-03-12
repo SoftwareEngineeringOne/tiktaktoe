@@ -1,5 +1,5 @@
 <map id="CellState" name="CellState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="44,243,119,268"/>
+<area shape="rect" id="Node000001" title="The current state of the cells." alt="" coords="44,243,119,268"/>
 <area shape="rect" id="Node000002" href="$df/df1/structCell.html" title="One cell on the field." alt="" coords="60,109,103,135"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,150,84,242,79,242,79,150"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,5,73,31"/>

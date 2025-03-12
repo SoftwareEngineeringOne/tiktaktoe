@@ -6,7 +6,7 @@
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="83,295,161,257,185,248,187,253,163,261,85,300"/>
 <area shape="rect" id="Node000015" href="$db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="203,272,286,297"/>
 <area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="114,301,187,290,188,295,115,306"/>
-<area shape="rect" id="Node000016" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="191,397,298,422"/>
+<area shape="rect" id="Node000016" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="191,397,298,422"/>
 <area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="87,322,207,387,204,391,84,327"/>
 <area shape="rect" id="Node000018" href="$dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="193,322,296,348"/>
 <area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="115,315,178,324,178,329,114,321"/>

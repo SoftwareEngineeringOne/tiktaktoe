@@ -32,7 +32,7 @@
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="856,369,777,376,777,370,856,363"/>
 <area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,143,55,169"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="144,238,49,171,52,167,147,233"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title=" " alt="" coords="450,852,570,878"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="450,852,570,878"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="720,406,642,638,631,682,624,717,614,751,594,791,564,827,532,854,528,850,560,823,589,788,609,749,619,715,626,680,637,637,715,404"/>
 <area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,700,380,726"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="447,848,427,835,399,809,376,779,347,728,351,725,381,776,403,806,430,831,450,843"/>

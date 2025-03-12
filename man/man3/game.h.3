@@ -1,8 +1,9 @@
-.TH "logic/game.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/game.h
+logic/game.h \- Contains the game logic\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -23,9 +24,11 @@ logic/game.h
 .ti -1c
 .RI "struct \fBGameState\fP"
 .br
+.RI "The current game state\&. "
 .ti -1c
 .RI "struct \fBCellState\fP"
 .br
+.RI "The current state of the cells\&. "
 .in -1c
 .SS "Macros"
 
@@ -61,23 +64,13 @@ logic/game.h
 .ti -1c
 .RI "void \fBgame_endTurn\fP ()"
 .br
+.RI "Finish the current turn\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains the game logic\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -92,11 +85,11 @@ Definition in file \fBgame\&.h\fP\&.
 .SS "#define FIRST_ROUND   1"
 
 .PP
-Definition at line \fB26\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB20\fP of file \fBgame\&.h\fP\&.
 .SS "#define REMAINING_TIME   (\fBTICKS_PER_TURN\fP \- g_timer\&.ticks_turn)"
 
 .PP
-Definition at line \fB25\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB19\fP of file \fBgame\&.h\fP\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBMode\fP"
@@ -109,7 +102,7 @@ Definition at line \fB25\fP of file \fBgame\&.h\fP\&.
 .TP
 \f(BIPVP \fP
 .PP
-Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB22\fP of file \fBgame\&.h\fP\&.
 .SS "enum \fBPlayer\fP"
 
 .PP
@@ -122,11 +115,13 @@ Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
 .TP
 \f(BINone \fP
 .PP
-Definition at line \fB34\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void game_endTurn ()"
 
+.PP
+Finish the current turn\&. 
 .PP
 Definition at line \fB151\fP of file \fBgame\&.c\fP\&.
 .PP

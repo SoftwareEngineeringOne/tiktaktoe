@@ -1,5 +1,5 @@
 <map id="input_handleByte" name="input_handleByte">
-<area shape="rect" id="Node000001" title=" " alt="" coords="428,5,549,31"/>
+<area shape="rect" id="Node000001" title="Handle a input byte with current states." alt="" coords="428,5,549,31"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,21,381,21,381,16,413,16"/>
 <area shape="rect" id="Node000003" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>

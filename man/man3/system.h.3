@@ -1,8 +1,9 @@
-.TH "hal/system.h" 3 "Tue Mar 4 2025 13:27:31" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/system.h" 3 "Wed Mar 12 2025 11:27:55" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/system.h
+hal/system.h \- Contains system calls to change the system status\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -31,42 +32,62 @@ hal/system.h
 .ti -1c
 .RI "void \fBsystem_softReset\fP ()"
 .br
+.RI "Call the soft reset of the system\&. "
 .ti -1c
 .RI "void \fBsystem_offMode\fP ()"
 .br
+.RI "Call the shutdown of the system\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Contains system calls to change the system status\&. 
+
+
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBsystem\&.h\fP\&.
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define SYS_AIRCR   0xE000ED0C"
 
 .PP
-Definition at line \fB4\fP of file \fBsystem\&.h\fP\&.
+Definition at line \fB14\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_POWER   0x40000000"
 
 .PP
-Definition at line \fB8\fP of file \fBsystem\&.h\fP\&.
+Definition at line \fB18\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_SYSRESETREQ   (1 << 2)"
 
 .PP
-Definition at line \fB6\fP of file \fBsystem\&.h\fP\&.
+Definition at line \fB16\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_SYSTEMOFF   0x500"
 
 .PP
-Definition at line \fB9\fP of file \fBsystem\&.h\fP\&.
+Definition at line \fB19\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_VECTKEY   (0x5FA << 16)"
 
 .PP
-Definition at line \fB5\fP of file \fBsystem\&.h\fP\&.
+Definition at line \fB15\fP of file \fBsystem\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void system_offMode ()"
 
+.PP
+Call the shutdown of the system\&. 
 .PP
 Definition at line \fB15\fP of file \fBsystem\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBSYS_POWER\fP, and \fBSYS_SYSTEMOFF\fP\&.
 .SS "void system_softReset ()"
 
+.PP
+Call the soft reset of the system\&. 
 .PP
 Definition at line \fB6\fP of file \fBsystem\&.c\fP\&.
 .PP

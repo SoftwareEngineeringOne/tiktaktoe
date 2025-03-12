@@ -1,8 +1,8 @@
 <map id="util/math.h" name="util/math.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="69,5,150,31"/>
+<area shape="rect" id="Node000001" title="Contains several different simple and independent math functions." alt="" coords="69,5,150,31"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title=" " alt="" coords="5,153,100,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,46,60,153,55,151,97,44"/>
-<area shape="rect" id="Node000003" href="$d7/df5/winning_8h.html" title=" " alt="" coords="109,79,215,105"/>
+<area shape="rect" id="Node000003" href="$d7/df5/winning_8h.html" title="Contains the function for checking if someone has won." alt="" coords="109,79,215,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,42,155,77,151,80,125,45"/>
 <area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="132,115,73,154,70,150,129,111"/>
 <area shape="rect" id="Node000004" href="$d1/d06/input_8c.html" title=" " alt="" coords="123,153,214,178"/>

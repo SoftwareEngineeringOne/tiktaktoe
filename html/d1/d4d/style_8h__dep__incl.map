@@ -1,5 +1,5 @@
 <map id="presentation/style.h" name="presentation/style.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="467,5,600,31"/>
+<area shape="rect" id="Node000001" title="Contains several constants to simplify the styling of output." alt="" coords="467,5,600,31"/>
 <area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title=" " alt="" coords="5,153,100,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,38,316,82,89,155,87,150,314,76,471,33"/>
 <area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title=" " alt="" coords="777,79,867,105"/>
@@ -12,7 +12,7 @@
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="518,45,438,154,434,151,514,42"/>
 <area shape="rect" id="Node000007" href="$d6/db1/print_8c.html" title=" " alt="" coords="520,153,652,178"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="519,45,508,74,507,89,511,104,521,118,533,131,561,150,558,154,530,135,516,121,506,106,502,90,503,73,514,44"/>
-<area shape="rect" id="Node000008" href="$d5/d77/print_8h.html" title=" " alt="" coords="520,79,652,105"/>
+<area shape="rect" id="Node000008" href="$d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="520,79,652,105"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="553,42,579,77,575,80,549,45"/>
 <area shape="rect" id="Node000011" href="$dc/d78/ui_8c.html" title=" " alt="" coords="1125,153,1241,178"/>
 <area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="575,35,721,102,829,126,916,135,1003,139,1114,150,1125,152,1124,157,1114,155,1002,144,915,140,829,131,720,107,573,40"/>

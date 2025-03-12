@@ -1,39 +1,39 @@
 <map id="presentation/ui.c" name="presentation/ui.c">
 <area shape="rect" id="Node000001" title=" " alt="" coords="585,5,701,31"/>
-<area shape="rect" id="Node000002" href="$d9/d3b/ui_8h.html" title=" " alt="" coords="380,79,496,105"/>
+<area shape="rect" id="Node000002" href="$d9/d3b/ui_8h.html" title="Contains different functions for the presentation of the in&#45;game user interface (everything besides t..." alt="" coords="380,79,496,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="609,34,488,76,486,71,607,29"/>
-<area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title=" " alt="" coords="5,374,129,414"/>
+<area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="5,374,129,414"/>
 <area shape="poly" id="edge23_Node000001_Node000006" title=" " alt="" coords="585,24,434,33,344,42,252,55,168,73,99,98,73,112,53,128,41,145,36,164,36,240,43,303,58,358,53,360,38,304,31,241,31,164,36,143,49,124,70,107,97,93,167,68,251,50,343,36,434,27,584,18"/>
-<area shape="rect" id="Node000012" href="$d2/d86/uart_8h.html" title=" " alt="" coords="275,300,350,326"/>
+<area shape="rect" id="Node000012" href="$d2/d86/uart_8h.html" title="Contains UART constants and abstraction functions." alt="" coords="275,300,350,326"/>
 <area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="585,23,535,28,479,38,422,55,368,81,348,96,334,111,324,129,315,153,307,188,305,223,310,284,305,285,300,223,302,187,310,152,319,127,329,108,344,92,366,77,420,50,478,32,535,22,584,18"/>
-<area shape="rect" id="Node000013" href="$de/df7/time_8h.html" title=" " alt="" coords="653,153,740,178"/>
+<area shape="rect" id="Node000013" href="$de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="653,153,740,178"/>
 <area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="652,30,673,78,692,137,687,139,669,80,647,33"/>
-<area shape="rect" id="Node000014" href="$d8/d08/cursor_8h.html" title=" " alt="" coords="706,226,849,252"/>
+<area shape="rect" id="Node000014" href="$d8/d08/cursor_8h.html" title="Contains function for moving the presentation of the cursor." alt="" coords="706,226,849,252"/>
 <area shape="poly" id="edge24_Node000001_Node000014" title=" " alt="" coords="658,30,705,80,732,114,755,151,767,181,775,210,770,212,762,183,750,154,727,117,701,83,654,33"/>
-<area shape="rect" id="Node000015" href="$d3/d54/menu_8h.html" title=" " alt="" coords="520,79,659,105"/>
+<area shape="rect" id="Node000015" href="$d3/d54/menu_8h.html" title="Contains functions for presentation of the menu." alt="" coords="520,79,659,105"/>
 <area shape="poly" id="edge26_Node000001_Node000015" title=" " alt="" coords="636,33,610,68,606,65,632,30"/>
-<area shape="rect" id="Node000016" href="$d5/d77/print_8h.html" title=" " alt="" coords="820,79,951,105"/>
+<area shape="rect" id="Node000016" href="$d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="820,79,951,105"/>
 <area shape="poly" id="edge28_Node000001_Node000016" title=" " alt="" coords="685,29,831,72,829,77,683,34"/>
-<area shape="rect" id="Node000017" href="$de/d12/style_8h.html" title=" " alt="" coords="923,153,1056,178"/>
+<area shape="rect" id="Node000017" href="$de/d12/style_8h.html" title="Contains several constants to simplify the styling of output." alt="" coords="923,153,1056,178"/>
 <area shape="poly" id="edge31_Node000001_Node000017" title=" " alt="" coords="702,21,772,27,849,38,918,54,945,65,965,77,976,90,983,106,991,137,986,138,978,107,971,93,961,81,943,70,917,60,848,44,771,33,702,26"/>
-<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title=" " alt="" coords="440,226,534,252"/>
+<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="440,226,534,252"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="445,104,464,152,483,211,477,213,459,154,440,106"/>
 <area shape="poly" id="edge11_Node000002_Node000006" title=" " alt="" coords="406,108,345,135,266,177,184,232,146,265,112,302,93,330,80,360,75,358,89,328,108,298,142,262,180,228,263,172,342,130,404,103"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="562,381,625,407"/>
 <area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="452,103,498,154,525,188,548,225,563,261,572,299,590,365,585,366,567,301,558,263,543,228,520,191,494,157,448,107"/>
-<area shape="rect" id="Node000011" href="$d0/ddd/cell_8h.html" title=" " alt="" coords="324,153,450,178"/>
+<area shape="rect" id="Node000011" href="$d0/ddd/cell_8h.html" title="Contains functions for changing the presentation of cells." alt="" coords="324,153,450,178"/>
 <area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="431,106,406,141,402,138,427,103"/>
-<area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title=" " alt="" coords="122,300,252,326"/>
+<area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="122,300,252,326"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,254,254,298,253,293,439,249"/>
-<area shape="rect" id="Node000008" href="$db/db3/input__buf_8h.html" title=" " alt="" coords="425,300,530,326"/>
+<area shape="rect" id="Node000008" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="425,300,530,326"/>
 <area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="488,253,484,285,479,284,483,252"/>
 <area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="502,251,545,298,567,333,584,366,580,368,562,336,541,302,498,254"/>
-<area shape="rect" id="Node000005" href="$db/d16/config_8h.html" title=" " alt="" coords="245,381,310,407"/>
+<area shape="rect" id="Node000005" href="$db/d16/config_8h.html" title="Contains important compile&#45;time options." alt="" coords="245,381,310,407"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,324,254,369,251,373,199,328"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="170,328,111,367,108,363,167,324"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="153,381,221,407"/>
 <area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="190,326,190,365,184,365,184,326"/>
-<area shape="rect" id="Node000009" href="$d4/da4/def_8h.html" title=" " alt="" coords="394,381,444,407"/>
+<area shape="rect" id="Node000009" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="394,381,444,407"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="471,328,439,370,435,367,467,324"/>
 <area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="497,324,565,370,562,374,494,328"/>
 <area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="406,177,459,215,456,219,402,181"/>

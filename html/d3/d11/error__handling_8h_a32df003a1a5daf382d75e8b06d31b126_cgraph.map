@@ -8,7 +8,7 @@
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="288,288,362,225,556,70,559,74,366,229,291,292"/>
 <area shape="rect" id="Node000007" href="$d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a" title="Prints the given string with a new line character." alt="" coords="728,390,784,416"/>
 <area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="288,314,321,343,342,358,365,369,411,384,459,394,555,406,643,408,712,405,712,410,644,413,555,411,458,400,410,389,363,374,340,362,318,348,285,318"/>
-<area shape="rect" id="Node000008" href="$d4/dfd/system_8c.html#a97bacc4493b8a3008bdbdd7a83e86642" title=" " alt="" coords="860,64,986,89"/>
+<area shape="rect" id="Node000008" href="$d4/dfd/system_8c.html#a97bacc4493b8a3008bdbdd7a83e86642" title="Call the soft reset of the system." alt="" coords="860,64,986,89"/>
 <area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="278,289,307,234,359,156,392,116,431,78,474,46,522,22,570,9,620,3,670,4,719,10,809,31,879,55,877,60,807,36,718,15,669,9,620,9,571,14,524,27,477,51,434,82,396,119,363,159,312,236,283,291"/>
 <area shape="rect" id="Node000009" href="$d1/d87/uart_8c.html#a991a6e99e9369a11dcf02bdf1d1ba6ab" title="Read/Receive a byte from the serial Port." alt="" coords="369,441,470,467"/>
 <area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="284,315,317,364,340,393,366,420,380,430,376,435,362,424,336,397,312,367,280,318"/>

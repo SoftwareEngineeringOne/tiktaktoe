@@ -1,5 +1,5 @@
 <map id="input_handleByte" name="input_handleByte">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,377,126,402"/>
+<area shape="rect" id="Node000001" title="Handle a input byte with current states." alt="" coords="5,377,126,402"/>
 <area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html#ac37a7db30665215c6cafea5b9b0d6788" title="Decreases the field size." alt="" coords="183,226,309,252"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,375,111,320,139,288,172,261,179,256,182,261,175,265,143,292,115,323,77,378"/>
 <area shape="rect" id="Node000003" href="$db/dcc/cell_8c.html#ab9e31dcd2aaecf6c26bba4fc29a2e882" title="Increases the field size." alt="" coords="185,275,307,301"/>
@@ -18,9 +18,9 @@
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="925,740,1011,740,1011,745,925,745"/>
 <area shape="rect" id="Node000008" href="$db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the whole field." alt="" coords="607,374,710,400"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="318,407,592,388,592,394,319,412"/>
-<area shape="rect" id="Node000017" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="402,427,490,453"/>
+<area shape="rect" id="Node000017" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="402,427,490,453"/>
 <area shape="poly" id="edge18_Node000007_Node000017" title=" " alt="" coords="319,421,387,430,386,435,318,426"/>
-<area shape="rect" id="Node000019" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="398,477,494,502"/>
+<area shape="rect" id="Node000019" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="398,477,494,502"/>
 <area shape="poly" id="edge21_Node000007_Node000019" title=" " alt="" coords="277,426,367,463,384,469,382,474,365,468,275,431"/>
 <area shape="rect" id="Node000009" href="$db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370" title="Redraw one cell." alt="" coords="1036,325,1119,350"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="710,381,823,372,957,357,1021,346,1022,352,957,363,824,378,710,386"/>
@@ -52,7 +52,7 @@
 <area shape="poly" id="edge31_Node000021_Node000026" title=" " alt="" coords="714,246,815,269,814,275,712,251"/>
 <area shape="rect" id="Node000027" href="$db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="832,322,916,348"/>
 <area shape="poly" id="edge33_Node000021_Node000027" title=" " alt="" coords="681,247,731,277,792,308,819,318,817,323,790,313,728,282,679,252"/>
-<area shape="rect" id="Node000028" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title=" " alt="" coords="820,86,928,112"/>
+<area shape="rect" id="Node000028" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="820,86,928,112"/>
 <area shape="poly" id="edge35_Node000021_Node000028" title=" " alt="" coords="673,221,723,180,789,134,823,116,826,121,792,138,726,184,676,225"/>
 <area shape="rect" id="Node000030" href="$dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="822,223,926,249"/>
 <area shape="poly" id="edge37_Node000021_Node000030" title=" " alt="" coords="713,233,806,233,806,239,713,239"/>

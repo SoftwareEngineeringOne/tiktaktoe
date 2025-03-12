@@ -2,9 +2,9 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,181,150,207"/>
 <area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the whole field." alt="" coords="198,132,300,158"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,178,186,160,188,165,126,183"/>
-<area shape="rect" id="Node000011" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title=" " alt="" coords="205,181,293,207"/>
+<area shape="rect" id="Node000011" href="$df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="205,181,293,207"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="150,192,189,192,189,197,150,197"/>
-<area shape="rect" id="Node000013" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title=" " alt="" coords="201,231,297,256"/>
+<area shape="rect" id="Node000013" href="$df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer after a pause." alt="" coords="201,231,297,256"/>
 <area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="126,205,188,223,186,228,124,210"/>
 <area shape="rect" id="Node000003" href="$db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370" title="Redraw one cell." alt="" coords="348,105,430,131"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,132,332,126,333,131,301,138"/>

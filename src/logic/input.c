@@ -123,24 +123,31 @@ static void handleSetMark(GameState *game_state, CellState *cell_state)
         cell_state->selected->marked_by = Cross;
         cell_state->last_cross = cell_state->selected;
 
-        //TODO! Fix this better its ugly af
-        Cell tmp[20];
-        if(game_state->fields_marked >= 4 && winning_checkForWinner(cell_state, (Cell **)&tmp) != None) {
-            cell_redraw(cell_state->last_circle);
-            goto After;
+
+        // Avoid a bug where the bot unfairly wins, if the player started
+        // and both the player and the bot could win in the same round
+        bool hasWinner = false;
+        if(game_state->fields_marked >= (min(CELLS_PER_COL, CELLS_PER_ROW)))
+        {
+            static Cell winningCells[max(CELLS_PER_COL, CELLS_PER_ROW)];
+            if(winning_checkForWinner(cell_state, (Cell **)&winningCells) != None)
+            {
+                hasWinner = true;
+            }
         }
 
-        if(game_state->fields_marked + 1 < CELLS_PER_ROW * CELLS_PER_COL)
+        if(!hasWinner)
         {
-            cell_state->last_circle = bot_markRandomCell(cell_state->all, Circle);
+            if(game_state->fields_marked + 1 < CELLS_PER_ROW * CELLS_PER_COL)
+            {
+                cell_state->last_circle = bot_markRandomCell(cell_state->all, Circle);
+            }
+            else
+            {
+                game_state->fields_marked--;
+            }
         }
-        else
-        {
-            // to avoid a check in game_endTurn() fields_marked is subtracted
-            // by one, since it's increased by 2 later.
-            game_state->fields_marked--;
-        }
-After:
+
         cell_redraw(cell_state->last_circle);
     }
     else

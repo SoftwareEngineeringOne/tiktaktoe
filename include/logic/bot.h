@@ -1,7 +1,7 @@
 /**
  * @file bot.h
  *
- * @brief Contains function for random cell marking (a "bot player")
+ * @brief Contains function for random cell marking
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -16,8 +16,9 @@
 
 /**
  * @brief Mark some random cell
+ *
  * @param [inout] cells 2D field of cells
- * @param [in] marked_by Player to be marked by
+ * @param [in] marked_by Which player should mark the cell
  *
  * @return Marked cell
  */

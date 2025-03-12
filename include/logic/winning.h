@@ -17,8 +17,8 @@
 /**
  * @brief Checks at the end of the round if someone has won
  *
- * @param [in] cell_state
- * @param [out] winner_cells
+ * @param [in] cell_state Current state of the cells
+ * @param [out] winner_cells If a player won, the relevant cells will be written to this buffer
  *
  * @return The player who won
  */

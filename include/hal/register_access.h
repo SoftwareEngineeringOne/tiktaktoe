@@ -19,18 +19,15 @@
 /**
  * @brief Write Value to Register
  *
- * @param[in] address
- *   Register Address
- * @param[in] value
- *   Register Value
+ * @param[in] address Register Address
+ * @param[in] value Register Value
  **/
 void register_write(uint32_t address, uint32_t value);
 
 /**
  * @brief Read from Register.
  *
- * @param[in] address
- *   Register Address
+ * @param[in] address Register Address
  *
  * @return Register Value
  **/

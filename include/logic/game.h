@@ -19,12 +19,20 @@
 #define REMAINING_TIME (TICKS_PER_TURN - g_timer.ticks_turn)
 #define FIRST_ROUND 1
 
+/**
+ * @brief Possible game modes
+ *
+ * The game can be played in PVE or  PVP mode
+ **/
 typedef enum
 {
-    PVE,
-    PVP,
+    PVE, //!< Player vs Computer
+    PVP, //!< Player vs Player
 } Mode;
 
+/**
+ * @brief Enum describing a player
+ */
 typedef enum
 {
     Circle = 0,
@@ -51,7 +59,7 @@ typedef struct
  */
 typedef struct
 {
-        Player winner;
+        Player winner; //!< None if tie or game not over
         Mode mode;
         volatile uint8_t round;
         volatile uint8_t fields_marked;
@@ -70,25 +78,25 @@ typedef struct
 
 /**
  * @brief The current state of the cells
- *
- * Contains all cells and the current important ones extra
  */
 typedef struct
 {
-        Cell all[CELLS_PER_COL][CELLS_PER_ROW];
-        Cell *selected;
-        Cell *last_cross;
-        Cell *last_circle;
+        Cell all[CELLS_PER_COL][CELLS_PER_ROW]; //!< All cells of the match
+        Cell *selected; //!< Pointer to the currently selected cell
+        Cell *last_cross; //!< Pointer to the cell last marked by cross
+        Cell *last_circle; //!< Pointer to the last cell marked by circle
 } CellState;
 
 
 /**
  * @brief Start the main game
+ *
+ * @param[in] mode Which mode the game should be played in.
  */
 void game_run(const Mode mode);
 
 /**
- * @brief Automatic turn in case the round time is over
+ * @brief Automaticly end a turn in case the turn time is over
  */
 void game_onTimeOut();
 

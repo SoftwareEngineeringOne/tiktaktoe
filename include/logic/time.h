@@ -24,7 +24,7 @@ typedef struct
         volatile uint32_t ticks_turn;
 } GameTimer;
 
-extern GameTimer g_timer;
+extern GameTimer g_timer; //!< Global instance of the GameTimer
 
 /**
  * @brief Initializes the timer
@@ -38,6 +38,8 @@ void time_onInterrupt();
 
 /**
  * @brief Resets the ticks
+ *
+ * @param[inout] game_state Current state of the game
  */
 void time_finishTurn(GameState *game_state);
 
@@ -47,7 +49,7 @@ void time_finishTurn(GameState *game_state);
 void time_pause();
 
 /**
- * @brief Resume the timer after a pause
+ * @brief Resume the timer when paused
  */
 void time_resume();
 

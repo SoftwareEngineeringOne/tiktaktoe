@@ -1,7 +1,7 @@
 /**
  * @file random.h
  *
- * @brief Contains RNG constants and abstraction functions
+ * @brief Contains constants and abstraction functions for the RNG device
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -46,16 +46,16 @@ void rng_init(void);
 /**
  * @brief Get the Random Value from the generator immediately.
  *
- * The function is **NOT** waiting until the next value is generated!
+ * The function will **NOT** wait until the next value is generated!
  *
- * @return uint8_t random byte
+ * @return uint8_t A random byte
  */
 uint8_t rng_getRandomValue_immediately(void);
 
 /**
  * @brief This is a function stub. Implement it, if needed.
  *
- * @return uint8_t always `0`
+ * @return uint8_t A random byte
  */
 uint8_t rng_getRandomValue_waiting(void);
 

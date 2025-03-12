@@ -1,7 +1,7 @@
 /**
  * @file timer.h
  *
- * @brief Contains timer constants and abstraction functions
+ * @brief Contains constants and abstraction functions for the COUNTER device
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -74,14 +74,14 @@
 typedef enum Timer
 {
     TIMER0,
-    TIMER1,
-    TIMER2
+    TIMER1, // unused
+    TIMER2 // unused
 } Timer;
 
 typedef enum TimerMode
 {
     TIMER_MODE_TIMER = 0,
-    TIMER_MODE_COUNTER = 1
+    TIMER_MODE_COUNTER = 1 // unused
 } TimerMode;
 
 typedef enum TimerBitMode
@@ -116,8 +116,7 @@ void timer_init(Timer timer);
  * @param[in] prescaler
  *   Register value according to `Table 147: PRESCALER`.
  *   value 0..9 is valid ==> 2^0 .. 2^9
- * @param[in] bitmode
- *   Bit Mode.
+ * @param[in] bitmode Bit Mode.
  **/
 void timer_init_detailed(Timer timer, uint8_t prescaler, TimerMode mode, TimerBitMode bitMode);
 
@@ -127,14 +126,10 @@ void timer_init_detailed(Timer timer, uint8_t prescaler, TimerMode mode, TimerBi
  * It also enables the shortcut between CC[0] and CLEAR, so that the timer is cleared, when the
  *compared value is reached.
  *
- * @param[in] timer
- *   Timer
- * @param[in] captureCompare
- *   Capture Compare Register
- * @param[in] value
- *   New Value
+ * @param[in] timer Timer
+ * @param[in] captureCompare Capture Compare Register
+ * @param[in] value New Value
  * @param[in] shortcutClear
- *
  **/
 void timer_captureCompareSet(
     Timer timer,
@@ -145,7 +140,7 @@ void timer_captureCompareSet(
 /**
  * @brief Gets the Capture Compare Register of Timer.
  *
- * @param timer
+ * @param timer Timer
  * @param captureCompare
  *
  * @return
@@ -154,8 +149,7 @@ uint32_t timer_captureCompareGet(Timer timer, TimerCaptureCompare captureCompare
 
 /**
  * @brief Starts the given timer
- * @param [in] timer
- * Number of the timer
+ * @param [in] timer Timer
  */
 void timer_start(Timer timer);
 
@@ -175,17 +169,14 @@ void timer_count(Timer timer);
 
 /**
  * @brief Clear the time of the given timer
- * @param [in] timer
- * Number of the timer
+ * @param [in] timer Number of the timer
  */
 void timer_clear(Timer timer);
 
 /**
  * @brief Capture the time of the given timer
- * @param [in] timer
- * Number of the timer
- * @param [in] capture
- * Number of the Capture Compare
+ * @param [in] timer Number of the timer
+ * @param [in] capture Number of the Capture Compare
  */
 void timer_capture(Timer timer, TimerCaptureCompare capture);
 

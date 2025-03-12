@@ -1,7 +1,7 @@
 /**
  * @file system.h
  *
- * @brief Contains system calls to change the system status
+ * @brief Contains functions interacting with the microcontroller.
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -19,12 +19,16 @@
 #define SYS_SYSTEMOFF 0x500
 
 /**
- * @brief Call the soft reset of the system
+ * @brief Trigger a soft reset of the system
+ *
+ * @note **Never returns**
  **/
 void system_softReset();
 
 /**
- * @brief Call the shutdown of the system
+ * @brief Triggers "off" mode of the system
+ *
+ * @note **Never returns**
  **/
 void system_offMode();
 

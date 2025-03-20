@@ -27,6 +27,7 @@ void input_onInterrupt(const uint8_t input)
 {
     if(!putIntoBuf(&g_input_buf, input))
     {
+        //!TODO Handle error better
         print("INPUT BUFFER OVERFLOW");
     }
 }

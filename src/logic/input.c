@@ -21,6 +21,7 @@
 #include "logic/bot.h"
 #include "logic/game.h"
 #include "logic/time.h"
+#include "logic/winning.h"
 #include "presentation/cell.h"
 #include "presentation/menu.h"
 #include "presentation/style.h"
@@ -122,17 +123,31 @@ static void handleSetMark(GameState *game_state, CellState *cell_state)
         cell_state->selected->marked_by = Cross;
         cell_state->last_cross = cell_state->selected;
 
-        // if bot started player makes the last turn
-        if(game_state->fields_marked + 1 < CELLS_PER_ROW * CELLS_PER_COL)
+
+        // Avoid a bug where the bot unfairly wins, if the player started
+        // and both the player and the bot could win in the same round
+        bool hasWinner = false;
+        if(game_state->fields_marked >= (min(CELLS_PER_COL, CELLS_PER_ROW)))
         {
-            cell_state->last_circle = bot_markRandomCell(cell_state->all, Circle);
+            static Cell winningCells[max(CELLS_PER_COL, CELLS_PER_ROW)];
+            if(winning_checkForWinner(cell_state, (Cell **)&winningCells) != None)
+            {
+                hasWinner = true;
+            }
         }
-        else
+
+        if(!hasWinner)
         {
-            // to avoid a check in game_endTurn() fields_marked is subtracted
-            // by one, since it's increased by 2 later.
-            game_state->fields_marked--;
+            if(game_state->fields_marked + 1 < CELLS_PER_ROW * CELLS_PER_COL)
+            {
+                cell_state->last_circle = bot_markRandomCell(cell_state->all, Circle);
+            }
+            else
+            {
+                game_state->fields_marked--;
+            }
         }
+
         cell_redraw(cell_state->last_circle);
     }
     else

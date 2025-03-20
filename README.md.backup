@@ -1,27 +1,10 @@
+# TicTacToe project
 
-[![MPL-2.0 License](https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe
-)](https://choosealicense.com/licenses/mpl-2.0/)
+Fork of https://github.com/infohoschie/arm-cortex-m0-cmake-start
 
+Students: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
 
-# TikTakToe
-
-A TikTakToe game written for the `arm-cortex-m0` microcontroller.
-
-Authors: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle
-
-
-
-## Acknowledgements
-
- - [arm-cortex-m0-cmake-start ](https://github.com/infohoschie/arm-cortex-m0-cmake-start)
-## Architecture
-See [Architecture.md](Architecture.md)
-## Documentation
-
-[Documentation](TODO)
-
-
-## Build and run the project
+## How to build/run the project
 ### Using CMake and qemu directly
 To build the project using CMake and qemu some dependencies,
 which can be found under [dependencies] are required.
@@ -116,14 +99,12 @@ Due to the way the Makefile is structured, these may also be passed when using e
 However please note, that in order for changes to take affect the build directory may have to be deleted.
 This can be done using `make clean` or by manually deleting the directory.
 
-    
-## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+## Architecture
+See [Architecture.md](Architecture.md)
 
+## Conventions
+See [Conventions.md](Conventions.md)
 
 ## Dependencies (TODO: CHECK CORRECT)
 ### Ubuntu/Debian
@@ -154,13 +135,3 @@ brew install gcc-arm-embedded cmake qemu
 ```
 ### Windows
 TODO/CHECK
-
-## Authors
-
-- [Simon Blum](https://www.github.com/DefinitelyNotSimon13)
-- [Ben Oeckl](https://github.com/benoeckl)
-- [Paul Stöckle](https://github.com/DosKobold)
-- [Max Rodler](https://github.com/MaxRodler)
-
-## Conventions
-See [Conventions.md](Conventions.md)

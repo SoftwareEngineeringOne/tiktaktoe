@@ -1,13 +1,31 @@
 # Architecture
-1. Main initializes the program (UART etc.) and prints the first output
-2. Infinity loop in main
-3. The game is interrupt based (not really thouh). Interrupts are defined in "interrupts". They will call functions in "logic". The logic is based on "hal" and "output"(also wrong tbh)
 
-## Hardware Abstraction Layer (util and hal)
+The architecture is interrupt-based and with the use cases package divided.
+The program starts at main.c. This file is only used for restarting and
+shutting down the system. The program can run infinitely, dependent on the users
+actions. Package descriptions are following:
 
-## Interrupt handling (interrupts)
+## Hardware Abstraction Layer (`hal`)
 
-## Game Logic (logic)
+The hardware abstraction layer package gives the developer the possibility to
+call neutral and machine-independent functions without knowing the hardware
+implementation. \
+\
+A specialty in this package are the interrupts. They make a user and time
+action-based system possible. It is the only component that calls functions 
+outside the hal.
 
-## Output (output)
+## Game Logic (`logic`)
 
+The logic package is the most important part of the game. It manages the
+process of the game.
+
+## Output (`presentation`)
+
+The presentation package abstracts the whole output that is shown to the user.
+It simplifies the UART transmission.
+
+## Utilities (`util`)
+
+The util package includes independent (from another) helpers that are used from
+several packages.

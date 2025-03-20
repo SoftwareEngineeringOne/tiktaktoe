@@ -1,3 +1,13 @@
+/**
+ * @file winning.h
+ *
+ * @brief Contains the function for checking if someone has won
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 #ifndef WINNING_H
 #define WINNING_H
 
@@ -7,8 +17,8 @@
 /**
  * @brief Checks at the end of the round if someone has won
  *
- * @param [in] cell_state
- * @param [out] winner_cells
+ * @param [in] cell_state Current state of the cells
+ * @param [out] winner_cells If a player won, the relevant cells will be written to this buffer
  *
  * @return The player who won
  */

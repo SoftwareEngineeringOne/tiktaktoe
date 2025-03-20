@@ -1,3 +1,13 @@
+/**
+ * @file uart.h
+ *
+ * @brief Contains constants and abstraction functions for the UART device
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 #ifndef UART_H
 #define UART_H
 
@@ -48,13 +58,15 @@
 /**
  * @brief Initializing the UART with the following Settings:
  * 115200-8-N-1
+ *
+ * @param[in] with_interrupts Wether or not interrupts should be triggered
  */
 void uart_init(bool with_interrupts);
 
 /**
  * @brief Writes/Sends a byte over the serial Port
  *
- * @param data byte to send (ASCII)
+ * @param[in] data byte to send
  */
 void uart_writeByte(uint8_t data);
 

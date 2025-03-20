@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file print.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains several different high level functions for printing to UART
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

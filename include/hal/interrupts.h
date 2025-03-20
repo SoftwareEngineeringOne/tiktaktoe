@@ -1,13 +1,7 @@
 /**
- * @file
+ * @file interrupts.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains interrupt handlers
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,28 +11,21 @@
 #ifndef INTERRUPTS_H
 #define INTERRUPTS_H
 
-void Interrupt1_Handler(void);
-
 /**
  * @brief UART interrupt handler
+ *
+ * @details
+ * !TODO!
  */
 void Interrupt2_Handler(void);
 
-void Interrupt3_Handler(void);
-
-void Interrupt4_Handler(void);
-
-void Interrupt5_Handler(void);
-
-void Interrupt6_Handler(void);
-
-void Interrupt7_Handler(void);
-
 /**
  * @brief Timer interrupt handler
+ *
+ * @detail
+ * !TODO!
  */
 void Interrupt8_Handler(void);
 
-void Interrupt9_Handler(void);
 
 #endif// INTERRUPTS_H

@@ -1,13 +1,8 @@
 /**
- * @file
+ * @file ui.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains different functions for the presentation of the in-game
+ *        user interface (everything besides the actual game field)
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public

@@ -8,6 +8,8 @@ PORT ?= 1234
 ROWS ?= 4
 COLS ?= 4
 
+PORT ?= 1234
+
 TICKS_PER_TURN ?= 20
 TICK_SPEED ?= 12
 

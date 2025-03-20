@@ -1,22 +1,18 @@
 /**
- * @file
+ * @file nvic.h
  *
- * @author
+ * @brief Contains interrupt constants
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @details
+ * Registers from NVIC - Cortex-M0 peripheral
+ * These are to activate and debug Interrupts
+ * Details on Chapter 4.2 Nested Vectored Interrupt Controller (Page 109)
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
-// Registers from NVIC - Cortex-M0 peripheral
-// These are to activate and debug Interrupts
-// Details on Chapter 4.2 Nested Vectored Interrupt Controller (Page 109)
 
 #ifndef NVIC_H
 #define NVIC_H
@@ -54,7 +50,10 @@
 #define ICSR 0xE000ED04// Interrupt Control and State Register
 
 /**
- * @brief Activate the energy saving mode of the computer
+ * @brief Wait for an interrupt
+ *
+ * The processor enters low power mode until
+ * the next interrupt occurs
  */
 #define __WFI() __asm volatile("wfi" ::: "memory")
 

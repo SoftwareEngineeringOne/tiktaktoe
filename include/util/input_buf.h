@@ -1,13 +1,7 @@
 ﻿/**
- * @file
+ * @file input_buf.h
  *
- * @author
- *
- * @date
- *
- * @brief
- *
- * @see
+ * @brief Contains everything for the input buffer
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -75,5 +69,6 @@ bool input_isFull(const volatile InputBuffer *ib);
  * @return False if empty
  */
 bool input_getNext(volatile InputBuffer *ib, uint8_t *byte);
+
 
 #endif// INPUT_BUF_H

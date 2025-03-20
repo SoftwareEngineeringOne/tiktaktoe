@@ -1,7 +1,11 @@
 # Präsentation 04.03.2025
 1 und 2 ist Ben oder Max - wer was macht ist ja egal, ging mir nur Zeit mäßig
 
-## Übersicht Aufbau
+## Einleitung > Ben oder Max
+
+- TikTakToe Projekt
+
+### Übersicht Aufbau
 1. Einleitung
 2. Grobe Überlick Architektur
 2. Überlick Spiel
@@ -87,7 +91,10 @@
 > __ANSICHT 5: cell.h -> Size + CellSize, cell.c -> ARRAYS
 - 3 Größen verfügbar
 - Möglich durch entkoppelung von Logik (welche Zellen sind markiert) und Präsentation
-- Malen mit 2D Array statt string um alle Zellen in einer Schleife malen zu können
+- 2D Arrays erlauben malen nur in Zelle, so dass wie bereits angemerkt nicht alles neu
+
+### Winning Algoritmus
+__ANSICHT 6: winner.c
 
 ### __WFI()
 ![Ansicht 6](https://github.com/user-attachments/assets/8eefa502-3e72-44d7-bc14-799ebcd7061d)
@@ -118,5 +125,3 @@
 - Bereits feature complete
 - Optimierung von entry code und modulen aus Vorlesung für unseren Anwendungszweck
 - Dokumentation
-
-

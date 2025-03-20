@@ -30,6 +30,13 @@ static void zeroBss(void);
  **/
 static void copyData(void);
 
+/**
+ * @brief Initializes memory sections and transfers control to the main function.
+ *
+ * This function zeros out the BSS section and copies the initialized data from ROM to RAM,
+ * setting up the runtime environment before calling the externally defined main function.
+ * It is marked with the `used` attribute to ensure it is retained by the linker.
+ */
 __attribute__((used)) void entry_c(void)
 {
     zeroBss();
@@ -44,6 +51,13 @@ __attribute__((used)) void entry_c(void)
     /* { */
     /* } */
 }
+/**
+ * @brief Zeros out the BSS memory section.
+ *
+ * This function iterates from the start of the BSS section (__bss_start__) to its end (__bss_end__)
+ * and sets each 32-bit word to zero. It ensures that all uninitialized global and static variables
+ * in the BSS segment are cleared before the application's main function is executed.
+ */
 static void zeroBss(void)
 {
     // Symbol is located on start of BSS Section
@@ -58,6 +72,13 @@ static void zeroBss(void)
     }
 }
 
+/**
+ * @brief Copies initialized data from Flash memory to RAM.
+ *
+ * This function copies each 32-bit word from the source data section in Flash,
+ * starting at `__data_start_rom__`, to the destination data section in RAM,
+ * spanning from `__data_start__` (inclusive) to `__data_end__` (exclusive).
+ */
 static void copyData(void)
 {
     // Symbol is located on start of Data Section

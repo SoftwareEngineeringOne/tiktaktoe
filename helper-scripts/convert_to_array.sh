@@ -5,6 +5,17 @@
 BOLD=$'\033[1m'
 RESET=$'\033[0m'
 
+# Displays usage instructions for the ASCII art conversion script.
+#
+# Globals:
+#   BOLD   - Terminal code for bold text formatting.
+#   RESET  - Terminal code to reset text formatting.
+#
+# Outputs:
+#   Prints a detailed usage message, including command syntax, an example command, and sample input/output.
+#
+# Example:
+#   usage
 usage() {
   cat <<EOF
 ${BOLD}Usage: ./convert_ascii.sh input.txt [ARRAY_NAME] [desired_width]${RESET}

@@ -5,6 +5,18 @@
 BOLD=$'\033[1m'
 RESET=$'\033[0m'
 
+# Displays usage instructions for the ASCII art conversion script.
+#
+# Globals:
+#   BOLD   - Terminal escape sequence for bold text formatting.
+#   RESET  - Terminal escape sequence to reset formatting.
+#
+# Outputs:
+#   Prints a multi-line message to STDOUT detailing how to run the script, including the
+#   required arguments, an example invocation, and the expected C-style string output format.
+#
+# Example:
+#   $ usage
 usage() {
   cat <<EOF
 ${BOLD}Usage: ./convert_ascii.sh input.txt [VARIABLE_NAME]${RESET}

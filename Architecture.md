@@ -12,20 +12,6 @@ This module is responsible for the startup process of the microcontroller. Here 
 elements, such as the entry point, interrupt vector table and memory regions are defined
 and actions such as copying data from ROM to RAM are performed.
 
-### RAM Layout (Cortex-M):
-0x20000000 ┌────────────────┐
-           │     .data      │
-           ├────────────────┤
-           │     .bss       │
-           ├────────────────┤
-           │                │
-           │   Free Space   │
-           │                │
-           │                │
-0x20003C00 ├────────────────┤ ← \_\_StackLimit
-           │     Stack      │
-0x20004000 └────────────────┘ ← \_\_StackTop (initial SP)
-
 
 ## Hardware Abstraction Layer 
 _files: include/hal/\*.h, src/hal/\*.c_

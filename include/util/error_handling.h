@@ -12,8 +12,8 @@
 #define HARD_FAULT_H
 
 
-void handleHardFault();
+void HardFault_Handler() __attribute__((interrupt));
 
-void handleUnexpectedInterrupt();
+void Default_Handler() __attribute__((interrupt));
 
 #endif// HARD_FAULT_H

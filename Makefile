@@ -1,6 +1,6 @@
 CMAKE_PRESET := arm-cortex-m0-unix
 BUILD_DIR := build-cortex-m0
-EXECUTABLE := game.elf
+EXECUTABLE := TikTakToe.elf
 
 PORT ?= 1234
 

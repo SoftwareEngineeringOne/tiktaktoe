@@ -29,3 +29,22 @@ It simplifies the UART transmission.
 
 The util package includes independent (from another) helpers that are used from
 several packages.
+
+RAM Layout (Cortex-M):
+0x20000000 ┌────────────────┐
+           │     .data      │
+           ├────────────────┤
+           │     .bss       │
+           ├────────────────┤
+           │     Heap       │
+           ├────────────────┤
+           │   Free Space   │
+           ├────────────────┤
+           │     Stack      │
+           │ (grows downward) 
+0x20004000 ├────────────────┤ ← __StackTop (initial SP)
+           │                │
+           │                │
+           ├────────────────┤ ← __StackLimit
+           │                │
+           └────────────────┘

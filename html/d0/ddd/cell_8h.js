@@ -14,7 +14,6 @@ var cell_8h =
     ] ],
     [ "cell_decreaseSize", "d0/ddd/cell_8h.html#ac37a7db30665215c6cafea5b9b0d6788", null ],
     [ "cell_increaseSize", "d0/ddd/cell_8h.html#ab9e31dcd2aaecf6c26bba4fc29a2e882", null ],
-    [ "cell_mark", "d0/ddd/cell_8h.html#a927001880af8bf77738dbf29ebf8b86f", null ],
     [ "cell_redraw", "d0/ddd/cell_8h.html#a3945952c9b76c87175d1ae905f01b07a", null ],
     [ "cell_redraw_withModifier", "d0/ddd/cell_8h.html#abd511bd7897b645ef9cb3a62583959e6", null ],
     [ "cell_redrawAll", "d0/ddd/cell_8h.html#a58542af15ec3ebf1a4e50c34789aa317", null ],

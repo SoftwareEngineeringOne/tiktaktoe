@@ -1,4 +1,4 @@
-.TH "presentation/cell.h" 3 "Fri Mar 21 2025 12:53:28" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/cell.h" 3 "Fri Mar 21 2025 13:00:26" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -68,10 +68,6 @@ presentation/cell.h \- Contains functions for changing the presentation of cells
 .RI "void \fBcell_select\fP (const \fBCell\fP *cell)"
 .br
 .RI "Selects the given cell\&. "
-.ti -1c
-.RI "void \fBcell_mark\fP (\fBCell\fP *cell)"
-.br
-.RI "Marks the given cell\&. "
 .ti -1c
 .RI "void \fBcell_increaseSize\fP ()"
 .br
@@ -161,17 +157,6 @@ Increases the field size\&.
 Definition at line \fB146\fP of file \fBcell\&.c\fP\&.
 .PP
 References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBCellSize::size\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
-.SS "void cell_mark (\fBCell\fP * cell)"
-
-.PP
-Marks the given cell\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIcell\fP \fBCell\fP to mark 
-.RE
-.PP
-
 .SS "void cell_redraw (const \fBCell\fP * cell)"
 
 .PP

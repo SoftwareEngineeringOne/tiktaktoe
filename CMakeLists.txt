@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.22)
 
-project(game LANGUAGES ASM C)
+project(TikTakToe LANGUAGES ASM C)
 
 set(GENERATED_WARNING "!! This file has been generated automatically, any changes may be overridden !!")
 
@@ -23,32 +23,30 @@ configure_file(
 
 # Define all Files:
 FILE(GLOB_RECURSE SOURCES "src/*.c")
-add_executable(game ${SOURCES})
+add_executable(TikTakToe ${SOURCES})
 
 target_sources(
-        game
+        TikTakToe
         PRIVATE
         ${CMAKE_SOURCE_DIR}/entry/entry.S
-        ${CMAKE_SOURCE_DIR}/entry/entry_c.c
-        ${CMAKE_SOURCE_DIR}/entry/entry_c.h
 )
 
 target_include_directories(
-        game
+        TikTakToe
         PRIVATE
         include
 )
 
-target_link_libraries(game PRIVATE gcc)
+target_link_libraries(TikTakToe PRIVATE gcc)
 
 target_link_options(
-        game
+        TikTakToe
         PRIVATE
-        -Wl,-Map=game.map
-        -T ${CMAKE_SOURCE_DIR}/entry/linker_script.lds)
+        -Wl,-Map=TikTakToe.map
+        -T ${CMAKE_SOURCE_DIR}/entry/linker_script.ld)
 set_target_properties(
-        game
-        PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/entry/linker_script.lds)
+        TikTakToe
+        PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/entry/linker_script.ld)
 
 
 #####################################################################
@@ -60,11 +58,11 @@ set_target_properties(
 #arm-none-eabi-objcopy -O binary base.elf output.bin
 
 add_custom_command(
-        TARGET game
+        TARGET TikTakToe
         POST_BUILD
         COMMAND "${OBJ_COPY}"
-        ARGS -O binary $<TARGET_FILE:game> $<TARGET_FILE_BASE_NAME:game>.bin)
+        ARGS -O binary $<TARGET_FILE:TikTakToe> $<TARGET_FILE_BASE_NAME:TikTakToe>.bin)
 
 set_target_properties(
-        game
-        PROPERTIES ADDITIONAL_CLEAN_FILES $<TARGET_FILE_BASE_NAME:game>.bin)
+        TikTakToe
+        PROPERTIES ADDITIONAL_CLEAN_FILES $<TARGET_FILE_BASE_NAME:TikTakToe>.bin)

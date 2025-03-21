@@ -8,13 +8,13 @@
 
 static void handleError(const char *hint);
 
-void handleHardFault()
+void HardFault_Handler()
 {
     handleError(
         "You have encountered a hard fault. If this error persists please contact the developer!");
 }
 
-void handleUnexpectedInterrupt()
+void Default_Handler()
 {
     handleError(
         "An unexpected interrupt occurred. If this error persists please contact the developer!");

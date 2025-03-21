@@ -28,13 +28,13 @@ __ROM_SIZE = 0x00040000;
 * RAM Configuration:
 * - Start:        0x20000000 
 * - Total Size:   16KB
-* - Stack Size:   16KB
-* - Heap Size:    0KB
+* - Stack Size:   1024KB
+* - Heap Size:    0B
 */
 __RAM_BASE = 0x20000000;
 __RAM_SIZE = 0x00004000;
 __STACK_SIZE = 0x00000400;
-__HEAP_SIZE  = 0x00000C00;
+__HEAP_SIZE  = 0x00000000;
 
 
 ENTRY ( Reset_Handler )

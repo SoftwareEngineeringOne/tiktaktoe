@@ -66,6 +66,9 @@ bool menu_showMainMenu()
             case '6':
                 return true;
             case '7':
+                // this exists to test the HardFault_Handler
+                // if the application was actually "deployed" in any way
+                // it should be removed
                 __asm volatile("udf #0");
             default:;
         }
@@ -186,7 +189,19 @@ void menu_showControls(const char *continue_hint)
     menu_anyKeyToContinue(continue_hint);
 }
 
-void printMainMenu()
+void menu_anyKeyToContinue(const char *continue_hint)
+{
+    println_styled(continue_hint, &ITALIC_DIM);
+    uint8_t input;
+    while(!input_getNext(&g_input_buf, &input))
+    {
+        __WFI();
+    }
+    while(input_getNext(&g_input_buf, &input))
+        ;
+}
+
+static void printMainMenu()
 {
     print_clearConsole();
     ui_printHeading();
@@ -205,7 +220,7 @@ void printMainMenu()
     println_styled("Hint: Press the number corresponding to your desired option", &ITALIC_DIM);
 }
 
-void printWinnerBanner(const GameState *game_info)
+static void printWinnerBanner(const GameState *game_info)
 {
     switch(game_info->winner)
     {
@@ -220,16 +235,4 @@ void printWinnerBanner(const GameState *game_info)
             break;
         default:;
     }
-}
-
-void menu_anyKeyToContinue(const char *continue_hint)
-{
-    println_styled(continue_hint, &ITALIC_DIM);
-    uint8_t input;
-    while(!input_getNext(&g_input_buf, &input))
-    {
-        __WFI();
-    }
-    while(input_getNext(&g_input_buf, &input))
-        ;
 }

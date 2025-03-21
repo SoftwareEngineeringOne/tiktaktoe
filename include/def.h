@@ -11,7 +11,8 @@
 #ifndef DEF_H
 #define DEF_H
 
-#define bool char
+typedef char bool;
+
 #define false 0
 #define true 1
 

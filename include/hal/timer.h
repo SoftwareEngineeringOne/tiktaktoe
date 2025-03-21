@@ -78,12 +78,6 @@ typedef enum Timer
     TIMER2 // unused
 } Timer;
 
-typedef enum TimerMode
-{
-    TIMER_MODE_TIMER = 0,
-    TIMER_MODE_COUNTER = 1 // unused
-} TimerMode;
-
 typedef enum TimerBitMode
 {
     TIMER_BIT_MODE_16 = 0,
@@ -118,7 +112,7 @@ void timer_init(Timer timer);
  *   value 0..9 is valid ==> 2^0 .. 2^9
  * @param[in] bitmode Bit Mode.
  **/
-void timer_init_detailed(Timer timer, uint8_t prescaler, TimerMode mode, TimerBitMode bitMode);
+void timer_init_detailed(Timer timer, uint8_t prescaler,  TimerBitMode bitMode);
 
 /**
  * @brief Set the Capture/ Compare Register of the Timer.

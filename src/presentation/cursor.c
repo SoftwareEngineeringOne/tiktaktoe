@@ -35,8 +35,8 @@ void cursor_moveTo(const uint8_t x, const uint8_t y)
     static char conversion_buf[4];
     const uint8_t size = sizeof(conversion_buf);
 
-    // \e (1) + [ (1) + 000 (3) + ; (1) + 000 (3) + H (1) => 10
-    static char escape_seq[10];
+    // \e (1) + [ (1) + 000 (3) + ; (1) + 000 (3) + H (1) + '\0' => 11
+    static char escape_seq[11];
     uint8_t pos = 0;
     escape_seq[pos++] = '\e';
     escape_seq[pos++] = '[';
@@ -55,7 +55,7 @@ void cursor_moveTo(const uint8_t x, const uint8_t y)
     print(escape_seq);
 }
 
-void writeNumToBuf(const uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)
+static void writeNumToBuf(const uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)
 {
     buf[(*buf_pos)++] = num_buf[0];
     if(num > 9)

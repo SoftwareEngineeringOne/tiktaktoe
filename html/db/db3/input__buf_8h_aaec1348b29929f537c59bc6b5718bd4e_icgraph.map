@@ -8,13 +8,13 @@
 <area shape="poly" id="edge21_Node000002_Node000004" title=" " alt="" coords="1250,164,1187,133,1102,98,1004,70,954,62,903,59,558,59,486,60,430,65,302,84,238,96,237,91,302,79,429,60,486,55,558,53,904,53,954,56,1006,65,1104,93,1189,128,1253,160"/>
 <area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,43,55,69"/>
 <area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="1268,159,1234,121,1189,85,1115,45,1053,21,988,11,903,8,367,8,276,13,188,25,56,52,55,47,187,20,276,8,367,3,904,3,988,5,1055,16,1117,40,1192,80,1238,117,1272,156"/>
-<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#ab2185691da03c65b53ec461a1e9a6194" title=" " alt="" coords="1026,295,1187,321"/>
+<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a309f3d06b02c506feb7a2454b76e25e7" title=" " alt="" coords="1026,295,1187,321"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1258,207,1128,297,1125,292,1255,202"/>
 <area shape="rect" id="Node000008" href="$d2/d0a/menu_8c.html#aa8ce93493c2adb2ce4240b95e852793c" title=" " alt="" coords="1022,170,1191,196"/>
 <area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="1223,185,1191,185,1191,180,1223,180"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="320,241,300,229,266,202,235,172,189,122,193,118,239,168,270,198,304,224,323,236"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="123,91,54,67,56,62,125,86"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="499,246,620,272"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handle a input byte with current states." alt="" coords="499,246,620,272"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1040,328,967,342,877,352,780,352,731,346,684,336,652,324,621,307,575,274,578,270,624,303,654,319,685,331,732,341,780,346,876,346,966,336,1039,322"/>
 <area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="484,261,408,261,408,256,484,256"/>
 <area shape="rect" id="Node000009" href="$d2/d0a/menu_8c.html#a23ef48917f29c7ba37351342e66a636f" title=" " alt="" coords="832,195,972,221"/>
@@ -31,7 +31,7 @@
 <area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="669,261,620,261,620,256,669,256"/>
 <area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="286,109,254,109,254,104,286,104"/>
 <area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="521,180,395,248,393,243,518,176"/>
-<area shape="rect" id="Node000014" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="714,295,753,321"/>
+<area shape="rect" id="Node000014" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="714,295,753,321"/>
 <area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="815,298,754,308,753,303,814,293"/>
 <area shape="poly" id="edge20_Node000014_Node000003" title=" " alt="" coords="698,309,601,301,482,287,407,271,408,266,483,281,602,296,699,303"/>
 </map>

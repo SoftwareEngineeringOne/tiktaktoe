@@ -6,7 +6,7 @@ var cell_8c =
     [ "cell_redraw_withModifier", "db/dcc/cell_8c.html#abd511bd7897b645ef9cb3a62583959e6", null ],
     [ "cell_redrawAll", "db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317", null ],
     [ "cell_select", "db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab", null ],
-    [ "redrawCell", "db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370", null ],
+    [ "redrawCell", "db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209", null ],
     [ "g_cell_size", "db/dcc/cell_8c.html#adb4ddd27a0c4cabe2034cb565770f991", null ],
     [ "LARGE_O", "db/dcc/cell_8c.html#a7723e23931bf1c457dbd5f9838e418f8", null ],
     [ "LARGE_X", "db/dcc/cell_8c.html#a29034d36edf913a75387f578baeafbcd", null ],

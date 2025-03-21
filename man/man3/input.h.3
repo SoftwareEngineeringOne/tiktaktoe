@@ -1,4 +1,4 @@
-.TH "logic/input.h" 3 "Fri Mar 21 2025 12:20:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/input.h" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,7 +16,7 @@ logic/input.h \- Contains the input handling of the game\&.
 
 .in +1c
 .ti -1c
-.RI "\fBbool\fP \fBinput_handleByte\fP (uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
+.RI "\fBbool\fP \fBinput_handleByte\fP (const uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
 .br
 .RI "Handle a input byte with current states\&. "
 .in -1c
@@ -41,7 +41,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBinput\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
+.SS "\fBbool\fP input_handleByte (const uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
 
 .PP
 Handle a input byte with current states\&. 

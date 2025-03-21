@@ -6,7 +6,7 @@
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="918,70,886,70,886,65,918,65"/>
 <area shape="rect" id="Node000011" href="$df/d41/timer_8c.html#acd2972fffc78d5b8bfeda05701882565" title="Default Initialisation of Timer." alt="" coords="800,104,874,130"/>
 <area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="924,89,876,106,874,101,922,84"/>
-<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="469,5,508,31"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="469,5,508,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="786,21,508,21,508,16,786,16"/>
 <area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,31,380,56"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="455,27,381,39,380,34,454,21"/>
@@ -18,7 +18,7 @@
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="773,70,741,70,741,65,773,65"/>
 <area shape="rect" id="Node000010" href="$d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title=" " alt="" coords="620,104,718,130"/>
 <area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="777,88,716,106,715,101,776,83"/>
-<area shape="rect" id="Node000009" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="428,55,549,80"/>
+<area shape="rect" id="Node000009" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handle a input byte with current states." alt="" coords="428,55,549,80"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="581,70,549,70,549,65,581,65"/>
 <area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="412,58,380,52,381,47,413,53"/>
 <area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="604,102,537,83,539,78,606,97"/>

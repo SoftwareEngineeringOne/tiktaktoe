@@ -22,15 +22,15 @@ Include dependency graph for input.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{input_8c_ab2185691da03c65b53ec461a1e9a6194}{handle\+Escape\+Sequence}} (\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
+static void \mbox{\hyperlink{input_8c_a309f3d06b02c506feb7a2454b76e25e7}{handle\+Escape\+Sequence}} (\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
 \item 
 static void \mbox{\hyperlink{input_8c_a98b27236b0483cfefce1c2c133ae7925}{handle\+Set\+Mark}} (\mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}}, \mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
 \item 
 static void \mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{open\+Controls}} ()
 \item 
-static \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{handle\+Pause\+Resume}} (\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
+static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{handle\+Pause\+Resume}} (\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
 \item 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input_8c_a866c488857b6c0702ef9278c5c83e73e}{input\+\_\+handle\+Byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte, \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}}, \mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input_8c_a3082ccbda618aa1099677e2e7ac9d5f6}{input\+\_\+handle\+Byte}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte, \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}}, \mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
 \begin{DoxyCompactList}\small\item\em Handle a input byte with current states. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -54,11 +54,11 @@ Definition in file \mbox{\hyperlink{input_8c_source}{input.\+c}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{input_8c_ab2185691da03c65b53ec461a1e9a6194}\index{input.c@{input.c}!handleEscapeSequence@{handleEscapeSequence}}
+\Hypertarget{input_8c_a309f3d06b02c506feb7a2454b76e25e7}\index{input.c@{input.c}!handleEscapeSequence@{handleEscapeSequence}}
 \index{handleEscapeSequence@{handleEscapeSequence}!input.c@{input.c}}
 \doxysubsubsection{\texorpdfstring{handleEscapeSequence()}{handleEscapeSequence()}}
-{\footnotesize\ttfamily \label{input_8c_ab2185691da03c65b53ec461a1e9a6194} 
-void handle\+Escape\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{input_8c_a309f3d06b02c506feb7a2454b76e25e7} 
+static void handle\+Escape\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -66,14 +66,14 @@ Definition at line \mbox{\hyperlink{input_8c_source_l00068}{68}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{game_8h_source_l00084}{Cell\+State\+::all}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00028}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00027}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00050}{Cell\+::col}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{input__buf_8c_source_l00051}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{game_8h_source_l00051}{Cell\+::row}}, and \mbox{\hyperlink{game_8h_source_l00085}{Cell\+State\+::selected}}.
+References \mbox{\hyperlink{game_8h_source_l00084}{Cell\+State\+::all}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00028}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00027}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00050}{Cell\+::col}}, \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{input__buf_8c_source_l00059}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{game_8h_source_l00051}{Cell\+::row}}, and \mbox{\hyperlink{game_8h_source_l00085}{Cell\+State\+::selected}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/d06/input_8c_ab2185691da03c65b53ec461a1e9a6194_cgraph}
+\includegraphics[width=350pt]{d1/d06/input_8c_a309f3d06b02c506feb7a2454b76e25e7_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -81,14 +81,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/d06/input_8c_ab2185691da03c65b53ec461a1e9a6194_icgraph}
+\includegraphics[width=350pt]{d1/d06/input_8c_a309f3d06b02c506feb7a2454b76e25e7_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{input_8c_a03559a576d12d8f279698c1a7d33a772}\index{input.c@{input.c}!handlePauseResume@{handlePauseResume}}
 \index{handlePauseResume@{handlePauseResume}!input.c@{input.c}}
 \doxysubsubsection{\texorpdfstring{handlePauseResume()}{handlePauseResume()}}
 {\footnotesize\ttfamily \label{input_8c_a03559a576d12d8f279698c1a7d33a772} 
-static \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} handle\+Pause\+Resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} handle\+Pause\+Resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -144,11 +144,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{d1/d06/input_8c_a98b27236b0483cfefce1c2c133ae7925_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{input_8c_a866c488857b6c0702ef9278c5c83e73e}\index{input.c@{input.c}!input\_handleByte@{input\_handleByte}}
+\Hypertarget{input_8c_a3082ccbda618aa1099677e2e7ac9d5f6}\index{input.c@{input.c}!input\_handleByte@{input\_handleByte}}
 \index{input\_handleByte@{input\_handleByte}!input.c@{input.c}}
 \doxysubsubsection{\texorpdfstring{input\_handleByte()}{input\_handleByte()}}
-{\footnotesize\ttfamily \label{input_8c_a866c488857b6c0702ef9278c5c83e73e} 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} input\+\_\+handle\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{byte}{, }\item[{\mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+state}{, }\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{input_8c_a3082ccbda618aa1099677e2e7ac9d5f6} 
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} input\+\_\+handle\+Byte (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{byte}{, }\item[{\mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+state}{, }\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state}{}\end{DoxyParamCaption})}
 
 
 
@@ -172,14 +172,14 @@ Definition at line \mbox{\hyperlink{input_8c_source_l00038}{38}} of file \mbox{\
 
 
 
-References \mbox{\hyperlink{cell_8c_source_l00217}{cell\+\_\+decrease\+Size()}}, \mbox{\hyperlink{cell_8c_source_l00207}{cell\+\_\+increase\+Size()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{input_8c_source_l00068}{handle\+Escape\+Sequence()}}, \mbox{\hyperlink{input_8c_source_l00186}{handle\+Pause\+Resume()}}, \mbox{\hyperlink{input_8c_source_l00114}{handle\+Set\+Mark()}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, and \mbox{\hyperlink{input_8c_source_l00172}{open\+Controls()}}.
+References \mbox{\hyperlink{cell_8c_source_l00156}{cell\+\_\+decrease\+Size()}}, \mbox{\hyperlink{cell_8c_source_l00146}{cell\+\_\+increase\+Size()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{input_8c_source_l00068}{handle\+Escape\+Sequence()}}, \mbox{\hyperlink{input_8c_source_l00186}{handle\+Pause\+Resume()}}, \mbox{\hyperlink{input_8c_source_l00114}{handle\+Set\+Mark()}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, and \mbox{\hyperlink{input_8c_source_l00172}{open\+Controls()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/d06/input_8c_a866c488857b6c0702ef9278c5c83e73e_cgraph}
+\includegraphics[width=350pt]{d1/d06/input_8c_a3082ccbda618aa1099677e2e7ac9d5f6_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -187,7 +187,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/d06/input_8c_a866c488857b6c0702ef9278c5c83e73e_icgraph}
+\includegraphics[width=350pt]{d1/d06/input_8c_a3082ccbda618aa1099677e2e7ac9d5f6_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}\index{input.c@{input.c}!openControls@{openControls}}
@@ -202,7 +202,7 @@ Definition at line \mbox{\hyperlink{input_8c_source_l00172}{172}} of file \mbox{
 
 
 
-References \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{menu_8c_source_l00141}{menu\+\_\+show\+Controls()}}, \mbox{\hyperlink{time_8c_source_l00063}{time\+\_\+pause()}}, and \mbox{\hyperlink{time_8c_source_l00069}{time\+\_\+resume()}}.
+References \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{menu_8c_source_l00144}{menu\+\_\+show\+Controls()}}, \mbox{\hyperlink{time_8c_source_l00063}{time\+\_\+pause()}}, and \mbox{\hyperlink{time_8c_source_l00069}{time\+\_\+resume()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

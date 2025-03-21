@@ -1,6 +1,6 @@
 <map id="input_init" name="input_init">
 <area shape="rect" id="Node000001" title="Initialize the given InputBuffer." alt="" coords="515,31,588,56"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="428,5,467,31"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="428,5,467,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="499,33,466,25,468,20,500,28"/>
 <area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,55,56"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="499,46,55,46,55,41,499,41"/>

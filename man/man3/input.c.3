@@ -1,4 +1,4 @@
-.TH "logic/input.c" 3 "Fri Mar 21 2025 12:20:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/input.c" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -45,7 +45,7 @@ logic/input.c
 .RI "static \fBbool\fP \fBhandlePauseResume\fP (\fBCellState\fP *\fBcell_state\fP)"
 .br
 .ti -1c
-.RI "\fBbool\fP \fBinput_handleByte\fP (uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
+.RI "\fBbool\fP \fBinput_handleByte\fP (const uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
 .br
 .RI "Handle a input byte with current states\&. "
 .in -1c
@@ -76,7 +76,7 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBinput\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void handleEscapeSequence (\fBCellState\fP * cell_state)\fR [static]\fP"
+.SS "static void handleEscapeSequence (\fBCellState\fP * cell_state)\fR [static]\fP"
 
 .PP
 Definition at line \fB68\fP of file \fBinput\&.c\fP\&.
@@ -94,7 +94,7 @@ References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_state\fP, \fBg_
 Definition at line \fB114\fP of file \fBinput\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_redraw()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBg_timer\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBCell::marked_by\fP, \fBmax\fP, \fBmin\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBui_updateTurn()\fP, and \fBwinning_checkForWinner()\fP\&.
-.SS "\fBbool\fP input_handleByte (uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
+.SS "\fBbool\fP input_handleByte (const uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
 
 .PP
 Handle a input byte with current states\&. 

@@ -1,4 +1,4 @@
-.TH "presentation/cell.c" 3 "Fri Mar 21 2025 12:20:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/cell.c" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -110,7 +110,7 @@ Definition in file \fBcell\&.c\fP\&.
 .PP
 Decreases the field size\&. 
 .PP
-Definition at line \fB217\fP of file \fBcell\&.c\fP\&.
+Definition at line \fB156\fP of file \fBcell\&.c\fP\&.
 .PP
 References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
 .SS "void cell_increaseSize ()"
@@ -118,7 +118,7 @@ References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBCellSize::size\fP, \fBS
 .PP
 Increases the field size\&. 
 .PP
-Definition at line \fB207\fP of file \fBcell\&.c\fP\&.
+Definition at line \fB146\fP of file \fBcell\&.c\fP\&.
 .PP
 References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBCellSize::size\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
 .SS "void cell_redraw (const \fBCell\fP * cell)"
@@ -172,7 +172,7 @@ Selects the given cell\&.
 Definition at line \fB108\fP of file \fBcell\&.c\fP\&.
 .PP
 References \fBCell::col\fP, \fBINVERSE\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
-.SS "void redrawCell (uint8_t row, uint8_t col, const char * modifier, \fBPlayer\fP marked_by)\fR [static]\fP"
+.SS "static void redrawCell (uint8_t row, uint8_t col, const char * modifier, \fBPlayer\fP marked_by)\fR [static]\fP"
 
 .PP
 Redraw one cell\&. 
@@ -190,7 +190,7 @@ Redraw one cell\&.
 .PP
 
 .PP
-Definition at line \fB146\fP of file \fBcell\&.c\fP\&.
+Definition at line \fB168\fP of file \fBcell\&.c\fP\&.
 .PP
 References \fBCircle\fP, \fBCross\fP, \fBcursor_moveTo()\fP, \fBDEFAULT_CIRCLE\fP, \fBDEFAULT_CROSS\fP, \fBFIELD_X_OFFSET\fP, \fBFIELD_Y_OFFSET\fP, \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBLARGE_O\fP, \fBLARGE_X\fP, \fBMedium\fP, \fBMEDIUM_O\fP, \fBMEDIUM_X\fP, \fBNone\fP, \fBprint()\fP, \fBprintStyle()\fP, \fBRESET\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBSMALL_O\fP, \fBSMALL_X\fP, and \fBCellSize::width\fP\&.
 .SH "Variable Documentation"

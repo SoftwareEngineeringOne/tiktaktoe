@@ -60,7 +60,7 @@ var searchData=
   ['timer_5fevent_5fclear_57',['TIMER_EVENT_CLEAR',['../d5/dd0/timer_8h.html#a8c03292bc5ec12d510de0d5c4115f876',1,'timer.h']]],
   ['timer_5fevent_5ftrigger_58',['TIMER_EVENT_TRIGGER',['../d5/dd0/timer_8h.html#affeb98e6c53599879a714fe1748ce5ed',1,'timer.h']]],
   ['timer_5finit_59',['timer_init',['../df/d41/timer_8c.html#acd2972fffc78d5b8bfeda05701882565',1,'timer_init(Timer const timer):&#160;timer.c'],['../d5/dd0/timer_8h.html#a250fd88bd3fef522cbe9c8acf61f2001',1,'timer_init(Timer timer):&#160;timer.c']]],
-  ['timer_5finit_5fdetailed_60',['timer_init_detailed',['../df/d41/timer_8c.html#a450c32f7b88b1d0fb3587edbe79944f8',1,'timer_init_detailed(Timer const timer, uint8_t const prescaler, TimerMode const mode, TimerBitMode const bitMode):&#160;timer.c'],['../d5/dd0/timer_8h.html#a28741ad7e214647751f9f1ce8f207cdf',1,'timer_init_detailed(Timer timer, uint8_t prescaler, TimerMode mode, TimerBitMode bitMode):&#160;timer.c']]],
+  ['timer_5finit_5fdetailed_60',['timer_init_detailed',['../df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234',1,'timer_init_detailed(Timer const timer, uint8_t const prescaler, TimerBitMode const bitMode):&#160;timer.c'],['../d5/dd0/timer_8h.html#a41416d2d4a6d6b4611a7ae03d8db3653',1,'timer_init_detailed(Timer timer, uint8_t prescaler, TimerBitMode bitMode):&#160;timer.c']]],
   ['timer_5fintenclr_61',['TIMER_INTENCLR',['../d5/dd0/timer_8h.html#ac1d369e5fd7ab6b10ed0e4409e73d094',1,'timer.h']]],
   ['timer_5fintenset_62',['TIMER_INTENSET',['../d5/dd0/timer_8h.html#a6375a0c7dd7b0d6f95364a45f330f643',1,'timer.h']]],
   ['timer_5fmode_63',['TIMER_MODE',['../d5/dd0/timer_8h.html#af2a9f923fe45bcba36e26b19886d9d81',1,'timer.h']]],

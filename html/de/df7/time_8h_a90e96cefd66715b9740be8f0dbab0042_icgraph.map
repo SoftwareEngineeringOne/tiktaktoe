@@ -10,7 +10,7 @@
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="631,21,596,21,596,16,631,16"/>
 <area shape="rect" id="Node000005" href="$d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737" title="Timer interrupt handler." alt="" coords="302,5,430,31"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="465,21,430,21,430,16,465,16"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="478,55,599,80"/>
+<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handle a input byte with current states." alt="" coords="478,55,599,80"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="639,70,599,70,599,65,639,65"/>
 <area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,55,405,80"/>
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="463,70,406,70,406,65,463,65"/>

@@ -8,7 +8,7 @@
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="116,129,182,149,180,154,115,134"/>
 <area shape="rect" id="Node000003" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="373,5,419,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,51,357,27,359,33,285,57"/>
-<area shape="rect" id="Node000006" href="$d7/dec/input__buf_8c.html#a94879a59b145834ad147b43c5f9ffbda" title="Put the next byte into the buffer." alt="" coords="356,55,437,80"/>
+<area shape="rect" id="Node000006" href="$d7/dec/input__buf_8c.html#a6b0d0104392c0034ca549ef8dc2875a4" title="Put the next byte into the buffer." alt="" coords="356,55,437,80"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="300,65,340,65,340,70,300,70"/>
 <area shape="rect" id="Node000004" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="492,5,597,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="420,16,477,16,477,21,420,21"/>

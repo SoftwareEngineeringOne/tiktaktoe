@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Default Initialisation of Timer." alt="" coords="5,55,80,80"/>
 <area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#a6bb9bef52a6d01f72cbbb032d00f4929" title="Set the Capture/ Compare Register of the Timer." alt="" coords="128,5,300,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,54,127,40,149,33,151,38,128,45,81,59"/>
-<area shape="rect" id="Node000005" href="$df/d41/timer_8c.html#a450c32f7b88b1d0fb3587edbe79944f8" title="Initialises the Timer." alt="" coords="151,55,277,80"/>
+<area shape="rect" id="Node000005" href="$df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234" title="Initialises the Timer." alt="" coords="151,55,277,80"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="80,65,135,65,135,70,80,70"/>
 <area shape="rect" id="Node000006" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="172,104,256,130"/>
 <area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="81,76,128,90,158,99,157,104,127,95,79,81"/>

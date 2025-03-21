@@ -10,7 +10,7 @@
 <area shape="poly" id="edge147_Node000001_Node000059" title=" " alt="" coords="134,319,781,491,780,496,132,324"/>
 <area shape="rect" id="Node000065" href="$d2/d0a/menu_8c.html#a54a22faf156830dd16ee4e3c52835881" title=" " alt="" coords="781,650,913,676"/>
 <area shape="poly" id="edge148_Node000001_Node000065" title=" " alt="" coords="101,319,169,368,275,439,405,517,474,553,543,584,600,605,659,623,766,647,765,652,657,628,598,610,541,589,471,557,402,521,272,444,166,373,98,324"/>
-<area shape="rect" id="Node000066" href="$d2/d0a/menu_8c.html#af9dce1973196a5934ee5ec20ea417324" title=" " alt="" coords="794,347,900,373"/>
+<area shape="rect" id="Node000066" href="$d2/d0a/menu_8c.html#ab7df6333ff61c8bfcb1209aba9ee0237" title=" " alt="" coords="794,347,900,373"/>
 <area shape="poly" id="edge154_Node000001_Node000066" title=" " alt="" coords="157,311,778,353,778,358,157,316"/>
 <area shape="rect" id="Node000003" href="$df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="774,1750,920,1776"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,1210,252,1307,264,1453,275,1529,290,1599,309,1656,320,1677,333,1693,380,1729,433,1755,490,1772,549,1782,608,1786,665,1786,764,1776,764,1781,665,1791,608,1791,548,1787,488,1777,431,1760,377,1733,329,1697,316,1680,304,1658,285,1601,270,1530,259,1454,247,1307,243,1211"/>
@@ -22,18 +22,18 @@
 <area shape="poly" id="edge20_Node000002_Node000017" title=" " alt="" coords="255,1209,284,1253,306,1276,332,1295,385,1320,432,1334,475,1340,516,1341,605,1337,657,1339,716,1346,781,1357,780,1363,715,1351,656,1344,605,1343,516,1346,474,1345,431,1339,383,1325,330,1300,303,1281,280,1257,250,1212"/>
 <area shape="rect" id="Node000018" href="$db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="805,1410,888,1436"/>
 <area shape="poly" id="edge22_Node000002_Node000018" title=" " alt="" coords="249,1210,255,1247,270,1296,294,1347,312,1369,332,1387,368,1403,417,1415,477,1422,543,1426,678,1428,789,1424,789,1429,678,1433,543,1432,477,1428,416,1420,366,1408,330,1392,308,1373,290,1350,265,1298,250,1248,244,1211"/>
-<area shape="rect" id="Node000019" href="$d1/dcb/game_8c.html#a5ba143de5d686da017fc2281274d7729" title="Handles the presentation update in case of a automatic round." alt="" coords="542,1159,716,1185"/>
+<area shape="rect" id="Node000019" href="$d1/dcb/game_8c.html#a02793d13c56663addd9878f851e1a525" title="Handles the presentation update in case of a automatic round." alt="" coords="542,1159,716,1185"/>
 <area shape="poly" id="edge24_Node000002_Node000019" title=" " alt="" coords="283,1192,526,1176,527,1182,284,1198"/>
 <area shape="rect" id="Node000020" href="$dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="1010,1254,1114,1280"/>
 <area shape="poly" id="edge144_Node000002_Node000020" title=" " alt="" coords="276,1182,392,1142,472,1121,561,1105,656,1097,751,1101,799,1109,845,1121,889,1138,932,1161,950,1180,957,1201,964,1221,980,1241,997,1251,995,1256,976,1245,959,1224,952,1202,946,1182,928,1165,887,1143,843,1126,798,1114,751,1107,656,1103,562,1111,473,1127,393,1147,278,1187"/>
-<area shape="rect" id="Node000023" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="393,1487,432,1513"/>
+<area shape="rect" id="Node000023" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="393,1487,432,1513"/>
 <area shape="poly" id="edge35_Node000002_Node000023" title=" " alt="" coords="250,1210,257,1252,272,1312,297,1379,314,1411,333,1441,356,1464,381,1482,378,1486,352,1468,329,1445,309,1414,292,1381,267,1313,252,1253,244,1211"/>
-<area shape="rect" id="Node000026" href="$d1/dcb/game_8c.html#a4938becaec0f17690ab3a575fcb0bd4a" title="Refreshes the whole UI." alt="" coords="585,1361,673,1386"/>
+<area shape="rect" id="Node000026" href="$d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="585,1361,673,1386"/>
 <area shape="poly" id="edge141_Node000002_Node000026" title=" " alt="" coords="251,1210,261,1238,277,1274,301,1310,333,1339,360,1354,390,1366,454,1379,516,1382,569,1379,570,1384,516,1387,453,1384,389,1371,358,1359,329,1344,297,1314,272,1277,256,1240,246,1211"/>
 <area shape="rect" id="Node000030" href="$dc/d78/ui_8c.html#ab07153d30b3acd0a53ca9d4043e27160" title="Updates the time on the screen." alt="" coords="1007,1507,1117,1533"/>
 <area shape="poly" id="edge143_Node000002_Node000030" title=" " alt="" coords="247,1211,248,1267,257,1351,268,1397,283,1442,305,1485,333,1524,369,1556,408,1582,451,1602,497,1615,544,1624,593,1627,693,1623,790,1607,880,1584,956,1559,1015,1537,1017,1542,958,1565,881,1590,791,1612,693,1628,593,1633,544,1629,495,1620,449,1607,406,1587,365,1561,329,1527,300,1488,278,1444,262,1398,252,1351,243,1267,242,1211"/>
 <area shape="poly" id="edge88_Node000002_Node000042" title=" " alt="" coords="244,1184,272,998,297,851,331,689,372,525,421,376,448,312,477,256,508,212,541,181,565,167,595,156,669,141,760,133,859,130,1057,136,1215,148,1214,154,1057,142,859,135,760,138,670,146,596,162,567,172,544,185,512,215,482,259,453,314,426,378,377,527,336,690,303,852,277,999,250,1184"/>
-<area shape="rect" id="Node000044" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="352,750,473,776"/>
+<area shape="rect" id="Node000044" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handle a input byte with current states." alt="" coords="352,750,473,776"/>
 <area shape="poly" id="edge89_Node000002_Node000044" title=" " alt="" coords="244,1184,252,1105,269,989,294,872,310,826,329,793,342,782,345,786,333,797,315,828,299,874,274,990,257,1106,249,1185"/>
 <area shape="rect" id="Node000050" href="$df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="1021,94,1103,120"/>
 <area shape="poly" id="edge142_Node000002_Node000050" title=" " alt="" coords="243,1184,247,992,261,674,272,509,287,362,305,250,316,211,329,188,350,170,378,154,451,130,541,114,643,104,747,99,847,98,1006,101,1005,107,847,103,747,104,643,109,542,119,452,135,380,159,353,174,333,191,321,213,310,251,292,363,277,509,266,674,253,992,248,1184"/>
@@ -50,7 +50,7 @@
 <area shape="rect" id="Node000007" href="$dc/de5/random_8c.html#a10ddbdc45f7f1a0a55ec5e0cb7bf683a" title="Get the Random Value from the generator immediately." alt="" coords="1208,1760,1353,1800"/>
 <area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1136,1766,1193,1771,1192,1776,1135,1771"/>
 <area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="1353,1777,1407,1777,1407,1783,1353,1783"/>
-<area shape="rect" id="Node000010" href="$db/dcc/cell_8c.html#a5529a35b0125af11afa9209373fca370" title="Redraw one cell." alt="" coords="1021,1355,1103,1381"/>
+<area shape="rect" id="Node000010" href="$db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209" title="Redraw one cell." alt="" coords="1021,1355,1103,1381"/>
 <area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="495,1276,716,1302,874,1328,1006,1354,1005,1359,873,1333,715,1307,495,1282"/>
 <area shape="rect" id="Node000011" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move cursor to the given coordinates." alt="" coords="1225,1305,1336,1330"/>
 <area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1103,1356,1209,1331,1210,1336,1104,1361"/>
@@ -60,7 +60,7 @@
 <area shape="rect" id="Node000012" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title=" " alt="" coords="1433,1153,1508,1178"/>
 <area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="1329,1302,1365,1283,1391,1262,1415,1237,1451,1190,1455,1193,1419,1241,1395,1266,1368,1288,1331,1306"/>
 <area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="1336,1317,1405,1314,1488,1302,1531,1292,1573,1277,1612,1257,1649,1233,1678,1205,1705,1173,1744,1114,1748,1117,1709,1176,1682,1208,1652,1237,1615,1262,1575,1282,1532,1297,1489,1308,1406,1319,1336,1322"/>
-<area shape="rect" id="Node000015" href="$dd/dfa/cursor_8c.html#ab2e17d032152e3e552ba1471a41b6c18" title="TODO: ?????" alt="" coords="1415,1254,1527,1280"/>
+<area shape="rect" id="Node000015" href="$dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="TODO: ?????" alt="" coords="1415,1254,1527,1280"/>
 <area shape="poly" id="edge16_Node000011_Node000015" title=" " alt="" coords="1331,1301,1405,1282,1406,1287,1332,1307"/>
 <area shape="rect" id="Node000014" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="1873,699,1977,725"/>
 <area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1766,1075,1910,738,1914,740,1771,1077"/>
@@ -89,7 +89,7 @@
 <area shape="poly" id="edge41_Node000023_Node000026" title=" " alt="" coords="431,1487,591,1392,593,1397,434,1492"/>
 <area shape="rect" id="Node000034" href="$dc/de5/random_8c.html#ad5a3df3d0092f55f6ea54ccaa7daf3dc" title="Enables the generation of random numbers." alt="" coords="1581,2078,1644,2104"/>
 <area shape="poly" id="edge68_Node000023_Node000034" title=" " alt="" coords="419,1513,431,1563,452,1640,485,1734,529,1834,556,1883,587,1930,621,1973,658,2011,699,2043,744,2067,793,2083,846,2088,1282,2088,1565,2088,1565,2093,1282,2093,845,2093,792,2088,742,2072,696,2047,654,2015,617,1976,582,1933,552,1886,525,1836,480,1736,447,1642,426,1564,414,1514"/>
-<area shape="rect" id="Node000035" href="$d1/dcb/game_8c.html#ac5d6665e8acc93ae4bb853799c795f3f" title=" " alt="" coords="579,1562,679,1588"/>
+<area shape="rect" id="Node000035" href="$d1/dcb/game_8c.html#a03d584df138a0aa6e9c8f1e013f2073e" title=" " alt="" coords="579,1562,679,1588"/>
 <area shape="poly" id="edge70_Node000023_Node000035" title=" " alt="" coords="433,1506,543,1548,564,1555,563,1560,541,1553,432,1511"/>
 <area shape="rect" id="Node000036" href="$df/d73/time_8c.html#a04352ea8ee003992baa1d4e993b50dae" title="Initializes the timer." alt="" coords="1027,1961,1097,1986"/>
 <area shape="poly" id="edge72_Node000023_Node000036" title=" " alt="" coords="427,1512,476,1570,544,1642,649,1746,698,1787,765,1834,830,1872,897,1905,1014,1954,1012,1959,895,1910,827,1876,762,1838,694,1791,645,1750,540,1646,472,1573,423,1515"/>
@@ -108,7 +108,7 @@
 <area shape="rect" id="Node000033" href="$dc/d78/ui_8c.html#ad7ec4b5965543c400031e14183eee496" title=" " alt="" coords="1006,649,1118,674"/>
 <area shape="poly" id="edge65_Node000026_Node000033" title=" " alt="" coords="638,1358,762,1196,811,1140,853,1099,890,1056,928,994,940,964,947,939,953,892,958,845,976,787,1006,731,1038,685,1043,688,1011,734,980,789,963,846,958,893,952,940,945,966,932,996,895,1059,857,1103,815,1144,766,1199,642,1362"/>
 <area shape="poly" id="edge45_Node000027_Node000011" title=" " alt="" coords="1071,1647,1144,1544,1212,1433,1263,1343,1267,1345,1216,1435,1149,1547,1076,1650"/>
-<area shape="rect" id="Node000028" href="$dd/da6/field_8c.html#ab51eda1e84a93a35d01dcf7b83f6e5f3" title="Print one row." alt="" coords="1576,1609,1649,1634"/>
+<area shape="rect" id="Node000028" href="$dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row." alt="" coords="1576,1609,1649,1634"/>
 <area shape="poly" id="edge46_Node000027_Node000028" title=" " alt="" coords="1108,1656,1561,1623,1561,1628,1108,1661"/>
 <area shape="poly" id="edge47_Node000028_Node000013" title=" " alt="" coords="1632,1606,1648,1588,1680,1526,1704,1459,1723,1391,1737,1323,1753,1203,1757,1118,1763,1118,1758,1203,1742,1324,1729,1392,1709,1461,1684,1528,1653,1591,1636,1610"/>
 <area shape="poly" id="edge50_Node000029_Node000011" title=" " alt="" coords="903,1473,956,1473,1018,1468,1083,1456,1145,1435,1191,1398,1253,1339,1257,1343,1194,1402,1148,1440,1084,1461,1019,1473,956,1478,903,1478"/>
@@ -132,7 +132,7 @@
 <area shape="poly" id="edge71_Node000035_Node000004" title=" " alt="" coords="681,1585,717,1605,734,1624,742,1643,749,1661,765,1678,801,1696,854,1714,975,1743,974,1748,853,1719,799,1701,762,1682,745,1664,737,1645,729,1627,714,1609,678,1590"/>
 <area shape="rect" id="Node000037" href="$df/d41/timer_8c.html#a6bb9bef52a6d01f72cbbb032d00f4929" title="Set the Capture/ Compare Register of the Timer." alt="" coords="1194,1875,1367,1901"/>
 <area shape="poly" id="edge73_Node000036_Node000037" title=" " alt="" coords="1096,1958,1230,1905,1232,1910,1098,1963"/>
-<area shape="rect" id="Node000038" href="$df/d41/timer_8c.html#a450c32f7b88b1d0fb3587edbe79944f8" title="Initialises the Timer." alt="" coords="1698,2027,1825,2053"/>
+<area shape="rect" id="Node000038" href="$df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234" title="Initialises the Timer." alt="" coords="1698,2027,1825,2053"/>
 <area shape="poly" id="edge76_Node000036_Node000038" title=" " alt="" coords="1098,1984,1144,2000,1195,2012,1328,2030,1462,2039,1585,2041,1683,2040,1683,2046,1585,2047,1462,2044,1328,2035,1194,2017,1142,2005,1096,1989"/>
 <area shape="rect" id="Node000039" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="1239,1977,1322,2002"/>
 <area shape="poly" id="edge78_Node000036_Node000039" title=" " alt="" coords="1098,1973,1224,1983,1223,1988,1097,1979"/>
@@ -153,7 +153,7 @@
 <area shape="poly" id="edge90_Node000044_Node000045" title=" " alt="" coords="472,747,554,728,555,733,473,752"/>
 <area shape="rect" id="Node000046" href="$db/dcc/cell_8c.html#ab9e31dcd2aaecf6c26bba4fc29a2e882" title="Increases the field size." alt="" coords="568,750,690,776"/>
 <area shape="poly" id="edge91_Node000044_Node000046" title=" " alt="" coords="473,760,552,760,552,765,473,765"/>
-<area shape="rect" id="Node000047" href="$d1/d06/input_8c.html#ab2185691da03c65b53ec461a1e9a6194" title=" " alt="" coords="549,195,709,221"/>
+<area shape="rect" id="Node000047" href="$d1/d06/input_8c.html#a309f3d06b02c506feb7a2454b76e25e7" title=" " alt="" coords="549,195,709,221"/>
 <area shape="poly" id="edge92_Node000044_Node000047" title=" " alt="" coords="417,749,615,234,620,236,422,751"/>
 <area shape="rect" id="Node000048" href="$d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title=" " alt="" coords="557,1058,701,1084"/>
 <area shape="poly" id="edge94_Node000044_Node000048" title=" " alt="" coords="419,775,429,826,451,899,468,938,489,977,514,1013,544,1045,547,1047,544,1052,541,1049,510,1017,484,980,463,941,446,901,424,827,413,776"/>
@@ -181,7 +181,7 @@
 <area shape="poly" id="edge104_Node000053_Node000010" title=" " alt="" coords="889,1283,931,1302,955,1318,979,1334,1008,1347,1006,1352,977,1338,953,1322,929,1306,887,1288"/>
 <area shape="rect" id="Node000055" href="$df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="1008,1205,1117,1230"/>
 <area shape="poly" id="edge107_Node000054_Node000055" title=" " alt="" coords="902,979,918,988,932,1000,949,1025,956,1050,956,1099,954,1122,956,1146,963,1169,980,1192,995,1203,992,1207,976,1195,958,1171,950,1147,949,1122,950,1098,951,1051,944,1027,928,1003,915,992,900,984"/>
-<area shape="rect" id="Node000057" href="$d0/dfd/winning_8c.html#abd942f9ead8d6374f467c3c245c2ccda" title="Checks if the given player has won." alt="" coords="999,1155,1125,1181"/>
+<area shape="rect" id="Node000057" href="$d0/dfd/winning_8c.html#a8cb661cf3adab5e96933f0673b163eed" title="Checks if the given player has won." alt="" coords="999,1155,1125,1181"/>
 <area shape="poly" id="edge110_Node000056_Node000057" title=" " alt="" coords="917,931,932,942,950,967,958,991,959,1015,958,1039,957,1087,964,1110,980,1134,993,1146,990,1150,976,1138,959,1113,952,1088,952,1039,954,1015,952,992,945,969,928,946,914,936"/>
 <area shape="poly" id="edge122_Node000058_Node000049" title=" " alt="" coords="632,548,646,506,673,448,711,386,735,358,762,333,786,319,789,324,765,337,739,361,715,389,677,451,651,508,637,549"/>
 <area shape="poly" id="edge123_Node000058_Node000051" title=" " alt="" coords="645,573,683,621,703,653,718,687,726,744,730,841,732,1098,734,1233,739,1353,749,1446,757,1477,766,1496,785,1510,782,1515,762,1499,752,1479,744,1446,734,1354,729,1233,727,1098,725,841,721,745,713,689,698,655,679,624,641,577"/>
@@ -205,7 +205,7 @@
 <area shape="poly" id="edge126_Node000061_Node000041" title=" " alt="" coords="865,798,896,771,928,736,942,708,948,683,956,659,976,634,980,631,984,635,980,638,961,661,953,685,947,710,932,739,900,775,868,802"/>
 <area shape="rect" id="Node000062" href="$d6/db1/print_8c.html#a5ec3fe142f65005eea1c8400632aae78" title="Prints the given integer with a new line character." alt="" coords="1024,801,1101,826"/>
 <area shape="poly" id="edge130_Node000061_Node000062" title=" " alt="" coords="924,811,1008,811,1008,816,924,816"/>
-<area shape="rect" id="Node000063" href="$d2/d0a/menu_8c.html#a2143804a7c8e1529eff8a242ad1a8fa8" title=" " alt="" coords="1217,899,1344,925"/>
+<area shape="rect" id="Node000063" href="$d2/d0a/menu_8c.html#ae6016a73419a07574f6693644b4172f7" title=" " alt="" coords="1217,899,1344,925"/>
 <area shape="poly" id="edge134_Node000061_Node000063" title=" " alt="" coords="863,825,928,887,979,931,1010,941,1042,946,1108,947,1171,939,1224,927,1225,932,1172,945,1109,953,1042,951,1009,946,977,936,924,891,860,829"/>
 <area shape="rect" id="Node000064" href="$dc/d78/ui_8c.html#aa7c37f269bcee19a98aea573289d9877" title=" " alt="" coords="1013,1054,1111,1080"/>
 <area shape="poly" id="edge136_Node000061_Node000064" title=" " alt="" coords="866,825,898,855,932,893,947,918,956,938,965,959,980,983,1007,1014,1036,1042,1032,1045,1004,1018,976,986,961,961,952,941,943,920,928,896,894,858,862,829"/>

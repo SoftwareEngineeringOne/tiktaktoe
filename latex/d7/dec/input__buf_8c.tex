@@ -13,17 +13,17 @@ Include dependency graph for input\+\_\+buf.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input__buf_8c_a94879a59b145834ad147b43c5f9ffbda}{put\+Into\+Buf}} (volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib, const uint8\+\_\+t byte)
+static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input__buf_8c_a6b0d0104392c0034ca549ef8dc2875a4}{put\+Into\+Buf}} (volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib, uint8\+\_\+t byte)
 \begin{DoxyCompactList}\small\item\em Put the next byte into the buffer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input__buf_8c_a6f2425195e541bcea7e78d39ff1c1d54}{input\+\_\+on\+Interrupt}} (const uint8\+\_\+t input)
 \begin{DoxyCompactList}\small\item\em Function to call in case of UART input interrupt. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{input__buf_8c_a9bb68967ad751f4b307afa735a3501ff}{input\+\_\+init}} (volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib)
 \begin{DoxyCompactList}\small\item\em Initialize the given \doxylink{structInputBuffer}{Input\+Buffer}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input__buf_8c_aaec1348b29929f537c59bc6b5718bd4e}{input\+\_\+is\+Empty}} (const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib)
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input__buf_8c_aaec1348b29929f537c59bc6b5718bd4e}{input\+\_\+is\+Empty}} (const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib)
 \begin{DoxyCompactList}\small\item\em Check if the buffer is empty. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input__buf_8c_a4401e9499819daae58c72b265d521374}{input\+\_\+is\+Full}} (const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib)
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input__buf_8c_a4401e9499819daae58c72b265d521374}{input\+\_\+is\+Full}} (const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib)
 \begin{DoxyCompactList}\small\item\em Check if the buffer is full. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} \mbox{\hyperlink{input__buf_8c_a3e03a367ae13ea8f68021a964efbef90}{input\+\_\+get\+Next}} (volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib, uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte)
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input__buf_8c_a3e03a367ae13ea8f68021a964efbef90}{input\+\_\+get\+Next}} (volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}ib, uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte)
 \begin{DoxyCompactList}\small\item\em Get the next byte from the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -56,7 +56,7 @@ Definition in file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 \index{input\_getNext@{input\_getNext}!input\_buf.c@{input\_buf.c}}
 \doxysubsubsection{\texorpdfstring{input\_getNext()}{input\_getNext()}}
 {\footnotesize\ttfamily \label{input__buf_8c_a3e03a367ae13ea8f68021a964efbef90} 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} input\+\_\+get\+Next (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{byte}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} input\+\_\+get\+Next (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{byte}{}\end{DoxyParamCaption})}
 
 
 
@@ -74,11 +74,11 @@ False if empty
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00051}{51}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00059}{59}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00026}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, \mbox{\hyperlink{input__buf_8c_source_l00041}{input\+\_\+is\+Empty()}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00026}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, \mbox{\hyperlink{input__buf_8c_source_l00049}{input\+\_\+is\+Empty()}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -113,7 +113,7 @@ Initialize the given \doxylink{structInputBuffer}{Input\+Buffer}.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00035}{35}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00043}{43}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
@@ -131,7 +131,7 @@ Here is the caller graph for this function\+:
 \index{input\_isEmpty@{input\_isEmpty}!input\_buf.c@{input\_buf.c}}
 \doxysubsubsection{\texorpdfstring{input\_isEmpty()}{input\_isEmpty()}}
 {\footnotesize\ttfamily \label{input__buf_8c_aaec1348b29929f537c59bc6b5718bd4e} 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} input\+\_\+is\+Empty (\begin{DoxyParamCaption}\item[{const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} input\+\_\+is\+Empty (\begin{DoxyParamCaption}\item[{const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{}\end{DoxyParamCaption})}
 
 
 
@@ -147,7 +147,7 @@ True if empty
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00041}{41}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00049}{49}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
@@ -165,7 +165,7 @@ Here is the caller graph for this function\+:
 \index{input\_isFull@{input\_isFull}!input\_buf.c@{input\_buf.c}}
 \doxysubsubsection{\texorpdfstring{input\_isFull()}{input\_isFull()}}
 {\footnotesize\ttfamily \label{input__buf_8c_a4401e9499819daae58c72b265d521374} 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} input\+\_\+is\+Full (\begin{DoxyParamCaption}\item[{const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} input\+\_\+is\+Full (\begin{DoxyParamCaption}\item[{const volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{}\end{DoxyParamCaption})}
 
 
 
@@ -181,7 +181,7 @@ True if full
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00046}{46}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00054}{54}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
@@ -212,7 +212,7 @@ Function to call in case of UART input interrupt.
 \end{DoxyParams}
 TODO Handle error better
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00026}{26}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00034}{34}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
@@ -234,11 +234,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=301pt]{d7/dec/input__buf_8c_a6f2425195e541bcea7e78d39ff1c1d54_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{input__buf_8c_a94879a59b145834ad147b43c5f9ffbda}\index{input\_buf.c@{input\_buf.c}!putIntoBuf@{putIntoBuf}}
+\Hypertarget{input__buf_8c_a6b0d0104392c0034ca549ef8dc2875a4}\index{input\_buf.c@{input\_buf.c}!putIntoBuf@{putIntoBuf}}
 \index{putIntoBuf@{putIntoBuf}!input\_buf.c@{input\_buf.c}}
 \doxysubsubsection{\texorpdfstring{putIntoBuf()}{putIntoBuf()}}
-{\footnotesize\ttfamily \label{input__buf_8c_a94879a59b145834ad147b43c5f9ffbda} 
-\mbox{\hyperlink{def_8h_abb452686968e48b67397da5f97445f5b}{bool}} put\+Into\+Buf (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{, }\item[{const uint8\+\_\+t}]{byte}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{input__buf_8c_a6b0d0104392c0034ca549ef8dc2875a4} 
+static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} put\+Into\+Buf (\begin{DoxyParamCaption}\item[{volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \texorpdfstring{$\ast$}{*}}]{ib}{, }\item[{uint8\+\_\+t}]{byte}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -260,14 +260,14 @@ Definition at line \mbox{\hyperlink{input__buf_8c_source_l00070}{70}} of file \m
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00026}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00027}{Input\+Buffer\+::head}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, and \mbox{\hyperlink{input__buf_8c_source_l00046}{input\+\_\+is\+Full()}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00026}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00027}{Input\+Buffer\+::head}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, and \mbox{\hyperlink{input__buf_8c_source_l00054}{input\+\_\+is\+Full()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=243pt]{d7/dec/input__buf_8c_a94879a59b145834ad147b43c5f9ffbda_cgraph}
+\includegraphics[width=243pt]{d7/dec/input__buf_8c_a6b0d0104392c0034ca549ef8dc2875a4_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -275,7 +275,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d7/dec/input__buf_8c_a94879a59b145834ad147b43c5f9ffbda_icgraph}
+\includegraphics[width=350pt]{d7/dec/input__buf_8c_a6b0d0104392c0034ca549ef8dc2875a4_icgraph}
 \end{center}
 \end{figure}
 

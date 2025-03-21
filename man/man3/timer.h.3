@@ -1,4 +1,4 @@
-.TH "hal/timer.h" 3 "Fri Mar 21 2025 12:20:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/timer.h" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -179,7 +179,7 @@ hal/timer.h \- Contains constants and abstraction functions for the COUNTER devi
 .br
 .RI "Default Initialisation of Timer\&. "
 .ti -1c
-.RI "void \fBtimer_init_detailed\fP (\fBTimer\fP timer, uint8_t prescaler, \fBTimerMode\fP mode, \fBTimerBitMode\fP bitMode)"
+.RI "void \fBtimer_init_detailed\fP (\fBTimer\fP timer, uint8_t prescaler, \fBTimerBitMode\fP bitMode)"
 .br
 .RI "Initialises the Timer\&. "
 .ti -1c
@@ -477,7 +477,7 @@ Capture the time of the given timer\&.
 .PP
 
 .PP
-Definition at line \fB128\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB127\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_TASK_START\fP, \fBTimerBase\fP, and \fBTimerCaptureTaskOffset\fP\&.
 .SS "uint32_t timer_captureCompareGet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare)"
@@ -498,7 +498,7 @@ Gets the Capture Compare Register of Timer\&.
 .PP
 
 .PP
-Definition at line \fB92\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB91\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_read()\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
 .SS "void timer_captureCompareSet (\fBTimer\fP timer, \fBTimerCaptureCompare\fP captureCompare, uint32_t value, \fBbool\fP shortcutClear)"
@@ -520,7 +520,7 @@ Set the Capture/ Compare Register of the Timer\&. It also enables the shortcut b
 .PP
 
 .PP
-Definition at line \fB75\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB74\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_read()\fP, \fBregister_write()\fP, \fBTIMER_SHORTS\fP, \fBTimerBase\fP, and \fBTimerCCOffset\fP\&.
 .SS "void timer_clear (\fBTimer\fP timer)"
@@ -535,7 +535,7 @@ Clear the time of the given timer\&.
 .PP
 
 .PP
-Definition at line \fB121\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB120\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_CLEAR\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
 .SS "void timer_clearCompareEvent (\fBTimer\fP timer)"
@@ -543,7 +543,7 @@ References \fBregister_write()\fP, \fBTIMER_CLEAR\fP, \fBTIMER_TASK_START\fP, an
 .PP
 Clears the Compare Event for CC[0]\&. This could be useful for stopping the timer from pulling the interrupt-line\&. 
 .PP
-Definition at line \fB136\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB135\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_COMPARE_0\fP, \fBTIMER_EVENT_CLEAR\fP, and \fBTimerBase\fP\&.
 .SS "void timer_count (\fBTimer\fP timer)"
@@ -558,7 +558,7 @@ Activate counting on the given timer\&.
 .PP
 
 .PP
-Definition at line \fB114\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB113\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_COUNT\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
 .SS "void timer_init (\fBTimer\fP timer)"
@@ -569,7 +569,7 @@ Default Initialisation of Timer\&. Initializes the Timer Peripheral to a value ~
 Definition at line \fB44\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBCC0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, \fBTIMER_MODE_TIMER\fP, and \fBtimer_start()\fP\&.
-.SS "void timer_init_detailed (\fBTimer\fP timer, uint8_t prescaler, \fBTimerMode\fP mode, \fBTimerBitMode\fP bitMode)"
+.SS "void timer_init_detailed (\fBTimer\fP timer, uint8_t prescaler, \fBTimerBitMode\fP bitMode)"
 
 .PP
 Initialises the Timer\&. Compare Value set is for CC[0]
@@ -599,7 +599,7 @@ Starts the given timer\&.
 .PP
 
 .PP
-Definition at line \fB100\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB99\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_START\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
 .SS "void timer_stop (\fBTimer\fP timer)"
@@ -614,7 +614,7 @@ Stops the given timer\&.
 .PP
 
 .PP
-Definition at line \fB107\fP of file \fBtimer\&.c\fP\&.
+Definition at line \fB106\fP of file \fBtimer\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBTIMER_STOP\fP, \fBTIMER_TASK_START\fP, and \fBTimerBase\fP\&.
 .SH "Author"

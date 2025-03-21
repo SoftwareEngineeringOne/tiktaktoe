@@ -13,20 +13,20 @@
 <area shape="rect" id="Node000006" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,132,55,158"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,148,55,148,55,142,87,142"/>
 <area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="992,108,960,103,810,87,693,82,576,91,429,118,377,134,375,129,428,113,576,85,693,76,811,82,961,98,993,103"/>
-<area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a5ba143de5d686da017fc2281274d7729" title="Handles the presentation update in case of a automatic round." alt="" coords="631,107,804,132"/>
+<area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a02793d13c56663addd9878f851e1a525" title="Handles the presentation update in case of a automatic round." alt="" coords="631,107,804,132"/>
 <area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="993,122,804,122,804,117,993,117"/>
 <area shape="rect" id="Node000009" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title=" " alt="" coords="852,157,960,183"/>
 <area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="1005,140,948,159,946,154,1003,135"/>
 <area shape="rect" id="Node000011" href="$dc/d78/ui_8c.html#a5bca51cc044ff3d5ae62598e420cc159" title="Writes the turn text to the screen." alt="" coords="854,207,958,232"/>
 <area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="1034,144,1001,171,962,198,941,209,939,204,959,193,998,167,1031,140"/>
 <area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="615,129,381,145,380,140,615,124"/>
-<area shape="rect" id="Node000010" href="$d1/d06/input_8c.html#a866c488857b6c0702ef9278c5c83e73e" title="Handle a input byte with current states." alt="" coords="445,157,566,183"/>
+<area shape="rect" id="Node000010" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handle a input byte with current states." alt="" coords="445,157,566,183"/>
 <area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="837,173,566,173,566,168,837,168"/>
 <area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="430,161,380,153,381,148,430,156"/>
-<area shape="rect" id="Node000012" href="$d1/dcb/game_8c.html#a4938becaec0f17690ab3a575fcb0bd4a" title="Refreshes the whole UI." alt="" coords="673,208,762,234"/>
+<area shape="rect" id="Node000012" href="$d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="673,208,762,234"/>
 <area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="838,223,762,223,762,218,838,217"/>
 <area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="658,226,549,221,488,213,427,198,389,181,358,160,361,156,392,176,429,193,489,208,550,216,658,220"/>
-<area shape="rect" id="Node000013" href="$d1/dcb/game_8c.html#a387f7e30d5af50e10db36dbf0ea4b04b" title="Initializes several things at the game start." alt="" coords="486,259,525,284"/>
+<area shape="rect" id="Node000013" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="486,259,525,284"/>
 <area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="659,237,526,270,525,264,658,232"/>
 <area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="471,264,427,242,381,199,350,160,354,156,385,196,430,237,473,259"/>
 </map>

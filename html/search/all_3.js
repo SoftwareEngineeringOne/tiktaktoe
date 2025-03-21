@@ -21,7 +21,7 @@ var searchData=
   ['cellsize_18',['CellSize',['../d8/dd7/structCellSize.html',1,'']]],
   ['cellstate_19',['CellState',['../de/d19/structCellState.html',1,'']]],
   ['check_20correct_20',['Dependencies (TODO: CHECK CORRECT)',['../index.html#autotoc_md18',1,'']]],
-  ['checkifplayerwon_21',['checkIfPlayerWon',['../d0/dfd/winning_8c.html#abd942f9ead8d6374f467c3c245c2ccda',1,'winning.c']]],
+  ['checkifplayerwon_21',['checkIfPlayerWon',['../d0/dfd/winning_8c.html#a8cb661cf3adab5e96933f0673b163eed',1,'winning.c']]],
   ['circle_22',['Circle',['../d2/dd5/game_8h.html#a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489',1,'game.h']]],
   ['circle_5faverage_5fticks_23',['circle_average_ticks',['../d2/d3d/structGameState.html#a297936a8a0f84738c04962fb19d670e6',1,'GameState']]],
   ['circle_5fstarts_24',['CIRCLE_STARTS',['../d2/d5a/ascii__art_8h.html#adc56130da1826ec86b800609ac465aed',1,'ascii_art.h']]],

@@ -1,4 +1,4 @@
-.TH "logic/game.c" 3 "Fri Mar 21 2025 12:20:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.c" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -154,7 +154,7 @@ Start the main game\&.
 Definition at line \fB64\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBbot_markRandomCell()\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBui_updateTurn()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
-.SS "void handleForcedMoveUpdate ()\fR [static]\fP"
+.SS "static void handleForcedMoveUpdate ()\fR [static]\fP"
 
 .PP
 Handles the presentation update in case of a automatic round\&. 
@@ -162,7 +162,7 @@ Handles the presentation update in case of a automatic round\&.
 Definition at line \fB268\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCircle\fP, \fBGameState::current_player\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBui_updateTurn()\fP\&.
-.SS "void init (\fBMode\fP mode)\fR [static]\fP"
+.SS "static void init (\fBMode\fP mode)\fR [static]\fP"
 
 .PP
 Initializes several things at the game start\&. 
@@ -170,7 +170,7 @@ Initializes several things at the game start\&.
 Definition at line \fB180\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBGameState::current_player\fP, \fBFIRST_ROUND\fP, \fBg_input_buf\fP, \fBgame_state\fP, \fBHIDE_CURSOR\fP, \fBinput_init()\fP, \fBCell::marked_by\fP, \fBNone\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBredrawField()\fP, \fBrng_init()\fP, \fBCellState::selected\fP, \fBstartingPlayer()\fP, \fBtime_init()\fP, and \fBui_printStartingPlayer()\fP\&.
-.SS "void redrawField ()\fR [static]\fP"
+.SS "static void redrawField ()\fR [static]\fP"
 
 .PP
 Refreshes the whole UI\&. 
@@ -178,7 +178,7 @@ Refreshes the whole UI\&.
 Definition at line \fB257\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBGameState::current_player\fP, \fBfield_redraw()\fP, \fBgame_state\fP, \fBprint_clearConsole()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBui_displayTimer()\fP, \fBui_displayTurn()\fP, and \fBui_printHeading()\fP\&.
-.SS "\fBPlayer\fP startingPlayer ()\fR [static]\fP"
+.SS "static \fBPlayer\fP startingPlayer ()\fR [static]\fP"
 
 .PP
 Definition at line \fB290\fP of file \fBgame\&.c\fP\&.

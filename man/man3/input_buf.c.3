@@ -1,4 +1,4 @@
-.TH "util/input_buf.c" 3 "Fri Mar 21 2025 12:20:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/input_buf.c" 3 "Fri Mar 21 2025 12:43:06" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,7 +15,7 @@ util/input_buf.c
 
 .in +1c
 .ti -1c
-.RI "static \fBbool\fP \fBputIntoBuf\fP (volatile \fBInputBuffer\fP *ib, const uint8_t byte)"
+.RI "static \fBbool\fP \fBputIntoBuf\fP (volatile \fBInputBuffer\fP *ib, uint8_t byte)"
 .br
 .RI "Put the next byte into the buffer\&. "
 .ti -1c
@@ -92,7 +92,7 @@ False if empty
 .PP
 
 .PP
-Definition at line \fB51\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB59\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBINPUT_BUF_SIZE\fP, \fBinput_isEmpty()\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_init (volatile \fBInputBuffer\fP * ib)"
@@ -107,7 +107,7 @@ Initialize the given \fBInputBuffer\fP\&.
 .PP
 
 .PP
-Definition at line \fB35\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB43\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isEmpty (const volatile \fBInputBuffer\fP * ib)"
@@ -127,7 +127,7 @@ True if empty
 .PP
 
 .PP
-Definition at line \fB41\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB49\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isFull (const volatile \fBInputBuffer\fP * ib)"
@@ -147,7 +147,7 @@ True if full
 .PP
 
 .PP
-Definition at line \fB46\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB54\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_onInterrupt (uint8_t input)"
@@ -162,10 +162,10 @@ Function to call in case of UART input interrupt\&.
 .PP
 TODO Handle error better
 .PP
-Definition at line \fB26\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB34\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBg_input_buf\fP, \fBprint()\fP, and \fBputIntoBuf()\fP\&.
-.SS "\fBbool\fP putIntoBuf (volatile \fBInputBuffer\fP * ib, const uint8_t byte)\fR [static]\fP"
+.SS "static \fBbool\fP putIntoBuf (volatile \fBInputBuffer\fP * ib, uint8_t byte)\fR [static]\fP"
 
 .PP
 Put the next byte into the buffer\&. 

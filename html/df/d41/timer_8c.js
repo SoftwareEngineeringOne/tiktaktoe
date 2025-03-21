@@ -7,7 +7,7 @@ var timer_8c =
     [ "timer_clearCompareEvent", "df/d41/timer_8c.html#ae3480983223f15ee07ab94146a958285", null ],
     [ "timer_count", "df/d41/timer_8c.html#a787fcca546f80aacba0cbc2f755c9de4", null ],
     [ "timer_init", "df/d41/timer_8c.html#acd2972fffc78d5b8bfeda05701882565", null ],
-    [ "timer_init_detailed", "df/d41/timer_8c.html#a450c32f7b88b1d0fb3587edbe79944f8", null ],
+    [ "timer_init_detailed", "df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234", null ],
     [ "timer_start", "df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a", null ],
     [ "timer_stop", "df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd", null ],
     [ "TimerBase", "df/d41/timer_8c.html#a9ce52ba510062a86d3371b33e3629d13", null ],

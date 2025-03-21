@@ -73,7 +73,7 @@ var timer_8h =
     [ "timer_clearCompareEvent", "d5/dd0/timer_8h.html#a4f5363f092c0a32120cc8ea1947f3c07", null ],
     [ "timer_count", "d5/dd0/timer_8h.html#af979b016721acb0b47a5118e1ea8fd93", null ],
     [ "timer_init", "d5/dd0/timer_8h.html#a250fd88bd3fef522cbe9c8acf61f2001", null ],
-    [ "timer_init_detailed", "d5/dd0/timer_8h.html#a28741ad7e214647751f9f1ce8f207cdf", null ],
+    [ "timer_init_detailed", "d5/dd0/timer_8h.html#a41416d2d4a6d6b4611a7ae03d8db3653", null ],
     [ "timer_start", "d5/dd0/timer_8h.html#a6eadb1a33087d2d06c24c0f832de0d72", null ],
     [ "timer_stop", "d5/dd0/timer_8h.html#a8202b2148c7d8dd25e367ffd7b4f113d", null ]
 ];

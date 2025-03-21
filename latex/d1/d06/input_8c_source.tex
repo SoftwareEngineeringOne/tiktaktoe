@@ -16,21 +16,21 @@
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ui_8h}{presentation/ui.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input__buf_8h}{util/input\_buf.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00031}00031\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_ab2185691da03c65b53ec461a1e9a6194}{handleEscapeSequence}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00031}00031\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a309f3d06b02c506feb7a2454b76e25e7}{handleEscapeSequence}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00032}00032\ }
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00033}00033\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a98b27236b0483cfefce1c2c133ae7925}{handleSetMark}}(\mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}},\ \mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00034}00034\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a3b7f9c3d0c05d977365279bbf54ee25f}{openControls}}();}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00035}00035\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8c_a03559a576d12d8f279698c1a7d33a772}{handlePauseResume}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00036}00036\ }
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00038}\mbox{\hyperlink{input_8c_a866c488857b6c0702ef9278c5c83e73e}{00038}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8c_a866c488857b6c0702ef9278c5c83e73e}{input\_handleByte}}(uint8\_t\ *\textcolor{keywordtype}{byte},\ \mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}},\ \mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00038}\mbox{\hyperlink{input_8c_a3082ccbda618aa1099677e2e7ac9d5f6}{00038}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8c_a3082ccbda618aa1099677e2e7ac9d5f6}{input\_handleByte}}(\textcolor{keyword}{const}\ uint8\_t\ *\textcolor{keywordtype}{byte},\ \mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}},\ \mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00039}00039\ \{}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{switch}(*\textcolor{keywordtype}{byte})}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00041}00041\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)e'}:}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{time_8c_a5c31952f8992f7d8f3d22c625761e217}{g\_timer}}.\mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\_running}})}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8c_ab2185691da03c65b53ec461a1e9a6194}{handleEscapeSequence}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8c_a309f3d06b02c506feb7a2454b76e25e7}{handleEscapeSequence}}(\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\(\backslash\)r'}:}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'\ '}:}
@@ -53,7 +53,7 @@
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00066}00066\ \}}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{input_8c_source_l00068}\mbox{\hyperlink{input_8c_ab2185691da03c65b53ec461a1e9a6194}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_ab2185691da03c65b53ec461a1e9a6194}{handleEscapeSequence}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
+\DoxyCodeLine{\Hypertarget{input_8c_source_l00068}\mbox{\hyperlink{input_8c_a309f3d06b02c506feb7a2454b76e25e7}{00068}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input_8c_a309f3d06b02c506feb7a2454b76e25e7}{handleEscapeSequence}}(\mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}})}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00069}00069\ \{}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00070}00070\ \ \ \ \ uint8\_t\ input\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
 \DoxyCodeLine{\Hypertarget{input_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{input__buf_8c_a3e03a367ae13ea8f68021a964efbef90}{input\_getNext}}(\&\mbox{\hyperlink{input__buf_8c_a3e797155e2d8f73914a02d047ea39a37}{g\_input\_buf}},\ \&input)\ ||\ input\ !=\ \textcolor{charliteral}{'['})}

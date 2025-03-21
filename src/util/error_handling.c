@@ -34,9 +34,7 @@ static void handleError(const char *hint)
     println("(This is not guaranteed to fix the error)");
     print(RESET);
 
-    while(uart_readByte() == 0)
-    {
-    }
+    while(uart_readByte() == 0);
 
     system_softReset();
 }

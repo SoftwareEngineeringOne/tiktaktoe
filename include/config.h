@@ -1,8 +1,14 @@
 /*! !! This file has been generated automatically, any changes may be overridden !! !*/
 /**
- * @file config.h
+ * @file
  *
- * @brief Contains important compile-time options
+ * @author 
+ *
+ * @date 
+ *
+ * @brief 
+ *
+ * @see 
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -18,8 +24,8 @@
 #define ENABLE_ASCII_ART
 
 // size of the field
-#define CELLS_PER_ROW 3
-#define CELLS_PER_COL 3
+#define CELLS_PER_ROW 4
+#define CELLS_PER_COL 4
 
 // game speed
 #define TICKS_PER_TURN 20

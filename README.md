@@ -34,7 +34,7 @@ cmake --preset arm-cortex-m0-unix
 cmake --build --preset arm-cortex-m0-unix
 
 # 3. Run the project
-qemu-system-arm -M microbit -device loader,file=build-cortex-m0/game.elf -nographic -s -serial mon:stdio
+qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio
 ```
 
 #### Windows

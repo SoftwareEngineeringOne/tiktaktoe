@@ -22,9 +22,9 @@ RUN apk add --no-cache qemu-system-arm
 
 WORKDIR /app
 
-COPY --from=builder /app/build-cortex-m0/game.elf /app/game.elf
+COPY --from=builder /app/build-cortex-m0/TikTakToe.elf /app/TikTakToe.elf
 
-ENTRYPOINT ["qemu-system-arm", "-machine", "microbit", "-device", "loader,file=/app/game.elf", "-s", "-nographic", "-serial", "mon:stdio"]
+ENTRYPOINT ["qemu-system-arm", "-machine", "microbit", "-device", "loader,file=/app/TikTakToe.elf", "-s", "-nographic", "-serial", "mon:stdio"]
 
 LABEL org.opencontainers.image.source=https://github.com/SoftwareEngineeringOne/tiktaktoe
 LABEL org.opencontainers.image.licenses=MPL-2.0

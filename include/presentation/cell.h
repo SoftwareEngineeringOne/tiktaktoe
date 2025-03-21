@@ -64,14 +64,6 @@ void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW], const char *modifier);
  */
 void cell_select(const Cell *cell);
 
-
-/**
- * @brief Marks the given cell
- * @param [in] cell
- * Cell to mark
- */
-void cell_mark(Cell *cell);
-
 /**
  * @brief Increases the field size
  */

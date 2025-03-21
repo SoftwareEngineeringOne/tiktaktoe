@@ -8,7 +8,7 @@ on:
       - '**.h'
       - Dockerfile
       - '.github/workflows/docker.yml'
-    tag:
+    tags:
   workflow_dispatch:
 
 env:

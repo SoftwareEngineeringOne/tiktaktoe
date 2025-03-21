@@ -1,4 +1,4 @@
-.TH "presentation/menu.h" 3 "Fri Mar 21 2025 13:00:26" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/menu.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -89,13 +89,13 @@ Definition at line \fB16\fP of file \fBmenu\&.h\fP\&.
 .SS "void menu_anyKeyToContinue (const char * continue_hint)"
 
 .PP
-Definition at line \fB192\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB214\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBITALIC_DIM\fP, and \fBprintln_styled()\fP\&.
 .SS "void menu_showControls (const char * continue_hint)"
 
 .PP
-Definition at line \fB144\fP of file \fBmenu\&.c\fP\&.
+Definition at line \fB166\fP of file \fBmenu\&.c\fP\&.
 .PP
 References \fBARROW_DOWN\fP, \fBARROW_LEFT\fP, \fBARROW_RIGHT\fP, \fBARROW_UP\fP, \fBBOLD_CROSS\fP, \fBDEFAULT_BOLD\fP, \fBITALIC_DIM\fP, \fBmenu_anyKeyToContinue()\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, and \fBui_printHeading()\fP\&.
 .SS "void menu_showCredits ()"
@@ -103,7 +103,7 @@ References \fBARROW_DOWN\fP, \fBARROW_LEFT\fP, \fBARROW_RIGHT\fP, \fBARROW_UP\fP
 .PP
 Definition at line \fB135\fP of file \fBmenu\&.c\fP\&.
 .PP
-References \fBmenu_anyKeyToContinue()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRETURN_MENU_HINT\fP, and \fBui_printHeading()\fP\&.
+References \fBBOLD_CROSS\fP, \fBDEFAULT_BOLD\fP, \fBITALIC_DIM\fP, \fBmenu_anyKeyToContinue()\fP, \fBprint_clearConsole()\fP, \fBprint_styled()\fP, \fBprintln()\fP, \fBprintln_styled()\fP, \fBRETURN_MENU_HINT\fP, and \fBui_printHeading()\fP\&.
 .SS "void menu_showGameOver (const \fBGameState\fP * game_info)"
 
 .PP

@@ -1,4 +1,4 @@
-.TH "md__2github_2workspace_2Architecture" 3 "Fri Mar 21 2025 13:00:27" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "md__2github_2workspace_2Architecture" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,19 +7,51 @@ md__2github_2workspace_2Architecture \- Architecture
 
 
 .PP
-The architecture is interrupt-based and with the use cases package divided\&. The program starts at \fBmain\&.c\fP\&. This file is only used for restarting and shutting down the system\&. The program can run infinitely, dependent on the users actions\&. Package descriptions are following:
-.SH "Hardware Abstraction Layer (\fRhal\fP)"
+This project is an embedded application, designed to run on an \fRnRF51\fP microcontroller with an \fRarm-cortex-m0\fP CPU\&. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer\&. Additionally modules for the entry process and utility functions exist\&. This encapsulation allows for a flexible design\&.
+.SH "Entry Module"
 .PP
-The hardware abstraction layer package gives the developer the possibility to call neutral and machine-independent functions without knowing the hardware implementation\&. \\ \\ A specialty in this package are the interrupts\&. They make a user and time action-based system possible\&. It is the only component that calls functions outside the hal\&.
-.SH "Game Logic (\fRlogic\fP)"
-.PP
-The logic package is the most important part of the game\&. It manages the process of the game\&.
-.SH "Output (\fRpresentation\fP)"
-.PP
-The presentation package abstracts the whole output that is shown to the user\&. It simplifies the UART transmission\&.
-.SH "Utilities (\fRutil\fP)"
-.PP
-The util package includes independent (from another) helpers that are used from several packages\&.
+\fIfiles: entry/entry\&.S, entry/linker_script\&.ls\fP
 
 .PP
-RAM Layout (Cortex-M): 0x20000000 ┌────────────────┐ │ \&.data │ ├────────────────┤ │ \&.bss │ ├────────────────┤ │ Heap │ ├────────────────┤ │ Free Space │ ├────────────────┤ │ Stack │ │(grows downward)│ 0x20004000 ├────────────────┤ ← __StackTop (initial SP) │ │ │ │ ├────────────────┤ ← __StackLimit │ │ └────────────────┘ 
+This module is responsible for the startup process of the microcontroller\&. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed\&.
+.SS "RAM Layout (Cortex-M):"
+0x20000000 ┌────────────────┐ │ \&.data │ ├────────────────┤ │ \&.bss │ ├────────────────┤ │ │ │ Free Space │ │ │ │ │ 0x20003C00 ├────────────────┤ ← __StackLimit │ Stack │ 0x20004000 └────────────────┘ ← __StackTop (initial SP)
+.SH "Hardware Abstraction Layer"
+.PP
+\fIfiles: include/hal/*\&.h, src/hal/*\&.c\fP
+
+.PP
+The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly\&.
+.SH "Logic Layer"
+.PP
+\fIfiles: include/logic/*\&.h, src/logic/*\&.c\fP
+
+.PP
+Within this layer, the game itself resides\&. The whole logic is based here\&.
+
+.PP
+!TODO!
+.SH "Presentation Layer"
+.PP
+\fIfiles: include/presentation/*\&.h, src/presentation/*\&.c\fP
+
+.PP
+!TODO!
+.SH "Utility Layer"
+.PP
+\fIfiles: include/util/*\&.h, src/util/*\&.c\fP
+
+.PP
+!TODO!
+.SH "Other relevant files"
+.PP
+.IP "\(bu" 2
+config\&.h\&.in / \fBconfig\&.h\fP
+.IP "  \(bu" 4
+!TODO!
+.PP
+
+.IP "\(bu" 2
+!TODO! 
+.PP
+

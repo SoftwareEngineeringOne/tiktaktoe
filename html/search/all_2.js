@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['bg_5fcolor_0',['bg_color',['../de/df7/structStyle.html#ae17a65e55a793431aae29f489f7fcbc4',1,'Style']]],
-  ['bg_5fgreen_1',['BG_GREEN',['../de/d12/style_8h.html#ac351fb4567ed6655a5b39769cc5dfd04',1,'style.h']]],
-  ['bg_5fyellow_2',['BG_YELLOW',['../de/d12/style_8h.html#ab31fe3e74b1137650d30ede5c9b86218',1,'style.h']]],
-  ['bold_3',['BOLD',['../de/d12/style_8h.html#a26cdbb1a00213c810caccf21cd33a631',1,'style.h']]],
-  ['bold_5fcircle_4',['BOLD_CIRCLE',['../d9/de8/style_8c.html#a538a323c88b0e289825201c9264d3bd0',1,'BOLD_CIRCLE:&#160;style.c'],['../de/d12/style_8h.html#a538a323c88b0e289825201c9264d3bd0',1,'BOLD_CIRCLE:&#160;style.c']]],
-  ['bold_5fcross_5',['BOLD_CROSS',['../d9/de8/style_8c.html#a15ca4b464989469fd7225ad828ac164a',1,'BOLD_CROSS:&#160;style.c'],['../de/d12/style_8h.html#a15ca4b464989469fd7225ad828ac164a',1,'BOLD_CROSS:&#160;style.c']]],
-  ['bold_5fdim_6',['BOLD_DIM',['../d9/de8/style_8c.html#aeaf2130cbde9f475dd349a4026d94bc1',1,'BOLD_DIM:&#160;style.c'],['../de/d12/style_8h.html#aeaf2130cbde9f475dd349a4026d94bc1',1,'BOLD_DIM:&#160;style.c']]],
-  ['bool_7',['bool',['../d4/da4/def_8h.html#ad5c9d4ba3dc37783a528b0925dc981a0',1,'def.h']]],
-  ['bot_2ec_8',['bot.c',['../df/d98/bot_8c.html',1,'']]],
-  ['bot_2eh_9',['bot.h',['../da/de8/bot_8h.html',1,'']]],
-  ['bot_5fmarkrandomcell_10',['bot_markRandomCell',['../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f',1,'bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], const Player marked_by):&#160;bot.c'],['../da/de8/bot_8h.html#a54e3d0f1283055e089a09213936f5c43',1,'bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player marked_by):&#160;bot.c']]],
-  ['build_20and_20run_20the_20project_11',['Build and run the project',['../index.html#autotoc_md4',1,'']]],
-  ['build_20the_20image_20locally_12',['Build the image locally',['../index.html#autotoc_md13',1,'']]]
+  ['abstraction_20layer_0',['Hardware Abstraction Layer',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md29',1,'']]],
+  ['acknowledgements_1',['Acknowledgements',['../index.html#autotoc_md1',1,'']]],
+  ['all_2',['all',['../de/d19/structCellState.html#a110860b72d8fa79b546bbc2066235c11',1,'CellState']]],
+  ['and_20qemu_20directly_3',['Using CMake and qemu directly',['../index.html#autotoc_md5',1,'']]],
+  ['and_20run_20the_20project_4',['Build and run the project',['../index.html#autotoc_md4',1,'']]],
+  ['arch_5',['Arch',['../index.html#autotoc_md20',1,'']]],
+  ['architecture_6',['Architecture',['../d7/d5e/md__2github_2workspace_2Architecture.html',1,'Architecture'],['../index.html#autotoc_md2',1,'Architecture']]],
+  ['architecture_2emd_7',['Architecture.md',['../dc/d10/Architecture_8md.html',1,'']]],
+  ['arrow_5fdown_8',['ARROW_DOWN',['../d3/d54/menu_8h.html#a3710616ea12e5437f6ff15170e3bbdc6',1,'menu.h']]],
+  ['arrow_5fleft_9',['ARROW_LEFT',['../d3/d54/menu_8h.html#a972990573657c6767160574e40bf664e',1,'menu.h']]],
+  ['arrow_5fright_10',['ARROW_RIGHT',['../d3/d54/menu_8h.html#ab7ab822b400589e7bb08dd5fa4cefb52',1,'menu.h']]],
+  ['arrow_5fup_11',['ARROW_UP',['../d3/d54/menu_8h.html#a016e68eaa6a8185455fc7a372055e623',1,'menu.h']]],
+  ['ascii_5fart_2eh_12',['ascii_art.h',['../d2/d5a/ascii__art_8h.html',1,'']]],
+  ['ascii_5fnum_5foffset_13',['ASCII_NUM_OFFSET',['../d8/d79/conversion_8h.html#aafe14d6e6e8fcef6714002b4380870b7',1,'conversion.h']]],
+  ['authors_14',['Authors',['../index.html#autotoc_md24',1,'']]],
+  ['average_5fticks_15',['average_ticks',['../d2/d3d/structGameState.html#a4076f4aa22c3839c26be1f8c31c392c4',1,'GameState']]]
 ];

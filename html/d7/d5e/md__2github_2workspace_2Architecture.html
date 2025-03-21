@@ -103,27 +103,47 @@ $(function(){initNavTree('d7/d5e/md__2github_2workspace_2Architecture.html','../
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md26"></a></p>
-<p>The architecture is interrupt-based and with the use cases package divided. The program starts at <a class="el" href="../../d0/d29/main_8c.html">main.c</a>. This file is only used for restarting and shutting down the system. The program can run infinitely, dependent on the users actions. Package descriptions are following:</p>
+<p>This project is an embedded application, designed to run on an <code>nRF51</code> microcontroller with an <code>arm-cortex-m0</code> CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.</p>
 <h1><a class="anchor" id="autotoc_md27"></a>
-Hardware Abstraction Layer (<code>hal</code>)</h1>
-<p>The hardware abstraction layer package gives the developer the possibility to call neutral and machine-independent functions without knowing the hardware implementation. \ \ A specialty in this package are the interrupts. They make a user and time action-based system possible. It is the only component that calls functions outside the hal.</p>
-<h1><a class="anchor" id="autotoc_md28"></a>
-Game Logic (<code>logic</code>)</h1>
-<p>The logic package is the most important part of the game. It manages the process of the game.</p>
+Entry Module</h1>
+<p><em>files: entry/entry.S, entry/linker_script.ls</em></p>
+<p>This module is responsible for the startup process of the microcontroller. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed.</p>
+<h2><a class="anchor" id="autotoc_md28"></a>
+RAM Layout (Cortex-M):</h2>
+<p>0x20000000 ┌────────────────┐ │ .data │ ├────────────────┤ │ .bss │ ├────────────────┤ │ │ │ Free Space │ │ │ │ │ 0x20003C00 ├────────────────┤ ← __StackLimit │ Stack │ 0x20004000 └────────────────┘ ← __StackTop (initial SP)</p>
 <h1><a class="anchor" id="autotoc_md29"></a>
-Output (<code>presentation</code>)</h1>
-<p>The presentation package abstracts the whole output that is shown to the user. It simplifies the UART transmission.</p>
+Hardware Abstraction Layer</h1>
+<p><em>files: include/hal/*.h, src/hal/*.c</em></p>
+<p>The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.</p>
 <h1><a class="anchor" id="autotoc_md30"></a>
-Utilities (<code>util</code>)</h1>
-<p>The util package includes independent (from another) helpers that are used from several packages.</p>
-<p>RAM Layout (Cortex-M): 0x20000000 ┌────────────────┐ │ .data │ ├────────────────┤ │ .bss │ ├────────────────┤ │ Heap │ ├────────────────┤ │ Free Space │ ├────────────────┤ │ Stack │ │(grows downward)│ 0x20004000 ├────────────────┤ ← __StackTop (initial SP) │ │ │ │ ├────────────────┤ ← __StackLimit │ │ └────────────────┘ </p>
+Logic Layer</h1>
+<p><em>files: include/logic/*.h, src/logic/*.c</em></p>
+<p>Within this layer, the game itself resides. The whole logic is based here.</p>
+<p>!TODO!</p>
+<h1><a class="anchor" id="autotoc_md31"></a>
+Presentation Layer</h1>
+<p><em>files: include/presentation/*.h, src/presentation/*.c</em></p>
+<p>!TODO!</p>
+<h1><a class="anchor" id="autotoc_md32"></a>
+Utility Layer</h1>
+<p><em>files: include/util/*.h, src/util/*.c</em></p>
+<p>!TODO!</p>
+<h1><a class="anchor" id="autotoc_md33"></a>
+Other relevant files</h1>
+<ul>
+<li>config.h.in / <a class="el" href="../../db/d16/config_8h.html">config.h</a><ul>
+<li>!TODO!</li>
+</ul>
+</li>
+<li>!TODO! </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 21 2025 13:00:27 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Fri Mar 21 2025 13:57:38 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

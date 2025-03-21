@@ -19,7 +19,6 @@
 
 #include "hal/nvic.h"
 #include "hal/register_access.h"
-#include "hal/uart.h"
 
 #include <stdint.h>
 
@@ -35,16 +34,13 @@ static const uint32_t TimerCCOffset[4] = {
     TIMER_CC_3,
 };
 
-/* static const uint32_t TimerCompareEventOffset[4] = */
-/*     {TIMER_COMPARE_0, TIMER_COMPARE_1, TIMER_COMPARE_2, TIMER_COMPARE_3}; */
-
 static const uint32_t TimerCaptureTaskOffset[4] =
     {TIMER_CAPTURE_0, TIMER_CAPTURE_1, TIMER_CAPTURE_2, TIMER_CAPTURE_3};
 
 void timer_init(Timer const timer)
 {
     // Init Timer with an interval of ~4sek
-    timer_init_detailed(timer, 15, TIMER_MODE_TIMER, TIMER_BIT_MODE_32);
+    timer_init_detailed(timer, 15, TIMER_BIT_MODE_32);
     timer_captureCompareSet(timer, CC0, 1953, true);
     timer_start(timer);
 }
@@ -52,7 +48,6 @@ void timer_init(Timer const timer)
 void timer_init_detailed(
     Timer const timer,
     uint8_t const prescaler,
-    TimerMode const mode,
     TimerBitMode const bitMode)
 {
     const uint32_t timerBase = TimerBase[timer];

@@ -177,7 +177,7 @@ void game_endTurn()
     }
 }
 
-void init(const Mode mode)
+static void init(const Mode mode)
 {
     // When starting a second game in a session an artifact bug occurred,
     // reelecting here fixes this.
@@ -254,7 +254,7 @@ static void calculateSummary()
     game_state.circle_average_ticks = game_state.circle_total_ticks / circle_rounds;
 }
 
-void redrawField()
+static void redrawField()
 {
     print_clearConsole();
     ui_printHeading();
@@ -265,7 +265,7 @@ void redrawField()
     cell_select(cell_state.selected);
 }
 
-void handleForcedMoveUpdate()
+static void handleForcedMoveUpdate()
 {
     cell_select(cell_state.last_cross);
     cell_select(cell_state.last_circle);
@@ -287,7 +287,7 @@ void handleForcedMoveUpdate()
     }
 }
 
-Player startingPlayer()
+static Player startingPlayer()
 {
     uint8_t rand = rng_getRandomValue_waiting();
 

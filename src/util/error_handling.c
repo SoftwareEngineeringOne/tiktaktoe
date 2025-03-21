@@ -36,7 +36,6 @@ static void handleError(const char *hint)
 
     while(uart_readByte() == 0)
     {
-        // __WFI();
     }
 
     system_softReset();

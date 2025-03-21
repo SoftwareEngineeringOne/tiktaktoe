@@ -143,7 +143,29 @@ void cell_redrawAll(Cell all_cells[][CELLS_PER_ROW], const char *modifier)
     }
 }
 
-void redrawCell(const uint8_t row, const uint8_t col, const char *modifier, const Player marked_by)
+void cell_increaseSize()
+{
+    if(g_cell_size.size + 1 >= Large + 1)
+    {
+        return;
+    }
+    g_cell_size.size++;
+    g_cell_size.width = VALID_SIZES[g_cell_size.size].width;
+    g_cell_size.height = VALID_SIZES[g_cell_size.size].height;
+}
+void cell_decreaseSize()
+{
+    if(g_cell_size.size - 1 < Small)
+    {
+        return;
+    }
+    g_cell_size.size--;
+    g_cell_size.width = VALID_SIZES[g_cell_size.size].width;
+    g_cell_size.height = VALID_SIZES[g_cell_size.size].height;
+}
+
+static void
+redrawCell(const uint8_t row, const uint8_t col, const char *modifier, const Player marked_by)
 {
     const uint8_t top = row * (g_cell_size.height - 1) + 1;
     const uint8_t left = col * g_cell_size.width + 1;
@@ -202,25 +224,4 @@ void redrawCell(const uint8_t row, const uint8_t col, const char *modifier, cons
         cursor_moveTo(right + FIELD_X_OFFSET, i + FIELD_Y_OFFSET);
         print(RESET);
     }
-}
-
-void cell_increaseSize()
-{
-    if(g_cell_size.size + 1 >= Large + 1)
-    {
-        return;
-    }
-    g_cell_size.size++;
-    g_cell_size.width = VALID_SIZES[g_cell_size.size].width;
-    g_cell_size.height = VALID_SIZES[g_cell_size.size].height;
-}
-void cell_decreaseSize()
-{
-    if(g_cell_size.size - 1 < Small)
-    {
-        return;
-    }
-    g_cell_size.size--;
-    g_cell_size.width = VALID_SIZES[g_cell_size.size].width;
-    g_cell_size.height = VALID_SIZES[g_cell_size.size].height;
 }

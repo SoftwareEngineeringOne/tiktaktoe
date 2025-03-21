@@ -26,6 +26,6 @@
  * @return True in case a field redraw is needed
  *
  */
-bool input_handleByte(uint8_t *byte, GameState *game_state, CellState *cell_state);
+bool input_handleByte(const uint8_t *byte, GameState *game_state, CellState *cell_state);
 
 #endif// INPUT_H

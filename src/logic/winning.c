@@ -52,7 +52,7 @@ Player winning_checkForWinner(
     return None;
 }
 
-bool checkIfPlayerWon(
+static bool checkIfPlayerWon(
     const Cell *cell,
     const Player player,
     CellState *cell_state,
@@ -65,12 +65,18 @@ bool checkIfPlayerWon(
 
     const uint8_t diagonal_win_condition = min(CELLS_PER_COL, CELLS_PER_ROW);// NOLINT
     const uint8_t max_cells = max(CELLS_PER_COL, CELLS_PER_ROW);             // NOLINT
-    const uint8_t row = cell->row, col = cell->col;
-    const uint8_t max_row = CELLS_PER_COL - 1, max_col = CELLS_PER_ROW - 1;
-    uint8_t diagonal_1_sum = 1, diagonal_2_sum = 1;
-    bool vertical_match = true, horizontal_match = true;
-    bool diagonal_1_up_right = true, diagonal_1_down_left = true, diagonal_2_up_left = true,
-         diagonal_2_down_right = true;
+    const uint8_t row = cell->row;
+    const uint8_t col = cell->col;
+    const uint8_t max_row = CELLS_PER_COL - 1;
+    const uint8_t max_col = CELLS_PER_ROW - 1;
+    uint8_t diagonal_1_sum = 1;
+    uint8_t diagonal_2_sum = 1;
+    bool vertical_match = true;
+    bool horizontal_match = true;
+    bool diagonal_1_up_right = true;
+    bool diagonal_1_down_left = true;
+    bool diagonal_2_up_left = true;
+    bool diagonal_2_down_right = true;
 
     Cell *diagonal_1_cells[min(CELLS_PER_COL, CELLS_PER_ROW)] = {0};// NOLINT
     Cell *diagonal_2_cells[min(CELLS_PER_COL, CELLS_PER_ROW)] = {0};// NOLINT

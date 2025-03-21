@@ -97,7 +97,7 @@ void field_redraw()
 }
 
 
-void printRow(char **row, const size_t row_length)
+static void printRow(char **row, const size_t row_length)
 {
     for(size_t i = 0; i < row_length; i++)
     {

@@ -35,7 +35,7 @@ static void openControls();
 static bool handlePauseResume(CellState *cell_state);
 
 
-bool input_handleByte(uint8_t *byte, GameState *game_state, CellState *cell_state)
+bool input_handleByte(const uint8_t *byte, GameState *game_state, CellState *cell_state)
 {
     switch(*byte)
     {
@@ -65,7 +65,7 @@ bool input_handleByte(uint8_t *byte, GameState *game_state, CellState *cell_stat
     return false;
 }
 
-void handleEscapeSequence(CellState *cell_state)
+static void handleEscapeSequence(CellState *cell_state)
 {
     uint8_t input = '\0';
     if(!input_getNext(&g_input_buf, &input) || input != '[')

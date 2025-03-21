@@ -21,6 +21,14 @@
 
 volatile InputBuffer g_input_buf;
 
+/**
+ * @brief Put the next byte into the buffer
+ * @param[inout] ib
+ * InputBuffer
+ * @param[out] byte
+ * Next Byte
+ * @return False if full
+ */
 static bool putIntoBuf(volatile InputBuffer *ib, uint8_t byte);
 
 void input_onInterrupt(const uint8_t input)
@@ -59,15 +67,7 @@ bool input_getNext(volatile InputBuffer *ib, uint8_t *byte)
     return true;
 }
 
-/**
- * @brief Put the next byte into the buffer
- * @param[inout] ib
- * InputBuffer
- * @param[out] byte
- * Next Byte
- * @return False if full
- */
-bool putIntoBuf(volatile InputBuffer *ib, const uint8_t byte)
+static bool putIntoBuf(volatile InputBuffer *ib, const uint8_t byte)
 {
     if(input_isFull(ib))
     {

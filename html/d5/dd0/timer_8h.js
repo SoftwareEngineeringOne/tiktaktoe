@@ -44,7 +44,6 @@ var timer_8h =
     [ "Timer", "d5/dd0/timer_8h.html#af8cf9d70b85ea1747f68c4757c1468c1", null ],
     [ "TimerBitMode", "d5/dd0/timer_8h.html#a59a6ed66aaab8746a0fe10b53289c107", null ],
     [ "TimerCaptureCompare", "d5/dd0/timer_8h.html#a223d79ecc71d716cb0d5ad443c546f6e", null ],
-    [ "TimerMode", "d5/dd0/timer_8h.html#afe42918d3c695fe2921c0ca5e594d63c", null ],
     [ "Timer", "d5/dd0/timer_8h.html#a6e0035edd58cc6ca8c94b5f9723a0d80", [
       [ "TIMER0", "d5/dd0/timer_8h.html#a6e0035edd58cc6ca8c94b5f9723a0d80aa73b8bf071cada8f26f46555396534e0", null ],
       [ "TIMER1", "d5/dd0/timer_8h.html#a6e0035edd58cc6ca8c94b5f9723a0d80a78900d10bb4d349f1403fbd090e66cd6", null ],
@@ -61,10 +60,6 @@ var timer_8h =
       [ "CC1", "d5/dd0/timer_8h.html#aad6999cf3031d2856b75621dfc23345cae8a9ed8cc68662182ac3717e34f8404f", null ],
       [ "CC2", "d5/dd0/timer_8h.html#aad6999cf3031d2856b75621dfc23345caa8511a0643f5f4f0ad954387595f99e3", null ],
       [ "CC3", "d5/dd0/timer_8h.html#aad6999cf3031d2856b75621dfc23345ca2d96bc4e698089023040e454c3adee6f", null ]
-    ] ],
-    [ "TimerMode", "d5/dd0/timer_8h.html#aed9a35f11d8cfb1d9946754d01e46ee5", [
-      [ "TIMER_MODE_TIMER", "d5/dd0/timer_8h.html#aed9a35f11d8cfb1d9946754d01e46ee5acba643a23464856cc21f061cfd83cc38", null ],
-      [ "TIMER_MODE_COUNTER", "d5/dd0/timer_8h.html#aed9a35f11d8cfb1d9946754d01e46ee5a8c2b219a9668d5c0689e02405ad5b7b8", null ]
     ] ],
     [ "timer_capture", "d5/dd0/timer_8h.html#aeead0154b3b62864306f110bf0a4c6e3", null ],
     [ "timer_captureCompareGet", "d5/dd0/timer_8h.html#a27edd6464c2ccbb04bcdc372c79d53c5", null ],

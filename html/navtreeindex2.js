@@ -1,9 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"de/d12/style_8h.html#a4e411f6bd6ac8d6c2bd23d866c097e91":[4,0,4,6,8],
-"de/d12/style_8h.html#a538a323c88b0e289825201c9264d3bd0":[4,0,4,6,19],
-"de/d12/style_8h.html#a5759b41dab5745b9016e1237f7f59228":[4,0,4,6,27],
-"de/d12/style_8h.html#a788be1e5263200d55dddebd3606ccad4":[4,0,4,6,4],
 "de/d12/style_8h.html#a8b30b6f8b1ec5cd889d6075b5edbd7ee":[4,0,4,6,25],
 "de/d12/style_8h.html#a90f113db0341b3df7fba02479d15d812":[4,0,4,6,22],
 "de/d12/style_8h.html#aacf8f7d7b2a3f4ba0d0a131fcd1f1933":[4,0,4,6,10],

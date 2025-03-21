@@ -113,8 +113,6 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 typedef enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} \mbox{\hyperlink{timer_8h_af8cf9d70b85ea1747f68c4757c1468c1}{Timer}}
 \item 
-typedef enum \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} \mbox{\hyperlink{timer_8h_afe42918d3c695fe2921c0ca5e594d63c}{Timer\+Mode}}
-\item 
 typedef enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} \mbox{\hyperlink{timer_8h_a59a6ed66aaab8746a0fe10b53289c107}{Timer\+Bit\+Mode}}
 \item 
 typedef enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} \mbox{\hyperlink{timer_8h_a223d79ecc71d716cb0d5ad443c546f6e}{Timer\+Capture\+Compare}}
@@ -125,10 +123,6 @@ typedef enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\
 enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} \{ \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80aa73b8bf071cada8f26f46555396534e0}{TIMER0}}
 , \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a78900d10bb4d349f1403fbd090e66cd6}{TIMER1}}
 , \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a9fdce91e07a880b720491a6667122d5d}{TIMER2}}
- \}
-\item 
-enum \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} \{ \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5acba643a23464856cc21f061cfd83cc38}{TIMER\+\_\+\+MODE\+\_\+\+TIMER}} = 0
-, \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5a8c2b219a9668d5c0689e02405ad5b7b8}{TIMER\+\_\+\+MODE\+\_\+\+COUNTER}} = 1
  \}
 \item 
 enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} \{ \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87a0310bef551ea851239fe8155cad989fe}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+16}} = 0
@@ -612,12 +606,6 @@ typedef enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\
 {\footnotesize\ttfamily \label{timer_8h_a223d79ecc71d716cb0d5ad443c546f6e} 
 typedef enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}
 
-\Hypertarget{timer_8h_afe42918d3c695fe2921c0ca5e594d63c}\index{timer.h@{timer.h}!TimerMode@{TimerMode}}
-\index{TimerMode@{TimerMode}!timer.h@{timer.h}}
-\doxysubsubsection{\texorpdfstring{TimerMode}{TimerMode}}
-{\footnotesize\ttfamily \label{timer_8h_afe42918d3c695fe2921c0ca5e594d63c} 
-typedef enum \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}}}
-
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -671,7 +659,7 @@ TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{timer_8h_source_l00087}{87}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+Definition at line \mbox{\hyperlink{timer_8h_source_l00081}{81}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
 
 \Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345c}\index{timer.h@{timer.h}!TimerCaptureCompare@{TimerCaptureCompare}}
 \index{TimerCaptureCompare@{TimerCaptureCompare}!timer.h@{timer.h}}
@@ -699,27 +687,7 @@ CC3&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{timer_8h_source_l00095}{95}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
-
-\Hypertarget{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}\index{timer.h@{timer.h}!TimerMode@{TimerMode}}
-\index{TimerMode@{TimerMode}!timer.h@{timer.h}}
-\doxysubsubsection{\texorpdfstring{TimerMode}{TimerMode}}
-{\footnotesize\ttfamily \label{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5} 
-enum \mbox{\hyperlink{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}}}
-
-\begin{DoxyEnumFields}[2]{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_MODE\_TIMER@{TIMER\_MODE\_TIMER}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_MODE\_TIMER@{TIMER\_MODE\_TIMER}}}\Hypertarget{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5acba643a23464856cc21f061cfd83cc38}\label{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5} 
-TIMER\+\_\+\+MODE\+\_\+\+TIMER&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_MODE\_COUNTER@{TIMER\_MODE\_COUNTER}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_MODE\_COUNTER@{TIMER\_MODE\_COUNTER}}}\Hypertarget{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5a8c2b219a9668d5c0689e02405ad5b7b8}\label{timer_8h_aed9a35f11d8cfb1d9946754d01e46ee5} 
-TIMER\+\_\+\+MODE\+\_\+\+COUNTER&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Definition at line \mbox{\hyperlink{timer_8h_source_l00081}{81}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+Definition at line \mbox{\hyperlink{timer_8h_source_l00089}{89}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
 
 
 
@@ -743,11 +711,11 @@ Capture the time of the given timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00127}{127}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00123}{123}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00041}{Timer\+Capture\+Task\+Offset}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00037}{Timer\+Capture\+Task\+Offset}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -779,11 +747,11 @@ Gets the Capture Compare Register of Timer.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00091}{91}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00087}{87}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00031}{Timer\+CCOffset}}.
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00030}{Timer\+CCOffset}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -818,11 +786,11 @@ It also enables the shortcut between CC\mbox{[}0\mbox{]} and CLEAR, so that the 
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00074}{74}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00070}{70}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00043}{TIMER\+\_\+\+SHORTS}}, \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00031}{Timer\+CCOffset}}.
+References \mbox{\hyperlink{register__access_8c_source_l00031}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00043}{TIMER\+\_\+\+SHORTS}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00030}{Timer\+CCOffset}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -857,11 +825,11 @@ Clear the time of the given timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00120}{120}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00116}{116}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00028}{TIMER\+\_\+\+CLEAR}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00028}{TIMER\+\_\+\+CLEAR}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -883,11 +851,11 @@ Clears the Compare Event for CC\mbox{[}0\mbox{]}.
 
 This could be useful for stopping the timer from pulling the interrupt-\/line. 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00135}{135}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00131}{131}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00037}{TIMER\+\_\+\+COMPARE\+\_\+0}}, \mbox{\hyperlink{timer_8h_source_l00057}{TIMER\+\_\+\+EVENT\+\_\+\+CLEAR}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00037}{TIMER\+\_\+\+COMPARE\+\_\+0}}, \mbox{\hyperlink{timer_8h_source_l00057}{TIMER\+\_\+\+EVENT\+\_\+\+CLEAR}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -914,11 +882,11 @@ Activate counting on the given timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00113}{113}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00109}{109}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00027}{TIMER\+\_\+\+COUNT}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00027}{TIMER\+\_\+\+COUNT}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -940,11 +908,11 @@ Default Initialisation of Timer.
 
 Initializes the Timer Peripheral to a value \texorpdfstring{$\sim$}{\string~}4sek. This is just for demonstration and could be changed to your needs 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00044}{44}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00040}{40}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{timer_8h_source_l00097}{CC0}}, \mbox{\hyperlink{timer_8h_source_l00092}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32}}, \mbox{\hyperlink{timer_8c_source_l00074}{timer\+\_\+capture\+Compare\+Set()}}, \mbox{\hyperlink{timer_8c_source_l00052}{timer\+\_\+init\+\_\+detailed()}}, \mbox{\hyperlink{timer_8h_source_l00083}{TIMER\+\_\+\+MODE\+\_\+\+TIMER}}, and \mbox{\hyperlink{timer_8c_source_l00099}{timer\+\_\+start()}}.
+References \mbox{\hyperlink{timer_8h_source_l00091}{CC0}}, \mbox{\hyperlink{timer_8h_source_l00086}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32}}, \mbox{\hyperlink{timer_8c_source_l00070}{timer\+\_\+capture\+Compare\+Set()}}, \mbox{\hyperlink{timer_8c_source_l00048}{timer\+\_\+init\+\_\+detailed()}}, and \mbox{\hyperlink{timer_8c_source_l00095}{timer\+\_\+start()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -975,11 +943,11 @@ Compare Value set is for CC\mbox{[}0\mbox{]}
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00052}{52}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00048}{48}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{timer_8h_source_l00069}{INT\+\_\+\+COMPARE0}}, \mbox{\hyperlink{nvic_8h_source_l00046}{Interrupt\+\_\+\+ID8}}, \mbox{\hyperlink{nvic_8h_source_l00040}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00019}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{timer_8h_source_l00047}{TIMER\+\_\+\+BITMODE}}, \mbox{\hyperlink{timer_8h_source_l00044}{TIMER\+\_\+\+INTENSET}}, \mbox{\hyperlink{timer_8h_source_l00048}{TIMER\+\_\+\+PRESCALER}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{timer_8h_source_l00069}{INT\+\_\+\+COMPARE0}}, \mbox{\hyperlink{nvic_8h_source_l00046}{Interrupt\+\_\+\+ID8}}, \mbox{\hyperlink{nvic_8h_source_l00040}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00019}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{timer_8h_source_l00047}{TIMER\+\_\+\+BITMODE}}, \mbox{\hyperlink{timer_8h_source_l00044}{TIMER\+\_\+\+INTENSET}}, \mbox{\hyperlink{timer_8h_source_l00048}{TIMER\+\_\+\+PRESCALER}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1014,11 +982,11 @@ Starts the given timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00099}{99}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00095}{95}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00025}{TIMER\+\_\+\+START}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00025}{TIMER\+\_\+\+START}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -1053,11 +1021,11 @@ Stops the given timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{timer_8c_source_l00106}{106}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+Definition at line \mbox{\hyperlink{timer_8c_source_l00102}{102}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00026}{TIMER\+\_\+\+STOP}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00026}{Timer\+Base}}.
+References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00026}{TIMER\+\_\+\+STOP}}, \mbox{\hyperlink{timer_8h_source_l00055}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

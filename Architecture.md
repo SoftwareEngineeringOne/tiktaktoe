@@ -41,10 +41,10 @@ RAM Layout (Cortex-M):
            │   Free Space   │
            ├────────────────┤
            │     Stack      │
-           │ (grows downward) 
-0x20004000 ├────────────────┤ ← __StackTop (initial SP)
+           │(grows downward)│ 
+0x20004000 ├────────────────┤ ← \_\_StackTop (initial SP)
            │                │
            │                │
-           ├────────────────┤ ← __StackLimit
+           ├────────────────┤ ← \_\_StackLimit
            │                │
            └────────────────┘

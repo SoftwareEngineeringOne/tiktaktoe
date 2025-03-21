@@ -66,13 +66,6 @@ class DoxygenAwesomeTabs {
                 tabsOverviewContainer.appendChild(tabsOverview)
                 tabbed.before(tabsOverviewContainer)
 
-                /**
-                 * Adjusts the height of the tabbed container to fit the tallest tab.
-                 *
-                 * Iterates through each <code>li</code> element within the <code>tabbed</code> container, temporarily setting
-                 * its display to "block" to accurately measure its height, then restoring its original display style. The container's
-                 * height is updated to the maximum tab height plus an extra 10 pixels for padding.
-                 */
                 function resize() {
                     let maxTabHeight = 0
                     tabbed.querySelectorAll("li").forEach((tab, tabIndex) => {

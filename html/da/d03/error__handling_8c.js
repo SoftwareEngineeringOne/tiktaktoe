@@ -1,6 +1,6 @@
 var error__handling_8c =
 [
+    [ "Default_Handler", "da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51", null ],
     [ "handleError", "da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c", null ],
-    [ "handleHardFault", "da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7", null ],
-    [ "handleUnexpectedInterrupt", "da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126", null ]
+    [ "HardFault_Handler", "da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e", null ]
 ];

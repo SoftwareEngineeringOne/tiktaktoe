@@ -16,9 +16,9 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{error__handling_8h_ae7b261c8d6d1aae17db3d28ac80aa6c7}{handle\+Hard\+Fault}} ()
+void \mbox{\hyperlink{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5}{Hard\+Fault\+\_\+\+Handler}} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((interrupt))
 \item 
-void \mbox{\hyperlink{error__handling_8h_a32df003a1a5daf382d75e8b06d31b126}{handle\+Unexpected\+Interrupt}} ()
+void \mbox{\hyperlink{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17}{Default\+\_\+\+Handler}} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((interrupt))
 \end{DoxyCompactItemize}
 
 
@@ -35,33 +35,11 @@ Definition in file \mbox{\hyperlink{error__handling_8h_source}{error\+\_\+handli
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{error__handling_8h_ae7b261c8d6d1aae17db3d28ac80aa6c7}\index{error\_handling.h@{error\_handling.h}!handleHardFault@{handleHardFault}}
-\index{handleHardFault@{handleHardFault}!error\_handling.h@{error\_handling.h}}
-\doxysubsubsection{\texorpdfstring{handleHardFault()}{handleHardFault()}}
-{\footnotesize\ttfamily \label{error__handling_8h_ae7b261c8d6d1aae17db3d28ac80aa6c7} 
-void handle\+Hard\+Fault (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{error__handling_8c_source_l00011}{11}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
-
-
-
-References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d3/d11/error__handling_8h_ae7b261c8d6d1aae17db3d28ac80aa6c7_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{error__handling_8h_a32df003a1a5daf382d75e8b06d31b126}\index{error\_handling.h@{error\_handling.h}!handleUnexpectedInterrupt@{handleUnexpectedInterrupt}}
-\index{handleUnexpectedInterrupt@{handleUnexpectedInterrupt}!error\_handling.h@{error\_handling.h}}
-\doxysubsubsection{\texorpdfstring{handleUnexpectedInterrupt()}{handleUnexpectedInterrupt()}}
-{\footnotesize\ttfamily \label{error__handling_8h_a32df003a1a5daf382d75e8b06d31b126} 
-void handle\+Unexpected\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\Hypertarget{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17}\index{error\_handling.h@{error\_handling.h}!Default\_Handler@{Default\_Handler}}
+\index{Default\_Handler@{Default\_Handler}!error\_handling.h@{error\_handling.h}}
+\doxysubsubsection{\texorpdfstring{Default\_Handler()}{Default\_Handler()}}
+{\footnotesize\ttfamily \label{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17} 
+void Default\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -76,6 +54,28 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d3/d11/error__handling_8h_a32df003a1a5daf382d75e8b06d31b126_cgraph}
+\includegraphics[width=350pt]{d3/d11/error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5}\index{error\_handling.h@{error\_handling.h}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!error\_handling.h@{error\_handling.h}}
+\doxysubsubsection{\texorpdfstring{HardFault\_Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily \label{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5} 
+void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00011}{11}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d11/error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5_cgraph}
 \end{center}
 \end{figure}

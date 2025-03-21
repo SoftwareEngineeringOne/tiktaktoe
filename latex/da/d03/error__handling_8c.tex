@@ -19,13 +19,35 @@ Include dependency graph for error\+\_\+handling.\+c\+:
 \item 
 static void \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handle\+Error}} (const char \texorpdfstring{$\ast$}{*}hint)
 \item 
-void \mbox{\hyperlink{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7}{handle\+Hard\+Fault}} ()
+void \mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{Hard\+Fault\+\_\+\+Handler}} ()
 \item 
-void \mbox{\hyperlink{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126}{handle\+Unexpected\+Interrupt}} ()
+void \mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{Default\+\_\+\+Handler}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}\index{error\_handling.c@{error\_handling.c}!Default\_Handler@{Default\_Handler}}
+\index{Default\_Handler@{Default\_Handler}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{Default\_Handler()}{Default\_Handler()}}
+{\footnotesize\ttfamily \label{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51} 
+void Default\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00017}{17}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}\index{error\_handling.c@{error\_handling.c}!handleError@{handleError}}
 \index{handleError@{handleError}!error\_handling.c@{error\_handling.c}}
 \doxysubsubsection{\texorpdfstring{handleError()}{handleError()}}
@@ -53,14 +75,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=313pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_icgraph}
+\includegraphics[width=279pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7}\index{error\_handling.c@{error\_handling.c}!handleHardFault@{handleHardFault}}
-\index{handleHardFault@{handleHardFault}!error\_handling.c@{error\_handling.c}}
-\doxysubsubsection{\texorpdfstring{handleHardFault()}{handleHardFault()}}
-{\footnotesize\ttfamily \label{error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7} 
-void handle\+Hard\+Fault (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\Hypertarget{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}\index{error\_handling.c@{error\_handling.c}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{HardFault\_Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily \label{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e} 
+void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -75,28 +97,6 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/d03/error__handling_8c_ae7b261c8d6d1aae17db3d28ac80aa6c7_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126}\index{error\_handling.c@{error\_handling.c}!handleUnexpectedInterrupt@{handleUnexpectedInterrupt}}
-\index{handleUnexpectedInterrupt@{handleUnexpectedInterrupt}!error\_handling.c@{error\_handling.c}}
-\doxysubsubsection{\texorpdfstring{handleUnexpectedInterrupt()}{handleUnexpectedInterrupt()}}
-{\footnotesize\ttfamily \label{error__handling_8c_a32df003a1a5daf382d75e8b06d31b126} 
-void handle\+Unexpected\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{error__handling_8c_source_l00017}{17}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
-
-
-
-References \mbox{\hyperlink{error__handling_8c_source_l00023}{handle\+Error()}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{da/d03/error__handling_8c_a32df003a1a5daf382d75e8b06d31b126_cgraph}
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e_cgraph}
 \end{center}
 \end{figure}

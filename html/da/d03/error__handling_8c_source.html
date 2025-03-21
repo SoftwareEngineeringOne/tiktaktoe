@@ -113,7 +113,7 @@ $(function(){initNavTree('da/d03/error__handling_8c_source.html','../../'); init
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c">handleError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *hint);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7">   11</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7">handleHardFault</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e">   11</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e">HardFault_Handler</a>()</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c">handleError</a>(</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="stringliteral">&quot;You have encountered a hard fault. If this error persists please contact the developer!&quot;</span>);</div>
@@ -121,7 +121,7 @@ $(function(){initNavTree('da/d03/error__handling_8c_source.html','../../'); init
 </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126">handleUnexpectedInterrupt</a>()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51">Default_Handler</a>()</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c">handleError</a>(</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="stringliteral">&quot;An unexpected interrupt occurred. If this error persists please contact the developer!&quot;</span>);</div>
@@ -152,8 +152,8 @@ $(function(){initNavTree('da/d03/error__handling_8c_source.html','../../'); init
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
 <div class="ttc" id="aerror__handling_8c_html_a0805cfdbb794a5ba0d8d0411c746556c"><div class="ttname"><a href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c">handleError</a></div><div class="ttdeci">static void handleError(const char *hint)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">error_handling.c:23</a></div></div>
-<div class="ttc" id="aerror__handling_8c_html_a32df003a1a5daf382d75e8b06d31b126"><div class="ttname"><a href="../../da/d03/error__handling_8c.html#a32df003a1a5daf382d75e8b06d31b126">handleUnexpectedInterrupt</a></div><div class="ttdeci">void handleUnexpectedInterrupt()</div><div class="ttdef"><b>Definition</b> <a href="#l00017">error_handling.c:17</a></div></div>
-<div class="ttc" id="aerror__handling_8c_html_ae7b261c8d6d1aae17db3d28ac80aa6c7"><div class="ttname"><a href="../../da/d03/error__handling_8c.html#ae7b261c8d6d1aae17db3d28ac80aa6c7">handleHardFault</a></div><div class="ttdeci">void handleHardFault()</div><div class="ttdef"><b>Definition</b> <a href="#l00011">error_handling.c:11</a></div></div>
+<div class="ttc" id="aerror__handling_8c_html_a2af56a8bf3197b2f06cac4c0b84ffc3e"><div class="ttname"><a href="../../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e">HardFault_Handler</a></div><div class="ttdeci">void HardFault_Handler()</div><div class="ttdef"><b>Definition</b> <a href="#l00011">error_handling.c:11</a></div></div>
+<div class="ttc" id="aerror__handling_8c_html_a678d0aa1dbbf42119a8358cc68140b51"><div class="ttname"><a href="../../da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51">Default_Handler</a></div><div class="ttdeci">void Default_Handler()</div><div class="ttdef"><b>Definition</b> <a href="#l00017">error_handling.c:17</a></div></div>
 <div class="ttc" id="aerror__handling_8h_html"><div class="ttname"><a href="../../d3/d11/error__handling_8h.html">error_handling.h</a></div><div class="ttdoc">Contains functions to react on inevitable errors.</div></div>
 <div class="ttc" id="aprint_8c_html_a0955e0c88609d4769ade150a1834b22a"><div class="ttname"><a href="../../d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a">println</a></div><div class="ttdeci">void println(const char *string)</div><div class="ttdoc">Prints the given string with a new line character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00046">print.c:46</a></div></div>
 <div class="ttc" id="aprint_8c_html_aa1dd7679332aa803a3febb63dc5dd825"><div class="ttname"><a href="../../d6/db1/print_8c.html#aa1dd7679332aa803a3febb63dc5dd825">print_clearConsole</a></div><div class="ttdeci">void print_clearConsole()</div><div class="ttdoc">Clear the whole terminal.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db1/print_8c_source.html#l00025">print.c:25</a></div></div>
@@ -176,7 +176,7 @@ $(function(){initNavTree('da/d03/error__handling_8c_source.html','../../'); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="../../da/d03/error__handling_8c.html">error_handling.c</a></li>
-    <li class="footer">Generated on Thu Mar 20 2025 13:52:27 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Fri Mar 21 2025 12:09:51 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,4 +1,4 @@
-.TH "util/error_handling.h" 3 "Thu Mar 20 2025 13:52:27" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/error_handling.h" 3 "Fri Mar 21 2025 12:09:51" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,10 +11,10 @@ util/error_handling.h \- Contains functions to react on inevitable errors\&.
 
 .in +1c
 .ti -1c
-.RI "void \fBhandleHardFault\fP ()"
+.RI "void \fBHardFault_Handler\fP () __attribute__((interrupt))"
 .br
 .ti -1c
-.RI "void \fBhandleUnexpectedInterrupt\fP ()"
+.RI "void \fBDefault_Handler\fP () __attribute__((interrupt))"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -33,16 +33,16 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBerror_handling\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void handleHardFault ()"
-
-.PP
-Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
-.PP
-References \fBhandleError()\fP\&.
-.SS "void handleUnexpectedInterrupt ()"
+.SS "void Default_Handler ()"
 
 .PP
 Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+.PP
+References \fBhandleError()\fP\&.
+.SS "void HardFault_Handler ()"
+
+.PP
+Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SH "Author"

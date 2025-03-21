@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,24,422,28,348,38,267,55,188,81,137,111,96,144,92,140,134,107,186,77,265,50,347,33,422,23,483,18"/>
 <area shape="rect" id="Node000004" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="400,226,494,252"/>
 <area shape="poly" id="edge16_Node000001_Node000004" title=" " alt="" coords="528,32,505,106,461,213,456,211,500,104,523,30"/>
-<area shape="rect" id="Node000006" href="$db/d16/config_8h.html" title="Contains important compile&#45;time options." alt="" coords="896,381,961,407"/>
+<area shape="rect" id="Node000006" href="$db/d16/config_8h.html" title=" " alt="" coords="896,381,961,407"/>
 <area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="574,23,674,41,791,71,845,90,889,111,919,136,928,150,931,164,931,240,931,366,926,366,926,240,926,164,923,151,915,139,886,116,843,94,790,76,673,47,573,29"/>
 <area shape="rect" id="Node000009" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="141,300,246,326"/>
 <area shape="poly" id="edge35_Node000001_Node000009" title=" " alt="" coords="483,23,415,28,328,38,232,55,138,82,66,105,40,123,16,154,9,176,12,197,23,217,42,236,91,268,144,292,142,296,89,273,38,240,19,221,7,199,3,176,11,151,36,119,64,101,137,76,231,50,327,32,414,23,483,18"/>

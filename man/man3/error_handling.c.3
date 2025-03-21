@@ -1,4 +1,4 @@
-.TH "util/error_handling.c" 3 "Thu Mar 20 2025 13:52:27" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/error_handling.c" 3 "Fri Mar 21 2025 12:09:51" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,30 +26,30 @@ util/error_handling.c
 .RI "static void \fBhandleError\fP (const char *hint)"
 .br
 .ti -1c
-.RI "void \fBhandleHardFault\fP ()"
+.RI "void \fBHardFault_Handler\fP ()"
 .br
 .ti -1c
-.RI "void \fBhandleUnexpectedInterrupt\fP ()"
+.RI "void \fBDefault_Handler\fP ()"
 .br
 .in -1c
 .SH "Function Documentation"
 .PP 
+.SS "void Default_Handler ()"
+
+.PP
+Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+.PP
+References \fBhandleError()\fP\&.
 .SS "static void handleError (const char * hint)\fR [static]\fP"
 
 .PP
 Definition at line \fB23\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBBOLD\fP, \fBDIM\fP, \fBFG_RED\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRESET\fP, \fBsystem_softReset()\fP, \fBuart_readByte()\fP, and \fBui_printHeading()\fP\&.
-.SS "void handleHardFault ()"
+.SS "void HardFault_Handler ()"
 
 .PP
 Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
-.PP
-References \fBhandleError()\fP\&.
-.SS "void handleUnexpectedInterrupt ()"
-
-.PP
-Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SH "Author"

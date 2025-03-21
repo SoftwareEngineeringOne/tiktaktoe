@@ -1,50 +1,60 @@
 # Architecture
 
-The architecture is interrupt-based and with the use cases package divided.
-The program starts at main.c. This file is only used for restarting and
-shutting down the system. The program can run infinitely, dependent on the users
-actions. Package descriptions are following:
+This project is an embedded application, designed to run on an `nRF51` microcontroller with an
+`arm-cortex-m0` CPU. The architecture is seperated into three main layers; the hardware abstraction layer,
+the logic layer and the presentation layer. Additionally modules for the entry process and utility functions
+exist. This encapsulation allows for a flexible design.
 
-## Hardware Abstraction Layer (`hal`)
+## Entry Module
+_files: entry/entry.S, entry/linker_script.ls_
 
-The hardware abstraction layer package gives the developer the possibility to
-call neutral and machine-independent functions without knowing the hardware
-implementation. \
-\
-A specialty in this package are the interrupts. They make a user and time
-action-based system possible. It is the only component that calls functions 
-outside the hal.
+This module is responsible for the startup process of the microcontroller. Here important
+elements, such as the entry point, interrupt vector table and memory regions are defined
+and actions such as copying data from ROM to RAM are performed.
 
-## Game Logic (`logic`)
-
-The logic package is the most important part of the game. It manages the
-process of the game.
-
-## Output (`presentation`)
-
-The presentation package abstracts the whole output that is shown to the user.
-It simplifies the UART transmission.
-
-## Utilities (`util`)
-
-The util package includes independent (from another) helpers that are used from
-several packages.
-
-RAM Layout (Cortex-M):
+### RAM Layout (Cortex-M):
 0x20000000 ┌────────────────┐
            │     .data      │
            ├────────────────┤
            │     .bss       │
            ├────────────────┤
-           │     Heap       │
-           ├────────────────┤
+           │                │
            │   Free Space   │
-           ├────────────────┤
+           │                │
+           │                │
+0x20003C00 ├────────────────┤ ← \_\_StackLimit
            │     Stack      │
-           │(grows downward)│ 
-0x20004000 ├────────────────┤ ← \_\_StackTop (initial SP)
-           │                │
-           │                │
-           ├────────────────┤ ← \_\_StackLimit
-           │                │
-           └────────────────┘
+0x20004000 └────────────────┘ ← \_\_StackTop (initial SP)
+
+
+## Hardware Abstraction Layer 
+_files: include/hal/\*.h, src/hal/\*.c_
+
+The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates
+these operations, allowing the layers above to refrain from interacting with any of the peripherals directly. 
+
+## Logic Layer
+_files: include/logic/\*.h, src/logic/\*.c_
+
+Within this layer, the game itself resides. The whole logic is based here.
+
+!TODO!
+
+
+## Presentation Layer 
+_files: include/presentation/\*.h, src/presentation/\*.c_
+
+!TODO!
+
+
+## Utility Layer
+_files: include/util/\*.h, src/util/\*.c_
+
+!TODO!
+
+## Other relevant files
+
+- config.h.in / config.h
+    - !TODO!
+- !TODO!
+

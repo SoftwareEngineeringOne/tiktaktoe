@@ -136,7 +136,29 @@ void menu_showCredits()
 {
     print_clearConsole();
     ui_printHeading();
-    println("Credits");
+    println_styled("Credits", &DEFAULT_BOLD);
+    println("");
+
+    println_styled("Developed by", &BOLD_CROSS);
+    println("\tSimon Blum");
+    println("\tBen Oeckl");
+    println("\tPaul Stöckle");
+    println("\tMaximilian Rodler");
+    println("");
+
+    println_styled("Based on initial work by", &DEFAULT_BOLD);
+    println("\tThomas Vogt");
+    println("\tSven Reis");
+    println("");
+
+    print_styled("Licensed under ", &ITALIC_DIM);
+    println_styled("Mozilla Public License 2.0.", &ITALIC_DIM);
+    println("");
+    println_styled(
+"If a copy of the MPL was not distributed with this project,\n\
+you can obtain one at http://mozilla.org/MPL/2.0/.",
+        &ITALIC_DIM);
+
 
     menu_anyKeyToContinue(RETURN_MENU_HINT);
 }

@@ -188,6 +188,12 @@ Version \par\page\page\vertalt
 \par
 {\f2 }    \par
 A TikTakToe game written for the {\f2 nRF-51}  microcontroller with an {\f2 arm-cortex-m0}  CPU.\par
+\par
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+Remarks\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+We recommend viewing this and any other markdown file using our {\f2 documentation page} which provides improved formatting!\par
+}}\par
 {\bkmkstart AAAAAAAAXI}
 {\bkmkend AAAAAAAAXI}
 {{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
@@ -257,10 +263,8 @@ cmake --build --preset arm-cortex-m0-mingw\par
 qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio\par
 }
 \par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
-Warning\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
-Due to a problem with the {\f2 TIMER}  device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!\par
-}}}
+{\b Due to a problem with the {\f2 TIMER}  device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!} \par}
+\par
 \par
 \par}
 {\bkmkstart AAAAAAAAXM}
@@ -452,95 +456,81 @@ qemu\par
 {\b  Windows } {
 \par
 \pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9702\tab}\ilvl1\ls1 \li0\ri0\lin0\rin0\fi-360\tx720\li720\ri0\lin720\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-{\f2 CMake} ```pwsh \par}
+{\f2 CMake} {
+\par
+\pard\plain \s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid # Using Winget\par
+winget install CMake.CMake\par
+\par
+# Using Chocolatey\par
+choco install cmake --pre \par
+\par
+# Or manually using the link above\par
 }
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9702\tab}\ilvl1\ls1 \li0\ri0\lin0\rin0\fi-360\tx720\li720\ri0\lin720\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available){
+\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+1.\tab Install {\f2 MSYS2}\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+2.\tab Open {\f2 MSYS2 UCRT64}  shell\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+3.\tab Install Make {\f2 pacman -S mingw-w64-ucrt-x86_64-make} \par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+4.\tab Ensure {\f2 C:\\msys64\\ucrt64\\bin}  is added to {\f2 PATH} {
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl3\ls1 \li0\ri0\lin0\rin0\fi-360\tx1440\li1440\ri0\lin1440\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\i Directory may differ based on your choice during installation} \par}
+}
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9702\tab}\ilvl1\ls1 \li0\ri0\lin0\rin0\fi-360\tx720\li720\ri0\lin720\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\f2 Qemu}{
+\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+1.\tab Install {\f2 MSYS2}\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+2.\tab Open {\f2 MSYS2 UCRT64}  shell\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+3.\tab Install Make {\f2 pacman -S mingw-w64-ucrt-x86_64-qemu} \par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+4.\tab Ensure {\f2 C:\\msys64\\ucrt64\\bin}  is added to {\f2 PATH} {
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl3\ls1 \li0\ri0\lin0\rin0\fi-360\tx1440\li1440\ri0\lin1440\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\i Directory may differ based on your choice during installation} \par}
+}
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9702\tab}\ilvl1\ls1 \li0\ri0\lin0\rin0\fi-360\tx720\li720\ri0\lin720\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+{\f2 GNU Toolchain for arm-eabi}{
+\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+1.\tab Install from link above\par
+\pard\plain \s142\fi-360\li1080\widctlpar\fs20\cgrid 
+2.\tab Ensure installation location is added to {\f2 PATH} \par}
+}
+}
+\par
 \par
 \par}
 {\bkmkstart AAAAAAAAXT}
 {\bkmkend AAAAAAAAXT}
 {{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Using Winget
+\'F0\'9F\'8F\'97\'EF\'B8\'8F Architecture
 \par}
-{\tc\tcl2 \v Using Winget}
- winget install CMake.CMake\par
-\par}
+{\tc\tcl2 \v \'F0\'9F\'8F\'97\'EF\'B8\'8F Architecture}
+To learn more about the the architecture we used to create this game check out {\b Architecture.md}!\par}
 {\bkmkstart AAAAAAAAXU}
 {\bkmkend AAAAAAAAXU}
 {{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Using Chocolatey
+\'F0\'9F\'93\'9C Conventions
 \par}
-{\tc\tcl2 \v Using Chocolatey}
- choco install cmake \'96pre\par
-\par}
+{\tc\tcl2 \v \'F0\'9F\'93\'9C Conventions}
+If you want to know about the coding convection we used when creating code check out {\b Conventions.md}!\par}
 {\bkmkstart AAAAAAAAXV}
 {\bkmkend AAAAAAAAXV}
 {{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Or manually using the link above
-\par}
-{\tc\tcl2 \v Or manually using the link above}
- ```\par
-{
-\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available){
-\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-1.\tab Install {\f2 MSYS2}\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-2.\tab Open {\f2 MSYS2 UCRT64}  shell\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-3.\tab Install Make {\f2 pacman -S mingw-w64-ucrt-x86_64-make} \par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-4.\tab Ensure {\f2 C:\\msys64\\ucrt64\\bin}  is added to {\f2 PATH} {
-\par
-\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9642\tab}\ilvl2\ls1 \li0\ri0\lin0\rin0\fi-360\tx1080\li1080\ri0\lin1080\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-{\i Directory may differ based on your choice during installation} \par}
-}
-\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-{\f2 Qemu}{
-\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-1.\tab Install {\f2 MSYS2}\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-2.\tab Open {\f2 MSYS2 UCRT64}  shell\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-3.\tab Install Make {\f2 pacman -S mingw-w64-ucrt-x86_64-qemu} \par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-4.\tab Ensure {\f2 C:\\msys64\\ucrt64\\bin}  is added to {\f2 PATH} {
-\par
-\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u9642\tab}\ilvl2\ls1 \li0\ri0\lin0\rin0\fi-360\tx1080\li1080\ri0\lin1080\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-{\i Directory may differ based on your choice during installation} \par}
-}
-\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
-{\f2 GNU Toolchain for arm-eabi}{
-\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-1.\tab Install from link above\par
-\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
-2.\tab Ensure installation location is added to {\f2 PATH}  \par}
-}
-\par
-\par
-{\bkmkstart AAAAAAAAXW}
-{\bkmkend AAAAAAAAXW}
-{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-\'F0\'9F\'8F\'97\'EF\'B8\'8F Architecture
-\par}
-{\tc\tcl3 \v \'F0\'9F\'8F\'97\'EF\'B8\'8F Architecture}
-To learn more about the the architecture we used to create this game check out {\b Architecture.md}!\par}
-{\bkmkstart AAAAAAAAXX}
-{\bkmkend AAAAAAAAXX}
-{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-\'F0\'9F\'93\'9C Conventions
-\par}
-{\tc\tcl3 \v \'F0\'9F\'93\'9C Conventions}
-If you want to know about the coding convection we used when creating code check out {\b Conventions.md}!\par}
-{\bkmkstart AAAAAAAAXY}
-{\bkmkend AAAAAAAAXY}
-{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 \'F0\'9F\'91\'A5 Authors
 \par}
-{\tc\tcl3 \v \'F0\'9F\'91\'A5 Authors}
+{\tc\tcl2 \v \'F0\'9F\'91\'A5 Authors}
 {
+\par
 \pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
 {\f2 Simon Blum}\par
 \pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
@@ -551,18 +541,17 @@ If you want to know about the coding convection we used when creating code check
 {\f2 Max Rodler}\par}
 \par
 \par}
-{\bkmkstart AAAAAAAAXZ}
-{\bkmkend AAAAAAAAXZ}
-{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+{\bkmkstart AAAAAAAAXW}
+{\bkmkend AAAAAAAAXW}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \'F0\'9F\'99\'8F Acknowledgements
 \par}
-{\tc\tcl3 \v \'F0\'9F\'99\'8F Acknowledgements}
+{\tc\tcl2 \v \'F0\'9F\'99\'8F Acknowledgements}
 {
 \par
 \pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
 {\f2 arm-cortex-m0-cmake-start} - Base template used for the project \par}
 \par
-\par}
 \par}
 }}
 \par \pard\plain 
@@ -991,25 +980,25 @@ Data Structures\par \pard\plain
 \par
 \pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
 {\b {\b Cell} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-One cell on the field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVP \\*MERGEFORMAT}{\fldrslt pagenum}}
+One cell on the field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVR \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b CellSize} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Struct representing the dimensions of a cell })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVM \\*MERGEFORMAT}{\fldrslt pagenum}}
+Struct representing the dimensions of a cell })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b CellState} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 The current state of the cells })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b GameState} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-The current game state })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVO \\*MERGEFORMAT}{\fldrslt pagenum}}
+The current game state })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVM \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b GameTimer} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Time information of the current game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVQ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b InputBuffer} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-RingBuffer for fixed memory footprint })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVS \\*MERGEFORMAT}{\fldrslt pagenum}}
+RingBuffer for fixed memory footprint })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b Style} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Represents a style with foreground color, background color, and font style })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVR \\*MERGEFORMAT}{\fldrslt pagenum}}
+Represents a style with foreground color, background color, and font style })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAVS \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -1027,35 +1016,35 @@ File List\par \pard\plain
 Entry.S })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b /github/workspace/entry/{\b entry.S} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Entry point and initialization routines for the Tic-Tac-Toe project })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACD \\*MERGEFORMAT}{\fldrslt pagenum}}
+Entry point and initialization routines for the Tic-Tac-Toe project })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b /github/workspace/entry/{\b linker_script.ld} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACH \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b /github/workspace/entry/{\b linker_script.ld} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b config.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b config.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACC \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b def.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains very basic and general definitions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACF \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains very basic and general definitions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b interrupts.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains the relevant interrupt handlers })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains the relevant interrupt handlers })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b memset.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Header file for a simple implementation of memset })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACK \\*MERGEFORMAT}{\fldrslt pagenum}}
+Header file for a simple implementation of memset })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACJ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b nvic.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains interrupt constants })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACL \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains interrupt constants })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b random.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Header file for the RNG HAL })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACN \\*MERGEFORMAT}{\fldrslt pagenum}}
+Header file for the RNG HAL })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b register_access.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Register Access Interface })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+Register Access Interface })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b system.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 System control interface for hardware abstraction layer })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b timer.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains constants and abstraction functions for the COUNTER device })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains constants and abstraction functions for the COUNTER device })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b uart.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Contains constants and abstraction functions for the UART device })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
@@ -1064,116 +1053,116 @@ Contains constants and abstraction functions for the UART device })} \tab {\fiel
 Bot logic for Tic-Tac-Toe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACQ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b game.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains the game logic })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADI \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains the game logic })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACZ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b input.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains the input handling of the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains the input handling of the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b time.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains time functions needed for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains time functions needed for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b winning.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains the function for checking if someone has won })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEI \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains the function for checking if someone has won })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b ascii_art.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains ASCII art constants for the TikTakToe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains ASCII art constants for the TikTakToe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b cell.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains functions and definitions for managing the presentation of cells })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains functions and definitions for managing the presentation of cells })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEV \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b cursor.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains functions for moving the presentation of the cursor })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFU \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains functions for moving the presentation of the cursor })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b field.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains constants and one function to draw the whole field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGN \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains constants and one function to draw the whole field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b menu.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains functions for presentation of the menu })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHT \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains functions for presentation of the menu })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b print.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains several different high level functions for printing to UART })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIA \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains several different high level functions for printing to UART })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b style.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains several constants to simplify the styling of output })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains several constants to simplify the styling of output })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIU \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b ui.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains different functions for the presentation of the in-game user interface (everything besides the actual game field) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJP \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains different functions for the presentation of the in-game user interface (everything besides the actual game field) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJI \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b conversion.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains several different simple and independent conversion functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJV \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains several different simple and independent conversion functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJT \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b error_handling.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains functions to react on errors })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAJU \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains functions to react on errors })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAKR \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b input_buf.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains everything for the input buffer })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMI \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains everything for the input buffer })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAALV \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b math.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Contains several different simple and independent math functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAMU \\*MERGEFORMAT}{\fldrslt pagenum}}
+Contains several different simple and independent math functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b main.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Entry point for the TikTakToe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQF \\*MERGEFORMAT}{\fldrslt pagenum}}
+Entry point for the TikTakToe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQG \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b interrupts.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements the interrupt handlers for UART and Timer interrupts })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANB \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements the interrupt handlers for UART and Timer interrupts })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b memset.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implementation of a simple memset function })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANN \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implementation of a simple memset function })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b random.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implementation of the RNG HAL for random number generation })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANX \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implementation of the RNG HAL for random number generation })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAANZ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b register_access.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Register Access Implementation })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOB \\*MERGEFORMAT}{\fldrslt pagenum}}
+Register Access Implementation })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b system.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implementation of system control functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOG \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implementation of system control functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b hal/{\b timer.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOL \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b hal/{\b timer.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOJ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b hal/{\b uart.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements UART initialization and data transfer functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAOT \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements UART initialization and data transfer functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPA \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b bot.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implementation of bot logic for Tic-Tac-Toe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPC \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implementation of bot logic for Tic-Tac-Toe game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b game.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Implements the core game logic for Tic-Tac-Toe })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPW \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b input.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements input handling for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQB \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements input handling for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAPZ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b time.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements time-related functionality for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQD \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements time-related functionality for the game })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b logic/{\b winning.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements the function for checking if someone has won })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQE \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements the function for checking if someone has won })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b cell.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements functions for managing the presentation of cells })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQI \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements functions for managing the presentation of cells })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b cursor.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements cursor movement functionality for the presentation layer })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQL \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements cursor movement functionality for the presentation layer })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b field.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements the rendering of the TikTakToe field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQR \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements the rendering of the TikTakToe field })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b menu.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements menu presentation functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQW \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements menu presentation functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAQS \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b print.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Implementation of high-level printing functions for UART })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b style.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements predefined styles for terminal output })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARK \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements predefined styles for terminal output })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARQ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b presentation/{\b ui.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implements functions for the in-game user interface })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARL \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implements functions for the in-game user interface })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b conversion.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Implementation of utility functions for integer-to-string and integer-to-character conversions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARR \\*MERGEFORMAT}{\fldrslt pagenum}}
+Implementation of utility functions for integer-to-string and integer-to-character conversions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARV \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b util/{\b error_handling.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARU \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b util/{\b error_handling.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAARW \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b util/{\b input_buf.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Implementation of the input buffer functions })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAASA \\*MERGEFORMAT}{\fldrslt pagenum}}
@@ -1397,8 +1386,8 @@ Data Structure Documentation{\tc \v Data Structure Documentation}
 Cell Struct Reference\par \pard\plain 
 {\tc\tcl2 \v Cell}
 {\xe \v Cell}
-{\bkmkstart AAAAAAAAVP}
-{\bkmkend AAAAAAAAVP}
+{\bkmkstart AAAAAAAAVR}
+{\bkmkend AAAAAAAAVR}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -1461,8 +1450,8 @@ Field Documentation\par
 {\b 
 uint16_t Cell::col}}
 \par
-{\bkmkstart AAAAAAAAVY}
-{\bkmkend AAAAAAAAVY}
+{\bkmkstart AAAAAAAAVT}
+{\bkmkend AAAAAAAAVT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1478,8 +1467,8 @@ Definition at line {\b 60} of file {\b game.h}.}\par
 {\b 
 {\b Player} Cell::marked_by}}
 \par
-{\bkmkstart AAAAAAAAWE}
-{\bkmkend AAAAAAAAWE}
+{\bkmkstart AAAAAAAAVY}
+{\bkmkend AAAAAAAAVY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1495,8 +1484,8 @@ Definition at line {\b 62} of file {\b game.h}.}\par
 {\b 
 uint16_t Cell::row}}
 \par
-{\bkmkstart AAAAAAAAWH}
-{\bkmkend AAAAAAAAWH}
+{\bkmkstart AAAAAAAAWE}
+{\bkmkend AAAAAAAAWE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1518,8 +1507,8 @@ logic/{\b game.h}\par
 CellSize Struct Reference\par \pard\plain 
 {\tc\tcl2 \v CellSize}
 {\xe \v CellSize}
-{\bkmkstart AAAAAAAAVM}
-{\bkmkend AAAAAAAAVM}
+{\bkmkstart AAAAAAAAVO}
+{\bkmkend AAAAAAAAVO}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -1578,8 +1567,8 @@ Field Documentation\par
 {\b 
 uint8_t CellSize::height}}
 \par
-{\bkmkstart AAAAAAAAVT}
-{\bkmkend AAAAAAAAVT}
+{\bkmkstart AAAAAAAAVU}
+{\bkmkend AAAAAAAAVU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1595,8 +1584,8 @@ Definition at line {\b 53} of file {\b cell.h}.}\par
 {\b 
 {\b Size} CellSize::size}}
 \par
-{\bkmkstart AAAAAAAAVU}
-{\bkmkend AAAAAAAAVU}
+{\bkmkstart AAAAAAAAVZ}
+{\bkmkend AAAAAAAAVZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1612,8 +1601,8 @@ Definition at line {\b 51} of file {\b cell.h}.}\par
 {\b 
 uint8_t CellSize::width}}
 \par
-{\bkmkstart AAAAAAAAWA}
-{\bkmkend AAAAAAAAWA}
+{\bkmkstart AAAAAAAAWG}
+{\bkmkend AAAAAAAAWG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1706,8 +1695,8 @@ Field Documentation\par
 {\b 
 {\b Cell} CellState::all[{\b CELLS_PER_COL}][{\b CELLS_PER_ROW}]}}
 \par
-{\bkmkstart AAAAAAAAWF}
-{\bkmkend AAAAAAAAWF}
+{\bkmkstart AAAAAAAAVX}
+{\bkmkend AAAAAAAAVX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1723,8 +1712,8 @@ Definition at line {\b 98} of file {\b game.h}.}\par
 {\b 
 {\b Cell}* CellState::last_circle}}
 \par
-{\bkmkstart AAAAAAAAWI}
-{\bkmkend AAAAAAAAWI}
+{\bkmkstart AAAAAAAAWC}
+{\bkmkend AAAAAAAAWC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1740,8 +1729,8 @@ Definition at line {\b 101} of file {\b game.h}.}\par
 {\b 
 {\b Cell}* CellState::last_cross}}
 \par
-{\bkmkstart AAAAAAAAWK}
-{\bkmkend AAAAAAAAWK}
+{\bkmkstart AAAAAAAAWJ}
+{\bkmkend AAAAAAAAWJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1780,8 +1769,8 @@ logic/{\b game.h}\par
 GameState Struct Reference\par \pard\plain 
 {\tc\tcl2 \v GameState}
 {\xe \v GameState}
-{\bkmkstart AAAAAAAAVO}
-{\bkmkend AAAAAAAAVO}
+{\bkmkstart AAAAAAAAVM}
+{\bkmkend AAAAAAAAVM}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -1903,8 +1892,8 @@ Field Documentation\par
 {\b 
 uint32_t GameState::average_ticks}}
 \par
-{\bkmkstart AAAAAAAAWL}
-{\bkmkend AAAAAAAAWL}
+{\bkmkstart AAAAAAAAWH}
+{\bkmkend AAAAAAAAWH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1920,8 +1909,8 @@ Definition at line {\b 82} of file {\b game.h}.}\par
 {\b 
 uint32_t GameState::circle_average_ticks}}
 \par
-{\bkmkstart AAAAAAAAWN}
-{\bkmkend AAAAAAAAWN}
+{\bkmkstart AAAAAAAAWL}
+{\bkmkend AAAAAAAAWL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2160,8 +2149,8 @@ Field Documentation\par
 {\b 
 {\b bool} GameTimer::is_running}}
 \par
-{\bkmkstart AAAAAAAAVX}
-{\bkmkend AAAAAAAAVX}
+{\bkmkstart AAAAAAAAVW}
+{\bkmkend AAAAAAAAVW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2177,8 +2166,8 @@ Definition at line {\b 34} of file {\b time.h}.}\par
 {\b 
 volatile uint32_t GameTimer::ticks_total}}
 \par
-{\bkmkstart AAAAAAAAWC}
-{\bkmkend AAAAAAAAWC}
+{\bkmkstart AAAAAAAAWB}
+{\bkmkend AAAAAAAAWB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2194,8 +2183,8 @@ Definition at line {\b 35} of file {\b time.h}.}\par
 {\b 
 volatile uint32_t GameTimer::ticks_turn}}
 \par
-{\bkmkstart AAAAAAAAWJ}
-{\bkmkend AAAAAAAAWJ}
+{\bkmkstart AAAAAAAAWI}
+{\bkmkend AAAAAAAAWI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2217,8 +2206,8 @@ logic/{\b time.h}\par
 InputBuffer Struct Reference\par \pard\plain 
 {\tc\tcl2 \v InputBuffer}
 {\xe \v InputBuffer}
-{\bkmkstart AAAAAAAAVS}
-{\bkmkend AAAAAAAAVS}
+{\bkmkstart AAAAAAAAVP}
+{\bkmkend AAAAAAAAVP}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -2281,8 +2270,8 @@ Field Documentation\par
 {\b 
 uint8_t InputBuffer::data[{\b INPUT_BUF_SIZE}]}}
 \par
-{\bkmkstart AAAAAAAAVW}
-{\bkmkend AAAAAAAAVW}
+{\bkmkstart AAAAAAAAWD}
+{\bkmkend AAAAAAAAWD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2298,8 +2287,8 @@ Definition at line {\b 39} of file {\b input_buf.h}.}\par
 {\b 
 volatile uint16_t InputBuffer::head}}
 \par
-{\bkmkstart AAAAAAAAWB}
-{\bkmkend AAAAAAAAWB}
+{\bkmkstart AAAAAAAAWK}
+{\bkmkend AAAAAAAAWK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2315,8 +2304,8 @@ Definition at line {\b 40} of file {\b input_buf.h}.}\par
 {\b 
 volatile uint16_t InputBuffer::tail}}
 \par
-{\bkmkstart AAAAAAAAWG}
-{\bkmkend AAAAAAAAWG}
+{\bkmkstart AAAAAAAAWN}
+{\bkmkend AAAAAAAAWN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2338,8 +2327,8 @@ util/{\b input_buf.h}\par
 Style Struct Reference\par \pard\plain 
 {\tc\tcl2 \v Style}
 {\xe \v Style}
-{\bkmkstart AAAAAAAAVR}
-{\bkmkend AAAAAAAAVR}
+{\bkmkstart AAAAAAAAVS}
+{\bkmkend AAAAAAAAVS}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -2419,8 +2408,8 @@ Definition at line {\b 32} of file {\b style.h}.}\par
 {\b 
 char* Style::fg_color}}
 \par
-{\bkmkstart AAAAAAAAVZ}
-{\bkmkend AAAAAAAAVZ}
+{\bkmkstart AAAAAAAAWA}
+{\bkmkend AAAAAAAAWA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2436,8 +2425,8 @@ Definition at line {\b 31} of file {\b style.h}.}\par
 {\b 
 char* Style::font_style}}
 \par
-{\bkmkstart AAAAAAAAWD}
-{\bkmkend AAAAAAAAWD}
+{\bkmkstart AAAAAAAAWF}
+{\bkmkend AAAAAAAAWF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2460,8 +2449,8 @@ File Documentation{\tc \v File Documentation}
 /github/workspace/Architecture.md File Reference\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/Architecture.md}
 {\xe \v /github/workspace/Architecture.md}
-{\bkmkstart AAAAAAAACC}
-{\bkmkend AAAAAAAACC}
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
 \par \pard\plain 
 
 \pard\plain \sect\sbkpage
@@ -2470,8 +2459,8 @@ File Documentation{\tc \v File Documentation}
 /github/workspace/Conventions.md File Reference\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/Conventions.md}
 {\xe \v /github/workspace/Conventions.md}
-{\bkmkstart AAAAAAAACB}
-{\bkmkend AAAAAAAACB}
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
 \par \pard\plain 
 
 \pard\plain \sect\sbkpage
@@ -2563,8 +2552,8 @@ Function Documentation\par
 {\b 
 void copyData (void )}}
 \par
-{\bkmkstart AAAAAAAACR}
-{\bkmkend AAAAAAAACR}
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2582,8 +2571,8 @@ Definition at line {\b 94} of file {\b entry-S.c}.}\par
 {\b 
 void Default_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAACU}
-{\bkmkend AAAAAAAACU}
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2602,8 +2591,8 @@ Definition at line {\b 42} of file {\b entry-S.c}.}\par
 {\b 
 void g_pfnVectors (void )}}
 \par
-{\bkmkstart AAAAAAAACZ}
-{\bkmkend AAAAAAAACZ}
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2621,8 +2610,8 @@ Definition at line {\b 106} of file {\b entry-S.c}.}\par
 {\b 
 void HardFault_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAADB}
-{\bkmkend AAAAAAAADB}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2641,8 +2630,8 @@ Definition at line {\b 53} of file {\b entry-S.c}.}\par
 {\b 
 void Reset_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAADE}
-{\bkmkend AAAAAAAADE}
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2660,8 +2649,8 @@ Definition at line {\b 65} of file {\b entry-S.c}.}\par
 {\b 
 void Set_Default_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAADM}
-{\bkmkend AAAAAAAADM}
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2684,8 +2673,8 @@ Definition at line {\b 82} of file {\b entry-S.c}.}\par
 {\b 
 void zeroBss (void )}}
 \par
-{\bkmkstart AAAAAAAADX}
-{\bkmkend AAAAAAAADX}
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2751,7 +2740,7 @@ Go to the documentation of this file.\par
 00039 {\cf20  This is a weak symbol that can be overridden by a user-defined handler.}\par
 00040 {\cf20 }\par
 00041 {\cf20  */}\par
-00042 {\cf18 void} Default_Handler({\cf18 void})\par
+00042 {\cf18 void} Default_Handler ({\cf18 void})\par
 00043 \{\par
 00044 \}{\cf20 }\par
 00045 {\cf20 /**}\par
@@ -2762,7 +2751,7 @@ Go to the documentation of this file.\par
 00050 {\cf20  This is a weak symbol that can be overridden by a user-defined handler.}\par
 00051 {\cf20 }\par
 00052 {\cf20  */}\par
-00053 {\cf18 void} HardFault_Handler({\cf18 void})\par
+00053 {\cf18 void} HardFault_Handler ({\cf18 void})\par
 00054 \{\par
 00055 \}{\cf20 }\par
 00056 {\cf20 /**}\par
@@ -2774,7 +2763,7 @@ Go to the documentation of this file.\par
 00062 {\cf20  and `.data` sections and then calls the `main` function.}\par
 00063 {\cf20 }\par
 00064 {\cf20  */}\par
-00065 {\cf18 void} Reset_Handler({\cf18 void})\par
+00065 {\cf18 void} Reset_Handler ({\cf18 void})\par
 00066 \{\par
 00067 \}{\cf20 }\par
 00068 {\cf20 /**}\par
@@ -2791,7 +2780,7 @@ Go to the documentation of this file.\par
 00079 {\cf20  @endcode}\par
 00080 {\cf20 }\par
 00081 {\cf20  */}\par
-00082 {\cf18 void} Set_Default_Handler({\cf18 void})\par
+00082 {\cf18 void} Set_Default_Handler ({\cf18 void})\par
 00083 \{\par
 00084 \}{\cf20 }\par
 00085 {\cf20 /**}\par
@@ -2803,7 +2792,7 @@ Go to the documentation of this file.\par
 00091 {\cf20  from the load address in flash to the execution address in RAM.}\par
 00092 {\cf20 }\par
 00093 {\cf20  */}\par
-00094 {\cf18 void} copyData({\cf18 void})\par
+00094 {\cf18 void} copyData ({\cf18 void})\par
 00095 \{\par
 00096 \}{\cf20 }\par
 00097 {\cf20 /**}\par
@@ -2815,7 +2804,7 @@ Go to the documentation of this file.\par
 00103 {\cf20  various exceptions and interrupts.}\par
 00104 {\cf20 }\par
 00105 {\cf20  */}\par
-00106 {\cf18 void} g_pfnVectors({\cf18 void})\par
+00106 {\cf18 void} g_pfnVectors ({\cf18 void})\par
 00107 \{\par
 00108 \}{\cf20 }\par
 00109 {\cf20 /**}\par
@@ -2826,7 +2815,7 @@ Go to the documentation of this file.\par
 00114 {\cf20  This function sets all bytes in the `.bss` section to zero.}\par
 00115 {\cf20 }\par
 00116 {\cf20  */}\par
-00117 {\cf18 void} zeroBss({\cf18 void})\par
+00117 {\cf18 void} zeroBss ({\cf18 void})\par
 00118 \{\par
 00119 \}\par
 }
@@ -2838,8 +2827,8 @@ Go to the documentation of this file.\par
 /github/workspace/entry/entry.S File Reference\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/entry/entry.S}
 {\xe \v /github/workspace/entry/entry.S}
-{\bkmkstart AAAAAAAACD}
-{\bkmkend AAAAAAAACD}
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -2876,8 +2865,8 @@ Definition in file {\b entry.S}.}\par
 entry.S\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/entry/entry.S}
 {\xe \v /github/workspace/entry/entry.S}
-{\bkmkstart AAAAAAAAAF}
-{\bkmkend AAAAAAAAAF}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
 Go to the documentation of this file.\par
 {
 \par
@@ -3109,8 +3098,8 @@ Go to the documentation of this file.\par
 /github/workspace/entry/linker_script.ld File Reference\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/entry/linker_script.ld}
 {\xe \v /github/workspace/entry/linker_script.ld}
-{\bkmkstart AAAAAAAACH}
-{\bkmkend AAAAAAAACH}
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
 \par \pard\plain 
 
 \pard\plain \sect\sbkpage
@@ -3119,8 +3108,8 @@ Go to the documentation of this file.\par
 linker_script.ld\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/entry/linker_script.ld}
 {\xe \v /github/workspace/entry/linker_script.ld}
-{\bkmkstart AAAAAAAAAC}
-{\bkmkend AAAAAAAAAC}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
 Go to the documentation of this file.\par
 {
 \par
@@ -3234,8 +3223,8 @@ Go to the documentation of this file.\par
 config.h File Reference\par \pard\plain 
 {\tc\tcl2 \v config.h}
 {\xe \v config.h}
-{\bkmkstart AAAAAAAACE}
-{\bkmkend AAAAAAAACE}
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
 {
 \pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
 \pard\plain 
@@ -3301,8 +3290,8 @@ Macro Definition Documentation\par
 {\b 
 #define CELLS_PER_COL\~ 2}}
 \par
-{\bkmkstart AAAAAAAACT}
-{\bkmkend AAAAAAAACT}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3320,8 +3309,8 @@ Definition at line {\b 69} of file {\b config.h}.}\par
 {\b 
 #define CELLS_PER_ROW\~ 2}}
 \par
-{\bkmkstart AAAAAAAACY}
-{\bkmkend AAAAAAAACY}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3396,8 +3385,8 @@ Definition at line {\b 87} of file {\b config.h}.}\par
 {\b 
 #define TICKS_PER_TURN\~ 20}}
 \par
-{\bkmkstart AAAAAAAADS}
-{\bkmkend AAAAAAAADS}
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3415,8 +3404,8 @@ Definition at line {\b 78} of file {\b config.h}.}\par
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 config.h\par \pard\plain 
-{\bkmkstart AAAAAAAAAJ}
-{\bkmkend AAAAAAAAAJ}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
 Go to the documentation of this file.\par
 {
 \par
@@ -3546,8 +3535,8 @@ Go to the documentation of this file.\par
 def.h File Reference\par \pard\plain 
 {\tc\tcl2 \v def.h}
 {\xe \v def.h}
-{\bkmkstart AAAAAAAACF}
-{\bkmkend AAAAAAAACF}
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -3620,8 +3609,8 @@ Macro Definition Documentation\par
 {\b 
 #define false\~ 0}}
 \par
-{\bkmkstart AAAAAAAADG}
-{\bkmkend AAAAAAAADG}
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3637,8 +3626,8 @@ Definition at line {\b 34} of file {\b def.h}.}\par
 {\b 
 #define true\~ 1}}
 \par
-{\bkmkstart AAAAAAAADL}
-{\bkmkend AAAAAAAADL}
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3658,8 +3647,8 @@ Typedef Documentation\par
 {\b 
 typedef char {\b bool}}}
 \par
-{\bkmkstart AAAAAAAADQ}
-{\bkmkend AAAAAAAADQ}
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3677,8 +3666,8 @@ Definition at line {\b 28} of file {\b def.h}.}\par
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 def.h\par \pard\plain 
-{\bkmkstart AAAAAAAAAB}
-{\bkmkend AAAAAAAAAB}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
 Go to the documentation of this file.\par
 {
 \par
@@ -3733,8 +3722,8 @@ Go to the documentation of this file.\par
 hal/interrupts.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/interrupts.h}
 {\xe \v hal/interrupts.h}
-{\bkmkstart AAAAAAAACI}
-{\bkmkend AAAAAAAACI}
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -3826,8 +3815,8 @@ Here is the call graph for this function:{
 {\b 
 void Interrupt8_Handler ()}}
 \par
-{\bkmkstart AAAAAAAADF}
-{\bkmkend AAAAAAAADF}
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3857,8 +3846,8 @@ Here is the call graph for this function:{
 interrupts.h\par \pard\plain 
 {\tc\tcl2 \v hal/interrupts.h}
 {\xe \v hal/interrupts.h}
-{\bkmkstart AAAAAAAAAK}
-{\bkmkend AAAAAAAAAK}
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
 Go to the documentation of this file.\par
 {
 \par
@@ -3921,8 +3910,8 @@ Go to the documentation of this file.\par
 hal/memset.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/memset.h}
 {\xe \v hal/memset.h}
-{\bkmkstart AAAAAAAACK}
-{\bkmkend AAAAAAAACK}
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -3985,8 +3974,8 @@ Function Documentation\par
 {\b 
 void * memset (void * ptr, int x, size_t n)}}
 \par
-{\bkmkstart AAAAAAAACW}
-{\bkmkend AAAAAAAACW}
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4090,8 +4079,8 @@ Go to the documentation of this file.\par
 hal/nvic.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/nvic.h}
 {\xe \v hal/nvic.h}
-{\bkmkstart AAAAAAAACL}
-{\bkmkend AAAAAAAACL}
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -4312,8 +4301,8 @@ Macro Definition Documentation\par
 {\b 
 #define __WFI()}}
 \par
-{\bkmkstart AAAAAAAADV}
-{\bkmkend AAAAAAAADV}
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Value:}{
@@ -4334,8 +4323,8 @@ Definition at line {\b 58} of file {\b nvic.h}.}\par
 {\b 
 #define ICSR\~ 0xE000ED04}}
 \par
-{\bkmkstart AAAAAAAAEA}
-{\bkmkend AAAAAAAAEA}
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4351,8 +4340,8 @@ Definition at line {\b 49} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ICPR\~ 0xE000E280}}
 \par
-{\bkmkstart AAAAAAAAEF}
-{\bkmkend AAAAAAAAEF}
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4368,8 +4357,8 @@ Definition at line {\b 42} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ID1\~ (1 << 1)}}
 \par
-{\bkmkstart AAAAAAAAEL}
-{\bkmkend AAAAAAAAEL}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4385,8 +4374,8 @@ Definition at line {\b 43} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ID10\~ (1 << 10)}}
 \par
-{\bkmkstart AAAAAAAAEQ}
-{\bkmkend AAAAAAAAEQ}
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4402,8 +4391,8 @@ Definition at line {\b 47} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ID2\~ (1 << 2)}}
 \par
-{\bkmkstart AAAAAAAAEW}
-{\bkmkend AAAAAAAAEW}
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4419,8 +4408,8 @@ Definition at line {\b 44} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ID8\~ (1 << 8)}}
 \par
-{\bkmkstart AAAAAAAAFA}
-{\bkmkend AAAAAAAAFA}
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4436,8 +4425,8 @@ Definition at line {\b 45} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_ID9\~ (1 << 9)}}
 \par
-{\bkmkstart AAAAAAAAFF}
-{\bkmkend AAAAAAAAFF}
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4453,8 +4442,8 @@ Definition at line {\b 46} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable\~ 0xE000E100}}
 \par
-{\bkmkstart AAAAAAAAFJ}
-{\bkmkend AAAAAAAAFJ}
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4470,8 +4459,8 @@ Definition at line {\b 41} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_00\~ 0xE000E100}}
 \par
-{\bkmkstart AAAAAAAAFO}
-{\bkmkend AAAAAAAAFO}
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4504,8 +4493,8 @@ Definition at line {\b 26} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_02\~ 0xE000E108}}
 \par
-{\bkmkstart AAAAAAAAFX}
-{\bkmkend AAAAAAAAFX}
+{\bkmkstart AAAAAAAAFW}
+{\bkmkend AAAAAAAAFW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4521,8 +4510,8 @@ Definition at line {\b 27} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_03\~ 0xE000E10C}}
 \par
-{\bkmkstart AAAAAAAAGD}
-{\bkmkend AAAAAAAAGD}
+{\bkmkstart AAAAAAAAGF}
+{\bkmkend AAAAAAAAGF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4538,8 +4527,8 @@ Definition at line {\b 28} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_04\~ 0xE000E110}}
 \par
-{\bkmkstart AAAAAAAAGG}
-{\bkmkend AAAAAAAAGG}
+{\bkmkstart AAAAAAAAGJ}
+{\bkmkend AAAAAAAAGJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4555,8 +4544,8 @@ Definition at line {\b 29} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_05\~ 0xE000E114}}
 \par
-{\bkmkstart AAAAAAAAGM}
-{\bkmkend AAAAAAAAGM}
+{\bkmkstart AAAAAAAAGP}
+{\bkmkend AAAAAAAAGP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4572,8 +4561,8 @@ Definition at line {\b 30} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_06\~ 0xE000E118}}
 \par
-{\bkmkstart AAAAAAAAGT}
-{\bkmkend AAAAAAAAGT}
+{\bkmkstart AAAAAAAAGW}
+{\bkmkend AAAAAAAAGW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4589,8 +4578,8 @@ Definition at line {\b 31} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_07\~ 0xE000E11C}}
 \par
-{\bkmkstart AAAAAAAAHC}
-{\bkmkend AAAAAAAAHC}
+{\bkmkstart AAAAAAAAHB}
+{\bkmkend AAAAAAAAHB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4606,8 +4595,8 @@ Definition at line {\b 32} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_08\~ 0xE000E120}}
 \par
-{\bkmkstart AAAAAAAAHM}
-{\bkmkend AAAAAAAAHM}
+{\bkmkstart AAAAAAAAHI}
+{\bkmkend AAAAAAAAHI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4623,8 +4612,8 @@ Definition at line {\b 33} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_09\~ 0xE000E124}}
 \par
-{\bkmkstart AAAAAAAAHW}
-{\bkmkend AAAAAAAAHW}
+{\bkmkstart AAAAAAAAHR}
+{\bkmkend AAAAAAAAHR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4640,8 +4629,8 @@ Definition at line {\b 34} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_10\~ 0xE000E128}}
 \par
-{\bkmkstart AAAAAAAAIB}
-{\bkmkend AAAAAAAAIB}
+{\bkmkstart AAAAAAAAHW}
+{\bkmkend AAAAAAAAHW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4657,8 +4646,8 @@ Definition at line {\b 35} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_11\~ 0xE000E12C}}
 \par
-{\bkmkstart AAAAAAAAIG}
-{\bkmkend AAAAAAAAIG}
+{\bkmkstart AAAAAAAAIE}
+{\bkmkend AAAAAAAAIE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4674,8 +4663,8 @@ Definition at line {\b 36} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_12\~ 0xE000E130}}
 \par
-{\bkmkstart AAAAAAAAIM}
-{\bkmkend AAAAAAAAIM}
+{\bkmkstart AAAAAAAAIK}
+{\bkmkend AAAAAAAAIK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4691,8 +4680,8 @@ Definition at line {\b 37} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_13\~ 0xE000E134}}
 \par
-{\bkmkstart AAAAAAAAIS}
-{\bkmkend AAAAAAAAIS}
+{\bkmkstart AAAAAAAAIQ}
+{\bkmkend AAAAAAAAIQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4708,8 +4697,8 @@ Definition at line {\b 38} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_14\~ 0xE000E138}}
 \par
-{\bkmkstart AAAAAAAAIV}
-{\bkmkend AAAAAAAAIV}
+{\bkmkstart AAAAAAAAIY}
+{\bkmkend AAAAAAAAIY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4725,8 +4714,8 @@ Definition at line {\b 39} of file {\b nvic.h}.}\par
 {\b 
 #define Interrupt_Set_Enable_15\~ 0xE000E13C}}
 \par
-{\bkmkstart AAAAAAAAJF}
-{\bkmkend AAAAAAAAJF}
+{\bkmkstart AAAAAAAAJE}
+{\bkmkend AAAAAAAAJE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -4744,8 +4733,8 @@ Definition at line {\b 40} of file {\b nvic.h}.}\par
 nvic.h\par \pard\plain 
 {\tc\tcl2 \v hal/nvic.h}
 {\xe \v hal/nvic.h}
-{\bkmkstart AAAAAAAAAD}
-{\bkmkend AAAAAAAAAD}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
 Go to the documentation of this file.\par
 {
 \par
@@ -4818,8 +4807,8 @@ Go to the documentation of this file.\par
 hal/random.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/random.h}
 {\xe \v hal/random.h}
-{\bkmkstart AAAAAAAACN}
-{\bkmkend AAAAAAAACN}
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -4996,8 +4985,8 @@ Macro Definition Documentation\par
 {\b 
 #define RNG_BASE_ADDRESS\~ 0x4000D000}}
 \par
-{\bkmkstart AAAAAAAADO}
-{\bkmkend AAAAAAAADO}
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5013,8 +5002,8 @@ Definition at line {\b 28} of file {\b random.h}.}\par
 {\b 
 #define RNG_CONFIG\~ 0x504}}
 \par
-{\bkmkstart AAAAAAAADR}
-{\bkmkend AAAAAAAADR}
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5030,8 +5019,8 @@ Definition at line {\b 43} of file {\b random.h}.}\par
 {\b 
 #define RNG_EVENT_CLEAR\~ 0}}
 \par
-{\bkmkstart AAAAAAAADW}
-{\bkmkend AAAAAAAADW}
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5047,8 +5036,8 @@ Definition at line {\b 49} of file {\b random.h}.}\par
 {\b 
 #define RNG_EVENT_TRIGGER\~ 1}}
 \par
-{\bkmkstart AAAAAAAADZ}
-{\bkmkend AAAAAAAADZ}
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5064,8 +5053,8 @@ Definition at line {\b 48} of file {\b random.h}.}\par
 {\b 
 #define RNG_INTEN\~ 0x300}}
 \par
-{\bkmkstart AAAAAAAAEC}
-{\bkmkend AAAAAAAAEC}
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5081,8 +5070,8 @@ Definition at line {\b 40} of file {\b random.h}.}\par
 {\b 
 #define RNG_INTENCLR\~ 0x308}}
 \par
-{\bkmkstart AAAAAAAAEH}
-{\bkmkend AAAAAAAAEH}
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5098,8 +5087,8 @@ Definition at line {\b 42} of file {\b random.h}.}\par
 {\b 
 #define RNG_INTENSET\~ 0x304}}
 \par
-{\bkmkstart AAAAAAAAEO}
-{\bkmkend AAAAAAAAEO}
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5115,8 +5104,8 @@ Definition at line {\b 41} of file {\b random.h}.}\par
 {\b 
 #define RNG_SHORTS\~ 0x200}}
 \par
-{\bkmkstart AAAAAAAAES}
-{\bkmkend AAAAAAAAES}
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5132,8 +5121,8 @@ Definition at line {\b 39} of file {\b random.h}.}\par
 {\b 
 #define RNG_START\~ 0x000}}
 \par
-{\bkmkstart AAAAAAAAEU}
-{\bkmkend AAAAAAAAEU}
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5149,8 +5138,8 @@ Definition at line {\b 32} of file {\b random.h}.}\par
 {\b 
 #define RNG_STOP\~ 0x004}}
 \par
-{\bkmkstart AAAAAAAAEZ}
-{\bkmkend AAAAAAAAEZ}
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5166,8 +5155,8 @@ Definition at line {\b 33} of file {\b random.h}.}\par
 {\b 
 #define RNG_TASK_START\~ 1}}
 \par
-{\bkmkstart AAAAAAAAFD}
-{\bkmkend AAAAAAAAFD}
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5183,8 +5172,8 @@ Definition at line {\b 47} of file {\b random.h}.}\par
 {\b 
 #define RNG_VALRDY\~ 0x100}}
 \par
-{\bkmkstart AAAAAAAAFG}
-{\bkmkend AAAAAAAAFG}
+{\bkmkstart AAAAAAAAFU}
+{\bkmkend AAAAAAAAFU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5200,8 +5189,8 @@ Definition at line {\b 36} of file {\b random.h}.}\par
 {\b 
 #define RNG_VALUE\~ 0x508}}
 \par
-{\bkmkstart AAAAAAAAFK}
-{\bkmkend AAAAAAAAFK}
+{\bkmkstart AAAAAAAAGC}
+{\bkmkend AAAAAAAAGC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5221,8 +5210,8 @@ Function Documentation\par
 {\b 
 uint8_t rng_getRandomValue_immediately ()}}
 \par
-{\bkmkstart AAAAAAAAFP}
-{\bkmkend AAAAAAAAFP}
+{\bkmkstart AAAAAAAAGN}
+{\bkmkend AAAAAAAAGN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5254,8 +5243,8 @@ Here is the caller graph for this function:{
 {\b 
 uint8_t rng_getRandomValue_waiting ()}}
 \par
-{\bkmkstart AAAAAAAAGX}
-{\bkmkend AAAAAAAAGX}
+{\bkmkstart AAAAAAAAHQ}
+{\bkmkend AAAAAAAAHQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5287,8 +5276,8 @@ Here is the caller graph for this function:{
 {\b 
 void rng_init ()}}
 \par
-{\bkmkstart AAAAAAAAIK}
-{\bkmkend AAAAAAAAIK}
+{\bkmkstart AAAAAAAAJJ}
+{\bkmkend AAAAAAAAJJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5317,8 +5306,8 @@ Here is the caller graph for this function:{
 random.h\par \pard\plain 
 {\tc\tcl2 \v hal/random.h}
 {\xe \v hal/random.h}
-{\bkmkstart AAAAAAAAAH}
-{\bkmkend AAAAAAAAAH}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
 Go to the documentation of this file.\par
 {
 \par
@@ -5409,8 +5398,8 @@ Go to the documentation of this file.\par
 hal/register_access.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/register_access.h}
 {\xe \v hal/register_access.h}
-{\bkmkstart AAAAAAAACJ}
-{\bkmkend AAAAAAAACJ}
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -5487,8 +5476,8 @@ Function Documentation\par
 {\b 
 uint32_t register_read (uint32_t address)}}
 \par
-{\bkmkstart AAAAAAAACV}
-{\bkmkend AAAAAAAACV}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5523,8 +5512,8 @@ Here is the caller graph for this function:{
 {\b 
 void register_write (uint32_t address, uint32_t value)}}
 \par
-{\bkmkstart AAAAAAAADT}
-{\bkmkend AAAAAAAADT}
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5565,8 +5554,8 @@ Here is the caller graph for this function:{
 register_access.h\par \pard\plain 
 {\tc\tcl2 \v hal/register_access.h}
 {\xe \v hal/register_access.h}
-{\bkmkstart AAAAAAAAAI}
-{\bkmkend AAAAAAAAAI}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
 Go to the documentation of this file.\par
 {
 \par
@@ -5729,8 +5718,8 @@ Macro Definition Documentation\par
 {\b 
 #define SYS_AIRCR\~ 0xE000ED0C}}
 \par
-{\bkmkstart AAAAAAAACX}
-{\bkmkend AAAAAAAACX}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5746,8 +5735,8 @@ Definition at line {\b 27} of file {\b system.h}.}\par
 {\b 
 #define SYS_POWER\~ 0x40000000}}
 \par
-{\bkmkstart AAAAAAAADA}
-{\bkmkend AAAAAAAADA}
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5763,8 +5752,8 @@ Definition at line {\b 45} of file {\b system.h}.}\par
 {\b 
 #define SYS_SYSRESETREQ\~ (1 << 2)}}
 \par
-{\bkmkstart AAAAAAAADD}
-{\bkmkend AAAAAAAADD}
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5797,8 +5786,8 @@ Definition at line {\b 51} of file {\b system.h}.}\par
 {\b 
 #define SYS_VECTKEY\~ (0x5FA << 16)}}
 \par
-{\bkmkstart AAAAAAAADP}
-{\bkmkend AAAAAAAADP}
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5818,8 +5807,8 @@ Function Documentation\par
 {\b 
 void system_offMode ()}}
 \par
-{\bkmkstart AAAAAAAADU}
-{\bkmkend AAAAAAAADU}
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5851,8 +5840,8 @@ Here is the caller graph for this function:{
 {\b 
 void system_softReset ()}}
 \par
-{\bkmkstart AAAAAAAAEN}
-{\bkmkend AAAAAAAAEN}
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -5886,8 +5875,8 @@ Here is the caller graph for this function:{
 system.h\par \pard\plain 
 {\tc\tcl2 \v hal/system.h}
 {\xe \v hal/system.h}
-{\bkmkstart AAAAAAAAAL}
-{\bkmkend AAAAAAAAAL}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
 Go to the documentation of this file.\par
 {
 \par
@@ -5967,8 +5956,8 @@ Go to the documentation of this file.\par
 hal/timer.h File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/timer.h}
 {\xe \v hal/timer.h}
-{\bkmkstart AAAAAAAACM}
-{\bkmkend AAAAAAAACM}
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -6218,8 +6207,8 @@ Macro Definition Documentation\par
 {\b 
 #define INT_COMPARE0\~ (1 << 16)}}
 \par
-{\bkmkstart AAAAAAAAEB}
-{\bkmkend AAAAAAAAEB}
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6232,8 +6221,8 @@ Definition at line {\b 74} of file {\b timer.h}.}\par
 {\b 
 #define INT_COMPARE1\~ (1 << 17)}}
 \par
-{\bkmkstart AAAAAAAAEE}
-{\bkmkend AAAAAAAAEE}
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6246,8 +6235,8 @@ Definition at line {\b 75} of file {\b timer.h}.}\par
 {\b 
 #define INT_COMPARE2\~ (1 << 18)}}
 \par
-{\bkmkstart AAAAAAAAEG}
-{\bkmkend AAAAAAAAEG}
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6260,8 +6249,8 @@ Definition at line {\b 76} of file {\b timer.h}.}\par
 {\b 
 #define INT_COMPARE3\~ (1 << 19)}}
 \par
-{\bkmkstart AAAAAAAAEK}
-{\bkmkend AAAAAAAAEK}
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6274,8 +6263,8 @@ Definition at line {\b 77} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE0_CLEAR_DISABLE\~ (0 << 0)}}
 \par
-{\bkmkstart AAAAAAAAEP}
-{\bkmkend AAAAAAAAEP}
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6288,8 +6277,8 @@ Definition at line {\b 65} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE0_CLEAR_ENABLE\~ (1 << 0)}}
 \par
-{\bkmkstart AAAAAAAAER}
-{\bkmkend AAAAAAAAER}
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6302,8 +6291,8 @@ Definition at line {\b 64} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE0_STOP_DISABLE\~ (0 << 8)}}
 \par
-{\bkmkstart AAAAAAAAET}
-{\bkmkend AAAAAAAAET}
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6316,8 +6305,8 @@ Definition at line {\b 70} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE0_STOP_ENABLE\~ (1 << 8)}}
 \par
-{\bkmkstart AAAAAAAAEY}
-{\bkmkend AAAAAAAAEY}
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6330,8 +6319,8 @@ Definition at line {\b 69} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE1_CLEAR_DISABLE\~ (0 << 1)}}
 \par
-{\bkmkstart AAAAAAAAFC}
-{\bkmkend AAAAAAAAFC}
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6344,8 +6333,8 @@ Definition at line {\b 67} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE1_CLEAR_ENABLE\~ (1 << 1)}}
 \par
-{\bkmkstart AAAAAAAAFH}
-{\bkmkend AAAAAAAAFH}
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6358,8 +6347,8 @@ Definition at line {\b 66} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE1_STOP_DISABLE\~ (0 << 9)}}
 \par
-{\bkmkstart AAAAAAAAFL}
-{\bkmkend AAAAAAAAFL}
+{\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6372,8 +6361,8 @@ Definition at line {\b 72} of file {\b timer.h}.}\par
 {\b 
 #define SHORTS_COMPARE1_STOP_ENABLE\~ (1 << 9)}}
 \par
-{\bkmkstart AAAAAAAAFN}
-{\bkmkend AAAAAAAAFN}
+{\bkmkstart AAAAAAAAFX}
+{\bkmkend AAAAAAAAFX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6386,8 +6375,8 @@ Definition at line {\b 71} of file {\b timer.h}.}\par
 {\b 
 #define TIMER0_BASE_ADDRESS\~ 0x40008000}}
 \par
-{\bkmkstart AAAAAAAAFV}
-{\bkmkend AAAAAAAAFV}
+{\bkmkstart AAAAAAAAGD}
+{\bkmkend AAAAAAAAGD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6400,8 +6389,8 @@ Definition at line {\b 24} of file {\b timer.h}.}\par
 {\b 
 #define TIMER1_BASE_ADDRESS\~ 0x40009000}}
 \par
-{\bkmkstart AAAAAAAAFY}
-{\bkmkend AAAAAAAAFY}
+{\bkmkstart AAAAAAAAGI}
+{\bkmkend AAAAAAAAGI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6414,8 +6403,8 @@ Definition at line {\b 25} of file {\b timer.h}.}\par
 {\b 
 #define TIMER2_BASE_ADDRESS\~ 0x4000A000}}
 \par
-{\bkmkstart AAAAAAAAGC}
-{\bkmkend AAAAAAAAGC}
+{\bkmkstart AAAAAAAAGO}
+{\bkmkend AAAAAAAAGO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6428,8 +6417,8 @@ Definition at line {\b 26} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_BITMODE\~ 0x508}}
 \par
-{\bkmkstart AAAAAAAAGE}
-{\bkmkend AAAAAAAAGE}
+{\bkmkstart AAAAAAAAGS}
+{\bkmkend AAAAAAAAGS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6442,8 +6431,8 @@ Definition at line {\b 52} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CAPTURE_0\~ 0x040}}
 \par
-{\bkmkstart AAAAAAAAGI}
-{\bkmkend AAAAAAAAGI}
+{\bkmkstart AAAAAAAAGZ}
+{\bkmkend AAAAAAAAGZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6456,8 +6445,8 @@ Definition at line {\b 36} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CAPTURE_1\~ 0x044}}
 \par
-{\bkmkstart AAAAAAAAGL}
-{\bkmkend AAAAAAAAGL}
+{\bkmkstart AAAAAAAAHD}
+{\bkmkend AAAAAAAAHD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6470,8 +6459,8 @@ Definition at line {\b 37} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CAPTURE_2\~ 0x048}}
 \par
-{\bkmkstart AAAAAAAAGR}
-{\bkmkend AAAAAAAAGR}
+{\bkmkstart AAAAAAAAHH}
+{\bkmkend AAAAAAAAHH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6484,8 +6473,8 @@ Definition at line {\b 38} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CAPTURE_3\~ 0x04C}}
 \par
-{\bkmkstart AAAAAAAAGW}
-{\bkmkend AAAAAAAAGW}
+{\bkmkstart AAAAAAAAHN}
+{\bkmkend AAAAAAAAHN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6498,8 +6487,8 @@ Definition at line {\b 39} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CC_0\~ 0x540}}
 \par
-{\bkmkstart AAAAAAAAHD}
-{\bkmkend AAAAAAAAHD}
+{\bkmkstart AAAAAAAAHS}
+{\bkmkend AAAAAAAAHS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6512,8 +6501,8 @@ Definition at line {\b 54} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CC_1\~ 0x544}}
 \par
-{\bkmkstart AAAAAAAAHI}
-{\bkmkend AAAAAAAAHI}
+{\bkmkstart AAAAAAAAHV}
+{\bkmkend AAAAAAAAHV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6526,8 +6515,8 @@ Definition at line {\b 55} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CC_2\~ 0x548}}
 \par
-{\bkmkstart AAAAAAAAHL}
-{\bkmkend AAAAAAAAHL}
+{\bkmkstart AAAAAAAAHX}
+{\bkmkend AAAAAAAAHX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6540,8 +6529,8 @@ Definition at line {\b 56} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CC_3\~ 0x54C}}
 \par
-{\bkmkstart AAAAAAAAHQ}
-{\bkmkend AAAAAAAAHQ}
+{\bkmkstart AAAAAAAAIB}
+{\bkmkend AAAAAAAAIB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6554,8 +6543,8 @@ Definition at line {\b 57} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_CLEAR\~ 0x00C}}
 \par
-{\bkmkstart AAAAAAAAHX}
-{\bkmkend AAAAAAAAHX}
+{\bkmkstart AAAAAAAAIF}
+{\bkmkend AAAAAAAAIF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6568,8 +6557,8 @@ Definition at line {\b 33} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_COMPARE_0\~ 0x140}}
 \par
-{\bkmkstart AAAAAAAAHZ}
-{\bkmkend AAAAAAAAHZ}
+{\bkmkstart AAAAAAAAIH}
+{\bkmkend AAAAAAAAIH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6582,8 +6571,8 @@ Definition at line {\b 42} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_COMPARE_1\~ 0x144}}
 \par
-{\bkmkstart AAAAAAAAIE}
-{\bkmkend AAAAAAAAIE}
+{\bkmkstart AAAAAAAAIL}
+{\bkmkend AAAAAAAAIL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6596,8 +6585,8 @@ Definition at line {\b 43} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_COMPARE_2\~ 0x148}}
 \par
-{\bkmkstart AAAAAAAAIH}
-{\bkmkend AAAAAAAAIH}
+{\bkmkstart AAAAAAAAIT}
+{\bkmkend AAAAAAAAIT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6610,8 +6599,8 @@ Definition at line {\b 44} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_COMPARE_3\~ 0x14C}}
 \par
-{\bkmkstart AAAAAAAAIN}
-{\bkmkend AAAAAAAAIN}
+{\bkmkstart AAAAAAAAIV}
+{\bkmkend AAAAAAAAIV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6624,8 +6613,8 @@ Definition at line {\b 45} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_COUNT\~ 0x008}}
 \par
-{\bkmkstart AAAAAAAAIO}
-{\bkmkend AAAAAAAAIO}
+{\bkmkstart AAAAAAAAJC}
+{\bkmkend AAAAAAAAJC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6638,8 +6627,8 @@ Definition at line {\b 32} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_EVENT_CLEAR\~ 0}}
 \par
-{\bkmkstart AAAAAAAAIU}
-{\bkmkend AAAAAAAAIU}
+{\bkmkstart AAAAAAAAJK}
+{\bkmkend AAAAAAAAJK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6652,8 +6641,8 @@ Definition at line {\b 62} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_EVENT_TRIGGER\~ 1}}
 \par
-{\bkmkstart AAAAAAAAIX}
-{\bkmkend AAAAAAAAIX}
+{\bkmkstart AAAAAAAAJP}
+{\bkmkend AAAAAAAAJP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6666,8 +6655,8 @@ Definition at line {\b 61} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_INTENCLR\~ 0x308}}
 \par
-{\bkmkstart AAAAAAAAJA}
-{\bkmkend AAAAAAAAJA}
+{\bkmkstart AAAAAAAAJV}
+{\bkmkend AAAAAAAAJV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6680,8 +6669,8 @@ Definition at line {\b 50} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_INTENSET\~ 0x304}}
 \par
-{\bkmkstart AAAAAAAAJD}
-{\bkmkend AAAAAAAAJD}
+{\bkmkstart AAAAAAAAKB}
+{\bkmkend AAAAAAAAKB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6694,8 +6683,8 @@ Definition at line {\b 49} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_MODE\~ 0x504}}
 \par
-{\bkmkstart AAAAAAAAJK}
-{\bkmkend AAAAAAAAJK}
+{\bkmkstart AAAAAAAAKG}
+{\bkmkend AAAAAAAAKG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6708,8 +6697,8 @@ Definition at line {\b 51} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_PRESCALER\~ 0x510}}
 \par
-{\bkmkstart AAAAAAAAJO}
-{\bkmkend AAAAAAAAJO}
+{\bkmkstart AAAAAAAAKI}
+{\bkmkend AAAAAAAAKI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6722,8 +6711,8 @@ Definition at line {\b 53} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_SHORTS\~ 0x200}}
 \par
-{\bkmkstart AAAAAAAAJT}
-{\bkmkend AAAAAAAAJT}
+{\bkmkstart AAAAAAAAKM}
+{\bkmkend AAAAAAAAKM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6736,8 +6725,8 @@ Definition at line {\b 48} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_SHUTDOWN\~ 0x010}}
 \par
-{\bkmkstart AAAAAAAAJW}
-{\bkmkend AAAAAAAAJW}
+{\bkmkstart AAAAAAAAKN}
+{\bkmkend AAAAAAAAKN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6750,8 +6739,8 @@ Definition at line {\b 34} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_START\~ 0x000}}
 \par
-{\bkmkstart AAAAAAAAKA}
-{\bkmkend AAAAAAAAKA}
+{\bkmkstart AAAAAAAAKS}
+{\bkmkend AAAAAAAAKS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6764,8 +6753,8 @@ Definition at line {\b 30} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_STOP\~ 0x004}}
 \par
-{\bkmkstart AAAAAAAAKE}
-{\bkmkend AAAAAAAAKE}
+{\bkmkstart AAAAAAAAKV}
+{\bkmkend AAAAAAAAKV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6778,8 +6767,8 @@ Definition at line {\b 31} of file {\b timer.h}.}\par
 {\b 
 #define TIMER_TASK_START\~ 1}}
 \par
-{\bkmkstart AAAAAAAAKK}
-{\bkmkend AAAAAAAAKK}
+{\bkmkstart AAAAAAAALA}
+{\bkmkend AAAAAAAALA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -6796,8 +6785,8 @@ Typedef Documentation\par
 {\b 
 typedef enum {\b Timer} {\b Timer}}}
 \par
-{\bkmkstart AAAAAAAAKP}
-{\bkmkend AAAAAAAAKP}
+{\bkmkstart AAAAAAAALG}
+{\bkmkend AAAAAAAALG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -6807,8 +6796,8 @@ typedef enum {\b Timer} {\b Timer}}}
 {\b 
 typedef enum {\b TimerBitMode} {\b TimerBitMode}}}
 \par
-{\bkmkstart AAAAAAAAKT}
-{\bkmkend AAAAAAAAKT}
+{\bkmkstart AAAAAAAALH}
+{\bkmkend AAAAAAAALH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -6818,8 +6807,8 @@ typedef enum {\b TimerBitMode} {\b TimerBitMode}}}
 {\b 
 typedef enum {\b TimerCaptureCompare} {\b TimerCaptureCompare}}}
 \par
-{\bkmkstart AAAAAAAAKV}
-{\bkmkend AAAAAAAAKV}
+{\bkmkstart AAAAAAAALI}
+{\bkmkend AAAAAAAALI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 }
@@ -6833,8 +6822,8 @@ Enumeration Type Documentation\par
 {\b 
 enum {\b Timer}}}
 \par
-{\bkmkstart AAAAAAAAKX}
-{\bkmkend AAAAAAAAKX}
+{\bkmkstart AAAAAAAALL}
+{\bkmkend AAAAAAAALL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\par
@@ -6846,18 +6835,18 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v TIMER0\:timer.h}
 {\xe \v timer.h\:TIMER0}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER0{\bkmkstart AAAAAAAAKY}
-{\bkmkend AAAAAAAAKY}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER0{\bkmkstart AAAAAAAALM}
+{\bkmkend AAAAAAAALM}
 \cell }{\cell }{\row }
 {\xe \v TIMER1\:timer.h}
 {\xe \v timer.h\:TIMER1}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER1{\bkmkstart AAAAAAAALA}
-{\bkmkend AAAAAAAALA}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER1{\bkmkstart AAAAAAAALN}
+{\bkmkend AAAAAAAALN}
 \cell }{\cell }{\row }
 {\xe \v TIMER2\:timer.h}
 {\xe \v timer.h\:TIMER2}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER2{\bkmkstart AAAAAAAALB}
-{\bkmkend AAAAAAAALB}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER2{\bkmkstart AAAAAAAALO}
+{\bkmkend AAAAAAAALO}
 \cell }{\cell }{\row }
 }
 \par
@@ -6870,8 +6859,8 @@ Definition at line {\b 79} of file {\b timer.h}.}\par
 {\b 
 enum {\b TimerBitMode}}}
 \par
-{\bkmkstart AAAAAAAALI}
-{\bkmkend AAAAAAAALI}
+{\bkmkstart AAAAAAAALQ}
+{\bkmkend AAAAAAAALQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\par
@@ -6883,23 +6872,23 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v TIMER_BIT_MODE_16\:timer.h}
 {\xe \v timer.h\:TIMER_BIT_MODE_16}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_16{\bkmkstart AAAAAAAALJ}
-{\bkmkend AAAAAAAALJ}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_16{\bkmkstart AAAAAAAALS}
+{\bkmkend AAAAAAAALS}
 \cell }{\cell }{\row }
 {\xe \v TIMER_BIT_MODE_8\:timer.h}
 {\xe \v timer.h\:TIMER_BIT_MODE_8}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_8{\bkmkstart AAAAAAAALK}
-{\bkmkend AAAAAAAALK}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_8{\bkmkstart AAAAAAAALT}
+{\bkmkend AAAAAAAALT}
 \cell }{\cell }{\row }
 {\xe \v TIMER_BIT_MODE_24\:timer.h}
 {\xe \v timer.h\:TIMER_BIT_MODE_24}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_24{\bkmkstart AAAAAAAALL}
-{\bkmkend AAAAAAAALL}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_24{\bkmkstart AAAAAAAALU}
+{\bkmkend AAAAAAAALU}
 \cell }{\cell }{\row }
 {\xe \v TIMER_BIT_MODE_32\:timer.h}
 {\xe \v timer.h\:TIMER_BIT_MODE_32}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_32{\bkmkstart AAAAAAAALM}
-{\bkmkend AAAAAAAALM}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid TIMER_BIT_MODE_32{\bkmkstart AAAAAAAALW}
+{\bkmkend AAAAAAAALW}
 \cell }{\cell }{\row }
 }
 \par
@@ -6912,8 +6901,8 @@ Definition at line {\b 86} of file {\b timer.h}.}\par
 {\b 
 enum {\b TimerCaptureCompare}}}
 \par
-{\bkmkstart AAAAAAAALQ}
-{\bkmkend AAAAAAAALQ}
+{\bkmkstart AAAAAAAALY}
+{\bkmkend AAAAAAAALY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\par
@@ -6925,23 +6914,23 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v CC0\:timer.h}
 {\xe \v timer.h\:CC0}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC0{\bkmkstart AAAAAAAALR}
-{\bkmkend AAAAAAAALR}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC0{\bkmkstart AAAAAAAAMA}
+{\bkmkend AAAAAAAAMA}
 \cell }{\cell }{\row }
 {\xe \v CC1\:timer.h}
 {\xe \v timer.h\:CC1}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC1{\bkmkstart AAAAAAAALT}
-{\bkmkend AAAAAAAALT}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC1{\bkmkstart AAAAAAAAMB}
+{\bkmkend AAAAAAAAMB}
 \cell }{\cell }{\row }
 {\xe \v CC2\:timer.h}
 {\xe \v timer.h\:CC2}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC2{\bkmkstart AAAAAAAALU}
-{\bkmkend AAAAAAAALU}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC2{\bkmkstart AAAAAAAAMC}
+{\bkmkend AAAAAAAAMC}
 \cell }{\cell }{\row }
 {\xe \v CC3\:timer.h}
 {\xe \v timer.h\:CC3}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC3{\bkmkstart AAAAAAAALV}
-{\bkmkend AAAAAAAALV}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid CC3{\bkmkstart AAAAAAAAMD}
+{\bkmkend AAAAAAAAMD}
 \cell }{\cell }{\row }
 }
 \par
@@ -6958,8 +6947,8 @@ Function Documentation\par
 {\b 
 void timer_capture ({\b Timer} timer, {\b TimerCaptureCompare} capture)}}
 \par
-{\bkmkstart AAAAAAAAMA}
-{\bkmkend AAAAAAAAMA}
+{\bkmkstart AAAAAAAAMI}
+{\bkmkend AAAAAAAAMI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7001,8 +6990,8 @@ Here is the call graph for this function:{
 {\b 
 uint32_t timer_captureCompareGet ({\b Timer} timer, {\b TimerCaptureCompare} captureCompare)}}
 \par
-{\bkmkstart AAAAAAAAMO}
-{\bkmkend AAAAAAAAMO}
+{\bkmkstart AAAAAAAAMQ}
+{\bkmkend AAAAAAAAMQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7045,8 +7034,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_captureCompareSet ({\b Timer} timer, {\b TimerCaptureCompare} captureCompare, uint32_t value, {\b bool} shortcutClear)}}
 \par
-{\bkmkstart AAAAAAAAMT}
-{\bkmkend AAAAAAAAMT}
+{\bkmkstart AAAAAAAAMZ}
+{\bkmkend AAAAAAAAMZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7106,8 +7095,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_clear ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAANG}
-{\bkmkend AAAAAAAANG}
+{\bkmkstart AAAAAAAANN}
+{\bkmkend AAAAAAAANN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7142,8 +7131,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_clearCompareEvent ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAANS}
-{\bkmkend AAAAAAAANS}
+{\bkmkstart AAAAAAAANU}
+{\bkmkend AAAAAAAANU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7168,8 +7157,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_count ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAOA}
-{\bkmkend AAAAAAAAOA}
+{\bkmkstart AAAAAAAAOG}
+{\bkmkend AAAAAAAAOG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7204,8 +7193,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_init ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAOH}
-{\bkmkend AAAAAAAAOH}
+{\bkmkstart AAAAAAAAOS}
+{\bkmkend AAAAAAAAOS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7230,8 +7219,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_init_detailed ({\b Timer} timer, uint8_t prescaler, {\b TimerBitMode} bitMode)}}
 \par
-{\bkmkstart AAAAAAAAOW}
-{\bkmkend AAAAAAAAOW}
+{\bkmkstart AAAAAAAAPE}
+{\bkmkend AAAAAAAAPE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7277,8 +7266,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_start ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAPP}
-{\bkmkend AAAAAAAAPP}
+{\bkmkstart AAAAAAAAPU}
+{\bkmkend AAAAAAAAPU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7317,8 +7306,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_stop ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAQC}
-{\bkmkend AAAAAAAAQC}
+{\bkmkstart AAAAAAAAQE}
+{\bkmkend AAAAAAAAQE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7359,8 +7348,8 @@ Here is the caller graph for this function:{
 timer.h\par \pard\plain 
 {\tc\tcl2 \v hal/timer.h}
 {\xe \v hal/timer.h}
-{\bkmkstart AAAAAAAAAG}
-{\bkmkend AAAAAAAAAG}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
 Go to the documentation of this file.\par
 {
 \par
@@ -7854,8 +7843,8 @@ Macro Definition Documentation\par
 {\b 
 #define UART_BASE_ADDRESS\~ 0x40002000}}
 \par
-{\bkmkstart AAAAAAAAEV}
-{\bkmkend AAAAAAAAEV}
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7871,8 +7860,8 @@ Definition at line {\b 31} of file {\b uart.h}.}\par
 {\b 
 #define UART_BAUDRATE\~ 0x524}}
 \par
-{\bkmkstart AAAAAAAAFB}
-{\bkmkend AAAAAAAAFB}
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7888,8 +7877,8 @@ Definition at line {\b 61} of file {\b uart.h}.}\par
 {\b 
 #define UART_CONFIG\~ 0x56C}}
 \par
-{\bkmkstart AAAAAAAAFE}
-{\bkmkend AAAAAAAAFE}
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7905,8 +7894,8 @@ Definition at line {\b 62} of file {\b uart.h}.}\par
 {\b 
 #define UART_CTS\~ 0x100}}
 \par
-{\bkmkstart AAAAAAAAFI}
-{\bkmkend AAAAAAAAFI}
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7922,8 +7911,8 @@ Definition at line {\b 42} of file {\b uart.h}.}\par
 {\b 
 #define UART_ENABLE\~ 0x500}}
 \par
-{\bkmkstart AAAAAAAAFM}
-{\bkmkend AAAAAAAAFM}
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7939,8 +7928,8 @@ Definition at line {\b 54} of file {\b uart.h}.}\par
 {\b 
 #define UART_ERROR\~ 0x124}}
 \par
-{\bkmkstart AAAAAAAAFS}
-{\bkmkend AAAAAAAAFS}
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7956,8 +7945,8 @@ Definition at line {\b 46} of file {\b uart.h}.}\par
 {\b 
 #define UART_ERRORSRC\~ 0x480}}
 \par
-{\bkmkstart AAAAAAAAGA}
-{\bkmkend AAAAAAAAGA}
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7973,8 +7962,8 @@ Definition at line {\b 53} of file {\b uart.h}.}\par
 {\b 
 #define UART_EVENT_CLEAR\~ 0}}
 \par
-{\bkmkstart AAAAAAAAGF}
-{\bkmkend AAAAAAAAGF}
+{\bkmkstart AAAAAAAAFY}
+{\bkmkend AAAAAAAAFY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -7990,8 +7979,8 @@ Definition at line {\b 67} of file {\b uart.h}.}\par
 {\b 
 #define UART_EVENT_TRIGGER\~ 1}}
 \par
-{\bkmkstart AAAAAAAAGJ}
-{\bkmkend AAAAAAAAGJ}
+{\bkmkstart AAAAAAAAGA}
+{\bkmkend AAAAAAAAGA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8007,8 +7996,8 @@ Definition at line {\b 66} of file {\b uart.h}.}\par
 {\b 
 #define UART_INT_RXDRDY\~ (1 << 2)}}
 \par
-{\bkmkstart AAAAAAAAGP}
-{\bkmkend AAAAAAAAGP}
+{\bkmkstart AAAAAAAAGG}
+{\bkmkend AAAAAAAAGG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8024,8 +8013,8 @@ Definition at line {\b 69} of file {\b uart.h}.}\par
 {\b 
 #define UART_INTEN\~ 0x300}}
 \par
-{\bkmkstart AAAAAAAAGV}
-{\bkmkend AAAAAAAAGV}
+{\bkmkstart AAAAAAAAGM}
+{\bkmkend AAAAAAAAGM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8041,8 +8030,8 @@ Definition at line {\b 50} of file {\b uart.h}.}\par
 {\b 
 #define UART_INTENCLR\~ 0x308}}
 \par
-{\bkmkstart AAAAAAAAHF}
-{\bkmkend AAAAAAAAHF}
+{\bkmkstart AAAAAAAAGU}
+{\bkmkend AAAAAAAAGU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8058,8 +8047,8 @@ Definition at line {\b 52} of file {\b uart.h}.}\par
 {\b 
 #define UART_INTENSET\~ 0x304}}
 \par
-{\bkmkstart AAAAAAAAHO}
-{\bkmkend AAAAAAAAHO}
+{\bkmkstart AAAAAAAAHA}
+{\bkmkend AAAAAAAAHA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8075,8 +8064,8 @@ Definition at line {\b 51} of file {\b uart.h}.}\par
 {\b 
 #define UART_NCTS\~ 0x104}}
 \par
-{\bkmkstart AAAAAAAAHV}
-{\bkmkend AAAAAAAAHV}
+{\bkmkstart AAAAAAAAHF}
+{\bkmkend AAAAAAAAHF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8092,8 +8081,8 @@ Definition at line {\b 43} of file {\b uart.h}.}\par
 {\b 
 #define UART_PSELCTS\~ 0x510}}
 \par
-{\bkmkstart AAAAAAAAIC}
-{\bkmkend AAAAAAAAIC}
+{\bkmkstart AAAAAAAAHJ}
+{\bkmkend AAAAAAAAHJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8109,8 +8098,8 @@ Definition at line {\b 57} of file {\b uart.h}.}\par
 {\b 
 #define UART_PSELRTS\~ 0x508}}
 \par
-{\bkmkstart AAAAAAAAIF}
-{\bkmkend AAAAAAAAIF}
+{\bkmkstart AAAAAAAAHL}
+{\bkmkend AAAAAAAAHL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8126,8 +8115,8 @@ Definition at line {\b 55} of file {\b uart.h}.}\par
 {\b 
 #define UART_PSELRXD\~ 0x514}}
 \par
-{\bkmkstart AAAAAAAAIL}
-{\bkmkend AAAAAAAAIL}
+{\bkmkstart AAAAAAAAHT}
+{\bkmkend AAAAAAAAHT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8143,8 +8132,8 @@ Definition at line {\b 58} of file {\b uart.h}.}\par
 {\b 
 #define UART_PSELTXD\~ 0x50C}}
 \par
-{\bkmkstart AAAAAAAAIT}
-{\bkmkend AAAAAAAAIT}
+{\bkmkstart AAAAAAAAHY}
+{\bkmkend AAAAAAAAHY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8160,8 +8149,8 @@ Definition at line {\b 56} of file {\b uart.h}.}\par
 {\b 
 #define UART_RXD\~ 0x518}}
 \par
-{\bkmkstart AAAAAAAAIY}
-{\bkmkend AAAAAAAAIY}
+{\bkmkstart AAAAAAAAIC}
+{\bkmkend AAAAAAAAIC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8177,8 +8166,8 @@ Definition at line {\b 59} of file {\b uart.h}.}\par
 {\b 
 #define UART_RXDRDY\~ 0x108}}
 \par
-{\bkmkstart AAAAAAAAJI}
-{\bkmkend AAAAAAAAJI}
+{\bkmkstart AAAAAAAAII}
+{\bkmkend AAAAAAAAII}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8194,8 +8183,8 @@ Definition at line {\b 44} of file {\b uart.h}.}\par
 {\b 
 #define UART_RXTO\~ 0x144}}
 \par
-{\bkmkstart AAAAAAAAJM}
-{\bkmkend AAAAAAAAJM}
+{\bkmkstart AAAAAAAAIN}
+{\bkmkend AAAAAAAAIN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8211,8 +8200,8 @@ Definition at line {\b 47} of file {\b uart.h}.}\par
 {\b 
 #define UART_STARTRX\~ 0x000}}
 \par
-{\bkmkstart AAAAAAAAJQ}
-{\bkmkend AAAAAAAAJQ}
+{\bkmkstart AAAAAAAAIR}
+{\bkmkend AAAAAAAAIR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8228,8 +8217,8 @@ Definition at line {\b 35} of file {\b uart.h}.}\par
 {\b 
 #define UART_STARTTX\~ 0x008}}
 \par
-{\bkmkstart AAAAAAAAJX}
-{\bkmkend AAAAAAAAJX}
+{\bkmkstart AAAAAAAAJA}
+{\bkmkend AAAAAAAAJA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8245,8 +8234,8 @@ Definition at line {\b 37} of file {\b uart.h}.}\par
 {\b 
 #define UART_STOPRX\~ 0x004}}
 \par
-{\bkmkstart AAAAAAAAKD}
-{\bkmkend AAAAAAAAKD}
+{\bkmkstart AAAAAAAAJG}
+{\bkmkend AAAAAAAAJG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8262,8 +8251,8 @@ Definition at line {\b 36} of file {\b uart.h}.}\par
 {\b 
 #define UART_STOPTX\~ 0x00C}}
 \par
-{\bkmkstart AAAAAAAAKJ}
-{\bkmkend AAAAAAAAKJ}
+{\bkmkstart AAAAAAAAJM}
+{\bkmkend AAAAAAAAJM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8279,8 +8268,8 @@ Definition at line {\b 38} of file {\b uart.h}.}\par
 {\b 
 #define UART_SUSPEND\~ 0x01C}}
 \par
-{\bkmkstart AAAAAAAAKN}
-{\bkmkend AAAAAAAAKN}
+{\bkmkstart AAAAAAAAJX}
+{\bkmkend AAAAAAAAJX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8296,8 +8285,8 @@ Definition at line {\b 39} of file {\b uart.h}.}\par
 {\b 
 #define UART_TASK_START\~ 1}}
 \par
-{\bkmkstart AAAAAAAAKU}
-{\bkmkend AAAAAAAAKU}
+{\bkmkstart AAAAAAAAKD}
+{\bkmkend AAAAAAAAKD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8313,8 +8302,8 @@ Definition at line {\b 65} of file {\b uart.h}.}\par
 {\b 
 #define UART_TXD\~ 0x51C}}
 \par
-{\bkmkstart AAAAAAAALD}
-{\bkmkend AAAAAAAALD}
+{\bkmkstart AAAAAAAAKL}
+{\bkmkend AAAAAAAAKL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8330,8 +8319,8 @@ Definition at line {\b 60} of file {\b uart.h}.}\par
 {\b 
 #define UART_TXDRDY\~ 0x11C}}
 \par
-{\bkmkstart AAAAAAAALN}
-{\bkmkend AAAAAAAALN}
+{\bkmkstart AAAAAAAAKP}
+{\bkmkend AAAAAAAAKP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8351,8 +8340,8 @@ Function Documentation\par
 {\b 
 void uart_init ({\b bool} with_interrupts)}}
 \par
-{\bkmkstart AAAAAAAALW}
-{\bkmkend AAAAAAAALW}
+{\bkmkstart AAAAAAAAKX}
+{\bkmkend AAAAAAAAKX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8391,8 +8380,8 @@ Here is the caller graph for this function:{
 {\b 
 uint8_t uart_readByte ()}}
 \par
-{\bkmkstart AAAAAAAAMP}
-{\bkmkend AAAAAAAAMP}
+{\bkmkstart AAAAAAAAMF}
+{\bkmkend AAAAAAAAMF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8424,8 +8413,8 @@ Here is the caller graph for this function:{
 {\b 
 void uart_writeByte (uint8_t data)}}
 \par
-{\bkmkstart AAAAAAAANA}
-{\bkmkend AAAAAAAANA}
+{\bkmkstart AAAAAAAAMU}
+{\bkmkend AAAAAAAAMU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8637,8 +8626,8 @@ Function Documentation\par
 {\b 
 {\b Cell} * bot_markRandomCell ({\b Cell} cells[CELLS_PER_COL][CELLS_PER_ROW], {\b Player} marked_by)}}
 \par
-{\bkmkstart AAAAAAAADH}
-{\bkmkend AAAAAAAADH}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8748,8 +8737,8 @@ Go to the documentation of this file.\par
 logic/game.h File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/game.h}
 {\xe \v logic/game.h}
-{\bkmkstart AAAAAAAADI}
-{\bkmkend AAAAAAAADI}
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -8887,8 +8876,8 @@ Macro Definition Documentation\par
 {\b 
 #define FIRST_ROUND\~ 1}}
 \par
-{\bkmkstart AAAAAAAAGB}
-{\bkmkend AAAAAAAAGB}
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8904,8 +8893,8 @@ Definition at line {\b 28} of file {\b game.h}.}\par
 {\b 
 #define REMAINING_TIME\~ ({\b TICKS_PER_TURN} - g_timer.ticks_turn)}}
 \par
-{\bkmkstart AAAAAAAAGH}
-{\bkmkend AAAAAAAAGH}
+{\bkmkstart AAAAAAAAFV}
+{\bkmkend AAAAAAAAFV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8925,8 +8914,8 @@ Enumeration Type Documentation\par
 {\b 
 enum {\b Mode}}}
 \par
-{\bkmkstart AAAAAAAAGO}
-{\bkmkend AAAAAAAAGO}
+{\bkmkstart AAAAAAAAGB}
+{\bkmkend AAAAAAAAGB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8944,15 +8933,15 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v PVE\:game.h}
 {\xe \v game.h\:PVE}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid PVE{\bkmkstart AAAAAAAAGS}
-{\bkmkend AAAAAAAAGS}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid PVE{\bkmkstart AAAAAAAAGH}
+{\bkmkend AAAAAAAAGH}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Player vs Computer. \par
 }\cell }{\row }
 {\xe \v PVP\:game.h}
 {\xe \v game.h\:PVP}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid PVP{\bkmkstart AAAAAAAAGU}
-{\bkmkend AAAAAAAAGU}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid PVP{\bkmkstart AAAAAAAAGK}
+{\bkmkend AAAAAAAAGK}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Player vs Player. \par
 }\cell }{\row }
@@ -8966,8 +8955,8 @@ Definition at line {\b 35} of file {\b game.h}.}\par
 {\b 
 enum {\b Player}}}
 \par
-{\bkmkstart AAAAAAAAHA}
-{\bkmkend AAAAAAAAHA}
+{\bkmkstart AAAAAAAAGQ}
+{\bkmkend AAAAAAAAGQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -8985,22 +8974,22 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v Circle\:game.h}
 {\xe \v game.h\:Circle}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Circle{\bkmkstart AAAAAAAAHH}
-{\bkmkend AAAAAAAAHH}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Circle{\bkmkstart AAAAAAAAGR}
+{\bkmkend AAAAAAAAGR}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Player Circle. \par
 }\cell }{\row }
 {\xe \v Cross\:game.h}
 {\xe \v game.h\:Cross}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Cross{\bkmkstart AAAAAAAAHJ}
-{\bkmkend AAAAAAAAHJ}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Cross{\bkmkstart AAAAAAAAGV}
+{\bkmkend AAAAAAAAGV}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Player Cross. \par
 }\cell }{\row }
 {\xe \v None\:game.h}
 {\xe \v game.h\:None}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid None{\bkmkstart AAAAAAAAHK}
-{\bkmkend AAAAAAAAHK}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid None{\bkmkstart AAAAAAAAGY}
+{\bkmkend AAAAAAAAGY}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 No player (unmarked) \par
 }\cell }{\row }
@@ -9018,8 +9007,8 @@ Function Documentation\par
 {\b 
 void game_endTurn ()}}
 \par
-{\bkmkstart AAAAAAAAHR}
-{\bkmkend AAAAAAAAHR}
+{\bkmkstart AAAAAAAAHE}
+{\bkmkend AAAAAAAAHE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9048,8 +9037,8 @@ Here is the caller graph for this function:{
 {\b 
 void game_onTimeOut ()}}
 \par
-{\bkmkstart AAAAAAAAJH}
-{\bkmkend AAAAAAAAJH}
+{\bkmkstart AAAAAAAAJB}
+{\bkmkend AAAAAAAAJB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9266,8 +9255,8 @@ Go to the documentation of this file.\par
 logic/input.h File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/input.h}
 {\xe \v logic/input.h}
-{\bkmkstart AAAAAAAADY}
-{\bkmkend AAAAAAAADY}
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -9331,8 +9320,8 @@ Function Documentation\par
 {\b 
 {\b bool} input_handleByte (const uint8_t * byte, {\b GameState} * game_state, {\b CellState} * cell_state)}}
 \par
-{\bkmkstart AAAAAAAAEX}
-{\bkmkend AAAAAAAAEX}
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9390,8 +9379,8 @@ Here is the caller graph for this function:{
 input.h\par \pard\plain 
 {\tc\tcl2 \v logic/input.h}
 {\xe \v logic/input.h}
-{\bkmkstart AAAAAAAAAP}
-{\bkmkend AAAAAAAAAP}
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
 Go to the documentation of this file.\par
 {
 \par
@@ -9446,8 +9435,8 @@ Go to the documentation of this file.\par
 logic/time.h File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/time.h}
 {\xe \v logic/time.h}
-{\bkmkstart AAAAAAAAED}
-{\bkmkend AAAAAAAAED}
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -9562,8 +9551,8 @@ Function Documentation\par
 {\b 
 void time_finishTurn ({\b GameState} * game_state)}}
 \par
-{\bkmkstart AAAAAAAAFW}
-{\bkmkend AAAAAAAAFW}
+{\bkmkstart AAAAAAAAFZ}
+{\bkmkend AAAAAAAAFZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9598,8 +9587,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_init ()}}
 \par
-{\bkmkstart AAAAAAAAGZ}
-{\bkmkend AAAAAAAAGZ}
+{\bkmkstart AAAAAAAAGL}
+{\bkmkend AAAAAAAAGL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9628,8 +9617,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_onInterrupt ()}}
 \par
-{\bkmkstart AAAAAAAAIP}
-{\bkmkend AAAAAAAAIP}
+{\bkmkstart AAAAAAAAHP}
+{\bkmkend AAAAAAAAHP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9658,8 +9647,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_pause ()}}
 \par
-{\bkmkstart AAAAAAAAJS}
-{\bkmkend AAAAAAAAJS}
+{\bkmkstart AAAAAAAAIX}
+{\bkmkend AAAAAAAAIX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9688,8 +9677,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_resume ()}}
 \par
-{\bkmkstart AAAAAAAAKS}
-{\bkmkend AAAAAAAAKS}
+{\bkmkstart AAAAAAAAKF}
+{\bkmkend AAAAAAAAKF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9722,8 +9711,8 @@ Variable Documentation\par
 {\b 
 {\b GameTimer} g_timer{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAALZ}
-{\bkmkend AAAAAAAALZ}
+{\bkmkstart AAAAAAAALE}
+{\bkmkend AAAAAAAALE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9743,8 +9732,8 @@ Definition at line {\b 19} of file {\b time.c}.}\par
 time.h\par \pard\plain 
 {\tc\tcl2 \v logic/time.h}
 {\xe \v logic/time.h}
-{\bkmkstart AAAAAAAAAR}
-{\bkmkend AAAAAAAAAR}
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
 Go to the documentation of this file.\par
 {
 \par
@@ -9849,8 +9838,8 @@ Go to the documentation of this file.\par
 logic/winning.h File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/winning.h}
 {\xe \v logic/winning.h}
-{\bkmkstart AAAAAAAAEI}
-{\bkmkend AAAAAAAAEI}
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -9895,14 +9884,14 @@ Detailed Description\par
 Contains the function for checking if someone has won. \par
 }{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 This file contains the declaration of the function used to check if a player has won in the game.\par
-{\bkmkstart AAAAAAAAFQ}
-{\bkmkend AAAAAAAAFQ}
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
 {{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 VICTORY ALGORITHM
 \par}
 {\tc\tcl3 \v VICTORY ALGORITHM}
-{\bkmkstart AAAAAAAAFR}
-{\bkmkend AAAAAAAAFR}
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
 {{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Vertical / Horizontal:
 \par}
@@ -9940,8 +9929,8 @@ Function Documentation\par
 {\b 
 {\b Player} winning_checkForWinner ({\b CellState} * cell_state, {\b Cell} * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])}}
 \par
-{\bkmkstart AAAAAAAAFZ}
-{\bkmkend AAAAAAAAFZ}
+{\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -9992,8 +9981,8 @@ Here is the caller graph for this function:{
 winning.h\par \pard\plain 
 {\tc\tcl2 \v logic/winning.h}
 {\xe \v logic/winning.h}
-{\bkmkstart AAAAAAAAAS}
-{\bkmkend AAAAAAAAAS}
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
 Go to the documentation of this file.\par
 {
 \par
@@ -10067,8 +10056,8 @@ Go to the documentation of this file.\par
 presentation/ascii_art.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/ascii_art.h}
 {\xe \v presentation/ascii_art.h}
-{\bkmkstart AAAAAAAAEJ}
-{\bkmkend AAAAAAAAEJ}
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -10177,8 +10166,8 @@ Macro Definition Documentation\par
 {\b 
 #define CIRCLE_STARTS\~ "\\n {\b Circle} starts! \\n"}}
 \par
-{\bkmkstart AAAAAAAAGK}
-{\bkmkend AAAAAAAAGK}
+{\bkmkstart AAAAAAAAGX}
+{\bkmkend AAAAAAAAGX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10194,8 +10183,8 @@ Definition at line {\b 207} of file {\b ascii_art.h}.}\par
 {\b 
 #define CIRCLE_WINS\~ "\\n {\b Circle} Wins! \\n"}}
 \par
-{\bkmkstart AAAAAAAAGQ}
-{\bkmkend AAAAAAAAGQ}
+{\bkmkstart AAAAAAAAHC}
+{\bkmkend AAAAAAAAHC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10211,8 +10200,8 @@ Definition at line {\b 183} of file {\b ascii_art.h}.}\par
 {\b 
 #define COMPUTER_STARTS\~ "\\n Computer starts! \\n"}}
 \par
-{\bkmkstart AAAAAAAAGY}
-{\bkmkend AAAAAAAAGY}
+{\bkmkstart AAAAAAAAHG}
+{\bkmkend AAAAAAAAHG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10228,8 +10217,8 @@ Definition at line {\b 201} of file {\b ascii_art.h}.}\par
 {\b 
 #define CROSS_STARTS\~ "\\n {\b Cross} starts! \\n"}}
 \par
-{\bkmkstart AAAAAAAAHE}
-{\bkmkend AAAAAAAAHE}
+{\bkmkstart AAAAAAAAHM}
+{\bkmkend AAAAAAAAHM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10245,8 +10234,8 @@ Definition at line {\b 213} of file {\b ascii_art.h}.}\par
 {\b 
 #define CROSS_WINS\~ "\\n {\b Cross} Wins! \\n"}}
 \par
-{\bkmkstart AAAAAAAAHP}
-{\bkmkend AAAAAAAAHP}
+{\bkmkstart AAAAAAAAHU}
+{\bkmkend AAAAAAAAHU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10262,8 +10251,8 @@ Definition at line {\b 177} of file {\b ascii_art.h}.}\par
 {\b 
 #define HEADING\~ "\\n TikTakToe \\n"}}
 \par
-{\bkmkstart AAAAAAAAHU}
-{\bkmkend AAAAAAAAHU}
+{\bkmkstart AAAAAAAAHZ}
+{\bkmkend AAAAAAAAHZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10279,8 +10268,8 @@ Definition at line {\b 171} of file {\b ascii_art.h}.}\par
 {\b 
 #define HEADING_LINES\~ 3}}
 \par
-{\bkmkstart AAAAAAAAHY}
-{\bkmkend AAAAAAAAHY}
+{\bkmkstart AAAAAAAAID}
+{\bkmkend AAAAAAAAID}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10296,8 +10285,8 @@ Definition at line {\b 165} of file {\b ascii_art.h}.}\par
 {\b 
 #define ITS_A_TIE\~ "\\n It's a Tie! \\n"}}
 \par
-{\bkmkstart AAAAAAAAII}
-{\bkmkend AAAAAAAAII}
+{\bkmkstart AAAAAAAAIJ}
+{\bkmkend AAAAAAAAIJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10313,8 +10302,8 @@ Definition at line {\b 189} of file {\b ascii_art.h}.}\par
 {\b 
 #define PLAYER_STARTS\~ "\\n {\b Player} starts! \\n"}}
 \par
-{\bkmkstart AAAAAAAAIR}
-{\bkmkend AAAAAAAAIR}
+{\bkmkstart AAAAAAAAIS}
+{\bkmkend AAAAAAAAIS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10332,8 +10321,8 @@ Definition at line {\b 195} of file {\b ascii_art.h}.}\par
 ascii_art.h\par \pard\plain 
 {\tc\tcl2 \v presentation/ascii_art.h}
 {\xe \v presentation/ascii_art.h}
-{\bkmkstart AAAAAAAAAQ}
-{\bkmkend AAAAAAAAAQ}
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
 Go to the documentation of this file.\par
 {
 \par
@@ -10563,8 +10552,8 @@ Go to the documentation of this file.\par
 presentation/cell.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/cell.h}
 {\xe \v presentation/cell.h}
-{\bkmkstart AAAAAAAAEM}
-{\bkmkend AAAAAAAAEM}
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -10749,8 +10738,8 @@ Macro Definition Documentation\par
 {\b 
 #define FIELD_HEIGHT\~     ({\b CELLS_PER_COL} * g_cell_size.height)}}
 \par
-{\bkmkstart AAAAAAAAHG}
-{\bkmkend AAAAAAAAHG}
+{\bkmkstart AAAAAAAAIA}
+{\bkmkend AAAAAAAAIA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10766,8 +10755,8 @@ Definition at line {\b 33} of file {\b cell.h}.}\par
 {\b 
 #define INITIAL_HEIGHT\~ 5}}
 \par
-{\bkmkstart AAAAAAAAHN}
-{\bkmkend AAAAAAAAHN}
+{\bkmkstart AAAAAAAAIG}
+{\bkmkend AAAAAAAAIG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10783,8 +10772,8 @@ Definition at line {\b 31} of file {\b cell.h}.}\par
 {\b 
 #define INITIAL_INDEX\~ 1}}
 \par
-{\bkmkstart AAAAAAAAHS}
-{\bkmkend AAAAAAAAHS}
+{\bkmkstart AAAAAAAAIO}
+{\bkmkend AAAAAAAAIO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10800,8 +10789,8 @@ Definition at line {\b 29} of file {\b cell.h}.}\par
 {\b 
 #define INITIAL_SIZE\~ {\b Medium}}}
 \par
-{\bkmkstart AAAAAAAAID}
-{\bkmkend AAAAAAAAID}
+{\bkmkstart AAAAAAAAIW}
+{\bkmkend AAAAAAAAIW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10817,8 +10806,8 @@ Definition at line {\b 32} of file {\b cell.h}.}\par
 {\b 
 #define INITIAL_WIDTH\~ 8}}
 \par
-{\bkmkstart AAAAAAAAIJ}
-{\bkmkend AAAAAAAAIJ}
+{\bkmkstart AAAAAAAAJD}
+{\bkmkend AAAAAAAAJD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10834,8 +10823,8 @@ Definition at line {\b 30} of file {\b cell.h}.}\par
 {\b 
 #define NUM_OF_SIZES\~ 3}}
 \par
-{\bkmkstart AAAAAAAAIQ}
-{\bkmkend AAAAAAAAIQ}
+{\bkmkstart AAAAAAAAJH}
+{\bkmkend AAAAAAAAJH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10855,8 +10844,8 @@ Enumeration Type Documentation\par
 {\b 
 enum {\b Size}}}
 \par
-{\bkmkstart AAAAAAAAIW}
-{\bkmkend AAAAAAAAIW}
+{\bkmkstart AAAAAAAAJO}
+{\bkmkend AAAAAAAAJO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10872,22 +10861,22 @@ Enumerator:\par}
 \pard \widctlpar\intbl\adjustright
 {\xe \v Small\:cell.h}
 {\xe \v cell.h\:Small}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Small{\bkmkstart AAAAAAAAJB}
-{\bkmkend AAAAAAAAJB}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Small{\bkmkstart AAAAAAAAJQ}
+{\bkmkend AAAAAAAAJQ}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Small cell size. \par
 }\cell }{\row }
 {\xe \v Medium\:cell.h}
 {\xe \v cell.h\:Medium}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Medium{\bkmkstart AAAAAAAAJC}
-{\bkmkend AAAAAAAAJC}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Medium{\bkmkstart AAAAAAAAJS}
+{\bkmkend AAAAAAAAJS}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Medium cell size. \par
 }\cell }{\row }
 {\xe \v Large\:cell.h}
 {\xe \v cell.h\:Large}
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Large{\bkmkstart AAAAAAAAJE}
-{\bkmkend AAAAAAAAJE}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid Large{\bkmkstart AAAAAAAAJW}
+{\bkmkend AAAAAAAAJW}
 \cell }{{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Large cell size. \par
 }\cell }{\row }
@@ -10905,8 +10894,8 @@ Function Documentation\par
 {\b 
 void cell_decreaseSize ()}}
 \par
-{\bkmkstart AAAAAAAAJL}
-{\bkmkend AAAAAAAAJL}
+{\bkmkstart AAAAAAAAKC}
+{\bkmkend AAAAAAAAKC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10929,8 +10918,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_increaseSize ()}}
 \par
-{\bkmkstart AAAAAAAAKG}
-{\bkmkend AAAAAAAAKG}
+{\bkmkstart AAAAAAAAKY}
+{\bkmkend AAAAAAAAKY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10953,8 +10942,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redraw (const {\b Cell} * cell)}}
 \par
-{\bkmkstart AAAAAAAALF}
-{\bkmkend AAAAAAAALF}
+{\bkmkstart AAAAAAAALZ}
+{\bkmkend AAAAAAAALZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -10993,8 +10982,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redraw_withModifier (const {\b Cell} * cell, const char * modifier)}}
 \par
-{\bkmkstart AAAAAAAAMN}
-{\bkmkend AAAAAAAAMN}
+{\bkmkstart AAAAAAAAMR}
+{\bkmkend AAAAAAAAMR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11040,8 +11029,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redrawAll ({\b Cell} all_cells[][CELLS_PER_ROW], const char * modifier)}}
 \par
-{\bkmkstart AAAAAAAAMV}
-{\bkmkend AAAAAAAAMV}
+{\bkmkstart AAAAAAAANH}
+{\bkmkend AAAAAAAANH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11087,8 +11076,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_select (const {\b Cell} * cell)}}
 \par
-{\bkmkstart AAAAAAAANR}
-{\bkmkend AAAAAAAANR}
+{\bkmkstart AAAAAAAAOB}
+{\bkmkend AAAAAAAAOB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11131,8 +11120,8 @@ Variable Documentation\par
 {\b 
 {\b CellSize} g_cell_size{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAOK}
-{\bkmkend AAAAAAAAOK}
+{\bkmkstart AAAAAAAAOW}
+{\bkmkend AAAAAAAAOW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11281,8 +11270,8 @@ Go to the documentation of this file.\par
 presentation/cursor.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/cursor.h}
 {\xe \v presentation/cursor.h}
-{\bkmkstart AAAAAAAAFU}
-{\bkmkend AAAAAAAAFU}
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -11345,8 +11334,8 @@ Function Documentation\par
 {\b 
 void cursor_moveTo (uint8_t x, uint8_t y)}}
 \par
-{\bkmkstart AAAAAAAAHB}
-{\bkmkend AAAAAAAAHB}
+{\bkmkstart AAAAAAAAGT}
+{\bkmkend AAAAAAAAGT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11397,8 +11386,8 @@ Here is the caller graph for this function:{
 cursor.h\par \pard\plain 
 {\tc\tcl2 \v presentation/cursor.h}
 {\xe \v presentation/cursor.h}
-{\bkmkstart AAAAAAAAAV}
-{\bkmkend AAAAAAAAAV}
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
 Go to the documentation of this file.\par
 {
 \par
@@ -11450,8 +11439,8 @@ Go to the documentation of this file.\par
 presentation/field.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/field.h}
 {\xe \v presentation/field.h}
-{\bkmkstart AAAAAAAAGN}
-{\bkmkend AAAAAAAAGN}
+{\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -11566,8 +11555,8 @@ Macro Definition Documentation\par
 {\b 
 #define CORNER_BOT_LEFT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAIZ}
-{\bkmkend AAAAAAAAIZ}
+{\bkmkstart AAAAAAAAIM}
+{\bkmkend AAAAAAAAIM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11580,8 +11569,8 @@ Definition at line {\b 65} of file {\b field.h}.}\par
 {\b 
 #define CORNER_BOT_RIGHT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAJG}
-{\bkmkend AAAAAAAAJG}
+{\bkmkstart AAAAAAAAIP}
+{\bkmkend AAAAAAAAIP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11594,8 +11583,8 @@ Definition at line {\b 67} of file {\b field.h}.}\par
 {\b 
 #define CORNER_TOP_LEFT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAJN}
-{\bkmkend AAAAAAAAJN}
+{\bkmkstart AAAAAAAAIZ}
+{\bkmkend AAAAAAAAIZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11608,8 +11597,8 @@ Definition at line {\b 64} of file {\b field.h}.}\par
 {\b 
 #define CORNER_TOP_RIGHT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAJR}
-{\bkmkend AAAAAAAAJR}
+{\bkmkstart AAAAAAAAJF}
+{\bkmkend AAAAAAAAJF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11622,8 +11611,8 @@ Definition at line {\b 66} of file {\b field.h}.}\par
 {\b 
 #define CROSS\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAJY}
-{\bkmkend AAAAAAAAJY}
+{\bkmkstart AAAAAAAAJL}
+{\bkmkend AAAAAAAAJL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11636,8 +11625,8 @@ Definition at line {\b 74} of file {\b field.h}.}\par
 {\b 
 #define DIAGONAL_BW\~ "\\\\"}}
 \par
-{\bkmkstart AAAAAAAAKB}
-{\bkmkend AAAAAAAAKB}
+{\bkmkstart AAAAAAAAJN}
+{\bkmkend AAAAAAAAJN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11650,8 +11639,8 @@ Definition at line {\b 81} of file {\b field.h}.}\par
 {\b 
 #define DIAGONAL_FW\~ "/"}}
 \par
-{\bkmkstart AAAAAAAAKF}
-{\bkmkend AAAAAAAAKF}
+{\bkmkstart AAAAAAAAJR}
+{\bkmkend AAAAAAAAJR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11664,8 +11653,8 @@ Definition at line {\b 80} of file {\b field.h}.}\par
 {\b 
 #define DIAGONAL_MID\~ "X"}}
 \par
-{\bkmkstart AAAAAAAAKL}
-{\bkmkend AAAAAAAAKL}
+{\bkmkstart AAAAAAAAJY}
+{\bkmkend AAAAAAAAJY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11678,8 +11667,8 @@ Definition at line {\b 82} of file {\b field.h}.}\par
 {\b 
 #define EMPTY\~ " "}}
 \par
-{\bkmkstart AAAAAAAAKQ}
-{\bkmkend AAAAAAAAKQ}
+{\bkmkstart AAAAAAAAKH}
+{\bkmkend AAAAAAAAKH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11692,8 +11681,8 @@ Definition at line {\b 78} of file {\b field.h}.}\par
 {\b 
 #define FIELD_X_OFFSET\~ 1}}
 \par
-{\bkmkstart AAAAAAAAKZ}
-{\bkmkend AAAAAAAAKZ}
+{\bkmkstart AAAAAAAAKK}
+{\bkmkend AAAAAAAAKK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11709,8 +11698,8 @@ Definition at line {\b 32} of file {\b field.h}.}\par
 {\b 
 #define FIELD_Y_OFFSET\~ 2 + {\b HEADING_LINES}}}
 \par
-{\bkmkstart AAAAAAAALH}
-{\bkmkend AAAAAAAALH}
+{\bkmkstart AAAAAAAAKQ}
+{\bkmkend AAAAAAAAKQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11726,8 +11715,8 @@ Definition at line {\b 38} of file {\b field.h}.}\par
 {\b 
 #define SIDE\~ "|"}}
 \par
-{\bkmkstart AAAAAAAALO}
-{\bkmkend AAAAAAAALO}
+{\bkmkstart AAAAAAAAKU}
+{\bkmkend AAAAAAAAKU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11740,8 +11729,8 @@ Definition at line {\b 76} of file {\b field.h}.}\par
 {\b 
 #define T_BOT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAALS}
-{\bkmkend AAAAAAAALS}
+{\bkmkstart AAAAAAAAKZ}
+{\bkmkend AAAAAAAAKZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11754,8 +11743,8 @@ Definition at line {\b 72} of file {\b field.h}.}\par
 {\b 
 #define T_LEFT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAALX}
-{\bkmkend AAAAAAAALX}
+{\bkmkstart AAAAAAAALD}
+{\bkmkend AAAAAAAALD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11768,8 +11757,8 @@ Definition at line {\b 69} of file {\b field.h}.}\par
 {\b 
 #define T_RIGHT\~ "+"}}
 \par
-{\bkmkstart AAAAAAAALY}
-{\bkmkend AAAAAAAALY}
+{\bkmkstart AAAAAAAALF}
+{\bkmkend AAAAAAAALF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11782,8 +11771,8 @@ Definition at line {\b 70} of file {\b field.h}.}\par
 {\b 
 #define T_TOP\~ "+"}}
 \par
-{\bkmkstart AAAAAAAAMD}
-{\bkmkend AAAAAAAAMD}
+{\bkmkstart AAAAAAAALJ}
+{\bkmkend AAAAAAAALJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11796,8 +11785,8 @@ Definition at line {\b 71} of file {\b field.h}.}\par
 {\b 
 #define TOP_BOTTOM\~ "-"}}
 \par
-{\bkmkstart AAAAAAAAMG}
-{\bkmkend AAAAAAAAMG}
+{\bkmkstart AAAAAAAALP}
+{\bkmkend AAAAAAAALP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11814,8 +11803,8 @@ Function Documentation\par
 {\b 
 void field_redraw ()}}
 \par
-{\bkmkstart AAAAAAAAMJ}
-{\bkmkend AAAAAAAAMJ}
+{\bkmkstart AAAAAAAALR}
+{\bkmkend AAAAAAAALR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -11846,8 +11835,8 @@ Here is the caller graph for this function:{
 field.h\par \pard\plain 
 {\tc\tcl2 \v presentation/field.h}
 {\xe \v presentation/field.h}
-{\bkmkstart AAAAAAAAAU}
-{\bkmkend AAAAAAAAAU}
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
 Go to the documentation of this file.\par
 {
 \par
@@ -11954,8 +11943,8 @@ Go to the documentation of this file.\par
 presentation/menu.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/menu.h}
 {\xe \v presentation/menu.h}
-{\bkmkstart AAAAAAAAHT}
-{\bkmkend AAAAAAAAHT}
+{\bkmkstart AAAAAAAAHK}
+{\bkmkend AAAAAAAAHK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -12081,8 +12070,8 @@ Definition at line {\b 42} of file {\b menu.h}.}\par
 {\b 
 #define ARROW_LEFT\~ "<LEFT>"}}
 \par
-{\bkmkstart AAAAAAAAKC}
-{\bkmkend AAAAAAAAKC}
+{\bkmkstart AAAAAAAAKE}
+{\bkmkend AAAAAAAAKE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12095,8 +12084,8 @@ Definition at line {\b 39} of file {\b menu.h}.}\par
 {\b 
 #define ARROW_RIGHT\~ "<RIGHT>"}}
 \par
-{\bkmkstart AAAAAAAAKI}
-{\bkmkend AAAAAAAAKI}
+{\bkmkstart AAAAAAAAKJ}
+{\bkmkend AAAAAAAAKJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12109,8 +12098,8 @@ Definition at line {\b 41} of file {\b menu.h}.}\par
 {\b 
 #define ARROW_UP\~ "<UP>"}}
 \par
-{\bkmkstart AAAAAAAAKM}
-{\bkmkend AAAAAAAAKM}
+{\bkmkstart AAAAAAAAKO}
+{\bkmkend AAAAAAAAKO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12123,8 +12112,8 @@ Definition at line {\b 40} of file {\b menu.h}.}\par
 {\b 
 #define RETURN_MENU_HINT\~ "\\nPress any key to return to the menu..."}}
 \par
-{\bkmkstart AAAAAAAAKR}
-{\bkmkend AAAAAAAAKR}
+{\bkmkstart AAAAAAAAKT}
+{\bkmkend AAAAAAAAKT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12144,8 +12133,8 @@ Function Documentation\par
 {\b 
 void menu_anyKeyToContinue (const char * continue_hint)}}
 \par
-{\bkmkstart AAAAAAAALE}
-{\bkmkend AAAAAAAALE}
+{\bkmkstart AAAAAAAALB}
+{\bkmkend AAAAAAAALB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12224,8 +12213,8 @@ Here is the caller graph for this function:{
 {\b 
 void menu_showCredits ()}}
 \par
-{\bkmkstart AAAAAAAANE}
-{\bkmkend AAAAAAAANE}
+{\bkmkstart AAAAAAAANG}
+{\bkmkend AAAAAAAANG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12252,8 +12241,8 @@ Here is the caller graph for this function:{
 {\b 
 void menu_showGameOver (const {\b GameState} * game_info)}}
 \par
-{\bkmkstart AAAAAAAANW}
-{\bkmkend AAAAAAAANW}
+{\bkmkstart AAAAAAAAOC}
+{\bkmkend AAAAAAAAOC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12292,8 +12281,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} menu_showMainMenu ()}}
 \par
-{\bkmkstart AAAAAAAAPD}
-{\bkmkend AAAAAAAAPD}
+{\bkmkstart AAAAAAAAPN}
+{\bkmkend AAAAAAAAPN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12327,8 +12316,8 @@ Here is the caller graph for this function:{
 menu.h\par \pard\plain 
 {\tc\tcl2 \v presentation/menu.h}
 {\xe \v presentation/menu.h}
-{\bkmkstart AAAAAAAAAW}
-{\bkmkend AAAAAAAAAW}
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
 Go to the documentation of this file.\par
 {
 \par
@@ -12420,8 +12409,8 @@ Go to the documentation of this file.\par
 presentation/print.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/print.h}
 {\xe \v presentation/print.h}
-{\bkmkstart AAAAAAAAIA}
-{\bkmkend AAAAAAAAIA}
+{\bkmkstart AAAAAAAAHO}
+{\bkmkend AAAAAAAAHO}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -12542,8 +12531,8 @@ Macro Definition Documentation\par
 {\b 
 #define LINE_SEPERATOR\~ '\\n'}}
 \par
-{\bkmkstart AAAAAAAAKH}
-{\bkmkend AAAAAAAAKH}
+{\bkmkstart AAAAAAAAJU}
+{\bkmkend AAAAAAAAJU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12560,8 +12549,8 @@ Function Documentation\par
 {\b 
 void print (const char * string)}}
 \par
-{\bkmkstart AAAAAAAAKO}
-{\bkmkend AAAAAAAAKO}
+{\bkmkstart AAAAAAAAKA}
+{\bkmkend AAAAAAAAKA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12600,8 +12589,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_clearConsole ()}}
 \par
-{\bkmkstart AAAAAAAAML}
-{\bkmkend AAAAAAAAML}
+{\bkmkstart AAAAAAAAME}
+{\bkmkend AAAAAAAAME}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12628,8 +12617,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_int (const uint32_t number)}}
 \par
-{\bkmkstart AAAAAAAAMY}
-{\bkmkend AAAAAAAAMY}
+{\bkmkstart AAAAAAAAMV}
+{\bkmkend AAAAAAAAMV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12668,8 +12657,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_style (const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAANO}
-{\bkmkend AAAAAAAANO}
+{\bkmkstart AAAAAAAANL}
+{\bkmkend AAAAAAAANL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12708,8 +12697,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_styled (const char * string, const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAAOO}
-{\bkmkend AAAAAAAAOO}
+{\bkmkstart AAAAAAAAOM}
+{\bkmkend AAAAAAAAOM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12755,8 +12744,8 @@ Here is the caller graph for this function:{
 {\b 
 void println (const char * string)}}
 \par
-{\bkmkstart AAAAAAAAPL}
-{\bkmkend AAAAAAAAPL}
+{\bkmkstart AAAAAAAAPG}
+{\bkmkend AAAAAAAAPG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12795,8 +12784,8 @@ Here is the caller graph for this function:{
 {\b 
 void println_int (const uint32_t number)}}
 \par
-{\bkmkstart AAAAAAAAPZ}
-{\bkmkend AAAAAAAAPZ}
+{\bkmkstart AAAAAAAAPV}
+{\bkmkend AAAAAAAAPV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12835,8 +12824,8 @@ Here is the caller graph for this function:{
 {\b 
 void println_styled (const char * string, const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAAQJ}
-{\bkmkend AAAAAAAAQJ}
+{\bkmkstart AAAAAAAAQD}
+{\bkmkend AAAAAAAAQD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -12884,8 +12873,8 @@ Here is the caller graph for this function:{
 print.h\par \pard\plain 
 {\tc\tcl2 \v presentation/print.h}
 {\xe \v presentation/print.h}
-{\bkmkstart AAAAAAAAAX}
-{\bkmkend AAAAAAAAAX}
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
 Go to the documentation of this file.\par
 {
 \par
@@ -12975,8 +12964,8 @@ Go to the documentation of this file.\par
 presentation/style.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/style.h}
 {\xe \v presentation/style.h}
-{\bkmkstart AAAAAAAAJJ}
-{\bkmkend AAAAAAAAJJ}
+{\bkmkstart AAAAAAAAIU}
+{\bkmkend AAAAAAAAIU}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -13234,8 +13223,8 @@ Macro Definition Documentation\par
 {\b 
 #define BG_GREEN\~ "\\e[42m"}}
 \par
-{\bkmkstart AAAAAAAAMR}
-{\bkmkend AAAAAAAAMR}
+{\bkmkstart AAAAAAAAML}
+{\bkmkend AAAAAAAAML}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13251,8 +13240,8 @@ Definition at line {\b 52} of file {\b style.h}.}\par
 {\b 
 #define BG_YELLOW\~ "\\e[43m"}}
 \par
-{\bkmkstart AAAAAAAAMX}
-{\bkmkend AAAAAAAAMX}
+{\bkmkstart AAAAAAAAMO}
+{\bkmkend AAAAAAAAMO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13268,8 +13257,8 @@ Definition at line {\b 54} of file {\b style.h}.}\par
 {\b 
 #define BOLD\~ "\\e[1m"}}
 \par
-{\bkmkstart AAAAAAAAMZ}
-{\bkmkend AAAAAAAAMZ}
+{\bkmkstart AAAAAAAAMS}
+{\bkmkend AAAAAAAAMS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13285,8 +13274,8 @@ Definition at line {\b 56} of file {\b style.h}.}\par
 {\b 
 #define CLEAR_SCREEN\~ "\\e[1;1H\\e[2J"}}
 \par
-{\bkmkstart AAAAAAAANC}
-{\bkmkend AAAAAAAANC}
+{\bkmkstart AAAAAAAAMW}
+{\bkmkend AAAAAAAAMW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13302,8 +13291,8 @@ Definition at line {\b 36} of file {\b style.h}.}\par
 {\b 
 #define DEFAULT\~ ""}}
 \par
-{\bkmkstart AAAAAAAAND}
-{\bkmkend AAAAAAAAND}
+{\bkmkstart AAAAAAAAMY}
+{\bkmkend AAAAAAAAMY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13319,8 +13308,8 @@ Definition at line {\b 38} of file {\b style.h}.}\par
 {\b 
 #define DIM\~ "\\e[2m"}}
 \par
-{\bkmkstart AAAAAAAANF}
-{\bkmkend AAAAAAAANF}
+{\bkmkstart AAAAAAAANA}
+{\bkmkend AAAAAAAANA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13336,8 +13325,8 @@ Definition at line {\b 58} of file {\b style.h}.}\par
 {\b 
 #define ERASE_LINE_FROM_CURSOR\~ "\\e[0K"}}
 \par
-{\bkmkstart AAAAAAAANK}
-{\bkmkend AAAAAAAANK}
+{\bkmkstart AAAAAAAANC}
+{\bkmkend AAAAAAAANC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13353,8 +13342,8 @@ Definition at line {\b 70} of file {\b style.h}.}\par
 {\b 
 #define FG_BLUE\~ "\\e[34m"}}
 \par
-{\bkmkstart AAAAAAAANM}
-{\bkmkend AAAAAAAANM}
+{\bkmkstart AAAAAAAANE}
+{\bkmkend AAAAAAAANE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13370,8 +13359,8 @@ Definition at line {\b 48} of file {\b style.h}.}\par
 {\b 
 #define FG_GREEN\~ "\\e[32m"}}
 \par
-{\bkmkstart AAAAAAAANP}
-{\bkmkend AAAAAAAANP}
+{\bkmkstart AAAAAAAANJ}
+{\bkmkend AAAAAAAANJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13387,8 +13376,8 @@ Definition at line {\b 44} of file {\b style.h}.}\par
 {\b 
 #define FG_MAGENTA\~ "\\e[35m"}}
 \par
-{\bkmkstart AAAAAAAANT}
-{\bkmkend AAAAAAAANT}
+{\bkmkstart AAAAAAAANM}
+{\bkmkend AAAAAAAANM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13404,8 +13393,8 @@ Definition at line {\b 50} of file {\b style.h}.}\par
 {\b 
 #define FG_RED\~ "\\e[31m"}}
 \par
-{\bkmkstart AAAAAAAANV}
-{\bkmkend AAAAAAAANV}
+{\bkmkstart AAAAAAAANO}
+{\bkmkend AAAAAAAANO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13421,8 +13410,8 @@ Definition at line {\b 42} of file {\b style.h}.}\par
 {\b 
 #define FG_YELLOW\~ "\\e[33m"}}
 \par
-{\bkmkstart AAAAAAAANY}
-{\bkmkend AAAAAAAANY}
+{\bkmkstart AAAAAAAANR}
+{\bkmkend AAAAAAAANR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13438,8 +13427,8 @@ Definition at line {\b 46} of file {\b style.h}.}\par
 {\b 
 #define HIDDEN\~ "\\e[8m"}}
 \par
-{\bkmkstart AAAAAAAAOE}
-{\bkmkend AAAAAAAAOE}
+{\bkmkstart AAAAAAAANT}
+{\bkmkend AAAAAAAANT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13455,8 +13444,8 @@ Definition at line {\b 64} of file {\b style.h}.}\par
 {\b 
 #define HIDE_CURSOR\~ "\\e[?25l"}}
 \par
-{\bkmkstart AAAAAAAAOF}
-{\bkmkend AAAAAAAAOF}
+{\bkmkstart AAAAAAAANX}
+{\bkmkend AAAAAAAANX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13472,8 +13461,8 @@ Definition at line {\b 66} of file {\b style.h}.}\par
 {\b 
 #define INVERSE\~ "\\e[7m"}}
 \par
-{\bkmkstart AAAAAAAAOI}
-{\bkmkend AAAAAAAAOI}
+{\bkmkstart AAAAAAAAOA}
+{\bkmkend AAAAAAAAOA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13489,8 +13478,8 @@ Definition at line {\b 62} of file {\b style.h}.}\par
 {\b 
 #define ITALIC\~ "\\e[3m"}}
 \par
-{\bkmkstart AAAAAAAAON}
-{\bkmkend AAAAAAAAON}
+{\bkmkstart AAAAAAAAOE}
+{\bkmkend AAAAAAAAOE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13506,8 +13495,8 @@ Definition at line {\b 60} of file {\b style.h}.}\par
 {\b 
 #define RESET\~ "\\e[0m"}}
 \par
-{\bkmkstart AAAAAAAAOR}
-{\bkmkend AAAAAAAAOR}
+{\bkmkstart AAAAAAAAOI}
+{\bkmkend AAAAAAAAOI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13523,8 +13512,8 @@ Definition at line {\b 40} of file {\b style.h}.}\par
 {\b 
 #define SHOW_CURSOR\~ "\\e[?25h"}}
 \par
-{\bkmkstart AAAAAAAAOU}
-{\bkmkend AAAAAAAAOU}
+{\bkmkstart AAAAAAAAOK}
+{\bkmkend AAAAAAAAOK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13544,8 +13533,8 @@ Variable Documentation\par
 {\b 
 const {\b Style} BOLD_CIRCLE{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAOX}
-{\bkmkend AAAAAAAAOX}
+{\bkmkstart AAAAAAAAOO}
+{\bkmkend AAAAAAAAOO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13561,8 +13550,8 @@ Definition at line {\b 42} of file {\b style.c}.}\par
 {\b 
 const {\b Style} BOLD_CROSS{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAOY}
-{\bkmkend AAAAAAAAOY}
+{\bkmkstart AAAAAAAAOR}
+{\bkmkend AAAAAAAAOR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13578,8 +13567,8 @@ Definition at line {\b 51} of file {\b style.c}.}\par
 {\b 
 const {\b Style} BOLD_DIM{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPB}
-{\bkmkend AAAAAAAAPB}
+{\bkmkstart AAAAAAAAOU}
+{\bkmkend AAAAAAAAOU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13595,8 +13584,8 @@ Definition at line {\b 28} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_BOLD{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPF}
-{\bkmkend AAAAAAAAPF}
+{\bkmkstart AAAAAAAAOX}
+{\bkmkend AAAAAAAAOX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13612,8 +13601,8 @@ Definition at line {\b 16} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_CIRCLE{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPI}
-{\bkmkend AAAAAAAAPI}
+{\bkmkstart AAAAAAAAOY}
+{\bkmkend AAAAAAAAOY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13629,8 +13618,8 @@ Definition at line {\b 38} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_CROSS{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPK}
-{\bkmkend AAAAAAAAPK}
+{\bkmkstart AAAAAAAAPC}
+{\bkmkend AAAAAAAAPC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13646,8 +13635,8 @@ Definition at line {\b 47} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_DIM{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPO}
-{\bkmkend AAAAAAAAPO}
+{\bkmkstart AAAAAAAAPJ}
+{\bkmkend AAAAAAAAPJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13663,8 +13652,8 @@ Definition at line {\b 24} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_ITALIC{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPR}
-{\bkmkend AAAAAAAAPR}
+{\bkmkstart AAAAAAAAPL}
+{\bkmkend AAAAAAAAPL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13680,8 +13669,8 @@ Definition at line {\b 20} of file {\b style.c}.}\par
 {\b 
 const {\b Style} HEADING_STYLE{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPT}
-{\bkmkend AAAAAAAAPT}
+{\bkmkstart AAAAAAAAPO}
+{\bkmkend AAAAAAAAPO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13697,8 +13686,8 @@ Definition at line {\b 56} of file {\b style.c}.}\par
 {\b 
 const {\b Style} ITALIC_DIM{\f2 [extern]}}}
 \par
-{\bkmkstart AAAAAAAAPU}
-{\bkmkend AAAAAAAAPU}
+{\bkmkstart AAAAAAAAPR}
+{\bkmkend AAAAAAAAPR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -13852,8 +13841,8 @@ Go to the documentation of this file.\par
 presentation/ui.h File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/ui.h}
 {\xe \v presentation/ui.h}
-{\bkmkstart AAAAAAAAJP}
-{\bkmkend AAAAAAAAJP}
+{\bkmkstart AAAAAAAAJI}
+{\bkmkend AAAAAAAAJI}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -14002,8 +13991,8 @@ Macro Definition Documentation\par
 {\b 
 #define EMPTY_PROGRESS_ELEMENT\~ ""}}
 \par
-{\bkmkstart AAAAAAAAMB}
-{\bkmkend AAAAAAAAMB}
+{\bkmkstart AAAAAAAAMG}
+{\bkmkend AAAAAAAAMG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14019,8 +14008,8 @@ Definition at line {\b 51} of file {\b ui.h}.}\par
 {\b 
 #define FULL_PROGRESS_ELEMENT\~ "-"}}
 \par
-{\bkmkstart AAAAAAAAMF}
-{\bkmkend AAAAAAAAMF}
+{\bkmkstart AAAAAAAAMJ}
+{\bkmkend AAAAAAAAMJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14036,8 +14025,8 @@ Definition at line {\b 49} of file {\b ui.h}.}\par
 {\b 
 #define HALF_PROGRESS_ELEMENT\~ "_"}}
 \par
-{\bkmkstart AAAAAAAAMH}
-{\bkmkend AAAAAAAAMH}
+{\bkmkstart AAAAAAAAMK}
+{\bkmkend AAAAAAAAMK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14053,8 +14042,8 @@ Definition at line {\b 50} of file {\b ui.h}.}\par
 {\b 
 #define TIMER_ROW}}
 \par
-{\bkmkstart AAAAAAAAMK}
-{\bkmkend AAAAAAAAMK}
+{\bkmkstart AAAAAAAAMN}
+{\bkmkend AAAAAAAAMN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Value:}{
@@ -14076,8 +14065,8 @@ Definition at line {\b 40} of file {\b ui.h}.}\par
 {\b 
 #define TURN_ROW\~ 1 + {\b HEADING_LINES}}}
 \par
-{\bkmkstart AAAAAAAAMQ}
-{\bkmkend AAAAAAAAMQ}
+{\bkmkstart AAAAAAAAMT}
+{\bkmkend AAAAAAAAMT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14097,8 +14086,8 @@ Function Documentation\par
 {\b 
 void ui_displayTimer (uint16_t remaining_time, uint16_t total_time)}}
 \par
-{\bkmkstart AAAAAAAAMS}
-{\bkmkend AAAAAAAAMS}
+{\bkmkstart AAAAAAAAMX}
+{\bkmkend AAAAAAAAMX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14144,8 +14133,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_displayTurn (uint8_t current_turn, {\b Player} player)}}
 \par
-{\bkmkstart AAAAAAAANH}
-{\bkmkend AAAAAAAANH}
+{\bkmkstart AAAAAAAANQ}
+{\bkmkend AAAAAAAANQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14191,8 +14180,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_gameOver ()}}
 \par
-{\bkmkstart AAAAAAAAOC}
-{\bkmkend AAAAAAAAOC}
+{\bkmkstart AAAAAAAAON}
+{\bkmkend AAAAAAAAON}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14219,8 +14208,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_printHeading ()}}
 \par
-{\bkmkstart AAAAAAAAOS}
-{\bkmkend AAAAAAAAOS}
+{\bkmkstart AAAAAAAAOZ}
+{\bkmkend AAAAAAAAOZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14247,8 +14236,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_printStartingPlayer ({\b Player} starting_player, {\b Mode} mode)}}
 \par
-{\bkmkstart AAAAAAAAPM}
-{\bkmkend AAAAAAAAPM}
+{\bkmkstart AAAAAAAAPT}
+{\bkmkend AAAAAAAAPT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14294,8 +14283,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_updateTimer (uint16_t remaining_time, uint16_t total_time)}}
 \par
-{\bkmkstart AAAAAAAAQH}
-{\bkmkend AAAAAAAAQH}
+{\bkmkstart AAAAAAAAQJ}
+{\bkmkend AAAAAAAAQJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14341,8 +14330,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_updateTurn (uint8_t current_turn, {\b Player} player)}}
 \par
-{\bkmkstart AAAAAAAAQU}
-{\bkmkend AAAAAAAAQU}
+{\bkmkstart AAAAAAAAQY}
+{\bkmkend AAAAAAAAQY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14508,8 +14497,8 @@ Go to the documentation of this file.\par
 util/conversion.h File Reference\par \pard\plain 
 {\tc\tcl2 \v util/conversion.h}
 {\xe \v util/conversion.h}
-{\bkmkstart AAAAAAAAJV}
-{\bkmkend AAAAAAAAJV}
+{\bkmkstart AAAAAAAAJT}
+{\bkmkend AAAAAAAAJT}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -14593,8 +14582,8 @@ Macro Definition Documentation\par
 {\b 
 #define ASCII_NUM_OFFSET\~ 48}}
 \par
-{\bkmkstart AAAAAAAALG}
-{\bkmkend AAAAAAAALG}
+{\bkmkstart AAAAAAAALC}
+{\bkmkend AAAAAAAALC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14614,8 +14603,8 @@ Function Documentation\par
 {\b 
 char int_to_char (uint8_t num)}}
 \par
-{\bkmkstart AAAAAAAALP}
-{\bkmkend AAAAAAAALP}
+{\bkmkstart AAAAAAAALK}
+{\bkmkend AAAAAAAALK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14649,8 +14638,8 @@ References {\b ASCII_NUM_OFFSET}.}\par
 {\b 
 int8_t int_to_str (uint32_t num, char * buf, const size_t buf_size)}}
 \par
-{\bkmkstart AAAAAAAAMC}
-{\bkmkend AAAAAAAAMC}
+{\bkmkstart AAAAAAAAMH}
+{\bkmkend AAAAAAAAMH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14771,8 +14760,8 @@ Go to the documentation of this file.\par
 util/error_handling.h File Reference\par \pard\plain 
 {\tc\tcl2 \v util/error_handling.h}
 {\xe \v util/error_handling.h}
-{\bkmkstart AAAAAAAAJU}
-{\bkmkend AAAAAAAAJU}
+{\bkmkstart AAAAAAAAKR}
+{\bkmkend AAAAAAAAKR}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -14832,8 +14821,8 @@ Function Documentation\par
 {\b 
 void Default_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAALC}
-{\bkmkend AAAAAAAALC}
+{\bkmkstart AAAAAAAALX}
+{\bkmkend AAAAAAAALX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14860,8 +14849,8 @@ Here is the call graph for this function:{
 {\b 
 void HardFault_Handler (void )}}
 \par
-{\bkmkstart AAAAAAAAME}
-{\bkmkend AAAAAAAAME}
+{\bkmkstart AAAAAAAAMP}
+{\bkmkend AAAAAAAAMP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -14890,8 +14879,8 @@ Here is the call graph for this function:{
 error_handling.h\par \pard\plain 
 {\tc\tcl2 \v util/error_handling.h}
 {\xe \v util/error_handling.h}
-{\bkmkstart AAAAAAAABC}
-{\bkmkend AAAAAAAABC}
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
 Go to the documentation of this file.\par
 {
 \par
@@ -14940,8 +14929,8 @@ Go to the documentation of this file.\par
 util/input_buf.h File Reference\par \pard\plain 
 {\tc\tcl2 \v util/input_buf.h}
 {\xe \v util/input_buf.h}
-{\bkmkstart AAAAAAAAMI}
-{\bkmkend AAAAAAAAMI}
+{\bkmkstart AAAAAAAALV}
+{\bkmkend AAAAAAAALV}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -15069,8 +15058,8 @@ Macro Definition Documentation\par
 {\b 
 #define INPUT_BUF_SIZE\~ 128}}
 \par
-{\bkmkstart AAAAAAAANJ}
-{\bkmkend AAAAAAAANJ}
+{\bkmkstart AAAAAAAANI}
+{\bkmkend AAAAAAAANI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15090,8 +15079,8 @@ Function Documentation\par
 {\b 
 {\b bool} input_getNext (volatile {\b InputBuffer} * ib, uint8_t * byte)}}
 \par
-{\bkmkstart AAAAAAAANL}
-{\bkmkend AAAAAAAANL}
+{\bkmkstart AAAAAAAANP}
+{\bkmkend AAAAAAAANP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15215,8 +15204,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} input_isFull (const volatile {\b InputBuffer} * ib)}}
 \par
-{\bkmkstart AAAAAAAAOZ}
-{\bkmkend AAAAAAAAOZ}
+{\bkmkstart AAAAAAAAPB}
+{\bkmkend AAAAAAAAPB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15254,8 +15243,8 @@ Here is the caller graph for this function:{
 {\b 
 void input_onInterrupt (uint8_t input)}}
 \par
-{\bkmkstart AAAAAAAAPN}
-{\bkmkend AAAAAAAAPN}
+{\bkmkstart AAAAAAAAPM}
+{\bkmkend AAAAAAAAPM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15317,8 +15306,8 @@ Definition at line {\b 24} of file {\b input_buf.c}.}\par
 input_buf.h\par \pard\plain 
 {\tc\tcl2 \v util/input_buf.h}
 {\xe \v util/input_buf.h}
-{\bkmkstart AAAAAAAABD}
-{\bkmkend AAAAAAAABD}
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
 Go to the documentation of this file.\par
 {
 \par
@@ -15416,8 +15405,8 @@ Go to the documentation of this file.\par
 util/math.h File Reference\par \pard\plain 
 {\tc\tcl2 \v util/math.h}
 {\xe \v util/math.h}
-{\bkmkstart AAAAAAAAMU}
-{\bkmkend AAAAAAAAMU}
+{\bkmkstart AAAAAAAANB}
+{\bkmkend AAAAAAAANB}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -15477,8 +15466,8 @@ Macro Definition Documentation\par
 {\b 
 #define max( a,  b)}}
 \par
-{\bkmkstart AAAAAAAANI}
-{\bkmkend AAAAAAAANI}
+{\bkmkstart AAAAAAAANS}
+{\bkmkend AAAAAAAANS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Value:}{
@@ -15522,8 +15511,8 @@ Definition at line {\b 52} of file {\b math.h}.}\par
 {\b 
 #define min( a,  b)}}
 \par
-{\bkmkstart AAAAAAAANQ}
-{\bkmkend AAAAAAAANQ}
+{\bkmkstart AAAAAAAANW}
+{\bkmkend AAAAAAAANW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Value:}{
@@ -15569,8 +15558,8 @@ Definition at line {\b 36} of file {\b math.h}.}\par
 math.h\par \pard\plain 
 {\tc\tcl2 \v util/math.h}
 {\xe \v util/math.h}
-{\bkmkstart AAAAAAAABB}
-{\bkmkend AAAAAAAABB}
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
 Go to the documentation of this file.\par
 {
 \par
@@ -15637,8 +15626,8 @@ Go to the documentation of this file.\par
 /github/workspace/README.md File Reference\par \pard\plain 
 {\tc\tcl2 \v /github/workspace/README.md}
 {\xe \v /github/workspace/README.md}
-{\bkmkstart AAAAAAAAMW}
-{\bkmkend AAAAAAAAMW}
+{\bkmkstart AAAAAAAAND}
+{\bkmkend AAAAAAAAND}
 \par \pard\plain 
 
 \pard\plain \sect\sbkpage
@@ -15647,8 +15636,8 @@ Go to the documentation of this file.\par
 hal/interrupts.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/interrupts.c}
 {\xe \v hal/interrupts.c}
-{\bkmkstart AAAAAAAANB}
-{\bkmkend AAAAAAAANB}
+{\bkmkstart AAAAAAAANF}
+{\bkmkend AAAAAAAANF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -15717,8 +15706,8 @@ Function Documentation\par
 {\b 
 void Interrupt2_Handler ()}}
 \par
-{\bkmkstart AAAAAAAANU}
-{\bkmkend AAAAAAAANU}
+{\bkmkstart AAAAAAAANY}
+{\bkmkend AAAAAAAANY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15746,8 +15735,8 @@ Here is the call graph for this function:{
 {\b 
 void Interrupt8_Handler ()}}
 \par
-{\bkmkstart AAAAAAAAOJ}
-{\bkmkend AAAAAAAAOJ}
+{\bkmkstart AAAAAAAAOL}
+{\bkmkend AAAAAAAAOL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15777,8 +15766,8 @@ Here is the call graph for this function:{
 interrupts.c\par \pard\plain 
 {\tc\tcl2 \v hal/interrupts.c}
 {\xe \v hal/interrupts.c}
-{\bkmkstart AAAAAAAABE}
-{\bkmkend AAAAAAAABE}
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
 Go to the documentation of this file.\par
 {
 \par
@@ -15825,8 +15814,8 @@ Go to the documentation of this file.\par
 hal/memset.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/memset.c}
 {\xe \v hal/memset.c}
-{\bkmkstart AAAAAAAANN}
-{\bkmkend AAAAAAAANN}
+{\bkmkstart AAAAAAAANK}
+{\bkmkend AAAAAAAANK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -15883,8 +15872,8 @@ Function Documentation\par
 {\b 
 void * memset (void * ptr, int x, size_t n)}}
 \par
-{\bkmkstart AAAAAAAANZ}
-{\bkmkend AAAAAAAANZ}
+{\bkmkstart AAAAAAAANV}
+{\bkmkend AAAAAAAANV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -15934,8 +15923,8 @@ Definition at line {\b 18} of file {\b memset.c}.}\par
 memset.c\par \pard\plain 
 {\tc\tcl2 \v hal/memset.c}
 {\xe \v hal/memset.c}
-{\bkmkstart AAAAAAAABF}
-{\bkmkend AAAAAAAABF}
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
 Go to the documentation of this file.\par
 {
 \par
@@ -15974,8 +15963,8 @@ Go to the documentation of this file.\par
 hal/random.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/random.c}
 {\xe \v hal/random.c}
-{\bkmkstart AAAAAAAANX}
-{\bkmkend AAAAAAAANX}
+{\bkmkstart AAAAAAAANZ}
+{\bkmkend AAAAAAAANZ}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -16050,8 +16039,8 @@ Function Documentation\par
 {\b 
 uint8_t rng_getRandomValue_immediately ()}}
 \par
-{\bkmkstart AAAAAAAAOM}
-{\bkmkend AAAAAAAAOM}
+{\bkmkstart AAAAAAAAOQ}
+{\bkmkend AAAAAAAAOQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16083,8 +16072,8 @@ Here is the caller graph for this function:{
 {\b 
 uint8_t rng_getRandomValue_waiting ()}}
 \par
-{\bkmkstart AAAAAAAAPE}
-{\bkmkend AAAAAAAAPE}
+{\bkmkstart AAAAAAAAPD}
+{\bkmkend AAAAAAAAPD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16146,8 +16135,8 @@ Here is the caller graph for this function:{
 random.c\par \pard\plain 
 {\tc\tcl2 \v hal/random.c}
 {\xe \v hal/random.c}
-{\bkmkstart AAAAAAAABH}
-{\bkmkend AAAAAAAABH}
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
 Go to the documentation of this file.\par
 {
 \par
@@ -16209,8 +16198,8 @@ Go to the documentation of this file.\par
 hal/register_access.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/register_access.c}
 {\xe \v hal/register_access.c}
-{\bkmkstart AAAAAAAAOB}
-{\bkmkend AAAAAAAAOB}
+{\bkmkstart AAAAAAAAOF}
+{\bkmkend AAAAAAAAOF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -16277,8 +16266,8 @@ Function Documentation\par
 {\b 
 uint32_t register_read (uint32_t address)}}
 \par
-{\bkmkstart AAAAAAAAOQ}
-{\bkmkend AAAAAAAAOQ}
+{\bkmkstart AAAAAAAAOT}
+{\bkmkend AAAAAAAAOT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16313,8 +16302,8 @@ Here is the caller graph for this function:{
 {\b 
 void register_write (uint32_t address, uint32_t value)}}
 \par
-{\bkmkstart AAAAAAAAPA}
-{\bkmkend AAAAAAAAPA}
+{\bkmkstart AAAAAAAAPK}
+{\bkmkend AAAAAAAAPK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16355,8 +16344,8 @@ Here is the caller graph for this function:{
 register_access.c\par \pard\plain 
 {\tc\tcl2 \v hal/register_access.c}
 {\xe \v hal/register_access.c}
-{\bkmkstart AAAAAAAABG}
-{\bkmkend AAAAAAAABG}
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
 Go to the documentation of this file.\par
 {
 \par
@@ -16408,8 +16397,8 @@ Go to the documentation of this file.\par
 hal/system.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/system.c}
 {\xe \v hal/system.c}
-{\bkmkstart AAAAAAAAOG}
-{\bkmkend AAAAAAAAOG}
+{\bkmkstart AAAAAAAAOH}
+{\bkmkend AAAAAAAAOH}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -16507,8 +16496,8 @@ Here is the caller graph for this function:{
 {\b 
 void system_softReset ()}}
 \par
-{\bkmkstart AAAAAAAAPG}
-{\bkmkend AAAAAAAAPG}
+{\bkmkstart AAAAAAAAPI}
+{\bkmkend AAAAAAAAPI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16542,8 +16531,8 @@ Here is the caller graph for this function:{
 system.c\par \pard\plain 
 {\tc\tcl2 \v hal/system.c}
 {\xe \v hal/system.c}
-{\bkmkstart AAAAAAAABK}
-{\bkmkend AAAAAAAABK}
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
 Go to the documentation of this file.\par
 {
 \par
@@ -16588,8 +16577,8 @@ Go to the documentation of this file.\par
 hal/timer.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/timer.c}
 {\xe \v hal/timer.c}
-{\bkmkstart AAAAAAAAOL}
-{\bkmkend AAAAAAAAOL}
+{\bkmkstart AAAAAAAAOJ}
+{\bkmkend AAAAAAAAOJ}
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "hal/timer.h"}\par
 {\f2 #include "hal/nvic.h"}\par
@@ -16723,8 +16712,8 @@ Function Documentation\par
 {\b 
 void timer_capture ({\b Timer} timer, {\b TimerCaptureCompare} capture)}}
 \par
-{\bkmkstart AAAAAAAAPJ}
-{\bkmkend AAAAAAAAPJ}
+{\bkmkstart AAAAAAAAPH}
+{\bkmkend AAAAAAAAPH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16766,8 +16755,8 @@ Here is the call graph for this function:{
 {\b 
 uint32_t timer_captureCompareGet ({\b Timer} timer, {\b TimerCaptureCompare} captureCompare)}}
 \par
-{\bkmkstart AAAAAAAAPS}
-{\bkmkend AAAAAAAAPS}
+{\bkmkstart AAAAAAAAPP}
+{\bkmkend AAAAAAAAPP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16871,8 +16860,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_clear ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAQK}
-{\bkmkend AAAAAAAAQK}
+{\bkmkstart AAAAAAAAQH}
+{\bkmkend AAAAAAAAQH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16907,8 +16896,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_clearCompareEvent ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAQQ}
-{\bkmkend AAAAAAAAQQ}
+{\bkmkstart AAAAAAAAQM}
+{\bkmkend AAAAAAAAQM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16933,8 +16922,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_count ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAAQV}
-{\bkmkend AAAAAAAAQV}
+{\bkmkstart AAAAAAAAQU}
+{\bkmkend AAAAAAAAQU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16969,8 +16958,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_init ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAARD}
-{\bkmkend AAAAAAAARD}
+{\bkmkstart AAAAAAAAQX}
+{\bkmkend AAAAAAAAQX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -16995,8 +16984,8 @@ Here is the call graph for this function:{
 {\b 
 void timer_init_detailed ({\b Timer} timer, uint8_t prescaler, {\b TimerBitMode} bitMode)}}
 \par
-{\bkmkstart AAAAAAAARJ}
-{\bkmkend AAAAAAAARJ}
+{\bkmkstart AAAAAAAARH}
+{\bkmkend AAAAAAAARH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17042,8 +17031,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_start ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAARS}
-{\bkmkend AAAAAAAARS}
+{\bkmkstart AAAAAAAART}
+{\bkmkend AAAAAAAART}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17082,8 +17071,8 @@ Here is the caller graph for this function:{
 {\b 
 void timer_stop ({\b Timer} timer)}}
 \par
-{\bkmkstart AAAAAAAASB}
-{\bkmkend AAAAAAAASB}
+{\bkmkstart AAAAAAAARY}
+{\bkmkend AAAAAAAARY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17126,8 +17115,8 @@ Variable Documentation\par
 {\b 
 const uint32_t TimerBase[3]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAASN}
-{\bkmkend AAAAAAAASN}
+{\bkmkstart AAAAAAAASL}
+{\bkmkend AAAAAAAASL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -17146,8 +17135,8 @@ Definition at line {\b 25} of file {\b timer.c}.}\par
 {\b 
 const uint32_t TimerCaptureTaskOffset[4]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAASS}
-{\bkmkend AAAAAAAASS}
+{\bkmkstart AAAAAAAASO}
+{\bkmkend AAAAAAAASO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -17164,8 +17153,8 @@ Definition at line {\b 37} of file {\b timer.c}.}\par
 {\b 
 const uint32_t TimerCCOffset[4]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAASX}
-{\bkmkend AAAAAAAASX}
+{\bkmkstart AAAAAAAASV}
+{\bkmkend AAAAAAAASV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -17188,8 +17177,8 @@ Definition at line {\b 30} of file {\b timer.c}.}\par
 timer.c\par \pard\plain 
 {\tc\tcl2 \v hal/timer.c}
 {\xe \v hal/timer.c}
-{\bkmkstart AAAAAAAABI}
-{\bkmkend AAAAAAAABI}
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
 Go to the documentation of this file.\par
 {
 \par
@@ -17335,8 +17324,8 @@ Go to the documentation of this file.\par
 hal/uart.c File Reference\par \pard\plain 
 {\tc\tcl2 \v hal/uart.c}
 {\xe \v hal/uart.c}
-{\bkmkstart AAAAAAAAOT}
-{\bkmkend AAAAAAAAOT}
+{\bkmkstart AAAAAAAAPA}
+{\bkmkend AAAAAAAAPA}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -17409,8 +17398,8 @@ Function Documentation\par
 {\b 
 void uart_init ({\b bool} with_interrupts)}}
 \par
-{\bkmkstart AAAAAAAAPH}
-{\bkmkend AAAAAAAAPH}
+{\bkmkstart AAAAAAAAPS}
+{\bkmkend AAAAAAAAPS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17449,8 +17438,8 @@ Here is the caller graph for this function:{
 {\b 
 uint8_t uart_readByte ()}}
 \par
-{\bkmkstart AAAAAAAAPV}
-{\bkmkend AAAAAAAAPV}
+{\bkmkstart AAAAAAAAQC}
+{\bkmkend AAAAAAAAQC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17482,8 +17471,8 @@ Here is the caller graph for this function:{
 {\b 
 void uart_writeByte (uint8_t data)}}
 \par
-{\bkmkstart AAAAAAAAQG}
-{\bkmkend AAAAAAAAQG}
+{\bkmkstart AAAAAAAAQI}
+{\bkmkend AAAAAAAAQI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17616,8 +17605,8 @@ Go to the documentation of this file.\par
 logic/bot.c File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/bot.c}
 {\xe \v logic/bot.c}
-{\bkmkstart AAAAAAAAPC}
-{\bkmkend AAAAAAAAPC}
+{\bkmkstart AAAAAAAAPF}
+{\bkmkend AAAAAAAAPF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -17929,8 +17918,8 @@ Function Documentation\par
 {\b 
 static void calculateSummary (){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAQN}
-{\bkmkend AAAAAAAAQN}
+{\bkmkstart AAAAAAAAQR}
+{\bkmkend AAAAAAAAQR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17961,8 +17950,8 @@ Here is the caller graph for this function:{
 {\b 
 void game_endTurn ()}}
 \par
-{\bkmkstart AAAAAAAAQX}
-{\bkmkend AAAAAAAAQX}
+{\bkmkstart AAAAAAAARC}
+{\bkmkend AAAAAAAARC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -17991,8 +17980,8 @@ Here is the caller graph for this function:{
 {\b 
 void game_onTimeOut ()}}
 \par
-{\bkmkstart AAAAAAAARI}
-{\bkmkend AAAAAAAARI}
+{\bkmkstart AAAAAAAARN}
+{\bkmkend AAAAAAAARN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18024,8 +18013,8 @@ Here is the caller graph for this function:{
 {\b 
 void game_run (const {\b Mode} mode)}}
 \par
-{\bkmkstart AAAAAAAARV}
-{\bkmkend AAAAAAAARV}
+{\bkmkstart AAAAAAAARZ}
+{\bkmkend AAAAAAAARZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18064,8 +18053,8 @@ Here is the caller graph for this function:{
 {\b 
 static void handleForcedMoveUpdate (){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATL}
-{\bkmkend AAAAAAAATL}
+{\bkmkstart AAAAAAAATM}
+{\bkmkend AAAAAAAATM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18092,8 +18081,8 @@ Here is the caller graph for this function:{
 {\b 
 static void init ({\b Mode} mode){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATT}
-{\bkmkend AAAAAAAATT}
+{\bkmkstart AAAAAAAATS}
+{\bkmkend AAAAAAAATS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18132,8 +18121,8 @@ Here is the caller graph for this function:{
 {\b 
 static void redrawField (){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUH}
-{\bkmkend AAAAAAAAUH}
+{\bkmkstart AAAAAAAAUF}
+{\bkmkend AAAAAAAAUF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18247,8 +18236,8 @@ Definition at line {\b 38} of file {\b game.c}.}\par
 game.c\par \pard\plain 
 {\tc\tcl2 \v logic/game.c}
 {\xe \v logic/game.c}
-{\bkmkstart AAAAAAAABM}
-{\bkmkend AAAAAAAABM}
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
 Go to the documentation of this file.\par
 {
 \par
@@ -18575,8 +18564,8 @@ Go to the documentation of this file.\par
 logic/input.c File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/input.c}
 {\xe \v logic/input.c}
-{\bkmkstart AAAAAAAAQB}
-{\bkmkend AAAAAAAAQB}
+{\bkmkstart AAAAAAAAPZ}
+{\bkmkend AAAAAAAAPZ}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -18670,8 +18659,8 @@ Function Documentation\par
 {\b 
 static void handleEscapeSequence ({\b CellState} * cell_state){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAQS}
-{\bkmkend AAAAAAAAQS}
+{\bkmkstart AAAAAAAAQL}
+{\bkmkend AAAAAAAAQL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18710,8 +18699,8 @@ Here is the caller graph for this function:{
 {\b 
 static {\b bool} handlePauseResume ({\b CellState} * cell_state){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAARE}
-{\bkmkend AAAAAAAARE}
+{\bkmkstart AAAAAAAARA}
+{\bkmkend AAAAAAAARA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18753,8 +18742,8 @@ Here is the caller graph for this function:{
 {\b 
 static void handleSetMark ({\b GameState} * game_state, {\b CellState} * cell_state){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAARO}
-{\bkmkend AAAAAAAARO}
+{\bkmkstart AAAAAAAARK}
+{\bkmkend AAAAAAAARK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18800,8 +18789,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} input_handleByte (const uint8_t * byte, {\b GameState} * game_state, {\b CellState} * cell_state)}}
 \par
-{\bkmkstart AAAAAAAASL}
-{\bkmkend AAAAAAAASL}
+{\bkmkstart AAAAAAAASH}
+{\bkmkend AAAAAAAASH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -18857,8 +18846,8 @@ Here is the caller graph for this function:{
 {\b 
 static void openControls (){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATJ}
-{\bkmkend AAAAAAAATJ}
+{\bkmkstart AAAAAAAATH}
+{\bkmkend AAAAAAAATH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19140,8 +19129,8 @@ Go to the documentation of this file.\par
 logic/time.c File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/time.c}
 {\xe \v logic/time.c}
-{\bkmkstart AAAAAAAAQD}
-{\bkmkend AAAAAAAAQD}
+{\bkmkstart AAAAAAAAQB}
+{\bkmkend AAAAAAAAQB}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -19241,8 +19230,8 @@ Function Documentation\par
 {\b 
 void time_finishTurn ({\b GameState} * game_state)}}
 \par
-{\bkmkstart AAAAAAAAQM}
-{\bkmkend AAAAAAAAQM}
+{\bkmkstart AAAAAAAAQO}
+{\bkmkend AAAAAAAAQO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19277,8 +19266,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_init ()}}
 \par
-{\bkmkstart AAAAAAAAQY}
-{\bkmkend AAAAAAAAQY}
+{\bkmkstart AAAAAAAAQW}
+{\bkmkend AAAAAAAAQW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19307,8 +19296,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_onInterrupt ()}}
 \par
-{\bkmkstart AAAAAAAARG}
-{\bkmkend AAAAAAAARG}
+{\bkmkstart AAAAAAAARE}
+{\bkmkend AAAAAAAARE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19337,8 +19326,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_pause ()}}
 \par
-{\bkmkstart AAAAAAAART}
-{\bkmkend AAAAAAAART}
+{\bkmkstart AAAAAAAARL}
+{\bkmkend AAAAAAAARL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19367,8 +19356,8 @@ Here is the caller graph for this function:{
 {\b 
 void time_resume ()}}
 \par
-{\bkmkstart AAAAAAAASE}
-{\bkmkend AAAAAAAASE}
+{\bkmkstart AAAAAAAARU}
+{\bkmkend AAAAAAAARU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19401,8 +19390,8 @@ Variable Documentation\par
 {\b 
 {\b GameTimer} g_timer}}
 \par
-{\bkmkstart AAAAAAAASP}
-{\bkmkend AAAAAAAASP}
+{\bkmkstart AAAAAAAASF}
+{\bkmkend AAAAAAAASF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -19429,8 +19418,8 @@ Definition at line {\b 19} of file {\b time.c}.}\par
 time.c\par \pard\plain 
 {\tc\tcl2 \v logic/time.c}
 {\xe \v logic/time.c}
-{\bkmkstart AAAAAAAABO}
-{\bkmkend AAAAAAAABO}
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
 Go to the documentation of this file.\par
 {
 \par
@@ -19535,8 +19524,8 @@ Go to the documentation of this file.\par
 logic/winning.c File Reference\par \pard\plain 
 {\tc\tcl2 \v logic/winning.c}
 {\xe \v logic/winning.c}
-{\bkmkstart AAAAAAAAQE}
-{\bkmkend AAAAAAAAQE}
+{\bkmkstart AAAAAAAAQF}
+{\bkmkend AAAAAAAAQF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -19599,8 +19588,8 @@ Function Documentation\par
 {\b 
 static {\b bool} checkIfPlayerWon (const {\b Cell} * cell, {\b Player} player, {\b CellState} * cell_state, {\b Cell} * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)]){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAQO}
-{\bkmkend AAAAAAAAQO}
+{\bkmkstart AAAAAAAAQT}
+{\bkmkend AAAAAAAAQT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19659,8 +19648,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b Player} winning_checkForWinner ({\b CellState} * cell_state, {\b Cell} * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])}}
 \par
-{\bkmkstart AAAAAAAARC}
-{\bkmkend AAAAAAAARC}
+{\bkmkstart AAAAAAAARD}
+{\bkmkend AAAAAAAARD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -19919,8 +19908,8 @@ Go to the documentation of this file.\par
 main.c File Reference\par \pard\plain 
 {\tc\tcl2 \v main.c}
 {\xe \v main.c}
-{\bkmkstart AAAAAAAAQF}
-{\bkmkend AAAAAAAAQF}
+{\bkmkstart AAAAAAAAQG}
+{\bkmkend AAAAAAAAQG}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -19981,8 +19970,8 @@ Function Documentation\par
 {\b 
 int main ()}}
 \par
-{\bkmkstart AAAAAAAAQP}
-{\bkmkend AAAAAAAAQP}
+{\bkmkstart AAAAAAAAQQ}
+{\bkmkend AAAAAAAAQQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20010,8 +19999,8 @@ Here is the call graph for this function:{
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 main.c\par \pard\plain 
-{\bkmkstart AAAAAAAABQ}
-{\bkmkend AAAAAAAABQ}
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
 Go to the documentation of this file.\par
 {
 \par
@@ -20091,8 +20080,8 @@ Go to the documentation of this file.\par
 presentation/cell.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/cell.c}
 {\xe \v presentation/cell.c}
-{\bkmkstart AAAAAAAAQI}
-{\bkmkend AAAAAAAAQI}
+{\bkmkstart AAAAAAAAQK}
+{\bkmkend AAAAAAAAQK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -20237,8 +20226,8 @@ Function Documentation\par
 {\b 
 void cell_decreaseSize ()}}
 \par
-{\bkmkstart AAAAAAAARA}
-{\bkmkend AAAAAAAARA}
+{\bkmkstart AAAAAAAARF}
+{\bkmkend AAAAAAAARF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20261,8 +20250,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_increaseSize ()}}
 \par
-{\bkmkstart AAAAAAAARF}
-{\bkmkend AAAAAAAARF}
+{\bkmkstart AAAAAAAARJ}
+{\bkmkend AAAAAAAARJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20285,8 +20274,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redraw (const {\b Cell} * cell)}}
 \par
-{\bkmkstart AAAAAAAARQ}
-{\bkmkend AAAAAAAARQ}
+{\bkmkstart AAAAAAAARR}
+{\bkmkend AAAAAAAARR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20325,8 +20314,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redraw_withModifier (const {\b Cell} * cell, const char * modifier)}}
 \par
-{\bkmkstart AAAAAAAARY}
-{\bkmkend AAAAAAAARY}
+{\bkmkstart AAAAAAAARX}
+{\bkmkend AAAAAAAARX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20372,8 +20361,8 @@ Here is the caller graph for this function:{
 {\b 
 void cell_redrawAll ({\b Cell} all_cells[][CELLS_PER_ROW], const char * modifier)}}
 \par
-{\bkmkstart AAAAAAAASM}
-{\bkmkend AAAAAAAASM}
+{\bkmkstart AAAAAAAASN}
+{\bkmkend AAAAAAAASN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20459,8 +20448,8 @@ Here is the caller graph for this function:{
 {\b 
 static void redrawCell (uint8_t row, uint8_t col, const char * modifier, {\b Player} marked_by){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATH}
-{\bkmkend AAAAAAAATH}
+{\bkmkstart AAAAAAAATJ}
+{\bkmkend AAAAAAAATJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20524,8 +20513,8 @@ Variable Documentation\par
 {\b 
 {\b CellSize} g_cell_size}}
 \par
-{\bkmkstart AAAAAAAATN}
-{\bkmkend AAAAAAAATN}
+{\bkmkstart AAAAAAAATT}
+{\bkmkend AAAAAAAATT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20556,8 +20545,8 @@ Definition at line {\b 22} of file {\b cell.c}.}\par
 {\b 
 char* LARGE_O[5][9]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATS}
-{\bkmkend AAAAAAAATS}
+{\bkmkstart AAAAAAAATV}
+{\bkmkend AAAAAAAATV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20595,8 +20584,8 @@ Definition at line {\b 63} of file {\b cell.c}.}\par
 {\b 
 char* LARGE_X[5][9]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATV}
-{\bkmkend AAAAAAAATV}
+{\bkmkstart AAAAAAAATY}
+{\bkmkend AAAAAAAATY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20618,8 +20607,8 @@ Definition at line {\b 55} of file {\b cell.c}.}\par
 {\b 
 char* MEDIUM_O[3][7]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATX}
-{\bkmkend AAAAAAAATX}
+{\bkmkstart AAAAAAAATZ}
+{\bkmkend AAAAAAAATZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20639,8 +20628,8 @@ Definition at line {\b 49} of file {\b cell.c}.}\par
 {\b 
 char* MEDIUM_X[3][7]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUA}
-{\bkmkend AAAAAAAAUA}
+{\bkmkstart AAAAAAAAUC}
+{\bkmkend AAAAAAAAUC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20660,8 +20649,8 @@ Definition at line {\b 43} of file {\b cell.c}.}\par
 {\b 
 char* SMALL_O[1][3] = \{\{" ", "O", " "\}\}{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUB}
-{\bkmkend AAAAAAAAUB}
+{\bkmkstart AAAAAAAAUD}
+{\bkmkend AAAAAAAAUD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20677,8 +20666,8 @@ Definition at line {\b 41} of file {\b cell.c}.}\par
 {\b 
 char* SMALL_X[1][3] = \{\{" ", "X", " "\}\}{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUD}
-{\bkmkend AAAAAAAAUD}
+{\bkmkstart AAAAAAAAUE}
+{\bkmkend AAAAAAAAUE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -20694,8 +20683,8 @@ Definition at line {\b 40} of file {\b cell.c}.}\par
 {\b 
 {\b CellSize} VALID_SIZES[]{\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUE}
-{\bkmkend AAAAAAAAUE}
+{\bkmkstart AAAAAAAAUG}
+{\bkmkend AAAAAAAAUG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -20722,8 +20711,8 @@ Definition at line {\b 95} of file {\b cell.c}.}\par
 cell.c\par \pard\plain 
 {\tc\tcl2 \v presentation/cell.c}
 {\xe \v presentation/cell.c}
-{\bkmkstart AAAAAAAABS}
-{\bkmkend AAAAAAAABS}
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
 Go to the documentation of this file.\par
 {
 \par
@@ -20967,8 +20956,8 @@ Go to the documentation of this file.\par
 presentation/cursor.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/cursor.c}
 {\xe \v presentation/cursor.c}
-{\bkmkstart AAAAAAAAQL}
-{\bkmkend AAAAAAAAQL}
+{\bkmkstart AAAAAAAAQN}
+{\bkmkend AAAAAAAAQN}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -21033,8 +21022,8 @@ Function Documentation\par
 {\b 
 void cursor_moveTo (uint8_t x, uint8_t y)}}
 \par
-{\bkmkstart AAAAAAAAQT}
-{\bkmkend AAAAAAAAQT}
+{\bkmkstart AAAAAAAAQV}
+{\bkmkend AAAAAAAAQV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21083,8 +21072,8 @@ Here is the caller graph for this function:{
 {\b 
 static void writeNumToBuf (uint8_t num, const char * num_buf, char * buf, uint8_t * buf_pos){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAARH}
-{\bkmkend AAAAAAAARH}
+{\bkmkstart AAAAAAAARI}
+{\bkmkend AAAAAAAARI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21139,8 +21128,8 @@ Here is the caller graph for this function:{
 cursor.c\par \pard\plain 
 {\tc\tcl2 \v presentation/cursor.c}
 {\xe \v presentation/cursor.c}
-{\bkmkstart AAAAAAAABR}
-{\bkmkend AAAAAAAABR}
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
 Go to the documentation of this file.\par
 {
 \par
@@ -21224,8 +21213,8 @@ Go to the documentation of this file.\par
 presentation/field.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/field.c}
 {\xe \v presentation/field.c}
-{\bkmkstart AAAAAAAAQR}
-{\bkmkend AAAAAAAAQR}
+{\bkmkstart AAAAAAAAQP}
+{\bkmkend AAAAAAAAQP}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -21324,8 +21313,8 @@ Here is the caller graph for this function:{
 {\b 
 static void printRow (char ** row, size_t row_length){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAARP}
-{\bkmkend AAAAAAAARP}
+{\bkmkstart AAAAAAAARO}
+{\bkmkend AAAAAAAARO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21492,8 +21481,8 @@ Go to the documentation of this file.\par
 presentation/menu.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/menu.c}
 {\xe \v presentation/menu.c}
-{\bkmkstart AAAAAAAAQW}
-{\bkmkend AAAAAAAAQW}
+{\bkmkstart AAAAAAAAQS}
+{\bkmkend AAAAAAAAQS}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -21601,8 +21590,8 @@ Function Documentation\par
 {\b 
 void menu_anyKeyToContinue (const char * continue_hint)}}
 \par
-{\bkmkstart AAAAAAAARN}
-{\bkmkend AAAAAAAARN}
+{\bkmkstart AAAAAAAARG}
+{\bkmkend AAAAAAAARG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21641,8 +21630,8 @@ Here is the caller graph for this function:{
 {\b 
 void menu_showControls (const char * continue_hint)}}
 \par
-{\bkmkstart AAAAAAAARZ}
-{\bkmkend AAAAAAAARZ}
+{\bkmkstart AAAAAAAARS}
+{\bkmkend AAAAAAAARS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21681,8 +21670,8 @@ Here is the caller graph for this function:{
 {\b 
 void menu_showCredits ()}}
 \par
-{\bkmkstart AAAAAAAASV}
-{\bkmkend AAAAAAAASV}
+{\bkmkstart AAAAAAAASG}
+{\bkmkend AAAAAAAASG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21709,8 +21698,8 @@ Here is the caller graph for this function:{
 {\b 
 void menu_showGameOver (const {\b GameState} * game_info)}}
 \par
-{\bkmkstart AAAAAAAATG}
-{\bkmkend AAAAAAAATG}
+{\bkmkstart AAAAAAAASW}
+{\bkmkend AAAAAAAASW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21749,8 +21738,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} menu_showMainMenu ()}}
 \par
-{\bkmkstart AAAAAAAATP}
-{\bkmkend AAAAAAAATP}
+{\bkmkstart AAAAAAAATN}
+{\bkmkend AAAAAAAATN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21782,8 +21771,8 @@ Here is the caller graph for this function:{
 {\b 
 static void printMainMenu (){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUI}
-{\bkmkend AAAAAAAAUI}
+{\bkmkstart AAAAAAAAUB}
+{\bkmkend AAAAAAAAUB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -21810,8 +21799,8 @@ Here is the caller graph for this function:{
 {\b 
 static void printWinnerBanner (const {\b GameState} * game_info){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAAUJ}
-{\bkmkend AAAAAAAAUJ}
+{\bkmkstart AAAAAAAAUI}
+{\bkmkend AAAAAAAAUI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22283,8 +22272,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_clearConsole ()}}
 \par
-{\bkmkstart AAAAAAAASI}
-{\bkmkend AAAAAAAASI}
+{\bkmkstart AAAAAAAASC}
+{\bkmkend AAAAAAAASC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22311,8 +22300,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_int (const uint32_t number)}}
 \par
-{\bkmkstart AAAAAAAASU}
-{\bkmkend AAAAAAAASU}
+{\bkmkstart AAAAAAAASQ}
+{\bkmkend AAAAAAAASQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22351,8 +22340,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_style (const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAATC}
-{\bkmkend AAAAAAAATC}
+{\bkmkstart AAAAAAAATE}
+{\bkmkend AAAAAAAATE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22391,8 +22380,8 @@ Here is the caller graph for this function:{
 {\b 
 void print_styled (const char * string, const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAATO}
-{\bkmkend AAAAAAAATO}
+{\bkmkstart AAAAAAAATP}
+{\bkmkend AAAAAAAATP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22438,8 +22427,8 @@ Here is the caller graph for this function:{
 {\b 
 void println (const char * string)}}
 \par
-{\bkmkstart AAAAAAAATW}
-{\bkmkend AAAAAAAATW}
+{\bkmkstart AAAAAAAATU}
+{\bkmkend AAAAAAAATU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22478,8 +22467,8 @@ Here is the caller graph for this function:{
 {\b 
 void println_int (const uint32_t number)}}
 \par
-{\bkmkstart AAAAAAAAUC}
-{\bkmkend AAAAAAAAUC}
+{\bkmkstart AAAAAAAAUA}
+{\bkmkend AAAAAAAAUA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22518,8 +22507,8 @@ Here is the caller graph for this function:{
 {\b 
 void println_styled (const char * string, const {\b Style} * style)}}
 \par
-{\bkmkstart AAAAAAAAUG}
-{\bkmkend AAAAAAAAUG}
+{\bkmkstart AAAAAAAAUH}
+{\bkmkend AAAAAAAAUH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -22662,8 +22651,8 @@ Go to the documentation of this file.\par
 presentation/style.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/style.c}
 {\xe \v presentation/style.c}
-{\bkmkstart AAAAAAAARK}
-{\bkmkend AAAAAAAARK}
+{\bkmkstart AAAAAAAARQ}
+{\bkmkend AAAAAAAARQ}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -22782,8 +22771,8 @@ Variable Documentation\par
 {\b 
 const {\b Style} BOLD_CIRCLE}}
 \par
-{\bkmkstart AAAAAAAARX}
-{\bkmkend AAAAAAAARX}
+{\bkmkstart AAAAAAAASE}
+{\bkmkend AAAAAAAASE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22805,8 +22794,8 @@ Definition at line {\b 42} of file {\b style.c}.}\par
 {\b 
 const {\b Style} BOLD_CROSS}}
 \par
-{\bkmkstart AAAAAAAASG}
-{\bkmkend AAAAAAAASG}
+{\bkmkstart AAAAAAAASJ}
+{\bkmkend AAAAAAAASJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22828,8 +22817,8 @@ Definition at line {\b 51} of file {\b style.c}.}\par
 {\b 
 const {\b Style} BOLD_DIM}}
 \par
-{\bkmkstart AAAAAAAASH}
-{\bkmkend AAAAAAAASH}
+{\bkmkstart AAAAAAAASM}
+{\bkmkend AAAAAAAASM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22851,8 +22840,8 @@ Definition at line {\b 28} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_BOLD}}
 \par
-{\bkmkstart AAAAAAAASJ}
-{\bkmkend AAAAAAAASJ}
+{\bkmkstart AAAAAAAASP}
+{\bkmkend AAAAAAAASP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22873,8 +22862,8 @@ Definition at line {\b 16} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_CIRCLE}}
 \par
-{\bkmkstart AAAAAAAASO}
-{\bkmkend AAAAAAAASO}
+{\bkmkstart AAAAAAAAST}
+{\bkmkend AAAAAAAAST}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22895,8 +22884,8 @@ Definition at line {\b 38} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_CROSS}}
 \par
-{\bkmkstart AAAAAAAASR}
-{\bkmkend AAAAAAAASR}
+{\bkmkstart AAAAAAAASX}
+{\bkmkend AAAAAAAASX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22917,8 +22906,8 @@ Definition at line {\b 47} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_DIM}}
 \par
-{\bkmkstart AAAAAAAAST}
-{\bkmkend AAAAAAAAST}
+{\bkmkstart AAAAAAAASY}
+{\bkmkend AAAAAAAASY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22939,8 +22928,8 @@ Definition at line {\b 24} of file {\b style.c}.}\par
 {\b 
 const {\b Style} DEFAULT_ITALIC}}
 \par
-{\bkmkstart AAAAAAAASY}
-{\bkmkend AAAAAAAASY}
+{\bkmkstart AAAAAAAATA}
+{\bkmkend AAAAAAAATA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22961,8 +22950,8 @@ Definition at line {\b 20} of file {\b style.c}.}\par
 {\b 
 const {\b Style} HEADING_STYLE}}
 \par
-{\bkmkstart AAAAAAAATA}
-{\bkmkend AAAAAAAATA}
+{\bkmkstart AAAAAAAATD}
+{\bkmkend AAAAAAAATD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -22984,8 +22973,8 @@ Definition at line {\b 56} of file {\b style.c}.}\par
 {\b 
 const {\b Style} ITALIC_DIM}}
 \par
-{\bkmkstart AAAAAAAATB}
-{\bkmkend AAAAAAAATB}
+{\bkmkstart AAAAAAAATF}
+{\bkmkend AAAAAAAATF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\b Initial value:}{
@@ -23082,8 +23071,8 @@ Go to the documentation of this file.\par
 presentation/ui.c File Reference\par \pard\plain 
 {\tc\tcl2 \v presentation/ui.c}
 {\xe \v presentation/ui.c}
-{\bkmkstart AAAAAAAARL}
-{\bkmkend AAAAAAAARL}
+{\bkmkstart AAAAAAAARP}
+{\bkmkend AAAAAAAARP}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -23188,8 +23177,8 @@ Function Documentation\par
 {\b 
 void ui_displayTimer (uint16_t remaining_time, uint16_t total_time)}}
 \par
-{\bkmkstart AAAAAAAASF}
-{\bkmkend AAAAAAAASF}
+{\bkmkstart AAAAAAAASB}
+{\bkmkend AAAAAAAASB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23235,8 +23224,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_displayTurn (uint8_t current_turn, {\b Player} player)}}
 \par
-{\bkmkstart AAAAAAAASW}
-{\bkmkend AAAAAAAASW}
+{\bkmkstart AAAAAAAASS}
+{\bkmkend AAAAAAAASS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23282,8 +23271,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_gameOver ()}}
 \par
-{\bkmkstart AAAAAAAATF}
-{\bkmkend AAAAAAAATF}
+{\bkmkstart AAAAAAAATC}
+{\bkmkend AAAAAAAATC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23385,8 +23374,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_updateTimer (uint16_t remaining_time, uint16_t total_time)}}
 \par
-{\bkmkstart AAAAAAAATY}
-{\bkmkend AAAAAAAATY}
+{\bkmkstart AAAAAAAATW}
+{\bkmkend AAAAAAAATW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23432,8 +23421,8 @@ Here is the caller graph for this function:{
 {\b 
 void ui_updateTurn (uint8_t current_turn, {\b Player} player)}}
 \par
-{\bkmkstart AAAAAAAAUF}
-{\bkmkend AAAAAAAAUF}
+{\bkmkstart AAAAAAAAUJ}
+{\bkmkend AAAAAAAAUJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23660,8 +23649,8 @@ Go to the documentation of this file.\par
 util/conversion.c File Reference\par \pard\plain 
 {\tc\tcl2 \v util/conversion.c}
 {\xe \v util/conversion.c}
-{\bkmkstart AAAAAAAARR}
-{\bkmkend AAAAAAAARR}
+{\bkmkstart AAAAAAAARV}
+{\bkmkend AAAAAAAARV}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -23726,8 +23715,8 @@ Function Documentation\par
 {\b 
 char int_to_char (uint8_t num)}}
 \par
-{\bkmkstart AAAAAAAARW}
-{\bkmkend AAAAAAAARW}
+{\bkmkstart AAAAAAAASD}
+{\bkmkend AAAAAAAASD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23761,8 +23750,8 @@ References {\b ASCII_NUM_OFFSET}.}\par
 {\b 
 int8_t int_to_str (uint32_t num, char * buf, const size_t buf_size)}}
 \par
-{\bkmkstart AAAAAAAASC}
-{\bkmkend AAAAAAAASC}
+{\bkmkstart AAAAAAAASK}
+{\bkmkend AAAAAAAASK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23816,8 +23805,8 @@ Here is the caller graph for this function:{
 conversion.c\par \pard\plain 
 {\tc\tcl2 \v util/conversion.c}
 {\xe \v util/conversion.c}
-{\bkmkstart AAAAAAAABY}
-{\bkmkend AAAAAAAABY}
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
 Go to the documentation of this file.\par
 {
 \par
@@ -23893,8 +23882,8 @@ Go to the documentation of this file.\par
 util/error_handling.c File Reference\par \pard\plain 
 {\tc\tcl2 \v util/error_handling.c}
 {\xe \v util/error_handling.c}
-{\bkmkstart AAAAAAAARU}
-{\bkmkend AAAAAAAARU}
+{\bkmkstart AAAAAAAARW}
+{\bkmkend AAAAAAAARW}
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "util/error_handling.h"}\par
 {\f2 #include "presentation/ui.h"}\par
@@ -23947,8 +23936,8 @@ Function Documentation\par
 {\b 
 void Default_Handler ()}}
 \par
-{\bkmkstart AAAAAAAASD}
-{\bkmkend AAAAAAAASD}
+{\bkmkstart AAAAAAAASI}
+{\bkmkend AAAAAAAASI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -23973,8 +23962,8 @@ Here is the call graph for this function:{
 {\b 
 static void handleError (const char * hint){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAASK}
-{\bkmkend AAAAAAAASK}
+{\bkmkstart AAAAAAAASU}
+{\bkmkend AAAAAAAASU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24016,8 +24005,8 @@ Here is the caller graph for this function:{
 {\b 
 void HardFault_Handler ()}}
 \par
-{\bkmkstart AAAAAAAATD}
-{\bkmkend AAAAAAAATD}
+{\bkmkstart AAAAAAAATI}
+{\bkmkend AAAAAAAATI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24044,8 +24033,8 @@ Here is the call graph for this function:{
 error_handling.c\par \pard\plain 
 {\tc\tcl2 \v util/error_handling.c}
 {\xe \v util/error_handling.c}
-{\bkmkstart AAAAAAAABZ}
-{\bkmkend AAAAAAAABZ}
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
 Go to the documentation of this file.\par
 {
 \par
@@ -24220,8 +24209,8 @@ Function Documentation\par
 {\b 
 {\b bool} input_getNext (volatile {\b InputBuffer} * ib, uint8_t * byte)}}
 \par
-{\bkmkstart AAAAAAAASQ}
-{\bkmkend AAAAAAAASQ}
+{\bkmkstart AAAAAAAASR}
+{\bkmkend AAAAAAAASR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24270,8 +24259,8 @@ Here is the caller graph for this function:{
 {\b 
 void input_init (volatile {\b InputBuffer} * ib)}}
 \par
-{\bkmkstart AAAAAAAATE}
-{\bkmkend AAAAAAAATE}
+{\bkmkstart AAAAAAAATB}
+{\bkmkend AAAAAAAATB}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24306,8 +24295,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} input_isEmpty (const volatile {\b InputBuffer} * ib)}}
 \par
-{\bkmkstart AAAAAAAATI}
-{\bkmkend AAAAAAAATI}
+{\bkmkstart AAAAAAAATG}
+{\bkmkend AAAAAAAATG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24345,8 +24334,8 @@ Here is the caller graph for this function:{
 {\b 
 {\b bool} input_isFull (const volatile {\b InputBuffer} * ib)}}
 \par
-{\bkmkstart AAAAAAAATM}
-{\bkmkend AAAAAAAATM}
+{\bkmkstart AAAAAAAATL}
+{\bkmkend AAAAAAAATL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24384,8 +24373,8 @@ Here is the caller graph for this function:{
 {\b 
 void input_onInterrupt (uint8_t input)}}
 \par
-{\bkmkstart AAAAAAAATR}
-{\bkmkend AAAAAAAATR}
+{\bkmkstart AAAAAAAATO}
+{\bkmkend AAAAAAAATO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24424,8 +24413,8 @@ Here is the caller graph for this function:{
 {\b 
 static {\b bool} putIntoBuf (volatile {\b InputBuffer} * ib, const uint8_t byte){\f2 [static]}}}
 \par
-{\bkmkstart AAAAAAAATU}
-{\bkmkend AAAAAAAATU}
+{\bkmkstart AAAAAAAATR}
+{\bkmkend AAAAAAAATR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -24478,8 +24467,8 @@ Variable Documentation\par
 {\b 
 volatile {\b InputBuffer} g_input_buf}}
 \par
-{\bkmkstart AAAAAAAATZ}
-{\bkmkend AAAAAAAATZ}
+{\bkmkstart AAAAAAAATX}
+{\bkmkend AAAAAAAATX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par

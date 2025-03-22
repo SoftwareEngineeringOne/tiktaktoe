@@ -13,12 +13,8 @@ var index =
     ] ],
     [ "⚙️ Configuration", "index.html#autotoc_md30", null ],
     [ "📦 Dependencies", "index.html#autotoc_md31", null ],
-    [ "Using Winget", "index.html#autotoc_md32", null ],
-    [ "Using Chocolatey", "index.html#autotoc_md33", null ],
-    [ "Or manually using the link above", "index.html#autotoc_md34", [
-      [ "🏗️ Architecture", "index.html#autotoc_md35", null ],
-      [ "📜 Conventions", "index.html#autotoc_md36", null ],
-      [ "👥 Authors", "index.html#autotoc_md37", null ],
-      [ "🙏 Acknowledgements", "index.html#autotoc_md38", null ]
-    ] ]
+    [ "🏗️ Architecture", "index.html#autotoc_md32", null ],
+    [ "📜 Conventions", "index.html#autotoc_md33", null ],
+    [ "👥 Authors", "index.html#autotoc_md34", null ],
+    [ "🙏 Acknowledgements", "index.html#autotoc_md35", null ]
 ];

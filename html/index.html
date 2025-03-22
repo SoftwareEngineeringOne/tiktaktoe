@@ -32,6 +32,8 @@
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -152,34 +154,24 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
     <a href="#autotoc_md31">📦 Dependencies</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md32">Using Winget</a>
+    <a href="#autotoc_md32">🏗️ Architecture</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md33">Using Chocolatey</a>
+    <a href="#autotoc_md33">📜 Conventions</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md34">Or manually using the link above</a>
-    <ul>
-      <li class="level2">
-        <a href="#autotoc_md35">🏗️ Architecture</a>
-      </li>
-      <li class="level2">
-        <a href="#autotoc_md36">📜 Conventions</a>
-      </li>
-      <li class="level2">
-        <a href="#autotoc_md37">👥 Authors</a>
-      </li>
-      <li class="level2">
-        <a href="#autotoc_md38">🙏 Acknowledgements</a>
-      </li>
-    </ul>
+    <a href="#autotoc_md34">👥 Authors</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md35">🙏 Acknowledgements</a>
   </li>
 </ul>
 </div>
 <div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a></p>
 <div style="visibility:hidden"></div><p><a href="https://choosealicense.com/licenses/mpl-2.0/"><img src="https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe" alt="MPL-2.0 License" class="inline"/></a> <img src="https://img.shields.io/badge/microcontroller-nRF51-blue?logo=nordicsemiconductor" alt="microcontroller" class="inline"/> <img src="https://img.shields.io/badge/cpu-cortex--m0-darkgreen?logo=arm" alt="cpu" class="inline"/> <img src="https://img.shields.io/github/v/release/SoftwareEngineeringOne/tiktaktoe" alt="Release" class="inline"/> <img src="https://img.shields.io/docker/image-size/definitelynotsimon13/tiktaktoe" alt="Image Size" class="inline"/></p>
 <p>A TikTakToe game written for the <code>nRF-51</code> microcontroller with an <code>arm-cortex-m0</code> CPU.</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<div class="hidden"></div><div class="hidden"><dl class="section remark"><dt>Remarks</dt><dd>We recommend viewing this and any other markdown file using our <a href="https://tiktaktoe.episko.de">documentation page</a> which provides improved formatting!</dd></dl>
+</div><h1><a class="anchor" id="autotoc_md21"></a>
 ✨ Features</h1>
 <ul>
 <li>🎮 <b>PVP and PVE modes</b></li>
@@ -215,10 +207,10 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="line"> </div>
 <div class="line"># 3. Run the project</div>
 <div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio</div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Due to a problem with the <code>TIMER</code> device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!</dd></dl>
+</div><!-- fragment --><p class="startli"><b>Due to a problem with the <code>TIMER</code> device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!</b></p>
 </li>
 </ul>
-</div><h2><a class="anchor" id="autotoc_md25"></a>
+</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md25"></a>
 🛠️ Using the provided Makefile</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title"> 🐧 Linux </b></p>
@@ -314,17 +306,14 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="fragment"><div class="line">brew install gcc-arm-embedded cmake qemu</div>
 </div><!-- fragment --></li>
 <li><b class="tab-title"> Windows </b><ul>
-<li><a href="https://cmake.org/download/">CMake</a> ```pwsh </li>
-</ul>
-</li>
-</ul>
-</div><h1><a class="anchor" id="autotoc_md32"></a>
-<div class="tabbed">Using Winget</div></h1>
-<div class="tabbed"> winget install CMake.CMake</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md33"></a>
-<div class="tabbed">Using Chocolatey</div></h1>
-<div class="tabbed"> choco install cmake &ndash;pre</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md34"></a>
-<div class="tabbed">Or manually using the link above</div></h1>
-<div class="tabbed"> ```</div><div class="tabbed"><ul>
+<li><a href="https://cmake.org/download/">CMake</a> <div class="fragment"><div class="line"># Using Winget</div>
+<div class="line">winget install CMake.CMake</div>
+<div class="line"> </div>
+<div class="line"># Using Chocolatey</div>
+<div class="line">choco install cmake --pre </div>
+<div class="line"> </div>
+<div class="line"># Or manually using the link above</div>
+</div><!-- fragment --></li>
 <li>MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available)<ol type="1">
 <li>Install <a href="https://www.msys2.org/#installation">MSYS2</a></li>
 <li>Open <code>MSYS2 UCRT64</code> shell</li>
@@ -347,26 +336,28 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </li>
 <li><a href="https://gnutoolchains.com/arm-eabi/">GNU Toolchain for arm-eabi</a><ol type="1">
 <li>Install from link above</li>
-<li>Ensure installation location is added to <code>PATH</code> </li>
+<li>Ensure installation location is added to <code>PATH</code></li>
 </ol>
 </li>
 </ul>
-</div><h2><a class="anchor" id="autotoc_md35"></a>
-🏗️ Architecture</h2>
+</li>
+</ul>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md32"></a>
+🏗️ Architecture</h1>
 <p>To learn more about the the architecture we used to create this game check out <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a>!</p>
-<h2><a class="anchor" id="autotoc_md36"></a>
-📜 Conventions</h2>
+<h1><a class="anchor" id="autotoc_md33"></a>
+📜 Conventions</h1>
 <p>If you want to know about the coding convection we used when creating code check out <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a>!</p>
-<h2><a class="anchor" id="autotoc_md37"></a>
-👥 Authors</h2>
+<h1><a class="anchor" id="autotoc_md34"></a>
+👥 Authors</h1>
 <ul>
 <li><a href="https://www.github.com/DefinitelyNotSimon13">Simon Blum</a></li>
 <li><a href="https://github.com/benoeckl">Ben Oeckl</a></li>
 <li><a href="https://github.com/DosKobold">Paul Stöckle</a></li>
 <li><a href="https://github.com/MaxRodler">Max Rodler</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md38"></a>
-🙏 Acknowledgements</h2>
+<h1><a class="anchor" id="autotoc_md35"></a>
+🙏 Acknowledgements</h1>
 <ul>
 <li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> - Base template used for the project </li>
 </ul>

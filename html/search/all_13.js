@@ -44,12 +44,9 @@ var searchData=
   ['ui_5fupdatetimer_41',['ui_updateTimer',['../dc/d78/ui_8c.html#ab07153d30b3acd0a53ca9d4043e27160',1,'ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time):&#160;ui.c'],['../d9/d3b/ui_8h.html#aeb1f8edc41404d3650def3e0c4b8d700',1,'ui_updateTimer(uint16_t remaining_time, uint16_t total_time):&#160;ui.c']]],
   ['ui_5fupdateturn_42',['ui_updateTurn',['../dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4',1,'ui_updateTurn(const uint8_t current_turn, const Player player):&#160;ui.c'],['../d9/d3b/ui_8h.html#a358e03c0e369343f9beab07d771f0bcb',1,'ui_updateTurn(uint8_t current_turn, Player player):&#160;ui.c']]],
   ['use_20dockerhub_43',['☁️ Use Dockerhub',['../index.html#autotoc_md27',1,'']]],
-  ['using_20chocolatey_44',['Using Chocolatey',['../index.html#autotoc_md33',1,'']]],
-  ['using_20cmake_20and_20qemu_45',['🖥️ Using CMake and qemu',['../index.html#autotoc_md24',1,'']]],
-  ['using_20docker_46',['🐳 Using Docker',['../index.html#autotoc_md26',1,'']]],
-  ['using_20the_20link_20above_47',['Or manually using the link above',['../index.html#autotoc_md34',1,'']]],
-  ['using_20the_20provided_20makefile_48',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],
-  ['using_20winget_49',['Using Winget',['../index.html#autotoc_md32',1,'']]],
-  ['utility_50',['Utility',['../de/d15/group__Utility.html',1,'']]],
-  ['utility_20layer_51',['🛠️ Utility Layer',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9',1,'']]]
+  ['using_20cmake_20and_20qemu_44',['🖥️ Using CMake and qemu',['../index.html#autotoc_md24',1,'']]],
+  ['using_20docker_45',['🐳 Using Docker',['../index.html#autotoc_md26',1,'']]],
+  ['using_20the_20provided_20makefile_46',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],
+  ['utility_47',['Utility',['../de/d15/group__Utility.html',1,'']]],
+  ['utility_20layer_48',['🛠️ Utility Layer',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9',1,'']]]
 ];

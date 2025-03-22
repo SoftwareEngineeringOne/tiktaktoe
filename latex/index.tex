@@ -8,7 +8,14 @@
 
 \href{https://choosealicense.com/licenses/mpl-2.0/}{\texttt{ }}    
 
-A Tik\+Tak\+Toe game written for the {\ttfamily n\+RF-\/51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU.\hypertarget{index_autotoc_md21}{}\doxysection{\texorpdfstring{✨ Features}{✨ Features}}\label{index_autotoc_md21}
+A Tik\+Tak\+Toe game written for the {\ttfamily n\+RF-\/51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU.
+
+
+
+\begin{DoxyRemark}{Remarks}
+We recommend viewing this and any other markdown file using our \href{https://tiktaktoe.episko.de}{\texttt{ documentation page}} which provides improved formatting!
+\end{DoxyRemark}
+\hypertarget{index_autotoc_md21}{}\doxysection{\texorpdfstring{✨ Features}{✨ Features}}\label{index_autotoc_md21}
 
 \begin{DoxyItemize}
 \item 🎮 {\bfseries{PVP and PVE modes}}
@@ -55,11 +62,10 @@ To build the project using CMake and qemu some dependencies, which can be found 
 \end{DoxyCode}
 
 
-\begin{DoxyWarning}{Warning}
-Due to a problem with the {\ttfamily TIMER} device on Windows, functionality regarding turn time limits are disabled when building with the Min\+GW generator!
-\end{DoxyWarning}
+{\bfseries{Due to a problem with the {\ttfamily TIMER} device on Windows, functionality regarding turn time limits are disabled when building with the Min\+GW generator!}}
+\end{DoxyItemize}
 
-\end{DoxyItemize}\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md25}
+\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md25}
 
 
 
@@ -209,19 +215,18 @@ You can either use the provided Flake, or add the following packages\+:
 
 \item {\bfseries{ Windows }}
 \begin{DoxyItemize}
-\item \href{https://cmake.org/download/}{\texttt{ CMake}} \`{}\`{}\`{}pwsh 
-\end{DoxyItemize}
-\end{DoxyItemize}\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{Using Winget}{Using Winget}}\label{index_autotoc_md32}
- winget install CMake.\+CMake
+\item \href{https://cmake.org/download/}{\texttt{ CMake}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Using\ Winget}
+\DoxyCodeLine{winget\ install\ CMake.CMake}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Using\ Chocolatey}
+\DoxyCodeLine{choco\ install\ cmake\ -\/-\/pre\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Or\ manually\ using\ the\ link\ above}
 
-\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{Using Chocolatey}{Using Chocolatey}}\label{index_autotoc_md33}
- choco install cmake --pre
+\end{DoxyCode}
 
-\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{Or manually using the link above}{Or manually using the link above}}\label{index_autotoc_md34}
- \`{}\`{}\`{}
-
-
-\begin{DoxyItemize}
 \item Min\+GW Makefiles (we recommend using MSYS2, but other prebuilt options are available)
 \begin{DoxyEnumerate}
 \item Install \href{https://www.msys2.org/\#installation}{\texttt{ MSYS2}}
@@ -245,18 +250,21 @@ You can either use the provided Flake, or add the following packages\+:
 \item \href{https://gnutoolchains.com/arm-eabi/}{\texttt{ GNU Toolchain for arm-\/eabi}}
 \begin{DoxyEnumerate}
 \item Install from link above
-\item Ensure installation location is added to {\ttfamily PATH} 
+\item Ensure installation location is added to {\ttfamily PATH}
 \end{DoxyEnumerate}
-\end{DoxyItemize}\hypertarget{index_autotoc_md35}{}\doxysubsection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md35}
-To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md36}{}\doxysubsection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md36}
-If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md37}{}\doxysubsection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md37}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md32}
+To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md33}
+If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md34}
 
 \begin{DoxyItemize}
 \item \href{https://www.github.com/DefinitelyNotSimon13}{\texttt{ Simon Blum}}
 \item \href{https://github.com/benoeckl}{\texttt{ Ben Oeckl}}
 \item \href{https://github.com/DosKobold}{\texttt{ Paul Stöckle}}
 \item \href{https://github.com/MaxRodler}{\texttt{ Max Rodler}}
-\end{DoxyItemize}\hypertarget{index_autotoc_md38}{}\doxysubsection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md38}
+\end{DoxyItemize}\hypertarget{index_autotoc_md35}{}\doxysection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md35}
 
 \begin{DoxyItemize}
 \item \href{https://github.com/infohoschie/arm-cortex-m0-cmake-start}{\texttt{ arm-\/cortex-\/m0-\/cmake-\/start}} -\/ Base template used for the project 

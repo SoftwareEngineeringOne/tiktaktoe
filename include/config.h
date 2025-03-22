@@ -48,7 +48,7 @@
  * @details
  * This macro defines the horizontal size of the game grid.
  */
-#define CELLS_PER_ROW 4
+#define CELLS_PER_ROW 3
 
 /**
  * @def CELLS_PER_COL
@@ -57,7 +57,7 @@
  * @details
  * This macro defines the vertical size of the game grid.
  */
-#define CELLS_PER_COL 4
+#define CELLS_PER_COL 2
 
 /**
  * @def TICKS_PER_TURN

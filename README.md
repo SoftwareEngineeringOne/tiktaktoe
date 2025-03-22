@@ -120,6 +120,10 @@ The project has a few options that can be changed before compilation.
 - Unicode support (default is "ON")
 - ASCII Art (default is "ON", may look broken on small screens)
 
+@warning
+    No restrictions have been set on any of the configurations. Beware that extrem
+    deviation from the default values, may result in a degraded playing experience
+
 These can be set by:
 
 <div class="tabbed">

@@ -2,13 +2,45 @@
 \hypertarget{input_8h_source}{}\label{input_8h_source}\index{logic/input.h@{logic/input.h}}
 \mbox{\hyperlink{input_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{input_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ input.h}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ the\ input\ handling\ of\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ the\ interface\ for\ handling\ user\ input\ during\ the\ game,}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00008}00008\ \textcolor{comment}{\ *\ including\ processing\ key\ presses\ and\ updating\ game\ and\ cell\ states.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ Logic}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see\ input.c}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00015}00015\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00016}00016\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00017}00017\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00018}00018\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ INPUT\_H}}
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ INPUT\_H}}
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{def_8h}{def.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{input_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00025}00025\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00026}00026\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00027}00027\ \textcolor{comment}{\ *\ @brief\ Handles\ an\ input\ byte\ and\ updates\ game\ and\ cell\ states.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00028}00028\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00030}00030\ \textcolor{comment}{\ *\ Processes\ the\ input\ byte\ to\ determine\ the\ appropriate\ action,\ such\ as}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00031}00031\ \textcolor{comment}{\ *\ marking\ a\ cell,\ navigating\ the\ board,\ or\ pausing\ the\ game.\ Updates\ the}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00032}00032\ \textcolor{comment}{\ *\ game\ state\ and\ cell\ state\ accordingly.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @param[in]\ byte\ The\ input\ byte\ to\ process.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @param[inout]\ game\_state\ Pointer\ to\ the\ current\ game\ state.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @param[inout]\ cell\_state\ Pointer\ to\ the\ current\ cell\ state.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00037}00037\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00038}00038\ \textcolor{comment}{\ *\ @return\ True\ if\ a\ field\ redraw\ is\ needed,\ false\ otherwise.}}
+\DoxyCodeLine{\Hypertarget{input_8h_source_l00039}00039\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00040}00040\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input_8h_a3082ccbda618aa1099677e2e7ac9d5f6}{input\_handleByte}}(\textcolor{keyword}{const}\ uint8\_t\ *\textcolor{keywordtype}{byte},\ \mbox{\hyperlink{structGameState}{GameState}}\ *\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\_state}},\ \mbox{\hyperlink{structCellState}{CellState}}\ *\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\_state}});}
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{input_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ INPUT\_H}}

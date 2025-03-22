@@ -112,7 +112,26 @@ $(function(){initNavTree('db/db3/input__buf_8h_source.html','../../'); initResiz
   <div class="headertitle"><div class="title">input_buf.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../db/db3/input__buf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="../../db/db3/input__buf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * @file input_buf.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * @brief Contains everything for the input buffer.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * @details</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * This file contains the definition of the InputBuffer struct and declarations</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * of functions for managing the input buffer, including initialization, checking</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * buffer state, and handling UART input interrupts.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * @ingroup Utility</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * @see input_buf.c</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * @copyright</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * License, v2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef INPUT_BUF_H</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define INPUT_BUF_H</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -120,27 +139,63 @@ $(function(){initNavTree('db/db3/input__buf_8h_source.html','../../'); initResiz
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../db/db3/input__buf_8h.html#a8f53190540130db759820c0d9ab78f60">   28</a></span><span class="preprocessor">#define INPUT_BUF_SIZE 128</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../db/db3/input__buf_8h.html#a8f53190540130db759820c0d9ab78f60">   28</a></span><span class="preprocessor">#define INPUT_BUF_SIZE 128</span><span class="comment">///&lt; Size of the input buffer</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"></span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> * @brief RingBuffer for fixed memory footprint.</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> * @details</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> * This struct represents a ring buffer with a fixed size, used for storing</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * input data in a circular manner.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> */</span></div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#aa5f88492a54fcb88dcdb92e17a0ee37f">   39</a></span>        uint8_t data[<a class="code hl_define" href="../../db/db3/input__buf_8h.html#a8f53190540130db759820c0d9ab78f60">INPUT_BUF_SIZE</a>];</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#a0f312d29fb9925a12849950e3d1dbaf0">   40</a></span>        <span class="keyword">volatile</span> uint16_t <a class="code hl_variable" href="../../d7/d21/structInputBuffer.html#a0f312d29fb9925a12849950e3d1dbaf0">head</a>;      </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#ad2253db99c19c5f92aa00750a0897866">   41</a></span>        <span class="keyword">volatile</span> uint16_t <a class="code hl_variable" href="../../d7/d21/structInputBuffer.html#ad2253db99c19c5f92aa00750a0897866">tail</a>;      </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#aa5f88492a54fcb88dcdb92e17a0ee37f">   39</a></span>        uint8_t data[<a class="code hl_define" href="../../db/db3/input__buf_8h.html#a8f53190540130db759820c0d9ab78f60">INPUT_BUF_SIZE</a>];<span class="comment">///&lt; Buffer data storage</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#a0f312d29fb9925a12849950e3d1dbaf0">   40</a></span>        <span class="keyword">volatile</span> uint16_t <a class="code hl_variable" href="../../d7/d21/structInputBuffer.html#a0f312d29fb9925a12849950e3d1dbaf0">head</a>;      <span class="comment">///&lt; Index of the head (write position)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d7/d21/structInputBuffer.html#ad2253db99c19c5f92aa00750a0897866">   41</a></span>        <span class="keyword">volatile</span> uint16_t <a class="code hl_variable" href="../../d7/d21/structInputBuffer.html#ad2253db99c19c5f92aa00750a0897866">tail</a>;      <span class="comment">///&lt; Index of the tail (read position)</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a>;</div>
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> <span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> <a class="code hl_variable" href="../../db/db3/input__buf_8h.html#a3e797155e2d8f73914a02d047ea39a37">g_input_buf</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> <span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> <a class="code hl_variable" href="../../db/db3/input__buf_8h.html#a3e797155e2d8f73914a02d047ea39a37">g_input_buf</a>;<span class="comment">///&lt; Global input buffer instance</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> * @brief Function to call in case of UART input interrupt.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"> * @param[in] input Pure input from UART.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../db/db3/input__buf_8h.html#ae603712ba6220d13a4389c08ea5fbed2">input_onInterrupt</a>(uint8_t input);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"></span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> * @brief Initialize the given InputBuffer.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"> * @param[inout] ib InputBuffer to initialize.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../db/db3/input__buf_8h.html#a9bb68967ad751f4b307afa735a3501ff">input_init</a>(<span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> *ib);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"></span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> * @brief Check if the buffer is empty.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"> * @param[in] ib InputBuffer to check.</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"> * @return True if the buffer is empty, false otherwise.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/db3/input__buf_8h.html#aaec1348b29929f537c59bc6b5718bd4e">input_isEmpty</a>(<span class="keyword">const</span> <span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> *ib);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"></span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment"> * @brief Check if the buffer is full.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"> * @param[in] ib InputBuffer to check.</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment"> * @return True if the buffer is full, false otherwise.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/db3/input__buf_8h.html#a4401e9499819daae58c72b265d521374">input_isFull</a>(<span class="keyword">const</span> <span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> *ib);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"></span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> * @brief Get the next byte from the buffer.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> * @param[inout] ib InputBuffer to read from.</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"> * @param[out] byte Pointer to store the next byte.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"> * @return False if the buffer is empty, true otherwise.</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/db3/input__buf_8h.html#a3e03a367ae13ea8f68021a964efbef90">input_getNext</a>(<span class="keyword">volatile</span> <a class="code hl_struct" href="../../d7/d21/structInputBuffer.html">InputBuffer</a> *ib, uint8_t *<span class="keywordtype">byte</span>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span><span class="comment">// INPUT_BUF_H</span></div>

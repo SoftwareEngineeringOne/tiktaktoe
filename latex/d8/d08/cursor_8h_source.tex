@@ -2,12 +2,42 @@
 \hypertarget{cursor_8h_source}{}\label{cursor_8h_source}\index{presentation/cursor.h@{presentation/cursor.h}}
 \mbox{\hyperlink{cursor_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ cursor.h}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ functions\ for\ moving\ the\ presentation\ of\ the\ cursor.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ the\ interface\ for\ cursor\ movement\ in\ the\ presentation\ layer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00008}00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @ingroup\ Presentation}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @see\ cursor.c}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00013}00013\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00014}00014\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00015}00015\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00016}00016\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00017}00017\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00018}00018\ \textcolor{preprocessor}{\#ifndef\ CURSOR\_H}}
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ CURSOR\_H}}
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00022}00022\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00023}00023\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00024}00024\ \textcolor{comment}{\ *\ @brief\ Move\ the\ cursor\ to\ the\ given\ coordinates.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00025}00025\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00026}00026\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00027}00027\ \textcolor{comment}{\ *\ This\ function\ generates\ an\ escape\ sequence\ to\ move\ the\ cursor\ to\ the\ specified}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00028}00028\ \textcolor{comment}{\ *\ (x,\ y)\ position\ on\ the\ terminal.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00029}00029\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @param[in]\ x\ X-\/coordinate\ of\ the\ cursor\ position.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @param[in]\ y\ Y-\/coordinate\ of\ the\ cursor\ position.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00032}00032\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @note}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00034}00034\ \textcolor{comment}{\ *\ This\ function\ can\ be\ improved\ by\ using\ new\ functions\ found\ in\ the\ conversion\ module}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00035}00035\ \textcolor{comment}{\ *\ and\ directly\ writing\ the\ string\ representation\ of\ the\ number\ to\ the\ target\ buffer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8h_source_l00036}00036\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_aa36eaa7b26325e08eddb0a25cc7f1f5e}{cursor\_moveTo}}(uint8\_t\ x,\ uint8\_t\ y);}
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{cursor_8h_source_l00039}00039\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ CURSOR\_H}}

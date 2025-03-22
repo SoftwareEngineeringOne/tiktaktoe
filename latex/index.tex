@@ -8,16 +8,16 @@
 
 \href{https://choosealicense.com/licenses/mpl-2.0/}{\texttt{ }}    
 
-A Tik\+Tak\+Toe game written for the {\ttfamily n\+RF-\/51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU.\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{✨ Features}{✨ Features}}\label{index_autotoc_md25}
+A Tik\+Tak\+Toe game written for the {\ttfamily n\+RF-\/51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU.\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{✨ Features}{✨ Features}}\label{index_autotoc_md6}
 
 \begin{DoxyItemize}
 \item 🎮 {\bfseries{PVP and PVE modes}}
 \item 🖥️ {\bfseries{Cross-\/\+Platform Compatibility}}
 \item ⚙️ {\bfseries{Highly Customizable}}
 \item 🐳 {\bfseries{Docker Support for 0 dependency execution}}
-\end{DoxyItemize}\hypertarget{index_autotoc_md26}{}\doxysection{\texorpdfstring{📚 Documentation}{📚 Documentation}}\label{index_autotoc_md26}
-Check out our \href{https://tiktaktoe.episko.de}{\texttt{ documentation}} to learn more about the code and for an improved version of this file!\hypertarget{index_autotoc_md27}{}\doxysection{\texorpdfstring{🛠️ Build and Run}{🛠️ Build and Run}}\label{index_autotoc_md27}
-\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{🖥️ Using CMake and qemu}{🖥️ Using CMake and qemu}}\label{index_autotoc_md28}
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{📚 Documentation}{📚 Documentation}}\label{index_autotoc_md8}
+Check out our \href{https://tiktaktoe.episko.de}{\texttt{ documentation}} to learn more about the code and for an improved version of this file!\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{🛠️ Build and Run}{🛠️ Build and Run}}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{🖥️ Using CMake and qemu}{🖥️ Using CMake and qemu}}\label{index_autotoc_md14}
 To build the project using CMake and qemu some dependencies, which can be found under \mbox{[}dependencies\mbox{]} are required.
 
 
@@ -44,7 +44,7 @@ To build the project using CMake and qemu some dependencies, which can be found 
 !\+TODO!
 \end{DoxyItemize}
 
-\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md29}
+\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md15}
 
 
 
@@ -74,8 +74,8 @@ The provided \mbox{[}Makefile\mbox{]}(Makefile) can be used to easily build and 
 !\+TODO!
 \end{DoxyItemize}
 
-\hypertarget{index_autotoc_md30}{}\doxysubsection{\texorpdfstring{🐳 Using Docker}{🐳 Using Docker}}\label{index_autotoc_md30}
-Docker can be used to build and run the application without the need for external dependencies. For this you have to options\+:\hypertarget{index_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{☁️ Use Dockerhub}{☁️ Use Dockerhub}}\label{index_autotoc_md31}
+\hypertarget{index_autotoc_md16}{}\doxysubsection{\texorpdfstring{🐳 Using Docker}{🐳 Using Docker}}\label{index_autotoc_md16}
+Docker can be used to build and run the application without the need for external dependencies. For this you have to options\+:\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{☁️ Use Dockerhub}{☁️ Use Dockerhub}}\label{index_autotoc_md17}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\#\ Using\ DockerHub}
@@ -84,7 +84,7 @@ Docker can be used to build and run the application without the need for externa
 \DoxyCodeLine{docker\ run\ -\/it\ ghcr.io/softwareengineeringone/tiktaktoe:latest}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md32}{}\doxysubsubsection{\texorpdfstring{🏗️ Build locally}{🏗️ Build locally}}\label{index_autotoc_md32}
+\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{🏗️ Build locally}{🏗️ Build locally}}\label{index_autotoc_md18}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{docker\ build\ -\/t\ [TAGNAME]\ .}
@@ -96,7 +96,7 @@ Docker can be used to build and run the application without the need for externa
 \begin{DoxyWarning}{Warning}
 In either case the {\ttfamily -\/it} flags are required to properly capture input from stdin!
 \end{DoxyWarning}
-\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{⚙️ Configuration}{⚙️ Configuration}}\label{index_autotoc_md33}
+\hypertarget{index_autotoc_md19}{}\doxysection{\texorpdfstring{⚙️ Configuration}{⚙️ Configuration}}\label{index_autotoc_md19}
 The project has a few options that can be changed before compilation.
 
 
@@ -145,7 +145,7 @@ When using the Makefile to configure/build the project variables can be passed l
 Due to the way the Makefile is structured, these may also be passed when using e.\+g. {\ttfamily make run}. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using {\ttfamily make clean} or by manually deleting the directory.
 \end{DoxyItemize}
 
-\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{📦 Dependencies}{📦 Dependencies}}\label{index_autotoc_md34}
+\hypertarget{index_autotoc_md20}{}\doxysection{\texorpdfstring{📦 Dependencies}{📦 Dependencies}}\label{index_autotoc_md20}
 (TODO\+: CHECK CORRECT) 
 
 
@@ -191,16 +191,16 @@ You can either use the provided \href{flake.nix}{\texttt{ Flake}}, or add the fo
 !\+TODO!
 \end{DoxyItemize}
 
-\hypertarget{index_autotoc_md35}{}\doxysection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md35}
-To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md36}{}\doxysection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md36}
-If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md37}{}\doxysection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md37}
+\hypertarget{index_autotoc_md21}{}\doxysection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md21}
+To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md22}{}\doxysection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md22}
+If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md23}{}\doxysection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md23}
 
 \begin{DoxyItemize}
 \item \href{https://www.github.com/DefinitelyNotSimon13}{\texttt{ Simon Blum}}
 \item \href{https://github.com/benoeckl}{\texttt{ Ben Oeckl}}
 \item \href{https://github.com/DosKobold}{\texttt{ Paul Stöckle}}
 \item \href{https://github.com/MaxRodler}{\texttt{ Max Rodler}}
-\end{DoxyItemize}\hypertarget{index_autotoc_md38}{}\doxysection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md38}
+\end{DoxyItemize}\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md24}
 
 \begin{DoxyItemize}
 \item \href{https://github.com/infohoschie/arm-cortex-m0-cmake-start}{\texttt{ arm-\/cortex-\/m0-\/cmake-\/start}} -\/ Base template used for the project 

@@ -2,14 +2,44 @@
 \hypertarget{input__buf_8c_source}{}\label{input__buf_8c_source}\index{util/input\_buf.c@{util/input\_buf.c}}
 \mbox{\hyperlink{input__buf_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ input\_buf.c}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Implementation\ of\ the\ input\ buffer\ functions.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ implementation\ of\ functions\ for\ managing\ the\ input}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00008}00008\ \textcolor{comment}{\ *\ buffer,\ including\ initialization,\ checking\ buffer\ state,\ and\ handling\ UART}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00009}00009\ \textcolor{comment}{\ *\ input\ interrupts.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00011}00011\ \textcolor{comment}{\ *\ @see\ input\_buf.h}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00013}00013\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00014}00014\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00015}00015\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00016}00016\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00017}00017\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input__buf_8h}{util/input\_buf.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{print_8h}{presentation/print.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error__handling_8h}{util/error\_handling.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00024}\mbox{\hyperlink{input__buf_8c_a3e797155e2d8f73914a02d047ea39a37}{00024}}\ \textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ \mbox{\hyperlink{input__buf_8c_a3e797155e2d8f73914a02d047ea39a37}{g\_input\_buf}};}
-\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00025}00025\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00026}00026\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00027}00027\ \textcolor{comment}{\ *\ @brief\ Put\ the\ next\ byte\ into\ the\ buffer.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00028}00028\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00029}00029\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00030}00030\ \textcolor{comment}{\ *\ This\ function\ writes\ a\ byte\ into\ the\ input\ buffer\ if\ there\ is\ space}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00031}00031\ \textcolor{comment}{\ *\ available.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00032}00032\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00033}00033\ \textcolor{comment}{\ *\ @param[inout]\ ib\ InputBuffer\ to\ write\ to.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00034}00034\ \textcolor{comment}{\ *\ @param[in]\ byte\ Byte\ to\ write\ into\ the\ buffer.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00035}00035\ \textcolor{comment}{\ *\ @return\ False\ if\ the\ buffer\ is\ full,\ true\ otherwise.}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00036}00036\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00037}00037\ \textcolor{comment}{\ *\ @internal}}
+\DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00038}00038\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00039}00039\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input__buf_8c_ab3e24b09253fed6492359ce7aa936407}{putIntoBuf}}(\textcolor{keyword}{volatile}\ \mbox{\hyperlink{structInputBuffer}{InputBuffer}}\ *ib,\ \textcolor{keyword}{const}\ uint8\_t\ \textcolor{keywordtype}{byte});}
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00040}00040\ }
 \DoxyCodeLine{\Hypertarget{input__buf_8c_source_l00041}\mbox{\hyperlink{input__buf_8c_a6f2425195e541bcea7e78d39ff1c1d54}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__buf_8c_a6f2425195e541bcea7e78d39ff1c1d54}{input\_onInterrupt}}(\textcolor{keyword}{const}\ uint8\_t\ input)}

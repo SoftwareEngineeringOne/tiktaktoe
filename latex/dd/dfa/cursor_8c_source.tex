@@ -2,11 +2,37 @@
 \hypertarget{cursor_8c_source}{}\label{cursor_8c_source}\index{presentation/cursor.c@{presentation/cursor.c}}
 \mbox{\hyperlink{cursor_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ cursor.c}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Implements\ cursor\ movement\ functionality\ for\ the\ presentation\ layer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00006}00006\ \textcolor{comment}{\ *\ @see\ cursor.h}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00008}00008\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00009}00009\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00010}00010\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00011}00011\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00012}00012\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{presentation/cursor.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{print_8h}{presentation/print.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{conversion_8h}{util/conversion.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00018}00018\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00019}00019\ \textcolor{comment}{\ *\ @brief\ Write\ a\ numeric\ value\ to\ a\ buffer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00020}00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00021}00021\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00022}00022\ \textcolor{comment}{\ *\ This\ function\ writes\ the\ string\ representation\ of\ a\ numeric\ value\ to\ a\ buffer}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00023}00023\ \textcolor{comment}{\ *\ while\ maintaining\ the\ current\ position\ in\ the\ buffer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00024}00024\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00025}00025\ \textcolor{comment}{\ *\ @param[in]\ num\ The\ numeric\ value\ to\ write.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00026}00026\ \textcolor{comment}{\ *\ @param[in]\ num\_buf\ A\ buffer\ containing\ the\ string\ representation\ of\ the\ number.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00027}00027\ \textcolor{comment}{\ *\ @param[out]\ buf\ The\ target\ buffer\ to\ write\ to.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00028}00028\ \textcolor{comment}{\ *\ @param[inout]\ buf\_pos\ Pointer\ to\ the\ current\ position\ in\ the\ target\ buffer.}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00029}00029\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00030}00030\ \textcolor{comment}{\ *\ @internal}}
+\DoxyCodeLine{\Hypertarget{cursor_8c_source_l00031}00031\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00032}00032\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8c_a57bbc852bc29fb220c4d95404ee482dc}{writeNumToBuf}}(uint8\_t\ num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *num\_buf,\ \textcolor{keywordtype}{char}\ *buf,\ uint8\_t\ *buf\_pos);}
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00033}00033\ }
 \DoxyCodeLine{\Hypertarget{cursor_8c_source_l00034}\mbox{\hyperlink{cursor_8c_a599725458bf000c7fc08432a74602fac}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8c_a599725458bf000c7fc08432a74602fac}{cursor\_moveTo}}(\textcolor{keyword}{const}\ uint8\_t\ x,\ \textcolor{keyword}{const}\ uint8\_t\ y)}

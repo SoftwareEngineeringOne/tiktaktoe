@@ -2,25 +2,27 @@
 .ad l
 .nh
 .SH NAME
-md__2github_2workspace_2Architecture \- Architecture 
+md__2github_2workspace_2Architecture \- 🏗️ Architecture 
 .PP
 
+
+.PP
 
 .PP
 This project is an embedded application, designed to run on an \fRnRF51\fP microcontroller with an \fRarm-cortex-m0\fP CPU\&. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer\&. Additionally modules for the entry process and utility functions exist\&. This encapsulation allows for a flexible design\&.
-.SH "Entry Module"
+.SH "🚪 Entry Module"
 .PP
 \fIfiles: \fBentry/entry\&.S\fP, entry/linker_script\&.ls\fP
 
 .PP
 This module is responsible for the startup process of the microcontroller\&. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed\&.
-.SH "Hardware Abstraction Layer"
+.SH "📟 Hardware Abstraction Layer"
 .PP
 \fIfiles: include/hal/*\&.h, src/hal/*\&.c\fP
 
 .PP
 The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly\&.
-.SH "Logic Layer"
+.SH "🧩 Logic Layer"
 .PP
 \fIfiles: include/logic/*\&.h, src/logic/*\&.c\fP
 
@@ -29,19 +31,19 @@ Within this layer, the game itself resides\&. The whole logic is based here\&.
 
 .PP
 !TODO!
-.SH "Presentation Layer"
+.SH "🖥️ Presentation Layer"
 .PP
 \fIfiles: include/presentation/*\&.h, src/presentation/*\&.c\fP
 
 .PP
 !TODO!
-.SH "Utility Layer"
+.SH "🛠️ Utility Layer"
 .PP
 \fIfiles: include/util/*\&.h, src/util/*\&.c\fP
 
 .PP
 !TODO!
-.SH "Other relevant files"
+.SH "➕ Other relevant files"
 .PP
 .IP "\(bu" 2
 config\&.h\&.in / \fBconfig\&.h\fP

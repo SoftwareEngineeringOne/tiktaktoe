@@ -2,13 +2,45 @@
 \hypertarget{bot_8h_source}{}\label{bot_8h_source}\index{logic/bot.h@{logic/bot.h}}
 \mbox{\hyperlink{bot_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{bot_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ bot.h}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Bot\ logic\ for\ Tic-\/Tac-\/Toe\ game.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ declaration\ of\ functions\ used\ to\ implement\ bot\ logic}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00008}00008\ \textcolor{comment}{\ *\ for\ the\ Tic-\/Tac-\/Toe\ game,\ such\ as\ marking\ a\ random\ cell.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ Logic}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00013}00013\ \textcolor{comment}{\ *\ \ bot.c}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00014}00014\ \textcolor{comment}{\ *\ \ game.h}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00015}00015\ \textcolor{comment}{\ *\ \ field.h}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00017}00017\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00018}00018\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00019}00019\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00020}00020\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00021}00021\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifndef\ BOT\_H}}
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ BOT\_H}}
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{field_8h}{presentation/field.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{bot_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00028}00028\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00029}00029\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @brief\ Mark\ a\ random\ unmarked\ cell\ on\ the\ game\ board.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00031}00031\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @param[inout]\ cells\ 2D\ field\ of\ cells\ representing\ the\ game\ board.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @param[in]\ marked\_by\ Player\ who\ should\ mark\ the\ cell.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00034}00034\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @return\ Pointer\ to\ the\ marked\ cell.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00036}00036\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @warning\ This\ function\ assumes\ that\ there\ is\ at\ least\ one\ unmarked\ cell}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00038}00038\ \textcolor{comment}{\ *\ on\ the\ board.\ If\ there\ is\ not,\ the\ function\ will\ loop\ indefinitely.}}
+\DoxyCodeLine{\Hypertarget{bot_8h_source_l00039}00039\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00040}00040\ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{bot_8h_a54e3d0f1283055e089a09213936f5c43}{bot\_markRandomCell}}(\mbox{\hyperlink{structCell}{Cell}}\ cells[\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}}][\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}],\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ marked\_by);}
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{bot_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ BOT\_H}}

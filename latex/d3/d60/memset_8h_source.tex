@@ -2,12 +2,43 @@
 \hypertarget{memset_8h_source}{}\label{memset_8h_source}\index{hal/memset.h@{hal/memset.h}}
 \mbox{\hyperlink{memset_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{memset_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ memset.h}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Header\ file\ for\ a\ simple\ implementation\ of\ memset}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @ingroup\ HAL}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @see\ memset.c}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00011}00011\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00012}00012\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00013}00013\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00014}00014\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00016}00016\ \textcolor{preprocessor}{\#ifndef\ MEMSET\_H}}
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ MEMSET\_H}}
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
-\DoxyCodeLine{\Hypertarget{memset_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00020}00020\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00021}00021\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00022}00022\ \textcolor{comment}{\ *\ @brief\ Simple\ implementation\ of\ memset}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00023}00023\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00024}00024\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00025}00025\ \textcolor{comment}{\ *\ Sets\ the\ first\ **n**\ bytes\ of\ the\ block\ of\ memory}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00026}00026\ \textcolor{comment}{\ *\ pointed\ to\ by\ **ptr**\ to\ the\ specified\ value\ **x**}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00027}00027\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00028}00028\ \textcolor{comment}{\ *\ @param\ [in]\ ptr\ Pointer\ to\ the\ block\ of\ memory\ to\ fill}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @param\ [in]\ x\ Value\ to\ be\ set.}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @param\ [in]\ n\ Number\ of\ bytes\ to\ be\ set\ to\ the\ value}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00031}00031\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @return\ A\ pointer\ to\ the\ memory\ area}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @warning}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00035}00035\ \textcolor{comment}{\ *\ While\ x\ is\ passed\ as\ an\ int,\ it\ is\ cast\ to\ a\ uint8\_t\ (char)}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00036}00036\ \textcolor{comment}{\ *\ before\ being\ stored\ in\ the\ memory\ area.}}
+\DoxyCodeLine{\Hypertarget{memset_8h_source_l00037}00037\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{memset_8h_a1c484fc7f521d82f32b119a53c61c58b}{memset}}(\textcolor{keywordtype}{void}\ *ptr,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{size\_t}\ n);}
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00039}00039\ }
 \DoxyCodeLine{\Hypertarget{memset_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ MEMSET\_H}}

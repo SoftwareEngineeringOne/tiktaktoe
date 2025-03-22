@@ -2,31 +2,18 @@
 .ad l
 .nh
 .SH NAME
-md__2github_2workspace_2Conventions \- Conventions 
+md__2github_2workspace_2Conventions \- 🤝 Coding Conventions 
 .PP
 
-.SH "Coding Conventions"
+
+.PP
+
 .PP
 .IP "\(bu" 2
-Conventional Commits (https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
-.IP "\(bu" 2
-The architecture is documented in this README
-.IP "\(bu" 2
-Every file must have a short description at the beginning
-.IP "\(bu" 2
-Every function must have a doc comment with a short description
-.IP "\(bu" 2
-Not self describing code must be commented (should be avoided)
-.IP "\(bu" 2
-Public functions start with the package name followed by an underscore
-.IP "\(bu" 2
-Private functions should therefore not be called from outside
-.IP "\(bu" 2
-Private functions should be defined in the beginning of the source files
-.IP "\(bu" 2
-Private functions should be implemented in the source file, following the public functions
+\fRConventional Commits\fP
 .PP
-.SS "File structure"
+.SH "📄 File structure"
+.PP
 All files should follow a common structure as defined below\&. Exceptions may be made, however these should be explicitely explained\&.
 .SS "Header file structure"
 .IP "1." 4
@@ -34,40 +21,58 @@ Module comment
 .IP "2." 4
 Defines
 .IP "3." 4
-global constants
+Global constants
 .IP "4." 4
-global variables
+Global variables
 .IP "5." 4
-structs
+Structs
 .IP "6." 4
-public function prototypes
+Public function prototypes
 .PP
 .SS "Source file structure"
 .IP "1." 4
 Module comment (may reference header comment and add information if needed)
 .IP "2." 4
-module constants
+Module constants
 .IP "3." 4
-module variables
+Module variables
 .IP "4." 4
-private function prototypes
+Private function prototypes
 .IP "5." 4
-public function implementations
+Public function implementations
 .IP "6." 4
-private function implementations
+Private function implementations
 .PP
-.SS "Naming"
+.SH "💬 Naming"
+.PP
+.SS "Files"
+.IP "\(bu" 2
+Files should use \fRsnake_case\fP naming
+.PP
 .SS "Functions"
 .IP "\(bu" 2
-public functions should be prefixed with '`module_[\&.\&.\&.]`'
+Public functions should be prefixed with '`module_[\&.\&.\&.]`'
 .IP "\(bu" 2
-private functions should be marked as \fRstatic\fP and prefixed with '`_[\&.\&.\&.]`'
+Private functions should be marked as \fRstatic\fP and prefixed with '`_[\&.\&.\&.]`'
 .IP "\(bu" 2
-the function name itself should be written in \fRcamelCase\fP
+The function name itself should be written in \fRcamelCase\fP
 .IP "\(bu" 2
-a specialization may follow as a suffix, such as '`[\&.\&.\&.]_waiting`'
+A specialization may follow as a suffix, such as '`[\&.\&.\&.]_waiting`'
 .PP
-.SS "Documentation"
+.SS "Variables"
+.IP "\(bu" 2
+All variables should use \fRsnake_case\fP naming
+.IP "\(bu" 2
+Global variables should be prefixed with \fRg_[\&.\&.\&.]\fP
+.PP
+.SS "Macros"
+.IP "\(bu" 2
+Function macros should use the same naming as functions
+.IP "\(bu" 2
+Other macros should use \fRSCREAMING_CASE\fP naming
+.PP
+.SH "📝 Documentation"
+.PP
 .IP "\(bu" 2
 All files should contain a top level comment\&.
 .IP "\(bu" 2
@@ -85,62 +90,169 @@ All typedefs should be documented\&.
 .PP
 .SS "Documentation templates"
 To ensure a uniform documentation all doc comments, should be loosely based on the following templates\&. Irrelevant fields can and should be ommited to avoid bloat\&.
-.SS "Files"
+
+.PP
+
+.PP
+.IP "\(bu" 2
+\fB Files \fP
+
+.PP
 .PP
 .nf
-
-
+/**
+ * @file  [File name]
+ *
+ * @brief [Brief description]
+ *
+ * @details
+ * This file contains [\&.\&.\&.]\&.
+ *
+ * @ingroup [HAL/Logic/Presentation/Utility]
+ *
+ * @see 
+ *  [Header/Source]
+ *  [Any other relevant]
+ *
+ * @note
+ *  [Additional notes, if relevant\&.\&.\&.]
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2\&.0\&. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla\&.org/MPL/2\&.0/\&.
+ */
 .fi
 .PP
-.SS "Functions"
+
+.IP "\(bu" 2
+\fB Functions \fP
+
+.PP
 .PP
 .nf
-
-
+/**
+ * @brief [Brief description]
+ *
+ * @details 
+ * [Detailed description, only if relevant]
+ * 
+ * @param[in/out/inout] param1 Description of paramater
+ * \&.\&.\&.
+ *
+ * @return [Description of return value, or "void"]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ */
+void example_function(uint8_t param1);
 .fi
 .PP
-.SS "Structs"
+
+.IP "\(bu" 2
+\fB Structs \fP
+
+.PP
 .PP
 .nf
-
- typedef struct {
-    int member1; 
-    float member2; 
+/**
+ * @brief [Brief description]
+ *
+ * @details 
+ * [Detailed description, only if relevant]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ */
+typedef struct {
+    int member1; /**< [Description of member1] */
+    float member2; /**< [Description of member2] */
     // \&.\&.\&.
 } ExampleStruct;
 .fi
 .PP
-.SS "Enums"
+
+.IP "\(bu" 2
+\fB Enums \fP
+
+.PP
 .PP
 .nf
-
- typedef enum {
-    ENUM_VALUE1; 
-    ENUM_VALUE2; 
-    ENUM_VALUE3; 
+/**
+ * @brief [Brief description]
+ *
+ * @details 
+ * [Detailed description, only if relevant]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ */
+typedef enum {
+    ENUM_VALUE1; /**< [Description of ENUM_VALUE1] */
+    ENUM_VALUE2; /**< [Description of ENUM_VALUE2] */
+    ENUM_VALUE3; /**< [Description of ENUM_VALUE3] */
     // \&.\&.\&.
 } ExampleEnum;
 .fi
 .PP
-.SS "Typedefs"
+
+.IP "\(bu" 2
+\fB Typedefs \fP
+
+.PP
 .PP
 .nf
-
+/**
+ * @brief [Brief description]
+ *
+ * @details 
+ * [Detailed description, only if relevant]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ */
 typedef unsigned long ExampleType;
 .fi
 .PP
-.SS "Macros"
+
+.IP "\(bu" 2
+\fB Macros \fP
+
+.PP
 .PP
 .nf
-
+/**
+ * @def EXAMPLE_MACRO
+ * @brief [Short description of what the macro does or represents\&.]
+ *
+ * @details
+ * [If neccessary, explain the purpose of the macro, 
+ *  parameters (if function\-like macro),\&.\&.\&.]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ *
+ * Example: [if relevant]
+ * @code
+ *   int value = MY_MACRO;
+ * @endcode
+ */
 #define EXAMPLE_MACRO 42
 .fi
 .PP
-.SS "Global Variables"
+
+.IP "\(bu" 2
+\fB Global Variables \fP
+
+.PP
 .PP
 .nf
-
+/**
+ * @brief [Brief description]
+ *
+ * @details 
+ * [What global variable is used for, scope, and initialization details\&.]
+ *
+ * @note [Any additional notes or constraints, if relevant\&.]
+ */
 extern int g_exampleGlobal;
 .fi
+.PP
+ 
 .PP
  

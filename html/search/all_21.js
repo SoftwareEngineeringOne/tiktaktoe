@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🖥️_20using_20cmake_20and_20qemu_0',['🖥️ Using CMake and qemu',['../index.html#autotoc_md28',1,'']]]
+  ['📚_20documentation_0',['📚 Documentation',['../index.html#autotoc_md8',1,'']]]
 ];

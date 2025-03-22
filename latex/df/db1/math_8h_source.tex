@@ -2,12 +2,57 @@
 \hypertarget{math_8h_source}{}\label{math_8h_source}\index{util/math.h@{util/math.h}}
 \mbox{\hyperlink{math_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{math_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ math.h}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ several\ different\ simple\ and\ independent\ math\ functions}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ utility\ macros\ for\ basic\ mathematical\ operations,\ such\ as}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00008}00008\ \textcolor{comment}{\ *\ finding\ the\ minimum\ or\ maximum\ of\ two\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ Utility}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see\ math.c}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00015}00015\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00016}00016\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00017}00017\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00018}00018\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00019}00019\ \textcolor{preprocessor}{\#ifndef\ MATH\_H}}
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00020}00020\ \textcolor{preprocessor}{\#define\ MATH\_H}}
-\DoxyCodeLine{\Hypertarget{math_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00021}00021\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00022}00022\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00023}00023\ \textcolor{comment}{\ *\ @def\ min(a,\ b)}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00024}00024\ \textcolor{comment}{\ *\ @brief\ Get\ the\ minimum\ of\ two\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00025}00025\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00026}00026\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00027}00027\ \textcolor{comment}{\ *\ This\ macro\ evaluates\ to\ the\ smaller\ of\ the\ two\ provided\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00028}00028\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @param[in]\ a\ The\ first\ value.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @param[in]\ b\ The\ second\ value.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00031}00031\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @return\ The\ smaller\ of\ the\ two\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @note\ This\ macro\ does\ not\ perform\ type\ checking\ and\ may\ evaluate\ its\ arguments\ multiple\ times.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00035}00035\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00036}\mbox{\hyperlink{math_8h_ac6afabdc09a49a433ee19d8a9486056d}{00036}}\ \textcolor{preprocessor}{\#define\ min(a,\ b)\ a\ <\ b\ ?\ a\ :\ b}}
-\DoxyCodeLine{\Hypertarget{math_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00037}00037\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00038}00038\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00039}00039\ \textcolor{comment}{\ *\ @def\ max(a,\ b)}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00040}00040\ \textcolor{comment}{\ *\ @brief\ Get\ the\ maximum\ of\ two\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00041}00041\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00043}00043\ \textcolor{comment}{\ *\ This\ macro\ evaluates\ to\ the\ larger\ of\ the\ two\ provided\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00044}00044\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @param[in]\ a\ The\ first\ value.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00046}00046\ \textcolor{comment}{\ *\ @param[in]\ b\ The\ second\ value.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00047}00047\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @return\ The\ larger\ of\ the\ two\ values.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00049}00049\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00050}00050\ \textcolor{comment}{\ *\ @note\ This\ macro\ does\ not\ perform\ type\ checking\ and\ may\ evaluate\ its\ arguments\ multiple\ times.}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00051}00051\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00052}\mbox{\hyperlink{math_8h_affe776513b24d84b39af8ab0930fef7f}{00052}}\ \textcolor{preprocessor}{\#define\ max(a,\ b)\ a\ >\ b\ ?\ a\ :\ b}}
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00053}00053\ }
 \DoxyCodeLine{\Hypertarget{math_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ MATH\_H}}

@@ -2,7 +2,25 @@
 \hypertarget{cell_8h_source}{}\label{cell_8h_source}\index{presentation/cell.h@{presentation/cell.h}}
 \mbox{\hyperlink{cell_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ cell.h}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ functions\ and\ definitions\ for\ managing\ the\ presentation\ of\ cells.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ functions\ to\ redraw\ cells,\ manage\ cell\ selection,\ and\ adjust\ cell\ sizes.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00008}00008\ \textcolor{comment}{\ *\ It\ also\ defines\ the\ \`{}CellSize`\ struct\ and\ \`{}Size`\ enum\ for\ handling\ cell\ dimensions.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ Presentation}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see\ cell.c}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00015}00015\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00016}00016\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00017}00017\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00018}00018\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ CELL\_H}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ CELL\_H}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00022}00022\ }
@@ -11,40 +29,85 @@
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00028}\mbox{\hyperlink{cell_8h_ac36de74c13a5ec4e7fe20dfe7866a029}{00028}}\ \textcolor{preprocessor}{\#define\ NUM\_OF\_SIZES\ 3\ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00029}\mbox{\hyperlink{cell_8h_a4156ee5a454a6a7d1f4c6add76209909}{00029}}\ \textcolor{preprocessor}{\#define\ INITIAL\_INDEX\ 1\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00030}\mbox{\hyperlink{cell_8h_a55d20b56fa26df8a11ef3e05b0e1b6e2}{00030}}\ \textcolor{preprocessor}{\#define\ INITIAL\_WIDTH\ 8\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00031}\mbox{\hyperlink{cell_8h_aa7dc7fae1ee35d37791e2dc8d481ab66}{00031}}\ \textcolor{preprocessor}{\#define\ INITIAL\_HEIGHT\ 5\ \ \ }}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00032}\mbox{\hyperlink{cell_8h_a40958a1382463445e451148e3a93e049}{00032}}\ \textcolor{preprocessor}{\#define\ INITIAL\_SIZE\ Medium}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00028}\mbox{\hyperlink{cell_8h_ac36de74c13a5ec4e7fe20dfe7866a029}{00028}}\ \textcolor{preprocessor}{\#define\ NUM\_OF\_SIZES\ 3\ \ \ \ \ }\textcolor{comment}{///<\ Number\ of\ available\ cell\ sizes.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00029}\mbox{\hyperlink{cell_8h_a4156ee5a454a6a7d1f4c6add76209909}{00029}}\ \textcolor{preprocessor}{\#define\ INITIAL\_INDEX\ 1\ \ \ \ }\textcolor{comment}{///<\ Initial\ index\ for\ cell\ size.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00030}\mbox{\hyperlink{cell_8h_a55d20b56fa26df8a11ef3e05b0e1b6e2}{00030}}\ \textcolor{preprocessor}{\#define\ INITIAL\_WIDTH\ 8\ \ \ \ }\textcolor{comment}{///<\ Initial\ width\ of\ a\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00031}\mbox{\hyperlink{cell_8h_aa7dc7fae1ee35d37791e2dc8d481ab66}{00031}}\ \textcolor{preprocessor}{\#define\ INITIAL\_HEIGHT\ 5\ \ \ }\textcolor{comment}{///<\ Initial\ height\ of\ a\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00032}\mbox{\hyperlink{cell_8h_a40958a1382463445e451148e3a93e049}{00032}}\ \textcolor{preprocessor}{\#define\ INITIAL\_SIZE\ Medium}\textcolor{comment}{///<\ Initial\ size\ of\ a\ cell.}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00033}\mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{00033}}\ \textcolor{preprocessor}{\#define\ FIELD\_HEIGHT\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ (CELLS\_PER\_COL\ *\ g\_cell\_size.height)}}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ (CELLS\_PER\_COL\ *\ g\_cell\_size.height)}\textcolor{comment}{///<\ Height\ of\ the\ field\ based\ on\ cell\ size.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00035}00035\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00036}00036\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @brief\ Enum\ representing\ the\ available\ cell\ sizes.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00039}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4}{00039}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00040}00040\ \{}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00041}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4ad701591531ebfe0abdf21101ddaf6abe}{00041}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4ad701591531ebfe0abdf21101ddaf6abe}{Small}}\ =\ 0,\ }
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00042}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a8cfb9311a439a51b14159ed0970f398b}{00042}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a8cfb9311a439a51b14159ed0970f398b}{Medium}}\ =\ 1,}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00043}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a453e3722bbf55ee0aae801a69be04d38}{00043}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a453e3722bbf55ee0aae801a69be04d38}{Large}}\ =\ 2,\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00041}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4ad701591531ebfe0abdf21101ddaf6abe}{00041}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4ad701591531ebfe0abdf21101ddaf6abe}{Small}}\ =\ 0,\ \textcolor{comment}{///<\ Small\ cell\ size.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00042}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a8cfb9311a439a51b14159ed0970f398b}{00042}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a8cfb9311a439a51b14159ed0970f398b}{Medium}}\ =\ 1,\textcolor{comment}{///<\ Medium\ cell\ size.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00043}\mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a453e3722bbf55ee0aae801a69be04d38}{00043}}\ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4a453e3722bbf55ee0aae801a69be04d38}{Large}}\ =\ 2,\ \textcolor{comment}{///<\ Large\ cell\ size.}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00044}00044\ \}\ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4}{Size}};}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00045}00045\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00046}00046\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00047}00047\ \textcolor{comment}{\ *\ @brief\ Struct\ representing\ the\ dimensions\ of\ a\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00048}00048\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00049}\mbox{\hyperlink{structCellSize}{00049}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00050}00050\ \{}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00051}\mbox{\hyperlink{structCellSize_a401b7a4b21cd46ff9c885f781e3f155d}{00051}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4}{Size}}\ \mbox{\hyperlink{structCellSize_a401b7a4b21cd46ff9c885f781e3f155d}{size}};\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00052}\mbox{\hyperlink{structCellSize_a090f493df18f7e4f9a50718303126786}{00052}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structCellSize_a090f493df18f7e4f9a50718303126786}{width}};\ }
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00053}\mbox{\hyperlink{structCellSize_a782ff1db6a01350c1dbdf180ac1648e3}{00053}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structCellSize_a782ff1db6a01350c1dbdf180ac1648e3}{height}};}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00051}\mbox{\hyperlink{structCellSize_a401b7a4b21cd46ff9c885f781e3f155d}{00051}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{cell_8h_a1c40db1d9b56c27240e420765695f1c4}{Size}}\ \mbox{\hyperlink{structCellSize_a401b7a4b21cd46ff9c885f781e3f155d}{size}};\ \ \ \ \ \textcolor{comment}{///<\ Current\ size\ of\ the\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00052}\mbox{\hyperlink{structCellSize_a090f493df18f7e4f9a50718303126786}{00052}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structCellSize_a090f493df18f7e4f9a50718303126786}{width}};\ \textcolor{comment}{///<\ Width\ of\ the\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00053}\mbox{\hyperlink{structCellSize_a782ff1db6a01350c1dbdf180ac1648e3}{00053}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structCellSize_a782ff1db6a01350c1dbdf180ac1648e3}{height}};\textcolor{comment}{///<\ Height\ of\ the\ cell.}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00054}00054\ \}\ \mbox{\hyperlink{structCellSize}{CellSize}};}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00055}00055\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00056}00056\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00057}00057\ \textcolor{comment}{\ *\ @brief\ Global\ variable\ representing\ the\ current\ cell\ size.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00058}00058\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00059}00059\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00060}00060\ \textcolor{comment}{\ *\ Initialized\ with\ default\ values\ for\ size,\ height,\ and\ width.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00061}00061\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00062}00062\ \textcolor{comment}{\ *\ @see\ VALID\_SIZES}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @see\ INITIAL\_SIZE}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @see\ INITIAL\_HEIGHT}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00065}00065\ \textcolor{comment}{\ *\ @see\ INITIAL\_WIDTH}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00066}00066\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00067}00067\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structCellSize}{CellSize}}\ \mbox{\hyperlink{cell_8h_adb4ddd27a0c4cabe2034cb565770f991}{g\_cell\_size}};}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00068}00068\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00069}00069\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00070}00070\ \textcolor{comment}{\ *\ @brief\ Redraws\ the\ given\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00071}00071\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00072}00072\ \textcolor{comment}{\ *\ @param[in]\ cell\ Cell\ to\ redraw.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00073}00073\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00074}00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_a3945952c9b76c87175d1ae905f01b07a}{cell\_redraw}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCell}{Cell}}\ *cell);}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00075}00075\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00076}00076\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00077}00077\ \textcolor{comment}{\ *\ @brief\ Redraws\ the\ given\ cell\ with\ a\ modifier.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00078}00078\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @param[in]\ cell\ Cell\ to\ redraw.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00080}00080\ \textcolor{comment}{\ *\ @param[in]\ modifier\ Modifier\ to\ apply\ during\ redraw.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00081}00081\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_abd511bd7897b645ef9cb3a62583959e6}{cell\_redraw\_withModifier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCell}{Cell}}\ *cell,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *modifier);}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00083}00083\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00084}00084\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00085}00085\ \textcolor{comment}{\ *\ @brief\ Redraws\ the\ entire\ field\ of\ cells.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00086}00086\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00087}00087\ \textcolor{comment}{\ *\ @param[in]\ all\_cells\ 2D\ array\ of\ cells\ representing\ the\ field.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00088}00088\ \textcolor{comment}{\ *\ @param[in]\ modifier\ Modifier\ to\ apply\ during\ redraw.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00089}00089\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00090}00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_a58542af15ec3ebf1a4e50c34789aa317}{cell\_redrawAll}}(\mbox{\hyperlink{structCell}{Cell}}\ all\_cells[][\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *modifier);}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00091}00091\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00092}00092\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00093}00093\ \textcolor{comment}{\ *\ @brief\ Selects\ the\ given\ cell.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00094}00094\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00095}00095\ \textcolor{comment}{\ *\ @param[in]\ cell\ Cell\ to\ select.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00096}00096\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00097}00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_a457332dae4bea1ebce89e8d8379dd3ab}{cell\_select}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structCell}{Cell}}\ *cell);}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00098}00098\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00099}00099\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00100}00100\ \textcolor{comment}{\ *\ @brief\ Increases\ the\ size\ of\ the\ cells.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00101}00101\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00102}00102\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_ab9e31dcd2aaecf6c26bba4fc29a2e882}{cell\_increaseSize}}();}
-\DoxyCodeLine{\Hypertarget{cell_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00103}00103\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00104}00104\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00105}00105\ \textcolor{comment}{\ *\ @brief\ Decreases\ the\ size\ of\ the\ cells.}}
+\DoxyCodeLine{\Hypertarget{cell_8h_source_l00106}00106\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00107}00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cell_8h_ac37a7db30665215c6cafea5b9b0d6788}{cell\_decreaseSize}}();}
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00108}00108\ }
 \DoxyCodeLine{\Hypertarget{cell_8h_source_l00109}00109\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ CELL\_H}}

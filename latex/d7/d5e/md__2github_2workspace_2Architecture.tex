@@ -1,27 +1,29 @@
-\chapter{Architecture}
-\hypertarget{md__2github_2workspace_2Architecture}{}\label{md__2github_2workspace_2Architecture}\index{Architecture@{Architecture}}
-\label{md__2github_2workspace_2Architecture_autotoc_md2}%
-\Hypertarget{md__2github_2workspace_2Architecture_autotoc_md2}%
+\chapter{🏗️ Architecture}
+\hypertarget{md__2github_2workspace_2Architecture}{}\label{md__2github_2workspace_2Architecture}\index{🏗️ Architecture@{🏗️ Architecture}}
+\label{md__2github_2workspace_2Architecture_autotoc_md3}%
+\Hypertarget{md__2github_2workspace_2Architecture_autotoc_md3}%
 
 
-This project is an embedded application, designed to run on an {\ttfamily n\+RF51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md3}{}\doxysection{\texorpdfstring{Entry Module}{Entry Module}}\label{md__2github_2workspace_2Architecture_autotoc_md3}
+
+
+This project is an embedded application, designed to run on an {\ttfamily n\+RF51} microcontroller with an {\ttfamily arm-\/cortex-\/m0} CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md5}{}\doxysection{\texorpdfstring{🚪 Entry Module}{🚪 Entry Module}}\label{md__2github_2workspace_2Architecture_autotoc_md5}
 {\itshape files\+: \doxylink{entry_8S}{entry/entry.\+S}, entry/linker\+\_\+script.\+ls}
 
-This module is responsible for the startup process of the microcontroller. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md4}{}\doxysection{\texorpdfstring{Hardware Abstraction Layer}{Hardware Abstraction Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md4}
+This module is responsible for the startup process of the microcontroller. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md7}{}\doxysection{\texorpdfstring{📟 Hardware Abstraction Layer}{📟 Hardware Abstraction Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md7}
 {\itshape files\+: include/hal/\texorpdfstring{$\ast$}{*}.h, src/hal/\texorpdfstring{$\ast$}{*}.c}
 
-The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md5}{}\doxysection{\texorpdfstring{Logic Layer}{Logic Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md5}
+The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md9}{}\doxysection{\texorpdfstring{🧩 Logic Layer}{🧩 Logic Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md9}
 {\itshape files\+: include/logic/\texorpdfstring{$\ast$}{*}.h, src/logic/\texorpdfstring{$\ast$}{*}.c}
 
 Within this layer, the game itself resides. The whole logic is based here.
 
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md7}{}\doxysection{\texorpdfstring{Presentation Layer}{Presentation Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md7}
+!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md10}{}\doxysection{\texorpdfstring{🖥️ Presentation Layer}{🖥️ Presentation Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md10}
 {\itshape files\+: include/presentation/\texorpdfstring{$\ast$}{*}.h, src/presentation/\texorpdfstring{$\ast$}{*}.c}
 
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md8}{}\doxysection{\texorpdfstring{Utility Layer}{Utility Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md8}
+!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md11}{}\doxysection{\texorpdfstring{🛠️ Utility Layer}{🛠️ Utility Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md11}
 {\itshape files\+: include/util/\texorpdfstring{$\ast$}{*}.h, src/util/\texorpdfstring{$\ast$}{*}.c}
 
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md9}{}\doxysection{\texorpdfstring{Other relevant files}{Other relevant files}}\label{md__2github_2workspace_2Architecture_autotoc_md9}
+!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md13}{}\doxysection{\texorpdfstring{➕ Other relevant files}{➕ Other relevant files}}\label{md__2github_2workspace_2Architecture_autotoc_md13}
 
 \begin{DoxyItemize}
 \item config.\+h.\+in / \doxylink{config_8h}{config.\+h}

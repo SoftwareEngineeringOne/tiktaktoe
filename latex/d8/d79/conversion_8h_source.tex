@@ -2,17 +2,56 @@
 \hypertarget{conversion_8h_source}{}\label{conversion_8h_source}\index{util/conversion.h@{util/conversion.h}}
 \mbox{\hyperlink{conversion_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ conversion.h}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ several\ different\ simple\ and\ independent\ conversion\ functions.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ utility\ functions\ for\ converting\ integers\ to\ strings\ or\ characters.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00008}00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @ingroup\ Utility}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @see\ conversion.c}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00013}00013\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00014}00014\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00015}00015\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00016}00016\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00017}00017\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00018}00018\ \textcolor{preprocessor}{\#ifndef\ CONVERSION\_H}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ CONVERSION\_H}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00024}\mbox{\hyperlink{conversion_8h_aafe14d6e6e8fcef6714002b4380870b7}{00024}}\ \textcolor{preprocessor}{\#define\ ASCII\_NUM\_OFFSET\ 48}}
-\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00024}\mbox{\hyperlink{conversion_8h_aafe14d6e6e8fcef6714002b4380870b7}{00024}}\ \textcolor{preprocessor}{\#define\ ASCII\_NUM\_OFFSET\ 48}\textcolor{comment}{///<\ Offset\ to\ convert\ a\ digit\ to\ its\ ASCII\ representation.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00025}00025\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00026}00026\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00027}00027\ \textcolor{comment}{\ *\ @brief\ Converts\ an\ integer\ to\ a\ string.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00028}00028\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00030}00030\ \textcolor{comment}{\ *\ Converts\ a\ given\ unsigned\ integer\ to\ its\ string\ representation\ and\ stores\ it\ in\ the\ provided}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00031}00031\ \textcolor{comment}{\ *\ buffer.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00032}00032\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @param[in]\ num\ The\ integer\ to\ convert.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @param[out]\ buf\ The\ buffer\ to\ store\ the\ resulting\ string.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @param[in]\ buf\_size\ The\ size\ of\ the\ buffer.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00036}00036\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @return\ 0\ on\ success,\ -\/1\ if\ an\ error\ occurred\ (e.g.,\ buffer\ is\ NULL\ or\ too\ small).}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00039}00039\ int8\_t\ \mbox{\hyperlink{conversion_8h_a10b90e654db54d6aad3fb7c1ba84b5db}{int\_to\_str}}(uint32\_t\ num,\ \textcolor{keywordtype}{char}\ *buf,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ buf\_size);}
-\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00040}00040\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00041}00041\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @brief\ Converts\ an\ integer\ to\ a\ character.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00043}00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00044}00044\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00045}00045\ \textcolor{comment}{\ *\ Converts\ a\ single-\/digit\ integer\ (0-\/9)\ to\ its\ corresponding\ ASCII\ character.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00046}00046\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00047}00047\ \textcolor{comment}{\ *\ @param[in]\ num\ The\ integer\ to\ convert\ (must\ be\ between\ 0\ and\ 9).}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00048}00048\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00049}00049\ \textcolor{comment}{\ *\ @return\ The\ ASCII\ character\ corresponding\ to\ the\ input\ integer.}}
+\DoxyCodeLine{\Hypertarget{conversion_8h_source_l00050}00050\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00051}00051\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{conversion_8h_af5de84f6396111fb80c97777d3ef8936}{int\_to\_char}}(uint8\_t\ num);}
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{conversion_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ CONVERSION\_H}}

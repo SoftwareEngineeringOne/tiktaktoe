@@ -2,7 +2,24 @@
 \hypertarget{game_8h_source}{}\label{game_8h_source}\index{logic/game.h@{logic/game.h}}
 \mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ game.h}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ the\ game\ logic}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ core\ logic\ for\ the\ TikTakToe\ game,\ including}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00008}00008\ \textcolor{comment}{\ *\ game\ state\ management,\ player\ handling,\ and\ cell\ state\ tracking.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ Logic}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see\ game.c}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00015}00015\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00016}00016\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00017}00017\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00018}00018\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00019}00019\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00020}00020\ \textcolor{preprocessor}{\#define\ GAME\_H}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00021}00021\ }
@@ -11,60 +28,106 @@
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00027}\mbox{\hyperlink{game_8h_a2870851feea96bc5bf8d094323fcfd44}{00027}}\ \textcolor{preprocessor}{\#define\ REMAINING\_TIME\ (TICKS\_PER\_TURN\ -\/\ g\_timer.ticks\_turn)}}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00028}\mbox{\hyperlink{game_8h_a30f65389443e4dac0837d0a8260f216c}{00028}}\ \textcolor{preprocessor}{\#define\ FIRST\_ROUND\ 1}}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00027}\mbox{\hyperlink{game_8h_a2870851feea96bc5bf8d094323fcfd44}{00027}}\ \textcolor{preprocessor}{\#define\ REMAINING\_TIME\ (TICKS\_PER\_TURN\ -\/\ g\_timer.ticks\_turn)}\textcolor{comment}{///<\ Remaining\ time\ for\ the\ current\ turn}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00028}\mbox{\hyperlink{game_8h_a30f65389443e4dac0837d0a8260f216c}{00028}}\ \textcolor{preprocessor}{\#define\ FIRST\_ROUND\ 1}\textcolor{comment}{///<\ Constant\ representing\ the\ first\ round\ of\ the\ game}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00029}00029\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00030}00030\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @brief\ Possible\ game\ modes}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00032}00032\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00033}00033\ \textcolor{comment}{\ *\ The\ game\ can\ be\ played\ in\ Player\ vs\ Computer\ (PVE)\ or\ Player\ vs\ Player\ (PVP)\ mode.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00034}00034\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00035}\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{00035}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00036}00036\ \{}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00037}\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{00037}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{PVE}},}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00038}\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{00038}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{PVP}},}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00037}\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{00037}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{PVE}},\textcolor{comment}{///<\ Player\ vs\ Computer}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00038}\mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{00038}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{PVP}},\textcolor{comment}{///<\ Player\ vs\ Player}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00039}00039\ \}\ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00040}00040\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00041}00041\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @brief\ Enum\ describing\ a\ player}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00043}00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00044}00044\ \textcolor{comment}{\ *\ Represents\ the\ two\ players\ (Circle\ and\ Cross)\ and\ an\ unmarked\ state\ (None).}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00045}00045\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00046}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{00046}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00047}00047\ \{}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00048}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{00048}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}}\ =\ 0,}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00049}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{00049}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{Cross}}\ =\ 1,\ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00050}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{00050}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}}\ =\ 2,\ \ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00048}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{00048}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}}\ =\ 0,\textcolor{comment}{///<\ Player\ Circle}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00049}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{00049}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{Cross}}\ =\ 1,\ \textcolor{comment}{///<\ Player\ Cross}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00050}\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{00050}}\ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}}\ =\ 2,\ \ \textcolor{comment}{///<\ No\ player\ (unmarked)}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00051}00051\ \}\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00052}00052\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00053}00053\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00054}00054\ \textcolor{comment}{\ *\ @brief\ One\ cell\ on\ the\ field}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00055}00055\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00056}00056\ \textcolor{comment}{\ *\ Contains\ coordinates\ and\ information\ about\ which\ player\ marked\ the\ cell.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00057}00057\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00058}\mbox{\hyperlink{structCell}{00058}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00059}00059\ \{}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00060}\mbox{\hyperlink{structCell_a270d77cac71cea2b8fe65dca3b750f44}{00060}}\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structCell_a270d77cac71cea2b8fe65dca3b750f44}{col}};\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00061}\mbox{\hyperlink{structCell_a63529c4e83b6c51e7c198376a1909149}{00061}}\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structCell_a63529c4e83b6c51e7c198376a1909149}{row}};\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00062}\mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{00062}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{marked\_by}};}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00060}\mbox{\hyperlink{structCell_a270d77cac71cea2b8fe65dca3b750f44}{00060}}\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structCell_a270d77cac71cea2b8fe65dca3b750f44}{col}};\ \ \ \ \textcolor{comment}{///<\ Column\ index\ of\ the\ cell}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00061}\mbox{\hyperlink{structCell_a63529c4e83b6c51e7c198376a1909149}{00061}}\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structCell_a63529c4e83b6c51e7c198376a1909149}{row}};\ \ \ \ \textcolor{comment}{///<\ Row\ index\ of\ the\ cell}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00062}\mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{00062}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structCell_aff8c5b2510befa854230104cca89cb77}{marked\_by}};\textcolor{comment}{///<\ Player\ who\ marked\ the\ cell}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00063}00063\ \}\ \mbox{\hyperlink{structCell}{Cell}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00064}00064\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00065}00065\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @brief\ The\ current\ game\ state}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00067}00067\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00068}00068\ \textcolor{comment}{\ *\ Contains\ important\ game\ information\ and\ several\ metrics\ for\ tracking\ the\ game's\ progress.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00069}00069\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00070}00070\ \textcolor{comment}{\ *\ @note\ Some\ of\ the\ fields\ are\ only\ calculated\ once\ the\ game\ is\ over.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00071}00071\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00072}\mbox{\hyperlink{structGameState}{00072}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00073}00073\ \{}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00074}\mbox{\hyperlink{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}{00074}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}{winner}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00075}\mbox{\hyperlink{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}{00075}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ \mbox{\hyperlink{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}{mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00076}\mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{round}};\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00077}\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{00077}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00078}\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{00078}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00074}\mbox{\hyperlink{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}{00074}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}{winner}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ None\ if\ tie\ or\ game\ not\ over}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00075}\mbox{\hyperlink{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}{00075}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ \mbox{\hyperlink{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}{mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Current\ game\ mode}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00076}\mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{round}};\ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Current\ round\ number}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00077}\mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{00077}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{volatile}\ uint8\_t\ \mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\_marked}};\textcolor{comment}{///<\ Number\ of\ fields\ marked\ so\ far}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00078}\mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{00078}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ \mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\_player}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Player\ whose\ turn\ it\ is}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Relevant\ for\ summary}}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00081}\mbox{\hyperlink{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}{00081}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}{total\_ticks}};\ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00082}\mbox{\hyperlink{structGameState_a4076f4aa22c3839c26be1f8c31c392c4}{00082}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a4076f4aa22c3839c26be1f8c31c392c4}{average\_ticks}};}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00081}\mbox{\hyperlink{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}{00081}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}{total\_ticks}};\ \ \textcolor{comment}{///<\ Total\ ticks\ elapsed\ in\ the\ game}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00082}\mbox{\hyperlink{structGameState_a4076f4aa22c3839c26be1f8c31c392c4}{00082}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a4076f4aa22c3839c26be1f8c31c392c4}{average\_ticks}};\textcolor{comment}{///<\ Average\ ticks\ per\ turn}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00084}\mbox{\hyperlink{structGameState_a442e43c7e1a24a347570004c3cb69d92}{00084}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a442e43c7e1a24a347570004c3cb69d92}{cross\_total\_ticks}};\ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00085}\mbox{\hyperlink{structGameState_acaee692f8af10b76456fccca13451ba9}{00085}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_acaee692f8af10b76456fccca13451ba9}{cross\_average\_ticks}};}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00084}\mbox{\hyperlink{structGameState_a442e43c7e1a24a347570004c3cb69d92}{00084}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a442e43c7e1a24a347570004c3cb69d92}{cross\_total\_ticks}};\ \ \textcolor{comment}{///<\ Total\ ticks\ for\ Player\ Cross}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00085}\mbox{\hyperlink{structGameState_acaee692f8af10b76456fccca13451ba9}{00085}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_acaee692f8af10b76456fccca13451ba9}{cross\_average\_ticks}};\textcolor{comment}{///<\ Average\ ticks\ for\ Player\ Cross}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00086}00086\ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00087}\mbox{\hyperlink{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}{00087}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}{circle\_total\_ticks}};\ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00088}\mbox{\hyperlink{structGameState_a297936a8a0f84738c04962fb19d670e6}{00088}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a297936a8a0f84738c04962fb19d670e6}{circle\_average\_ticks}};}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00087}\mbox{\hyperlink{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}{00087}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}{circle\_total\_ticks}};\ \ \textcolor{comment}{///<\ Total\ ticks\ for\ Player\ Circle}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00088}\mbox{\hyperlink{structGameState_a297936a8a0f84738c04962fb19d670e6}{00088}}\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structGameState_a297936a8a0f84738c04962fb19d670e6}{circle\_average\_ticks}};\textcolor{comment}{///<\ Average\ ticks\ for\ Player\ Circle}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00089}00089\ \}\ \mbox{\hyperlink{structGameState}{GameState}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00090}00090\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00091}00091\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00092}00092\ \textcolor{comment}{\ *\ @brief\ The\ current\ state\ of\ the\ cells}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00093}00093\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00094}00094\ \textcolor{comment}{\ *\ Tracks\ all\ cells\ on\ the\ field\ and\ pointers\ to\ specific\ cells\ for\ easier\ access.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00095}00095\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00096}\mbox{\hyperlink{structCellState}{00096}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00097}00097\ \{}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00098}\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{00098}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ all[\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}}][\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}];}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00099}\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{00099}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00100}\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{00100}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00101}\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{00101}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00098}\mbox{\hyperlink{structCellState_a110860b72d8fa79b546bbc2066235c11}{00098}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ all[\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}}][\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}];\textcolor{comment}{///<\ All\ cells\ of\ the\ match}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00099}\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{00099}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_a9e8f471170978e12c05093d5ac4934dc}{selected}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Pointer\ to\ the\ currently\ selected\ cell}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00100}\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{00100}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_ac46f863ea795a31b6b165b6c4f616627}{last\_cross}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Pointer\ to\ the\ cell\ last\ marked\ by\ Cross}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00101}\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{00101}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{structCellState_a40917533b375576965205b91e1b56e86}{last\_circle}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Pointer\ to\ the\ last\ cell\ marked\ by\ Circle}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00102}00102\ \}\ \mbox{\hyperlink{structCellState}{CellState}};}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00103}00103\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00104}00104\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00105}00105\ \textcolor{comment}{\ *\ @brief\ Start\ the\ main\ game}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00106}00106\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00107}00107\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00108}00108\ \textcolor{comment}{\ *\ Initializes\ the\ game\ and\ enters\ the\ main\ game\ loop.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00109}00109\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00110}00110\ \textcolor{comment}{\ *\ @param[in]\ mode\ Which\ mode\ the\ game\ should\ be\ played\ in.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00111}00111\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00112}00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a99a6ceced9c8b9648cc11a086603d66e}{game\_run}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ mode);}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00113}00113\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00114}00114\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00115}00115\ \textcolor{comment}{\ *\ @brief\ Automatically\ end\ a\ turn\ in\ case\ the\ turn\ time\ is\ over}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00116}00116\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00117}00117\ \textcolor{comment}{\ *\ @see\ time\_onInterrupt}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00118}00118\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00119}00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a664affa156a0a5fa033bad0b88bb6c72}{game\_onTimeOut}}();}
-\DoxyCodeLine{\Hypertarget{game_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00120}00120\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00121}00121\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00122}00122\ \textcolor{comment}{\ *\ @brief\ Finish\ the\ current\ turn}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00123}00123\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00124}00124\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00125}00125\ \textcolor{comment}{\ *\ Updates\ the\ game\ state\ and\ switches\ to\ the\ next\ player\ or\ round.}}
+\DoxyCodeLine{\Hypertarget{game_8h_source_l00126}00126\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00127}00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a729e60fc5298c74e80423c136d1f6a5a}{game\_endTurn}}();}
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00128}00128\ }
 \DoxyCodeLine{\Hypertarget{game_8h_source_l00129}00129\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ GAME\_H}}

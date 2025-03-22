@@ -26,34 +26,27 @@ var NAVTREE =
 [
   [ "TikTakToe", "index.html", [
     [ "🎮 TikTakToe", "index.html", "index" ],
-    [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md3", null ],
-      [ "Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md4", null ],
-      [ "Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5", null ],
-      [ "Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md7", null ],
-      [ "Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md8", null ],
-      [ "Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9", null ]
+    [ "🏗️ Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
+      [ "🚪 Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5", null ],
+      [ "📟 Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md7", null ],
+      [ "🧩 Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9", null ],
+      [ "🖥️ Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md10", null ],
+      [ "🛠️ Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md11", null ],
+      [ "➕ Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md13", null ]
     ] ],
-    [ "Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
-      [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md10", [
-        [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md11", [
-          [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md12", null ],
-          [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md13", null ],
-          [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md14", [
-            [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md15", null ]
-          ] ]
-        ] ],
-        [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md16", [
-          [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md17", [
-            [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18", null ],
-            [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", null ],
-            [ "Structs", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20", null ],
-            [ "Enums", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21", null ],
-            [ "Typedefs", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md22", null ],
-            [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md23", null ],
-            [ "Global Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md24", null ]
-          ] ]
-        ] ]
+    [ "🤝 Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
+      [ "📄 File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md25", [
+        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md26", null ],
+        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md27", null ]
+      ] ],
+      [ "💬 Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md28", [
+        [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md29", null ],
+        [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md30", null ],
+        [ "Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md31", null ],
+        [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32", null ]
+      ] ],
+      [ "📝 Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md33", [
+        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md34", null ]
       ] ]
     ] ],
     [ "Topics", "topics.html", "topics" ],
@@ -83,7 +76,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/d41/timer_8c.html#a0dd8b6bec01b35daa0f8ef5587c4ba23"
+"df/d41/timer_8c.html#a9ce52ba510062a86d3371b33e3629d13"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

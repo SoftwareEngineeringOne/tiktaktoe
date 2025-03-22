@@ -2,14 +2,51 @@
 \hypertarget{register__access_8h_source}{}\label{register__access_8h_source}\index{hal/register\_access.h@{hal/register\_access.h}}
 \mbox{\hyperlink{register__access_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ register\_access.h}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Register\ Access\ Interface}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ provides\ an\ interface\ for\ reading\ from\ and\ writing\ to\ hardware\ registers.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00008}00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @ingroup\ HAL}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @see}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00012}00012\ \textcolor{comment}{\ *\ \ register\_access.c}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @note}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00015}00015\ \textcolor{comment}{\ *\ \ Ensure\ that\ the\ provided\ addresses\ are\ valid\ and\ aligned\ as\ required\ by\ the\ hardware.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00017}00017\ \textcolor{comment}{\ *\ @author\ Thomas\ Vogt}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00018}00018\ \textcolor{comment}{\ *\ @author\ Sven\ Reis}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00019}00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00020}00020\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00021}00021\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00022}00022\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00023}00023\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00024}00024\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00026}00026\ \textcolor{preprocessor}{\#ifndef\ REGISTERACCESS\_H}}
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00027}00027\ \textcolor{preprocessor}{\#define\ REGISTERACCESS\_H}}
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00030}00030\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00031}00031\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @brief\ Write\ a\ value\ to\ a\ hardware\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @param[in]\ address\ Memory\ address\ of\ the\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @param[in]\ value\ Value\ to\ write\ to\ the\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00036}00036\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00037}00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{register__access_8h_a95fe6fba2bc246f49af61e076d1153fe}{register\_write}}(uint32\_t\ address,\ uint32\_t\ value);}
-\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00038}00038\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00039}00039\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00040}00040\ \textcolor{comment}{\ *\ @brief\ Read\ a\ value\ from\ a\ hardware\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00041}00041\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @param[in]\ address\ Memory\ address\ of\ the\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00043}00043\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00044}00044\ \textcolor{comment}{\ *\ @return\ Value\ read\ from\ the\ register.}}
+\DoxyCodeLine{\Hypertarget{register__access_8h_source_l00045}00045\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00046}00046\ uint32\_t\ \mbox{\hyperlink{register__access_8h_a622715efc93f28ec149d81b793eef17b}{register\_read}}(uint32\_t\ address);}
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00047}00047\ }
 \DoxyCodeLine{\Hypertarget{register__access_8h_source_l00048}00048\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ REGISTERACCESS\_H}}

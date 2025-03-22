@@ -2,15 +2,44 @@
 \hypertarget{ascii__art_8h_source}{}\label{ascii__art_8h_source}\index{presentation/ascii\_art.h@{presentation/ascii\_art.h}}
 \mbox{\hyperlink{ascii__art_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ ascii\_art.h}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ ASCII\ art\ constants\ for\ the\ TikTakToe\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ defines\ macros\ for\ ASCII\ art\ used\ in\ the\ TikTakToe\ game,\ including}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00008}00008\ \textcolor{comment}{\ *\ headings,\ win\ messages,\ and\ start\ messages.\ The\ ASCII\ art\ adapts\ based\ on}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00009}00009\ \textcolor{comment}{\ *\ whether\ Unicode\ or\ plain\ text\ is\ enabled.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @ingroup\ Presentation}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00013}00013\ \textcolor{comment}{\ *\ @note}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00014}00014\ \textcolor{comment}{\ *\ Ensure\ that\ ENABLE\_ASCII\_ART\ and\ ENABLE\_UNICODE\ are\ defined\ appropriately}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00015}00015\ \textcolor{comment}{\ *\ to\ use\ the\ desired\ ASCII\ art\ format.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00017}00017\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00018}00018\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00019}00019\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00020}00020\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00021}00021\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifndef\ ASCII\_ART\_H}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ ASCII\_ART\_H}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00026}00026\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_ASCII\_ART}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00027}00027\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00028}00028\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @def\ HEADING\_LINES}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @brief\ Number\ of\ lines\ in\ the\ heading\ ASCII\ art.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00031}00031\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ HEADING\_LINES\ 9}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00035}00035\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @def\ HEADING}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ for\ the\ game\ heading\ with\ Unicode\ support.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00038}00038\ \textcolor{comment}{\ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00039}00039\ \textcolor{preprocessor}{\#define\ HEADING\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00040}00040\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00041}00041\ \textcolor{preprocessor}{.\_\_\_\_\_\_\_\_\_\_\_.\ \_\_\ \ \ \_\_\ \ \_\_\_\ .\_\_\_\_\_\_\_\_\_\_\_.\ \ \ \ \_\_\_\ \ \ \ \ \ \ \_\_\ \ \_\_\_\ .\_\_\_\_\_\_\_\_\_\_\_.\ \ \_\_\_\_\_\_\ \ \ \ \_\_\_\_\_\_\_\ \ \(\backslash\)n\(\backslash\)}}
@@ -21,7 +50,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00046}00046\ \textcolor{preprocessor}{\ \ \ \ |\_\_|\ \ \ \ \ |\_\_|\ |\_\_|\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\ \ \ \ \ |\_\_|\ \ \ \ /\_\_/\ \ \ \ \ \(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\ |\_\_|\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\ \ \ \ \ |\_\_|\ \ \ \ \ \ \(\backslash\)\(\backslash\)\_\_\_\_\_\_/\ \ |\_\_\_\_\_\_\_|\ \(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00047}00047\ \textcolor{preprocessor}{───────────────────────────────────────────────────────────────────────────────────────────────\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00048}00048\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00049}00049\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00049}00049\ \textcolor{preprocessor}{\#else}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00050}00050\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00051}00051\ \textcolor{comment}{\ *\ @def\ HEADING}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00052}00052\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ for\ the\ game\ heading\ without\ Unicode\ support.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00053}00053\ \textcolor{comment}{\ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00054}00054\ \textcolor{preprocessor}{\#define\ HEADING\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00055}00055\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00056}00056\ \textcolor{preprocessor}{.\_\_\_\_\_\_\_\_\_\_\_.\ \_\_\ \ \ \_\_\ \ \_\_\_\ .\_\_\_\_\_\_\_\_\_\_\_.\ \ \ \ \_\_\_\ \ \ \ \ \ \ \_\_\ \ \_\_\_\ .\_\_\_\_\_\_\_\_\_\_\_.\ \ \_\_\_\_\_\_\ \ \ \ \_\_\_\_\_\_\_\ \ \(\backslash\)n\(\backslash\)}}
@@ -33,7 +66,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00062}00062\ \textcolor{preprocessor}{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00063}00063\ \textcolor{preprocessor}{"{}}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00064}00064\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00065}00065\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00066}00066\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00067}00067\ \textcolor{comment}{\ *\ @def\ CROSS\_WINS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00068}00068\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ cross\ player\ wins.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00069}00069\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00070}00070\ \textcolor{preprocessor}{\#define\ CROSS\_WINS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00072}00072\ \textcolor{preprocessor}{\ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\ \ \ \ \ \ \ \ \_\_\_\ \ \ \ \ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -42,7 +79,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00075}00075\ \textcolor{preprocessor}{|\ |\_\_\_|\ |\ |\ (\_)\ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\ \ \ \(\backslash\)\(\backslash\)\ V\ \ V\ /\ |\ |\ |\ |\ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\_|\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00076}00076\ \textcolor{preprocessor}{\ \(\backslash\)\(\backslash\)\_\_\_\_|\_|\ \ \(\backslash\)\(\backslash\)\_\_\_/|\_\_\_/\_\_\_/\ \ \ \ \(\backslash\)\(\backslash\)\_/\(\backslash\)\(\backslash\)\_/\ \ |\_|\_|\ |\_|\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00077}00077\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00078}00078\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00079}00079\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00080}00080\ \textcolor{comment}{\ *\ @def\ CIRCLE\_WINS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00081}00081\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ circle\ player\ wins.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00082}00082\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00083}00083\ \textcolor{preprocessor}{\#define\ CIRCLE\_WINS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00084}00084\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00085}00085\ \textcolor{preprocessor}{\ \ \_\_\_\_\ \_\ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \_\_\ \ \ \ \ \ \ \ \_\_\_\ \ \ \ \ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -51,7 +92,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00088}00088\ \textcolor{preprocessor}{|\ |\_\_\_|\ |\ |\ |\ (\_\_|\ |\ \ \_\_/\ \ \ \(\backslash\)\(\backslash\)\ V\ \ V\ /\ |\ |\ |\ |\ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\_|\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00089}00089\ \textcolor{preprocessor}{\ \(\backslash\)\(\backslash\)\_\_\_\_|\_|\_|\ \ \(\backslash\)\(\backslash\)\_\_\_|\_|\(\backslash\)\(\backslash\)\_\_\_|\ \ \ \ \(\backslash\)\(\backslash\)\_/\(\backslash\)\(\backslash\)\_/\ \ |\_|\_|\ |\_|\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00090}00090\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00091}00091\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00092}00092\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00093}00093\ \textcolor{comment}{\ *\ @def\ ITS\_A\_TIE}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00094}00094\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ game\ ends\ in\ a\ tie.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00095}00095\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00096}00096\ \textcolor{preprocessor}{\#define\ ITS\_A\_TIE\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00097}00097\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00098}00098\ \textcolor{preprocessor}{\ \_\_\_\ \_\ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\_\ \_\ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -60,7 +105,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00101}00101\ \textcolor{preprocessor}{\ |\ ||\ |\_\ \ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\ |\ (\_|\ |\ \ \ |\ |\ |\ |\ \ \_\_/\_|\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00102}00102\ \textcolor{preprocessor}{|\_\_\_|\(\backslash\)\(\backslash\)\_\_|\ |\_\_\_/\ \ \(\backslash\)\(\backslash\)\_\_,\_|\ \ \ |\_|\ |\_|\(\backslash\)\(\backslash\)\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00103}00103\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00104}00104\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00105}00105\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00106}00106\ \textcolor{comment}{\ *\ @def\ PLAYER\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00107}00107\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00108}00108\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00109}00109\ \textcolor{preprocessor}{\#define\ PLAYER\_STARTS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00110}00110\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00111}00111\ \textcolor{preprocessor}{\ \_\_\_\_\ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -70,7 +119,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00115}00115\ \textcolor{preprocessor}{|\_|\ \ \ |\_|\(\backslash\)\(\backslash\)\_\_,\_|\(\backslash\)\(\backslash\)\_\_,\ |\(\backslash\)\(\backslash\)\_\_\_|\_|\ \ \ \ |\_\_\_/\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\_\_,\_|\_|\ \ \ \(\backslash\)\(\backslash\)\_\_|\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00116}00116\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\_\_\_/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00117}00117\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00118}00118\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00119}00119\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00120}00120\ \textcolor{comment}{\ *\ @def\ COMPUTER\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00121}00121\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ computer\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00122}00122\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00123}00123\ \textcolor{preprocessor}{\#define\ COMPUTER\_STARTS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00124}00124\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00125}00125\ \textcolor{preprocessor}{\ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -80,7 +133,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00129}00129\ \textcolor{preprocessor}{\ \(\backslash\)\(\backslash\)\_\_\_\_\(\backslash\)\(\backslash\)\_\_\_/|\_|\ |\_|\ |\_|\ .\_\_/\ \(\backslash\)\(\backslash\)\_\_,\_|\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\_\_\_|\_|\ \ \ \ |\_\_\_/\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\_\_,\_|\_|\ \ \ \(\backslash\)\(\backslash\)\_\_|\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00130}00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\_|\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00131}00131\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00132}00132\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00133}00133\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00134}00134\ \textcolor{comment}{\ *\ @def\ CIRCLE\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00135}00135\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ circle\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00136}00136\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00137}00137\ \textcolor{preprocessor}{\#define\ CIRCLE\_STARTS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00138}00138\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00139}00139\ \textcolor{preprocessor}{\ \ \_\_\_\_\ \_\ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -89,7 +146,11 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00142}00142\ \textcolor{preprocessor}{|\ |\_\_\_|\ |\ |\ |\ (\_\_|\ |\ \ \_\_/\ \(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\ ||\ (\_|\ |\ |\ \ |\ |\_\(\backslash\)\(\backslash\)\_\_\ \(\backslash\)\(\backslash\)\_|\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00143}00143\ \textcolor{preprocessor}{\ \(\backslash\)\(\backslash\)\_\_\_\_|\_|\_|\ \ \(\backslash\)\(\backslash\)\_\_\_|\_|\(\backslash\)\(\backslash\)\_\_\_|\ |\_\_\_/\(\backslash\)\(\backslash\)\_\_\(\backslash\)\(\backslash\)\_\_,\_|\_|\ \ \ \(\backslash\)\(\backslash\)\_\_|\_\_\_(\_)\(\backslash\)n\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00144}00144\ \textcolor{preprocessor}{"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00145}00145\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00146}00146\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00147}00147\ \textcolor{comment}{\ *\ @def\ CROSS\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00148}00148\ \textcolor{comment}{\ *\ @brief\ ASCII\ art\ displayed\ when\ the\ cross\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00149}00149\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00150}00150\ \textcolor{preprocessor}{\#define\ CROSS\_STARTS\ \(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00151}00151\ \textcolor{preprocessor}{\ \ \ \ "{}\(\backslash\)}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00152}00152\ \textcolor{preprocessor}{\ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \_\ \(\backslash\)n\(\backslash\)}}
@@ -100,23 +161,59 @@
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00157}00157\ \textcolor{preprocessor}{"{}}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00158}00158\ }
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00159}00159\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00160}00160\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00161}00161\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00162}00162\ \textcolor{comment}{\ *\ @def\ HEADING\_LINES}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00163}00163\ \textcolor{comment}{\ *\ @brief\ Number\ of\ lines\ in\ the\ heading\ ASCII\ art\ for\ plain\ text\ mode.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00164}00164\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00165}\mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{00165}}\ \textcolor{preprocessor}{\#define\ HEADING\_LINES\ 3}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00166}00166\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00167}00167\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00168}00168\ \textcolor{comment}{\ *\ @def\ HEADING}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00169}00169\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ heading\ for\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00170}00170\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00171}\mbox{\hyperlink{ascii__art_8h_afff315b7dccfc52793b0cd7d4119e2f6}{00171}}\ \textcolor{preprocessor}{\#define\ HEADING\ "{}\(\backslash\)n\ TikTakToe\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00172}00172\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00173}00173\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00174}00174\ \textcolor{comment}{\ *\ @def\ CROSS\_WINS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00175}00175\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ cross\ player\ wins.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00176}00176\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00177}\mbox{\hyperlink{ascii__art_8h_ab5d2366b16f87f2948c371a8bbc5ab87}{00177}}\ \textcolor{preprocessor}{\#define\ CROSS\_WINS\ "{}\(\backslash\)n\ Cross\ Wins!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00178}00178\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00179}00179\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00180}00180\ \textcolor{comment}{\ *\ @def\ CIRCLE\_WINS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00181}00181\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ circle\ player\ wins.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00182}00182\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00183}\mbox{\hyperlink{ascii__art_8h_a093e7f1d1a255abcfc731136c2f098dd}{00183}}\ \textcolor{preprocessor}{\#define\ CIRCLE\_WINS\ "{}\(\backslash\)n\ Circle\ Wins!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00184}00184\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00185}00185\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00186}00186\ \textcolor{comment}{\ *\ @def\ ITS\_A\_TIE}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00187}00187\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ game\ ends\ in\ a\ tie.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00188}00188\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00189}\mbox{\hyperlink{ascii__art_8h_a21ab6b86fee8bf77658ca19b3546e5aa}{00189}}\ \textcolor{preprocessor}{\#define\ ITS\_A\_TIE\ "{}\(\backslash\)n\ It's\ a\ Tie!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00190}00190\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00191}00191\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00192}00192\ \textcolor{comment}{\ *\ @def\ PLAYER\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00193}00193\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00194}00194\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00195}\mbox{\hyperlink{ascii__art_8h_a7b9b090e85ba0f87ee680409deafc21b}{00195}}\ \textcolor{preprocessor}{\#define\ PLAYER\_STARTS\ "{}\(\backslash\)n\ Player\ starts!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00196}00196\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00197}00197\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00198}00198\ \textcolor{comment}{\ *\ @def\ COMPUTER\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00199}00199\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ computer\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00200}00200\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00201}\mbox{\hyperlink{ascii__art_8h_ac7b45208b813764888c4d45ed240ca90}{00201}}\ \textcolor{preprocessor}{\#define\ COMPUTER\_STARTS\ "{}\(\backslash\)n\ Computer\ starts!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00202}00202\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00203}00203\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00204}00204\ \textcolor{comment}{\ *\ @def\ CIRCLE\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00205}00205\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ circle\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00206}00206\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00207}\mbox{\hyperlink{ascii__art_8h_adc56130da1826ec86b800609ac465aed}{00207}}\ \textcolor{preprocessor}{\#define\ CIRCLE\_STARTS\ "{}\(\backslash\)n\ Circle\ starts!\ \(\backslash\)n"{}}}
-\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00208}00208\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00209}00209\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00210}00210\ \textcolor{comment}{\ *\ @def\ CROSS\_STARTS}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00211}00211\ \textcolor{comment}{\ *\ @brief\ Plain\ text\ message\ displayed\ when\ the\ cross\ player\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00212}00212\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00213}\mbox{\hyperlink{ascii__art_8h_afa348fdbf77ddff505e3ebd85dd14706}{00213}}\ \textcolor{preprocessor}{\#define\ CROSS\_STARTS\ "{}\(\backslash\)n\ Cross\ starts!\ \(\backslash\)n"{}}}
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00214}00214\ }
 \DoxyCodeLine{\Hypertarget{ascii__art_8h_source_l00215}00215\ \textcolor{preprocessor}{\#endif}}

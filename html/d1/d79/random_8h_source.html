@@ -112,39 +112,81 @@ $(function(){initNavTree('d1/d79/random_8h_source.html','../../'); initResizable
   <div class="headertitle"><div class="title">random.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/d79/random_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="../../d1/d79/random_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * @file random.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * @brief Header file for the RNG HAL.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * @details</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * This file contains the declarations and macros for interacting with the RNG</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * peripheral, including initialization and random number retrieval.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * @ingroup HAL</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * @see random.c</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * @note</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Based on version by Thomas Vogt</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * @copyright</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * License, v2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef RANDOM_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define RANDOM_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a543998e94cc5358bc493194aac4a62de">   28</a></span><span class="preprocessor">#define RNG_BASE_ADDRESS 0x4000D000</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a543998e94cc5358bc493194aac4a62de">   28</a></span><span class="preprocessor">#define RNG_BASE_ADDRESS 0x4000D000</span><span class="comment">///&lt; Base address of the RNG peripheral</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// Register Offsets (from Table 174, page 115)</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// Tasks:</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ac883ee232640738847b8bf0dfdb80c13">   32</a></span><span class="preprocessor">#define RNG_START 0x000</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a9454d7d2c7c9e72d8d597a99f4eb50f2">   33</a></span><span class="preprocessor">#define RNG_STOP 0x004 </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ac883ee232640738847b8bf0dfdb80c13">   32</a></span><span class="preprocessor">#define RNG_START 0x000</span><span class="comment">///&lt; Task starting the random number generator</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a9454d7d2c7c9e72d8d597a99f4eb50f2">   33</a></span><span class="preprocessor">#define RNG_STOP 0x004 </span><span class="comment">///&lt; Task stopping the random number generator</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// Events:</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ab3aae99df44746d954a4f64faa569d9c">   36</a></span><span class="preprocessor">#define RNG_VALRDY 0x100</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ab3aae99df44746d954a4f64faa569d9c">   36</a></span><span class="preprocessor">#define RNG_VALRDY 0x100</span><span class="comment">///&lt; Event generated when new number is read</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Registers:</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#acd6fbca3838c5dc6c80d98ad159a13bd">   39</a></span><span class="preprocessor">#define RNG_SHORTS 0x200  </span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a8401d6cb5af5f53f0eb5bf15b44979e3">   40</a></span><span class="preprocessor">#define RNG_INTEN 0x300   </span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ab99809e1ee0ccf7fa5d84f3da6b4de6e">   41</a></span><span class="preprocessor">#define RNG_INTENSET 0x304</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a9a132dbcaf91f3bdbb4612d8bc1fcfce">   42</a></span><span class="preprocessor">#define RNG_INTENCLR 0x308</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a7e7a01e5f2cb8cd4aafedb178f459484">   43</a></span><span class="preprocessor">#define RNG_CONFIG 0x504  </span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#aa6807bb4557dbb6e07850699d7400f8f">   44</a></span><span class="preprocessor">#define RNG_VALUE 0x508   </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#acd6fbca3838c5dc6c80d98ad159a13bd">   39</a></span><span class="preprocessor">#define RNG_SHORTS 0x200  </span><span class="comment">///&lt; Shortcut register</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a8401d6cb5af5f53f0eb5bf15b44979e3">   40</a></span><span class="preprocessor">#define RNG_INTEN 0x300   </span><span class="comment">///&lt; Enable or disable interrupt</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#ab99809e1ee0ccf7fa5d84f3da6b4de6e">   41</a></span><span class="preprocessor">#define RNG_INTENSET 0x304</span><span class="comment">///&lt; Enable interrupt</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a9a132dbcaf91f3bdbb4612d8bc1fcfce">   42</a></span><span class="preprocessor">#define RNG_INTENCLR 0x308</span><span class="comment">///&lt; Disable interrupt</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a7e7a01e5f2cb8cd4aafedb178f459484">   43</a></span><span class="preprocessor">#define RNG_CONFIG 0x504  </span><span class="comment">///&lt; Configuration register</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#aa6807bb4557dbb6e07850699d7400f8f">   44</a></span><span class="preprocessor">#define RNG_VALUE 0x508   </span><span class="comment">///&lt; Output random number</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Other:</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#aef5776807f90514343d80c42845795d7">   47</a></span><span class="preprocessor">#define RNG_TASK_START 1   </span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a8d24eaf6f936a4ae01fe003c935c35fe">   48</a></span><span class="preprocessor">#define RNG_EVENT_TRIGGER 1</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a26bdf6449c74427e8dcd50690be41557">   49</a></span><span class="preprocessor">#define RNG_EVENT_CLEAR 0  </span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#aef5776807f90514343d80c42845795d7">   47</a></span><span class="preprocessor">#define RNG_TASK_START 1   </span><span class="comment">///&lt; Value for starting a Task</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a8d24eaf6f936a4ae01fe003c935c35fe">   48</a></span><span class="preprocessor">#define RNG_EVENT_TRIGGER 1</span><span class="comment">///&lt; Value for setting/starting an Event</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d79/random_8h.html#a26bdf6449c74427e8dcd50690be41557">   49</a></span><span class="preprocessor">#define RNG_EVENT_CLEAR 0  </span><span class="comment">///&lt; Value for clearing/stopping an Event</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"></span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> * @brief Enables the generation of random numbers.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d79/random_8h.html#a892aefef3ee12161a32838eb5c6e3087">rng_init</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"></span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"> * @brief Get the Random Value from the generator immediately.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"> * @details</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"> * The function does not wait for the next value to be generated. It reads the</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> * current value from the RNG peripheral.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"> * @return uint8_t A random byte.</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>uint8_t <a class="code hl_function" href="../../d1/d79/random_8h.html#ade0d5a07f6403292f21ff2b5f200f11f">rng_getRandomValue_immediately</a>();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"> * @brief Get the Random Value from the generator by polling and waiting.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"> * @details</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"> * This function blocks until the RNG peripheral indicates that a new random</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment"> * value is ready. It then retrieves and returns the random byte.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"> * @return uint8_t A random byte.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>uint8_t <a class="code hl_function" href="../../d1/d79/random_8h.html#a0cc8207c13dfa65a8279450efa1751d3">rng_getRandomValue_waiting</a>();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span><span class="comment">// RANDOM_H</span></div>

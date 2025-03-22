@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: Architecture</title>
+<title>TikTakToe: 🏗️ Architecture</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -109,34 +109,56 @@ $(function(){initNavTree('d7/d5e/md__2github_2workspace_2Architecture.html','../
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Architecture</div></div>
+  <div class="headertitle"><div class="title">🏗️ Architecture</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md2"></a></p>
-<p>This project is an embedded application, designed to run on an <code>nRF51</code> microcontroller with an <code>arm-cortex-m0</code> CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Entry Module</h1>
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md5">🚪 Entry Module</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md7">📟 Hardware Abstraction Layer</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md9">🧩 Logic Layer</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md10">🖥️ Presentation Layer</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md11">🛠️ Utility Layer</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md13">➕ Other relevant files</a>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="autotoc_md3"></a></p>
+<div style="visibility:hidden"></div><p>This project is an embedded application, designed to run on an <code>nRF51</code> microcontroller with an <code>arm-cortex-m0</code> CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+🚪 Entry Module</h1>
 <p><em>files: <a class="el" href="../../de/d20/entry_8S.html" title="Entry point and initialization routines for the Tic-Tac-Toe project.">entry/entry.S</a>, entry/linker_script.ls</em></p>
 <p>This module is responsible for the startup process of the microcontroller. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed.</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Hardware Abstraction Layer</h1>
+<h1><a class="anchor" id="autotoc_md7"></a>
+📟 Hardware Abstraction Layer</h1>
 <p><em>files: include/hal/*.h, src/hal/*.c</em></p>
 <p>The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Logic Layer</h1>
+<h1><a class="anchor" id="autotoc_md9"></a>
+🧩 Logic Layer</h1>
 <p><em>files: include/logic/*.h, src/logic/*.c</em></p>
 <p>Within this layer, the game itself resides. The whole logic is based here.</p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
-Presentation Layer</h1>
+<h1><a class="anchor" id="autotoc_md10"></a>
+🖥️ Presentation Layer</h1>
 <p><em>files: include/presentation/*.h, src/presentation/*.c</em></p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Utility Layer</h1>
+<h1><a class="anchor" id="autotoc_md11"></a>
+🛠️ Utility Layer</h1>
 <p><em>files: include/util/*.h, src/util/*.c</em></p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
-Other relevant files</h1>
+<h1><a class="anchor" id="autotoc_md13"></a>
+➕ Other relevant files</h1>
 <ul>
 <li>config.h.in / <a class="el" href="../../db/d16/config_8h.html">config.h</a><ul>
 <li>!TODO!</li>

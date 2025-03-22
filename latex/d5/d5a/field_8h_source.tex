@@ -2,16 +2,43 @@
 \hypertarget{field_8h_source}{}\label{field_8h_source}\index{presentation/field.h@{presentation/field.h}}
 \mbox{\hyperlink{field_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ field.h}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ Contains\ constants\ and\ one\ function\ to\ draw\ the\ whole\ field.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ defines\ constants\ for\ rendering\ the\ tic-\/tac-\/toe\ field,\ including}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00008}00008\ \textcolor{comment}{\ *\ offsets,\ Unicode\ or\ ASCII\ characters\ for\ the\ field's\ borders,\ and\ the}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00009}00009\ \textcolor{comment}{\ *\ \`{}field\_redraw`\ function\ to\ render\ the\ field.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00010}00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00011}00011\ \textcolor{comment}{\ *\ @ingroup\ Presentation}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00012}00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00013}00013\ \textcolor{comment}{\ *\ @see\ field.c}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00014}00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00015}00015\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00016}00016\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00017}00017\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00018}00018\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00019}00019\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00021}00021\ \textcolor{preprocessor}{\#ifndef\ FIELD\_H}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ FIELD\_H}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ascii__art_8h}{presentation/ascii\_art.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00027}00027\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00028}00028\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00029}00029\ \textcolor{comment}{\ *\ @def\ FIELD\_X\_OFFSET}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @brief\ Horizontal\ offset\ for\ the\ field\ rendering.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00031}00031\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00032}\mbox{\hyperlink{field_8h_a5e97e248a9617cae814043283cb8f391}{00032}}\ \textcolor{preprocessor}{\#define\ FIELD\_X\_OFFSET\ 1}}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00033}00033\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00034}00034\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @def\ FIELD\_Y\_OFFSET}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @brief\ Vertical\ offset\ for\ the\ field\ rendering,\ including\ heading\ lines.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00037}00037\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00038}\mbox{\hyperlink{field_8h_abfe12b21a522c24d92a825c268f0da7a}{00038}}\ \textcolor{preprocessor}{\#define\ FIELD\_Y\_OFFSET\ 2\ +\ HEADING\_LINES}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00039}00039\ }
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00040}00040\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}}
@@ -58,7 +85,14 @@
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00081}\mbox{\hyperlink{field_8h_a6afaa081a98a5ef42884e488dde0ef24}{00081}}\ \textcolor{preprocessor}{\#define\ DIAGONAL\_BW\ "{}\(\backslash\)\(\backslash\)"{}}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00082}\mbox{\hyperlink{field_8h_a59d7c6c494fd93262d5c3bbffbfa0245}{00082}}\ \textcolor{preprocessor}{\#define\ DIAGONAL\_MID\ "{}X"{}}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00083}00083\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00084}00084\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00085}00085\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00086}00086\ \textcolor{comment}{\ *\ @brief\ Redraw\ the\ whole\ 2D\ field.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00087}00087\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00088}00088\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00089}00089\ \textcolor{comment}{\ *\ This\ function\ renders\ the\ entire\ tic-\/tac-\/toe\ field,\ including\ borders}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00090}00090\ \textcolor{comment}{\ *\ and\ empty\ cells,\ based\ on\ the\ current\ configuration.}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00091}00091\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00092}00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{field_8h_a3d0c2012ab22c49c338449956fc0dd68}{field\_redraw}}();}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00093}00093\ }
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00094}00094\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ FIELD\_H}}

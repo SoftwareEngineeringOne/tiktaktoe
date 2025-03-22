@@ -2,22 +2,70 @@
 \hypertarget{system_8h_source}{}\label{system_8h_source}\index{hal/system.h@{hal/system.h}}
 \mbox{\hyperlink{system_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ system.h}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ System\ control\ interface\ for\ hardware\ abstraction\ layer.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00005}00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00006}00006\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00007}00007\ \textcolor{comment}{\ *\ This\ file\ contains\ macros\ and\ function\ declarations\ for\ controlling}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00008}00008\ \textcolor{comment}{\ *\ system-\/level\ operations\ such\ as\ soft\ reset\ and\ power-\/off\ mode.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00009}00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00010}00010\ \textcolor{comment}{\ *\ @ingroup\ HAL}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00012}00012\ \textcolor{comment}{\ *\ @see\ system.c}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00013}00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00015}00015\ \textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00016}00016\ \textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00017}00017\ \textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00018}00018\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00020}00020\ \textcolor{preprocessor}{\#ifndef\ SYSTEM\_H}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ SYSTEM\_H}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00022}00022\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00023}00023\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00024}00024\ \textcolor{comment}{\ *\ @def\ SYS\_AIRCR}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00025}00025\ \textcolor{comment}{\ *\ @brief\ Address\ of\ the\ Application\ Interrupt\ and\ Reset\ Control\ Register.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00026}00026\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00027}\mbox{\hyperlink{system_8h_a773c6eb8780e34859927ef025b139dd4}{00027}}\ \textcolor{preprocessor}{\#define\ SYS\_AIRCR\ 0xE000ED0C}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00028}00028\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00029}00029\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @def\ SYS\_VECTKEY}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @brief\ Key\ required\ to\ write\ to\ SYS\_AIRCR.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00032}00032\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00033}\mbox{\hyperlink{system_8h_aac815486bf5a0108beac63ee3dea5c93}{00033}}\ \textcolor{preprocessor}{\#define\ SYS\_VECTKEY\ (0x5FA\ <<\ 16)}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00034}00034\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00035}00035\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @def\ SYS\_SYSRESETREQ}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @brief\ Bit\ mask\ to\ trigger\ a\ system\ reset.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00039}\mbox{\hyperlink{system_8h_a3f75a5cf541d1a64addc434a57b09afd}{00039}}\ \textcolor{preprocessor}{\#define\ SYS\_SYSRESETREQ\ (1\ <<\ 2)}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00040}00040\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00041}00041\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00042}00042\ \textcolor{comment}{\ *\ @def\ SYS\_POWER}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00043}00043\ \textcolor{comment}{\ *\ @brief\ Base\ address\ for\ power\ control\ registers.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00044}00044\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00045}\mbox{\hyperlink{system_8h_ac522f3f176863b12dd3e497ccee8afb0}{00045}}\ \textcolor{preprocessor}{\#define\ SYS\_POWER\ 0x40000000}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00046}00046\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00047}00047\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @def\ SYS\_SYSTEMOFF}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00049}00049\ \textcolor{comment}{\ *\ @brief\ Offset\ for\ the\ system\ off\ mode\ register.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00050}00050\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00051}\mbox{\hyperlink{system_8h_a9228c8a022c8cf9ca7c88120a429f135}{00051}}\ \textcolor{preprocessor}{\#define\ SYS\_SYSTEMOFF\ 0x500}}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00052}00052\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00053}00053\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00054}00054\ \textcolor{comment}{\ *\ @brief\ Trigger\ a\ soft\ reset\ of\ the\ system.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00055}00055\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00056}00056\ \textcolor{comment}{\ *\ @note\ **Never\ returns**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00057}00057\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_a97bacc4493b8a3008bdbdd7a83e86642}{system\_softReset}}();}
-\DoxyCodeLine{\Hypertarget{system_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00059}00059\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00060}00060\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00061}00061\ \textcolor{comment}{\ *\ @brief\ Triggers\ "{}off"{}\ mode\ of\ the\ system.}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00062}00062\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @note\ **Never\ returns**}}
+\DoxyCodeLine{\Hypertarget{system_8h_source_l00064}00064\ \textcolor{comment}{\ */}}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\_offMode}}();}
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00066}00066\ }
 \DoxyCodeLine{\Hypertarget{system_8h_source_l00067}00067\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ SYSTEM\_H}}

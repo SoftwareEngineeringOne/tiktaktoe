@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: Conventions</title>
+<title>TikTakToe: 🤝 Coding Conventions</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -109,116 +109,105 @@ $(function(){initNavTree('d8/d50/md__2github_2workspace_2Conventions.html','../.
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Conventions</div></div>
+  <div class="headertitle"><div class="title">🤝 Coding Conventions</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md10">Coding Conventions</a>
+    <a href="#autotoc_md25">📄 File structure</a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md11">File structure</a>
-        <ul>
-          <li class="level3">
-            <a href="#autotoc_md12">Header file structure</a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md13">Source file structure</a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md14">Naming</a>
-            <ul>
-              <li class="level4">
-                <a href="#autotoc_md15">Functions</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <a href="#autotoc_md26">Header file structure</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md16">Documentation</a>
-        <ul>
-          <li class="level3">
-            <a href="#autotoc_md17">Documentation templates</a>
-            <ul>
-              <li class="level4">
-                <a href="#autotoc_md18">Files</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md19">Functions</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md20">Structs</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md21">Enums</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md22">Typedefs</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md23">Macros</a>
-              </li>
-              <li class="level4">
-                <a href="#autotoc_md24">Global Variables</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <a href="#autotoc_md27">Source file structure</a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md28">💬 Naming</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md29">Files</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md30">Functions</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md31">Variables</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md32">Macros</a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md33">📝 Documentation</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md34">Documentation templates</a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
-Coding Conventions</h1>
-<ul>
-<li>Conventional Commits (<a href="https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13">https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13</a>)</li>
-<li>The architecture is documented in this README</li>
-<li>Every file must have a short description at the beginning</li>
-<li>Every function must have a doc comment with a short description</li>
-<li>Not self describing code must be commented (should be avoided)</li>
-<li>Public functions start with the package name followed by an underscore</li>
-<li>Private functions should therefore not be called from outside</li>
-<li>Private functions should be defined in the beginning of the source files</li>
-<li>Private functions should be implemented in the source file, following the public functions</li>
+<div class="textblock"><p><a class="anchor" id="autotoc_md4"></a></p>
+<div style="visibility:hidden"></div><ul>
+<li><a href="https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13">Conventional Commits</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md11"></a>
-File structure</h2>
+<h1><a class="anchor" id="autotoc_md25"></a>
+📄 File structure</h1>
 <p>All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
-Header file structure</h3>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Header file structure</h2>
 <ol type="1">
 <li>Module comment</li>
 <li>Defines</li>
-<li>global constants</li>
-<li>global variables</li>
-<li>structs</li>
-<li>public function prototypes</li>
+<li>Global constants</li>
+<li>Global variables</li>
+<li>Structs</li>
+<li>Public function prototypes</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md13"></a>
-Source file structure</h3>
+<h2><a class="anchor" id="autotoc_md27"></a>
+Source file structure</h2>
 <ol type="1">
 <li>Module comment (may reference header comment and add information if needed)</li>
-<li>module constants</li>
-<li>module variables</li>
-<li>private function prototypes</li>
-<li>public function implementations</li>
-<li>private function implementations</li>
+<li>Module constants</li>
+<li>Module variables</li>
+<li>Private function prototypes</li>
+<li>Public function implementations</li>
+<li>Private function implementations</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md14"></a>
-Naming</h3>
-<h4><a class="anchor" id="autotoc_md15"></a>
-Functions</h4>
+<h1><a class="anchor" id="autotoc_md28"></a>
+💬 Naming</h1>
+<h2><a class="anchor" id="autotoc_md29"></a>
+Files</h2>
 <ul>
-<li>public functions should be prefixed with "`module_[...]`"</li>
-<li>private functions should be marked as <code>static</code> and prefixed with "`_[...]`"</li>
-<li>the function name itself should be written in <code>camelCase</code></li>
-<li>a specialization may follow as a suffix, such as "`[...]_waiting`"</li>
+<li>Files should use <code>snake_case</code> naming</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
-Documentation</h2>
+<h2><a class="anchor" id="autotoc_md30"></a>
+Functions</h2>
+<ul>
+<li>Public functions should be prefixed with "`module_[...]`"</li>
+<li>Private functions should be marked as <code>static</code> and prefixed with "`_[...]`"</li>
+<li>The function name itself should be written in <code>camelCase</code></li>
+<li>A specialization may follow as a suffix, such as "`[...]_waiting`"</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md31"></a>
+Variables</h2>
+<ul>
+<li>All variables should use <code>snake_case</code> naming</li>
+<li>Global variables should be prefixed with <code>g_[...]</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md32"></a>
+Macros</h2>
+<ul>
+<li>Function macros should use the same naming as functions</li>
+<li>Other macros should use <code>SCREAMING_CASE</code> naming</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md33"></a>
+📝 Documentation</h1>
 <ul>
 <li>All files should contain a top level comment.</li>
 <li>All public functions should be documented in the header file.</li>
@@ -228,47 +217,123 @@ Documentation</h2>
 <li>All "complicated" macros should be documented.</li>
 <li>All typedefs should be documented.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md17"></a>
-Documentation templates</h3>
+<h2><a class="anchor" id="autotoc_md34"></a>
+Documentation templates</h2>
 <p>To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.</p>
-<h4><a class="anchor" id="autotoc_md18"></a>
-Files</h4>
-<div class="fragment"><div class="line"> </div>
-<div class="line"> </div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md19"></a>
-Functions</h4>
-<div class="fragment"><div class="line"> </div>
-<div class="line"> </div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md20"></a>
-Structs</h4>
-<div class="fragment"><div class="line"> </div>
-<div class="line"> <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line">    <span class="keywordtype">int</span> member1; </div>
-<div class="line">    <span class="keywordtype">float</span> member2; </div>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title"> Files </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @file  [File name]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details</span></div>
+<div class="line"><span class="comment"> * This file contains [...].</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @ingroup [HAL/Logic/Presentation/Utility]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @see </span></div>
+<div class="line"><span class="comment"> *  [Header/Source]</span></div>
+<div class="line"><span class="comment"> *  [Any other relevant]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note</span></div>
+<div class="line"><span class="comment"> *  [Additional notes, if relevant...]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @copyright</span></div>
+<div class="line"><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><span class="comment"> * License, v2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Functions </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details </span></div>
+<div class="line"><span class="comment"> * [Detailed description, only if relevant]</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * @param[in/out/inout] param1 Description of paramater</span></div>
+<div class="line"><span class="comment"> * ...</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @return [Description of return value, or &quot;void&quot;]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keywordtype">void</span> example_function(uint8_t param1);</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Structs </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details </span></div>
+<div class="line"><span class="comment"> * [Detailed description, only if relevant]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">    <span class="keywordtype">int</span> member1; <span class="comment">/**&lt; [Description of member1] */</span></div>
+<div class="line">    <span class="keywordtype">float</span> member2; <span class="comment">/**&lt; [Description of member2] */</span></div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">} ExampleStruct;</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md21"></a>
-Enums</h4>
-<div class="fragment"><div class="line"> </div>
-<div class="line"> <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line">    ENUM_VALUE1; </div>
-<div class="line">    ENUM_VALUE2; </div>
-<div class="line">    ENUM_VALUE3; </div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Enums </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details </span></div>
+<div class="line"><span class="comment"> * [Detailed description, only if relevant]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line">    ENUM_VALUE1; <span class="comment">/**&lt; [Description of ENUM_VALUE1] */</span></div>
+<div class="line">    ENUM_VALUE2; <span class="comment">/**&lt; [Description of ENUM_VALUE2] */</span></div>
+<div class="line">    ENUM_VALUE3; <span class="comment">/**&lt; [Description of ENUM_VALUE3] */</span></div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">} ExampleEnum;</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md22"></a>
-Typedefs</h4>
-<div class="fragment"><div class="line"> </div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Typedefs </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details </span></div>
+<div class="line"><span class="comment"> * [Detailed description, only if relevant]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ExampleType;</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md23"></a>
-Macros</h4>
-<div class="fragment"><div class="line"> </div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Macros </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @def EXAMPLE_MACRO</span></div>
+<div class="line"><span class="comment"> * @brief [Short description of what the macro does or represents.]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details</span></div>
+<div class="line"><span class="comment"> * [If neccessary, explain the purpose of the macro, </span></div>
+<div class="line"><span class="comment"> *  parameters (if function-like macro),...]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Example: [if relevant]</span></div>
+<div class="line"><span class="comment"> * @code</span></div>
+<div class="line"><span class="comment"> *   int value = MY_MACRO;</span></div>
+<div class="line"><span class="comment"> * @endcode</span></div>
+<div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="preprocessor">#define EXAMPLE_MACRO 42</span></div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md24"></a>
-Global Variables</h4>
-<div class="fragment"><div class="line"> </div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Global Variables </b></p>
+<div class="fragment"><div class="line"><span class="comment">/**</span></div>
+<div class="line"><span class="comment"> * @brief [Brief description]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @details </span></div>
+<div class="line"><span class="comment"> * [What global variable is used for, scope, and initialization details.]</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * @note [Any additional notes or constraints, if relevant.]</span></div>
+<div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keyword">extern</span> <span class="keywordtype">int</span> g_exampleGlobal;</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --> </li>
+</ul>
+</div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

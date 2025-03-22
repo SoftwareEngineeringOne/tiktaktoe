@@ -1,45 +1,56 @@
-\chapter{Conventions}
-\hypertarget{md__2github_2workspace_2Conventions}{}\label{md__2github_2workspace_2Conventions}\index{Conventions@{Conventions}}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md10}{}\doxysection{\texorpdfstring{Coding Conventions}{Coding Conventions}}\label{md__2github_2workspace_2Conventions_autotoc_md10}
+\chapter{🤝 Coding Conventions}
+\hypertarget{md__2github_2workspace_2Conventions}{}\label{md__2github_2workspace_2Conventions}\index{🤝 Coding Conventions@{🤝 Coding Conventions}}
+\label{md__2github_2workspace_2Conventions_autotoc_md4}%
+\Hypertarget{md__2github_2workspace_2Conventions_autotoc_md4}%
+
+
+
+
 
 \begin{DoxyItemize}
-\item Conventional Commits (\href{https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}{\texttt{ https\+://gist.\+github.\+com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}})
-\item The architecture is documented in this README
-\item Every file must have a short description at the beginning
-\item Every function must have a doc comment with a short description
-\item Not self describing code must be commented (should be avoided)
-\item Public functions start with the package name followed by an underscore
-\item Private functions should therefore not be called from outside
-\item Private functions should be defined in the beginning of the source files
-\item Private functions should be implemented in the source file, following the public functions
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md11}{}\doxysubsection{\texorpdfstring{File structure}{File structure}}\label{md__2github_2workspace_2Conventions_autotoc_md11}
-All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Header file structure}{Header file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md12}
+\item \href{https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}{\texttt{ Conventional Commits}}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md25}{}\doxysection{\texorpdfstring{📄 File structure}{📄 File structure}}\label{md__2github_2workspace_2Conventions_autotoc_md25}
+All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md26}{}\doxysubsection{\texorpdfstring{Header file structure}{Header file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md26}
 
 \begin{DoxyEnumerate}
 \item Module comment
 \item Defines
-\item global constants
-\item global variables
-\item structs
-\item public function prototypes
-\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Source file structure}{Source file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md13}
+\item Global constants
+\item Global variables
+\item Structs
+\item Public function prototypes
+\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md27}{}\doxysubsection{\texorpdfstring{Source file structure}{Source file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md27}
 
 \begin{DoxyEnumerate}
 \item Module comment (may reference header comment and add information if needed)
-\item module constants
-\item module variables
-\item private function prototypes
-\item public function implementations
-\item private function implementations
-\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Naming}{Naming}}\label{md__2github_2workspace_2Conventions_autotoc_md14}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md15}{}\doxysubsubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md15}
+\item Module constants
+\item Module variables
+\item Private function prototypes
+\item Public function implementations
+\item Private function implementations
+\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md28}{}\doxysection{\texorpdfstring{💬 Naming}{💬 Naming}}\label{md__2github_2workspace_2Conventions_autotoc_md28}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md29}{}\doxysubsection{\texorpdfstring{Files}{Files}}\label{md__2github_2workspace_2Conventions_autotoc_md29}
 
 \begin{DoxyItemize}
-\item public functions should be prefixed with "{}\`{}module\+\_\+\mbox{[}...\mbox{]}\`{}"{}
-\item private functions should be marked as {\ttfamily static} and prefixed with "{}\`{}\+\_\+\mbox{[}...\mbox{]}\`{}"{}
-\item the function name itself should be written in {\ttfamily camel\+Case}
-\item a specialization may follow as a suffix, such as "{}\`{}\mbox{[}...\mbox{]}\+\_\+waiting\`{}"{}
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md16}{}\doxysubsection{\texorpdfstring{Documentation}{Documentation}}\label{md__2github_2workspace_2Conventions_autotoc_md16}
+\item Files should use {\ttfamily snake\+\_\+case} naming
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md30}{}\doxysubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md30}
+
+\begin{DoxyItemize}
+\item Public functions should be prefixed with "{}\`{}module\+\_\+\mbox{[}...\mbox{]}\`{}"{}
+\item Private functions should be marked as {\ttfamily static} and prefixed with "{}\`{}\+\_\+\mbox{[}...\mbox{]}\`{}"{}
+\item The function name itself should be written in {\ttfamily camel\+Case}
+\item A specialization may follow as a suffix, such as "{}\`{}\mbox{[}...\mbox{]}\+\_\+waiting\`{}"{}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md31}{}\doxysubsection{\texorpdfstring{Variables}{Variables}}\label{md__2github_2workspace_2Conventions_autotoc_md31}
+
+\begin{DoxyItemize}
+\item All variables should use {\ttfamily snake\+\_\+case} naming
+\item Global variables should be prefixed with {\ttfamily g\+\_\+\mbox{[}...\mbox{]}}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md32}{}\doxysubsection{\texorpdfstring{Macros}{Macros}}\label{md__2github_2workspace_2Conventions_autotoc_md32}
+
+\begin{DoxyItemize}
+\item Function macros should use the same naming as functions
+\item Other macros should use {\ttfamily SCREAMING\+\_\+\+CASE} naming
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md33}{}\doxysection{\texorpdfstring{📝 Documentation}{📝 Documentation}}\label{md__2github_2workspace_2Conventions_autotoc_md33}
 
 \begin{DoxyItemize}
 \item All files should contain a top level comment.
@@ -49,63 +60,157 @@ All files should follow a common structure as defined below. Exceptions may be m
 \item All global variables should be documented.
 \item All "{}complicated"{} macros should be documented.
 \item All typedefs should be documented.
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Documentation templates}{Documentation templates}}\label{md__2github_2workspace_2Conventions_autotoc_md17}
-To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md18}{}\doxysubsubsubsection{\texorpdfstring{Files}{Files}}\label{md__2github_2workspace_2Conventions_autotoc_md18}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md34}{}\doxysubsection{\texorpdfstring{Documentation templates}{Documentation templates}}\label{md__2github_2workspace_2Conventions_autotoc_md34}
+To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.
+
+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{ Files }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @file\ \ [File\ name]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ This\ file\ contains\ [...].}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @ingroup\ [HAL/Logic/Presentation/Utility]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @see\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ \ [Header/Source]}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ \ [Any\ other\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ \ [Additional\ notes,\ if\ relevant...]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @copyright}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md19}{}\doxysubsubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md19}
+
+\item {\bfseries{ Functions }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [Detailed\ description,\ only\ if\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @param[in/out/inout]\ param1\ Description\ of\ paramater}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ ...}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @return\ [Description\ of\ return\ value,\ or\ "{}void"{}]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ example\_function(uint8\_t\ param1);}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md20}{}\doxysubsubsubsection{\texorpdfstring{Structs}{Structs}}\label{md__2github_2workspace_2Conventions_autotoc_md20}
+
+\item {\bfseries{ Structs }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ member1;\ }
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ member2;\ }
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [Detailed\ description,\ only\ if\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ member1;\ \textcolor{comment}{/**<\ [Description\ of\ member1]\ */}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ member2;\ \textcolor{comment}{/**<\ [Description\ of\ member2]\ */}}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
 \DoxyCodeLine{\}\ ExampleStruct;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md21}{}\doxysubsubsubsection{\texorpdfstring{Enums}{Enums}}\label{md__2github_2workspace_2Conventions_autotoc_md21}
+
+\item {\bfseries{ Enums }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
-\DoxyCodeLine{\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
-\DoxyCodeLine{\ \ \ \ ENUM\_VALUE1;\ }
-\DoxyCodeLine{\ \ \ \ ENUM\_VALUE2;\ }
-\DoxyCodeLine{\ \ \ \ ENUM\_VALUE3;\ }
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [Detailed\ description,\ only\ if\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE1;\ \textcolor{comment}{/**<\ [Description\ of\ ENUM\_VALUE1]\ */}}
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE2;\ \textcolor{comment}{/**<\ [Description\ of\ ENUM\_VALUE2]\ */}}
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE3;\ \textcolor{comment}{/**<\ [Description\ of\ ENUM\_VALUE3]\ */}}
 \DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
 \DoxyCodeLine{\}\ ExampleEnum;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md22}{}\doxysubsubsubsection{\texorpdfstring{Typedefs}{Typedefs}}\label{md__2github_2workspace_2Conventions_autotoc_md22}
+
+\item {\bfseries{ Typedefs }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [Detailed\ description,\ only\ if\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
 \DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ExampleType;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md23}{}\doxysubsubsubsection{\texorpdfstring{Macros}{Macros}}\label{md__2github_2workspace_2Conventions_autotoc_md23}
+
+\item {\bfseries{ Macros }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @def\ EXAMPLE\_MACRO}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Short\ description\ of\ what\ the\ macro\ does\ or\ represents.]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [If\ neccessary,\ explain\ the\ purpose\ of\ the\ macro,\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ \ parameters\ (if\ function-\/like\ macro),...]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ Example:\ [if\ relevant]}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @code}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ \ \ int\ value\ =\ MY\_MACRO;}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @endcode}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#define\ EXAMPLE\_MACRO\ 42}}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md24}{}\doxysubsubsubsection{\texorpdfstring{Global Variables}{Global Variables}}\label{md__2github_2workspace_2Conventions_autotoc_md24}
+
+\item {\bfseries{ Global Variables }}
+
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/**}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @brief\ [Brief\ description]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @details\ }}
+\DoxyCodeLine{\textcolor{comment}{\ *\ [What\ global\ variable\ is\ used\ for,\ scope,\ and\ initialization\ details.]}}
+\DoxyCodeLine{\textcolor{comment}{\ *}}
+\DoxyCodeLine{\textcolor{comment}{\ *\ @note\ [Any\ additional\ notes\ or\ constraints,\ if\ relevant.]}}
+\DoxyCodeLine{\textcolor{comment}{\ */}}
 \DoxyCodeLine{\textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ g\_exampleGlobal;}
 
 \end{DoxyCode}
  
+\end{DoxyItemize} 

@@ -1,11 +1,11 @@
 <map id="GameState" name="GameState">
-<area shape="rect" id="Node000001" title="The current game state." alt="" coords="141,169,228,195"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,63,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,47,35,96,42,121,56,143,74,158,96,168,141,178,140,183,94,173,71,163,52,147,38,123,30,97,28,47"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="118,5,171,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,47,148,93,160,144,175,167,171,170,155,146,143,94,141,47"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="196,5,256,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,47,190,169,185,168,217,46"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="302,5,369,31"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="339,47,332,97,323,124,307,147,290,161,270,170,229,181,228,176,268,165,287,156,303,143,318,121,327,96,333,46"/>
+<area shape="rect" id="Node000001" title="The current game state." alt="" coords="157,183,252,211"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,68,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,49,33,75,35,104,43,132,58,157,73,167,98,175,157,187,156,192,96,180,71,172,54,161,38,135,30,105,28,75,29,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="133,5,190,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,48,163,101,168,130,177,158,193,181,188,184,172,160,163,131,158,101,157,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="214,5,280,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,49,218,160,211,183,206,182,213,158,239,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="333,5,407,33"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="374,49,369,105,359,135,341,161,322,176,299,187,252,197,251,192,297,182,319,172,337,157,354,132,363,104,369,48"/>
 </map>

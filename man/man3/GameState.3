@@ -1,4 +1,4 @@
-.TH "GameState" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "GameState" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,89 +19,127 @@ GameState \- The current game state\&.
 .ti -1c
 .RI "\fBMode\fP \fBmode\fP"
 .br
+.RI "Current game mode\&. "
 .ti -1c
 .RI "volatile uint8_t \fBround\fP"
 .br
+.RI "Current round number\&. "
 .ti -1c
 .RI "volatile uint8_t \fBfields_marked\fP"
 .br
+.RI "Number of fields marked so far\&. "
 .ti -1c
 .RI "\fBPlayer\fP \fBcurrent_player\fP"
 .br
+.RI "Player whose turn it is\&. "
 .ti -1c
 .RI "uint32_t \fBtotal_ticks\fP"
 .br
+.RI "Total ticks elapsed in the game\&. "
 .ti -1c
 .RI "uint32_t \fBaverage_ticks\fP"
 .br
+.RI "Average ticks per turn\&. "
 .ti -1c
 .RI "uint32_t \fBcross_total_ticks\fP"
 .br
+.RI "Total ticks for Player Cross\&. "
 .ti -1c
 .RI "uint32_t \fBcross_average_ticks\fP"
 .br
+.RI "Average ticks for Player Cross\&. "
 .ti -1c
 .RI "uint32_t \fBcircle_total_ticks\fP"
 .br
+.RI "Total ticks for Player Circle\&. "
 .ti -1c
 .RI "uint32_t \fBcircle_average_ticks\fP"
 .br
+.RI "Average ticks for Player Circle\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 The current game state\&. 
 
-Contains important game information and several metrics 
+Contains important game information and several metrics for tracking the game's progress\&.
+
 .PP
-Definition at line \fB60\fP of file \fBgame\&.h\fP\&.
+\fBNote\fP
+.RS 4
+Some of the fields are only calculated once the game is over\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB72\fP of file \fBgame\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "uint32_t GameState::average_ticks"
 
 .PP
-Definition at line \fB70\fP of file \fBgame\&.h\fP\&.
+Average ticks per turn\&. 
+.PP
+Definition at line \fB82\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::circle_average_ticks"
 
 .PP
-Definition at line \fB76\fP of file \fBgame\&.h\fP\&.
+Average ticks for Player Circle\&. 
+.PP
+Definition at line \fB88\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::circle_total_ticks"
 
 .PP
-Definition at line \fB75\fP of file \fBgame\&.h\fP\&.
+Total ticks for Player Circle\&. 
+.PP
+Definition at line \fB87\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::cross_average_ticks"
 
 .PP
-Definition at line \fB73\fP of file \fBgame\&.h\fP\&.
+Average ticks for Player Cross\&. 
+.PP
+Definition at line \fB85\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::cross_total_ticks"
 
 .PP
-Definition at line \fB72\fP of file \fBgame\&.h\fP\&.
+Total ticks for Player Cross\&. 
+.PP
+Definition at line \fB84\fP of file \fBgame\&.h\fP\&.
 .SS "\fBPlayer\fP GameState::current_player"
 
 .PP
-Definition at line \fB66\fP of file \fBgame\&.h\fP\&.
+Player whose turn it is\&. 
+.PP
+Definition at line \fB78\fP of file \fBgame\&.h\fP\&.
 .SS "volatile uint8_t GameState::fields_marked"
 
 .PP
-Definition at line \fB65\fP of file \fBgame\&.h\fP\&.
+Number of fields marked so far\&. 
+.PP
+Definition at line \fB77\fP of file \fBgame\&.h\fP\&.
 .SS "\fBMode\fP GameState::mode"
 
 .PP
-Definition at line \fB63\fP of file \fBgame\&.h\fP\&.
+Current game mode\&. 
+.PP
+Definition at line \fB75\fP of file \fBgame\&.h\fP\&.
 .SS "volatile uint8_t GameState::round"
 
 .PP
-Definition at line \fB64\fP of file \fBgame\&.h\fP\&.
+Current round number\&. 
+.PP
+Definition at line \fB76\fP of file \fBgame\&.h\fP\&.
 .SS "uint32_t GameState::total_ticks"
 
 .PP
-Definition at line \fB69\fP of file \fBgame\&.h\fP\&.
+Total ticks elapsed in the game\&. 
+.PP
+Definition at line \fB81\fP of file \fBgame\&.h\fP\&.
 .SS "\fBPlayer\fP GameState::winner"
 
 .PP
 None if tie or game not over\&. 
 .PP
-Definition at line \fB62\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB74\fP of file \fBgame\&.h\fP\&.
 
 .SH "Author"
 .PP 

@@ -101,7 +101,7 @@ $(function(){initNavTree('da/d7e/nvic_8h.html','../../'); initResizable(true); }
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">nvic.h File Reference</div></div>
+  <div class="headertitle"><div class="title">nvic.h File Reference<div class="ingroups"><a class="el" href="../../d2/dbf/group__HAL.html">Hardware Abstraction Layer</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,19 +112,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/de0/nvic_8h__dep__incl.png" border="0" usemap="#ahal_2nvic_8hdep" alt=""/></div>
 <map name="ahal_2nvic_8hdep" id="ahal_2nvic_8hdep">
-<area shape="rect" title="Contains interrupt constants." alt="" coords="292,5,369,31"/>
-<area shape="rect" href="../../d8/d22/interrupts_8c.html" title=" " alt="" coords="5,79,112,105"/>
-<area shape="poly" title=" " alt="" coords="278,36,106,81,104,76,277,31"/>
-<area shape="rect" href="../../df/d41/timer_8c.html" title=" " alt="" coords="135,79,216,105"/>
-<area shape="poly" title=" " alt="" coords="292,40,203,81,201,76,289,35"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html" title=" " alt="" coords="240,79,314,105"/>
-<area shape="poly" title=" " alt="" coords="315,45,288,80,284,77,310,42"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="338,79,432,105"/>
-<area shape="poly" title=" " alt="" coords="351,41,378,77,374,80,347,45"/>
-<area shape="rect" href="../../d0/d29/main_8c.html" title=" " alt="" coords="457,79,516,105"/>
-<area shape="poly" title=" " alt="" coords="372,35,461,76,459,81,370,40"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html" title=" " alt="" coords="540,79,678,105"/>
-<area shape="poly" title=" " alt="" coords="384,30,562,76,561,81,383,36"/>
+<area shape="rect" title="Contains interrupt constants." alt="" coords="322,5,406,33"/>
+<area shape="rect" href="../../d8/d22/interrupts_8c.html" title="Implements the interrupt handlers for UART and Timer interrupts." alt="" coords="5,81,125,109"/>
+<area shape="poly" title=" " alt="" coords="307,37,119,83,118,78,305,32"/>
+<area shape="rect" href="../../df/d41/timer_8c.html" title=" " alt="" coords="149,81,240,109"/>
+<area shape="poly" title=" " alt="" coords="321,42,225,83,223,78,318,37"/>
+<area shape="rect" href="../../d1/d87/uart_8c.html" title="Implements UART initialization and data transfer functions." alt="" coords="264,81,346,109"/>
+<area shape="poly" title=" " alt="" coords="346,47,317,82,313,79,342,44"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="370,81,474,109"/>
+<area shape="poly" title=" " alt="" coords="386,44,414,79,410,82,382,47"/>
+<area shape="rect" href="../../d0/d29/main_8c.html" title="Entry point for the TikTakToe game." alt="" coords="499,81,564,109"/>
+<area shape="poly" title=" " alt="" coords="409,37,503,78,501,83,406,42"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html" title="Implements menu presentation functions." alt="" coords="589,81,744,109"/>
+<area shape="poly" title=" " alt="" coords="422,32,613,78,611,83,420,37"/>
 </map>
 </div>
 </div>
@@ -133,52 +133,76 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a275306aabc78b3133ace58445d8c573b" id="r_a275306aabc78b3133ace58445d8c573b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275306aabc78b3133ace58445d8c573b">Interrupt_Set_Enable_00</a>&#160;&#160;&#160;0xE000E100</td></tr>
+<tr class="memdesc:a275306aabc78b3133ace58445d8c573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 - Reset  <br /></td></tr>
 <tr class="separator:a275306aabc78b3133ace58445d8c573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6846e50c18a1a4dd469527d265621ad" id="r_aa6846e50c18a1a4dd469527d265621ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6846e50c18a1a4dd469527d265621ad">Interrupt_Set_Enable_01</a>&#160;&#160;&#160;0xE000E104</td></tr>
+<tr class="memdesc:aa6846e50c18a1a4dd469527d265621ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 - NMI  <br /></td></tr>
 <tr class="separator:aa6846e50c18a1a4dd469527d265621ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b7304ecece0d831f283495f1ca0d600" id="r_a5b7304ecece0d831f283495f1ca0d600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b7304ecece0d831f283495f1ca0d600">Interrupt_Set_Enable_02</a>&#160;&#160;&#160;0xE000E108</td></tr>
+<tr class="memdesc:a5b7304ecece0d831f283495f1ca0d600"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 - Hard-Fault  <br /></td></tr>
 <tr class="separator:a5b7304ecece0d831f283495f1ca0d600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1652b989a2fe6a9d3422b20b6448573" id="r_af1652b989a2fe6a9d3422b20b6448573"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1652b989a2fe6a9d3422b20b6448573">Interrupt_Set_Enable_03</a>&#160;&#160;&#160;0xE000E10C</td></tr>
+<tr class="memdesc:af1652b989a2fe6a9d3422b20b6448573"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 - MPU / MEM-Manage  <br /></td></tr>
 <tr class="separator:af1652b989a2fe6a9d3422b20b6448573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75eb0c60f04156e9b277556ae3792691" id="r_a75eb0c60f04156e9b277556ae3792691"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75eb0c60f04156e9b277556ae3792691">Interrupt_Set_Enable_04</a>&#160;&#160;&#160;0xE000E110</td></tr>
+<tr class="memdesc:a75eb0c60f04156e9b277556ae3792691"><td class="mdescLeft">&#160;</td><td class="mdescRight">5 - BUS-Fault  <br /></td></tr>
 <tr class="separator:a75eb0c60f04156e9b277556ae3792691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c2bc9c1f6e78127ea001d2634ffc5e" id="r_a73c2bc9c1f6e78127ea001d2634ffc5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73c2bc9c1f6e78127ea001d2634ffc5e">Interrupt_Set_Enable_05</a>&#160;&#160;&#160;0xE000E114</td></tr>
+<tr class="memdesc:a73c2bc9c1f6e78127ea001d2634ffc5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">6 - Usage-Fault  <br /></td></tr>
 <tr class="separator:a73c2bc9c1f6e78127ea001d2634ffc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a071e066ce7b15e3deb7d74416711db45" id="r_a071e066ce7b15e3deb7d74416711db45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071e066ce7b15e3deb7d74416711db45">Interrupt_Set_Enable_06</a>&#160;&#160;&#160;0xE000E118</td></tr>
+<tr class="memdesc:a071e066ce7b15e3deb7d74416711db45"><td class="mdescLeft">&#160;</td><td class="mdescRight">7 - Reserved  <br /></td></tr>
 <tr class="separator:a071e066ce7b15e3deb7d74416711db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7e603cd0c2acbcfb07c17a833e57918" id="r_ad7e603cd0c2acbcfb07c17a833e57918"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e603cd0c2acbcfb07c17a833e57918">Interrupt_Set_Enable_07</a>&#160;&#160;&#160;0xE000E11C</td></tr>
+<tr class="memdesc:ad7e603cd0c2acbcfb07c17a833e57918"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 - Reserved  <br /></td></tr>
 <tr class="separator:ad7e603cd0c2acbcfb07c17a833e57918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554316dee7e81ee017f5a17ab0e28c07" id="r_a554316dee7e81ee017f5a17ab0e28c07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a554316dee7e81ee017f5a17ab0e28c07">Interrupt_Set_Enable_08</a>&#160;&#160;&#160;0xE000E120</td></tr>
+<tr class="memdesc:a554316dee7e81ee017f5a17ab0e28c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">9 - Reserved  <br /></td></tr>
 <tr class="separator:a554316dee7e81ee017f5a17ab0e28c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49eb258a50b12613a2614836f78d9ee" id="r_ae49eb258a50b12613a2614836f78d9ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae49eb258a50b12613a2614836f78d9ee">Interrupt_Set_Enable_09</a>&#160;&#160;&#160;0xE000E124</td></tr>
+<tr class="memdesc:ae49eb258a50b12613a2614836f78d9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">10 - Reserved  <br /></td></tr>
 <tr class="separator:ae49eb258a50b12613a2614836f78d9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13fca6d5dddb0af620424a19699f926" id="r_aa13fca6d5dddb0af620424a19699f926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa13fca6d5dddb0af620424a19699f926">Interrupt_Set_Enable_10</a>&#160;&#160;&#160;0xE000E128</td></tr>
+<tr class="memdesc:aa13fca6d5dddb0af620424a19699f926"><td class="mdescLeft">&#160;</td><td class="mdescRight">11 - SVCall  <br /></td></tr>
 <tr class="separator:aa13fca6d5dddb0af620424a19699f926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c8bc1272e3ba5e119d803a0475ceb17" id="r_a1c8bc1272e3ba5e119d803a0475ceb17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c8bc1272e3ba5e119d803a0475ceb17">Interrupt_Set_Enable_11</a>&#160;&#160;&#160;0xE000E12C</td></tr>
+<tr class="memdesc:a1c8bc1272e3ba5e119d803a0475ceb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">12 - Debug Monitor  <br /></td></tr>
 <tr class="separator:a1c8bc1272e3ba5e119d803a0475ceb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a920c367d88b05136292f8ae280f516a0" id="r_a920c367d88b05136292f8ae280f516a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a920c367d88b05136292f8ae280f516a0">Interrupt_Set_Enable_12</a>&#160;&#160;&#160;0xE000E130</td></tr>
+<tr class="memdesc:a920c367d88b05136292f8ae280f516a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">13 - Reserved  <br /></td></tr>
 <tr class="separator:a920c367d88b05136292f8ae280f516a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9513d8228c6a4a92512e0d203f5c4bf" id="r_ac9513d8228c6a4a92512e0d203f5c4bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9513d8228c6a4a92512e0d203f5c4bf">Interrupt_Set_Enable_13</a>&#160;&#160;&#160;0xE000E134</td></tr>
+<tr class="memdesc:ac9513d8228c6a4a92512e0d203f5c4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">14 - PendSV  <br /></td></tr>
 <tr class="separator:ac9513d8228c6a4a92512e0d203f5c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0222afa4a01bb5df05268d4e59e221df" id="r_a0222afa4a01bb5df05268d4e59e221df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0222afa4a01bb5df05268d4e59e221df">Interrupt_Set_Enable_14</a>&#160;&#160;&#160;0xE000E138</td></tr>
+<tr class="memdesc:a0222afa4a01bb5df05268d4e59e221df"><td class="mdescLeft">&#160;</td><td class="mdescRight">15 - SysTick  <br /></td></tr>
 <tr class="separator:a0222afa4a01bb5df05268d4e59e221df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6bc5147745699219e4b7c5c1e8893a" id="r_a4a6bc5147745699219e4b7c5c1e8893a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a6bc5147745699219e4b7c5c1e8893a">Interrupt_Set_Enable_15</a>&#160;&#160;&#160;0xE000E13C</td></tr>
+<tr class="memdesc:a4a6bc5147745699219e4b7c5c1e8893a"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 - External 0  <br /></td></tr>
 <tr class="separator:a4a6bc5147745699219e4b7c5c1e8893a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c85cac572c1881d55adcd73f57ed42" id="r_a69c85cac572c1881d55adcd73f57ed42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69c85cac572c1881d55adcd73f57ed42">Interrupt_Set_Enable</a>&#160;&#160;&#160;0xE000E100</td></tr>
+<tr class="memdesc:a69c85cac572c1881d55adcd73f57ed42"><td class="mdescLeft">&#160;</td><td class="mdescRight">[32...0] Interrupt  <br /></td></tr>
 <tr class="separator:a69c85cac572c1881d55adcd73f57ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32e7f4a46b67f81735188e2d7918577" id="r_aa32e7f4a46b67f81735188e2d7918577"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa32e7f4a46b67f81735188e2d7918577">Interrupt_ICPR</a>&#160;&#160;&#160;0xE000E280</td></tr>
+<tr class="memdesc:aa32e7f4a46b67f81735188e2d7918577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt Clear-pending Register (on page 4-6)  <br /></td></tr>
 <tr class="separator:aa32e7f4a46b67f81735188e2d7918577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c6b6369e857c79a77ec99112a745b81" id="r_a2c6b6369e857c79a77ec99112a745b81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c6b6369e857c79a77ec99112a745b81">Interrupt_ID1</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="memdesc:a2c6b6369e857c79a77ec99112a745b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit for User Interrupt ID: 1.  <br /></td></tr>
 <tr class="separator:a2c6b6369e857c79a77ec99112a745b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af088307ac49d15e822ad464b0b21b046" id="r_af088307ac49d15e822ad464b0b21b046"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af088307ac49d15e822ad464b0b21b046">Interrupt_ID2</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc:af088307ac49d15e822ad464b0b21b046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit for User Interrupt ID: 2.  <br /></td></tr>
 <tr class="separator:af088307ac49d15e822ad464b0b21b046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d4e2dc00757af044bd2c01cd190347" id="r_ab4d4e2dc00757af044bd2c01cd190347"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d4e2dc00757af044bd2c01cd190347">Interrupt_ID8</a>&#160;&#160;&#160;(1 &lt;&lt; 8)</td></tr>
+<tr class="memdesc:ab4d4e2dc00757af044bd2c01cd190347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit for User Interrupt ID: 8.  <br /></td></tr>
 <tr class="separator:ab4d4e2dc00757af044bd2c01cd190347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6ad1da639cb66cbc0fed00121ee1c94" id="r_ab6ad1da639cb66cbc0fed00121ee1c94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ad1da639cb66cbc0fed00121ee1c94">Interrupt_ID9</a>&#160;&#160;&#160;(1 &lt;&lt; 9)</td></tr>
+<tr class="memdesc:ab6ad1da639cb66cbc0fed00121ee1c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit for User Interrupt ID: 9.  <br /></td></tr>
 <tr class="separator:ab6ad1da639cb66cbc0fed00121ee1c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a755130468e5e203669621d907d3df5f4" id="r_a755130468e5e203669621d907d3df5f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a755130468e5e203669621d907d3df5f4">Interrupt_ID10</a>&#160;&#160;&#160;(1 &lt;&lt; 10)</td></tr>
+<tr class="memdesc:a755130468e5e203669621d907d3df5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit for User Interrupt ID: 10.  <br /></td></tr>
 <tr class="separator:a755130468e5e203669621d907d3df5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9180c607226bf043dcbb78d331f938f" id="r_ac9180c607226bf043dcbb78d331f938f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9180c607226bf043dcbb78d331f938f">ICSR</a>&#160;&#160;&#160;0xE000ED04</td></tr>
+<tr class="memdesc:ac9180c607226bf043dcbb78d331f938f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt Control and State Register.  <br /></td></tr>
 <tr class="separator:ac9180c607226bf043dcbb78d331f938f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28e2b328c4cf23c917ab18a23194f8e" id="r_ab28e2b328c4cf23c917ab18a23194f8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28e2b328c4cf23c917ab18a23194f8e">__WFI</a>()</td></tr>
 <tr class="memdesc:ab28e2b328c4cf23c917ab18a23194f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for an interrupt.  <br /></td></tr>
@@ -187,6 +211,7 @@ Macros</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains interrupt constants. </p>
 <p>Registers from NVIC - Cortex-M0 peripheral These are to activate and debug Interrupts Details on Chapter 4.2 Nested Vectored Interrupt Controller (Page 109)</p>
+<dl class="section note"><dt>Note</dt><dd>Based on version by Thomas Vogt</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
@@ -208,7 +233,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">__asm <span class="keyword">volatile</span>(<span class="stringliteral">&quot;wfi&quot;</span> ::: <span class="stringliteral">&quot;memory&quot;</span>)</div>
 </div><!-- fragment -->
 <p>Wait for an interrupt. </p>
-<p>The processor enters low power mode until the next interrupt occurs </p>
+<p>The processor enters low power mode until the next interrupt occurs. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00058">58</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
@@ -226,7 +251,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00050">50</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Interrupt Control and State Register. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00049">49</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -241,6 +268,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Interrupt Clear-pending Register (on page 4-6) </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">42</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
@@ -258,7 +287,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00044">44</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Bit for User Interrupt ID: 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00043">43</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -274,7 +305,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00048">48</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Bit for User Interrupt ID: 10. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00047">47</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -290,7 +323,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00045">45</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Bit for User Interrupt ID: 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00044">44</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -306,7 +341,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00046">46</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Bit for User Interrupt ID: 8. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00045">45</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -322,7 +359,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00047">47</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>Bit for User Interrupt ID: 9. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00046">46</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +377,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00040">40</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>[32...0] Interrupt </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00041">41</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +395,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00020">20</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>1 - Reset </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00025">25</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -370,7 +413,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00021">21</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>2 - NMI </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00026">26</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +431,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00022">22</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>3 - Hard-Fault </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00027">27</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -402,7 +449,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00023">23</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>4 - MPU / MEM-Manage </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00028">28</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +467,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00025">25</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>5 - BUS-Fault </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00029">29</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -434,7 +485,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00026">26</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>6 - Usage-Fault </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00030">30</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -450,7 +503,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00027">27</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>7 - Reserved </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00031">31</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +521,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00028">28</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>8 - Reserved </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00032">32</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -482,7 +539,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00030">30</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>9 - Reserved </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00033">33</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -498,7 +557,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00031">31</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>10 - Reserved </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00034">34</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +575,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00032">32</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>11 - SVCall </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00035">35</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -530,7 +593,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00033">33</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>12 - Debug Monitor </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00036">36</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +611,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00035">35</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>13 - Reserved </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00037">37</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +629,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00036">36</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>14 - PendSV </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00038">38</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -578,7 +647,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00037">37</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>15 - SysTick </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00039">39</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +665,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00038">38</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
+<p>16 - External 0 </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d7e/nvic_8h_source.html#l00040">40</a> of file <a class="el" href="../../da/d7e/nvic_8h_source.html">nvic.h</a>.</p>
 
 </div>
 </div>
@@ -604,7 +677,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a413b7f902cba5167b433a6fe834d5bd.html">hal</a></li><li class="navelem"><a class="el" href="../../da/d7e/nvic_8h.html">nvic.h</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:13 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

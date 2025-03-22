@@ -1,5 +1,5 @@
 <map id="game_endTurn" name="game_endTurn">
-<area shape="rect" id="Node000001" title="Finish the current turn." alt="" coords="5,5,113,31"/>
-<area shape="rect" id="Node000002" href="$df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="161,5,270,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
+<area shape="rect" id="Node000001" title="Finish the current turn." alt="" coords="5,5,122,33"/>
+<area shape="rect" id="Node000002" href="$df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="170,5,290,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,22,122,22"/>
 </map>

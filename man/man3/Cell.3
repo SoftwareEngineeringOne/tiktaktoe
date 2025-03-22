@@ -1,4 +1,4 @@
-.TH "Cell" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "Cell" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,34 +15,43 @@ Cell \- One cell on the field\&.
 .ti -1c
 .RI "uint16_t \fBcol\fP"
 .br
+.RI "Column index of the cell\&. "
 .ti -1c
 .RI "uint16_t \fBrow\fP"
 .br
+.RI "Row index of the cell\&. "
 .ti -1c
 .RI "\fBPlayer\fP \fBmarked_by\fP"
 .br
+.RI "Player who marked the cell\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 One cell on the field\&. 
 
-Contains coordinates and information by whom it is marked 
+Contains coordinates and information about which player marked the cell\&. 
 .PP
-Definition at line \fB48\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB58\fP of file \fBgame\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "uint16_t Cell::col"
 
 .PP
-Definition at line \fB50\fP of file \fBgame\&.h\fP\&.
+Column index of the cell\&. 
+.PP
+Definition at line \fB60\fP of file \fBgame\&.h\fP\&.
 .SS "\fBPlayer\fP Cell::marked_by"
 
 .PP
-Definition at line \fB52\fP of file \fBgame\&.h\fP\&.
+Player who marked the cell\&. 
+.PP
+Definition at line \fB62\fP of file \fBgame\&.h\fP\&.
 .SS "uint16_t Cell::row"
 
 .PP
-Definition at line \fB51\fP of file \fBgame\&.h\fP\&.
+Row index of the cell\&. 
+.PP
+Definition at line \fB61\fP of file \fBgame\&.h\fP\&.
 
 .SH "Author"
 .PP 

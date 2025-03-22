@@ -3,42 +3,40 @@
 \mbox{\hyperlink{random_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ RANDOM\_H}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ RANDOM\_H}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00016}00016\ \textcolor{comment}{//\ Base\ Address\ (Instance)}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00017}\mbox{\hyperlink{random_8h_a543998e94cc5358bc493194aac4a62de}{00017}}\ \textcolor{preprocessor}{\#define\ RNG\_BASE\_ADDRESS\ 0x4000D000}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00019}00019\ \textcolor{comment}{//\ Register\ Offsets\ (from\ Table\ 174,\ page\ 115)}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00020}00020\ \textcolor{comment}{//\ Tasks:}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00021}\mbox{\hyperlink{random_8h_ac883ee232640738847b8bf0dfdb80c13}{00021}}\ \textcolor{preprocessor}{\#define\ RNG\_START\ 0x000}\textcolor{comment}{//\ Task\ starting\ the\ random\ number\ generator}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00022}\mbox{\hyperlink{random_8h_a9454d7d2c7c9e72d8d597a99f4eb50f2}{00022}}\ \textcolor{preprocessor}{\#define\ RNG\_STOP\ 0x004\ }\textcolor{comment}{//\ Task\ stopping\ the\ random\ number\ generator}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00024}00024\ \textcolor{comment}{//\ Events:}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00025}\mbox{\hyperlink{random_8h_ab3aae99df44746d954a4f64faa569d9c}{00025}}\ \textcolor{preprocessor}{\#define\ RNG\_VALRDY\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00026}00026\ \textcolor{preprocessor}{\ \ \ \ 0x100}\textcolor{comment}{//\ Event\ being\ generated\ for\ every\ new\ random\ number\ written\ to\ the\ VALUE\ register}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifndef\ RANDOM\_H}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ RANDOM\_H}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00028}00028\ \textcolor{comment}{//\ Registers:}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00029}\mbox{\hyperlink{random_8h_acd6fbca3838c5dc6c80d98ad159a13bd}{00029}}\ \textcolor{preprocessor}{\#define\ RNG\_SHORTS\ 0x200\ \ }\textcolor{comment}{//\ Shortcut\ register}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00030}\mbox{\hyperlink{random_8h_a8401d6cb5af5f53f0eb5bf15b44979e3}{00030}}\ \textcolor{preprocessor}{\#define\ RNG\_INTEN\ 0x300\ \ \ }\textcolor{comment}{//\ Enable\ or\ disable\ interrupt}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00031}\mbox{\hyperlink{random_8h_ab99809e1ee0ccf7fa5d84f3da6b4de6e}{00031}}\ \textcolor{preprocessor}{\#define\ RNG\_INTENSET\ 0x304}\textcolor{comment}{//\ Enable\ interrupt}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00032}\mbox{\hyperlink{random_8h_a9a132dbcaf91f3bdbb4612d8bc1fcfce}{00032}}\ \textcolor{preprocessor}{\#define\ RNG\_INTENCLR\ 0x308}\textcolor{comment}{//\ Disable\ interrupt}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00033}\mbox{\hyperlink{random_8h_a7e7a01e5f2cb8cd4aafedb178f459484}{00033}}\ \textcolor{preprocessor}{\#define\ RNG\_CONFIG\ 0x504\ \ }\textcolor{comment}{//\ Configuration\ register}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00034}\mbox{\hyperlink{random_8h_aa6807bb4557dbb6e07850699d7400f8f}{00034}}\ \textcolor{preprocessor}{\#define\ RNG\_VALUE\ 0x508\ \ \ }\textcolor{comment}{//\ Output\ random\ number}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00036}00036\ \textcolor{comment}{//\ Other:}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00037}\mbox{\hyperlink{random_8h_aef5776807f90514343d80c42845795d7}{00037}}\ \textcolor{preprocessor}{\#define\ RNG\_TASK\_START\ 1\ \ \ }\textcolor{comment}{//\ Value\ for\ starting\ a\ Task}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00038}\mbox{\hyperlink{random_8h_a8d24eaf6f936a4ae01fe003c935c35fe}{00038}}\ \textcolor{preprocessor}{\#define\ RNG\_EVENT\_TRIGGER\ 1}\textcolor{comment}{//\ Value\ for\ setting/starting\ an\ Event}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00039}\mbox{\hyperlink{random_8h_a26bdf6449c74427e8dcd50690be41557}{00039}}\ \textcolor{preprocessor}{\#define\ RNG\_EVENT\_CLEAR\ 0\ \ }\textcolor{comment}{//\ Value\ for\ clearing/stopping\ an\ Event}}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00044}00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{random_8h_ad5a3df3d0092f55f6ea54ccaa7daf3dc}{rng\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00028}\mbox{\hyperlink{random_8h_a543998e94cc5358bc493194aac4a62de}{00028}}\ \textcolor{preprocessor}{\#define\ RNG\_BASE\_ADDRESS\ 0x4000D000}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00030}00030\ \textcolor{comment}{//\ Register\ Offsets\ (from\ Table\ 174,\ page\ 115)}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00031}00031\ \textcolor{comment}{//\ Tasks:}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00032}\mbox{\hyperlink{random_8h_ac883ee232640738847b8bf0dfdb80c13}{00032}}\ \textcolor{preprocessor}{\#define\ RNG\_START\ 0x000}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00033}\mbox{\hyperlink{random_8h_a9454d7d2c7c9e72d8d597a99f4eb50f2}{00033}}\ \textcolor{preprocessor}{\#define\ RNG\_STOP\ 0x004\ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00035}00035\ \textcolor{comment}{//\ Events:}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00036}\mbox{\hyperlink{random_8h_ab3aae99df44746d954a4f64faa569d9c}{00036}}\ \textcolor{preprocessor}{\#define\ RNG\_VALRDY\ 0x100}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00038}00038\ \textcolor{comment}{//\ Registers:}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00039}\mbox{\hyperlink{random_8h_acd6fbca3838c5dc6c80d98ad159a13bd}{00039}}\ \textcolor{preprocessor}{\#define\ RNG\_SHORTS\ 0x200\ \ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00040}\mbox{\hyperlink{random_8h_a8401d6cb5af5f53f0eb5bf15b44979e3}{00040}}\ \textcolor{preprocessor}{\#define\ RNG\_INTEN\ 0x300\ \ \ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00041}\mbox{\hyperlink{random_8h_ab99809e1ee0ccf7fa5d84f3da6b4de6e}{00041}}\ \textcolor{preprocessor}{\#define\ RNG\_INTENSET\ 0x304}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00042}\mbox{\hyperlink{random_8h_a9a132dbcaf91f3bdbb4612d8bc1fcfce}{00042}}\ \textcolor{preprocessor}{\#define\ RNG\_INTENCLR\ 0x308}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00043}\mbox{\hyperlink{random_8h_a7e7a01e5f2cb8cd4aafedb178f459484}{00043}}\ \textcolor{preprocessor}{\#define\ RNG\_CONFIG\ 0x504\ \ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00044}\mbox{\hyperlink{random_8h_aa6807bb4557dbb6e07850699d7400f8f}{00044}}\ \textcolor{preprocessor}{\#define\ RNG\_VALUE\ 0x508\ \ \ }}
 \DoxyCodeLine{\Hypertarget{random_8h_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00053}00053\ uint8\_t\ \mbox{\hyperlink{random_8h_a10ddbdc45f7f1a0a55ec5e0cb7bf683a}{rng\_getRandomValue\_immediately}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00060}00060\ uint8\_t\ \mbox{\hyperlink{random_8h_a0b0e7c9eefaf33e9333cb2511be4addf}{rng\_getRandomValue\_waiting}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{random_8h_source_l00062}00062\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ RANDOM\_H}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00046}00046\ \textcolor{comment}{//\ Other:}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00047}\mbox{\hyperlink{random_8h_aef5776807f90514343d80c42845795d7}{00047}}\ \textcolor{preprocessor}{\#define\ RNG\_TASK\_START\ 1\ \ \ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00048}\mbox{\hyperlink{random_8h_a8d24eaf6f936a4ae01fe003c935c35fe}{00048}}\ \textcolor{preprocessor}{\#define\ RNG\_EVENT\_TRIGGER\ 1}}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00049}\mbox{\hyperlink{random_8h_a26bdf6449c74427e8dcd50690be41557}{00049}}\ \textcolor{preprocessor}{\#define\ RNG\_EVENT\_CLEAR\ 0\ \ }}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00054}00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{random_8h_a892aefef3ee12161a32838eb5c6e3087}{rng\_init}}();}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00065}00065\ uint8\_t\ \mbox{\hyperlink{random_8h_ade0d5a07f6403292f21ff2b5f200f11f}{rng\_getRandomValue\_immediately}}();}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00076}00076\ uint8\_t\ \mbox{\hyperlink{random_8h_a0cc8207c13dfa65a8279450efa1751d3}{rng\_getRandomValue\_waiting}}();}
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{random_8h_source_l00078}00078\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ RANDOM\_H}}
 
 \end{DoxyCode}

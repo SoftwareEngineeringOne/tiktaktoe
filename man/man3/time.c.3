@@ -1,8 +1,9 @@
-.TH "logic/time.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/time.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/time.c
+logic/time.c \- Implements time-related functionality for the game\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -45,23 +46,17 @@ logic/time.c
 .ti -1c
 .RI "\fBGameTimer\fP \fBg_timer\fP"
 .br
-.RI "Global instance of the \fBGameTimer\fP\&. "
+.RI "Global game timer instance\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implements time-related functionality for the game\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBtime\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -77,7 +72,8 @@ Definition in file \fBtime\&.c\fP\&.
 .SS "void time_finishTurn (\fBGameState\fP * game_state)"
 
 .PP
-Resets the ticks\&. 
+Resets the ticks\&. Resets the turn-specific tick counter and updates the game state with the elapsed time for the current player\&.
+
 .PP
 \fBParameters\fP
 .RS 4
@@ -86,39 +82,39 @@ Resets the ticks\&.
 .PP
 
 .PP
-Definition at line \fB47\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB42\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross_total_ticks\fP, \fBGameState::current_player\fP, \fBg_timer\fP, \fBgame_state\fP, and \fBGameTimer::ticks_turn\fP\&.
 .SS "void time_init ()"
 
 .PP
-Initializes the timer\&. 
+Initializes the timer\&. Sets up the hardware timer with the appropriate configuration for the game\&. 
 .PP
-Definition at line \fB30\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB25\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBCC0\fP, \fBTICK_SPEED\fP, \fBTIMER0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, and \fBtimer_start()\fP\&.
 .SS "void time_onInterrupt ()"
 
 .PP
-Increments the ticks and can finish the round\&. 
+Increments the ticks and can finish the round\&. This function is called on a timer interrupt\&. It increments the total and turn-specific tick counters and triggers a timeout if the turn duration is exceeded\&. 
 .PP
-Definition at line \fB37\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB32\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBgame_onTimeOut()\fP, \fBTICKS_PER_TURN\fP, \fBGameTimer::ticks_total\fP, and \fBGameTimer::ticks_turn\fP\&.
 .SS "void time_pause ()"
 
 .PP
-Pause the timer\&. 
+Pause the timer\&. Stops the hardware timer and marks the timer as not running\&. 
 .PP
-Definition at line \fB63\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB58\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_stop()\fP\&.
 .SS "void time_resume ()"
 
 .PP
-Resume the timer when paused\&. 
+Resume the timer when paused\&. Restarts the hardware timer and marks the timer as running\&. 
 .PP
-Definition at line \fB69\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB64\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_start()\fP\&.
 .SH "Variable Documentation"
@@ -135,9 +131,9 @@ References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtime
 .fi
 
 .PP
-Global instance of the \fBGameTimer\fP\&. 
+Global game timer instance\&. This global variable tracks the timer state and tick counts for the game\&. 
 .PP
-Definition at line \fB24\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB19\fP of file \fBtime\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

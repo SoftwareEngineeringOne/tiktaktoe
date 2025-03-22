@@ -103,50 +103,54 @@ $(function(){initNavTree('d3/d54/menu_8h_source.html','../../'); initResizable(t
 </div><!--header-->
 <div class="contents">
 <a href="../../d3/d54/menu_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef MENU_H</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define MENU_H</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dd5/game_8h.html">logic/game.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#ad3581f0e561ff4c10187407236adf36e">   16</a></span><span class="preprocessor">#define RETURN_MENU_HINT &quot;\nPress any key to return to the menu...&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef ENABLE_UNICODE</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define ARROW_LEFT &quot;←&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define ARROW_UP &quot;↑&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define ARROW_RIGHT &quot;→&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define ARROW_DOWN &quot;↓&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a972990573657c6767160574e40bf664e">   24</a></span><span class="preprocessor">#define ARROW_LEFT &quot;&lt;LEFT&gt;&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a016e68eaa6a8185455fc7a372055e623">   25</a></span><span class="preprocessor">#define ARROW_UP &quot;&lt;UP&gt;&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#ab7ab822b400589e7bb08dd5fa4cefb52">   26</a></span><span class="preprocessor">#define ARROW_RIGHT &quot;&lt;RIGHT&gt;&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a3710616ea12e5437f6ff15170e3bbdc6">   27</a></span><span class="preprocessor">#define ARROW_DOWN &quot;&lt;DOWN&gt;&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef MENU_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define MENU_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dd5/game_8h.html">logic/game.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#ad3581f0e561ff4c10187407236adf36e">   28</a></span><span class="preprocessor">#define RETURN_MENU_HINT &quot;\nPress any key to return to the menu...&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a1692d3cd85ed442706f90d6b6f60613f">menu_showMainMenu</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifdef ENABLE_UNICODE</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a23ef48917f29c7ba37351342e66a636f">menu_showControls</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *continue_hint);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a54a22faf156830dd16ee4e3c52835881">menu_showCredits</a>();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#ab82b49f40989dd1c5b11264bca838492">menu_showGameOver</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d2/d3d/structGameState.html">GameState</a> *game_info);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#aa8ce93493c2adb2ce4240b95e852793c">menu_anyKeyToContinue</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *continue_hint);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span><span class="comment">// MENU_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define ARROW_LEFT &quot;←&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define ARROW_UP &quot;↑&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define ARROW_RIGHT &quot;→&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define ARROW_DOWN &quot;↓&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a972990573657c6767160574e40bf664e">   39</a></span><span class="preprocessor">#define ARROW_LEFT &quot;&lt;LEFT&gt;&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a016e68eaa6a8185455fc7a372055e623">   40</a></span><span class="preprocessor">#define ARROW_UP &quot;&lt;UP&gt;&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#ab7ab822b400589e7bb08dd5fa4cefb52">   41</a></span><span class="preprocessor">#define ARROW_RIGHT &quot;&lt;RIGHT&gt;&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d3/d54/menu_8h.html#a3710616ea12e5437f6ff15170e3bbdc6">   42</a></span><span class="preprocessor">#define ARROW_DOWN &quot;&lt;DOWN&gt;&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">bool</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a1692d3cd85ed442706f90d6b6f60613f">menu_showMainMenu</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a23ef48917f29c7ba37351342e66a636f">menu_showControls</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *continue_hint);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#a54a22faf156830dd16ee4e3c52835881">menu_showCredits</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#ab82b49f40989dd1c5b11264bca838492">menu_showGameOver</a>(<span class="keyword">const</span> <a class="code hl_struct" href="../../d2/d3d/structGameState.html">GameState</a> *game_info);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d54/menu_8h.html#aa8ce93493c2adb2ce4240b95e852793c">menu_anyKeyToContinue</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *continue_hint);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span><span class="comment">// MENU_H</span></div>
 <div class="ttc" id="agame_8h_html"><div class="ttname"><a href="../../d2/dd5/game_8h.html">game.h</a></div><div class="ttdoc">Contains the game logic.</div></div>
-<div class="ttc" id="amenu_8h_html_a1692d3cd85ed442706f90d6b6f60613f"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a1692d3cd85ed442706f90d6b6f60613f">menu_showMainMenu</a></div><div class="ttdeci">bool menu_showMainMenu()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00034">menu.c:34</a></div></div>
-<div class="ttc" id="amenu_8h_html_a23ef48917f29c7ba37351342e66a636f"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a23ef48917f29c7ba37351342e66a636f">menu_showControls</a></div><div class="ttdeci">void menu_showControls(const char *continue_hint)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00166">menu.c:166</a></div></div>
-<div class="ttc" id="amenu_8h_html_a54a22faf156830dd16ee4e3c52835881"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a54a22faf156830dd16ee4e3c52835881">menu_showCredits</a></div><div class="ttdeci">void menu_showCredits()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00135">menu.c:135</a></div></div>
-<div class="ttc" id="amenu_8h_html_aa8ce93493c2adb2ce4240b95e852793c"><div class="ttname"><a href="../../d3/d54/menu_8h.html#aa8ce93493c2adb2ce4240b95e852793c">menu_anyKeyToContinue</a></div><div class="ttdeci">void menu_anyKeyToContinue(const char *continue_hint)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00214">menu.c:214</a></div></div>
-<div class="ttc" id="amenu_8h_html_ab82b49f40989dd1c5b11264bca838492"><div class="ttname"><a href="../../d3/d54/menu_8h.html#ab82b49f40989dd1c5b11264bca838492">menu_showGameOver</a></div><div class="ttdeci">void menu_showGameOver(const GameState *game_info)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00078">menu.c:78</a></div></div>
-<div class="ttc" id="astructGameState_html"><div class="ttname"><a href="../../d2/d3d/structGameState.html">GameState</a></div><div class="ttdoc">The current game state.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00060">game.h:61</a></div></div>
+<div class="ttc" id="amenu_8h_html_a1692d3cd85ed442706f90d6b6f60613f"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a1692d3cd85ed442706f90d6b6f60613f">menu_showMainMenu</a></div><div class="ttdeci">bool menu_showMainMenu()</div><div class="ttdoc">Displays the main menu and handles user input.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00042">menu.c:42</a></div></div>
+<div class="ttc" id="amenu_8h_html_a23ef48917f29c7ba37351342e66a636f"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a23ef48917f29c7ba37351342e66a636f">menu_showControls</a></div><div class="ttdeci">void menu_showControls(const char *continue_hint)</div><div class="ttdoc">Displays the controls menu.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00174">menu.c:174</a></div></div>
+<div class="ttc" id="amenu_8h_html_a54a22faf156830dd16ee4e3c52835881"><div class="ttname"><a href="../../d3/d54/menu_8h.html#a54a22faf156830dd16ee4e3c52835881">menu_showCredits</a></div><div class="ttdeci">void menu_showCredits()</div><div class="ttdoc">Displays the credits screen.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00143">menu.c:143</a></div></div>
+<div class="ttc" id="amenu_8h_html_aa8ce93493c2adb2ce4240b95e852793c"><div class="ttname"><a href="../../d3/d54/menu_8h.html#aa8ce93493c2adb2ce4240b95e852793c">menu_anyKeyToContinue</a></div><div class="ttdeci">void menu_anyKeyToContinue(const char *continue_hint)</div><div class="ttdoc">Waits for any key press to continue.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00222">menu.c:222</a></div></div>
+<div class="ttc" id="amenu_8h_html_ab82b49f40989dd1c5b11264bca838492"><div class="ttname"><a href="../../d3/d54/menu_8h.html#ab82b49f40989dd1c5b11264bca838492">menu_showGameOver</a></div><div class="ttdeci">void menu_showGameOver(const GameState *game_info)</div><div class="ttdoc">Displays the game over screen and game summary.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d0a/menu_8c_source.html#l00086">menu.c:86</a></div></div>
+<div class="ttc" id="astructGameState_html"><div class="ttname"><a href="../../d2/d3d/structGameState.html">GameState</a></div><div class="ttdoc">The current game state.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd5/game_8h_source.html#l00072">game.h:73</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_125447c92e2d7c7fbb49f13fdd370274.html">presentation</a></li><li class="navelem"><a class="el" href="../../d3/d54/menu_8h.html">menu.h</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:13 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

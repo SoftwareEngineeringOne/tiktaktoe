@@ -1,8 +1,9 @@
-.TH "hal/system.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/system.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/system.c
+hal/system.c \- Implementation of system control functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -25,6 +26,25 @@ hal/system.c
 .br
 .RI "Triggers 'off' mode of the system\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of system control functions\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBsystem\&.h\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBsystem\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void system_offMode ()"
@@ -39,7 +59,7 @@ Triggers 'off' mode of the system\&.
 .PP
 
 .PP
-Definition at line \fB15\fP of file \fBsystem\&.c\fP\&.
+Definition at line \fB26\fP of file \fBsystem\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBSYS_POWER\fP, and \fBSYS_SYSTEMOFF\fP\&.
 .SS "void system_softReset ()"
@@ -54,7 +74,7 @@ Trigger a soft reset of the system\&.
 .PP
 
 .PP
-Definition at line \fB6\fP of file \fBsystem\&.c\fP\&.
+Definition at line \fB18\fP of file \fBsystem\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBSYS_AIRCR\fP, \fBSYS_SYSRESETREQ\fP, and \fBSYS_VECTKEY\fP\&.
 .SH "Author"

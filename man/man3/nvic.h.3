@@ -1,4 +1,4 @@
-.TH "hal/nvic.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/nvic.h" 3 "Sat Mar 22 2025 15:19:13" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,75 +13,99 @@ hal/nvic.h \- Contains interrupt constants\&.
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_00\fP   0xE000E100"
 .br
+.RI "1 - Reset "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_01\fP   0xE000E104"
 .br
+.RI "2 - NMI "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_02\fP   0xE000E108"
 .br
+.RI "3 - Hard-Fault "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_03\fP   0xE000E10C"
 .br
+.RI "4 - MPU / MEM-Manage "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_04\fP   0xE000E110"
 .br
+.RI "5 - BUS-Fault "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_05\fP   0xE000E114"
 .br
+.RI "6 - Usage-Fault "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_06\fP   0xE000E118"
 .br
+.RI "7 - Reserved "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_07\fP   0xE000E11C"
 .br
+.RI "8 - Reserved "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_08\fP   0xE000E120"
 .br
+.RI "9 - Reserved "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_09\fP   0xE000E124"
 .br
+.RI "10 - Reserved "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_10\fP   0xE000E128"
 .br
+.RI "11 - SVCall "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_11\fP   0xE000E12C"
 .br
+.RI "12 - Debug Monitor "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_12\fP   0xE000E130"
 .br
+.RI "13 - Reserved "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_13\fP   0xE000E134"
 .br
+.RI "14 - PendSV "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_14\fP   0xE000E138"
 .br
+.RI "15 - SysTick "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable_15\fP   0xE000E13C"
 .br
+.RI "16 - External 0 "
 .ti -1c
 .RI "#define \fBInterrupt_Set_Enable\fP   0xE000E100"
 .br
+.RI "[32\&.\&.\&.0] Interrupt "
 .ti -1c
 .RI "#define \fBInterrupt_ICPR\fP   0xE000E280"
 .br
+.RI "Interrupt Clear-pending Register (on page 4-6) "
 .ti -1c
 .RI "#define \fBInterrupt_ID1\fP   (1 << 1)"
 .br
+.RI "Bit for User Interrupt ID: 1\&. "
 .ti -1c
 .RI "#define \fBInterrupt_ID2\fP   (1 << 2)"
 .br
+.RI "Bit for User Interrupt ID: 2\&. "
 .ti -1c
 .RI "#define \fBInterrupt_ID8\fP   (1 << 8)"
 .br
+.RI "Bit for User Interrupt ID: 8\&. "
 .ti -1c
 .RI "#define \fBInterrupt_ID9\fP   (1 << 9)"
 .br
+.RI "Bit for User Interrupt ID: 9\&. "
 .ti -1c
 .RI "#define \fBInterrupt_ID10\fP   (1 << 10)"
 .br
+.RI "Bit for User Interrupt ID: 10\&. "
 .ti -1c
 .RI "#define \fBICSR\fP   0xE000ED04"
 .br
+.RI "Interrupt Control and State Register\&. "
 .ti -1c
 .RI "#define \fB__WFI\fP()"
 .br
@@ -93,6 +117,11 @@ Contains interrupt constants\&.
 
 Registers from NVIC - Cortex-M0 peripheral These are to activate and debug Interrupts Details on Chapter 4\&.2 Nested Vectored Interrupt Controller (Page 109)
 
+.PP
+\fBNote\fP
+.RS 4
+Based on version by Thomas Vogt
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -112,105 +141,153 @@ __asm volatile("wfi" ::: "memory")
 .fi
 
 .PP
-Wait for an interrupt\&. The processor enters low power mode until the next interrupt occurs 
+Wait for an interrupt\&. The processor enters low power mode until the next interrupt occurs\&. 
 .PP
 Definition at line \fB58\fP of file \fBnvic\&.h\fP\&.
 .SS "#define ICSR   0xE000ED04"
 
 .PP
-Definition at line \fB50\fP of file \fBnvic\&.h\fP\&.
+Interrupt Control and State Register\&. 
+.PP
+Definition at line \fB49\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ICPR   0xE000E280"
 
+.PP
+Interrupt Clear-pending Register (on page 4-6) 
 .PP
 Definition at line \fB42\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ID1   (1 << 1)"
 
 .PP
-Definition at line \fB44\fP of file \fBnvic\&.h\fP\&.
+Bit for User Interrupt ID: 1\&. 
+.PP
+Definition at line \fB43\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ID10   (1 << 10)"
 
 .PP
-Definition at line \fB48\fP of file \fBnvic\&.h\fP\&.
+Bit for User Interrupt ID: 10\&. 
+.PP
+Definition at line \fB47\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ID2   (1 << 2)"
 
 .PP
-Definition at line \fB45\fP of file \fBnvic\&.h\fP\&.
+Bit for User Interrupt ID: 2\&. 
+.PP
+Definition at line \fB44\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ID8   (1 << 8)"
 
 .PP
-Definition at line \fB46\fP of file \fBnvic\&.h\fP\&.
+Bit for User Interrupt ID: 8\&. 
+.PP
+Definition at line \fB45\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_ID9   (1 << 9)"
 
 .PP
-Definition at line \fB47\fP of file \fBnvic\&.h\fP\&.
+Bit for User Interrupt ID: 9\&. 
+.PP
+Definition at line \fB46\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable   0xE000E100"
 
 .PP
-Definition at line \fB40\fP of file \fBnvic\&.h\fP\&.
+[32\&.\&.\&.0] Interrupt 
+.PP
+Definition at line \fB41\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_00   0xE000E100"
 
 .PP
-Definition at line \fB20\fP of file \fBnvic\&.h\fP\&.
+1 - Reset 
+.PP
+Definition at line \fB25\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_01   0xE000E104"
 
 .PP
-Definition at line \fB21\fP of file \fBnvic\&.h\fP\&.
+2 - NMI 
+.PP
+Definition at line \fB26\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_02   0xE000E108"
 
 .PP
-Definition at line \fB22\fP of file \fBnvic\&.h\fP\&.
+3 - Hard-Fault 
+.PP
+Definition at line \fB27\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_03   0xE000E10C"
 
 .PP
-Definition at line \fB23\fP of file \fBnvic\&.h\fP\&.
+4 - MPU / MEM-Manage 
+.PP
+Definition at line \fB28\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_04   0xE000E110"
 
 .PP
-Definition at line \fB25\fP of file \fBnvic\&.h\fP\&.
+5 - BUS-Fault 
+.PP
+Definition at line \fB29\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_05   0xE000E114"
 
 .PP
-Definition at line \fB26\fP of file \fBnvic\&.h\fP\&.
+6 - Usage-Fault 
+.PP
+Definition at line \fB30\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_06   0xE000E118"
 
 .PP
-Definition at line \fB27\fP of file \fBnvic\&.h\fP\&.
+7 - Reserved 
+.PP
+Definition at line \fB31\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_07   0xE000E11C"
 
 .PP
-Definition at line \fB28\fP of file \fBnvic\&.h\fP\&.
+8 - Reserved 
+.PP
+Definition at line \fB32\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_08   0xE000E120"
 
 .PP
-Definition at line \fB30\fP of file \fBnvic\&.h\fP\&.
+9 - Reserved 
+.PP
+Definition at line \fB33\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_09   0xE000E124"
 
 .PP
-Definition at line \fB31\fP of file \fBnvic\&.h\fP\&.
+10 - Reserved 
+.PP
+Definition at line \fB34\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_10   0xE000E128"
 
 .PP
-Definition at line \fB32\fP of file \fBnvic\&.h\fP\&.
+11 - SVCall 
+.PP
+Definition at line \fB35\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_11   0xE000E12C"
 
 .PP
-Definition at line \fB33\fP of file \fBnvic\&.h\fP\&.
+12 - Debug Monitor 
+.PP
+Definition at line \fB36\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_12   0xE000E130"
 
 .PP
-Definition at line \fB35\fP of file \fBnvic\&.h\fP\&.
+13 - Reserved 
+.PP
+Definition at line \fB37\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_13   0xE000E134"
 
 .PP
-Definition at line \fB36\fP of file \fBnvic\&.h\fP\&.
+14 - PendSV 
+.PP
+Definition at line \fB38\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_14   0xE000E138"
 
 .PP
-Definition at line \fB37\fP of file \fBnvic\&.h\fP\&.
+15 - SysTick 
+.PP
+Definition at line \fB39\fP of file \fBnvic\&.h\fP\&.
 .SS "#define Interrupt_Set_Enable_15   0xE000E13C"
 
 .PP
-Definition at line \fB38\fP of file \fBnvic\&.h\fP\&.
+16 - External 0 
+.PP
+Definition at line \fB40\fP of file \fBnvic\&.h\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

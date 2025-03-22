@@ -1,8 +1,8 @@
-.TH "hal/memset.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/memset.h" 3 "Sat Mar 22 2025 15:19:13" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/memset.h \- Contains a simple implementation of memset\&.  
+hal/memset.h \- Header file for a simple implementation of memset\&.  
 
 .SH SYNOPSIS
 .br
@@ -20,9 +20,14 @@ hal/memset.h \- Contains a simple implementation of memset\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains a simple implementation of memset\&. 
+Header file for a simple implementation of memset\&. 
 
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBmemset\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -44,19 +49,24 @@ Simple implementation of memset\&. Sets the first \fBn\fP bytes of the block of 
 .RS 4
 \fIptr\fP Pointer to the block of memory to fill 
 .br
-\fIx\fP Value to be set\&. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value 
+\fIx\fP Value to be set\&. 
 .br
 \fIn\fP Number of bytes to be set to the value
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-A pointer to the memory area 
+A pointer to the memory area
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+While x is passed as an int, it is cast to a uint8_t (char) before being stored in the memory area\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB5\fP of file \fBmemset\&.c\fP\&.
+Definition at line \fB18\fP of file \fBmemset\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

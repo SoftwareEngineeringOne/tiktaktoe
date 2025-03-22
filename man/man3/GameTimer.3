@@ -1,4 +1,4 @@
-.TH "GameTimer" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "GameTimer" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,32 +15,43 @@ GameTimer \- Time information of the current game\&.
 .ti -1c
 .RI "\fBbool\fP \fBis_running\fP"
 .br
+.RI "Indicates if the timer is currently running\&. "
 .ti -1c
 .RI "volatile uint32_t \fBticks_total\fP"
 .br
+.RI "Total ticks since the game started\&. "
 .ti -1c
 .RI "volatile uint32_t \fBticks_turn\fP"
 .br
+.RI "Ticks elapsed during the current turn\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Time information of the current game\&. 
+
+This struct tracks whether the timer is running and the number of ticks elapsed in total and during the current turn\&. 
 .PP
-Definition at line \fB20\fP of file \fBtime\&.h\fP\&.
+Definition at line \fB32\fP of file \fBtime\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "\fBbool\fP GameTimer::is_running"
 
 .PP
-Definition at line \fB22\fP of file \fBtime\&.h\fP\&.
+Indicates if the timer is currently running\&. 
+.PP
+Definition at line \fB34\fP of file \fBtime\&.h\fP\&.
 .SS "volatile uint32_t GameTimer::ticks_total"
 
 .PP
-Definition at line \fB23\fP of file \fBtime\&.h\fP\&.
+Total ticks since the game started\&. 
+.PP
+Definition at line \fB35\fP of file \fBtime\&.h\fP\&.
 .SS "volatile uint32_t GameTimer::ticks_turn"
 
 .PP
-Definition at line \fB24\fP of file \fBtime\&.h\fP\&.
+Ticks elapsed during the current turn\&. 
+.PP
+Definition at line \fB36\fP of file \fBtime\&.h\fP\&.
 
 .SH "Author"
 .PP 

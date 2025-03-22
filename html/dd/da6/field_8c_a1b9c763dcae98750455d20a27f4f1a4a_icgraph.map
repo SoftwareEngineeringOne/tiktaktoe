@@ -1,16 +1,16 @@
 <map id="printRow" name="printRow">
-<area shape="rect" id="Node000001" title="Print one row." alt="" coords="789,5,862,31"/>
-<area shape="rect" id="Node000002" href="$dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="651,5,741,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="774,21,742,21,742,16,774,16"/>
-<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="515,5,603,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="635,21,603,21,603,16,635,16"/>
-<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="500,21,381,21,381,16,500,16"/>
-<area shape="rect" id="Node000007" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="428,31,467,56"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="501,34,467,42,466,37,499,29"/>
-<area shape="rect" id="Node000005" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="286,21,254,21,254,16,286,16"/>
-<area shape="rect" id="Node000006" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="413,38,380,30,382,25,414,33"/>
+<area shape="rect" id="Node000001" title="Print one row of the field." alt="" coords="842,5,922,33"/>
+<area shape="rect" id="Node000002" href="$dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="693,5,794,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="827,22,795,22,795,16,827,16"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="548,5,645,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="677,22,646,22,646,16,677,16"/>
+<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,5,409,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,22,410,22,410,16,532,16"/>
+<area shape="rect" id="Node000007" href="$d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes relevant things at the game start." alt="" coords="457,31,500,58"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="533,36,501,43,499,37,532,30"/>
+<area shape="rect" id="Node000005" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="108,5,275,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="308,22,275,22,275,16,308,16"/>
+<area shape="rect" id="Node000006" href="$d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="442,39,409,32,410,26,443,34"/>
 </map>

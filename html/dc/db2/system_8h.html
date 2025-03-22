@@ -102,24 +102,24 @@ $(function(){initNavTree('dc/db2/system_8h.html','../../'); initResizable(true);
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">system.h File Reference</div></div>
+  <div class="headertitle"><div class="title">system.h File Reference<div class="ingroups"><a class="el" href="../../d2/dbf/group__HAL.html">Hardware Abstraction Layer</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains functions interacting with the microcontroller.  
+<p>System control interface for hardware abstraction layer.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d37/system_8h__dep__incl.png" border="0" usemap="#ahal_2system_8hdep" alt=""/></div>
 <map name="ahal_2system_8hdep" id="ahal_2system_8hdep">
-<area shape="rect" title="Contains functions interacting with the microcontroller." alt="" coords="107,5,201,31"/>
-<area shape="rect" href="../../d4/dfd/system_8c.html" title=" " alt="" coords="5,79,100,105"/>
-<area shape="poly" title=" " alt="" coords="126,43,71,81,68,76,123,38"/>
-<area shape="rect" href="../../d0/d29/main_8c.html" title=" " alt="" coords="124,79,184,105"/>
-<area shape="poly" title=" " alt="" coords="156,46,156,79,151,79,151,46"/>
-<area shape="rect" href="../../da/d03/error__handling_8c.html" title=" " alt="" coords="207,79,340,105"/>
-<area shape="poly" title=" " alt="" coords="189,37,255,76,252,81,186,42"/>
+<area shape="rect" title="System control interface for hardware abstraction layer." alt="" coords="114,5,220,33"/>
+<area shape="rect" href="../../d4/dfd/system_8c.html" title="Implementation of system control functions." alt="" coords="5,81,110,109"/>
+<area shape="poly" title=" " alt="" coords="136,44,78,83,75,78,133,40"/>
+<area shape="rect" href="../../d0/d29/main_8c.html" title="Entry point for the TikTakToe game." alt="" coords="134,81,200,109"/>
+<area shape="poly" title=" " alt="" coords="170,49,170,81,164,81,164,49"/>
+<area shape="rect" href="../../da/d03/error__handling_8c.html" title=" " alt="" coords="223,81,374,109"/>
+<area shape="poly" title=" " alt="" coords="205,39,277,78,274,83,203,43"/>
 </map>
 </div>
 </div>
@@ -128,14 +128,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a773c6eb8780e34859927ef025b139dd4" id="r_a773c6eb8780e34859927ef025b139dd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773c6eb8780e34859927ef025b139dd4">SYS_AIRCR</a>&#160;&#160;&#160;0xE000ED0C</td></tr>
+<tr class="memdesc:a773c6eb8780e34859927ef025b139dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address of the Application Interrupt and Reset Control Register.  <br /></td></tr>
 <tr class="separator:a773c6eb8780e34859927ef025b139dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac815486bf5a0108beac63ee3dea5c93" id="r_aac815486bf5a0108beac63ee3dea5c93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac815486bf5a0108beac63ee3dea5c93">SYS_VECTKEY</a>&#160;&#160;&#160;(0x5FA &lt;&lt; 16)</td></tr>
+<tr class="memdesc:aac815486bf5a0108beac63ee3dea5c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key required to write to SYS_AIRCR.  <br /></td></tr>
 <tr class="separator:aac815486bf5a0108beac63ee3dea5c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f75a5cf541d1a64addc434a57b09afd" id="r_a3f75a5cf541d1a64addc434a57b09afd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f75a5cf541d1a64addc434a57b09afd">SYS_SYSRESETREQ</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memdesc:a3f75a5cf541d1a64addc434a57b09afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit mask to trigger a system reset.  <br /></td></tr>
 <tr class="separator:a3f75a5cf541d1a64addc434a57b09afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac522f3f176863b12dd3e497ccee8afb0" id="r_ac522f3f176863b12dd3e497ccee8afb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac522f3f176863b12dd3e497ccee8afb0">SYS_POWER</a>&#160;&#160;&#160;0x40000000</td></tr>
+<tr class="memdesc:ac522f3f176863b12dd3e497ccee8afb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base address for power control registers.  <br /></td></tr>
 <tr class="separator:ac522f3f176863b12dd3e497ccee8afb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9228c8a022c8cf9ca7c88120a429f135" id="r_a9228c8a022c8cf9ca7c88120a429f135"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9228c8a022c8cf9ca7c88120a429f135">SYS_SYSTEMOFF</a>&#160;&#160;&#160;0x500</td></tr>
+<tr class="memdesc:a9228c8a022c8cf9ca7c88120a429f135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for the system off mode register.  <br /></td></tr>
 <tr class="separator:a9228c8a022c8cf9ca7c88120a429f135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -148,7 +153,9 @@ Functions</h2></td></tr>
 <tr class="separator:a077a1d054ddfb6fb237fb8d288b3b1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains functions interacting with the microcontroller. </p>
+<div class="textblock"><p>System control interface for hardware abstraction layer. </p>
+<p>This file contains macros and function declarations for controlling system-level operations such as soft reset and power-off mode.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d4/dfd/system_8c.html" title="Implementation of system control functions.">system.c</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
@@ -165,7 +172,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00014">14</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
+<p>Address of the Application Interrupt and Reset Control Register. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00027">27</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -181,7 +190,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00018">18</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
+<p>Base address for power control registers. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00045">45</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +208,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00016">16</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
+<p>Bit mask to trigger a system reset. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00039">39</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +226,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00019">19</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
+<p>Offset for the system off mode register. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00051">51</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -229,7 +244,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00015">15</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
+<p>Key required to write to SYS_AIRCR. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db2/system_8h_source.html#l00033">33</a> of file <a class="el" href="../../dc/db2/system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -252,17 +269,17 @@ Functions</h2></td></tr>
 <p>Triggers "off" mode of the system. </p>
 <dl class="section note"><dt>Note</dt><dd><b>Never returns</b> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00015">15</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00026">26</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00018">SYS_POWER</a>, and <a class="el" href="../../dc/db2/system_8h_source.html#l00019">SYS_SYSTEMOFF</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00020">register_write()</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00045">SYS_POWER</a>, and <a class="el" href="../../dc/db2/system_8h_source.html#l00051">SYS_SYSTEMOFF</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph.png" border="0" usemap="#adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph" id="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph">
-<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="5,5,122,31"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="170,5,269,31"/>
-<area shape="poly" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
+<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="5,5,135,33"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="183,5,294,33"/>
+<area shape="poly" title=" " alt="" coords="135,16,168,16,168,22,135,22"/>
 </map>
 </div>
 <div class="dynheader">
@@ -270,9 +287,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph.png" border="0" usemap="#adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph" id="adc/db2/system_8h_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph">
-<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="103,5,219,31"/>
-<area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="Triggers &quot;off&quot; mode of the system." alt="" coords="108,5,237,33"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
 </map>
 </div>
 
@@ -296,17 +313,17 @@ Here is the caller graph for this function:</div>
 <p>Trigger a soft reset of the system. </p>
 <dl class="section note"><dt>Note</dt><dd><b>Never returns</b> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00006">6</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dfd/system_8c_source.html#l00018">18</a> of file <a class="el" href="../../d4/dfd/system_8c_source.html">system.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00014">SYS_AIRCR</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00016">SYS_SYSRESETREQ</a>, and <a class="el" href="../../dc/db2/system_8h_source.html#l00015">SYS_VECTKEY</a>.</p>
+<p class="reference">References <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00020">register_write()</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00027">SYS_AIRCR</a>, <a class="el" href="../../dc/db2/system_8h_source.html#l00039">SYS_SYSRESETREQ</a>, and <a class="el" href="../../dc/db2/system_8h_source.html#l00033">SYS_VECTKEY</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph.png" border="0" usemap="#adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph" id="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_cgraph">
-<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="5,5,132,31"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="180,5,279,31"/>
-<area shape="poly" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
+<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="5,5,143,33"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="191,5,302,33"/>
+<area shape="poly" title=" " alt="" coords="143,16,175,16,175,22,143,22"/>
 </map>
 </div>
 <div class="dynheader">
@@ -314,15 +331,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph.png" border="0" usemap="#adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph" alt=""/></div>
 <map name="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph" id="adc/db2/system_8h_a97bacc4493b8a3008bdbdd7a83e86642_icgraph">
-<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="318,55,444,80"/>
-<area shape="rect" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title=" " alt="" coords="184,29,270,55"/>
-<area shape="poly" title=" " alt="" coords="302,57,270,52,271,47,303,52"/>
-<area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="202,79,252,104"/>
-<area shape="poly" title=" " alt="" coords="303,82,252,90,251,85,302,77"/>
-<area shape="rect" href="../../da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51" title=" " alt="" coords="13,5,128,31"/>
-<area shape="poly" title=" " alt="" coords="168,36,127,30,128,24,169,31"/>
-<area shape="rect" href="../../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e" title=" " alt="" coords="5,55,136,80"/>
-<area shape="poly" title=" " alt="" coords="169,54,136,60,136,54,168,49"/>
+<area shape="rect" title="Trigger a soft reset of the system." alt="" coords="339,57,476,85"/>
+<area shape="rect" href="../../da/d03/error__handling_8c.html#a0805cfdbb794a5ba0d8d0411c746556c" title="Handles error messages and resets the system." alt="" coords="195,31,291,58"/>
+<area shape="poly" title=" " alt="" coords="323,60,291,55,292,50,324,55"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="216,83,270,110"/>
+<area shape="poly" title=" " alt="" coords="324,87,271,95,270,90,323,81"/>
+<area shape="rect" href="../../da/d03/error__handling_8c.html#a678d0aa1dbbf42119a8358cc68140b51" title="Handles unexpected interrupts." alt="" coords="12,5,140,33"/>
+<area shape="poly" title=" " alt="" coords="178,37,140,31,140,26,179,32"/>
+<area shape="rect" href="../../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e" title="Handles hard faults." alt="" coords="5,57,147,85"/>
+<area shape="poly" title=" " alt="" coords="180,57,148,62,147,57,179,52"/>
 </map>
 </div>
 
@@ -334,7 +351,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_a413b7f902cba5167b433a6fe834d5bd.html">hal</a></li><li class="navelem"><a class="el" href="../../dc/db2/system_8h.html">system.h</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:13 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

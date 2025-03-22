@@ -7,34 +7,34 @@ Contains the input handling of the game.
 
 {\ttfamily \#include "{}def.\+h"{}}\newline
 {\ttfamily \#include "{}logic/game.\+h"{}}\newline
-Include dependency graph for input.\+h\+:
-\nopagebreak
+Include dependency graph for input.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{df/d9b/input_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{de/d01/input_8h__dep__incl}
+\includegraphics[width=252pt]{de/d01/input_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{input_8h_a3082ccbda618aa1099677e2e7ac9d5f6}{input\+\_\+handle\+Byte}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte, \mbox{\hyperlink{structGameState}{Game\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ab8c8a2816ae974e5a2df22ec1e87fa51}{game\+\_\+state}}, \mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}})
-\begin{DoxyCompactList}\small\item\em Handle a input byte with current states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles an input byte and updates game and cell states. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains the input handling of the game. 
 
+This file provides the interface for handling user input during the game, including processing key presses and updating game and cell states.
+
 \begin{DoxySeeAlso}{See also}
-SRC
+\doxylink{input_8c}{input.\+c}
 \end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -54,38 +54,38 @@ Definition in file \mbox{\hyperlink{input_8h_source}{input.\+h}}.
 
 
 
-Handle a input byte with current states. 
+Handles an input byte and updates game and cell states. 
+
+Processes the input byte to determine the appropriate action, such as marking a cell, navigating the board, or pausing the game. Updates the game state and cell state accordingly.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em byte} & \\
+\mbox{\texttt{ in}}  & {\em byte} & The input byte to process. \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em game\+\_\+state} & \\
+\mbox{\texttt{ in,out}}  & {\em game\+\_\+state} & Pointer to the current game state. \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em cell\+\_\+state} & \\
+\mbox{\texttt{ in,out}}  & {\em cell\+\_\+state} & Pointer to the current cell state.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True in case a field redraw is needed 
+True if a field redraw is needed, false otherwise. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input_8c_source_l00038}{38}} of file \mbox{\hyperlink{input_8c_source}{input.\+c}}.
+Definition at line \mbox{\hyperlink{input_8c_source_l00079}{79}} of file \mbox{\hyperlink{input_8c_source}{input.\+c}}.
 
 
 
-References \mbox{\hyperlink{cell_8c_source_l00156}{cell\+\_\+decrease\+Size()}}, \mbox{\hyperlink{cell_8c_source_l00146}{cell\+\_\+increase\+Size()}}, \mbox{\hyperlink{game_8c_source_l00041}{cell\+\_\+state}}, \mbox{\hyperlink{time_8c_source_l00024}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00040}{game\+\_\+state}}, \mbox{\hyperlink{input_8c_source_l00068}{handle\+Escape\+Sequence()}}, \mbox{\hyperlink{input_8c_source_l00186}{handle\+Pause\+Resume()}}, \mbox{\hyperlink{input_8c_source_l00114}{handle\+Set\+Mark()}}, \mbox{\hyperlink{time_8h_source_l00022}{Game\+Timer\+::is\+\_\+running}}, and \mbox{\hyperlink{input_8c_source_l00172}{open\+Controls()}}.
+References \mbox{\hyperlink{cell_8c_source_l00160}{cell\+\_\+decrease\+Size()}}, \mbox{\hyperlink{cell_8c_source_l00149}{cell\+\_\+increase\+Size()}}, \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{time_8c_source_l00019}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00038}{game\+\_\+state}}, \mbox{\hyperlink{input_8c_source_l00109}{handle\+Escape\+Sequence()}}, \mbox{\hyperlink{input_8c_source_l00227}{handle\+Pause\+Resume()}}, \mbox{\hyperlink{input_8c_source_l00155}{handle\+Set\+Mark()}}, \mbox{\hyperlink{time_8h_source_l00034}{Game\+Timer\+::is\+\_\+running}}, and \mbox{\hyperlink{input_8c_source_l00213}{open\+Controls()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{de/ded/input_8h_a3082ccbda618aa1099677e2e7ac9d5f6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

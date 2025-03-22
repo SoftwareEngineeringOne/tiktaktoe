@@ -1,8 +1,9 @@
-.TH "hal/memset.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/memset.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/memset.c
+hal/memset.c \- Implementation of a simple memset function\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -19,6 +20,25 @@ hal/memset.c
 .br
 .RI "Simple implementation of memset\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of a simple memset function\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBmemset\&.h\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmemset\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void * memset (void * ptr, int x, size_t n)"
@@ -31,19 +51,24 @@ Simple implementation of memset\&. Sets the first \fBn\fP bytes of the block of 
 .RS 4
 \fIptr\fP Pointer to the block of memory to fill 
 .br
-\fIx\fP Value to be set\&. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value 
+\fIx\fP Value to be set\&. 
 .br
 \fIn\fP Number of bytes to be set to the value
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-A pointer to the memory area 
+A pointer to the memory area
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+While x is passed as an int, it is cast to a uint8_t (char) before being stored in the memory area\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB5\fP of file \fBmemset\&.c\fP\&.
+Definition at line \fB18\fP of file \fBmemset\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

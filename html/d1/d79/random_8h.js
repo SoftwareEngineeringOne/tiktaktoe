@@ -13,7 +13,7 @@ var random_8h =
     [ "RNG_TASK_START", "d1/d79/random_8h.html#aef5776807f90514343d80c42845795d7", null ],
     [ "RNG_VALRDY", "d1/d79/random_8h.html#ab3aae99df44746d954a4f64faa569d9c", null ],
     [ "RNG_VALUE", "d1/d79/random_8h.html#aa6807bb4557dbb6e07850699d7400f8f", null ],
-    [ "rng_getRandomValue_immediately", "d1/d79/random_8h.html#a10ddbdc45f7f1a0a55ec5e0cb7bf683a", null ],
-    [ "rng_getRandomValue_waiting", "d1/d79/random_8h.html#a0b0e7c9eefaf33e9333cb2511be4addf", null ],
-    [ "rng_init", "d1/d79/random_8h.html#ad5a3df3d0092f55f6ea54ccaa7daf3dc", null ]
+    [ "rng_getRandomValue_immediately", "d1/d79/random_8h.html#ade0d5a07f6403292f21ff2b5f200f11f", null ],
+    [ "rng_getRandomValue_waiting", "d1/d79/random_8h.html#a0cc8207c13dfa65a8279450efa1751d3", null ],
+    [ "rng_init", "d1/d79/random_8h.html#a892aefef3ee12161a32838eb5c6e3087", null ]
 ];

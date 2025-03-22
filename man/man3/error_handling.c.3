@@ -1,4 +1,4 @@
-.TH "util/error_handling.c" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/error_handling.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,31 +25,53 @@ util/error_handling.c
 .ti -1c
 .RI "static void \fBhandleError\fP (const char *hint)"
 .br
+.RI "Handles error messages and resets the system\&. "
 .ti -1c
 .RI "void \fBHardFault_Handler\fP ()"
 .br
+.RI "Handles hard faults\&. "
 .ti -1c
 .RI "void \fBDefault_Handler\fP ()"
 .br
+.RI "Handles unexpected interrupts\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
 .SS "void Default_Handler ()"
 
 .PP
-Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+Handles unexpected interrupts\&. This function is triggered when an unexpected interrupt occurs\&. It provides a mechanism to handle the interrupt and display an appropriate message\&. 
+.PP
+Definition at line \fB31\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SS "static void handleError (const char * hint)\fR [static]\fP"
 
 .PP
-Definition at line \fB23\fP of file \fBerror_handling\&.c\fP\&.
+Handles error messages and resets the system\&. This function clears the console, displays an error message, and waits for user input before attempting a soft reset of the system\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIhint\fP A message providing details about the error\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Depending on the error, the system may not be able to recover or even execute this function properly\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBBOLD\fP, \fBDIM\fP, \fBFG_RED\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln()\fP, \fBRESET\fP, \fBsystem_softReset()\fP, \fBuart_readByte()\fP, and \fBui_printHeading()\fP\&.
 .SS "void HardFault_Handler ()"
 
 .PP
-Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
+Handles hard faults\&. This function is triggered when a hard fault occurs\&. It provides a mechanism to handle the fault and display an appropriate message\&. 
+.PP
+Definition at line \fB25\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SH "Author"

@@ -1,9 +1,0 @@
-<map id="printStyle" name="printStyle">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,81,31"/>
-<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="129,5,175,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,16,113,16,113,21,81,21"/>
-<area shape="rect" id="Node000003" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="223,5,327,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,16,208,16,208,21,175,21"/>
-<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="375,5,475,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,16,360,16,360,21,328,21"/>
-</map>

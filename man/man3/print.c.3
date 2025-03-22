@@ -1,8 +1,9 @@
-.TH "presentation/print.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/print.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-presentation/print.c
+presentation/print.c \- Implementation of high-level printing functions for UART\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -47,24 +48,19 @@ presentation/print.c
 .br
 .RI "Prints the given string with a predefined style and a new line character\&. "
 .ti -1c
-.RI "void \fBprintStyle\fP (const \fBStyle\fP *style)"
+.RI "void \fBprint_style\fP (const \fBStyle\fP *style)"
 .br
+.RI "Prints the given style attributes\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implementation of high-level printing functions for UART\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBprint\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -84,12 +80,12 @@ Prints the given string\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP 
+\fIstring\fP The string to print 
 .RE
 .PP
 
 .PP
-Definition at line \fB30\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB25\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBuart_writeByte()\fP\&.
 .SS "void print_clearConsole ()"
@@ -97,7 +93,7 @@ References \fBuart_writeByte()\fP\&.
 .PP
 Clear the whole terminal\&. 
 .PP
-Definition at line \fB25\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB20\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBCLEAR_SCREEN\fP, and \fBprint()\fP\&.
 .SS "void print_int (const uint32_t number)"
@@ -107,14 +103,29 @@ Prints the given integer\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fInumber\fP 
+\fInumber\fP The integer to print 
 .RE
 .PP
 
 .PP
-Definition at line \fB39\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB34\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBint_to_str()\fP, and \fBprint()\fP\&.
+.SS "void print_style (const \fBStyle\fP * style)"
+
+.PP
+Prints the given style attributes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstyle\fP The style to print 
+.RE
+.PP
+
+.PP
+Definition at line \fB66\fP of file \fBprint\&.c\fP\&.
+.PP
+References \fBStyle::bg_color\fP, \fBStyle::fg_color\fP, \fBStyle::font_style\fP, and \fBprint()\fP\&.
 .SS "void print_styled (const char * string, const \fBStyle\fP * style)"
 
 .PP
@@ -122,16 +133,16 @@ Prints the given string with a predefined style\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP 
+\fIstring\fP The string to print 
 .br
-\fIstyle\fP 
+\fIstyle\fP The style to apply 
 .RE
 .PP
 
 .PP
-Definition at line \fB58\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB53\fP of file \fBprint\&.c\fP\&.
 .PP
-References \fBprint()\fP, \fBprintStyle()\fP, and \fBRESET\fP\&.
+References \fBprint()\fP, \fBprint_style()\fP, and \fBRESET\fP\&.
 .SS "void println (const char * string)"
 
 .PP
@@ -139,12 +150,12 @@ Prints the given string with a new line character\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP 
+\fIstring\fP The string to print 
 .RE
 .PP
 
 .PP
-Definition at line \fB46\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB41\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBLINE_SEPERATOR\fP, \fBprint()\fP, and \fBuart_writeByte()\fP\&.
 .SS "void println_int (const uint32_t number)"
@@ -154,12 +165,12 @@ Prints the given integer with a new line character\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fInumber\fP 
+\fInumber\fP The integer to print 
 .RE
 .PP
 
 .PP
-Definition at line \fB52\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB47\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBLINE_SEPERATOR\fP, \fBprint_int()\fP, and \fBuart_writeByte()\fP\&.
 .SS "void println_styled (const char * string, const \fBStyle\fP * style)"
@@ -169,22 +180,16 @@ Prints the given string with a predefined style and a new line character\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP 
+\fIstring\fP The string to print 
 .br
-\fIstyle\fP 
+\fIstyle\fP The style to apply 
 .RE
 .PP
 
 .PP
-Definition at line \fB65\fP of file \fBprint\&.c\fP\&.
+Definition at line \fB60\fP of file \fBprint\&.c\fP\&.
 .PP
 References \fBLINE_SEPERATOR\fP, \fBprint_styled()\fP, and \fBuart_writeByte()\fP\&.
-.SS "void printStyle (const \fBStyle\fP * style)"
-
-.PP
-Definition at line \fB71\fP of file \fBprint\&.c\fP\&.
-.PP
-References \fBStyle::bg_color\fP, \fBStyle::fg_color\fP, \fBStyle::font_style\fP, and \fBprint()\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

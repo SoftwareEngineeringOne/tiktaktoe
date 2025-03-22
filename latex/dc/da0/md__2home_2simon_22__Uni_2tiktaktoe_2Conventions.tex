@@ -1,0 +1,112 @@
+\chapter{Coding Conventions}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions}{}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions}\index{Coding Conventions@{Coding Conventions}}
+\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md34}%
+\Hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md34}%
+
+\begin{DoxyItemize}
+\item Conventional Commits (\href{https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}{\texttt{ https\+://gist.\+github.\+com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}})
+\item The architecture is documented in this README
+\item Every file must have a short description at the beginning
+\item Every function must have a doc comment with a short description
+\item Not self describing code must be commented (should be avoided)
+\item Public functions start with the package name followed by an underscore
+\item Private functions should therefore not be called from outside
+\item Private functions should be defined in the beginning of the source files
+\item Private functions should be implemented in the source file, following the public functions
+\end{DoxyItemize}\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md35}{}\doxysection{\texorpdfstring{File structure}{File structure}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md35}
+All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md36}{}\doxysubsection{\texorpdfstring{Header file structure}{Header file structure}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md36}
+
+\begin{DoxyEnumerate}
+\item Module comment
+\item Defines
+\item global constants
+\item global variables
+\item structs
+\item public function prototypes
+\end{DoxyEnumerate}\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md37}{}\doxysubsection{\texorpdfstring{Source file structure}{Source file structure}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md37}
+
+\begin{DoxyEnumerate}
+\item Module comment (may reference header comment and add information if needed)
+\item module constants
+\item module variables
+\item private function prototypes
+\item public function implementations
+\item private function implementations
+\end{DoxyEnumerate}\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md38}{}\doxysubsection{\texorpdfstring{Naming}{Naming}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md38}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md39}{}\doxysubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md39}
+
+\begin{DoxyItemize}
+\item public functions should be prefixed with "{}\`{}module\+\_\+\mbox{[}...\mbox{]}\`{}"{}
+\item private functions should be marked as {\ttfamily static} and prefixed with "{}\`{}\+\_\+\mbox{[}...\mbox{]}\`{}"{}
+\item the function name itself should be written in {\ttfamily camel\+Case}
+\item a specialization may follow as a suffix, such as "{}\`{}\mbox{[}...\mbox{]}\+\_\+waiting\`{}"{}
+\end{DoxyItemize}\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md40}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md40}
+
+\begin{DoxyItemize}
+\item All files should contain a top level comment.
+\item All public functions should be documented in the header file.
+\item All private functions should be documented at the definition in the source files.
+\item All structs and enums should be documented.
+\item All global variables should be documented.
+\item All "{}complicated"{} macros should be documented.
+\item All typedefs should be documented.
+\end{DoxyItemize}\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md41}{}\doxysubsection{\texorpdfstring{Documentation templates}{Documentation templates}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md41}
+To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md42}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md42}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md43}{}\doxysubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md43}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md44}{}\doxysubsubsection{\texorpdfstring{Structs}{Structs}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md44}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ member1;\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ member2;\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\}\ ExampleStruct;}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md45}{}\doxysubsubsection{\texorpdfstring{Enums}{Enums}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md45}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE1;\ }
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE2;\ }
+\DoxyCodeLine{\ \ \ \ ENUM\_VALUE3;\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\}\ ExampleEnum;}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md46}{}\doxysubsubsection{\texorpdfstring{Typedefs}{Typedefs}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md46}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ExampleType;}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md47}{}\doxysubsubsection{\texorpdfstring{Macros}{Macros}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md47}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ EXAMPLE\_MACRO\ 42}}
+
+\end{DoxyCode}
+\hypertarget{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md48}{}\doxysubsubsection{\texorpdfstring{Global Variables}{Global Variables}}\label{md__2home_2simon_22__Uni_2tiktaktoe_2Conventions_autotoc_md48}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ g\_exampleGlobal;}
+
+\end{DoxyCode}
+ 

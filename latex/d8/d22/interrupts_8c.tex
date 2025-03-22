@@ -1,5 +1,10 @@
 \doxysection{hal/interrupts.c File Reference}
 \hypertarget{interrupts_8c}{}\label{interrupts_8c}\index{hal/interrupts.c@{hal/interrupts.c}}
+
+
+Implements the interrupt handlers for UART and Timer interrupts.  
+
+
 {\ttfamily \#include "{}hal/interrupts.\+h"{}}\newline
 {\ttfamily \#include "{}hal/nvic.\+h"{}}\newline
 {\ttfamily \#include "{}hal/register\+\_\+access.\+h"{}}\newline
@@ -7,8 +12,7 @@
 {\ttfamily \#include "{}hal/uart.\+h"{}}\newline
 {\ttfamily \#include "{}logic/time.\+h"{}}\newline
 {\ttfamily \#include "{}util/input\+\_\+buf.\+h"{}}\newline
-Include dependency graph for interrupts.\+c\+:
-\nopagebreak
+Include dependency graph for interrupts.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,21 +22,17 @@ Include dependency graph for interrupts.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5}{Interrupt2\+\_\+\+Handler}} (void)
+void \mbox{\hyperlink{interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6}{Interrupt2\+\_\+\+Handler}} ()
 \begin{DoxyCompactList}\small\item\em UART interrupt handler. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737}{Interrupt8\+\_\+\+Handler}} (void)
+void \mbox{\hyperlink{interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317}{Interrupt8\+\_\+\+Handler}} ()
 \begin{DoxyCompactList}\small\item\em Timer interrupt handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+Implements the interrupt handlers for UART and Timer interrupts. 
 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-
-\end{DoxyDate}
 \begin{DoxySeeAlso}{See also}
-
+\doxylink{interrupts_8h}{interrupts.\+h}
 \end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -44,55 +44,63 @@ Definition in file \mbox{\hyperlink{interrupts_8c_source}{interrupts.\+c}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5}\index{interrupts.c@{interrupts.c}!Interrupt2\_Handler@{Interrupt2\_Handler}}
+\Hypertarget{interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6}\index{interrupts.c@{interrupts.c}!Interrupt2\_Handler@{Interrupt2\_Handler}}
 \index{Interrupt2\_Handler@{Interrupt2\_Handler}!interrupts.c@{interrupts.c}}
 \doxysubsubsection{\texorpdfstring{Interrupt2\_Handler()}{Interrupt2\_Handler()}}
-{\footnotesize\ttfamily \label{interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5} 
-void Interrupt2\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6} 
+void Interrupt2\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 UART interrupt handler. 
 
-!\+TODO! 
+This function is triggered when a UART interrupt occurs. It reads a byte from the UART peripheral and processes it using the input buffer. The interrupt pending bit is cleared after handling the interrupt.
 
-Definition at line \mbox{\hyperlink{interrupts_8c_source_l00027}{27}} of file \mbox{\hyperlink{interrupts_8c_source}{interrupts.\+c}}.
+\begin{DoxySeeAlso}{See also}
+\doxylink{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\_\+read\+Byte} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{interrupts_8c_source_l00023}{23}} of file \mbox{\hyperlink{interrupts_8c_source}{interrupts.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8c_source_l00034}{input\+\_\+on\+Interrupt()}}, \mbox{\hyperlink{nvic_8h_source_l00042}{Interrupt\+\_\+\+ICPR}}, \mbox{\hyperlink{nvic_8h_source_l00045}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, and \mbox{\hyperlink{uart_8c_source_l00081}{uart\+\_\+read\+Byte()}}.
+References \mbox{\hyperlink{input__buf_8c_source_l00041}{input\+\_\+on\+Interrupt()}}, \mbox{\hyperlink{nvic_8h_source_l00042}{Interrupt\+\_\+\+ICPR}}, \mbox{\hyperlink{nvic_8h_source_l00044}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, and \mbox{\hyperlink{uart_8c_source_l00062}{uart\+\_\+read\+Byte()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d8/d22/interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5_cgraph}
+\includegraphics[width=350pt]{d8/d22/interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737}\index{interrupts.c@{interrupts.c}!Interrupt8\_Handler@{Interrupt8\_Handler}}
+\Hypertarget{interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317}\index{interrupts.c@{interrupts.c}!Interrupt8\_Handler@{Interrupt8\_Handler}}
 \index{Interrupt8\_Handler@{Interrupt8\_Handler}!interrupts.c@{interrupts.c}}
 \doxysubsubsection{\texorpdfstring{Interrupt8\_Handler()}{Interrupt8\_Handler()}}
-{\footnotesize\ttfamily \label{interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737} 
-void Interrupt8\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317} 
+void Interrupt8\+\_\+\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Timer interrupt handler. 
 
-@detail !\+TODO! 
+This function is triggered when a timer interrupt occurs. It resets the timer compare register and clears the interrupt pending bit. Additionally, it notifies the time module about the interrupt event.
 
-Definition at line \mbox{\hyperlink{interrupts_8c_source_l00033}{33}} of file \mbox{\hyperlink{interrupts_8c_source}{interrupts.\+c}}.
+\begin{DoxySeeAlso}{See also}
+\doxylink{time_8c_ac55568b0a64c8b18a2d2ffc7d50eacaa}{time\+\_\+on\+Interrupt} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{interrupts_8c_source_l00029}{29}} of file \mbox{\hyperlink{interrupts_8c_source}{interrupts.\+c}}.
 
 
 
-References \mbox{\hyperlink{nvic_8h_source_l00042}{Interrupt\+\_\+\+ICPR}}, \mbox{\hyperlink{nvic_8h_source_l00046}{Interrupt\+\_\+\+ID8}}, \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{time_8c_source_l00037}{time\+\_\+on\+Interrupt()}}, \mbox{\hyperlink{timer_8h_source_l00019}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{timer_8h_source_l00037}{TIMER\+\_\+\+COMPARE\+\_\+0}}.
+References \mbox{\hyperlink{nvic_8h_source_l00042}{Interrupt\+\_\+\+ICPR}}, \mbox{\hyperlink{nvic_8h_source_l00045}{Interrupt\+\_\+\+ID8}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{time_8c_source_l00032}{time\+\_\+on\+Interrupt()}}, \mbox{\hyperlink{timer_8h_source_l00024}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{timer_8h_source_l00042}{TIMER\+\_\+\+COMPARE\+\_\+0}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d8/d22/interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737_cgraph}
+\includegraphics[width=350pt]{d8/d22/interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317_cgraph}
 \end{center}
 \end{figure}

@@ -1,8 +1,8 @@
-.TH "util/error_handling.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/error_handling.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-util/error_handling.h \- Contains functions to react on inevitable errors\&.  
+util/error_handling.h \- Contains functions to react on errors\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,15 +13,22 @@ util/error_handling.h \- Contains functions to react on inevitable errors\&.
 .ti -1c
 .RI "void \fBHardFault_Handler\fP () __attribute__((interrupt))"
 .br
+.RI "Handles hard faults\&. "
 .ti -1c
 .RI "void \fBDefault_Handler\fP () __attribute__((interrupt))"
 .br
+.RI "Handles unexpected interrupts\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains functions to react on inevitable errors\&. 
+Contains functions to react on errors\&. 
 
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBerror_handling\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -33,16 +40,32 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBerror_handling\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "void Default_Handler ()"
+.SS "void Default_Handler (void )"
 
 .PP
-Definition at line \fB17\fP of file \fBerror_handling\&.c\fP\&.
+Handles unexpected interrupts\&. This function is triggered when an unexpected interrupt occurs\&. It provides a mechanism to handle the interrupt and display an appropriate message\&.
+
+.PP
+Handles unexpected interrupts\&.
+
+.PP
+This is a weak symbol that can be overridden by a user-defined handler\&. 
+.PP
+Definition at line \fB31\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
-.SS "void HardFault_Handler ()"
+.SS "void HardFault_Handler (void )"
 
 .PP
-Definition at line \fB11\fP of file \fBerror_handling\&.c\fP\&.
+Handles hard faults\&. This function is triggered when a hard fault occurs\&. It provides a mechanism to handle the fault and display an appropriate message\&.
+
+.PP
+Handles hard faults\&.
+
+.PP
+This is a weak symbol that can be overridden by a user-defined handler\&. 
+.PP
+Definition at line \fB25\fP of file \fBerror_handling\&.c\fP\&.
 .PP
 References \fBhandleError()\fP\&.
 .SH "Author"

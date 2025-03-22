@@ -11,29 +11,30 @@ Time information of the current game.
 
 
 
-Collaboration diagram for Game\+Timer\+:
-\nopagebreak
+Collaboration diagram for Game\+Timer\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{d3/dc8/structGameTimer__coll__graph}
+\includegraphics[width=217pt]{d3/dc8/structGameTimer__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\+\_\+running}}
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates if the timer is currently running. \end{DoxyCompactList}\item 
 volatile uint32\+\_\+t \mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{ticks\+\_\+total}}
-\item 
+\begin{DoxyCompactList}\small\item\em Total ticks since the game started. \end{DoxyCompactList}\item 
 volatile uint32\+\_\+t \mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{ticks\+\_\+turn}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ticks elapsed during the current turn. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Time information of the current game. 
 
-Definition at line \mbox{\hyperlink{time_8h_source_l00020}{20}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+This struct tracks whether the timer is running and the number of ticks elapsed in total and during the current turn. 
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00032}{32}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
 
 
 
@@ -46,7 +47,11 @@ Definition at line \mbox{\hyperlink{time_8h_source_l00020}{20}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{time_8h_source_l00022}{22}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+Indicates if the timer is currently running. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00034}{34}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
 
 \Hypertarget{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}\index{GameTimer@{GameTimer}!ticks\_total@{ticks\_total}}
 \index{ticks\_total@{ticks\_total}!GameTimer@{GameTimer}}
@@ -56,7 +61,11 @@ volatile uint32\+\_\+t Game\+Timer\+::ticks\+\_\+total}
 
 
 
-Definition at line \mbox{\hyperlink{time_8h_source_l00023}{23}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+Total ticks since the game started. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00035}{35}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
 
 \Hypertarget{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}\index{GameTimer@{GameTimer}!ticks\_turn@{ticks\_turn}}
 \index{ticks\_turn@{ticks\_turn}!GameTimer@{GameTimer}}
@@ -66,7 +75,11 @@ volatile uint32\+\_\+t Game\+Timer\+::ticks\+\_\+turn}
 
 
 
-Definition at line \mbox{\hyperlink{time_8h_source_l00024}{24}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+Ticks elapsed during the current turn. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00036}{36}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
 
 
 

@@ -1,16 +1,15 @@
-.TH "main.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "main.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-main.c
+main.c \- Entry point for the TikTakToe game\&.  
+
 .SH SYNOPSIS
 .br
 .PP
 \fR#include 'def\&.h'\fP
 .br
 \fR#include 'hal/nvic\&.h'\fP
-.br
-\fR#include 'hal/random\&.h'\fP
 .br
 \fR#include 'hal/uart\&.h'\fP
 .br
@@ -31,25 +30,16 @@ main.c
 
 .in +1c
 .ti -1c
-.RI "int \fBmain\fP (void)"
+.RI "int \fBmain\fP ()"
 .br
+.RI "Main function for the Tic-Tac-Toe application\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Entry point for the TikTakToe game\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
+This file contains the main function, which initializes the system, handles the main menu, and manages the game flow based on user input\&.
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
-.PP
-\fBSee also\fP
-.RS 4
-.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -61,10 +51,20 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBmain\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "int main (void )"
+.SS "int main ()"
 
 .PP
-Definition at line \fB30\fP of file \fBmain\&.c\fP\&.
+Main function for the Tic-Tac-Toe application\&. Initializes the UART and input buffer, displays the main menu, and handles user input to either reset the game or exit\&. If the game is reset, the system performs a soft reset\&. If the user exits, the system enters off mode\&.
+
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fBmain\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBDEFAULT_BOLD\fP, \fBg_input_buf\fP, \fBinput_getNext()\fP, \fBinput_init()\fP, \fBITALIC_DIM\fP, \fBmenu_showMainMenu()\fP, \fBprint()\fP, \fBprint_clearConsole()\fP, \fBprintln_styled()\fP, \fBSHOW_CURSOR\fP, \fBsystem_offMode()\fP, \fBsystem_softReset()\fP, \fBuart_init()\fP, and \fBui_printHeading()\fP\&.
 .SH "Author"

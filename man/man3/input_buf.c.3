@@ -1,8 +1,9 @@
-.TH "util/input_buf.c" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/input_buf.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-util/input_buf.c
+util/input_buf.c \- Implementation of the input buffer functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -10,12 +11,14 @@ util/input_buf.c
 .br
 \fR#include 'presentation/print\&.h'\fP
 .br
+\fR#include 'util/error_handling\&.h'\fP
+.br
 
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "static \fBbool\fP \fBputIntoBuf\fP (volatile \fBInputBuffer\fP *ib, uint8_t byte)"
+.RI "static \fBbool\fP \fBputIntoBuf\fP (volatile \fBInputBuffer\fP *ib, const uint8_t byte)"
 .br
 .RI "Put the next byte into the buffer\&. "
 .ti -1c
@@ -45,22 +48,18 @@ util/input_buf.c
 .ti -1c
 .RI "volatile \fBInputBuffer\fP \fBg_input_buf\fP"
 .br
+.RI "Global input buffer instance\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implementation of the input buffer functions\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
+This file contains the implementation of functions for managing the input buffer, including initialization, checking buffer state, and handling UART input interrupts\&.
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBinput_buf\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -80,19 +79,19 @@ Get the next byte from the buffer\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to read from\&. 
 .br
-\fIbyte\fP Next Byte 
+\fIbyte\fP Pointer to store the next byte\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-False if empty 
+False if the buffer is empty, true otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB59\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB67\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBINPUT_BUF_SIZE\fP, \fBinput_isEmpty()\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_init (volatile \fBInputBuffer\fP * ib)"
@@ -102,12 +101,12 @@ Initialize the given \fBInputBuffer\fP\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to initialize\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB43\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB51\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isEmpty (const volatile \fBInputBuffer\fP * ib)"
@@ -117,17 +116,17 @@ Check if the buffer is empty\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to check\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-True if empty 
+True if the buffer is empty, false otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB49\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB57\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isFull (const volatile \fBInputBuffer\fP * ib)"
@@ -137,17 +136,17 @@ Check if the buffer is full\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to check\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-True if full 
+True if the buffer is full, false otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB54\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB62\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_onInterrupt (uint8_t input)"
@@ -157,34 +156,35 @@ Function to call in case of UART input interrupt\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIinput\fP Pure input from UART 
+\fIinput\fP Pure input from UART\&. 
 .RE
 .PP
-TODO Handle error better
-.PP
-Definition at line \fB34\fP of file \fBinput_buf\&.c\fP\&.
-.PP
-References \fBg_input_buf\fP, \fBprint()\fP, and \fBputIntoBuf()\fP\&.
-.SS "static \fBbool\fP putIntoBuf (volatile \fBInputBuffer\fP * ib, uint8_t byte)\fR [static]\fP"
 
 .PP
-Put the next byte into the buffer\&. 
+Definition at line \fB41\fP of file \fBinput_buf\&.c\fP\&.
+.PP
+References \fBg_input_buf\fP, and \fBputIntoBuf()\fP\&.
+.SS "static \fBbool\fP putIntoBuf (volatile \fBInputBuffer\fP * ib, const uint8_t byte)\fR [static]\fP"
+
+.PP
+Put the next byte into the buffer\&. This function writes a byte into the input buffer if there is space available\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to write to\&. 
 .br
-\fIbyte\fP Next Byte 
+\fIbyte\fP Byte to write into the buffer\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-False if full 
+False if the buffer is full, true otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB70\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB78\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBinput_isFull()\fP\&.
 .SH "Variable Documentation"
@@ -192,7 +192,9 @@ References \fBInputBuffer::data\fP, \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\f
 .SS "volatile \fBInputBuffer\fP g_input_buf"
 
 .PP
-Definition at line \fB22\fP of file \fBinput_buf\&.c\fP\&.
+Global input buffer instance\&. 
+.PP
+Definition at line \fB24\fP of file \fBinput_buf\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

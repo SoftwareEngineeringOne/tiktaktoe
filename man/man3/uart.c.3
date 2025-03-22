@@ -1,8 +1,9 @@
-.TH "hal/uart.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/uart.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/uart.c
+hal/uart.c \- Implements UART initialization and data transfer functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -21,34 +22,25 @@ hal/uart.c
 .ti -1c
 .RI "void \fBuart_init\fP (const \fBbool\fP with_interrupts)"
 .br
-.RI "Initializing the UART with the following Settings: 115200-8-N-1\&. "
+.RI "Initializes the UART with the following settings: 115200-8-N-1\&. "
 .ti -1c
 .RI "void \fBuart_writeByte\fP (const uint8_t data)"
 .br
-.RI "Writes/Sends a byte over the serial Port\&. "
+.RI "Writes/Sends a byte over the serial port\&. "
 .ti -1c
 .RI "uint8_t \fBuart_readByte\fP ()"
 .br
-.RI "Read/Receive a byte from the serial Port\&. "
-.ti -1c
-.RI "uint8_t \fBuart_readByteBlocking\fP ()"
-.br
+.RI "Reads/Receives a byte from the serial port\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implements UART initialization and data transfer functions\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBuart\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -64,50 +56,46 @@ Definition in file \fBuart\&.c\fP\&.
 .SS "void uart_init (\fBbool\fP with_interrupts)"
 
 .PP
-Initializing the UART with the following Settings: 115200-8-N-1\&. 
+Initializes the UART with the following settings: 115200-8-N-1\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIwith_interrupts\fP Wether or not interrupts should be triggered 
+\fIwith_interrupts\fP Whether or not interrupts should be triggered\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB25\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB20\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBInterrupt_ID2\fP, \fBInterrupt_Set_Enable\fP, \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, \fBUART_ENABLE\fP, \fBUART_INT_RXDRDY\fP, \fBUART_INTENSET\fP, \fBUART_STARTRX\fP, \fBUART_STARTTX\fP, and \fBUART_TASK_START\fP\&.
 .SS "uint8_t uart_readByte ()"
 
 .PP
-Read/Receive a byte from the serial Port\&. 
+Reads/Receives a byte from the serial port\&. 
 .PP
 \fBReturns\fP
 .RS 4
-uint8_t received Byte or 0 (zero) if nothing was received 
+uint8_t Received byte or 0 (zero) if nothing was received\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB81\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB62\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBregister_read()\fP, \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, \fBUART_EVENT_CLEAR\fP, \fBUART_RXD\fP, and \fBUART_RXDRDY\fP\&.
-.SS "uint8_t uart_readByteBlocking ()"
-
-.PP
-Definition at line \fB100\fP of file \fBuart\&.c\fP\&.
 .SS "void uart_writeByte (uint8_t data)"
 
 .PP
-Writes/Sends a byte over the serial Port\&. 
+Writes/Sends a byte over the serial port\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIdata\fP byte to send 
+\fIdata\fP Byte to send\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB73\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB54\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, and \fBUART_TXD\fP\&.
 .SH "Author"

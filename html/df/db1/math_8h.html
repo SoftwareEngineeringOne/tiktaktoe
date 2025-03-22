@@ -101,7 +101,7 @@ $(function(){initNavTree('df/db1/math_8h.html','../../'); initResizable(true); }
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">math.h File Reference</div></div>
+  <div class="headertitle"><div class="title">math.h File Reference<div class="ingroups"><a class="el" href="../../de/d15/group__Utility.html">Utility</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,16 +112,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dcb/math_8h__dep__incl.png" border="0" usemap="#autil_2math_8hdep" alt=""/></div>
 <map name="autil_2math_8hdep" id="autil_2math_8hdep">
-<area shape="rect" title="Contains several different simple and independent math functions." alt="" coords="69,5,150,31"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html" title=" " alt="" coords="5,153,100,178"/>
-<area shape="poly" title=" " alt="" coords="102,46,60,153,55,151,97,44"/>
-<area shape="rect" href="../../d7/df5/winning_8h.html" title="Contains the function for checking if someone has won." alt="" coords="109,79,215,105"/>
-<area shape="poly" title=" " alt="" coords="129,42,155,77,151,80,125,45"/>
-<area shape="poly" title=" " alt="" coords="132,115,73,154,70,150,129,111"/>
-<area shape="rect" href="../../d1/d06/input_8c.html" title=" " alt="" coords="123,153,214,178"/>
-<area shape="poly" title=" " alt="" coords="167,120,170,152,165,152,162,120"/>
-<area shape="rect" href="../../d0/dfd/winning_8c.html" title=" " alt="" coords="238,153,344,178"/>
-<area shape="poly" title=" " alt="" coords="198,110,270,150,268,154,196,115"/>
+<area shape="rect" title="Contains several different simple and independent math functions." alt="" coords="74,5,166,33"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,157,110,184"/>
+<area shape="poly" title=" " alt="" coords="111,48,65,157,61,155,107,46"/>
+<area shape="rect" href="../../d7/df5/winning_8h.html" title="Contains the function for checking if someone has won." alt="" coords="116,81,236,109"/>
+<area shape="poly" title=" " alt="" coords="141,44,168,79,164,82,137,47"/>
+<area shape="poly" title=" " alt="" coords="144,119,80,159,77,154,141,115"/>
+<area shape="rect" href="../../d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="134,157,234,184"/>
+<area shape="poly" title=" " alt="" coords="182,124,185,156,180,157,177,124"/>
+<area shape="rect" href="../../d0/dfd/winning_8c.html" title="Implements the function for checking if someone has won." alt="" coords="258,157,377,184"/>
+<area shape="poly" title=" " alt="" coords="216,114,294,154,291,159,214,118"/>
 </map>
 </div>
 </div>
@@ -130,12 +130,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac6afabdc09a49a433ee19d8a9486056d" id="r_ac6afabdc09a49a433ee19d8a9486056d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6afabdc09a49a433ee19d8a9486056d">min</a>(a,  b)</td></tr>
+<tr class="memdesc:ac6afabdc09a49a433ee19d8a9486056d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum of two values.  <br /></td></tr>
 <tr class="separator:ac6afabdc09a49a433ee19d8a9486056d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe776513b24d84b39af8ab0930fef7f" id="r_affe776513b24d84b39af8ab0930fef7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe776513b24d84b39af8ab0930fef7f">max</a>(a,  b)</td></tr>
+<tr class="memdesc:affe776513b24d84b39af8ab0930fef7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum of two values.  <br /></td></tr>
 <tr class="separator:affe776513b24d84b39af8ab0930fef7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains several different simple and independent math functions. </p>
+<p>This file provides utility macros for basic mathematical operations, such as finding the minimum or maximum of two values.</p>
+<dl class="section see"><dt>See also</dt><dd>math.c</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
@@ -159,16 +163,20 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a &gt; b ? a : b</div>
-</div><!-- fragment --><p>Get the maximum out of two values </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>Get the maximum of two values. </p>
+<p>This macro evaluates to the larger of the two provided values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Some number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Some number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>The first value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>The second value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The maximum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The larger of the two values.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This macro does not perform type checking and may evaluate its arguments multiple times. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00032">32</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00052">52</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
 
 </div>
 </div>
@@ -191,16 +199,20 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">a &lt; b ? a : b</div>
-</div><!-- fragment --><p>Get the minimum out of two values </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>Get the minimum of two values. </p>
+<p>This macro evaluates to the smaller of the two provided values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Some number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Some number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>The first value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>The second value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The minimum </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The smaller of the two values.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This macro does not perform type checking and may evaluate its arguments multiple times. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00022">22</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/db1/math_8h_source.html#l00036">36</a> of file <a class="el" href="../../df/db1/math_8h_source.html">math.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +222,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_586ad3c2f85d776b984733890d824e3e.html">util</a></li><li class="navelem"><a class="el" href="../../df/db1/math_8h.html">math.h</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,8 +1,9 @@
-.TH "Style" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "Style" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Style
+Style \- Represents a style with foreground color, background color, and font style\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,30 +15,43 @@ Style
 .ti -1c
 .RI "char * \fBfg_color\fP"
 .br
+.RI "Foreground color escape sequence\&. "
 .ti -1c
 .RI "char * \fBbg_color\fP"
 .br
+.RI "Background color escape sequence\&. "
 .ti -1c
 .RI "char * \fBfont_style\fP"
 .br
+.RI "Font style escape sequence\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line \fB14\fP of file \fBstyle\&.h\fP\&.
+Represents a style with foreground color, background color, and font style\&. 
+
+This struct is used to define a combination of terminal styling attributes\&. 
+.PP
+Definition at line \fB29\fP of file \fBstyle\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "char* Style::bg_color"
 
 .PP
-Definition at line \fB17\fP of file \fBstyle\&.h\fP\&.
+Background color escape sequence\&. 
+.PP
+Definition at line \fB32\fP of file \fBstyle\&.h\fP\&.
 .SS "char* Style::fg_color"
 
 .PP
-Definition at line \fB16\fP of file \fBstyle\&.h\fP\&.
+Foreground color escape sequence\&. 
+.PP
+Definition at line \fB31\fP of file \fBstyle\&.h\fP\&.
 .SS "char* Style::font_style"
 
 .PP
-Definition at line \fB18\fP of file \fBstyle\&.h\fP\&.
+Font style escape sequence\&. 
+.PP
+Definition at line \fB33\fP of file \fBstyle\&.h\fP\&.
 
 .SH "Author"
 .PP 

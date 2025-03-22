@@ -104,6 +104,9 @@ $(function(){initNavTree('dd/da6/field_8c.html','../../'); initResizable(true); 
   <div class="headertitle"><div class="title">field.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implements the rendering of the TikTakToe field.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d5a/field_8h_source.html">presentation/field.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/ddd/cell_8h_source.html">presentation/cell.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d08/cursor_8h_source.html">presentation/cursor.h</a>&quot;</code><br />
@@ -116,40 +119,40 @@ Include dependency graph for field.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d88/field_8c__incl.png" border="0" usemap="#apresentation_2field_8c" alt=""/></div>
 <map name="apresentation_2field_8c" id="apresentation_2field_8c">
-<area shape="rect" title=" " alt="" coords="288,5,417,31"/>
-<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="147,226,276,252"/>
-<area shape="poly" title=" " alt="" coords="334,34,306,54,280,81,259,114,242,149,221,212,215,211,237,147,254,111,276,77,303,50,331,29"/>
-<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="5,308,71,333"/>
-<area shape="poly" title=" " alt="" coords="318,34,271,54,224,81,194,105,166,133,117,192,79,250,53,295,48,293,74,247,113,189,162,129,190,101,220,77,269,49,316,29"/>
-<area shape="rect" title=" " alt="" coords="95,308,162,333"/>
-<area shape="poly" title=" " alt="" coords="330,34,295,54,258,81,185,146,160,179,137,227,129,260,129,292,123,292,124,259,131,225,155,176,181,142,255,77,292,50,327,29"/>
-<area shape="rect" href="../../d0/ddd/cell_8h.html" title="Contains functions for changing the presentation of cells." alt="" coords="290,79,416,105"/>
-<area shape="poly" title=" " alt="" coords="355,31,355,63,350,63,350,31"/>
-<area shape="rect" title=" " alt="" coords="488,308,551,333"/>
-<area shape="poly" title=" " alt="" coords="418,23,540,37,684,62,753,79,815,100,863,123,881,137,895,151,907,173,911,193,907,212,896,229,880,243,859,256,807,278,745,294,680,306,567,319,566,313,679,301,744,289,805,273,857,252,877,239,892,225,902,210,905,193,902,175,891,154,878,141,860,128,812,105,752,85,683,68,539,43,417,28"/>
-<area shape="rect" href="../../d8/d08/cursor_8h.html" title="Contains function for moving the presentation of the cursor." alt="" coords="739,153,881,178"/>
-<area shape="poly" title=" " alt="" coords="418,27,516,47,623,76,706,109,775,143,773,148,703,114,621,82,514,52,417,33"/>
-<area shape="rect" href="../../d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="479,79,610,105"/>
-<area shape="poly" title=" " alt="" coords="386,29,499,71,497,76,384,34"/>
-<area shape="poly" title=" " alt="" coords="186,255,79,303,77,298,184,250"/>
-<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="187,300,310,341"/>
-<area shape="poly" title=" " alt="" coords="219,251,235,285,230,287,215,254"/>
-<area shape="poly" title=" " alt="" coords="201,254,154,298,151,294,197,250"/>
-<area shape="poly" title=" " alt="" coords="343,107,296,155,235,217,231,213,292,151,339,103"/>
-<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="306,153,400,178"/>
-<area shape="poly" title=" " alt="" coords="355,105,355,137,350,137,350,105"/>
-<area shape="poly" title=" " alt="" coords="368,103,413,151,468,227,508,293,503,296,463,230,409,154,364,107"/>
-<area shape="poly" title=" " alt="" coords="330,181,250,221,248,217,327,176"/>
-<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="300,226,405,252"/>
-<area shape="poly" title=" " alt="" coords="355,179,355,211,350,211,350,179"/>
-<area shape="poly" title=" " alt="" coords="367,177,420,224,497,295,494,299,416,228,364,181"/>
-<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="335,308,384,333"/>
-<area shape="poly" title=" " alt="" coords="356,252,360,292,354,292,351,253"/>
-<area shape="poly" title=" " alt="" coords="379,250,482,298,479,303,377,255"/>
-<area shape="poly" title=" " alt="" coords="788,181,557,302,555,298,786,176"/>
-<area shape="poly" title=" " alt="" coords="546,106,525,293,520,292,541,105"/>
-<area shape="rect" href="../../de/d12/style_8h.html" title="Contains several constants to simplify the styling of output." alt="" coords="582,153,715,178"/>
-<area shape="poly" title=" " alt="" coords="564,103,620,141,617,146,561,107"/>
+<area shape="rect" title="Implements the rendering of the TikTakToe field." alt="" coords="307,5,453,33"/>
+<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="149,232,296,260"/>
+<area shape="poly" title=" " alt="" coords="358,36,328,56,300,83,276,116,258,153,233,218,228,216,253,151,272,114,295,79,325,52,355,31"/>
+<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="5,316,78,344"/>
+<area shape="poly" title=" " alt="" coords="336,36,285,56,234,83,202,107,173,135,122,196,83,256,57,304,52,301,79,254,118,193,169,132,199,103,231,79,283,51,334,31"/>
+<area shape="rect" title=" " alt="" coords="102,316,176,344"/>
+<area shape="poly" title=" " alt="" coords="353,36,302,64,240,107,210,134,182,164,158,197,140,233,134,268,136,301,130,301,128,267,135,231,153,194,178,160,206,130,237,103,299,60,351,31"/>
+<area shape="rect" href="../../d0/ddd/cell_8h.html" title="Contains functions and definitions for managing the presentation of cells." alt="" coords="309,81,451,109"/>
+<area shape="poly" title=" " alt="" coords="383,34,383,65,378,65,378,34"/>
+<area shape="rect" title=" " alt="" coords="517,316,587,344"/>
+<area shape="poly" title=" " alt="" coords="454,24,585,38,738,63,812,80,877,101,928,126,948,140,962,155,976,179,980,200,976,220,964,238,946,253,923,267,866,289,798,306,726,317,603,329,603,324,726,312,797,300,864,284,921,262,943,249,960,234,971,218,974,200,971,180,958,158,944,144,926,131,875,106,811,86,737,68,584,43,453,29"/>
+<area shape="rect" href="../../d8/d08/cursor_8h.html" title="Contains functions for moving the presentation of the cursor." alt="" coords="790,157,949,184"/>
+<area shape="poly" title=" " alt="" coords="454,29,555,49,665,78,755,113,831,147,829,152,753,117,663,84,554,55,453,35"/>
+<area shape="rect" href="../../d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="503,81,652,109"/>
+<area shape="poly" title=" " alt="" coords="416,31,529,73,527,78,415,36"/>
+<area shape="poly" title=" " alt="" coords="195,263,85,312,83,307,193,258"/>
+<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains ASCII art constants for the TikTakToe game." alt="" coords="200,308,337,353"/>
+<area shape="poly" title=" " alt="" coords="232,259,251,293,246,295,228,262"/>
+<area shape="poly" title=" " alt="" coords="211,263,165,308,161,304,207,259"/>
+<area shape="poly" title=" " alt="" coords="369,111,249,224,246,220,365,107"/>
+<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="328,157,433,184"/>
+<area shape="poly" title=" " alt="" coords="383,109,383,141,378,141,378,109"/>
+<area shape="poly" title=" " alt="" coords="398,107,448,155,502,233,541,301,536,304,498,236,443,158,395,111"/>
+<area shape="poly" title=" " alt="" coords="353,187,265,228,263,223,351,182"/>
+<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="321,232,439,260"/>
+<area shape="poly" title=" " alt="" coords="383,185,383,217,378,217,378,185"/>
+<area shape="poly" title=" " alt="" coords="397,183,453,230,530,304,527,308,449,234,394,187"/>
+<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="362,316,415,344"/>
+<area shape="poly" title=" " alt="" coords="384,260,388,301,383,301,379,261"/>
+<area shape="poly" title=" " alt="" coords="409,258,512,307,510,312,407,263"/>
+<area shape="poly" title=" " alt="" coords="844,187,593,312,591,307,842,183"/>
+<area shape="poly" title=" " alt="" coords="579,109,558,301,553,301,573,109"/>
+<area shape="rect" href="../../de/d12/style_8h.html" title="Contains several constants to simplify the styling of output." alt="" coords="615,157,766,184"/>
+<area shape="poly" title=" " alt="" coords="599,107,660,146,657,150,596,111"/>
 </map>
 </div>
 </div>
@@ -158,16 +161,15 @@ Include dependency graph for field.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1b9c763dcae98750455d20a27f4f1a4a" id="r_a1b9c763dcae98750455d20a27f4f1a4a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b9c763dcae98750455d20a27f4f1a4a">printRow</a> (char **row, size_t row_length)</td></tr>
-<tr class="memdesc:a1b9c763dcae98750455d20a27f4f1a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print one row.  <br /></td></tr>
+<tr class="memdesc:a1b9c763dcae98750455d20a27f4f1a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print one row of the field.  <br /></td></tr>
 <tr class="separator:a1b9c763dcae98750455d20a27f4f1a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0c2012ab22c49c338449956fc0dd68" id="r_a3d0c2012ab22c49c338449956fc0dd68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0c2012ab22c49c338449956fc0dd68">field_redraw</a> ()</td></tr>
 <tr class="memdesc:a3d0c2012ab22c49c338449956fc0dd68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw the whole 2D field.  <br /></td></tr>
 <tr class="separator:a3d0c2012ab22c49c338449956fc0dd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section see"><dt>See also</dt><dd></dd></dl>
+<div class="textblock"><p>Implements the rendering of the TikTakToe field. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field.">field.h</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../dd/da6/field_8c_source.html">field.c</a>.</p>
@@ -188,31 +190,32 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Redraw the whole 2D field. </p>
+<p>This function renders the entire tic-tac-toe field, including borders and empty cells, based on the current configuration. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/da6/field_8c_source.html#l00037">37</a> of file <a class="el" href="../../dd/da6/field_8c_source.html">field.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/da6/field_8c_source.html#l00035">35</a> of file <a class="el" href="../../dd/da6/field_8c_source.html">field.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/d16/config_8h_source.html#l00028">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00027">CELLS_PER_ROW</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00044">CORNER_BOT_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00046">CORNER_BOT_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00043">CORNER_TOP_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00045">CORNER_TOP_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00053">CROSS</a>, <a class="el" href="../../dd/dfa/cursor_8c_source.html#l00032">cursor_moveTo()</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00057">EMPTY</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00018">FIELD_X_OFFSET</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00019">FIELD_Y_OFFSET</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00026">g_cell_size</a>, <a class="el" href="../../d0/ddd/cell_8h_source.html#l00038">CellSize::height</a>, <a class="el" href="../../dd/da6/field_8c_source.html#l00100">printRow()</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00055">SIDE</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00051">T_BOT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00048">T_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00049">T_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00050">T_TOP</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00056">TOP_BOTTOM</a>, and <a class="el" href="../../d0/ddd/cell_8h_source.html#l00037">CellSize::width</a>.</p>
+<p class="reference">References <a class="el" href="../../db/d16/config_8h_source.html#l00060">CELLS_PER_COL</a>, <a class="el" href="../../db/d16/config_8h_source.html#l00051">CELLS_PER_ROW</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00065">CORNER_BOT_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00067">CORNER_BOT_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00064">CORNER_TOP_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00066">CORNER_TOP_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00074">CROSS</a>, <a class="el" href="../../dd/dfa/cursor_8c_source.html#l00034">cursor_moveTo()</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00078">EMPTY</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00032">FIELD_X_OFFSET</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00038">FIELD_Y_OFFSET</a>, <a class="el" href="../../db/dcc/cell_8c_source.html#l00022">g_cell_size</a>, <a class="el" href="../../d0/ddd/cell_8h_source.html#l00053">CellSize::height</a>, <a class="el" href="../../dd/da6/field_8c_source.html#l00098">printRow()</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00076">SIDE</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00072">T_BOT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00069">T_LEFT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00070">T_RIGHT</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00071">T_TOP</a>, <a class="el" href="../../d5/d5a/field_8h_source.html#l00077">TOP_BOTTOM</a>, and <a class="el" href="../../d0/ddd/cell_8h_source.html#l00052">CellSize::width</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_cgraph.png" border="0" usemap="#add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_cgraph" alt=""/></div>
 <map name="add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_cgraph" id="add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_cgraph">
-<area shape="rect" title="Redraw the whole 2D field." alt="" coords="5,80,96,106"/>
-<area shape="rect" href="../../dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move cursor to the given coordinates." alt="" coords="144,55,255,80"/>
-<area shape="poly" title=" " alt="" coords="96,83,128,77,129,82,97,88"/>
-<area shape="rect" href="../../dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row." alt="" coords="163,104,236,130"/>
-<area shape="poly" title=" " alt="" coords="97,97,148,106,147,111,96,103"/>
-<area shape="rect" href="../../d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title=" " alt="" coords="322,5,397,31"/>
-<area shape="poly" title=" " alt="" coords="243,51,306,32,308,37,244,57"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="336,104,382,130"/>
-<area shape="poly" title=" " alt="" coords="244,78,322,103,321,108,243,84"/>
-<area shape="rect" href="../../dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="TODO: ?????" alt="" coords="303,55,415,80"/>
-<area shape="poly" title=" " alt="" coords="256,65,287,65,287,70,256,70"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="463,104,568,130"/>
-<area shape="poly" title=" " alt="" coords="383,114,448,114,448,120,383,120"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="616,104,715,130"/>
-<area shape="poly" title=" " alt="" coords="568,114,600,114,600,120,568,120"/>
-<area shape="poly" title=" " alt="" coords="236,114,321,114,321,120,236,120"/>
+<area shape="rect" title="Redraw the whole 2D field." alt="" coords="5,84,107,112"/>
+<area shape="rect" href="../../dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="155,57,274,85"/>
+<area shape="poly" title=" " alt="" coords="107,87,138,81,139,86,107,92"/>
+<area shape="rect" href="../../dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row of the field." alt="" coords="175,109,254,137"/>
+<area shape="poly" title=" " alt="" coords="107,103,160,112,159,117,107,109"/>
+<area shape="rect" href="../../d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="342,5,424,33"/>
+<area shape="poly" title=" " alt="" coords="261,54,326,34,328,39,263,59"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="357,109,408,137"/>
+<area shape="poly" title=" " alt="" coords="263,83,343,108,341,113,261,88"/>
+<area shape="rect" href="../../dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="322,57,443,85"/>
+<area shape="poly" title=" " alt="" coords="275,68,306,68,306,74,275,74"/>
+<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="491,109,609,137"/>
+<area shape="poly" title=" " alt="" coords="409,120,476,120,476,126,409,126"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="657,109,768,137"/>
+<area shape="poly" title=" " alt="" coords="609,120,641,120,641,126,609,126"/>
+<area shape="poly" title=" " alt="" coords="255,120,341,120,341,126,255,126"/>
 </map>
 </div>
 <div class="dynheader">
@@ -220,18 +223,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_icgraph.png" border="0" usemap="#add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_icgraph" alt=""/></div>
 <map name="add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_icgraph" id="add/da6/field_8c_a3d0c2012ab22c49c338449956fc0dd68_icgraph">
-<area shape="rect" title="Redraw the whole 2D field." alt="" coords="651,5,741,31"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="515,5,603,31"/>
-<area shape="poly" title=" " alt="" coords="635,21,603,21,603,16,635,16"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
-<area shape="poly" title=" " alt="" coords="500,21,381,21,381,16,500,16"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="428,31,467,56"/>
-<area shape="poly" title=" " alt="" coords="501,34,467,42,466,37,499,29"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
-<area shape="poly" title=" " alt="" coords="286,21,254,21,254,16,286,16"/>
-<area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-<area shape="poly" title=" " alt="" coords="413,38,380,30,382,25,414,33"/>
+<area shape="rect" title="Redraw the whole 2D field." alt="" coords="693,5,794,33"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="548,5,645,33"/>
+<area shape="poly" title=" " alt="" coords="677,22,646,22,646,16,677,16"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,5,409,33"/>
+<area shape="poly" title=" " alt="" coords="532,22,410,22,410,16,532,16"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes relevant things at the game start." alt="" coords="457,31,500,58"/>
+<area shape="poly" title=" " alt="" coords="533,36,501,43,499,37,532,30"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="108,5,275,33"/>
+<area shape="poly" title=" " alt="" coords="308,22,275,22,275,16,308,16"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
+<area shape="poly" title=" " alt="" coords="442,39,409,32,410,26,443,34"/>
 </map>
 </div>
 
@@ -264,30 +267,30 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Print one row. </p>
+<p>Print one row of the field. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>String to print </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">row_length</td><td>Length of string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>Array of strings representing the row to print. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row_length</td><td>Length of the row array. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/da6/field_8c_source.html#l00100">100</a> of file <a class="el" href="../../dd/da6/field_8c_source.html">field.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/da6/field_8c_source.html#l00098">98</a> of file <a class="el" href="../../dd/da6/field_8c_source.html">field.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/db1/print_8c_source.html#l00030">print()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/db1/print_8c_source.html#l00025">print()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_cgraph.png" border="0" usemap="#add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_cgraph" alt=""/></div>
 <map name="add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_cgraph" id="add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_cgraph">
-<area shape="rect" title="Print one row." alt="" coords="5,5,78,31"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="126,5,172,31"/>
-<area shape="poly" title=" " alt="" coords="78,16,110,16,110,21,78,21"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="220,5,324,31"/>
-<area shape="poly" title=" " alt="" coords="172,16,205,16,205,21,172,21"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="372,5,472,31"/>
-<area shape="poly" title=" " alt="" coords="325,16,357,16,357,21,325,21"/>
+<area shape="rect" title="Print one row of the field." alt="" coords="5,5,85,33"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="133,5,184,33"/>
+<area shape="poly" title=" " alt="" coords="85,16,117,16,117,22,85,22"/>
+<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="232,5,349,33"/>
+<area shape="poly" title=" " alt="" coords="184,16,217,16,217,22,184,22"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="397,5,509,33"/>
+<area shape="poly" title=" " alt="" coords="350,16,381,16,381,22,350,22"/>
 </map>
 </div>
 <div class="dynheader">
@@ -295,20 +298,20 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_icgraph.png" border="0" usemap="#add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_icgraph" alt=""/></div>
 <map name="add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_icgraph" id="add/da6/field_8c_a1b9c763dcae98750455d20a27f4f1a4a_icgraph">
-<area shape="rect" title="Print one row." alt="" coords="789,5,862,31"/>
-<area shape="rect" href="../../dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="651,5,741,31"/>
-<area shape="poly" title=" " alt="" coords="774,21,742,21,742,16,774,16"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="515,5,603,31"/>
-<area shape="poly" title=" " alt="" coords="635,21,603,21,603,16,635,16"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
-<area shape="poly" title=" " alt="" coords="500,21,381,21,381,16,500,16"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes several things at the game start." alt="" coords="428,31,467,56"/>
-<area shape="poly" title=" " alt="" coords="501,34,467,42,466,37,499,29"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
-<area shape="poly" title=" " alt="" coords="286,21,254,21,254,16,286,16"/>
-<area shape="rect" href="../../d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-<area shape="poly" title=" " alt="" coords="413,38,380,30,382,25,414,33"/>
+<area shape="rect" title="Print one row of the field." alt="" coords="842,5,922,33"/>
+<area shape="rect" href="../../dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="693,5,794,33"/>
+<area shape="poly" title=" " alt="" coords="827,22,795,22,795,16,827,16"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="548,5,645,33"/>
+<area shape="poly" title=" " alt="" coords="677,22,646,22,646,16,677,16"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,5,409,33"/>
+<area shape="poly" title=" " alt="" coords="532,22,410,22,410,16,532,16"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes relevant things at the game start." alt="" coords="457,31,500,58"/>
+<area shape="poly" title=" " alt="" coords="533,36,501,43,499,37,532,30"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="108,5,275,33"/>
+<area shape="poly" title=" " alt="" coords="308,22,275,22,275,16,308,16"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
+<area shape="poly" title=" " alt="" coords="442,39,409,32,410,26,443,34"/>
 </map>
 </div>
 
@@ -320,7 +323,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_6128f950e94a9f4f19db7ca2cf549754.html">presentation</a></li><li class="navelem"><a class="el" href="../../dd/da6/field_8c.html">field.c</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

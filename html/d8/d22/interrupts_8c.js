@@ -1,5 +1,5 @@
 var interrupts_8c =
 [
-    [ "Interrupt2_Handler", "d8/d22/interrupts_8c.html#add4c333e4b7c9a2d571899bbbc9643e5", null ],
-    [ "Interrupt8_Handler", "d8/d22/interrupts_8c.html#a3c7085a34fe542a77ebd37e7e72c2737", null ]
+    [ "Interrupt2_Handler", "d8/d22/interrupts_8c.html#a0c135cb06b41d4db1ff45f59fd28dfb6", null ],
+    [ "Interrupt8_Handler", "d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317", null ]
 ];

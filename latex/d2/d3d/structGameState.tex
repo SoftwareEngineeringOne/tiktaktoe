@@ -11,8 +11,7 @@ The current game state.
 
 
 
-Collaboration diagram for Game\+State\+:
-\nopagebreak
+Collaboration diagram for Game\+State\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,33 +24,38 @@ Collaboration diagram for Game\+State\+:
 \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} \mbox{\hyperlink{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}{winner}}
 \begin{DoxyCompactList}\small\item\em None if tie or game not over. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} \mbox{\hyperlink{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}{mode}}
-\item 
+\begin{DoxyCompactList}\small\item\em Current game mode. \end{DoxyCompactList}\item 
 volatile uint8\+\_\+t \mbox{\hyperlink{structGameState_ae8ebeea829ef77885e6462b8da99639b}{round}}
-\item 
+\begin{DoxyCompactList}\small\item\em Current round number. \end{DoxyCompactList}\item 
 volatile uint8\+\_\+t \mbox{\hyperlink{structGameState_ab361219d03b1817f4a93fea087d3eb92}{fields\+\_\+marked}}
-\item 
+\begin{DoxyCompactList}\small\item\em Number of fields marked so far. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} \mbox{\hyperlink{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}{current\+\_\+player}}
-\item 
+\begin{DoxyCompactList}\small\item\em Player whose turn it is. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}{total\+\_\+ticks}}
-\item 
+\begin{DoxyCompactList}\small\item\em Total ticks elapsed in the game. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_a4076f4aa22c3839c26be1f8c31c392c4}{average\+\_\+ticks}}
-\item 
+\begin{DoxyCompactList}\small\item\em Average ticks per turn. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_a442e43c7e1a24a347570004c3cb69d92}{cross\+\_\+total\+\_\+ticks}}
-\item 
+\begin{DoxyCompactList}\small\item\em Total ticks for Player Cross. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_acaee692f8af10b76456fccca13451ba9}{cross\+\_\+average\+\_\+ticks}}
-\item 
+\begin{DoxyCompactList}\small\item\em Average ticks for Player Cross. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}{circle\+\_\+total\+\_\+ticks}}
-\item 
+\begin{DoxyCompactList}\small\item\em Total ticks for Player Circle. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{structGameState_a297936a8a0f84738c04962fb19d670e6}{circle\+\_\+average\+\_\+ticks}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Average ticks for Player Circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The current game state. 
 
-Contains important game information and several metrics 
+Contains important game information and several metrics for tracking the game\textquotesingle{}s progress.
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00060}{60}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+\begin{DoxyNote}{Note}
+Some of the fields are only calculated once the game is over. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00072}{72}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 
 
@@ -64,7 +68,11 @@ uint32\+\_\+t Game\+State\+::average\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00070}{70}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Average ticks per turn. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00082}{82}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_a297936a8a0f84738c04962fb19d670e6}\index{GameState@{GameState}!circle\_average\_ticks@{circle\_average\_ticks}}
 \index{circle\_average\_ticks@{circle\_average\_ticks}!GameState@{GameState}}
@@ -74,7 +82,11 @@ uint32\+\_\+t Game\+State\+::circle\+\_\+average\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00076}{76}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Average ticks for Player Circle. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00088}{88}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_a721c1ce85bb7835ba5e0b81daaa564f8}\index{GameState@{GameState}!circle\_total\_ticks@{circle\_total\_ticks}}
 \index{circle\_total\_ticks@{circle\_total\_ticks}!GameState@{GameState}}
@@ -84,7 +96,11 @@ uint32\+\_\+t Game\+State\+::circle\+\_\+total\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00075}{75}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Total ticks for Player Circle. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00087}{87}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_acaee692f8af10b76456fccca13451ba9}\index{GameState@{GameState}!cross\_average\_ticks@{cross\_average\_ticks}}
 \index{cross\_average\_ticks@{cross\_average\_ticks}!GameState@{GameState}}
@@ -94,7 +110,11 @@ uint32\+\_\+t Game\+State\+::cross\+\_\+average\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00073}{73}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Average ticks for Player Cross. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00085}{85}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_a442e43c7e1a24a347570004c3cb69d92}\index{GameState@{GameState}!cross\_total\_ticks@{cross\_total\_ticks}}
 \index{cross\_total\_ticks@{cross\_total\_ticks}!GameState@{GameState}}
@@ -104,7 +124,11 @@ uint32\+\_\+t Game\+State\+::cross\+\_\+total\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00072}{72}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Total ticks for Player Cross. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00084}{84}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_acf67b695b4a4350a22bb4d5d7a3f6a75}\index{GameState@{GameState}!current\_player@{current\_player}}
 \index{current\_player@{current\_player}!GameState@{GameState}}
@@ -114,7 +138,11 @@ Definition at line \mbox{\hyperlink{game_8h_source_l00072}{72}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00066}{66}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Player whose turn it is. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00078}{78}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_ab361219d03b1817f4a93fea087d3eb92}\index{GameState@{GameState}!fields\_marked@{fields\_marked}}
 \index{fields\_marked@{fields\_marked}!GameState@{GameState}}
@@ -124,7 +152,11 @@ volatile uint8\+\_\+t Game\+State\+::fields\+\_\+marked}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00065}{65}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Number of fields marked so far. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00077}{77}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_a15e3eb27612e90a6f458a5b6a707e0f2}\index{GameState@{GameState}!mode@{mode}}
 \index{mode@{mode}!GameState@{GameState}}
@@ -134,7 +166,11 @@ Definition at line \mbox{\hyperlink{game_8h_source_l00065}{65}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00063}{63}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Current game mode. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00075}{75}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_ae8ebeea829ef77885e6462b8da99639b}\index{GameState@{GameState}!round@{round}}
 \index{round@{round}!GameState@{GameState}}
@@ -144,7 +180,11 @@ volatile uint8\+\_\+t Game\+State\+::round}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00064}{64}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Current round number. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00076}{76}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_ab0861af55e220d7a5f1a1afeacecbdf4}\index{GameState@{GameState}!total\_ticks@{total\_ticks}}
 \index{total\_ticks@{total\_ticks}!GameState@{GameState}}
@@ -154,7 +194,11 @@ uint32\+\_\+t Game\+State\+::total\+\_\+ticks}
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00069}{69}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Total ticks elapsed in the game. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00081}{81}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 \Hypertarget{structGameState_aba9ac0d9f07a438df37e58fb9de54c1f}\index{GameState@{GameState}!winner@{winner}}
 \index{winner@{winner}!GameState@{GameState}}
@@ -168,7 +212,7 @@ None if tie or game not over.
 
 
 
-Definition at line \mbox{\hyperlink{game_8h_source_l00062}{62}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+Definition at line \mbox{\hyperlink{game_8h_source_l00074}{74}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
 
 
 

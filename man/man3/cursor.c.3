@@ -1,8 +1,9 @@
-.TH "presentation/cursor.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/cursor.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-presentation/cursor.c
+presentation/cursor.c \- Implements cursor movement functionality for the presentation layer\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -19,27 +20,21 @@ presentation/cursor.c
 .ti -1c
 .RI "static void \fBwriteNumToBuf\fP (uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos)"
 .br
-.RI "TODO: ????? "
+.RI "Write a numeric value to a buffer\&. "
 .ti -1c
 .RI "void \fBcursor_moveTo\fP (const uint8_t x, const uint8_t y)"
 .br
-.RI "Move cursor to the given coordinates\&. "
+.RI "Move the cursor to the given coordinates\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implements cursor movement functionality for the presentation layer\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBcursor\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -55,39 +50,46 @@ Definition in file \fBcursor\&.c\fP\&.
 .SS "void cursor_moveTo (uint8_t x, uint8_t y)"
 
 .PP
-Move cursor to the given coordinates\&. 
+Move the cursor to the given coordinates\&. This function generates an escape sequence to move the cursor to the specified (x, y) position on the terminal\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fIx\fP X-Position 
+\fIx\fP X-coordinate of the cursor position\&. 
 .br
-\fIy\fP Y-Position 
+\fIy\fP Y-coordinate of the cursor position\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function can be improved by using new functions found in the conversion module and directly writing the string representation of the number to the target buffer\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB32\fP of file \fBcursor\&.c\fP\&.
+Definition at line \fB34\fP of file \fBcursor\&.c\fP\&.
 .PP
 References \fBint_to_str()\fP, \fBprint()\fP, and \fBwriteNumToBuf()\fP\&.
 .SS "static void writeNumToBuf (uint8_t num, const char * num_buf, char * buf, uint8_t * buf_pos)\fR [static]\fP"
 
 .PP
-TODO: ????? 
+Write a numeric value to a buffer\&. This function writes the string representation of a numeric value to a buffer while maintaining the current position in the buffer\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fInum\fP 
+\fInum\fP The numeric value to write\&. 
 .br
-\fInum_buf\fP 
+\fInum_buf\fP A buffer containing the string representation of the number\&. 
 .br
-\fIbuf\fP 
+\fIbuf\fP The target buffer to write to\&. 
 .br
-\fIbuf_pos\fP 
+\fIbuf_pos\fP Pointer to the current position in the target buffer\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB58\fP of file \fBcursor\&.c\fP\&.
+Definition at line \fB60\fP of file \fBcursor\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

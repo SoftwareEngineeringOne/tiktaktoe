@@ -1,4 +1,4 @@
-.TH "logic/game.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/game.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,9 +36,11 @@ logic/game.h \- Contains the game logic\&.
 .ti -1c
 .RI "#define \fBREMAINING_TIME\fP   (\fBTICKS_PER_TURN\fP \- g_timer\&.ticks_turn)"
 .br
+.RI "Remaining time for the current turn\&. "
 .ti -1c
 .RI "#define \fBFIRST_ROUND\fP   1"
 .br
+.RI "Constant representing the first round of the game\&. "
 .in -1c
 .SS "Enumerations"
 
@@ -62,7 +64,7 @@ logic/game.h \- Contains the game logic\&.
 .ti -1c
 .RI "void \fBgame_onTimeOut\fP ()"
 .br
-.RI "Automaticly end a turn in case the turn time is over\&. "
+.RI "Automatically end a turn in case the turn time is over\&. "
 .ti -1c
 .RI "void \fBgame_endTurn\fP ()"
 .br
@@ -72,7 +74,13 @@ logic/game.h \- Contains the game logic\&.
 .PP 
 Contains the game logic\&. 
 
+This file contains the core logic for the TikTakToe game, including game state management, player handling, and cell state tracking\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBgame\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -87,17 +95,21 @@ Definition in file \fBgame\&.h\fP\&.
 .SS "#define FIRST_ROUND   1"
 
 .PP
-Definition at line \fB20\fP of file \fBgame\&.h\fP\&.
+Constant representing the first round of the game\&. 
+.PP
+Definition at line \fB28\fP of file \fBgame\&.h\fP\&.
 .SS "#define REMAINING_TIME   (\fBTICKS_PER_TURN\fP \- g_timer\&.ticks_turn)"
 
 .PP
-Definition at line \fB19\fP of file \fBgame\&.h\fP\&.
+Remaining time for the current turn\&. 
+.PP
+Definition at line \fB27\fP of file \fBgame\&.h\fP\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBMode\fP"
 
 .PP
-Possible game modes\&. The game can be played in PVE or PVP mode 
+Possible game modes\&. The game can be played in Player vs Computer (PVE) or Player vs Player (PVP) mode\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
@@ -108,44 +120,55 @@ Player vs Computer\&.
 \f(BIPVP \fP
 Player vs Player\&. 
 .PP
-Definition at line \fB27\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB35\fP of file \fBgame\&.h\fP\&.
 .SS "enum \fBPlayer\fP"
 
 .PP
-Enum describing a player\&. 
+Enum describing a player\&. Represents the two players (Circle and Cross) and an unmarked state (None)\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \f(BICircle \fP
+Player Circle\&. 
 .TP
 \f(BICross \fP
+Player Cross\&. 
 .TP
 \f(BINone \fP
+No player (unmarked) 
 .PP
-Definition at line \fB36\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB46\fP of file \fBgame\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void game_endTurn ()"
 
 .PP
-Finish the current turn\&. 
+Finish the current turn\&. Updates the game state and switches to the next player or round\&. 
 .PP
-Definition at line \fB151\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB169\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, \fBPVE\fP, \fBGameState::round\fP, \fBCellState::selected\fP, and \fBtime_finishTurn()\fP\&.
 .SS "void game_onTimeOut ()"
 
 .PP
-Automaticly end a turn in case the turn time is over\&. 
+Automatically end a turn in case the turn time is over\&. 
 .PP
-Definition at line \fB131\fP of file \fBgame\&.c\fP\&.
+\fBSee also\fP
+.RS 4
+\fBtime_onInterrupt\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB149\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBbot_markRandomCell()\fP, \fBcell_state\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBforce_ui_update\fP, \fBgame_endTurn()\fP, \fBgame_state\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, \fBGameState::mode\fP, and \fBPVE\fP\&.
 .SS "void game_run (const \fBMode\fP mode)"
 
 .PP
-Start the main game\&. 
+Start the main game\&. Initializes the game and enters the main game loop\&.
+
 .PP
 \fBParameters\fP
 .RS 4
@@ -154,7 +177,7 @@ Start the main game\&.
 .PP
 
 .PP
-Definition at line \fB64\fP of file \fBgame\&.c\fP\&.
+Definition at line \fB82\fP of file \fBgame\&.c\fP\&.
 .PP
 References \fB__WFI\fP, \fBCellState::all\fP, \fBBOLD\fP, \fBbot_markRandomCell()\fP, \fBcalculateSummary()\fP, \fBcell_redraw_withModifier()\fP, \fBcell_redrawAll()\fP, \fBcell_select()\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCircle\fP, \fBCross\fP, \fBGameState::current_player\fP, \fBGameState::fields_marked\fP, \fBforce_ui_update\fP, \fBg_input_buf\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleForcedMoveUpdate()\fP, \fBinit()\fP, \fBinput_getNext()\fP, \fBinput_handleByte()\fP, \fBGameTimer::is_running\fP, \fBCellState::last_circle\fP, \fBmax\fP, \fBmenu_showGameOver()\fP, \fBGameState::mode\fP, \fBNone\fP, \fBPVE\fP, \fBredrawField()\fP, \fBREMAINING_TIME\fP, \fBGameState::round\fP, \fBCellState::selected\fP, \fBTICKS_PER_TURN\fP, \fBTIMER0\fP, \fBtimer_stop()\fP, \fBui_updateTimer()\fP, \fBui_updateTurn()\fP, \fBGameState::winner\fP, and \fBwinning_checkForWinner()\fP\&.
 .SH "Author"

@@ -114,27 +114,31 @@ Collaboration diagram for GameTimer:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/dc8/structGameTimer__coll__graph.png" border="0" usemap="#aGameTimer_coll__map" alt="Collaboration graph"/></div>
 <map name="aGameTimer_coll__map" id="aGameTimer_coll__map">
-<area shape="rect" title="Time information of the current game." alt="" coords="31,109,120,135"/>
-<area shape="rect" title=" " alt="" coords="5,5,52,31"/>
-<area shape="poly" title=" " alt="" coords="27,46,28,66,33,84,42,96,55,106,51,111,38,100,28,86,22,66,22,47"/>
-<area shape="rect" title=" " alt="" coords="88,5,156,31"/>
-<area shape="poly" title=" " alt="" coords="113,46,95,86,83,110,79,108,90,84,108,44"/>
+<area shape="rect" title="Time information of the current game." alt="" coords="32,115,130,143"/>
+<area shape="rect" title=" " alt="" coords="5,5,55,33"/>
+<area shape="poly" title=" " alt="" coords="28,48,28,69,33,90,43,102,56,113,53,117,39,106,29,92,22,70,22,48"/>
+<area shape="rect" title=" " alt="" coords="94,5,168,33"/>
+<area shape="poly" title=" " alt="" coords="124,48,104,92,91,116,86,113,100,90,119,46"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ad3003c430a09647532fad2d9615adbcc" id="r_ad3003c430a09647532fad2d9615adbcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/da4/def_8h.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3003c430a09647532fad2d9615adbcc">is_running</a></td></tr>
+<tr class="memdesc:ad3003c430a09647532fad2d9615adbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the timer is currently running.  <br /></td></tr>
 <tr class="separator:ad3003c430a09647532fad2d9615adbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c1b8ea1aa87bdcf80dd5e73972d39c7" id="r_a7c1b8ea1aa87bdcf80dd5e73972d39c7"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c1b8ea1aa87bdcf80dd5e73972d39c7">ticks_total</a></td></tr>
+<tr class="memdesc:a7c1b8ea1aa87bdcf80dd5e73972d39c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ticks since the game started.  <br /></td></tr>
 <tr class="separator:a7c1b8ea1aa87bdcf80dd5e73972d39c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4059f8e2311e2eb9050fb7925ef405fc" id="r_a4059f8e2311e2eb9050fb7925ef405fc"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4059f8e2311e2eb9050fb7925ef405fc">ticks_turn</a></td></tr>
+<tr class="memdesc:a4059f8e2311e2eb9050fb7925ef405fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ticks elapsed during the current turn.  <br /></td></tr>
 <tr class="separator:a4059f8e2311e2eb9050fb7925ef405fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Time information of the current game. </p>
+<p>This struct tracks whether the timer is running and the number of ticks elapsed in total and during the current turn. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00020">20</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00032">32</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="ad3003c430a09647532fad2d9615adbcc" name="ad3003c430a09647532fad2d9615adbcc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3003c430a09647532fad2d9615adbcc">&#9670;&#160;</a></span>is_running</h2>
@@ -148,7 +152,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00022">22</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
+<p>Indicates if the timer is currently running. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00034">34</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
 
 </div>
 </div>
@@ -164,7 +170,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00023">23</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
+<p>Total ticks since the game started. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00035">35</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +188,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00024">24</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
+<p>Ticks elapsed during the current turn. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/df7/time_8h_source.html#l00036">36</a> of file <a class="el" href="../../de/df7/time_8h_source.html">time.h</a>.</p>
 
 </div>
 </div>
@@ -193,7 +203,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/d8b/structGameTimer.html">GameTimer</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:38 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,21 +1,21 @@
 <map id="logic/bot.h" name="logic/bot.h">
-<area shape="rect" id="Node000001" title="Contains function for random cell marking." alt="" coords="244,5,325,31"/>
-<area shape="rect" id="Node000002" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="295,79,389,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="296,30,325,65,321,68,292,33"/>
-<area shape="rect" id="Node000003" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="151,153,280,178"/>
-<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="281,32,230,140,225,137,277,30"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,108,251,147,249,142,319,103"/>
-<area shape="rect" id="Node000007" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="304,153,409,178"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="347,104,354,137,348,138,342,105"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="413,234,476,260"/>
-<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="368,103,397,123,424,151,439,185,446,218,440,219,434,186,420,154,394,127,365,107"/>
-<area shape="rect" id="Node000004" href="$db/d16/config_8h.html" title=" " alt="" coords="5,234,71,260"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="189,181,80,230,78,225,187,176"/>
-<area shape="rect" id="Node000005" href="$d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="95,226,218,267"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="209,180,182,215,178,212,204,177"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="243,234,310,260"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="227,177,260,220,256,223,223,180"/>
-<area shape="rect" id="Node000008" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="335,234,384,260"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="360,179,361,218,356,218,354,179"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="372,177,422,221,418,225,368,181"/>
+<area shape="rect" id="Node000001" title="Bot logic for Tic&#45;Tac&#45;Toe game." alt="" coords="262,5,352,33"/>
+<area shape="rect" id="Node000002" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="316,81,421,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,32,350,67,346,71,316,35"/>
+<area shape="rect" id="Node000003" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="154,157,302,184"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="302,34,245,144,240,141,298,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,112,268,152,265,147,342,107"/>
+<area shape="rect" id="Node000007" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="326,157,445,184"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="374,109,381,141,376,142,369,110"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="444,241,514,268"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="399,107,430,127,458,155,474,190,480,225,475,225,469,192,454,158,427,131,396,111"/>
+<area shape="rect" id="Node000004" href="$db/d16/config_8h.html" title=" " alt="" coords="5,241,78,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="199,187,91,235,86,237,84,232,88,230,197,182"/>
+<area shape="rect" id="Node000005" href="$d2/d5a/ascii__art_8h.html" title="Contains ASCII art constants for the TikTakToe game." alt="" coords="102,232,240,277"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="221,186,197,221,192,218,217,183"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="264,241,337,268"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="242,183,281,228,277,231,238,187"/>
+<area shape="rect" id="Node000008" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="362,241,415,268"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="389,185,390,225,385,225,383,185"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="402,183,455,229,451,233,399,187"/>
 </map>

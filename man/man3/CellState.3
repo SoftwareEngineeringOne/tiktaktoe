@@ -1,4 +1,4 @@
-.TH "CellState" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "CellState" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,17 +23,19 @@ CellState \- The current state of the cells\&.
 .ti -1c
 .RI "\fBCell\fP * \fBlast_cross\fP"
 .br
-.RI "Pointer to the cell last marked by cross\&. "
+.RI "Pointer to the cell last marked by Cross\&. "
 .ti -1c
 .RI "\fBCell\fP * \fBlast_circle\fP"
 .br
-.RI "Pointer to the last cell marked by circle\&. "
+.RI "Pointer to the last cell marked by Circle\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 The current state of the cells\&. 
+
+Tracks all cells on the field and pointers to specific cells for easier access\&. 
 .PP
-Definition at line \fB82\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB96\fP of file \fBgame\&.h\fP\&.
 .SH "Field Documentation"
 .PP 
 .SS "\fBCell\fP CellState::all[\fBCELLS_PER_COL\fP][\fBCELLS_PER_ROW\fP]"
@@ -41,25 +43,25 @@ Definition at line \fB82\fP of file \fBgame\&.h\fP\&.
 .PP
 All cells of the match\&. 
 .PP
-Definition at line \fB84\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB98\fP of file \fBgame\&.h\fP\&.
 .SS "\fBCell\fP* CellState::last_circle"
 
 .PP
-Pointer to the last cell marked by circle\&. 
+Pointer to the last cell marked by Circle\&. 
 .PP
-Definition at line \fB87\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB101\fP of file \fBgame\&.h\fP\&.
 .SS "\fBCell\fP* CellState::last_cross"
 
 .PP
-Pointer to the cell last marked by cross\&. 
+Pointer to the cell last marked by Cross\&. 
 .PP
-Definition at line \fB86\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB100\fP of file \fBgame\&.h\fP\&.
 .SS "\fBCell\fP* CellState::selected"
 
 .PP
 Pointer to the currently selected cell\&. 
 .PP
-Definition at line \fB85\fP of file \fBgame\&.h\fP\&.
+Definition at line \fB99\fP of file \fBgame\&.h\fP\&.
 
 .SH "Author"
 .PP 

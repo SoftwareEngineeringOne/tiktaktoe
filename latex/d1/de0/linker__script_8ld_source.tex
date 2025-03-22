@@ -1,0 +1,107 @@
+\doxysection{linker\+\_\+script.\+ld}
+\hypertarget{linker__script_8ld_source}{}\label{linker__script_8ld_source}\index{/github/workspace/entry/linker\_script.ld@{/github/workspace/entry/linker\_script.ld}}
+\mbox{\hyperlink{linker__script_8ld}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00001}00001\ /**}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00002}00002\ \ *\ @file\ linker\_script.ld}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00003}00003\ \ *}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00004}00004\ \ *\ @brief\ ARM\ Cortex-\/M0\ Linker\ Script.}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00005}00005\ \ *}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00006}00006\ \ *\ @note}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00007}00007\ \ *\ Based\ on\ version\ by\ Thomas\ Vogt\ and\ Sven\ Reis}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00008}00008\ \ *}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00009}00009\ \ *\ @copyright}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00010}00010\ \ *\ This\ Source\ Code\ Form\ is\ subject\ to\ the\ terms\ of\ the\ Mozilla\ Public}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00011}00011\ \ *\ License,\ v2.0.\ If\ a\ copy\ of\ the\ MPL\ was\ not\ distributed\ with\ this}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00012}00012\ \ *\ file,\ You\ can\ obtain\ one\ at\ http://mozilla.org/MPL/2.0/.}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00013}00013\ \ *}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00014}00014\ \ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00016}00016\ /*\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00017}00017\ *\ Flash\ Configuration:}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00018}00018\ *\ -\/\ Start:\ \ \ \ \ \ \ \ 0x00000000}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00019}00019\ *\ -\/\ Size:\ \ \ \ \ \ \ \ \ 262KB}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00020}00020\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00021}00021\ \_\_ROM\_BASE\ =\ 0x00000000;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00022}00022\ \_\_ROM\_SIZE\ =\ 0x00040000;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00024}00024\ /*\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00025}00025\ *\ RAM\ Configuration:}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00026}00026\ *\ -\/\ Start:\ \ \ \ \ \ \ \ 0x20000000\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00027}00027\ *\ -\/\ Total\ Size:\ \ \ 16KB}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00028}00028\ *\ -\/\ Stack\ Size:\ \ \ 1024KB}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00029}00029\ *\ -\/\ Heap\ Size:\ \ \ \ 0B}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00030}00030\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00031}00031\ \_\_RAM\_BASE\ =\ 0x20000000;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00032}00032\ \_\_RAM\_SIZE\ =\ 0x00004000;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00033}00033\ \_\_STACK\_SIZE\ =\ 0x00000400;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00034}00034\ \_\_HEAP\_SIZE\ \ =\ 0x00000000;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00037}00037\ ENTRY\ (\ Reset\_Handler\ )}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00039}00039\ MEMORY}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00041}00041\ \ \ \ \ FLASH\ (rx)\ \ :\ ORIGIN\ =\ \_\_ROM\_BASE,\ LENGTH\ =\ \_\_ROM\_SIZE}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00042}00042\ \ \ \ \ RAM\ \ \ (rwx)\ :\ ORIGIN\ =\ \_\_RAM\_BASE,\ LENGTH\ =\ \_\_RAM\_SIZE}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00045}00045\ SECTIONS}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00047}00047\ \ \ \ \ /*\ Interrupt\ Vector\ Table\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00048}00048\ \ \ \ \ .isr\_vectors\ :\ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00049}00049\ \ \ \ \ \ \ \ \ KEEP(*(.isr\_vectors))}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00050}00050\ \ \ \ \ \}\ >\ FLASH}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00052}00052\ \ \ \ \ /*\ Executable\ Code\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00053}00053\ \ \ \ \ .text\ :}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00055}00055\ \ \ \ \ \ \ \ \ *(.text*)}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00056}00056\ \ \ \ \ \}\ >\ FLASH}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00058}00058\ \ \ \ \ /*\ Read\ Only\ Data\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00059}00059\ \ \ \ \ .rodata\ :}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00061}00061\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(4);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00062}00062\ \ \ \ \ \ \ \ \ *(.rodata*)}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00063}00063\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(\ 4\ );}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00064}00064\ \ \ \ \ \}\ >\ FLASH}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00066}00066\ \ \ \ \ /*\ Initialized\ Data\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00067}00067\ \ \ \ \ .data\ :\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00069}00069\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(4);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00070}00070\ \ \ \ \ \ \ \ \ \_\_data\_start\_\_\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00071}00071\ \ \ \ \ \ \ \ \ \_\_data\_load\_addr\_\_\ =\ LOADADDR(.data);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00072}00072\ \ \ \ \ \ \ \ \ *(.data*)}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00073}00073\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(\ 4\ );}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00074}00074\ \ \ \ \ \ \ \ \ \_\_data\_end\_\_\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00075}00075\ \ \ \ \ \}\ >\ RAM\ AT\ >\ FLASH}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00077}00077\ \ \ \ \ /*\ Unitialized\ data\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00078}00078\ \ \ \ \ .bss\ :}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00080}00080\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(4);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00081}00081\ \ \ \ \ \ \ \ \ \_\_bss\_start\_\_\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00082}00082\ \ \ \ \ \ \ \ \ *(.bss*)}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00083}00083\ \ \ \ \ \ \ \ \ *(COMMON)}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00084}00084\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(4);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00085}00085\ \ \ \ \ \ \ \ \ \_\_bss\_end\_\_\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00086}00086\ \ \ \ \ \}\ >\ RAM\ AT\ >\ RAM}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00088}00088\ \ \ \ \ /*\ Heap,\ if\ it\ existed\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00090}00090\ \ \ \ \ /*\ Stack\ is\ located\ on\ top\ of\ RAM\ */}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00091}00091\ \ \ \ \ .stack\ (ORIGIN(RAM)\ +\ LENGTH(RAM)\ -\/\ \_\_STACK\_SIZE)\ (NOLOAD)\ :}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00093}00093\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(8);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00094}00094\ \ \ \ \ \ \ \ \ \_\_StackLimit\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00095}00095\ \ \ \ \ \ \ \ \ .\ =\ .\ +\ \_\_STACK\_SIZE;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00096}00096\ \ \ \ \ \ \ \ \ .\ =\ ALIGN(8);}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00097}00097\ \ \ \ \ \ \ \ \ \_\_StackTop\ =\ .;}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00098}00098\ \ \ \ \ \}\ >\ RAM}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00100}00100\ \ \ \ \ PROVIDE(\ \_\_stack\ =\ \_\_StackTop\ );}
+\DoxyCodeLine{\Hypertarget{linker__script_8ld_source_l00101}00101\ \}}
+
+\end{DoxyCode}

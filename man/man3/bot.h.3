@@ -1,8 +1,8 @@
-.TH "logic/bot.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/bot.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/bot.h \- Contains function for random cell marking\&.  
+logic/bot.h \- Bot logic for Tic-Tac-Toe game\&.  
 
 .SH SYNOPSIS
 .br
@@ -18,13 +18,19 @@ logic/bot.h \- Contains function for random cell marking\&.
 .ti -1c
 .RI "\fBCell\fP * \fBbot_markRandomCell\fP (\fBCell\fP cells[\fBCELLS_PER_COL\fP][\fBCELLS_PER_ROW\fP], \fBPlayer\fP marked_by)"
 .br
-.RI "Mark some random cell\&. "
+.RI "Mark a random unmarked cell on the game board\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains function for random cell marking\&. 
+Bot logic for Tic-Tac-Toe game\&. 
 
+This file contains the declaration of functions used to implement bot logic for the Tic-Tac-Toe game, such as marking a random cell\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBbot\&.c\fP \fBgame\&.h\fP \fBfield\&.h\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -39,23 +45,28 @@ Definition in file \fBbot\&.h\fP\&.
 .SS "\fBCell\fP * bot_markRandomCell (\fBCell\fP cells[CELLS_PER_COL][CELLS_PER_ROW], \fBPlayer\fP marked_by)"
 
 .PP
-Mark some random cell\&. 
+Mark a random unmarked cell on the game board\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIcells\fP 2D field of cells 
+\fIcells\fP 2D field of cells representing the game board\&. 
 .br
-\fImarked_by\fP Which player should mark the cell
+\fImarked_by\fP Player who should mark the cell\&.
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Marked cell 
+Pointer to the marked cell\&.
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+This function assumes that there is at least one unmarked cell on the board\&. If there is not, the function will loop indefinitely\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB23\fP of file \fBbot\&.c\fP\&.
+Definition at line \fB20\fP of file \fBbot\&.c\fP\&.
 .PP
 References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBNone\fP, and \fBrng_getRandomValue_waiting()\fP\&.
 .SH "Author"

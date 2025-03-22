@@ -104,6 +104,9 @@ $(function(){initNavTree('d8/d22/interrupts_8c.html','../../'); initResizable(tr
   <div class="headertitle"><div class="title">interrupts.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implements the interrupt handlers for UART and Timer interrupts.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d6/ded/interrupts_8h_source.html">hal/interrupts.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/d7e/nvic_8h_source.html">hal/nvic.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/d33/register__access_8h_source.html">hal/register_access.h</a>&quot;</code><br />
@@ -116,43 +119,43 @@ Include dependency graph for interrupts.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d24/interrupts_8c__incl.png" border="0" usemap="#ahal_2interrupts_8c" alt=""/></div>
 <map name="ahal_2interrupts_8c" id="ahal_2interrupts_8c">
-<area shape="rect" title=" " alt="" coords="290,5,396,31"/>
-<area shape="rect" href="../../d6/ded/interrupts_8h.html" title="Contains interrupt handlers." alt="" coords="16,79,123,105"/>
-<area shape="poly" title=" " alt="" coords="297,34,131,77,130,72,296,29"/>
-<area shape="rect" href="../../da/d7e/nvic_8h.html" title="Contains interrupt constants." alt="" coords="148,79,224,105"/>
-<area shape="poly" title=" " alt="" coords="317,34,227,75,225,70,315,29"/>
-<area shape="rect" href="../../dd/d33/register__access_8h.html" title="Contains abstraction functions of the register access." alt="" coords="43,153,187,178"/>
-<area shape="poly" title=" " alt="" coords="332,34,291,68,238,107,159,148,157,144,235,102,288,64,328,29"/>
-<area shape="rect" href="../../d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="598,226,680,252"/>
-<area shape="poly" title=" " alt="" coords="370,29,411,50,455,77,548,149,618,214,614,217,544,153,452,81,408,55,368,34"/>
-<area shape="rect" href="../../d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="500,226,575,252"/>
-<area shape="poly" title=" " alt="" coords="364,29,394,50,425,77,483,148,525,212,521,214,479,151,421,81,390,54,361,33"/>
-<area shape="rect" href="../../de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="299,79,387,105"/>
-<area shape="poly" title=" " alt="" coords="346,31,346,63,340,63,340,31"/>
-<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="372,226,477,252"/>
-<area shape="poly" title=" " alt="" coords="360,29,382,50,401,78,414,112,422,148,427,211,422,211,417,149,409,114,397,80,378,54,357,33"/>
-<area shape="rect" title=" " alt="" coords="363,308,427,333"/>
-<area shape="poly" title=" " alt="" coords="138,176,361,297,358,302,136,181"/>
-<area shape="poly" title=" " alt="" coords="602,255,442,307,441,302,601,250"/>
-<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="513,308,562,333"/>
-<area shape="poly" title=" " alt="" coords="625,255,567,300,564,296,622,250"/>
-<area shape="poly" title=" " alt="" coords="517,255,431,302,429,297,515,250"/>
-<area shape="poly" title=" " alt="" coords="540,252,540,292,535,292,535,252"/>
-<area shape="poly" title=" " alt="" coords="345,105,348,168,353,210,363,251,382,293,377,296,358,253,348,211,343,169,340,105"/>
-<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="212,153,306,178"/>
-<area shape="poly" title=" " alt="" coords="330,107,286,144,283,140,327,103"/>
-<area shape="poly" title=" " alt="" coords="268,177,288,211,317,250,368,296,364,300,313,254,284,214,263,180"/>
-<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="65,226,194,252"/>
-<area shape="poly" title=" " alt="" coords="238,181,166,221,164,216,236,177"/>
-<area shape="poly" title=" " alt="" coords="288,176,383,217,381,222,286,181"/>
-<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="97,308,162,333"/>
-<area shape="poly" title=" " alt="" coords="132,252,132,292,127,292,127,252"/>
-<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains several ascii art constants." alt="" coords="187,300,310,341"/>
-<area shape="poly" title=" " alt="" coords="149,250,208,289,205,293,146,255"/>
-<area shape="rect" title=" " alt="" coords="5,308,73,333"/>
-<area shape="poly" title=" " alt="" coords="118,254,66,299,62,295,114,250"/>
-<area shape="poly" title=" " alt="" coords="422,253,407,294,402,292,417,251"/>
-<area shape="poly" title=" " alt="" coords="443,250,510,296,507,301,440,255"/>
+<area shape="rect" title="Implements the interrupt handlers for UART and Timer interrupts." alt="" coords="301,5,420,33"/>
+<area shape="rect" href="../../d6/ded/interrupts_8h.html" title="Contains the relevant interrupt handlers." alt="" coords="7,81,128,109"/>
+<area shape="poly" title=" " alt="" coords="309,36,135,79,134,74,307,31"/>
+<area shape="rect" href="../../da/d7e/nvic_8h.html" title="Contains interrupt constants." alt="" coords="152,81,236,109"/>
+<area shape="poly" title=" " alt="" coords="332,36,239,77,237,72,330,31"/>
+<area shape="rect" href="../../dd/d33/register__access_8h.html" title="Register Access Interface." alt="" coords="35,157,193,184"/>
+<area shape="poly" title=" " alt="" coords="348,35,306,71,250,111,207,134,164,153,162,148,204,129,247,106,303,67,345,31"/>
+<area shape="rect" href="../../d5/dd0/timer_8h.html" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="639,232,730,260"/>
+<area shape="poly" title=" " alt="" coords="390,31,478,79,581,154,660,220,657,224,578,158,475,83,388,36"/>
+<area shape="rect" href="../../d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="531,232,614,260"/>
+<area shape="poly" title=" " alt="" coords="384,31,415,52,448,79,481,114,512,152,558,218,554,221,508,155,477,118,444,83,412,57,381,36"/>
+<area shape="rect" href="../../de/df7/time_8h.html" title="Contains time functions needed for the game." alt="" coords="312,81,410,109"/>
+<area shape="poly" title=" " alt="" coords="363,34,363,65,358,65,358,34"/>
+<area shape="rect" href="../../db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="388,232,506,260"/>
+<area shape="poly" title=" " alt="" coords="381,32,404,52,424,80,438,115,446,152,451,216,446,217,441,153,433,117,420,82,400,56,378,36"/>
+<area shape="rect" title=" " alt="" coords="387,316,457,344"/>
+<area shape="poly" title=" " alt="" coords="141,183,384,307,382,312,139,187"/>
+<area shape="poly" title=" " alt="" coords="643,263,473,316,471,311,642,258"/>
+<area shape="rect" href="../../d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="546,316,599,344"/>
+<area shape="poly" title=" " alt="" coords="668,263,605,309,601,305,665,258"/>
+<area shape="poly" title=" " alt="" coords="550,263,461,311,458,306,547,258"/>
+<area shape="poly" title=" " alt="" coords="575,261,575,301,570,301,570,261"/>
+<area shape="poly" title=" " alt="" coords="363,109,363,175,368,217,379,259,390,282,404,303,399,306,385,285,374,261,363,218,358,175,357,109"/>
+<area shape="rect" href="../../d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="217,157,323,184"/>
+<area shape="poly" title=" " alt="" coords="346,111,300,149,296,145,343,107"/>
+<area shape="poly" title=" " alt="" coords="280,183,303,218,335,258,363,284,391,305,388,310,359,288,331,262,298,222,275,186"/>
+<area shape="rect" href="../../d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="66,232,213,260"/>
+<area shape="poly" title=" " alt="" coords="248,187,177,227,174,222,245,183"/>
+<area shape="poly" title=" " alt="" coords="303,182,403,224,401,229,301,187"/>
+<area shape="rect" href="../../db/d16/config_8h.html" title=" " alt="" coords="103,316,176,344"/>
+<area shape="poly" title=" " alt="" coords="142,261,142,301,137,301,137,261"/>
+<area shape="rect" href="../../d2/d5a/ascii__art_8h.html" title="Contains ASCII art constants for the TikTakToe game." alt="" coords="200,308,337,353"/>
+<area shape="poly" title=" " alt="" coords="162,258,223,297,220,302,159,263"/>
+<area shape="rect" title=" " alt="" coords="5,316,79,344"/>
+<area shape="poly" title=" " alt="" coords="125,263,70,309,67,305,122,259"/>
+<area shape="poly" title=" " alt="" coords="446,261,433,303,428,301,441,260"/>
+<area shape="poly" title=" " alt="" coords="469,258,541,306,539,310,466,263"/>
 </map>
 </div>
 </div>
@@ -160,23 +163,22 @@ Include dependency graph for interrupts.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:add4c333e4b7c9a2d571899bbbc9643e5" id="r_add4c333e4b7c9a2d571899bbbc9643e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add4c333e4b7c9a2d571899bbbc9643e5">Interrupt2_Handler</a> (void)</td></tr>
-<tr class="memdesc:add4c333e4b7c9a2d571899bbbc9643e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART interrupt handler.  <br /></td></tr>
-<tr class="separator:add4c333e4b7c9a2d571899bbbc9643e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c7085a34fe542a77ebd37e7e72c2737" id="r_a3c7085a34fe542a77ebd37e7e72c2737"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c7085a34fe542a77ebd37e7e72c2737">Interrupt8_Handler</a> (void)</td></tr>
-<tr class="memdesc:a3c7085a34fe542a77ebd37e7e72c2737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer interrupt handler.  <br /></td></tr>
-<tr class="separator:a3c7085a34fe542a77ebd37e7e72c2737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c135cb06b41d4db1ff45f59fd28dfb6" id="r_a0c135cb06b41d4db1ff45f59fd28dfb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c135cb06b41d4db1ff45f59fd28dfb6">Interrupt2_Handler</a> ()</td></tr>
+<tr class="memdesc:a0c135cb06b41d4db1ff45f59fd28dfb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART interrupt handler.  <br /></td></tr>
+<tr class="separator:a0c135cb06b41d4db1ff45f59fd28dfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5a7488b98d542bdcb0e42adc2cf317" id="r_a3e5a7488b98d542bdcb0e42adc2cf317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e5a7488b98d542bdcb0e42adc2cf317">Interrupt8_Handler</a> ()</td></tr>
+<tr class="memdesc:a3e5a7488b98d542bdcb0e42adc2cf317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer interrupt handler.  <br /></td></tr>
+<tr class="separator:a3e5a7488b98d542bdcb0e42adc2cf317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd></dd></dl>
-<dl class="section see"><dt>See also</dt><dd></dd></dl>
+<div class="textblock"><p>Implements the interrupt handlers for UART and Timer interrupts. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d6/ded/interrupts_8h.html" title="Contains the relevant interrupt handlers.">interrupts.h</a></dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This Source Code Form is subject to the terms of the Mozilla Public License, v2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="add4c333e4b7c9a2d571899bbbc9643e5" name="add4c333e4b7c9a2d571899bbbc9643e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add4c333e4b7c9a2d571899bbbc9643e5">&#9670;&#160;</a></span>Interrupt2_Handler()</h2>
+<a id="a0c135cb06b41d4db1ff45f59fd28dfb6" name="a0c135cb06b41d4db1ff45f59fd28dfb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c135cb06b41d4db1ff45f59fd28dfb6">&#9670;&#160;</a></span>Interrupt2_Handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,49 +186,45 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Interrupt2_Handler </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>UART interrupt handler. </p>
-<p>!TODO! </p>
+<p>This function is triggered when a UART interrupt occurs. It reads a byte from the UART peripheral and processes it using the input buffer. The interrupt pending bit is cleared after handling the interrupt.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d1/d87/uart_8c.html#a991a6e99e9369a11dcf02bdf1d1ba6ab" title="Reads/Receives a byte from the serial port.">uart_readByte</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00027">27</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00023">23</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00034">input_onInterrupt()</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00045">Interrupt_ID2</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, and <a class="el" href="../../d1/d87/uart_8c_source.html#l00081">uart_readByte()</a>.</p>
+<p class="reference">References <a class="el" href="../../d7/dec/input__buf_8c_source.html#l00041">input_onInterrupt()</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00044">Interrupt_ID2</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00020">register_write()</a>, and <a class="el" href="../../d1/d87/uart_8c_source.html#l00062">uart_readByte()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d22/interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5_cgraph.png" border="0" usemap="#ad8/d22/interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5_cgraph" alt=""/></div>
-<map name="ad8/d22/interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5_cgraph" id="ad8/d22/interrupts_8c_add4c333e4b7c9a2d571899bbbc9643e5_cgraph">
-<area shape="rect" title="UART interrupt handler." alt="" coords="5,105,134,131"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#a6f2425195e541bcea7e78d39ff1c1d54" title="Function to call in case of UART input interrupt." alt="" coords="182,55,300,80"/>
-<area shape="poly" title=" " alt="" coords="115,102,180,83,182,88,116,107"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="645,105,744,131"/>
-<area shape="poly" title=" " alt="" coords="134,116,629,116,629,121,134,121"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html#a991a6e99e9369a11dcf02bdf1d1ba6ab" title="Read/Receive a byte from the serial Port." alt="" coords="190,156,292,182"/>
-<area shape="poly" title=" " alt="" coords="116,129,182,149,180,154,115,134"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="373,5,419,31"/>
-<area shape="poly" title=" " alt="" coords="283,51,357,27,359,33,285,57"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#a6b0d0104392c0034ca549ef8dc2875a4" title="Put the next byte into the buffer." alt="" coords="356,55,437,80"/>
-<area shape="poly" title=" " alt="" coords="300,65,340,65,340,70,300,70"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial Port." alt="" coords="492,5,597,31"/>
-<area shape="poly" title=" " alt="" coords="420,16,477,16,477,21,420,21"/>
-<area shape="poly" title=" " alt="" coords="578,29,598,40,636,67,669,93,666,98,633,71,595,44,576,34"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="501,55,588,80"/>
-<area shape="poly" title=" " alt="" coords="437,65,485,65,485,70,437,70"/>
-<area shape="poly" title=" " alt="" coords="291,163,429,153,596,134,629,129,630,134,597,139,430,158,292,169"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="348,207,444,232"/>
-<area shape="poly" title=" " alt="" coords="284,180,341,199,340,204,282,185"/>
+<div class="center"><img src="../../d8/d22/interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6_cgraph.png" border="0" usemap="#ad8/d22/interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6_cgraph" alt=""/></div>
+<map name="ad8/d22/interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6_cgraph" id="ad8/d22/interrupts_8c_a0c135cb06b41d4db1ff45f59fd28dfb6_cgraph">
+<area shape="rect" title="UART interrupt handler." alt="" coords="5,57,149,85"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#a6f2425195e541bcea7e78d39ff1c1d54" title="Function to call in case of UART input interrupt." alt="" coords="197,7,330,34"/>
+<area shape="poly" title=" " alt="" coords="130,54,195,36,196,41,131,59"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="378,57,489,85"/>
+<area shape="poly" title=" " alt="" coords="149,68,363,68,363,74,149,74"/>
+<area shape="rect" href="../../d1/d87/uart_8c.html#a991a6e99e9369a11dcf02bdf1d1ba6ab" title="Reads/Receives a byte from the serial port." alt="" coords="207,108,320,136"/>
+<area shape="poly" title=" " alt="" coords="131,83,196,101,195,106,130,88"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#ab3e24b09253fed6492359ce7aa936407" title="Put the next byte into the buffer." alt="" coords="389,5,478,33"/>
+<area shape="poly" title=" " alt="" coords="330,17,373,17,373,22,330,23"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="537,5,633,33"/>
+<area shape="poly" title=" " alt="" coords="479,16,522,16,522,22,479,22"/>
+<area shape="poly" title=" " alt="" coords="311,105,370,87,371,92,313,110"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="380,109,487,137"/>
+<area shape="poly" title=" " alt="" coords="321,120,365,120,365,125,320,125"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3c7085a34fe542a77ebd37e7e72c2737" name="a3c7085a34fe542a77ebd37e7e72c2737"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c7085a34fe542a77ebd37e7e72c2737">&#9670;&#160;</a></span>Interrupt8_Handler()</h2>
+<a id="a3e5a7488b98d542bdcb0e42adc2cf317" name="a3e5a7488b98d542bdcb0e42adc2cf317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5a7488b98d542bdcb0e42adc2cf317">&#9670;&#160;</a></span>Interrupt8_Handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,44 +232,45 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void Interrupt8_Handler </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Timer interrupt handler. </p>
-<p>@detail !TODO! </p>
+<p>This function is triggered when a timer interrupt occurs. It resets the timer compare register and clears the interrupt pending bit. Additionally, it notifies the time module about the interrupt event.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round.">time_onInterrupt</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00033">33</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/d22/interrupts_8c_source.html#l00029">29</a> of file <a class="el" href="../../d8/d22/interrupts_8c_source.html">interrupts.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00046">Interrupt_ID8</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00022">register_write()</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00037">time_onInterrupt()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00019">TIMER0_BASE_ADDRESS</a>, and <a class="el" href="../../d5/dd0/timer_8h_source.html#l00037">TIMER_COMPARE_0</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d7e/nvic_8h_source.html#l00042">Interrupt_ICPR</a>, <a class="el" href="../../da/d7e/nvic_8h_source.html#l00045">Interrupt_ID8</a>, <a class="el" href="../../d2/d9f/register__access_8c_source.html#l00020">register_write()</a>, <a class="el" href="../../df/d73/time_8c_source.html#l00032">time_onInterrupt()</a>, <a class="el" href="../../d5/dd0/timer_8h_source.html#l00024">TIMER0_BASE_ADDRESS</a>, and <a class="el" href="../../d5/dd0/timer_8h_source.html#l00042">TIMER_COMPARE_0</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d22/interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737_cgraph.png" border="0" usemap="#ad8/d22/interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737_cgraph" alt=""/></div>
-<map name="ad8/d22/interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737_cgraph" id="ad8/d22/interrupts_8c_a3c7085a34fe542a77ebd37e7e72c2737_cgraph">
-<area shape="rect" title="Timer interrupt handler." alt="" coords="5,31,134,56"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="927,5,1026,31"/>
-<area shape="poly" title=" " alt="" coords="134,32,260,20,406,13,591,13,912,15,912,20,591,18,406,18,260,25,135,38"/>
-<area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="182,56,297,82"/>
-<area shape="poly" title=" " alt="" coords="134,50,167,55,166,61,134,56"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automaticly end a turn in case the turn time is over." alt="" coords="345,60,469,86"/>
-<area shape="poly" title=" " alt="" coords="298,68,329,68,329,74,297,73"/>
-<area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark some random cell." alt="" coords="517,60,663,86"/>
-<area shape="poly" title=" " alt="" coords="470,70,502,70,502,76,470,76"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="536,113,644,139"/>
-<area shape="poly" title=" " alt="" coords="455,84,529,106,528,111,453,89"/>
-<area shape="rect" href="../../dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="# THIS FUNCTION IS A STUB! #" alt="" coords="711,52,856,93"/>
-<area shape="poly" title=" " alt="" coords="663,70,695,70,695,76,663,76"/>
-<area shape="poly" title=" " alt="" coords="855,50,913,33,915,38,857,55"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="1097,88,1194,114"/>
-<area shape="poly" title=" " alt="" coords="857,76,1082,93,1082,99,856,81"/>
-<area shape="rect" href="../../dc/de5/random_8c.html#a10ddbdc45f7f1a0a55ec5e0cb7bf683a" title="Get the Random Value from the generator immediately." alt="" coords="904,108,1049,149"/>
-<area shape="poly" title=" " alt="" coords="856,91,891,101,889,106,855,96"/>
-<area shape="poly" title=" " alt="" coords="1049,114,1082,109,1083,114,1050,119"/>
-<area shape="rect" href="../../df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="729,117,838,143"/>
-<area shape="poly" title=" " alt="" coords="644,125,713,126,713,131,644,130"/>
+<div class="center"><img src="../../d8/d22/interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317_cgraph.png" border="0" usemap="#ad8/d22/interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317_cgraph" alt=""/></div>
+<map name="ad8/d22/interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317_cgraph" id="ad8/d22/interrupts_8c_a3e5a7488b98d542bdcb0e42adc2cf317_cgraph">
+<area shape="rect" title="Timer interrupt handler." alt="" coords="5,32,149,60"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="1004,5,1115,33"/>
+<area shape="poly" title=" " alt="" coords="149,34,285,21,442,14,643,14,988,16,988,21,643,19,442,19,285,26,149,39"/>
+<area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="197,57,327,85"/>
+<area shape="poly" title=" " alt="" coords="150,53,182,58,181,63,149,58"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatically end a turn in case the turn time is over." alt="" coords="375,63,512,90"/>
+<area shape="poly" title=" " alt="" coords="327,70,359,71,359,77,327,76"/>
+<area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark a random unmarked cell on the game board." alt="" coords="560,63,723,90"/>
+<area shape="poly" title=" " alt="" coords="513,74,545,74,545,79,513,79"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="583,119,700,146"/>
+<area shape="poly" title=" " alt="" coords="496,88,576,111,575,116,495,93"/>
+<area shape="rect" href="../../dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="Get the Random Value from the generator by polling and waiting." alt="" coords="771,54,931,99"/>
+<area shape="poly" title=" " alt="" coords="723,74,755,74,755,79,723,79"/>
+<area shape="poly" title=" " alt="" coords="930,52,991,35,992,40,932,57"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="1187,91,1295,118"/>
+<area shape="poly" title=" " alt="" coords="932,80,1172,97,1172,102,931,85"/>
+<area shape="rect" href="../../dc/de5/random_8c.html#ade0d5a07f6403292f21ff2b5f200f11f" title="Get the Random Value from the generator immediately." alt="" coords="979,112,1139,156"/>
+<area shape="poly" title=" " alt="" coords="932,96,964,105,963,110,930,101"/>
+<area shape="poly" title=" " alt="" coords="1139,118,1171,113,1172,118,1140,124"/>
+<area shape="rect" href="../../df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="791,123,911,150"/>
+<area shape="poly" title=" " alt="" coords="700,131,775,132,775,138,700,136"/>
 </map>
 </div>
 
@@ -283,7 +282,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4ce6a7f885e2866a554ba9e7335035f1.html">hal</a></li><li class="navelem"><a class="el" href="../../d8/d22/interrupts_8c.html">interrupts.c</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

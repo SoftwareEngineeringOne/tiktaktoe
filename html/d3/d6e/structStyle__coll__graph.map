@@ -1,5 +1,5 @@
 <map id="Style" name="Style">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,124,56,150"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="7,5,54,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,47,33,123,28,123,28,47"/>
+<area shape="rect" id="Node000001" title="Represents a style with foreground color, background color, and font style." alt="" coords="5,132,60,160"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="8,5,57,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,48,35,132,30,132,30,48"/>
 </map>

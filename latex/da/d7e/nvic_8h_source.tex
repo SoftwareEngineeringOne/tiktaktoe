@@ -3,44 +3,37 @@
 \mbox{\hyperlink{nvic_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{nvic_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00017}00017\ \textcolor{preprocessor}{\#ifndef\ NVIC\_H}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ NVIC\_H}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00020}\mbox{\hyperlink{nvic_8h_a275306aabc78b3133ace58445d8c573b}{00020}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_00\ 0xE000E100}\textcolor{comment}{//\ \ 1\ -\/\ Reset}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00021}\mbox{\hyperlink{nvic_8h_aa6846e50c18a1a4dd469527d265621ad}{00021}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_01\ 0xE000E104}\textcolor{comment}{//\ \ 2\ -\/\ NMI}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00022}\mbox{\hyperlink{nvic_8h_a5b7304ecece0d831f283495f1ca0d600}{00022}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_02\ 0xE000E108}\textcolor{comment}{//\ \ 3\ -\/\ Hard-\/Fault}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00023}\mbox{\hyperlink{nvic_8h_af1652b989a2fe6a9d3422b20b6448573}{00023}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_03\ 0xE000E10C}\textcolor{comment}{//\ \ 4\ -\/\ MPU\ /\ MEM-\/Manage}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00022}00022\ \textcolor{preprocessor}{\#ifndef\ NVIC\_H}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ NVIC\_H}}
 \DoxyCodeLine{\Hypertarget{nvic_8h_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00025}\mbox{\hyperlink{nvic_8h_a75eb0c60f04156e9b277556ae3792691}{00025}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_04\ 0xE000E110}\textcolor{comment}{//\ \ 5\ -\/\ BUS-\/Fault}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00026}\mbox{\hyperlink{nvic_8h_a73c2bc9c1f6e78127ea001d2634ffc5e}{00026}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_05\ 0xE000E114}\textcolor{comment}{//\ \ 6\ -\/\ Usage-\/Fault}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00027}\mbox{\hyperlink{nvic_8h_a071e066ce7b15e3deb7d74416711db45}{00027}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_06\ 0xE000E118}\textcolor{comment}{//\ \ 7\ -\/\ Reserved}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00028}\mbox{\hyperlink{nvic_8h_ad7e603cd0c2acbcfb07c17a833e57918}{00028}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_07\ 0xE000E11C}\textcolor{comment}{//\ \ 8\ -\/\ Reserved}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00030}\mbox{\hyperlink{nvic_8h_a554316dee7e81ee017f5a17ab0e28c07}{00030}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_08\ 0xE000E120}\textcolor{comment}{//\ \ 9\ -\/\ Reserved}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00031}\mbox{\hyperlink{nvic_8h_ae49eb258a50b12613a2614836f78d9ee}{00031}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_09\ 0xE000E124}\textcolor{comment}{//\ 10\ -\/\ Reserved}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00032}\mbox{\hyperlink{nvic_8h_aa13fca6d5dddb0af620424a19699f926}{00032}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_10\ 0xE000E128}\textcolor{comment}{//\ 11\ -\/\ SVCall}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00033}\mbox{\hyperlink{nvic_8h_a1c8bc1272e3ba5e119d803a0475ceb17}{00033}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_11\ 0xE000E12C}\textcolor{comment}{//\ 12\ -\/\ Debug\ Monitor}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00035}\mbox{\hyperlink{nvic_8h_a920c367d88b05136292f8ae280f516a0}{00035}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_12\ 0xE000E130}\textcolor{comment}{//\ 13\ -\/\ Reserved}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00036}\mbox{\hyperlink{nvic_8h_ac9513d8228c6a4a92512e0d203f5c4bf}{00036}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_13\ 0xE000E134}\textcolor{comment}{//\ 14\ -\/\ PendSV}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00037}\mbox{\hyperlink{nvic_8h_a0222afa4a01bb5df05268d4e59e221df}{00037}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_14\ 0xE000E138}\textcolor{comment}{//\ 15\ -\/\ SysTick}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00038}\mbox{\hyperlink{nvic_8h_a4a6bc5147745699219e4b7c5c1e8893a}{00038}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_15\ 0xE000E13C}\textcolor{comment}{//\ 16\ -\/\ External\ 0}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00040}\mbox{\hyperlink{nvic_8h_a69c85cac572c1881d55adcd73f57ed42}{00040}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\ 0xE000E100}\textcolor{comment}{//\ [32...0]\ Interrupt}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00042}\mbox{\hyperlink{nvic_8h_aa32e7f4a46b67f81735188e2d7918577}{00042}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ICPR\ 0xE000E280}\textcolor{comment}{//\ Interrupt\ Clear-\/pending\ Register\ (on\ page\ 4-\/6)}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00044}\mbox{\hyperlink{nvic_8h_a2c6b6369e857c79a77ec99112a745b81}{00044}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID1\ (1\ <<\ 1)\ \ }\textcolor{comment}{//\ Bit\ for\ User\ Interrupt\ ID:\ 1}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00045}\mbox{\hyperlink{nvic_8h_af088307ac49d15e822ad464b0b21b046}{00045}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID2\ (1\ <<\ 2)\ \ }\textcolor{comment}{//\ Bit\ for\ User\ Interrupt\ ID:\ 2}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00046}\mbox{\hyperlink{nvic_8h_ab4d4e2dc00757af044bd2c01cd190347}{00046}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID8\ (1\ <<\ 8)\ \ }\textcolor{comment}{//\ Bit\ for\ User\ Interrupt\ ID:\ 8}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00047}\mbox{\hyperlink{nvic_8h_ab6ad1da639cb66cbc0fed00121ee1c94}{00047}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID9\ (1\ <<\ 9)\ \ }\textcolor{comment}{//\ Bit\ for\ User\ Interrupt\ ID:\ 9}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00048}\mbox{\hyperlink{nvic_8h_a755130468e5e203669621d907d3df5f4}{00048}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID10\ (1\ <<\ 10)}\textcolor{comment}{//\ Bit\ for\ User\ Interrupt\ ID:10}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00050}\mbox{\hyperlink{nvic_8h_ac9180c607226bf043dcbb78d331f938f}{00050}}\ \textcolor{preprocessor}{\#define\ ICSR\ 0xE000ED04}\textcolor{comment}{//\ Interrupt\ Control\ and\ State\ Register}}
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00025}\mbox{\hyperlink{nvic_8h_a275306aabc78b3133ace58445d8c573b}{00025}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_00\ 0xE000E100}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00026}\mbox{\hyperlink{nvic_8h_aa6846e50c18a1a4dd469527d265621ad}{00026}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_01\ 0xE000E104}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00027}\mbox{\hyperlink{nvic_8h_a5b7304ecece0d831f283495f1ca0d600}{00027}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_02\ 0xE000E108}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00028}\mbox{\hyperlink{nvic_8h_af1652b989a2fe6a9d3422b20b6448573}{00028}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_03\ 0xE000E10C}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00029}\mbox{\hyperlink{nvic_8h_a75eb0c60f04156e9b277556ae3792691}{00029}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_04\ 0xE000E110}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00030}\mbox{\hyperlink{nvic_8h_a73c2bc9c1f6e78127ea001d2634ffc5e}{00030}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_05\ 0xE000E114}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00031}\mbox{\hyperlink{nvic_8h_a071e066ce7b15e3deb7d74416711db45}{00031}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_06\ 0xE000E118}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00032}\mbox{\hyperlink{nvic_8h_ad7e603cd0c2acbcfb07c17a833e57918}{00032}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_07\ 0xE000E11C}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00033}\mbox{\hyperlink{nvic_8h_a554316dee7e81ee017f5a17ab0e28c07}{00033}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_08\ 0xE000E120}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00034}\mbox{\hyperlink{nvic_8h_ae49eb258a50b12613a2614836f78d9ee}{00034}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_09\ 0xE000E124}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00035}\mbox{\hyperlink{nvic_8h_aa13fca6d5dddb0af620424a19699f926}{00035}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_10\ 0xE000E128}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00036}\mbox{\hyperlink{nvic_8h_a1c8bc1272e3ba5e119d803a0475ceb17}{00036}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_11\ 0xE000E12C}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00037}\mbox{\hyperlink{nvic_8h_a920c367d88b05136292f8ae280f516a0}{00037}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_12\ 0xE000E130}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00038}\mbox{\hyperlink{nvic_8h_ac9513d8228c6a4a92512e0d203f5c4bf}{00038}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_13\ 0xE000E134}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00039}\mbox{\hyperlink{nvic_8h_a0222afa4a01bb5df05268d4e59e221df}{00039}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_14\ 0xE000E138}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00040}\mbox{\hyperlink{nvic_8h_a4a6bc5147745699219e4b7c5c1e8893a}{00040}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\_15\ 0xE000E13C}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00041}\mbox{\hyperlink{nvic_8h_a69c85cac572c1881d55adcd73f57ed42}{00041}}\ \textcolor{preprocessor}{\#define\ Interrupt\_Set\_Enable\ 0xE000E100\ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00042}\mbox{\hyperlink{nvic_8h_aa32e7f4a46b67f81735188e2d7918577}{00042}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ICPR\ 0xE000E280\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00043}\mbox{\hyperlink{nvic_8h_a2c6b6369e857c79a77ec99112a745b81}{00043}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID1\ (1\ <<\ 1)\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00044}\mbox{\hyperlink{nvic_8h_af088307ac49d15e822ad464b0b21b046}{00044}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID2\ (1\ <<\ 2)\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00045}\mbox{\hyperlink{nvic_8h_ab4d4e2dc00757af044bd2c01cd190347}{00045}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID8\ (1\ <<\ 8)\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00046}\mbox{\hyperlink{nvic_8h_ab6ad1da639cb66cbc0fed00121ee1c94}{00046}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID9\ (1\ <<\ 9)\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00047}\mbox{\hyperlink{nvic_8h_a755130468e5e203669621d907d3df5f4}{00047}}\ \textcolor{preprocessor}{\#define\ Interrupt\_ID10\ (1\ <<\ 10)\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00049}\mbox{\hyperlink{nvic_8h_ac9180c607226bf043dcbb78d331f938f}{00049}}\ \textcolor{preprocessor}{\#define\ ICSR\ 0xE000ED04}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00050}00050\ }
 \DoxyCodeLine{\Hypertarget{nvic_8h_source_l00058}\mbox{\hyperlink{nvic_8h_ab28e2b328c4cf23c917ab18a23194f8e}{00058}}\ \textcolor{preprocessor}{\#define\ \_\_WFI()\ \_\_asm\ volatile("{}wfi"{}\ :::\ "{}memory"{})}}
 \DoxyCodeLine{\Hypertarget{nvic_8h_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ NVIC\_H}}
+\DoxyCodeLine{\Hypertarget{nvic_8h_source_l00060}00060\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ NVIC\_H}}
 
 \end{DoxyCode}

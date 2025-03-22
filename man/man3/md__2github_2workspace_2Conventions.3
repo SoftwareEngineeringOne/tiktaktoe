@@ -1,4 +1,4 @@
-.TH "md__2github_2workspace_2Conventions" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "md__2github_2workspace_2Conventions" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,18 +71,78 @@ a specialization may follow as a suffix, such as '`[\&.\&.\&.]_waiting`'
 .SH "Documentation"
 .PP
 .IP "\(bu" 2
-All files should contain a top level comment structured similiar to this: 
+All files should contain a top level comment\&.
+.IP "\(bu" 2
+All public functions should be documented in the header file\&.
+.IP "\(bu" 2
+All private functions should be documented at the definition in the source files\&.
+.IP "\(bu" 2
+All structs and enums should be documented\&.
+.IP "\(bu" 2
+All global variables should be documented\&.
+.IP "\(bu" 2
+All 'complicated' macros should be documented\&.
+.IP "\(bu" 2
+All typedefs should be documented\&.
+.PP
+.SS "Documentation templates"
+To ensure a uniform documentation all doc comments, should be loosely based on the following templates\&. Irrelevant fields can and should be ommited to avoid bloat\&.
+.SS "Files"
 .PP
 .nf
 
 
+.fi
+.PP
+.SS "Functions"
+.PP
+.nf
+
 
 .fi
 .PP
-
-.IP "\(bu" 2
-All public functions should be documented in the header file
-.IP "\(bu" 2
-All private functions should be documented at the definition in the source files 
+.SS "Structs"
 .PP
+.nf
 
+ typedef struct {
+    int member1; 
+    float member2; 
+    // \&.\&.\&.
+} ExampleStruct;
+.fi
+.PP
+.SS "Enums"
+.PP
+.nf
+
+ typedef enum {
+    ENUM_VALUE1; 
+    ENUM_VALUE2; 
+    ENUM_VALUE3; 
+    // \&.\&.\&.
+} ExampleEnum;
+.fi
+.PP
+.SS "Typedefs"
+.PP
+.nf
+
+typedef unsigned long ExampleType;
+.fi
+.PP
+.SS "Macros"
+.PP
+.nf
+
+#define EXAMPLE_MACRO 42
+.fi
+.PP
+.SS "Global Variables"
+.PP
+.nf
+
+extern int g_exampleGlobal;
+.fi
+.PP
+ 

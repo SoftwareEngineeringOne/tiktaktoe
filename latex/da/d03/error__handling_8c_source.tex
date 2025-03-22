@@ -10,37 +10,38 @@
 \DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{print_8h}{presentation/print.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{style_8h}{presentation/style.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00009}00009\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hint);}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00011}\mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{HardFault\_Handler}}()}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00012}00012\ \{}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ have\ encountered\ a\ hard\ fault.\ If\ this\ error\ persists\ please\ contact\ the\ developer!"{}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00015}00015\ \}}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00017}\mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{Default\_Handler}}()}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00018}00018\ \{}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}An\ unexpected\ interrupt\ occurred.\ If\ this\ error\ persists\ please\ contact\ the\ developer!"{}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00021}00021\ \}}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00023}\mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{00023}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hint)}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{print_8c_aa1dd7679332aa803a3febb63dc5dd825}{print\_clearConsole}}();}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{ui_8c_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_a1dc5215d084174df6f00a9267cec2f17}{FG\_RED}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\textcolor{stringliteral}{"{}Ooops,\ something\ went\ very\ wrong!\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{print_8c_a0955e0c88609d4769ade150a1834b22a}{println}}(hint);}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ try\ to\ reset\ the\ game...\ "{}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ac25189db92959bff3c6c2adf4c34b50a}{DIM}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{print_8c_a0955e0c88609d4769ade150a1834b22a}{println}}(\textcolor{stringliteral}{"{}(This\ is\ not\ guaranteed\ to\ fix\ the\ error)"{}});}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00023}00023\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hint);}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00025}\mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{HardFault\_Handler}}()}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ have\ encountered\ a\ hard\ fault.\ If\ this\ error\ persists\ please\ contact\ the\ developer!"{}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00031}\mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{Default\_Handler}}()}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}An\ unexpected\ interrupt\ occurred.\ If\ this\ error\ persists\ please\ contact\ the\ developer!"{}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00035}00035\ \}}
 \DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\_readByte}}()\ ==\ 0);}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\_softReset}}();}
-\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00037}\mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{00037}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handleError}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hint)}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{print_8c_aa1dd7679332aa803a3febb63dc5dd825}{print\_clearConsole}}();}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{ui_8c_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_a1dc5215d084174df6f00a9267cec2f17}{FG\_RED}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\textcolor{stringliteral}{"{}Ooops,\ something\ went\ very\ wrong!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{print_8c_a0955e0c88609d4769ade150a1834b22a}{println}}(hint);}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\textcolor{stringliteral}{"{}\(\backslash\)nPress\ any\ key\ to\ try\ to\ reset\ the\ game...\ "{}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ac25189db92959bff3c6c2adf4c34b50a}{DIM}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{print_8c_a0955e0c88609d4769ade150a1834b22a}{println}}(\textcolor{stringliteral}{"{}(This\ is\ not\ guaranteed\ to\ fix\ the\ error)"{}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{print_8c_ae2dd7886efd463e815dadf10eb54777e}{print}}(\mbox{\hyperlink{style_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}});}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{uart_8c_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\_readByte}}()\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\_softReset}}();}
+\DoxyCodeLine{\Hypertarget{error__handling_8c_source_l00055}00055\ \}}
 
 \end{DoxyCode}

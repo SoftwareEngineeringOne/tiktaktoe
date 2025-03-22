@@ -1,34 +1,34 @@
 \doxysection{util/conversion.c File Reference}
 \hypertarget{conversion_8c}{}\label{conversion_8c}\index{util/conversion.c@{util/conversion.c}}
+
+
+Implementation of utility functions for integer-\/to-\/string and integer-\/to-\/character conversions.  
+
+
 {\ttfamily \#include "{}util/conversion.\+h"{}}\newline
 {\ttfamily \#include $<$stddef.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
-Include dependency graph for conversion.\+c\+:
-\nopagebreak
+Include dependency graph for conversion.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=233pt]{d3/d13/conversion_8c__incl}
+\includegraphics[width=208pt]{d3/d13/conversion_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int8\+\_\+t \mbox{\hyperlink{conversion_8c_a10b90e654db54d6aad3fb7c1ba84b5db}{int\+\_\+to\+\_\+str}} (uint32\+\_\+t num, char \texorpdfstring{$\ast$}{*}buf, const size\+\_\+t buf\+\_\+size)
-\item 
+\begin{DoxyCompactList}\small\item\em Converts an integer to a string. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{conversion_8c_af5de84f6396111fb80c97777d3ef8936}{int\+\_\+to\+\_\+char}} (uint8\+\_\+t num)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Converts an integer to a character. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+Implementation of utility functions for integer-\/to-\/string and integer-\/to-\/character conversions. 
 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-
-\end{DoxyDate}
 \begin{DoxySeeAlso}{See also}
-
+\doxylink{conversion_8h}{conversion.\+h}
 \end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -46,21 +46,27 @@ Definition in file \mbox{\hyperlink{conversion_8c_source}{conversion.\+c}}.
 {\footnotesize\ttfamily \label{conversion_8c_af5de84f6396111fb80c97777d3ef8936} 
 char int\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{num}{}\end{DoxyParamCaption})}
 
-Converts an integer to a character 
-\begin{DoxyParams}{Parameters}
-{\em num} & Integer to convert \\
+
+
+Converts an integer to a character. 
+
+Converts a single-\/digit integer (0-\/9) to its corresponding ASCII character.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num} & The integer to convert (must be between 0 and 9).\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Suitable character 
+The ASCII character corresponding to the input integer. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{conversion_8c_source_l00058}{58}} of file \mbox{\hyperlink{conversion_8c_source}{conversion.\+c}}.
+Definition at line \mbox{\hyperlink{conversion_8c_source_l00055}{55}} of file \mbox{\hyperlink{conversion_8c_source}{conversion.\+c}}.
 
 
 
-References \mbox{\hyperlink{conversion_8h_source_l00017}{ASCII\+\_\+\+NUM\+\_\+\+OFFSET}}.
+References \mbox{\hyperlink{conversion_8h_source_l00024}{ASCII\+\_\+\+NUM\+\_\+\+OFFSET}}.
 
 \Hypertarget{conversion_8c_a10b90e654db54d6aad3fb7c1ba84b5db}\index{conversion.c@{conversion.c}!int\_to\_str@{int\_to\_str}}
 \index{int\_to\_str@{int\_to\_str}!conversion.c@{conversion.c}}
@@ -68,28 +74,33 @@ References \mbox{\hyperlink{conversion_8h_source_l00017}{ASCII\+\_\+\+NUM\+\_\+\
 {\footnotesize\ttfamily \label{conversion_8c_a10b90e654db54d6aad3fb7c1ba84b5db} 
 int8\+\_\+t int\+\_\+to\+\_\+str (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{const size\+\_\+t}]{buf\+\_\+size}{}\end{DoxyParamCaption})}
 
-Converts an integer to a string 
+
+
+Converts an integer to a string. 
+
+Converts a given unsigned integer to its string representation and stores it in the provided buffer.
+
+
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em num} & Integer to convert \\
+\mbox{\texttt{ in}}  & {\em num} & The integer to convert. \\
 \hline
-\mbox{\texttt{ out}}  & {\em buf} & String \\
+\mbox{\texttt{ out}}  & {\em buf} & The buffer to store the resulting string. \\
 \hline
-\mbox{\texttt{ in}}  & {\em buf\+\_\+size} & Size of the string \\
+\mbox{\texttt{ in}}  & {\em buf\+\_\+size} & The size of the buffer.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-TODO ??False??? when no error occurred 
+0 on success, -\/1 if an error occurred (e.\+g., buffer is NULL or too small). 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{conversion_8c_source_l00023}{23}} of file \mbox{\hyperlink{conversion_8c_source}{conversion.\+c}}.
+Definition at line \mbox{\hyperlink{conversion_8c_source_l00020}{20}} of file \mbox{\hyperlink{conversion_8c_source}{conversion.\+c}}.
 
 
 
-References \mbox{\hyperlink{conversion_8h_source_l00017}{ASCII\+\_\+\+NUM\+\_\+\+OFFSET}}.
+References \mbox{\hyperlink{conversion_8h_source_l00024}{ASCII\+\_\+\+NUM\+\_\+\+OFFSET}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

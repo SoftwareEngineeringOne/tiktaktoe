@@ -2,43 +2,37 @@
 \hypertarget{register__access_8c}{}\label{register__access_8c}\index{hal/register\_access.c@{hal/register\_access.c}}
 
 
-Generic Register-\/\+Access.  
+Register Access Implementation.  
 
 
 {\ttfamily \#include "{}hal/register\+\_\+access.\+h"{}}\newline
-Include dependency graph for register\+\_\+access.\+c\+:
-\nopagebreak
+Include dependency graph for register\+\_\+access.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=188pt]{d7/d33/register__access_8c__incl}
+\includegraphics[width=199pt]{d7/d33/register__access_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{register__access_8c_a53fb0d9bb1b0c3e72ab6760c69cad891}{register\+\_\+write}} (const uint32\+\_\+t address, const uint32\+\_\+t value)
-\begin{DoxyCompactList}\small\item\em Write Value to Register. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Write a value to a hardware register. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{register__access_8c_a5a3f22e14522fbf55469425a4a48a5cc}{register\+\_\+read}} (const uint32\+\_\+t address)
-\begin{DoxyCompactList}\small\item\em Read from Register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read a value from a hardware register. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Generic Register-\/\+Access. 
+Register Access Implementation. 
 
+\begin{DoxySeeAlso}{See also}
+\doxylink{register__access_8h}{register\+\_\+access.\+h}
+\end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 Thomas Vogt 
 
 Sven Reis
 \end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-
-\end{DoxyDate}
-
-
-\begin{DoxySeeAlso}{See also}
-
-\end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
 \end{DoxyCopyright}
@@ -57,22 +51,21 @@ uint32\+\_\+t register\+\_\+read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]
 
 
 
-Read from Register. 
+Read a value from a hardware register. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em address} & Register Address\\
+\mbox{\texttt{ in}}  & {\em address} & Memory address of the register.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Register Value 
+Value read from the register. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{register__access_8c_source_l00031}{31}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
+Definition at line \mbox{\hyperlink{register__access_8c_source_l00029}{29}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -87,21 +80,20 @@ void register\+\_\+write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{address
 
 
 
-Write Value to Register. 
+Write a value to a hardware register. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em address} & Register Address \\
+\mbox{\texttt{ in}}  & {\em address} & Memory address of the register. \\
 \hline
-\mbox{\texttt{ in}}  & {\em value} & Register Value \\
+\mbox{\texttt{ in}}  & {\em value} & Value to write to the register. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{register__access_8c_source_l00022}{22}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
+Definition at line \mbox{\hyperlink{register__access_8c_source_l00020}{20}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

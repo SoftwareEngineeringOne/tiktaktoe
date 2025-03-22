@@ -2,20 +2,18 @@
 \hypertarget{register__access_8h}{}\label{register__access_8h}\index{hal/register\_access.h@{hal/register\_access.h}}
 
 
-Contains abstraction functions of the register access.  
+Register Access Interface.  
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
-Include dependency graph for register\+\_\+access.\+h\+:
-\nopagebreak
+Include dependency graph for register\+\_\+access.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=188pt]{dd/dff/register__access_8h__incl}
+\includegraphics[width=199pt]{dd/dff/register__access_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,21 +24,27 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{register__access_8h_a95fe6fba2bc246f49af61e076d1153fe}{register\+\_\+write}} (uint32\+\_\+t address, uint32\+\_\+t value)
-\begin{DoxyCompactList}\small\item\em Write Value to Register. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Write a value to a hardware register. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{register__access_8h_a622715efc93f28ec149d81b793eef17b}{register\+\_\+read}} (uint32\+\_\+t address)
-\begin{DoxyCompactList}\small\item\em Read from Register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read a value from a hardware register. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Contains abstraction functions of the register access. 
+Register Access Interface. 
 
+This file provides an interface for reading from and writing to hardware registers.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{register__access_8c}{register\+\_\+access.\+c}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Ensure that the provided addresses are valid and aligned as required by the hardware.
+\end{DoxyNote}
 \begin{DoxyAuthor}{Author}
 Thomas Vogt 
 
 Sven Reis
 \end{DoxyAuthor}
-
-
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
 \end{DoxyCopyright}
@@ -59,22 +63,21 @@ uint32\+\_\+t register\+\_\+read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]
 
 
 
-Read from Register. 
+Read a value from a hardware register. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em address} & Register Address\\
+\mbox{\texttt{ in}}  & {\em address} & Memory address of the register.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Register Value 
+Value read from the register. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{register__access_8c_source_l00031}{31}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
+Definition at line \mbox{\hyperlink{register__access_8c_source_l00029}{29}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -89,21 +92,20 @@ void register\+\_\+write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{address
 
 
 
-Write Value to Register. 
+Write a value to a hardware register. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em address} & Register Address \\
+\mbox{\texttt{ in}}  & {\em address} & Memory address of the register. \\
 \hline
-\mbox{\texttt{ in}}  & {\em value} & Register Value \\
+\mbox{\texttt{ in}}  & {\em value} & Value to write to the register. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{register__access_8c_source_l00022}{22}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
+Definition at line \mbox{\hyperlink{register__access_8c_source_l00020}{20}} of file \mbox{\hyperlink{register__access_8c_source}{register\+\_\+access.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

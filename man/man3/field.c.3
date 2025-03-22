@@ -1,8 +1,9 @@
-.TH "presentation/field.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "presentation/field.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-presentation/field.c
+presentation/field.c \- Implements the rendering of the TikTakToe field\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -27,7 +28,7 @@ presentation/field.c
 .ti -1c
 .RI "static void \fBprintRow\fP (char **row, size_t row_length)"
 .br
-.RI "Print one row\&. "
+.RI "Print one row of the field\&. "
 .ti -1c
 .RI "void \fBfield_redraw\fP ()"
 .br
@@ -35,19 +36,13 @@ presentation/field.c
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implements the rendering of the TikTakToe field\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBfield\&.h\fP
 .RE
 .PP
 \fBCopyright\fP
@@ -63,26 +58,26 @@ Definition in file \fBfield\&.c\fP\&.
 .SS "void field_redraw ()"
 
 .PP
-Redraw the whole 2D field\&. 
+Redraw the whole 2D field\&. This function renders the entire tic-tac-toe field, including borders and empty cells, based on the current configuration\&. 
 .PP
-Definition at line \fB37\fP of file \fBfield\&.c\fP\&.
+Definition at line \fB35\fP of file \fBfield\&.c\fP\&.
 .PP
 References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCORNER_BOT_LEFT\fP, \fBCORNER_BOT_RIGHT\fP, \fBCORNER_TOP_LEFT\fP, \fBCORNER_TOP_RIGHT\fP, \fBCROSS\fP, \fBcursor_moveTo()\fP, \fBEMPTY\fP, \fBFIELD_X_OFFSET\fP, \fBFIELD_Y_OFFSET\fP, \fBg_cell_size\fP, \fBCellSize::height\fP, \fBprintRow()\fP, \fBSIDE\fP, \fBT_BOT\fP, \fBT_LEFT\fP, \fBT_RIGHT\fP, \fBT_TOP\fP, \fBTOP_BOTTOM\fP, and \fBCellSize::width\fP\&.
 .SS "static void printRow (char ** row, size_t row_length)\fR [static]\fP"
 
 .PP
-Print one row\&. 
+Print one row of the field\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIrow\fP String to print 
+\fIrow\fP Array of strings representing the row to print\&. 
 .br
-\fIrow_length\fP Length of string 
+\fIrow_length\fP Length of the row array\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB100\fP of file \fBfield\&.c\fP\&.
+Definition at line \fB98\fP of file \fBfield\&.c\fP\&.
 .PP
 References \fBprint()\fP\&.
 .SH "Author"

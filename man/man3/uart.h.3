@@ -1,4 +1,4 @@
-.TH "hal/uart.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/uart.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,90 +18,119 @@ hal/uart.h \- Contains constants and abstraction functions for the UART device\&
 .ti -1c
 .RI "#define \fBUART_BASE_ADDRESS\fP   0x40002000"
 .br
+.RI "Base address for UART registers\&. "
 .ti -1c
 .RI "#define \fBUART_STARTRX\fP   0x000"
 .br
+.RI "Start UART receiver\&. "
 .ti -1c
 .RI "#define \fBUART_STOPRX\fP   0x004"
 .br
+.RI "Stop UART receiver\&. "
 .ti -1c
 .RI "#define \fBUART_STARTTX\fP   0x008"
 .br
+.RI "Start UART transmitter\&. "
 .ti -1c
 .RI "#define \fBUART_STOPTX\fP   0x00C"
 .br
+.RI "Stop UART transmitter\&. "
 .ti -1c
 .RI "#define \fBUART_SUSPEND\fP   0x01C"
 .br
+.RI "Suspend UART\&. "
 .ti -1c
 .RI "#define \fBUART_CTS\fP   0x100"
 .br
+.RI "CTS is activated (set low)\&. Clear To Send\&. "
 .ti -1c
 .RI "#define \fBUART_NCTS\fP   0x104"
 .br
+.RI "CTS is deactivated (set high)\&. Not Clear To Send\&. "
 .ti -1c
 .RI "#define \fBUART_RXDRDY\fP   0x108"
 .br
+.RI "Data received in RXD\&. "
 .ti -1c
 .RI "#define \fBUART_TXDRDY\fP   0x11C"
 .br
+.RI "Data sent from TXD\&. "
 .ti -1c
 .RI "#define \fBUART_ERROR\fP   0x124"
 .br
+.RI "Error detected\&. "
 .ti -1c
 .RI "#define \fBUART_RXTO\fP   0x144"
 .br
+.RI "Receiver timeout\&. "
 .ti -1c
 .RI "#define \fBUART_INTEN\fP   0x300"
 .br
+.RI "Enable or disable interrupt\&. "
 .ti -1c
 .RI "#define \fBUART_INTENSET\fP   0x304"
 .br
+.RI "Enable interrupt\&. "
 .ti -1c
 .RI "#define \fBUART_INTENCLR\fP   0x308"
 .br
+.RI "Disable interrupt\&. "
 .ti -1c
 .RI "#define \fBUART_ERRORSRC\fP   0x480"
 .br
+.RI "Error source\&. "
 .ti -1c
 .RI "#define \fBUART_ENABLE\fP   0x500"
 .br
+.RI "Enable UART\&. "
 .ti -1c
 .RI "#define \fBUART_PSELRTS\fP   0x508"
 .br
+.RI "Pin select for RTS\&. "
 .ti -1c
 .RI "#define \fBUART_PSELTXD\fP   0x50C"
 .br
+.RI "Pin select for TXD\&. "
 .ti -1c
 .RI "#define \fBUART_PSELCTS\fP   0x510"
 .br
+.RI "Pin select for CTS\&. "
 .ti -1c
 .RI "#define \fBUART_PSELRXD\fP   0x514"
 .br
+.RI "Pin select for RXD\&. "
 .ti -1c
 .RI "#define \fBUART_RXD\fP   0x518"
 .br
+.RI "RXD register\&. "
 .ti -1c
 .RI "#define \fBUART_TXD\fP   0x51C"
 .br
+.RI "TXD register\&. "
 .ti -1c
 .RI "#define \fBUART_BAUDRATE\fP   0x524"
 .br
+.RI "Baud rate\&. "
 .ti -1c
 .RI "#define \fBUART_CONFIG\fP   0x56C"
 .br
+.RI "Configuration of parity and hardware flow control\&. "
 .ti -1c
 .RI "#define \fBUART_TASK_START\fP   1"
 .br
+.RI "Value for starting a Task\&. "
 .ti -1c
 .RI "#define \fBUART_EVENT_TRIGGER\fP   1"
 .br
+.RI "Value for setting/starting an Event\&. "
 .ti -1c
 .RI "#define \fBUART_EVENT_CLEAR\fP   0"
 .br
+.RI "Value for clearing/stopping an Event\&. "
 .ti -1c
 .RI "#define \fBUART_INT_RXDRDY\fP   (1 << 2)"
 .br
+.RI "Interrupt bit for RXDRDY event\&. "
 .in -1c
 .SS "Functions"
 
@@ -109,21 +138,32 @@ hal/uart.h \- Contains constants and abstraction functions for the UART device\&
 .ti -1c
 .RI "void \fBuart_init\fP (\fBbool\fP with_interrupts)"
 .br
-.RI "Initializing the UART with the following Settings: 115200-8-N-1\&. "
+.RI "Initializes the UART with the following settings: 115200-8-N-1\&. "
 .ti -1c
 .RI "void \fBuart_writeByte\fP (uint8_t data)"
 .br
-.RI "Writes/Sends a byte over the serial Port\&. "
+.RI "Writes/Sends a byte over the serial port\&. "
 .ti -1c
 .RI "uint8_t \fBuart_readByte\fP ()"
 .br
-.RI "Read/Receive a byte from the serial Port\&. "
+.RI "Reads/Receives a byte from the serial port\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Contains constants and abstraction functions for the UART device\&. 
 
+This file provides macros for UART register offsets, tasks, events, and other configurations\&. It also declares functions for initializing the UART, sending, and receiving data\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBuart\&.c\fP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Based on version by Thomas Vogt
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -138,164 +178,222 @@ Definition in file \fBuart\&.h\fP\&.
 .SS "#define UART_BASE_ADDRESS   0x40002000"
 
 .PP
-Definition at line \fB18\fP of file \fBuart\&.h\fP\&.
+Base address for UART registers\&. 
+.PP
+Definition at line \fB31\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_BAUDRATE   0x524"
 
 .PP
-Definition at line \fB48\fP of file \fBuart\&.h\fP\&.
+Baud rate\&. 
+.PP
+Definition at line \fB61\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_CONFIG   0x56C"
 
 .PP
-Definition at line \fB49\fP of file \fBuart\&.h\fP\&.
+Configuration of parity and hardware flow control\&. 
+.PP
+Definition at line \fB62\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_CTS   0x100"
 
 .PP
-Definition at line \fB29\fP of file \fBuart\&.h\fP\&.
+CTS is activated (set low)\&. Clear To Send\&. 
+.PP
+Definition at line \fB42\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_ENABLE   0x500"
 
 .PP
-Definition at line \fB41\fP of file \fBuart\&.h\fP\&.
+Enable UART\&. 
+.PP
+Definition at line \fB54\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_ERROR   0x124"
 
 .PP
-Definition at line \fB33\fP of file \fBuart\&.h\fP\&.
+Error detected\&. 
+.PP
+Definition at line \fB46\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_ERRORSRC   0x480"
 
 .PP
-Definition at line \fB40\fP of file \fBuart\&.h\fP\&.
+Error source\&. 
+.PP
+Definition at line \fB53\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_EVENT_CLEAR   0"
 
 .PP
-Definition at line \fB54\fP of file \fBuart\&.h\fP\&.
+Value for clearing/stopping an Event\&. 
+.PP
+Definition at line \fB67\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_EVENT_TRIGGER   1"
 
 .PP
-Definition at line \fB53\fP of file \fBuart\&.h\fP\&.
+Value for setting/starting an Event\&. 
+.PP
+Definition at line \fB66\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_INT_RXDRDY   (1 << 2)"
 
 .PP
-Definition at line \fB56\fP of file \fBuart\&.h\fP\&.
+Interrupt bit for RXDRDY event\&. 
+.PP
+Definition at line \fB69\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_INTEN   0x300"
 
 .PP
-Definition at line \fB37\fP of file \fBuart\&.h\fP\&.
+Enable or disable interrupt\&. 
+.PP
+Definition at line \fB50\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_INTENCLR   0x308"
 
 .PP
-Definition at line \fB39\fP of file \fBuart\&.h\fP\&.
+Disable interrupt\&. 
+.PP
+Definition at line \fB52\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_INTENSET   0x304"
 
 .PP
-Definition at line \fB38\fP of file \fBuart\&.h\fP\&.
+Enable interrupt\&. 
+.PP
+Definition at line \fB51\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_NCTS   0x104"
 
 .PP
-Definition at line \fB30\fP of file \fBuart\&.h\fP\&.
+CTS is deactivated (set high)\&. Not Clear To Send\&. 
+.PP
+Definition at line \fB43\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_PSELCTS   0x510"
 
 .PP
-Definition at line \fB44\fP of file \fBuart\&.h\fP\&.
+Pin select for CTS\&. 
+.PP
+Definition at line \fB57\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_PSELRTS   0x508"
 
 .PP
-Definition at line \fB42\fP of file \fBuart\&.h\fP\&.
+Pin select for RTS\&. 
+.PP
+Definition at line \fB55\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_PSELRXD   0x514"
 
 .PP
-Definition at line \fB45\fP of file \fBuart\&.h\fP\&.
+Pin select for RXD\&. 
+.PP
+Definition at line \fB58\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_PSELTXD   0x50C"
 
 .PP
-Definition at line \fB43\fP of file \fBuart\&.h\fP\&.
+Pin select for TXD\&. 
+.PP
+Definition at line \fB56\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_RXD   0x518"
 
 .PP
-Definition at line \fB46\fP of file \fBuart\&.h\fP\&.
+RXD register\&. 
+.PP
+Definition at line \fB59\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_RXDRDY   0x108"
 
 .PP
-Definition at line \fB31\fP of file \fBuart\&.h\fP\&.
+Data received in RXD\&. 
+.PP
+Definition at line \fB44\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_RXTO   0x144"
 
 .PP
-Definition at line \fB34\fP of file \fBuart\&.h\fP\&.
+Receiver timeout\&. 
+.PP
+Definition at line \fB47\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_STARTRX   0x000"
 
 .PP
-Definition at line \fB22\fP of file \fBuart\&.h\fP\&.
+Start UART receiver\&. 
+.PP
+Definition at line \fB35\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_STARTTX   0x008"
 
 .PP
-Definition at line \fB24\fP of file \fBuart\&.h\fP\&.
+Start UART transmitter\&. 
+.PP
+Definition at line \fB37\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_STOPRX   0x004"
 
 .PP
-Definition at line \fB23\fP of file \fBuart\&.h\fP\&.
+Stop UART receiver\&. 
+.PP
+Definition at line \fB36\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_STOPTX   0x00C"
 
 .PP
-Definition at line \fB25\fP of file \fBuart\&.h\fP\&.
+Stop UART transmitter\&. 
+.PP
+Definition at line \fB38\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_SUSPEND   0x01C"
 
 .PP
-Definition at line \fB26\fP of file \fBuart\&.h\fP\&.
+Suspend UART\&. 
+.PP
+Definition at line \fB39\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_TASK_START   1"
 
 .PP
-Definition at line \fB52\fP of file \fBuart\&.h\fP\&.
+Value for starting a Task\&. 
+.PP
+Definition at line \fB65\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_TXD   0x51C"
 
 .PP
-Definition at line \fB47\fP of file \fBuart\&.h\fP\&.
+TXD register\&. 
+.PP
+Definition at line \fB60\fP of file \fBuart\&.h\fP\&.
 .SS "#define UART_TXDRDY   0x11C"
 
 .PP
-Definition at line \fB32\fP of file \fBuart\&.h\fP\&.
+Data sent from TXD\&. 
+.PP
+Definition at line \fB45\fP of file \fBuart\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void uart_init (\fBbool\fP with_interrupts)"
 
 .PP
-Initializing the UART with the following Settings: 115200-8-N-1\&. 
+Initializes the UART with the following settings: 115200-8-N-1\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIwith_interrupts\fP Wether or not interrupts should be triggered 
+\fIwith_interrupts\fP Whether or not interrupts should be triggered\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB25\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB20\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBInterrupt_ID2\fP, \fBInterrupt_Set_Enable\fP, \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, \fBUART_ENABLE\fP, \fBUART_INT_RXDRDY\fP, \fBUART_INTENSET\fP, \fBUART_STARTRX\fP, \fBUART_STARTTX\fP, and \fBUART_TASK_START\fP\&.
 .SS "uint8_t uart_readByte ()"
 
 .PP
-Read/Receive a byte from the serial Port\&. 
+Reads/Receives a byte from the serial port\&. 
 .PP
 \fBReturns\fP
 .RS 4
-uint8_t received Byte or 0 (zero) if nothing was received 
+uint8_t Received byte or 0 (zero) if nothing was received\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB81\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB62\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBregister_read()\fP, \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, \fBUART_EVENT_CLEAR\fP, \fBUART_RXD\fP, and \fBUART_RXDRDY\fP\&.
 .SS "void uart_writeByte (uint8_t data)"
 
 .PP
-Writes/Sends a byte over the serial Port\&. 
+Writes/Sends a byte over the serial port\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIdata\fP byte to send 
+\fIdata\fP Byte to send\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB73\fP of file \fBuart\&.c\fP\&.
+Definition at line \fB54\fP of file \fBuart\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBUART_BASE_ADDRESS\fP, and \fBUART_TXD\fP\&.
 .SH "Author"

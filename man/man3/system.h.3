@@ -1,8 +1,8 @@
-.TH "hal/system.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/system.h" 3 "Sat Mar 22 2025 15:19:13" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/system.h \- Contains functions interacting with the microcontroller\&.  
+hal/system.h \- System control interface for hardware abstraction layer\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,18 +13,23 @@ hal/system.h \- Contains functions interacting with the microcontroller\&.
 .ti -1c
 .RI "#define \fBSYS_AIRCR\fP   0xE000ED0C"
 .br
+.RI "Address of the Application Interrupt and Reset Control Register\&. "
 .ti -1c
 .RI "#define \fBSYS_VECTKEY\fP   (0x5FA << 16)"
 .br
+.RI "Key required to write to SYS_AIRCR\&. "
 .ti -1c
 .RI "#define \fBSYS_SYSRESETREQ\fP   (1 << 2)"
 .br
+.RI "Bit mask to trigger a system reset\&. "
 .ti -1c
 .RI "#define \fBSYS_POWER\fP   0x40000000"
 .br
+.RI "Base address for power control registers\&. "
 .ti -1c
 .RI "#define \fBSYS_SYSTEMOFF\fP   0x500"
 .br
+.RI "Offset for the system off mode register\&. "
 .in -1c
 .SS "Functions"
 
@@ -40,9 +45,15 @@ hal/system.h \- Contains functions interacting with the microcontroller\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains functions interacting with the microcontroller\&. 
+System control interface for hardware abstraction layer\&. 
 
+This file contains macros and function declarations for controlling system-level operations such as soft reset and power-off mode\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBsystem\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -57,23 +68,33 @@ Definition in file \fBsystem\&.h\fP\&.
 .SS "#define SYS_AIRCR   0xE000ED0C"
 
 .PP
-Definition at line \fB14\fP of file \fBsystem\&.h\fP\&.
+Address of the Application Interrupt and Reset Control Register\&. 
+.PP
+Definition at line \fB27\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_POWER   0x40000000"
 
 .PP
-Definition at line \fB18\fP of file \fBsystem\&.h\fP\&.
+Base address for power control registers\&. 
+.PP
+Definition at line \fB45\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_SYSRESETREQ   (1 << 2)"
 
 .PP
-Definition at line \fB16\fP of file \fBsystem\&.h\fP\&.
+Bit mask to trigger a system reset\&. 
+.PP
+Definition at line \fB39\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_SYSTEMOFF   0x500"
 
 .PP
-Definition at line \fB19\fP of file \fBsystem\&.h\fP\&.
+Offset for the system off mode register\&. 
+.PP
+Definition at line \fB51\fP of file \fBsystem\&.h\fP\&.
 .SS "#define SYS_VECTKEY   (0x5FA << 16)"
 
 .PP
-Definition at line \fB15\fP of file \fBsystem\&.h\fP\&.
+Key required to write to SYS_AIRCR\&. 
+.PP
+Definition at line \fB33\fP of file \fBsystem\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "void system_offMode ()"
@@ -88,7 +109,7 @@ Triggers 'off' mode of the system\&.
 .PP
 
 .PP
-Definition at line \fB15\fP of file \fBsystem\&.c\fP\&.
+Definition at line \fB26\fP of file \fBsystem\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBSYS_POWER\fP, and \fBSYS_SYSTEMOFF\fP\&.
 .SS "void system_softReset ()"
@@ -103,7 +124,7 @@ Trigger a soft reset of the system\&.
 .PP
 
 .PP
-Definition at line \fB6\fP of file \fBsystem\&.c\fP\&.
+Definition at line \fB18\fP of file \fBsystem\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBSYS_AIRCR\fP, \fBSYS_SYSRESETREQ\fP, and \fBSYS_VECTKEY\fP\&.
 .SH "Author"

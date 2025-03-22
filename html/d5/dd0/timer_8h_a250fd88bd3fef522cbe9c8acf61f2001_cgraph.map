@@ -1,15 +1,15 @@
 <map id="timer_init" name="timer_init">
-<area shape="rect" id="Node000001" title="Default Initialisation of Timer." alt="" coords="5,55,80,80"/>
-<area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#a6bb9bef52a6d01f72cbbb032d00f4929" title="Set the Capture/ Compare Register of the Timer." alt="" coords="128,5,300,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,54,127,40,149,33,151,38,128,45,81,59"/>
-<area shape="rect" id="Node000005" href="$df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234" title="Initialises the Timer." alt="" coords="151,55,277,80"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="80,65,135,65,135,70,80,70"/>
-<area shape="rect" id="Node000006" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="172,104,256,130"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="81,76,128,90,158,99,157,104,127,95,79,81"/>
-<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read from Register." alt="" coords="350,5,446,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,16,334,16,334,21,300,21"/>
-<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write Value to Register." alt="" coords="348,55,447,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="265,29,334,48,332,53,264,34"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="278,65,332,65,332,70,278,70"/>
-<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="255,103,332,82,334,87,257,108"/>
+<area shape="rect" id="Node000001" title="Default Initialisation of Timer." alt="" coords="5,57,90,85"/>
+<area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#a6bb9bef52a6d01f72cbbb032d00f4929" title="Set the Capture/ Compare Register of the Timer." alt="" coords="138,5,330,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,57,137,43,165,35,167,40,138,48,91,62"/>
+<area shape="rect" id="Node000005" href="$df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234" title="Initialises the Timer." alt="" coords="162,57,306,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="90,68,146,68,146,74,90,74"/>
+<area shape="rect" id="Node000006" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="187,109,280,137"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="91,80,138,94,173,104,171,109,137,99,89,85"/>
+<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="380,5,487,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,16,364,16,364,22,330,22"/>
+<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="378,57,489,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="291,31,363,50,362,55,289,36"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="306,68,362,68,362,74,306,74"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="280,109,362,87,363,92,282,114"/>
 </map>

@@ -1,4 +1,4 @@
-.TH "md__2github_2workspace_2Architecture" 3 "Fri Mar 21 2025 13:57:38" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "md__2github_2workspace_2Architecture" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,12 +10,10 @@ md__2github_2workspace_2Architecture \- Architecture
 This project is an embedded application, designed to run on an \fRnRF51\fP microcontroller with an \fRarm-cortex-m0\fP CPU\&. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer\&. Additionally modules for the entry process and utility functions exist\&. This encapsulation allows for a flexible design\&.
 .SH "Entry Module"
 .PP
-\fIfiles: entry/entry\&.S, entry/linker_script\&.ls\fP
+\fIfiles: \fBentry/entry\&.S\fP, entry/linker_script\&.ls\fP
 
 .PP
 This module is responsible for the startup process of the microcontroller\&. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed\&.
-.SS "RAM Layout (Cortex-M):"
-0x20000000 ┌────────────────┐ │ \&.data │ ├────────────────┤ │ \&.bss │ ├────────────────┤ │ │ │ Free Space │ │ │ │ │ 0x20003C00 ├────────────────┤ ← __StackLimit │ Stack │ 0x20004000 └────────────────┘ ← __StackTop (initial SP)
 .SH "Hardware Abstraction Layer"
 .PP
 \fIfiles: include/hal/*\&.h, src/hal/*\&.c\fP

@@ -1,9 +1,9 @@
 <map id="util/conversion.h" name="util/conversion.h">
-<area shape="rect" id="Node000001" title="Contains several different simple and independent conversion functions." alt="" coords="180,5,296,31"/>
-<area shape="rect" id="Node000002" href="$dd/dfa/cursor_8c.html" title=" " alt="" coords="5,79,148,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,40,105,81,103,76,196,35"/>
-<area shape="rect" id="Node000003" href="$d6/db1/print_8c.html" title=" " alt="" coords="172,79,304,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,46,240,79,235,79,235,46"/>
-<area shape="rect" id="Node000004" href="$d8/d2f/conversion_8c.html" title=" " alt="" coords="328,79,444,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="278,36,362,76,359,81,276,41"/>
+<area shape="rect" id="Node000001" title="Contains several different simple and independent conversion functions." alt="" coords="197,5,326,33"/>
+<area shape="rect" id="Node000002" href="$dd/dfa/cursor_8c.html" title="Implements cursor movement functionality for the presentation layer." alt="" coords="5,81,163,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,42,116,83,114,78,214,37"/>
+<area shape="rect" id="Node000003" href="$d6/db1/print_8c.html" title="Implementation of high&#45;level printing functions for UART." alt="" coords="187,81,336,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,49,264,81,259,81,259,49"/>
+<area shape="rect" id="Node000004" href="$d8/d2f/conversion_8c.html" title="Implementation of utility functions for integer&#45;to&#45;string and integer&#45;to&#45;character conversions." alt="" coords="360,81,488,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="305,37,396,78,394,83,303,42"/>
 </map>

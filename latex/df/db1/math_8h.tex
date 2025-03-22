@@ -5,26 +5,30 @@
 Contains several different simple and independent math functions.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=334pt]{d7/dcb/math_8h__dep__incl}
+\includegraphics[width=350pt]{d7/dcb/math_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{math_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}}(a,  b)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the minimum of two values. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{math_8h_affe776513b24d84b39af8ab0930fef7f}{max}}(a,  b)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the maximum of two values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains several different simple and independent math functions. 
 
+This file provides utility macros for basic mathematical operations, such as finding the minimum or maximum of two values.
+
+\begin{DoxySeeAlso}{See also}
+math.\+c
+\end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
 \end{DoxyCopyright}
@@ -46,19 +50,28 @@ Definition in file \mbox{\hyperlink{math_8h_source}{math.\+h}}.
 \DoxyCodeLine{a\ >\ b\ ?\ a\ :\ b}
 
 \end{DoxyCode}
-Get the maximum out of two values 
+
+
+Get the maximum of two values. 
+
+This macro evaluates to the larger of the two provided values.
+
+
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em a} & Some number \\
+\mbox{\texttt{ in}}  & {\em a} & The first value. \\
 \hline
-\mbox{\texttt{ in}}  & {\em b} & Some number \\
+\mbox{\texttt{ in}}  & {\em b} & The second value.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The maximum 
+The larger of the two values.
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This macro does not perform type checking and may evaluate its arguments multiple times. 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{math_8h_source_l00032}{32}} of file \mbox{\hyperlink{math_8h_source}{math.\+h}}.
+Definition at line \mbox{\hyperlink{math_8h_source_l00052}{52}} of file \mbox{\hyperlink{math_8h_source}{math.\+h}}.
 
 \Hypertarget{math_8h_ac6afabdc09a49a433ee19d8a9486056d}\index{math.h@{math.h}!min@{min}}
 \index{min@{min}!math.h@{math.h}}
@@ -71,17 +84,26 @@ Definition at line \mbox{\hyperlink{math_8h_source_l00032}{32}} of file \mbox{\h
 \DoxyCodeLine{a\ <\ b\ ?\ a\ :\ b}
 
 \end{DoxyCode}
-Get the minimum out of two values 
+
+
+Get the minimum of two values. 
+
+This macro evaluates to the smaller of the two provided values.
+
+
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em a} & Some number \\
+\mbox{\texttt{ in}}  & {\em a} & The first value. \\
 \hline
-\mbox{\texttt{ in}}  & {\em b} & Some number \\
+\mbox{\texttt{ in}}  & {\em b} & The second value.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The minimum 
+The smaller of the two values.
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This macro does not perform type checking and may evaluate its arguments multiple times. 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{math_8h_source_l00022}{22}} of file \mbox{\hyperlink{math_8h_source}{math.\+h}}.
+Definition at line \mbox{\hyperlink{math_8h_source_l00036}{36}} of file \mbox{\hyperlink{math_8h_source}{math.\+h}}.
 

@@ -1,8 +1,9 @@
-.TH "logic/winning.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "logic/winning.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-logic/winning.c
+logic/winning.c \- Implements the function for checking if someone has won\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -21,15 +22,32 @@ logic/winning.c
 .br
 .RI "Checks at the end of the round if someone has won\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Implements the function for checking if someone has won\&. 
+
+This file contains the implementation of the logic for determining if a player has won in the game\&. It includes the main function and helper functions for evaluating the game state\&.
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBwinning\&.h\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBwinning\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "static \fBbool\fP checkIfPlayerWon (const \fBCell\fP * cell, \fBPlayer\fP player, \fBCellState\fP * cell_state, \fBCell\fP * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])\fR [static]\fP"
 
 .PP
-Checks if the given player has won\&. VICTORY ALGORITHM Vertical / Horizontal: The algorithm starts at the border and iterates to the other side\&. It goes in 2 different directions and counts on 2 axes\&. It runs in one of the directions till a cell is reached that is not marked by our player\&. Diagonal: The algorithm starts at the given cell coordinates\&. It goes in 4 different direction and counts on 2 axes\&. Every step in one of the directions increments the dedicated axis until a cell is reached that is not marked by our player\&.
-
-.PP
-The return value is true when one axis or more axes has / have reached the win condition (line to the other side)\&. UP UP UP | axis | direction 1 | direction 2 | LEFT RIGHT |------------+-------------+-------------| \\ | / | vertical | down | | LEFT ---+---> RIGHT | horizontal | right | | / | \\ | diagonal_1 | up right | down left | DOWN v DOWN | diagonal_2 | up left | down right | LEFT DOWN RIGHT
+Checks if the given player has won\&. This function evaluates the game board to determine if the specified player has won\&. It checks vertical, horizontal, and diagonal lines originating from the last marked cell of the player\&. If a winning condition is met, the relevant cells are written to the provided buffer\&.
 
 .PP
 \fBParameters\fP
@@ -38,25 +56,26 @@ The return value is true when one axis or more axes has / have reached the win c
 .br
 \fIplayer\fP Player it is looking for 
 .br
-\fIcell_state\fP 
+\fIcell_state\fP Current state of the game board 
 .br
-\fIwinner_cells\fP 
+\fIwinner_cells\fP Buffer to store the cells forming the winning line
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-True if player won 
+True if the player has won, false otherwise 
 .RE
 .PP
 
 .PP
-Definition at line \fB55\fP of file \fBwinning\&.c\fP\&.
+Definition at line \fB62\fP of file \fBwinning\&.c\fP\&.
 .PP
 References \fBCellState::all\fP, \fBcell_state\fP, \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBCell::marked_by\fP, \fBmax\fP, \fBmin\fP, and \fBCell::row\fP\&.
 .SS "\fBPlayer\fP winning_checkForWinner (\fBCellState\fP * cell_state, \fBCell\fP * winner_cells[max(CELLS_PER_COL, CELLS_PER_ROW)])"
 
 .PP
-Checks at the end of the round if someone has won\&. 
+Checks at the end of the round if someone has won\&. This function evaluates the current state of the game board to determine if a player has won\&. If a player has won, the relevant cells are written to the provided buffer\&.
+
 .PP
 \fBParameters\fP
 .RS 4
@@ -67,12 +86,12 @@ Checks at the end of the round if someone has won\&.
 .PP
 \fBReturns\fP
 .RS 4
-The player who won 
+The player who won, or \fRNone\fP if no player has won 
 .RE
 .PP
 
 .PP
-Definition at line \fB39\fP of file \fBwinning\&.c\fP\&.
+Definition at line \fB46\fP of file \fBwinning\&.c\fP\&.
 .PP
 References \fBcell_state\fP, \fBcheckIfPlayerWon()\fP, \fBCircle\fP, \fBCross\fP, \fBCellState::last_circle\fP, \fBCellState::last_cross\fP, and \fBNone\fP\&.
 .SH "Author"

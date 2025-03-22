@@ -1,4 +1,4 @@
-.TH "util/input_buf.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/input_buf.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,6 +26,7 @@ util/input_buf.h \- Contains everything for the input buffer\&.
 .ti -1c
 .RI "#define \fBINPUT_BUF_SIZE\fP   128"
 .br
+.RI "Size of the input buffer\&. "
 .in -1c
 .SS "Functions"
 
@@ -57,12 +58,19 @@ util/input_buf.h \- Contains everything for the input buffer\&.
 .ti -1c
 .RI "volatile \fBInputBuffer\fP \fBg_input_buf\fP"
 .br
+.RI "Global input buffer instance\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Contains everything for the input buffer\&. 
 
+This file contains the definition of the \fBInputBuffer\fP struct and declarations of functions for managing the input buffer, including initialization, checking buffer state, and handling UART input interrupts\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBinput_buf\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -77,7 +85,9 @@ Definition in file \fBinput_buf\&.h\fP\&.
 .SS "#define INPUT_BUF_SIZE   128"
 
 .PP
-Definition at line \fB19\fP of file \fBinput_buf\&.h\fP\&.
+Size of the input buffer\&. 
+.PP
+Definition at line \fB28\fP of file \fBinput_buf\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "\fBbool\fP input_getNext (volatile \fBInputBuffer\fP * ib, uint8_t * byte)"
@@ -87,19 +97,19 @@ Get the next byte from the buffer\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to read from\&. 
 .br
-\fIbyte\fP Next Byte 
+\fIbyte\fP Pointer to store the next byte\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-False if empty 
+False if the buffer is empty, true otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB59\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB67\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::data\fP, \fBINPUT_BUF_SIZE\fP, \fBinput_isEmpty()\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_init (volatile \fBInputBuffer\fP * ib)"
@@ -109,12 +119,12 @@ Initialize the given \fBInputBuffer\fP\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to initialize\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB43\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB51\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isEmpty (const volatile \fBInputBuffer\fP * ib)"
@@ -124,17 +134,17 @@ Check if the buffer is empty\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to check\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-True if empty 
+True if the buffer is empty, false otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB49\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB57\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, and \fBInputBuffer::tail\fP\&.
 .SS "\fBbool\fP input_isFull (const volatile \fBInputBuffer\fP * ib)"
@@ -144,17 +154,17 @@ Check if the buffer is full\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIib\fP \fBInputBuffer\fP 
+\fIib\fP \fBInputBuffer\fP to check\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-True if full 
+True if the buffer is full, false otherwise\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB54\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB62\fP of file \fBinput_buf\&.c\fP\&.
 .PP
 References \fBInputBuffer::head\fP, \fBINPUT_BUF_SIZE\fP, and \fBInputBuffer::tail\fP\&.
 .SS "void input_onInterrupt (uint8_t input)"
@@ -164,20 +174,22 @@ Function to call in case of UART input interrupt\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIinput\fP Pure input from UART 
+\fIinput\fP Pure input from UART\&. 
 .RE
 .PP
-TODO Handle error better
+
 .PP
-Definition at line \fB34\fP of file \fBinput_buf\&.c\fP\&.
+Definition at line \fB41\fP of file \fBinput_buf\&.c\fP\&.
 .PP
-References \fBg_input_buf\fP, \fBprint()\fP, and \fBputIntoBuf()\fP\&.
+References \fBg_input_buf\fP, and \fBputIntoBuf()\fP\&.
 .SH "Variable Documentation"
 .PP 
 .SS "volatile \fBInputBuffer\fP g_input_buf\fR [extern]\fP"
 
 .PP
-Definition at line \fB22\fP of file \fBinput_buf\&.c\fP\&.
+Global input buffer instance\&. 
+.PP
+Definition at line \fB24\fP of file \fBinput_buf\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

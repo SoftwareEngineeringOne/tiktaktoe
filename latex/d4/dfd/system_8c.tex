@@ -1,14 +1,18 @@
 \doxysection{hal/system.c File Reference}
 \hypertarget{system_8c}{}\label{system_8c}\index{hal/system.c@{hal/system.c}}
+
+
+Implementation of system control functions.  
+
+
 {\ttfamily \#include "{}hal/system.\+h"{}}\newline
 {\ttfamily \#include "{}def.\+h"{}}\newline
 {\ttfamily \#include "{}hal/register\+\_\+access.\+h"{}}\newline
-Include dependency graph for system.\+c\+:
-\nopagebreak
+Include dependency graph for system.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{d3/d4a/system_8c__incl}
+\includegraphics[width=350pt]{d3/d4a/system_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
@@ -18,6 +22,21 @@ void \mbox{\hyperlink{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}{system\+\_\+s
 \begin{DoxyCompactList}\small\item\em Trigger a soft reset of the system. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9}{system\+\_\+off\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Triggers "{}off"{} mode of the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of system control functions. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{system_8h}{system.\+h}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
+
 
 
 \doxysubsection{Function Documentation}
@@ -36,26 +55,24 @@ Triggers "{}off"{} mode of the system.
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{system_8c_source_l00015}{15}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
+Definition at line \mbox{\hyperlink{system_8c_source_l00026}{26}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00018}{SYS\+\_\+\+POWER}}, and \mbox{\hyperlink{system_8h_source_l00019}{SYS\+\_\+\+SYSTEMOFF}}.
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00045}{SYS\+\_\+\+POWER}}, and \mbox{\hyperlink{system_8h_source_l00051}{SYS\+\_\+\+SYSTEMOFF}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=278pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph}
+\includegraphics[width=297pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=240pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph}
+\includegraphics[width=254pt]{d4/dfd/system_8c_a077a1d054ddfb6fb237fb8d288b3b1d9_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{system_8c_a97bacc4493b8a3008bdbdd7a83e86642}\index{system.c@{system.c}!system\_softReset@{system\_softReset}}
@@ -73,22 +90,20 @@ Trigger a soft reset of the system.
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{system_8c_source_l00006}{6}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
+Definition at line \mbox{\hyperlink{system_8c_source_l00018}{18}} of file \mbox{\hyperlink{system_8c_source}{system.\+c}}.
 
 
 
-References \mbox{\hyperlink{register__access_8c_source_l00022}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00014}{SYS\+\_\+\+AIRCR}}, \mbox{\hyperlink{system_8h_source_l00016}{SYS\+\_\+\+SYSRESETREQ}}, and \mbox{\hyperlink{system_8h_source_l00015}{SYS\+\_\+\+VECTKEY}}.
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{system_8h_source_l00027}{SYS\+\_\+\+AIRCR}}, \mbox{\hyperlink{system_8h_source_l00039}{SYS\+\_\+\+SYSRESETREQ}}, and \mbox{\hyperlink{system_8h_source_l00033}{SYS\+\_\+\+VECTKEY}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=285pt]{d4/dfd/system_8c_a97bacc4493b8a3008bdbdd7a83e86642_cgraph}
+\includegraphics[width=303pt]{d4/dfd/system_8c_a97bacc4493b8a3008bdbdd7a83e86642_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

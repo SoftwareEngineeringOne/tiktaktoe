@@ -7,16 +7,14 @@ Contains everything for the input buffer.
 
 {\ttfamily \#include "{}def.\+h"{}}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
-Include dependency graph for input\+\_\+buf.\+h\+:
-\nopagebreak
+Include dependency graph for input\+\_\+buf.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{de/d25/input__buf_8h__incl}
+\includegraphics[width=190pt]{de/d25/input__buf_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,7 +30,7 @@ struct \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{input__buf_8h_a8f53190540130db759820c0d9ab78f60}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}~128
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Size of the input buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,12 +48,17 @@ void \mbox{\hyperlink{input__buf_8h_a9bb68967ad751f4b307afa735a3501ff}{input\+\_
 \begin{DoxyCompactItemize}
 \item 
 volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} \mbox{\hyperlink{input__buf_8h_a3e797155e2d8f73914a02d047ea39a37}{g\+\_\+input\+\_\+buf}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Global input buffer instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Contains everything for the input buffer. 
 
+This file contains the definition of the \doxylink{structInputBuffer}{Input\+Buffer} struct and declarations of functions for managing the input buffer, including initialization, checking buffer state, and handling UART input interrupts.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{input__buf_8c}{input\+\_\+buf.\+c}
+\end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
 \end{DoxyCopyright}
@@ -74,7 +77,11 @@ Definition in file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
 
 
 
-Definition at line \mbox{\hyperlink{input__buf_8h_source_l00019}{19}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
+Size of the input buffer. 
+
+
+
+Definition at line \mbox{\hyperlink{input__buf_8h_source_l00028}{28}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
 
 
 
@@ -91,32 +98,30 @@ Get the next byte from the buffer.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} \\
+\mbox{\texttt{ in,out}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} to read from. \\
 \hline
-\mbox{\texttt{ out}}  & {\em byte} & Next Byte \\
+\mbox{\texttt{ out}}  & {\em byte} & Pointer to store the next byte. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-False if empty 
+False if the buffer is empty, true otherwise. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00059}{59}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00067}{67}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00026}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, \mbox{\hyperlink{input__buf_8c_source_l00049}{input\+\_\+is\+Empty()}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00039}{Input\+Buffer\+::data}}, \mbox{\hyperlink{input__buf_8h_source_l00028}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, \mbox{\hyperlink{input__buf_8c_source_l00057}{input\+\_\+is\+Empty()}}, and \mbox{\hyperlink{input__buf_8h_source_l00041}{Input\+Buffer\+::tail}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=269pt]{db/db3/input__buf_8h_a3e03a367ae13ea8f68021a964efbef90_cgraph}
+\includegraphics[width=287pt]{db/db3/input__buf_8h_a3e03a367ae13ea8f68021a964efbef90_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -135,19 +140,18 @@ Initialize the given \doxylink{structInputBuffer}{Input\+Buffer}.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} \\
+\mbox{\texttt{ in,out}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} to initialize. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00043}{43}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00051}{51}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00027}{Input\+Buffer\+::head}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00040}{Input\+Buffer\+::head}}, and \mbox{\hyperlink{input__buf_8h_source_l00041}{Input\+Buffer\+::tail}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -166,22 +170,21 @@ Check if the buffer is empty.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} \\
+\mbox{\texttt{ in}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} to check. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True if empty 
+True if the buffer is empty, false otherwise. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00049}{49}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00057}{57}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00027}{Input\+Buffer\+::head}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00040}{Input\+Buffer\+::head}}, and \mbox{\hyperlink{input__buf_8h_source_l00041}{Input\+Buffer\+::tail}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -200,22 +203,21 @@ Check if the buffer is full.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} \\
+\mbox{\texttt{ in}}  & {\em ib} & \doxylink{structInputBuffer}{Input\+Buffer} to check. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True if full 
+True if the buffer is full, false otherwise. 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00054}{54}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00062}{62}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
 
-References \mbox{\hyperlink{input__buf_8h_source_l00027}{Input\+Buffer\+::head}}, \mbox{\hyperlink{input__buf_8h_source_l00019}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, and \mbox{\hyperlink{input__buf_8h_source_l00028}{Input\+Buffer\+::tail}}.
+References \mbox{\hyperlink{input__buf_8h_source_l00040}{Input\+Buffer\+::head}}, \mbox{\hyperlink{input__buf_8h_source_l00028}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}, and \mbox{\hyperlink{input__buf_8h_source_l00041}{Input\+Buffer\+::tail}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -234,31 +236,29 @@ Function to call in case of UART input interrupt.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em input} & Pure input from UART \\
+\mbox{\texttt{ in}}  & {\em input} & Pure input from UART. \\
 \hline
 \end{DoxyParams}
-TODO Handle error better
-
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00034}{34}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
 
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00041}{41}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 
-References \mbox{\hyperlink{input__buf_8c_source_l00022}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, and \mbox{\hyperlink{input__buf_8c_source_l00070}{put\+Into\+Buf()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+References \mbox{\hyperlink{input__buf_8c_source_l00024}{g\+\_\+input\+\_\+buf}}, and \mbox{\hyperlink{input__buf_8c_source_l00078}{put\+Into\+Buf()}}.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{db/db3/input__buf_8h_ae603712ba6220d13a4389c08ea5fbed2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=301pt]{db/db3/input__buf_8h_ae603712ba6220d13a4389c08ea5fbed2_icgraph}
+\includegraphics[width=324pt]{db/db3/input__buf_8h_ae603712ba6220d13a4389c08ea5fbed2_icgraph}
 \end{center}
 \end{figure}
 
@@ -272,5 +272,9 @@ volatile \mbox{\hyperlink{structInputBuffer}{Input\+Buffer}} g\+\_\+input\+\_\+b
 
 
 
-Definition at line \mbox{\hyperlink{input__buf_8c_source_l00022}{22}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
+Global input buffer instance. 
+
+
+
+Definition at line \mbox{\hyperlink{input__buf_8c_source_l00024}{24}} of file \mbox{\hyperlink{input__buf_8c_source}{input\+\_\+buf.\+c}}.
 

@@ -1,4 +1,4 @@
-.TH "util/math.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/math.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,15 +13,23 @@ util/math.h \- Contains several different simple and independent math functions\
 .ti -1c
 .RI "#define \fBmin\fP(a,  b)"
 .br
+.RI "Get the minimum of two values\&. "
 .ti -1c
 .RI "#define \fBmax\fP(a,  b)"
 .br
+.RI "Get the maximum of two values\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Contains several different simple and independent math functions\&. 
 
+This file provides utility macros for basic mathematical operations, such as finding the minimum or maximum of two values\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+math\&.c
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -39,46 +47,62 @@ Definition in file \fBmath\&.h\fP\&.
 a > b ? a : b
 .PP
 .fi
-Get the maximum out of two values 
+
+.PP
+Get the maximum of two values\&. This macro evaluates to the larger of the two provided values\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fIa\fP Some number 
+\fIa\fP The first value\&. 
 .br
-\fIb\fP Some number 
+\fIb\fP The second value\&.
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-The maximum 
+The larger of the two values\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This macro does not perform type checking and may evaluate its arguments multiple times\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB32\fP of file \fBmath\&.h\fP\&.
+Definition at line \fB52\fP of file \fBmath\&.h\fP\&.
 .SS "#define min( a,  b)"
 \fBValue:\fP
 .nf
 a < b ? a : b
 .PP
 .fi
-Get the minimum out of two values 
+
+.PP
+Get the minimum of two values\&. This macro evaluates to the smaller of the two provided values\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fIa\fP Some number 
+\fIa\fP The first value\&. 
 .br
-\fIb\fP Some number 
+\fIb\fP The second value\&.
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-The minimum 
+The smaller of the two values\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This macro does not perform type checking and may evaluate its arguments multiple times\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB22\fP of file \fBmath\&.h\fP\&.
+Definition at line \fB36\fP of file \fBmath\&.h\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

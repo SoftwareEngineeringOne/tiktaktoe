@@ -102,30 +102,31 @@ $(function(){initNavTree('d3/db7/memset_8c_source.html','../../'); initResizable
   <div class="headertitle"><div class="title">memset.c</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d3/db7/memset_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/d60/memset_8h.html">hal/memset.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">    5</a></span><span class="keywordtype">void</span> *<a class="code hl_function" href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">memset</a>(<span class="keywordtype">void</span> *ptr, <span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keywordtype">size_t</span> n)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    uint8_t *p = ptr;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">while</span>(n--)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        *p++ = (uint8_t)x;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">return</span> ptr;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+<a href="../../d3/db7/memset_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../d3/d60/memset_8h.html">hal/memset.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">   18</a></span><span class="keywordtype">void</span> *<a class="code hl_function" href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">memset</a>(<span class="keywordtype">void</span> *ptr, <span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keywordtype">size_t</span> n)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    uint8_t *p = ptr;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">while</span>(n--)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        *p++ = (uint8_t)x;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 </div>
-<div class="ttc" id="amemset_8c_html_a5a47c79a43fa854fe23bf03450cb3af8"><div class="ttname"><a href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">memset</a></div><div class="ttdeci">void * memset(void *ptr, const int x, size_t n)</div><div class="ttdoc">Simple implementation of memset.</div><div class="ttdef"><b>Definition</b> <a href="#l00005">memset.c:5</a></div></div>
-<div class="ttc" id="amemset_8h_html"><div class="ttname"><a href="../../d3/d60/memset_8h.html">memset.h</a></div><div class="ttdoc">Contains a simple implementation of memset.</div></div>
+<div class="ttc" id="amemset_8c_html_a5a47c79a43fa854fe23bf03450cb3af8"><div class="ttname"><a href="../../d3/db7/memset_8c.html#a5a47c79a43fa854fe23bf03450cb3af8">memset</a></div><div class="ttdeci">void * memset(void *ptr, const int x, size_t n)</div><div class="ttdoc">Simple implementation of memset.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">memset.c:18</a></div></div>
+<div class="ttc" id="amemset_8h_html"><div class="ttname"><a href="../../d3/d60/memset_8h.html">memset.h</a></div><div class="ttdoc">Header file for a simple implementation of memset.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4ce6a7f885e2866a554ba9e7335035f1.html">hal</a></li><li class="navelem"><a class="el" href="../../d3/db7/memset_8c.html">memset.c</a></li>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:37 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:13 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

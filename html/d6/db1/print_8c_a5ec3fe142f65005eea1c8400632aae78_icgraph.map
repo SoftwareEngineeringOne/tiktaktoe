@@ -1,11 +1,11 @@
 <map id="println_int" name="println_int">
-<area shape="rect" id="Node000001" title="Prints the given integer with a new line character." alt="" coords="631,5,708,31"/>
-<area shape="rect" id="Node000002" href="$d2/d0a/menu_8c.html#ab82b49f40989dd1c5b11264bca838492" title=" " alt="" coords="428,5,583,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,21,583,21,583,16,615,16"/>
-<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,5,380,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,21,381,21,381,16,413,16"/>
-<area shape="rect" id="Node000004" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title=" " alt="" coords="103,5,254,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,21,254,21,254,16,286,16"/>
-<area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000001" title="Prints the given integer with a new line character." alt="" coords="675,5,762,33"/>
+<area shape="rect" id="Node000002" href="$d2/d0a/menu_8c.html#ab82b49f40989dd1c5b11264bca838492" title="Displays the game over screen and game summary." alt="" coords="457,5,627,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="659,22,627,22,627,16,659,16"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,5,409,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,22,410,22,410,16,442,16"/>
+<area shape="rect" id="Node000004" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="108,5,275,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="308,22,275,22,275,16,308,16"/>
+<area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
 </map>

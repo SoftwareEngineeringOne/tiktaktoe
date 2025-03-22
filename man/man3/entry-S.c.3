@@ -1,0 +1,111 @@
+.TH "/github/workspace/entry/entry-S.c" 3 "Sat Mar 22 2025 15:19:13" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/github/workspace/entry/entry-S.c \- \fBentry\&.S\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBDefault_Handler\fP (void)"
+.br
+.RI "Default handler for unimplemented interrupts\&. "
+.ti -1c
+.RI "void \fBHardFault_Handler\fP (void)"
+.br
+.RI "Default HardFault handler\&. "
+.ti -1c
+.RI "void \fBReset_Handler\fP (void)"
+.br
+.RI "Reset handler\&. "
+.ti -1c
+.RI "void \fBSet_Default_Handler\fP (void)"
+.br
+.RI "Macro which defines a default handler for an interrupt or exception\&. "
+.ti -1c
+.RI "void \fBcopyData\fP (void)"
+.br
+.RI "Copies the \fR\&.data\fP section from flash to RAM\&. "
+.ti -1c
+.RI "void \fBg_pfnVectors\fP (void)"
+.br
+.RI "Interrupt vector table\&. "
+.ti -1c
+.RI "void \fBzeroBss\fP (void)"
+.br
+.RI "Zeroes the \fR\&.bss\fP section\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBentry\&.S\fP 
+
+
+.PP
+Definition in file \fBentry\-S\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void copyData (void )"
+
+.PP
+Copies the \fR\&.data\fP section from flash to RAM\&. This function initializes the \fR\&.data\fP section by copying its contents from the load address in flash to the execution address in RAM\&. 
+.PP
+Definition at line \fB94\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void Default_Handler (void )"
+
+.PP
+Default handler for unimplemented interrupts\&. Handles unexpected interrupts\&.
+
+.PP
+This is a weak symbol that can be overridden by a user-defined handler\&. 
+.PP
+Definition at line \fB42\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void g_pfnVectors (void )"
+
+.PP
+Interrupt vector table\&. This table defines the initial stack pointer and the entry points for various exceptions and interrupts\&. 
+.PP
+Definition at line \fB106\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void HardFault_Handler (void )"
+
+.PP
+Default HardFault handler\&. Handles hard faults\&.
+
+.PP
+This is a weak symbol that can be overridden by a user-defined handler\&. 
+.PP
+Definition at line \fB53\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void Reset_Handler (void )"
+
+.PP
+Reset handler\&. This function is the entry point after a reset\&. It initializes the \fR\&.bss\fP and \fR\&.data\fP sections and then calls the \fRmain\fP function\&. 
+.PP
+Definition at line \fB65\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void Set_Default_Handler (void )"
+
+.PP
+Macro which defines a default handler for an interrupt or exception\&. This macro creates a weak alias for the \fRDefault_Handler\fP for the specified interrupt or exception\&.
+
+.PP
+Example: 
+.PP
+.nf
+Set_Default_Handler NMI_Handler
+
+.fi
+.PP
+ 
+.PP
+Definition at line \fB82\fP of file \fBentry\-S\&.c\fP\&.
+.SS "void zeroBss (void )"
+
+.PP
+Zeroes the \fR\&.bss\fP section\&. This function sets all bytes in the \fR\&.bss\fP section to zero\&. 
+.PP
+Definition at line \fB117\fP of file \fBentry\-S\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

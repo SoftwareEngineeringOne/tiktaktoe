@@ -1,0 +1,145 @@
+\doxysection{/github/workspace/entry/entry-\/S.c File Reference}
+\hypertarget{entry-S_8c}{}\label{entry-S_8c}\index{/github/workspace/entry/entry-\/S.c@{/github/workspace/entry/entry-\/S.c}}
+
+
+\doxylink{entry_8S}{entry.\+S}  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{entry-S_8c_a4e0c522c1bb26af24accaf20e6b87d12}{Default\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Default handler for unimplemented interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_a2bffc10d5bd4106753b7c30e86903bea}{Hard\+Fault\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Default Hard\+Fault handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_ae7ee340978f5c25f52f0cad1457c6616}{Reset\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Reset handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_a34de11473b4638492d0e832a28f2985c}{Set\+\_\+\+Default\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Macro which defines a default handler for an interrupt or exception. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_a2d21542bf6f79927f6c09c3c39669611}{copy\+Data}} (void)
+\begin{DoxyCompactList}\small\item\em Copies the {\ttfamily .data} section from flash to RAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_a1e383ab09139abb70e04b8e754082395}{g\+\_\+pfn\+Vectors}} (void)
+\begin{DoxyCompactList}\small\item\em Interrupt vector table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entry-S_8c_a10ff74944ae45806286eb5bb75315eba}{zero\+Bss}} (void)
+\begin{DoxyCompactList}\small\item\em Zeroes the {\ttfamily .bss} section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{entry_8S}{entry.\+S} 
+
+
+
+Definition in file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{entry-S_8c_a2d21542bf6f79927f6c09c3c39669611}\index{entry-\/S.c@{entry-\/S.c}!copyData@{copyData}}
+\index{copyData@{copyData}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{copyData()}{copyData()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a2d21542bf6f79927f6c09c3c39669611} 
+void copy\+Data (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Copies the {\ttfamily .data} section from flash to RAM. 
+
+This function initializes the {\ttfamily .data} section by copying its contents from the load address in flash to the execution address in RAM. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00094}{94}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_a4e0c522c1bb26af24accaf20e6b87d12}\index{entry-\/S.c@{entry-\/S.c}!Default\_Handler@{Default\_Handler}}
+\index{Default\_Handler@{Default\_Handler}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{Default\_Handler()}{Default\_Handler()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a4e0c522c1bb26af24accaf20e6b87d12} 
+void Default\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Default handler for unimplemented interrupts. 
+
+Handles unexpected interrupts.
+
+This is a weak symbol that can be overridden by a user-\/defined handler. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00042}{42}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_a1e383ab09139abb70e04b8e754082395}\index{entry-\/S.c@{entry-\/S.c}!g\_pfnVectors@{g\_pfnVectors}}
+\index{g\_pfnVectors@{g\_pfnVectors}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{g\_pfnVectors()}{g\_pfnVectors()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a1e383ab09139abb70e04b8e754082395} 
+void g\+\_\+pfn\+Vectors (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Interrupt vector table. 
+
+This table defines the initial stack pointer and the entry points for various exceptions and interrupts. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00106}{106}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_a2bffc10d5bd4106753b7c30e86903bea}\index{entry-\/S.c@{entry-\/S.c}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{HardFault\_Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a2bffc10d5bd4106753b7c30e86903bea} 
+void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Default Hard\+Fault handler. 
+
+Handles hard faults.
+
+This is a weak symbol that can be overridden by a user-\/defined handler. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00053}{53}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_ae7ee340978f5c25f52f0cad1457c6616}\index{entry-\/S.c@{entry-\/S.c}!Reset\_Handler@{Reset\_Handler}}
+\index{Reset\_Handler@{Reset\_Handler}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{Reset\_Handler()}{Reset\_Handler()}}
+{\footnotesize\ttfamily \label{entry-S_8c_ae7ee340978f5c25f52f0cad1457c6616} 
+void Reset\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Reset handler. 
+
+This function is the entry point after a reset. It initializes the {\ttfamily .bss} and {\ttfamily .data} sections and then calls the {\ttfamily main} function. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00065}{65}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_a34de11473b4638492d0e832a28f2985c}\index{entry-\/S.c@{entry-\/S.c}!Set\_Default\_Handler@{Set\_Default\_Handler}}
+\index{Set\_Default\_Handler@{Set\_Default\_Handler}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{Set\_Default\_Handler()}{Set\_Default\_Handler()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a34de11473b4638492d0e832a28f2985c} 
+void Set\+\_\+\+Default\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Macro which defines a default handler for an interrupt or exception. 
+
+This macro creates a weak alias for the {\ttfamily Default\+\_\+\+Handler} for the specified interrupt or exception.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{entry-S_8c_a34de11473b4638492d0e832a28f2985c}{Set\_Default\_Handler}}\ NMI\_Handler}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00082}{82}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+
+\Hypertarget{entry-S_8c_a10ff74944ae45806286eb5bb75315eba}\index{entry-\/S.c@{entry-\/S.c}!zeroBss@{zeroBss}}
+\index{zeroBss@{zeroBss}!entry-\/S.c@{entry-\/S.c}}
+\doxysubsubsection{\texorpdfstring{zeroBss()}{zeroBss()}}
+{\footnotesize\ttfamily \label{entry-S_8c_a10ff74944ae45806286eb5bb75315eba} 
+void zero\+Bss (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Zeroes the {\ttfamily .bss} section. 
+
+This function sets all bytes in the {\ttfamily .bss} section to zero. 
+
+Definition at line \mbox{\hyperlink{entry-S_8c_source_l00117}{117}} of file \mbox{\hyperlink{entry-S_8c_source}{entry-\/\+S.\+c}}.
+

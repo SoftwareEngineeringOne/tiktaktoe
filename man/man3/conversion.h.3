@@ -1,4 +1,4 @@
-.TH "util/conversion.h" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "util/conversion.h" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,6 +18,7 @@ util/conversion.h \- Contains several different simple and independent conversio
 .ti -1c
 .RI "#define \fBASCII_NUM_OFFSET\fP   48"
 .br
+.RI "Offset to convert a digit to its ASCII representation\&. "
 .in -1c
 .SS "Functions"
 
@@ -25,15 +26,23 @@ util/conversion.h \- Contains several different simple and independent conversio
 .ti -1c
 .RI "int8_t \fBint_to_str\fP (uint32_t num, char *buf, const size_t buf_size)"
 .br
+.RI "Converts an integer to a string\&. "
 .ti -1c
 .RI "char \fBint_to_char\fP (uint8_t num)"
 .br
+.RI "Converts an integer to a character\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Contains several different simple and independent conversion functions\&. 
 
+This file provides utility functions for converting integers to strings or characters\&.
 
+.PP
+\fBSee also\fP
+.RS 4
+\fBconversion\&.c\fP
+.RE
 .PP
 \fBCopyright\fP
 .RS 4
@@ -48,47 +57,55 @@ Definition in file \fBconversion\&.h\fP\&.
 .SS "#define ASCII_NUM_OFFSET   48"
 
 .PP
-Definition at line \fB17\fP of file \fBconversion\&.h\fP\&.
+Offset to convert a digit to its ASCII representation\&. 
+.PP
+Definition at line \fB24\fP of file \fBconversion\&.h\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "char int_to_char (uint8_t num)"
-Converts an integer to a character 
+
+.PP
+Converts an integer to a character\&. Converts a single-digit integer (0-9) to its corresponding ASCII character\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fInum\fP Integer to convert 
+\fInum\fP The integer to convert (must be between 0 and 9)\&.
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Suitable character 
+The ASCII character corresponding to the input integer\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB58\fP of file \fBconversion\&.c\fP\&.
+Definition at line \fB55\fP of file \fBconversion\&.c\fP\&.
 .PP
 References \fBASCII_NUM_OFFSET\fP\&.
 .SS "int8_t int_to_str (uint32_t num, char * buf, const size_t buf_size)"
-Converts an integer to a string 
+
+.PP
+Converts an integer to a string\&. Converts a given unsigned integer to its string representation and stores it in the provided buffer\&.
+
 .PP
 \fBParameters\fP
 .RS 4
-\fInum\fP Integer to convert 
+\fInum\fP The integer to convert\&. 
 .br
-\fIbuf\fP String 
+\fIbuf\fP The buffer to store the resulting string\&. 
 .br
-\fIbuf_size\fP Size of the string 
+\fIbuf_size\fP The size of the buffer\&.
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-TODO ??False??? when no error occurred 
+0 on success, -1 if an error occurred (e\&.g\&., buffer is NULL or too small)\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB23\fP of file \fBconversion\&.c\fP\&.
+Definition at line \fB20\fP of file \fBconversion\&.c\fP\&.
 .PP
 References \fBASCII_NUM_OFFSET\fP\&.
 .SH "Author"

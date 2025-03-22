@@ -1,10 +1,14 @@
 \doxysection{presentation/cursor.c File Reference}
 \hypertarget{cursor_8c}{}\label{cursor_8c}\index{presentation/cursor.c@{presentation/cursor.c}}
+
+
+Implements cursor movement functionality for the presentation layer.  
+
+
 {\ttfamily \#include "{}presentation/cursor.\+h"{}}\newline
 {\ttfamily \#include "{}presentation/print.\+h"{}}\newline
 {\ttfamily \#include "{}util/conversion.\+h"{}}\newline
-Include dependency graph for cursor.\+c\+:
-\nopagebreak
+Include dependency graph for cursor.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,20 +19,16 @@ Include dependency graph for cursor.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{cursor_8c_a57bbc852bc29fb220c4d95404ee482dc}{write\+Num\+To\+Buf}} (uint8\+\_\+t num, const char \texorpdfstring{$\ast$}{*}num\+\_\+buf, char \texorpdfstring{$\ast$}{*}buf, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf\+\_\+pos)
-\begin{DoxyCompactList}\small\item\em TODO\+: ????? \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Write a numeric value to a buffer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{cursor_8c_a599725458bf000c7fc08432a74602fac}{cursor\+\_\+move\+To}} (const uint8\+\_\+t x, const uint8\+\_\+t y)
-\begin{DoxyCompactList}\small\item\em Move cursor to the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Move the cursor to the given coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+Implements cursor movement functionality for the presentation layer. 
 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-
-\end{DoxyDate}
 \begin{DoxySeeAlso}{See also}
-
+\doxylink{cursor_8h}{cursor.\+h}
 \end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
@@ -48,33 +48,36 @@ void cursor\+\_\+move\+To (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x}{, }\
 
 
 
-Move cursor to the given coordinates. 
+Move the cursor to the given coordinates. 
+
+This function generates an escape sequence to move the cursor to the specified (x, y) position on the terminal.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em x} & X-\/\+Position \\
+\mbox{\texttt{ in}}  & {\em x} & X-\/coordinate of the cursor position. \\
 \hline
-\mbox{\texttt{ in}}  & {\em y} & Y-\/\+Position \\
+\mbox{\texttt{ in}}  & {\em y} & Y-\/coordinate of the cursor position.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function can be improved by using new functions found in the conversion module and directly writing the string representation of the number to the target buffer. 
+\end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{cursor_8c_source_l00032}{32}} of file \mbox{\hyperlink{cursor_8c_source}{cursor.\+c}}.
+Definition at line \mbox{\hyperlink{cursor_8c_source_l00034}{34}} of file \mbox{\hyperlink{cursor_8c_source}{cursor.\+c}}.
 
 
 
-References \mbox{\hyperlink{conversion_8c_source_l00023}{int\+\_\+to\+\_\+str()}}, \mbox{\hyperlink{print_8c_source_l00030}{print()}}, and \mbox{\hyperlink{cursor_8c_source_l00058}{write\+Num\+To\+Buf()}}.
+References \mbox{\hyperlink{conversion_8c_source_l00020}{int\+\_\+to\+\_\+str()}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, and \mbox{\hyperlink{cursor_8c_source_l00060}{write\+Num\+To\+Buf()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dd/dfa/cursor_8c_a599725458bf000c7fc08432a74602fac_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -89,25 +92,26 @@ static void write\+Num\+To\+Buf (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n
 
 
 
-TODO\+: ????? 
+Write a numeric value to a buffer. 
+
+This function writes the string representation of a numeric value to a buffer while maintaining the current position in the buffer.
 
 
-\begin{DoxyParams}{Parameters}
-{\em num} & \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num} & The numeric value to write. \\
 \hline
-{\em num\+\_\+buf} & \\
+\mbox{\texttt{ in}}  & {\em num\+\_\+buf} & A buffer containing the string representation of the number. \\
 \hline
-{\em buf} & \\
+\mbox{\texttt{ out}}  & {\em buf} & The target buffer to write to. \\
 \hline
-{\em buf\+\_\+pos} & \\
+\mbox{\texttt{ in,out}}  & {\em buf\+\_\+pos} & Pointer to the current position in the target buffer. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{cursor_8c_source_l00058}{58}} of file \mbox{\hyperlink{cursor_8c_source}{cursor.\+c}}.
+Definition at line \mbox{\hyperlink{cursor_8c_source_l00060}{60}} of file \mbox{\hyperlink{cursor_8c_source}{cursor.\+c}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,15 +1,15 @@
 <map id="hal/uart.c" name="hal/uart.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,192,31"/>
-<area shape="rect" id="Node000002" href="$d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="5,79,80,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,34,76,73,73,68,134,29"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="88,153,152,178"/>
-<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="154,32,129,138,124,137,149,31"/>
-<area shape="rect" id="Node000005" href="$da/d7e/nvic_8h.html" title="Contains interrupt constants." alt="" coords="155,79,231,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="163,30,182,64,177,66,159,32"/>
-<area shape="rect" id="Node000006" href="$dd/d33/register__access_8h.html" title="Contains abstraction functions of the register access." alt="" coords="256,79,400,105"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="185,29,285,70,283,75,183,34"/>
-<area shape="rect" id="Node000003" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="15,153,64,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="45,105,44,137,38,137,39,105"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="57,103,98,140,94,144,54,107"/>
-<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="293,108,167,151,165,146,292,103"/>
+<area shape="rect" id="Node000001" title="Implements UART initialization and data transfer functions." alt="" coords="124,5,207,33"/>
+<area shape="rect" id="Node000002" href="$d2/d86/uart_8h.html" title="Contains constants and abstraction functions for the UART device." alt="" coords="5,81,89,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,36,82,75,79,71,143,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,157,165,184"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="165,34,154,82,139,142,134,141,148,80,160,33"/>
+<area shape="rect" id="Node000005" href="$da/d7e/nvic_8h.html" title="Contains interrupt constants." alt="" coords="164,81,248,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="175,32,194,66,189,69,170,35"/>
+<area shape="rect" id="Node000006" href="$dd/d33/register__access_8h.html" title="Register Access Interface." alt="" coords="272,81,430,109"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="200,31,305,73,303,78,198,36"/>
+<area shape="rect" id="Node000003" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="18,157,71,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,109,48,141,43,141,44,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="64,107,106,144,102,148,60,111"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="312,112,181,155,179,150,311,107"/>
 </map>

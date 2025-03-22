@@ -1,8 +1,9 @@
-.TH "hal/random.c" 3 "Fri Mar 21 2025 13:57:37" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.TH "hal/random.c" 3 "Sat Mar 22 2025 15:19:14" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-hal/random.c
+hal/random.c \- Implementation of the RNG HAL for random number generation\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -17,33 +18,32 @@ hal/random.c
 
 .in +1c
 .ti -1c
-.RI "void \fBrng_init\fP (void)"
+.RI "void \fBrng_init\fP ()"
 .br
 .RI "Enables the generation of random numbers\&. "
 .ti -1c
-.RI "uint8_t \fBrng_getRandomValue_immediately\fP (void)"
+.RI "uint8_t \fBrng_getRandomValue_immediately\fP ()"
 .br
 .RI "Get the Random Value from the generator immediately\&. "
 .ti -1c
 .RI "uint8_t \fBrng_getRandomValue_waiting\fP ()"
 .br
-.RI "# THIS FUNCTION IS A STUB! # "
+.RI "Get the Random Value from the generator by polling and waiting\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Implementation of the RNG HAL for random number generation\&. 
 
-.PP
-\fBAuthor\fP
-.RS 4
 
-.RE
-.PP
-\fBDate\fP
-.RS 4
-.RE
 .PP
 \fBSee also\fP
 .RS 4
+\fBrandom\&.h\fP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Based on version by Thomas Vogt
 .RE
 .PP
 \fBCopyright\fP
@@ -56,57 +56,44 @@ This Source Code Form is subject to the terms of the Mozilla Public License, v2\
 Definition in file \fBrandom\&.c\fP\&.
 .SH "Function Documentation"
 .PP 
-.SS "uint8_t rng_getRandomValue_immediately (void )"
+.SS "uint8_t rng_getRandomValue_immediately ()"
 
 .PP
-Get the Random Value from the generator immediately\&. The function is \fBNOT\fP waiting until the next value is generated!
+Get the Random Value from the generator immediately\&. The function does not wait for the next value to be generated\&. It reads the current value from the RNG peripheral\&.
 
 .PP
 \fBReturns\fP
 .RS 4
-uint8_t random byte 
+uint8_t A random byte\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB43\fP of file \fBrandom\&.c\fP\&.
+Definition at line \fB27\fP of file \fBrandom\&.c\fP\&.
 .PP
 References \fBregister_read()\fP, \fBRNG_BASE_ADDRESS\fP, and \fBRNG_VALUE\fP\&.
-.SS "uint8_t rng_getRandomValue_waiting (void )"
+.SS "uint8_t rng_getRandomValue_waiting ()"
 
 .PP
-# THIS FUNCTION IS A STUB! # This is a function stub\&. Implement it, if needed\&.
-
-.PP
-TODO: Implement it, if you need it
-
-.PP
-Things it should do here:
-.IP "\(bu" 2
-Get the Random Value from the generator by polling and waiting\&.
-.IP "\(bu" 2
-The function should be \fBblocking\fP until the next value is generated
-.IP "\(bu" 2
-it should return the random byte
-.PP
+Get the Random Value from the generator by polling and waiting\&. This function blocks until the RNG peripheral indicates that a new random value is ready\&. It then retrieves and returns the random byte\&.
 
 .PP
 \fBReturns\fP
 .RS 4
-uint8_t (curently) always \fR0\fP 
+uint8_t A random byte\&. 
 .RE
 .PP
 
 .PP
-Definition at line \fB64\fP of file \fBrandom\&.c\fP\&.
+Definition at line \fB36\fP of file \fBrandom\&.c\fP\&.
 .PP
-References \fBregister_read()\fP, \fBregister_write()\fP, \fBRNG_BASE_ADDRESS\fP, \fBrng_getRandomValue_immediately()\fP, and \fBRNG_VALRDY\fP\&.
-.SS "void rng_init (void )"
+References \fBregister_read()\fP, \fBregister_write()\fP, \fBRNG_BASE_ADDRESS\fP, \fBRNG_EVENT_CLEAR\fP, \fBrng_getRandomValue_immediately()\fP, and \fBRNG_VALRDY\fP\&.
+.SS "void rng_init ()"
 
 .PP
-Enables the generation of random numbers\&. This is done by writing a \fR1\fP to the \fRSTART_TASK\fP of the RNG peripheral\&. 
+Enables the generation of random numbers\&. 
 .PP
-Definition at line \fB29\fP of file \fBrandom\&.c\fP\&.
+Definition at line \fB21\fP of file \fBrandom\&.c\fP\&.
 .PP
 References \fBregister_write()\fP, \fBRNG_BASE_ADDRESS\fP, \fBRNG_START\fP, and \fBRNG_TASK_START\fP\&.
 .SH "Author"

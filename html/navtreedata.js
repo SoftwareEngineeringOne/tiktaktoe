@@ -25,59 +25,68 @@
 var NAVTREE =
 [
   [ "TikTakToe", "index.html", [
-    [ "TikTakToe", "index.html#autotoc_md0", [
-      [ "Acknowledgements", "index.html#autotoc_md1", null ],
-      [ "Architecture", "index.html#autotoc_md2", null ],
-      [ "Documentation", "index.html#autotoc_md3", null ],
-      [ "Build and run the project", "index.html#autotoc_md4", [
-        [ "Using CMake and qemu directly", "index.html#autotoc_md5", [
-          [ "Linux", "index.html#autotoc_md6", null ],
-          [ "Windows", "index.html#autotoc_md7", null ]
+    [ "TikTakToe", "index.html#autotoc_md2", [
+      [ "Acknowledgements", "index.html#autotoc_md3", null ],
+      [ "Architecture", "index.html#autotoc_md4", null ],
+      [ "Documentation", "index.html#autotoc_md5", null ],
+      [ "Build and run the project", "index.html#autotoc_md6", [
+        [ "Using CMake and qemu directly", "index.html#autotoc_md7", [
+          [ "Linux", "index.html#autotoc_md8", null ],
+          [ "Windows", "index.html#autotoc_md9", null ]
         ] ],
-        [ "Using the provided Makefile", "index.html#autotoc_md8", [
-          [ "Linux", "index.html#autotoc_md9", null ],
-          [ "Windows", "index.html#autotoc_md10", null ]
+        [ "Using the provided Makefile", "index.html#autotoc_md10", [
+          [ "Linux", "index.html#autotoc_md11", null ],
+          [ "Windows", "index.html#autotoc_md12", null ]
         ] ],
-        [ "Using Docker", "index.html#autotoc_md11", [
-          [ "Use the image from Dockerhub", "index.html#autotoc_md12", null ],
-          [ "Build the image locally", "index.html#autotoc_md13", null ]
+        [ "Using Docker", "index.html#autotoc_md13", [
+          [ "Use the image from Dockerhub", "index.html#autotoc_md14", null ],
+          [ "Build the image locally", "index.html#autotoc_md15", null ]
         ] ]
       ] ],
-      [ "Compile time configurations", "index.html#autotoc_md14", [
-        [ "Directly passing to CMake", "index.html#autotoc_md15", null ],
-        [ "Using the included Makefile", "index.html#autotoc_md16", null ]
+      [ "Compile time configurations", "index.html#autotoc_md16", [
+        [ "Directly passing to CMake", "index.html#autotoc_md17", null ],
+        [ "Using the included Makefile", "index.html#autotoc_md18", null ]
       ] ],
-      [ "Features", "index.html#autotoc_md17", null ],
-      [ "Dependencies (TODO: CHECK CORRECT)", "index.html#autotoc_md18", [
-        [ "Ubuntu/Debian", "index.html#autotoc_md19", null ],
-        [ "Arch", "index.html#autotoc_md20", null ],
-        [ "Nix / NixOS", "index.html#autotoc_md21", null ],
-        [ "macOS", "index.html#autotoc_md22", null ],
-        [ "Windows", "index.html#autotoc_md23", null ]
+      [ "Features", "index.html#autotoc_md19", null ],
+      [ "Dependencies (TODO: CHECK CORRECT)", "index.html#autotoc_md20", [
+        [ "Ubuntu/Debian", "index.html#autotoc_md21", null ],
+        [ "Arch", "index.html#autotoc_md22", null ],
+        [ "Nix / NixOS", "index.html#autotoc_md23", null ],
+        [ "macOS", "index.html#autotoc_md24", null ],
+        [ "Windows", "index.html#autotoc_md25", null ]
       ] ],
-      [ "Authors", "index.html#autotoc_md24", null ],
-      [ "Conventions", "index.html#autotoc_md25", null ]
+      [ "Authors", "index.html#autotoc_md26", null ],
+      [ "Conventions", "index.html#autotoc_md27", null ]
     ] ],
     [ "Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md27", [
-        [ "RAM Layout (Cortex-M):", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md28", null ]
-      ] ],
-      [ "Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md29", null ],
-      [ "Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md30", null ],
-      [ "Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md31", null ],
-      [ "Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md32", null ],
-      [ "Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md33", null ]
+      [ "Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md29", null ],
+      [ "Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md30", null ],
+      [ "Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md31", null ],
+      [ "Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md32", null ],
+      [ "Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md33", null ],
+      [ "Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md34", null ]
     ] ],
     [ "Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
-      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md35", [
-        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md36", null ],
-        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md37", null ],
-        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md38", [
-          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md39", null ]
+      [ "File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md36", [
+        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md37", null ],
+        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md38", null ],
+        [ "Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md39", [
+          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md40", null ]
         ] ]
       ] ],
-      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md40", null ]
+      [ "Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md41", [
+        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md42", [
+          [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md43", null ],
+          [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md44", null ],
+          [ "Structs", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md45", null ],
+          [ "Enums", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md46", null ],
+          [ "Typedefs", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md47", null ],
+          [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md48", null ],
+          [ "Global Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md49", null ]
+        ] ]
+      ] ]
     ] ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -104,8 +113,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/dd0/timer_8h.html#a7fcd2179172a76af95e8b8710d287d71",
-"de/d12/style_8h.html#a5759b41dab5745b9016e1237f7f59228"
+"df/d41/timer_8c.html#a3a07f4678518ae033c32482fd71486b8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

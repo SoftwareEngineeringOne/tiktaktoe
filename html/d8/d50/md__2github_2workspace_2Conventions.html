@@ -102,7 +102,7 @@ $(function(){initNavTree('d8/d50/md__2github_2workspace_2Conventions.html','../.
   <div class="headertitle"><div class="title">Coding Conventions</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md34"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md35"></a></p>
 <ul>
 <li>Conventional Commits (<a href="https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13">https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13</a>)</li>
 <li>The architecture is documented in this README</li>
@@ -114,10 +114,10 @@ $(function(){initNavTree('d8/d50/md__2github_2workspace_2Conventions.html','../.
 <li>Private functions should be defined in the beginning of the source files</li>
 <li>Private functions should be implemented in the source file, following the public functions</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 File structure</h1>
 <p>All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.</p>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Header file structure</h2>
 <ol type="1">
 <li>Module comment</li>
@@ -127,7 +127,7 @@ Header file structure</h2>
 <li>structs</li>
 <li>public function prototypes</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Source file structure</h2>
 <ol type="1">
 <li>Module comment (may reference header comment and add information if needed)</li>
@@ -137,9 +137,9 @@ Source file structure</h2>
 <li>public function implementations</li>
 <li>private function implementations</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Naming</h2>
-<h3><a class="anchor" id="autotoc_md39"></a>
+<h3><a class="anchor" id="autotoc_md40"></a>
 Functions</h3>
 <ul>
 <li>public functions should be prefixed with "`module_[...]`"</li>
@@ -147,22 +147,64 @@ Functions</h3>
 <li>the function name itself should be written in <code>camelCase</code></li>
 <li>a specialization may follow as a suffix, such as "`[...]_waiting`"</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md41"></a>
 Documentation</h1>
 <ul>
-<li>All files should contain a top level comment structured similiar to this: <div class="fragment"><div class="line"> </div>
-<div class="line"> </div>
-</div><!-- fragment --></li>
-<li>All public functions should be documented in the header file</li>
-<li>All private functions should be documented at the definition in the source files </li>
+<li>All files should contain a top level comment.</li>
+<li>All public functions should be documented in the header file.</li>
+<li>All private functions should be documented at the definition in the source files.</li>
+<li>All structs and enums should be documented.</li>
+<li>All global variables should be documented.</li>
+<li>All "complicated" macros should be documented.</li>
+<li>All typedefs should be documented.</li>
 </ul>
-</div></div><!-- contents -->
+<h2><a class="anchor" id="autotoc_md42"></a>
+Documentation templates</h2>
+<p>To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.</p>
+<h3><a class="anchor" id="autotoc_md43"></a>
+Files</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"> </div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md44"></a>
+Functions</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"> </div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md45"></a>
+Structs</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"> <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">    <span class="keywordtype">int</span> member1; </div>
+<div class="line">    <span class="keywordtype">float</span> member2; </div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">} ExampleStruct;</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md46"></a>
+Enums</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"> <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line">    ENUM_VALUE1; </div>
+<div class="line">    ENUM_VALUE2; </div>
+<div class="line">    ENUM_VALUE3; </div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">} ExampleEnum;</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md47"></a>
+Typedefs</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ExampleType;</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md48"></a>
+Macros</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#define EXAMPLE_MACRO 42</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md49"></a>
+Global Variables</h3>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keyword">extern</span> <span class="keywordtype">int</span> g_exampleGlobal;</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 21 2025 13:57:38 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

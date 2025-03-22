@@ -2,24 +2,22 @@
 \hypertarget{memset_8h}{}\label{memset_8h}\index{hal/memset.h@{hal/memset.h}}
 
 
-Contains a simple implementation of memset.  
+Header file for a simple implementation of memset.  
 
 
 {\ttfamily \#include $<$stddef.\+h$>$}\newline
-Include dependency graph for memset.\+h\+:
-\nopagebreak
+Include dependency graph for memset.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=155pt]{d6/d26/memset_8h__incl}
+\includegraphics[width=164pt]{d6/d26/memset_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=155pt]{d9/d09/memset_8h__dep__incl}
+\includegraphics[width=164pt]{d9/d09/memset_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
@@ -30,8 +28,11 @@ void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{memset_8h_a1c484fc7f521d82f32b1
 
 
 \doxysubsection{Detailed Description}
-Contains a simple implementation of memset. 
+Header file for a simple implementation of memset. 
 
+\begin{DoxySeeAlso}{See also}
+\doxylink{memset_8c}{memset.\+c}
+\end{DoxySeeAlso}
 \begin{DoxyCopyright}{Copyright}
 This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
 \end{DoxyCopyright}
@@ -58,15 +59,18 @@ Sets the first {\bfseries{n}} bytes of the block of memory pointed to by {\bfser
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em ptr} & Pointer to the block of memory to fill \\
 \hline
-\mbox{\texttt{ in}}  & {\em x} & Value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value \\
+\mbox{\texttt{ in}}  & {\em x} & Value to be set. \\
 \hline
 \mbox{\texttt{ in}}  & {\em n} & Number of bytes to be set to the value\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pointer to the memory area 
+A pointer to the memory area
 \end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+While x is passed as an int, it is cast to a uint8\+\_\+t (char) before being stored in the memory area. 
+\end{DoxyWarning}
 
 
-Definition at line \mbox{\hyperlink{memset_8c_source_l00005}{5}} of file \mbox{\hyperlink{memset_8c_source}{memset.\+c}}.
+Definition at line \mbox{\hyperlink{memset_8c_source_l00018}{18}} of file \mbox{\hyperlink{memset_8c_source}{memset.\+c}}.
 

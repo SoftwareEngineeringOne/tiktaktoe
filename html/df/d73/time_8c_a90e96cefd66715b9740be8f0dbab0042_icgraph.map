@@ -1,21 +1,17 @@
 <map id="time_finishTurn" name="time_finishTurn">
-<area shape="rect" id="Node000001" title="Resets the ticks." alt="" coords="974,31,1084,56"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="819,31,926,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="959,46,927,46,927,41,959,41"/>
-<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatically end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="803,36,771,30,772,25,804,30"/>
-<area shape="rect" id="Node000006" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="655,55,763,80"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="804,56,764,62,763,57,803,51"/>
-<area shape="rect" id="Node000004" href="$df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="481,5,596,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="631,21,596,21,596,16,631,16"/>
-<area shape="rect" id="Node000005" href="$d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317" title="Timer interrupt handler." alt="" coords="302,5,430,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="465,21,430,21,430,16,465,16"/>
-<area shape="rect" id="Node000007" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="478,55,599,80"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="639,70,599,70,599,65,639,65"/>
-<area shape="rect" id="Node000008" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,55,405,80"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="463,70,406,70,406,65,463,65"/>
-<area shape="rect" id="Node000009" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="103,55,254,80"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="311,70,254,70,254,65,311,65"/>
-<area shape="rect" id="Node000010" href="$d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,55,55,80"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="87,70,55,70,55,65,87,65"/>
+<area shape="rect" id="Node000001" title="Resets the ticks." alt="" coords="924,31,1034,56"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="769,31,876,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="909,46,877,46,877,41,909,41"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatically end a turn in case the turn time is over." alt="" coords="597,5,721,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="753,36,721,30,722,25,754,30"/>
+<area shape="rect" id="Node000004" href="$d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="605,55,713,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="754,56,714,62,713,57,753,51"/>
+<area shape="rect" id="Node000005" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="428,55,549,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="589,70,549,70,549,65,589,65"/>
+<area shape="rect" id="Node000006" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,55,380,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="413,70,381,70,381,65,413,65"/>
+<area shape="rect" id="Node000007" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="103,55,254,80"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="286,70,254,70,254,65,286,65"/>
+<area shape="rect" id="Node000008" href="$d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,55,55,80"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="87,70,55,70,55,65,87,65"/>
 </map>

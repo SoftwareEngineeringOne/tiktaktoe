@@ -27,7 +27,7 @@ var NAVTREE =
   [ "TikTakToe", "index.html", [
     [ "🎮 TikTakToe", "index.html", "index" ],
     [ "🏗️ Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
-      [ "🚪 Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md4", null ],
+      [ "🚪 Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5", null ],
       [ "📟 Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md6", null ],
       [ "🧩 Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md7", null ],
       [ "🖥️ Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md8", null ],

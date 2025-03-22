@@ -25,5 +25,5 @@ var searchData=
   ['min_22',['min',['../df/db1/math_8h.html#ac6afabdc09a49a433ee19d8a9486056d',1,'math.h']]],
   ['mode_23',['Mode',['../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911',1,'game.h']]],
   ['mode_24',['mode',['../d2/d3d/structGameState.html#a15e3eb27612e90a6f458a5b6a707e0f2',1,'GameState']]],
-  ['module_25',['🚪 Entry Module',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md4',1,'']]]
+  ['module_25',['🚪 Entry Module',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5',1,'']]]
 ];

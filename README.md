@@ -68,9 +68,7 @@ which can be found under [dependencies](#dependencies) are required.
     qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio
     ```
 
-    > [!NOTE]
-    > Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
-    > are disabled when building with the MinGW generator!
+    **Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!**
 
 
 </div>

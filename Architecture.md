@@ -26,24 +26,33 @@ these operations, allowing the layers above to refrain from interacting with any
 
 _files: include/logic/\*.h, src/logic/\*.c_
 
-Within this layer, the game itself resides. The whole logic is based here.
-
-!TODO!
+Within this layer, the game logic itself resides. Here you can find the main game
+loop, the timer and the game state.
 
 ## 🖥️ Presentation Layer
 
 _files: include/presentation/\*.h, src/presentation/\*.c_
 
-!TODO!
+This layer contains everything used to display a pretty output to the user.
+Menus, ui and styling can all be found here.
+
+The seperation from the logic layer allows for flexible configuration, such as
+changing field sizes during the game.
 
 ## 🛠️ Utility Layer
 
 _files: include/util/\*.h, src/util/\*.c_
 
-!TODO!
+Modules used throughout the layer, or which can't be directly assigned to one
+certain layer can be found here.
 
 ## ➕ Other relevant files
 
 - config.h.in / config.h
-  - !TODO!
-- !TODO!
+  - The `config.h.in` file is used for the compile time configurations and is processed
+    into `config.h` by CMake
+- entry-S.c
+  - Since Doxygen can't parse assembly files, the `entry.S` file is converted to
+    stubbed C file by a helper script, which can then be parsed.
+- main.c
+  - The main file for the game itself, containing the `main()` function which is invoked by the `Reset_Handler`

@@ -1,8 +1,6 @@
 # This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
 # If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-# !TODO! More documentation
-
 # --- Project Configuration ---
 cmake_minimum_required(VERSION 3.22)
 project(TikTakToe LANGUAGES ASM C)
@@ -22,6 +20,7 @@ set(TICK_SPEED 12 CACHE STRING "Speed of each tick in milliseconds")
 option(ENABLE_UNICODE "Enable Unicode support" ON)
 option(ENABLE_ASCII_ART "Enable ASCII Art" ON)
 
+# As discovered in the lectures, the TIMER device doesn't seem to work on Windows
 if(CMAKE_GENERATOR MATCHES "MinGW")
     option(DISABLE_TIMER "Disable timer for MinGW" ON)
     message(WARNING "Timer is disabled for MinGW builds")

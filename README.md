@@ -32,7 +32,7 @@ the code and for an improved version of this file!
 ### 🖥️ Using CMake and qemu
 
 To build the project using CMake and qemu some dependencies,
-which can be found under [dependencies] are required.
+which can be found under [dependencies](#dependencies) are required.
 
 <div class="tabbed">
 
@@ -74,7 +74,7 @@ which can be found under [dependencies] are required.
 
 - <b class="tab-title"> 🐧 Linux </b>
 
-    The provided [Makefile](Makefile) can be used to easily build and run
+    The provided Makefile can be used to easily build and run
     the project using a single command.
 
     ```sh
@@ -93,7 +93,7 @@ which can be found under [dependencies] are required.
 
 - <b class="tab-title"> 🪟 Windows </b>
 
-    The provided [Makefile](Makefile) was created with Linux in mind, while it may be possible
+    The provided Makefile was created with Linux in mind, while it may be possible
     to use it on Windows with small modifications, we recomend using CMake directly!
 
 </div>
@@ -194,7 +194,7 @@ These can be set by:
 
 - <b class="tab-title"> Nix / NixOS </b>
 
-    You can either use the provided [Flake](flake.nix), or add the following
+    You can either use the provided Flake, or add the following
     packages:
 
     ```text

@@ -1,146 +1,146 @@
 [
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\interrupts.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\interrupts.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/interrupts.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/interrupts.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/interrupts.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/interrupts.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/interrupts.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\memset.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\memset.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/memset.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/memset.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/memset.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/memset.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/memset.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\random.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\random.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/random.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/random.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/random.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/random.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/random.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\register_access.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\register_access.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/register_access.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/register_access.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/register_access.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/register_access.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/register_access.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\system.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\system.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/system.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/system.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/system.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/system.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/system.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\timer.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\timer.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/timer.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/timer.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/timer.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/timer.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/timer.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\hal\\uart.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\hal\\uart.c",
-  "file": "C:/Users/klein/tiktaktoe/src/hal/uart.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/hal/uart.c.obj -c /home/simon/2_Uni/tiktaktoe/src/hal/uart.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/hal/uart.c",
   "output": "CMakeFiles/TikTakToe.dir/src/hal/uart.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\logic\\bot.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\logic\\bot.c",
-  "file": "C:/Users/klein/tiktaktoe/src/logic/bot.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/logic/bot.c.obj -c /home/simon/2_Uni/tiktaktoe/src/logic/bot.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/logic/bot.c",
   "output": "CMakeFiles/TikTakToe.dir/src/logic/bot.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\logic\\game.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\logic\\game.c",
-  "file": "C:/Users/klein/tiktaktoe/src/logic/game.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/logic/game.c.obj -c /home/simon/2_Uni/tiktaktoe/src/logic/game.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/logic/game.c",
   "output": "CMakeFiles/TikTakToe.dir/src/logic/game.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\logic\\input.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\logic\\input.c",
-  "file": "C:/Users/klein/tiktaktoe/src/logic/input.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/logic/input.c.obj -c /home/simon/2_Uni/tiktaktoe/src/logic/input.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/logic/input.c",
   "output": "CMakeFiles/TikTakToe.dir/src/logic/input.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\logic\\time.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\logic\\time.c",
-  "file": "C:/Users/klein/tiktaktoe/src/logic/time.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/logic/time.c.obj -c /home/simon/2_Uni/tiktaktoe/src/logic/time.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/logic/time.c",
   "output": "CMakeFiles/TikTakToe.dir/src/logic/time.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\logic\\winning.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\logic\\winning.c",
-  "file": "C:/Users/klein/tiktaktoe/src/logic/winning.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/logic/winning.c.obj -c /home/simon/2_Uni/tiktaktoe/src/logic/winning.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/logic/winning.c",
   "output": "CMakeFiles/TikTakToe.dir/src/logic/winning.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\main.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\main.c",
-  "file": "C:/Users/klein/tiktaktoe/src/main.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/main.c.obj -c /home/simon/2_Uni/tiktaktoe/src/main.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/main.c",
   "output": "CMakeFiles/TikTakToe.dir/src/main.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\cell.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\cell.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/cell.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/cell.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/cell.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/cell.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/cell.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\cursor.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\cursor.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/cursor.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/cursor.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/cursor.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/cursor.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/cursor.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\field.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\field.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/field.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/field.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/field.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/field.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/field.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\menu.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\menu.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/menu.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/menu.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/menu.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/menu.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/menu.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\print.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\print.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/print.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/print.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/print.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/print.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/print.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\style.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\style.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/style.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/style.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/style.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/style.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/style.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\presentation\\ui.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\presentation\\ui.c",
-  "file": "C:/Users/klein/tiktaktoe/src/presentation/ui.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/presentation/ui.c.obj -c /home/simon/2_Uni/tiktaktoe/src/presentation/ui.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/presentation/ui.c",
   "output": "CMakeFiles/TikTakToe.dir/src/presentation/ui.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\util\\conversion.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\util\\conversion.c",
-  "file": "C:/Users/klein/tiktaktoe/src/util/conversion.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/util/conversion.c.obj -c /home/simon/2_Uni/tiktaktoe/src/util/conversion.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/util/conversion.c",
   "output": "CMakeFiles/TikTakToe.dir/src/util/conversion.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\util\\error_handling.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\util\\error_handling.c",
-  "file": "C:/Users/klein/tiktaktoe/src/util/error_handling.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/util/error_handling.c.obj -c /home/simon/2_Uni/tiktaktoe/src/util/error_handling.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/util/error_handling.c",
   "output": "CMakeFiles/TikTakToe.dir/src/util/error_handling.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\src\\util\\input_buf.c.obj -c C:\\Users\\klein\\tiktaktoe\\src\\util\\input_buf.c",
-  "file": "C:/Users/klein/tiktaktoe/src/util/input_buf.c",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -std=gnu99 -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/src/util/input_buf.c.obj -c /home/simon/2_Uni/tiktaktoe/src/util/input_buf.c",
+  "file": "/home/simon/2_Uni/tiktaktoe/src/util/input_buf.c",
   "output": "CMakeFiles/TikTakToe.dir/src/util/input_buf.c.obj"
 },
 {
-  "directory": "C:/Users/klein/tiktaktoe/build-cortex-m0",
-  "command": "C:\\SysGCC\\arm-eabi\\bin\\arm-none-eabi-gcc.exe  -IC:\\Users\\klein\\tiktaktoe\\include -nostdlib -mcpu=cortex-m0 -g -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles\\TikTakToe.dir\\entry\\entry.S.obj -c C:\\Users\\klein\\tiktaktoe\\entry\\entry.S",
-  "file": "C:/Users/klein/tiktaktoe/entry/entry.S",
+  "directory": "/home/simon/2_Uni/tiktaktoe/build-cortex-m0",
+  "command": "/nix/store/h5h5ppbyvs1w1fdjz8mywphkpx3cf2n2-gcc-arm-embedded-12.3.rel1/bin/arm-none-eabi-gcc  -I/home/simon/2_Uni/tiktaktoe/include -nostdlib -mcpu=cortex-m0 -g -Wall -Wextra -Werror -Wno-unused-parameter -o CMakeFiles/TikTakToe.dir/entry/entry.S.obj -c /home/simon/2_Uni/tiktaktoe/entry/entry.S",
+  "file": "/home/simon/2_Uni/tiktaktoe/entry/entry.S",
   "output": "CMakeFiles/TikTakToe.dir/entry/entry.S.obj"
 }
 ]

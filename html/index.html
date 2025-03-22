@@ -140,25 +140,39 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
           </li>
         </ul>
       </li>
+      <li class="level2">
+        <a href="#autotoc_md29">🍎 MacOS</a>
+      </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md29">⚙️ Configuration</a>
+    <a href="#autotoc_md30">⚙️ Configuration</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md30">📦 Dependencies</a>
+    <a href="#autotoc_md31">📦 Dependencies</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md31">🏗️ Architecture</a>
+    <a href="#autotoc_md32">Using Winget</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md32">📜 Conventions</a>
+    <a href="#autotoc_md33">Using Chocolatey</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md33">👥 Authors</a>
-  </li>
-  <li class="level1">
-    <a href="#autotoc_md34">🙏 Acknowledgements</a>
+    <a href="#autotoc_md34">Or manually using the link above</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md35">🏗️ Architecture</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md36">📜 Conventions</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md37">👥 Authors</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md38">🙏 Acknowledgements</a>
+      </li>
+    </ul>
   </li>
 </ul>
 </div>
@@ -193,10 +207,18 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio</div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title"> 🪟 Windows </b></p>
-<p class="startli">!TODO!</p>
+<div class="fragment"><div class="line"># 1. Configure the cmake project</div>
+<div class="line">cmake --preset arm-cortex-m0-mingw</div>
+<div class="line"> </div>
+<div class="line"># 2. Build the project</div>
+<div class="line">cmake --build --preset arm-cortex-m0-mingw</div>
+<div class="line"> </div>
+<div class="line"># 3. Run the project</div>
+<div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Due to a problem with the <code>TIMER</code> device on Windows, functionality regarding turn time limits are disabled when building with the MinGW generator!</dd></dl>
 </li>
 </ul>
-</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md25"></a>
+</div><h2><a class="anchor" id="autotoc_md25"></a>
 🛠️ Using the provided Makefile</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title"> 🐧 Linux </b></p>
@@ -214,7 +236,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="line">make generate_documentation</div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title"> 🪟 Windows </b></p>
-<p class="startli">!TODO!</p>
+<p class="startli">The provided [Makefile](Makefile) was created with Linux in mind, while it may be possible to use it on Windows with small modifications, we recomend using CMake directly!</p>
 </li>
 </ul>
 </div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md26"></a>
@@ -231,7 +253,11 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
 <div class="line">docker run -it [TAGNAME]</div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>In either case the <code>-it</code> flags are required to properly capture input from stdin!</dd></dl>
-<h1><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
+🍎 MacOS</h2>
+<p>We are currently unable to test the game under MacOS. Since it's unix based, it's assumed that, provided all dependencies are available, you can proceed as described in the Linux sections.</p>
+<p>However no guarantees regarding functionality or possible bugs can be made.</p>
+<h1><a class="anchor" id="autotoc_md30"></a>
 ⚙️ Configuration</h1>
 <p>The project has a few options that can be changed before compilation.</p>
 <ul>
@@ -269,7 +295,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p class="startli">Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
 </li>
 </ul>
-</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md30"></a>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md31"></a>
 📦 Dependencies</h1>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title"> Ubuntu/Debian </b></p>
@@ -287,26 +313,60 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <li><p class="startli"><b class="tab-title"> MacOS </b></p>
 <div class="fragment"><div class="line">brew install gcc-arm-embedded cmake qemu</div>
 </div><!-- fragment --></li>
-<li><p class="startli"><b class="tab-title"> Windows </b></p>
-<p class="startli">!TODO!</p>
+<li><b class="tab-title"> Windows </b><ul>
+<li><a href="https://cmake.org/download/">CMake</a> ```pwsh </li>
+</ul>
 </li>
 </ul>
-</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md31"></a>
-🏗️ Architecture</h1>
+</div><h1><a class="anchor" id="autotoc_md32"></a>
+<div class="tabbed">Using Winget</div></h1>
+<div class="tabbed"> winget install CMake.CMake</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md33"></a>
+<div class="tabbed">Using Chocolatey</div></h1>
+<div class="tabbed"> choco install cmake &ndash;pre</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md34"></a>
+<div class="tabbed">Or manually using the link above</div></h1>
+<div class="tabbed"> ```</div><div class="tabbed"><ul>
+<li>MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available)<ol type="1">
+<li>Install <a href="https://www.msys2.org/#installation">MSYS2</a></li>
+<li>Open <code>MSYS2 UCRT64</code> shell</li>
+<li>Install Make <code>pacman -S mingw-w64-ucrt-x86_64-make</code></li>
+<li>Ensure <code>C:\msys64\ucrt64\bin</code> is added to <code>PATH</code><ul>
+<li><em>Directory may differ based on your choice during installation</em></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a href="https://www.qemu.org/download/#windows">Qemu</a><ol type="1">
+<li>Install <a href="https://www.msys2.org/#installation">MSYS2</a></li>
+<li>Open <code>MSYS2 UCRT64</code> shell</li>
+<li>Install Make <code>pacman -S mingw-w64-ucrt-x86_64-qemu</code></li>
+<li>Ensure <code>C:\msys64\ucrt64\bin</code> is added to <code>PATH</code><ul>
+<li><em>Directory may differ based on your choice during installation</em></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a href="https://gnutoolchains.com/arm-eabi/">GNU Toolchain for arm-eabi</a><ol type="1">
+<li>Install from link above</li>
+<li>Ensure installation location is added to <code>PATH</code> </li>
+</ol>
+</li>
+</ul>
+</div><h2><a class="anchor" id="autotoc_md35"></a>
+🏗️ Architecture</h2>
 <p>To learn more about the the architecture we used to create this game check out <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a>!</p>
-<h1><a class="anchor" id="autotoc_md32"></a>
-📜 Conventions</h1>
+<h2><a class="anchor" id="autotoc_md36"></a>
+📜 Conventions</h2>
 <p>If you want to know about the coding convection we used when creating code check out <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a>!</p>
-<h1><a class="anchor" id="autotoc_md33"></a>
-👥 Authors</h1>
+<h2><a class="anchor" id="autotoc_md37"></a>
+👥 Authors</h2>
 <ul>
 <li><a href="https://www.github.com/DefinitelyNotSimon13">Simon Blum</a></li>
 <li><a href="https://github.com/benoeckl">Ben Oeckl</a></li>
 <li><a href="https://github.com/DosKobold">Paul Stöckle</a></li>
 <li><a href="https://github.com/MaxRodler">Max Rodler</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md34"></a>
-🙏 Acknowledgements</h1>
+<h2><a class="anchor" id="autotoc_md38"></a>
+🙏 Acknowledgements</h2>
 <ul>
 <li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> - Base template used for the project </li>
 </ul>

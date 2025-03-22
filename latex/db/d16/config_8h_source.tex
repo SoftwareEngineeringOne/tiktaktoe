@@ -33,7 +33,7 @@
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00030}00030\ \textcolor{comment}{\ *\ If\ defined,\ the\ game\ will\ use\ Unicode\ characters\ for\ rendering.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00031}00031\ \textcolor{comment}{\ *\ If\ not\ defined,\ ASCII\ characters\ will\ be\ used\ instead.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00032}00032\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00033}\mbox{\hyperlink{config_8h_a525600f5742552e13230570a8dd7ece8}{00033}}\ \textcolor{preprocessor}{\#define\ ENABLE\_UNICODE}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00033}00033\ \textcolor{comment}{/*\ \#undef\ ENABLE\_UNICODE\ */}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00034}00034\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00035}00035\ \textcolor{comment}{/**}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @def\ ENABLE\_ASCII\_ART}}
@@ -45,69 +45,78 @@
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00042}\mbox{\hyperlink{config_8h_a9295819aec24973f85f0ea41a754be14}{00042}}\ \textcolor{preprocessor}{\#define\ ENABLE\_ASCII\_ART}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00043}00043\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00044}00044\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @def\ CELLS\_PER\_ROW}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00046}00046\ \textcolor{comment}{\ *\ @brief\ Number\ of\ cells\ per\ row\ in\ the\ game\ grid.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @def\ DISABLE\_TIMER}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00046}00046\ \textcolor{comment}{\ *\ @brief\ Disable\ timer\ for\ MinGW\ builds.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00047}00047\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @details}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00049}00049\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ horizontal\ size\ of\ the\ game\ grid.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00049}00049\ \textcolor{comment}{\ *\ If\ defined,\ the\ timer\ will\ be\ disabled.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00050}00050\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00051}\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{00051}}\ \textcolor{preprocessor}{\#define\ CELLS\_PER\_ROW\ 3}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00051}\mbox{\hyperlink{config_8h_a45d3b44b047894a423767a205f8cfd96}{00051}}\ \textcolor{preprocessor}{\#define\ DISABLE\_TIMER}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00052}00052\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00053}00053\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00054}00054\ \textcolor{comment}{\ *\ @def\ CELLS\_PER\_COL}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00055}00055\ \textcolor{comment}{\ *\ @brief\ Number\ of\ cells\ per\ column\ in\ the\ game\ grid.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00054}00054\ \textcolor{comment}{\ *\ @def\ CELLS\_PER\_ROW}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00055}00055\ \textcolor{comment}{\ *\ @brief\ Number\ of\ cells\ per\ row\ in\ the\ game\ grid.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00056}00056\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00057}00057\ \textcolor{comment}{\ *\ @details}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00058}00058\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ vertical\ size\ of\ the\ game\ grid.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00058}00058\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ horizontal\ size\ of\ the\ game\ grid.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00059}00059\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00060}\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{00060}}\ \textcolor{preprocessor}{\#define\ CELLS\_PER\_COL\ 2}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00060}\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{00060}}\ \textcolor{preprocessor}{\#define\ CELLS\_PER\_ROW\ 4}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00061}00061\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00062}00062\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @def\ TICKS\_PER\_TURN}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @brief\ Number\ of\ ticks\ allowed\ per\ turn.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @def\ CELLS\_PER\_COL}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @brief\ Number\ of\ cells\ per\ column\ in\ the\ game\ grid.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00065}00065\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @details}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00067}00067\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ maximum\ number\ of\ ticks\ a\ player\ has\ to\ make\ a\ move.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00067}00067\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ vertical\ size\ of\ the\ game\ grid.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00068}00068\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00069}\mbox{\hyperlink{config_8h_a61db32789eaf2d2642e3b16723284f0c}{00069}}\ \textcolor{preprocessor}{\#define\ TICKS\_PER\_TURN\ 20}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00069}\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{00069}}\ \textcolor{preprocessor}{\#define\ CELLS\_PER\_COL\ 4}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00070}00070\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00071}00071\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00072}00072\ \textcolor{comment}{\ *\ @def\ TICK\_SPEED}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00073}00073\ \textcolor{comment}{\ *\ @brief\ Speed\ of\ each\ tick\ in\ milliseconds.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00072}00072\ \textcolor{comment}{\ *\ @def\ TICKS\_PER\_TURN}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00073}00073\ \textcolor{comment}{\ *\ @brief\ Number\ of\ ticks\ allowed\ per\ turn.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00074}00074\ \textcolor{comment}{\ *}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00075}00075\ \textcolor{comment}{\ *\ @details}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00076}00076\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ duration\ of\ each\ tick\ in\ the\ game\ loop.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00076}00076\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ maximum\ number\ of\ ticks\ a\ player\ has\ to\ make\ a\ move.}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00077}00077\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00078}\mbox{\hyperlink{config_8h_a7fc9eee9e9d18a32a09278686843798e}{00078}}\ \textcolor{preprocessor}{\#define\ TICK\_SPEED\ 12}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00078}\mbox{\hyperlink{config_8h_a61db32789eaf2d2642e3b16723284f0c}{00078}}\ \textcolor{preprocessor}{\#define\ TICKS\_PER\_TURN\ 20}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00079}00079\ \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{config_8h_source_l00080}00080\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00081}00081\ \textcolor{comment}{\ *\ @defgroup\ HAL\ Hardware\ Abstraction\ Layer}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00082}00082\ \textcolor{comment}{\ *\ @\{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00083}00083\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ hardware\ abstraction\ layer.}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00084}00084\ \textcolor{comment}{\ *\ @\}}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00085}00085\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00086}00086\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00087}00087\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00088}00088\ \textcolor{comment}{\ *\ @defgroup\ Logic\ Logic\ Layer}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00089}00089\ \textcolor{comment}{\ *\ @\{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00090}00090\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ logic\ layer.}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00091}00091\ \textcolor{comment}{\ *\ @\}}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00092}00092\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00093}00093\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00094}00094\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00095}00095\ \textcolor{comment}{\ *\ @defgroup\ Presentation\ Presentation\ Layer}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00096}00096\ \textcolor{comment}{\ *\ @\{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00097}00097\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ presentation\ layer.}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00098}00098\ \textcolor{comment}{\ *\ @\}}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00099}00099\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00100}00100\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00101}00101\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00102}00102\ \textcolor{comment}{\ *\ @defgroup\ Utility}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00103}00103\ \textcolor{comment}{\ *\ @\{}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00104}00104\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ utility\ modules.}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00105}00105\ \textcolor{comment}{\ *\ @\}}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00106}00106\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00107}00107\ }
-\DoxyCodeLine{\Hypertarget{config_8h_source_l00108}00108\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ CONFIG\_H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00081}00081\ \textcolor{comment}{\ *\ @def\ TICK\_SPEED}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00082}00082\ \textcolor{comment}{\ *\ @brief\ Speed\ of\ each\ tick\ in\ milliseconds.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00083}00083\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00084}00084\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00085}00085\ \textcolor{comment}{\ *\ This\ macro\ defines\ the\ duration\ of\ each\ tick\ in\ the\ game\ loop.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00086}00086\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00087}\mbox{\hyperlink{config_8h_a7fc9eee9e9d18a32a09278686843798e}{00087}}\ \textcolor{preprocessor}{\#define\ TICK\_SPEED\ 12}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00088}00088\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00089}00089\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00090}00090\ \textcolor{comment}{\ *\ @defgroup\ HAL\ Hardware\ Abstraction\ Layer}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00091}00091\ \textcolor{comment}{\ *\ @\{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00092}00092\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ hardware\ abstraction\ layer.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00093}00093\ \textcolor{comment}{\ *\ @\}}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00094}00094\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00095}00095\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00096}00096\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00097}00097\ \textcolor{comment}{\ *\ @defgroup\ Logic\ Logic\ Layer}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00098}00098\ \textcolor{comment}{\ *\ @\{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00099}00099\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ logic\ layer.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00100}00100\ \textcolor{comment}{\ *\ @\}}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00101}00101\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00102}00102\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00103}00103\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00104}00104\ \textcolor{comment}{\ *\ @defgroup\ Presentation\ Presentation\ Layer}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00105}00105\ \textcolor{comment}{\ *\ @\{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00106}00106\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ modules\ from\ the\ presentation\ layer.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00107}00107\ \textcolor{comment}{\ *\ @\}}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00108}00108\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00109}00109\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00110}00110\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00111}00111\ \textcolor{comment}{\ *\ @defgroup\ Utility}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00112}00112\ \textcolor{comment}{\ *\ @\{}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00113}00113\ \textcolor{comment}{\ *\ This\ group\ contains\ all\ utility\ modules.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00114}00114\ \textcolor{comment}{\ *\ @\}}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00115}00115\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00117}00117\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ CONFIG\_H}}
 
 \end{DoxyCode}

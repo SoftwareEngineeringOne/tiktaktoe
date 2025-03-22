@@ -28,11 +28,11 @@ var NAVTREE =
     [ "🎮 TikTakToe", "index.html", "index" ],
     [ "🏗️ Architecture", "d7/d5e/md__2github_2workspace_2Architecture.html", [
       [ "🚪 Entry Module", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md4", null ],
-      [ "📟 Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5", null ],
-      [ "🧩 Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md6", null ],
-      [ "🖥️ Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md7", null ],
-      [ "🛠️ Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md8", null ],
-      [ "➕ Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9", null ]
+      [ "📟 Hardware Abstraction Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md6", null ],
+      [ "🧩 Logic Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md7", null ],
+      [ "🖥️ Presentation Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md8", null ],
+      [ "🛠️ Utility Layer", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9", null ],
+      [ "➕ Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md10", null ]
     ] ],
     [ "🤝 Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
       [ "📄 File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md11", [

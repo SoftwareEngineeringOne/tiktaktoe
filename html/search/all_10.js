@@ -9,7 +9,7 @@ var searchData=
   ['register_5faccess_2eh_6',['register_access.h',['../dd/d33/register__access_8h.html',1,'']]],
   ['register_5fread_7',['register_read',['../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc',1,'register_read(const uint32_t address):&#160;register_access.c'],['../dd/d33/register__access_8h.html#a622715efc93f28ec149d81b793eef17b',1,'register_read(uint32_t address):&#160;register_access.c']]],
   ['register_5fwrite_8',['register_write',['../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891',1,'register_write(const uint32_t address, const uint32_t value):&#160;register_access.c'],['../dd/d33/register__access_8h.html#a95fe6fba2bc246f49af61e076d1153fe',1,'register_write(uint32_t address, uint32_t value):&#160;register_access.c']]],
-  ['relevant_20files_9',['➕ Other relevant files',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9',1,'']]],
+  ['relevant_20files_9',['➕ Other relevant files',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md10',1,'']]],
   ['remaining_5ftime_10',['REMAINING_TIME',['../d2/dd5/game_8h.html#a2870851feea96bc5bf8d094323fcfd44',1,'game.h']]],
   ['reset_11',['RESET',['../de/d12/style_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'style.h']]],
   ['reset_5fhandler_12',['Reset_Handler',['../dd/d8c/entry-S_8c.html#ae7ee340978f5c25f52f0cad1457c6616',1,'entry-S.c']]],

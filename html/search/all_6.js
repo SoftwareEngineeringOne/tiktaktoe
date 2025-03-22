@@ -18,7 +18,7 @@ var searchData=
   ['file_20structure_15',['📄 File structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md11',1,'']]],
   ['file_20structure_16',['file structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md12',1,'Header file structure'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md13',1,'Source file structure']]],
   ['files_17',['Files',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md15',1,'']]],
-  ['files_18',['➕ Other relevant files',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9',1,'']]],
+  ['files_18',['➕ Other relevant files',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md10',1,'']]],
   ['first_5fround_19',['FIRST_ROUND',['../d2/dd5/game_8h.html#a30f65389443e4dac0837d0a8260f216c',1,'game.h']]],
   ['font_5fstyle_20',['font_style',['../de/df7/structStyle.html#ae79c33fc2eb677c9f8b12bf02617edbe',1,'Style']]],
   ['force_5fui_5fupdate_21',['force_ui_update',['../d1/dcb/game_8c.html#a287ea08db9d5fa1a3c003fd565a654f9',1,'game.c']]],

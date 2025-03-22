@@ -7,7 +7,7 @@ var searchData=
   ['handlepauseresume_4',['handlePauseResume',['../d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772',1,'input.c']]],
   ['handlesetmark_5',['handleSetMark',['../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925',1,'input.c']]],
   ['hardfault_5fhandler_6',['HardFault_Handler',['../da/d03/error__handling_8c.html#a2af56a8bf3197b2f06cac4c0b84ffc3e',1,'HardFault_Handler():&#160;error_handling.c'],['../d3/d11/error__handling_8h.html#a143c30fa1037d6e6fda946559ecda6d5',1,'HardFault_Handler() __attribute__((interrupt)):&#160;error_handling.c'],['../dd/d8c/entry-S_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;entry-S.c']]],
-  ['hardware_20abstraction_20layer_7',['Hardware Abstraction Layer',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md5',1,'📟 Hardware Abstraction Layer'],['../d2/dbf/group__HAL.html',1,'Hardware Abstraction Layer']]],
+  ['hardware_20abstraction_20layer_7',['Hardware Abstraction Layer',['../d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md6',1,'📟 Hardware Abstraction Layer'],['../d2/dbf/group__HAL.html',1,'Hardware Abstraction Layer']]],
   ['head_8',['head',['../d7/d21/structInputBuffer.html#a0f312d29fb9925a12849950e3d1dbaf0',1,'InputBuffer']]],
   ['header_20file_20structure_9',['Header file structure',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md12',1,'']]],
   ['heading_10',['HEADING',['../d2/d5a/ascii__art_8h.html#afff315b7dccfc52793b0cd7d4119e2f6',1,'ascii_art.h']]],

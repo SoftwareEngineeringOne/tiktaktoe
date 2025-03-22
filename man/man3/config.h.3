@@ -10,19 +10,19 @@ config.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBENABLE_UNICODE\fP"
-.br
-.RI "Enable Unicode support\&. "
-.ti -1c
 .RI "#define \fBENABLE_ASCII_ART\fP"
 .br
 .RI "Enable ASCII art rendering\&. "
 .ti -1c
-.RI "#define \fBCELLS_PER_ROW\fP   3"
+.RI "#define \fBDISABLE_TIMER\fP"
+.br
+.RI "Disable timer for MinGW builds\&. "
+.ti -1c
+.RI "#define \fBCELLS_PER_ROW\fP   4"
 .br
 .RI "Number of cells per row in the game grid\&. "
 .ti -1c
-.RI "#define \fBCELLS_PER_COL\fP   2"
+.RI "#define \fBCELLS_PER_COL\fP   4"
 .br
 .RI "Number of cells per column in the game grid\&. "
 .ti -1c
@@ -36,16 +36,22 @@ config.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define CELLS_PER_COL   2"
+.SS "#define CELLS_PER_COL   4"
 
 .PP
 Number of cells per column in the game grid\&. This macro defines the vertical size of the game grid\&. 
 .PP
-Definition at line \fB60\fP of file \fBconfig\&.h\fP\&.
-.SS "#define CELLS_PER_ROW   3"
+Definition at line \fB69\fP of file \fBconfig\&.h\fP\&.
+.SS "#define CELLS_PER_ROW   4"
 
 .PP
 Number of cells per row in the game grid\&. This macro defines the horizontal size of the game grid\&. 
+.PP
+Definition at line \fB60\fP of file \fBconfig\&.h\fP\&.
+.SS "#define DISABLE_TIMER"
+
+.PP
+Disable timer for MinGW builds\&. If defined, the timer will be disabled\&. 
 .PP
 Definition at line \fB51\fP of file \fBconfig\&.h\fP\&.
 .SS "#define ENABLE_ASCII_ART"
@@ -54,24 +60,18 @@ Definition at line \fB51\fP of file \fBconfig\&.h\fP\&.
 Enable ASCII art rendering\&. If defined, the game will render ASCII art for visual elements\&. 
 .PP
 Definition at line \fB42\fP of file \fBconfig\&.h\fP\&.
-.SS "#define ENABLE_UNICODE"
-
-.PP
-Enable Unicode support\&. If defined, the game will use Unicode characters for rendering\&. If not defined, ASCII characters will be used instead\&. 
-.PP
-Definition at line \fB33\fP of file \fBconfig\&.h\fP\&.
 .SS "#define TICK_SPEED   12"
 
 .PP
 Speed of each tick in milliseconds\&. This macro defines the duration of each tick in the game loop\&. 
 .PP
-Definition at line \fB78\fP of file \fBconfig\&.h\fP\&.
+Definition at line \fB87\fP of file \fBconfig\&.h\fP\&.
 .SS "#define TICKS_PER_TURN   20"
 
 .PP
 Number of ticks allowed per turn\&. This macro defines the maximum number of ticks a player has to make a move\&. 
 .PP
-Definition at line \fB69\fP of file \fBconfig\&.h\fP\&.
+Definition at line \fB78\fP of file \fBconfig\&.h\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for TikTakToe from the source code\&.

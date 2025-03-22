@@ -11,13 +11,13 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{config_8h_a525600f5742552e13230570a8dd7ece8}{ENABLE\+\_\+\+UNICODE}}
-\begin{DoxyCompactList}\small\item\em Enable Unicode support. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{config_8h_a9295819aec24973f85f0ea41a754be14}{ENABLE\+\_\+\+ASCII\+\_\+\+ART}}
 \begin{DoxyCompactList}\small\item\em Enable ASCII art rendering. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\+\_\+\+PER\+\_\+\+ROW}}~3
+\#define \mbox{\hyperlink{config_8h_a45d3b44b047894a423767a205f8cfd96}{DISABLE\+\_\+\+TIMER}}
+\begin{DoxyCompactList}\small\item\em Disable timer for Min\+GW builds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\+\_\+\+PER\+\_\+\+ROW}}~4
 \begin{DoxyCompactList}\small\item\em Number of cells per row in the game grid. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\+\_\+\+PER\+\_\+\+COL}}~2
+\#define \mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\+\_\+\+PER\+\_\+\+COL}}~4
 \begin{DoxyCompactList}\small\item\em Number of cells per column in the game grid. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{config_8h_a61db32789eaf2d2642e3b16723284f0c}{TICKS\+\_\+\+PER\+\_\+\+TURN}}~20
 \begin{DoxyCompactList}\small\item\em Number of ticks allowed per turn. \end{DoxyCompactList}\item 
@@ -30,7 +30,7 @@ This graph shows which files directly or indirectly include this file\+:
 \index{CELLS\_PER\_COL@{CELLS\_PER\_COL}!config.h@{config.h}}
 \doxysubsubsection{\texorpdfstring{CELLS\_PER\_COL}{CELLS\_PER\_COL}}
 {\footnotesize\ttfamily \label{config_8h_a3747fdaf04721d720705ef97c22908cd} 
-\#define CELLS\+\_\+\+PER\+\_\+\+COL~2}
+\#define CELLS\+\_\+\+PER\+\_\+\+COL~4}
 
 
 
@@ -38,19 +38,33 @@ Number of cells per column in the game grid.
 
 This macro defines the vertical size of the game grid. 
 
-Definition at line \mbox{\hyperlink{config_8h_source_l00060}{60}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+Definition at line \mbox{\hyperlink{config_8h_source_l00069}{69}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
 
 \Hypertarget{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}\index{config.h@{config.h}!CELLS\_PER\_ROW@{CELLS\_PER\_ROW}}
 \index{CELLS\_PER\_ROW@{CELLS\_PER\_ROW}!config.h@{config.h}}
 \doxysubsubsection{\texorpdfstring{CELLS\_PER\_ROW}{CELLS\_PER\_ROW}}
 {\footnotesize\ttfamily \label{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60} 
-\#define CELLS\+\_\+\+PER\+\_\+\+ROW~3}
+\#define CELLS\+\_\+\+PER\+\_\+\+ROW~4}
 
 
 
 Number of cells per row in the game grid. 
 
 This macro defines the horizontal size of the game grid. 
+
+Definition at line \mbox{\hyperlink{config_8h_source_l00060}{60}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+
+\Hypertarget{config_8h_a45d3b44b047894a423767a205f8cfd96}\index{config.h@{config.h}!DISABLE\_TIMER@{DISABLE\_TIMER}}
+\index{DISABLE\_TIMER@{DISABLE\_TIMER}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_TIMER}{DISABLE\_TIMER}}
+{\footnotesize\ttfamily \label{config_8h_a45d3b44b047894a423767a205f8cfd96} 
+\#define DISABLE\+\_\+\+TIMER}
+
+
+
+Disable timer for Min\+GW builds. 
+
+If defined, the timer will be disabled. 
 
 Definition at line \mbox{\hyperlink{config_8h_source_l00051}{51}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
 
@@ -68,20 +82,6 @@ If defined, the game will render ASCII art for visual elements.
 
 Definition at line \mbox{\hyperlink{config_8h_source_l00042}{42}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
 
-\Hypertarget{config_8h_a525600f5742552e13230570a8dd7ece8}\index{config.h@{config.h}!ENABLE\_UNICODE@{ENABLE\_UNICODE}}
-\index{ENABLE\_UNICODE@{ENABLE\_UNICODE}!config.h@{config.h}}
-\doxysubsubsection{\texorpdfstring{ENABLE\_UNICODE}{ENABLE\_UNICODE}}
-{\footnotesize\ttfamily \label{config_8h_a525600f5742552e13230570a8dd7ece8} 
-\#define ENABLE\+\_\+\+UNICODE}
-
-
-
-Enable Unicode support. 
-
-If defined, the game will use Unicode characters for rendering. If not defined, ASCII characters will be used instead. 
-
-Definition at line \mbox{\hyperlink{config_8h_source_l00033}{33}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
-
 \Hypertarget{config_8h_a7fc9eee9e9d18a32a09278686843798e}\index{config.h@{config.h}!TICK\_SPEED@{TICK\_SPEED}}
 \index{TICK\_SPEED@{TICK\_SPEED}!config.h@{config.h}}
 \doxysubsubsection{\texorpdfstring{TICK\_SPEED}{TICK\_SPEED}}
@@ -94,7 +94,7 @@ Speed of each tick in milliseconds.
 
 This macro defines the duration of each tick in the game loop. 
 
-Definition at line \mbox{\hyperlink{config_8h_source_l00078}{78}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+Definition at line \mbox{\hyperlink{config_8h_source_l00087}{87}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
 
 \Hypertarget{config_8h_a61db32789eaf2d2642e3b16723284f0c}\index{config.h@{config.h}!TICKS\_PER\_TURN@{TICKS\_PER\_TURN}}
 \index{TICKS\_PER\_TURN@{TICKS\_PER\_TURN}!config.h@{config.h}}
@@ -108,5 +108,5 @@ Number of ticks allowed per turn.
 
 This macro defines the maximum number of ticks a player has to make a move. 
 
-Definition at line \mbox{\hyperlink{config_8h_source_l00069}{69}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
+Definition at line \mbox{\hyperlink{config_8h_source_l00078}{78}} of file \mbox{\hyperlink{config_8h_source}{config.\+h}}.
 

@@ -87,7 +87,7 @@ Resets the ticks\&. Resets the turn-specific tick counter and updates the game s
 .PP
 
 .PP
-Definition at line \fB42\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB43\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross_total_ticks\fP, \fBGameState::current_player\fP, \fBg_timer\fP, \fBgame_state\fP, and \fBGameTimer::ticks_turn\fP\&.
 .SS "void time_init ()"
@@ -95,7 +95,7 @@ References \fBGameState::circle_total_ticks\fP, \fBCross\fP, \fBGameState::cross
 .PP
 Initializes the timer\&. Sets up the hardware timer with the appropriate configuration for the game\&. 
 .PP
-Definition at line \fB25\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB26\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBCC0\fP, \fBTICK_SPEED\fP, \fBTIMER0\fP, \fBTIMER_BIT_MODE_32\fP, \fBtimer_captureCompareSet()\fP, \fBtimer_init_detailed()\fP, and \fBtimer_start()\fP\&.
 .SS "void time_onInterrupt ()"
@@ -103,7 +103,7 @@ References \fBCC0\fP, \fBTICK_SPEED\fP, \fBTIMER0\fP, \fBTIMER_BIT_MODE_32\fP, \
 .PP
 Increments the ticks and can finish the round\&. This function is called on a timer interrupt\&. It increments the total and turn-specific tick counters and triggers a timeout if the turn duration is exceeded\&. 
 .PP
-Definition at line \fB32\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB33\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBgame_onTimeOut()\fP, \fBTICKS_PER_TURN\fP, \fBGameTimer::ticks_total\fP, and \fBGameTimer::ticks_turn\fP\&.
 .SS "void time_pause ()"
@@ -111,7 +111,7 @@ References \fBg_timer\fP, \fBgame_onTimeOut()\fP, \fBTICKS_PER_TURN\fP, \fBGameT
 .PP
 Pause the timer\&. Stops the hardware timer and marks the timer as not running\&. 
 .PP
-Definition at line \fB58\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB59\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_stop()\fP\&.
 .SS "void time_resume ()"
@@ -119,7 +119,7 @@ References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtime
 .PP
 Resume the timer when paused\&. Restarts the hardware timer and marks the timer as running\&. 
 .PP
-Definition at line \fB64\fP of file \fBtime\&.c\fP\&.
+Definition at line \fB65\fP of file \fBtime\&.c\fP\&.
 .PP
 References \fBg_timer\fP, \fBGameTimer::is_running\fP, \fBTIMER0\fP, and \fBtimer_start()\fP\&.
 .SH "Variable Documentation"

@@ -41,10 +41,25 @@ To build the project using CMake and qemu some dependencies, which can be found 
 
 \item {\bfseries{ 🪟 Windows }}
 
-!\+TODO!
-\end{DoxyItemize}
 
-\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md25}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ 1.\ Configure\ the\ cmake\ project}
+\DoxyCodeLine{cmake\ -\/-\/preset\ arm-\/cortex-\/m0-\/mingw}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ 2.\ Build\ the\ project}
+\DoxyCodeLine{cmake\ -\/-\/build\ -\/-\/preset\ arm-\/cortex-\/m0-\/mingw}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ 3.\ Run\ the\ project}
+\DoxyCodeLine{qemu-\/system-\/arm\ -\/M\ microbit\ -\/device\ loader,file=build-\/cortex-\/m0/TikTakToe.elf\ -\/nographic\ -\/s\ -\/serial\ mon:stdio}
+
+\end{DoxyCode}
+
+
+\begin{DoxyWarning}{Warning}
+Due to a problem with the {\ttfamily TIMER} device on Windows, functionality regarding turn time limits are disabled when building with the Min\+GW generator!
+\end{DoxyWarning}
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{🛠️ Using the provided Makefile}{🛠️ Using the provided Makefile}}\label{index_autotoc_md25}
 
 
 
@@ -71,7 +86,7 @@ The provided \mbox{[}Makefile\mbox{]}(Makefile) can be used to easily build and 
 
 \item {\bfseries{ 🪟 Windows }}
 
-!\+TODO!
+The provided \mbox{[}Makefile\mbox{]}(Makefile) was created with Linux in mind, while it may be possible to use it on Windows with small modifications, we recomend using CMake directly!
 \end{DoxyItemize}
 
 \hypertarget{index_autotoc_md26}{}\doxysubsection{\texorpdfstring{🐳 Using Docker}{🐳 Using Docker}}\label{index_autotoc_md26}
@@ -96,7 +111,10 @@ Docker can be used to build and run the application without the need for externa
 \begin{DoxyWarning}{Warning}
 In either case the {\ttfamily -\/it} flags are required to properly capture input from stdin!
 \end{DoxyWarning}
-\hypertarget{index_autotoc_md29}{}\doxysection{\texorpdfstring{⚙️ Configuration}{⚙️ Configuration}}\label{index_autotoc_md29}
+\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{🍎 Mac\+OS}{🍎 Mac\+OS}}\label{index_autotoc_md29}
+We are currently unable to test the game under Mac\+OS. Since it\textquotesingle{}s unix based, it\textquotesingle{}s assumed that, provided all dependencies are available, you can proceed as described in the Linux sections.
+
+However no guarantees regarding functionality or possible bugs can be made.\hypertarget{index_autotoc_md30}{}\doxysection{\texorpdfstring{⚙️ Configuration}{⚙️ Configuration}}\label{index_autotoc_md30}
 The project has a few options that can be changed before compilation.
 
 
@@ -148,7 +166,7 @@ When using the Makefile to configure/build the project variables can be passed l
 Due to the way the Makefile is structured, these may also be passed when using e.\+g. {\ttfamily make run}. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using {\ttfamily make clean} or by manually deleting the directory.
 \end{DoxyItemize}
 
-\hypertarget{index_autotoc_md30}{}\doxysection{\texorpdfstring{📦 Dependencies}{📦 Dependencies}}\label{index_autotoc_md30}
+\hypertarget{index_autotoc_md31}{}\doxysection{\texorpdfstring{📦 Dependencies}{📦 Dependencies}}\label{index_autotoc_md31}
 
 
 
@@ -190,20 +208,55 @@ You can either use the provided \href{flake.nix}{\texttt{ Flake}}, or add the fo
 \end{DoxyCode}
 
 \item {\bfseries{ Windows }}
-
-!\+TODO!
+\begin{DoxyItemize}
+\item \href{https://cmake.org/download/}{\texttt{ CMake}} \`{}\`{}\`{}pwsh 
 \end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{Using Winget}{Using Winget}}\label{index_autotoc_md32}
+ winget install CMake.\+CMake
 
-\hypertarget{index_autotoc_md31}{}\doxysection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md31}
-To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md32}
-If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md33}
+\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{Using Chocolatey}{Using Chocolatey}}\label{index_autotoc_md33}
+ choco install cmake --pre
+
+\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{Or manually using the link above}{Or manually using the link above}}\label{index_autotoc_md34}
+ \`{}\`{}\`{}
+
+
+\begin{DoxyItemize}
+\item Min\+GW Makefiles (we recommend using MSYS2, but other prebuilt options are available)
+\begin{DoxyEnumerate}
+\item Install \href{https://www.msys2.org/\#installation}{\texttt{ MSYS2}}
+\item Open {\ttfamily MSYS2 UCRT64} shell
+\item Install Make {\ttfamily pacman -\/S mingw-\/w64-\/ucrt-\/x86\+\_\+64-\/make}
+\item Ensure {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}ucrt64\textbackslash{}bin} is added to {\ttfamily PATH}
+\begin{DoxyItemize}
+\item {\itshape Directory may differ based on your choice during installation}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\item \href{https://www.qemu.org/download/\#windows}{\texttt{ Qemu}}
+\begin{DoxyEnumerate}
+\item Install \href{https://www.msys2.org/\#installation}{\texttt{ MSYS2}}
+\item Open {\ttfamily MSYS2 UCRT64} shell
+\item Install Make {\ttfamily pacman -\/S mingw-\/w64-\/ucrt-\/x86\+\_\+64-\/qemu}
+\item Ensure {\ttfamily C\+:\textbackslash{}msys64\textbackslash{}ucrt64\textbackslash{}bin} is added to {\ttfamily PATH}
+\begin{DoxyItemize}
+\item {\itshape Directory may differ based on your choice during installation}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\item \href{https://gnutoolchains.com/arm-eabi/}{\texttt{ GNU Toolchain for arm-\/eabi}}
+\begin{DoxyEnumerate}
+\item Install from link above
+\item Ensure installation location is added to {\ttfamily PATH} 
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{index_autotoc_md35}{}\doxysubsection{\texorpdfstring{🏗️ Architecture}{🏗️ Architecture}}\label{index_autotoc_md35}
+To learn more about the the architecture we used to create this game check out \doxysectlink{md__2github_2workspace_2Architecture}{Architecture.md}{0}!\hypertarget{index_autotoc_md36}{}\doxysubsection{\texorpdfstring{📜 Conventions}{📜 Conventions}}\label{index_autotoc_md36}
+If you want to know about the coding convection we used when creating code check out \doxysectlink{md__2github_2workspace_2Conventions}{Conventions.md}{0}!\hypertarget{index_autotoc_md37}{}\doxysubsection{\texorpdfstring{👥 Authors}{👥 Authors}}\label{index_autotoc_md37}
 
 \begin{DoxyItemize}
 \item \href{https://www.github.com/DefinitelyNotSimon13}{\texttt{ Simon Blum}}
 \item \href{https://github.com/benoeckl}{\texttt{ Ben Oeckl}}
 \item \href{https://github.com/DosKobold}{\texttt{ Paul Stöckle}}
 \item \href{https://github.com/MaxRodler}{\texttt{ Max Rodler}}
-\end{DoxyItemize}\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md34}
+\end{DoxyItemize}\hypertarget{index_autotoc_md38}{}\doxysubsection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{index_autotoc_md38}
 
 \begin{DoxyItemize}
 \item \href{https://github.com/infohoschie/arm-cortex-m0-cmake-start}{\texttt{ arm-\/cortex-\/m0-\/cmake-\/start}} -\/ Base template used for the project 

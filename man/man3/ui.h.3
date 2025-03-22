@@ -24,7 +24,7 @@ presentation/ui.h \- Contains different functions for the presentation of the in
 .br
 .RI "Row position for displaying the turn text\&. "
 .ti -1c
-.RI "#define \fBTIMER_ROW\fP       \fBFIELD_HEIGHT\fP + (\fBFIELD_HEIGHT\fP % 2) \- 1 + \fBHEADING_LINES\fP"
+.RI "#define \fBTIMER_ROW\fP"
 .br
 .RI "Row position for displaying the timer\&. "
 .ti -1c
@@ -99,25 +99,31 @@ Definition in file \fBui\&.h\fP\&.
 .PP
 Empty progress bar element\&. 
 .PP
-Definition at line \fB41\fP of file \fBui\&.h\fP\&.
+Definition at line \fB51\fP of file \fBui\&.h\fP\&.
 .SS "#define FULL_PROGRESS_ELEMENT   '\-'"
 
 .PP
 Full progress bar element\&. 
 .PP
-Definition at line \fB39\fP of file \fBui\&.h\fP\&.
+Definition at line \fB49\fP of file \fBui\&.h\fP\&.
 .SS "#define HALF_PROGRESS_ELEMENT   '_'"
 
 .PP
 Half progress bar element\&. 
 .PP
-Definition at line \fB40\fP of file \fBui\&.h\fP\&.
-.SS "#define TIMER_ROW       \fBFIELD_HEIGHT\fP + (\fBFIELD_HEIGHT\fP % 2) \- 1 + \fBHEADING_LINES\fP"
+Definition at line \fB50\fP of file \fBui\&.h\fP\&.
+.SS "#define TIMER_ROW"
+\fBValue:\fP
+.nf
+    (CELLS_PER_COL == 2 ? FIELD_HEIGHT + (FIELD_HEIGHT % 2) + 1 + HEADING_LINES \\
+                        : FIELD_HEIGHT + (FIELD_HEIGHT % 2) \- 1 + HEADING_LINES)
+.PP
+.fi
 
 .PP
-Row position for displaying the timer\&. 
+Row position for displaying the timer\&. The timer row position is calculated based on the number of cells per column\&. If the number of cells per column is 2, the calculation has to be adjusted 
 .PP
-Definition at line \fB31\fP of file \fBui\&.h\fP\&.
+Definition at line \fB40\fP of file \fBui\&.h\fP\&.
 .SS "#define TURN_ROW   1 + \fBHEADING_LINES\fP"
 
 .PP

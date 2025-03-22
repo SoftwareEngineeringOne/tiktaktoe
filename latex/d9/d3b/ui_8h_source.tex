@@ -31,70 +31,80 @@
 \DoxyCodeLine{\Hypertarget{ui_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cell_8h}{presentation/cell.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{ui_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
 \DoxyCodeLine{\Hypertarget{ui_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00030}\mbox{\hyperlink{ui_8h_adbeef5f5002bcfc3cbed2deb88012cc4}{00030}}\ \textcolor{preprocessor}{\#define\ TURN\_ROW\ 1\ +\ HEADING\_LINES}\textcolor{comment}{///<\ Row\ position\ for\ displaying\ the\ turn\ text.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00031}\mbox{\hyperlink{ui_8h_a12e7933404f476fb69061fc8a8a705ff}{00031}}\ \textcolor{preprocessor}{\#define\ TIMER\_ROW\ \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ FIELD\_HEIGHT\ +\ (FIELD\_HEIGHT\ \%\ 2)\ -\/\ 1\ +\ HEADING\_LINES}\textcolor{comment}{///<\ Row\ position\ for\ displaying\ the\ timer.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}█"{}\ }\textcolor{comment}{///<\ Full\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}▆"{}\ }\textcolor{comment}{///<\ Half\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}▁"{}}\textcolor{comment}{///<\ Empty\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00038}00038\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00039}\mbox{\hyperlink{ui_8h_acd01ff06f7444e97abb6ebb5a293166d}{00039}}\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}-\/"{}}\textcolor{comment}{///<\ Full\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00040}\mbox{\hyperlink{ui_8h_ac2b3fd518c50122858e86bd5bd8b25f8}{00040}}\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}\_"{}}\textcolor{comment}{///<\ Half\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00041}\mbox{\hyperlink{ui_8h_ad7d5e58bd1b7c4066f87d8dd9cf9eb68}{00041}}\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}"{}}\textcolor{comment}{///<\ Empty\ progress\ bar\ element}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00043}00043\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00044}00044\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @brief\ Writes\ the\ timer\ text\ to\ the\ screen.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00046}00046\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00047}00047\ \textcolor{comment}{\ *\ @param[in]\ remaining\_time\ The\ remaining\ time\ in\ seconds.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @param[in]\ total\_time\ The\ total\ time\ in\ seconds.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00049}00049\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00050}00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae4fe2414f32031d11e9c73b538bf1343}{ui\_displayTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00051}00051\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00052}00052\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00053}00053\ \textcolor{comment}{\ *\ @brief\ Updates\ the\ time\ on\ the\ screen.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00054}00054\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00055}00055\ \textcolor{comment}{\ *\ @param[in]\ remaining\_time\ The\ remaining\ time\ in\ seconds.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00056}00056\ \textcolor{comment}{\ *\ @param[in]\ total\_time\ The\ total\ time\ in\ seconds.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00057}00057\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aeb1f8edc41404d3650def3e0c4b8d700}{ui\_updateTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00059}00059\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00060}00060\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00061}00061\ \textcolor{comment}{\ *\ @brief\ Writes\ the\ turn\ text\ to\ the\ screen.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00062}00062\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @param[in]\ current\_turn\ The\ current\ turn\ number.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00064}00064\ \textcolor{comment}{\ *\ @param[in]\ player\ The\ player\ whose\ turn\ it\ is\ (Circle\ or\ Cross).}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00065}00065\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00066}00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a2b115d6ebc0e14751195c93efd7aafdb}{ui\_displayTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00067}00067\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00068}00068\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00069}00069\ \textcolor{comment}{\ *\ @brief\ Updates\ the\ turn\ number\ on\ the\ screen.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00070}00070\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00071}00071\ \textcolor{comment}{\ *\ @param[in]\ current\_turn\ The\ current\ turn\ number.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00072}00072\ \textcolor{comment}{\ *\ @param[in]\ player\ The\ player\ whose\ turn\ it\ is\ (Circle\ or\ Cross).}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00073}00073\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00074}00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a358e03c0e369343f9beab07d771f0bcb}{ui\_updateTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00075}00075\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00076}00076\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00077}00077\ \textcolor{comment}{\ *\ @brief\ Displays\ the\ starting\ player\ and\ mode.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00078}00078\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @param[in]\ starting\_player\ The\ player\ who\ starts\ the\ game.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00080}00080\ \textcolor{comment}{\ *\ @param[in]\ mode\ The\ game\ mode\ (e.g.,\ PVE\ or\ PVP).}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00081}00081\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae1c1dad8845af014a8e35894e8842fb5}{ui\_printStartingPlayer}}(\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ starting\_player,\ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ mode);}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00083}00083\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00084}00084\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00085}00085\ \textcolor{comment}{\ *\ @brief\ Prints\ the\ game\ heading\ to\ the\ screen.}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00086}00086\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00087}00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00088}00088\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00089}00089\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00090}00090\ \textcolor{comment}{\ *\ @brief\ Displays\ the\ "{}Game\ Over"{}\ message\ on\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00030}\mbox{\hyperlink{ui_8h_adbeef5f5002bcfc3cbed2deb88012cc4}{00030}}\ \textcolor{preprocessor}{\#define\ TURN\_ROW\ 1\ +\ HEADING\_LINES}\textcolor{comment}{///<\ Row\ position\ for\ displaying\ the\ turn\ text.}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00031}00031\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @def\ TIMER\_ROW}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00033}00033\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00034}00034\ \textcolor{comment}{\ *\ @brief\ Row\ position\ for\ displaying\ the\ timer.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00035}00035\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @details}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00037}00037\ \textcolor{comment}{\ *\ The\ timer\ row\ position\ is\ calculated\ based\ on\ the\ number\ of\ cells\ per\ column.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00038}00038\ \textcolor{comment}{\ *\ If\ the\ number\ of\ cells\ per\ column\ is\ 2,\ the\ calculation\ has\ to\ be\ adjusted}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00039}00039\ \textcolor{comment}{\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00040}\mbox{\hyperlink{ui_8h_a12e7933404f476fb69061fc8a8a705ff}{00040}}\ \textcolor{preprocessor}{\#define\ TIMER\_ROW\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00041}00041\ \textcolor{preprocessor}{\ \ \ \ (CELLS\_PER\_COL\ ==\ 2\ ?\ FIELD\_HEIGHT\ +\ (FIELD\_HEIGHT\ \%\ 2)\ +\ 1\ +\ HEADING\_LINES\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00042}00042\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ FIELD\_HEIGHT\ +\ (FIELD\_HEIGHT\ \%\ 2)\ -\/\ 1\ +\ HEADING\_LINES)}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00044}00044\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}█"{}\ }\textcolor{comment}{///<\ Full\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00046}00046\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}▆"{}\ }\textcolor{comment}{///<\ Half\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00047}00047\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}▁"{}}\textcolor{comment}{///<\ Empty\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00048}00048\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00049}\mbox{\hyperlink{ui_8h_acd01ff06f7444e97abb6ebb5a293166d}{00049}}\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}-\/"{}}\textcolor{comment}{///<\ Full\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00050}\mbox{\hyperlink{ui_8h_ac2b3fd518c50122858e86bd5bd8b25f8}{00050}}\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}\_"{}}\textcolor{comment}{///<\ Half\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00051}\mbox{\hyperlink{ui_8h_ad7d5e58bd1b7c4066f87d8dd9cf9eb68}{00051}}\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}"{}}\textcolor{comment}{///<\ Empty\ progress\ bar\ element}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00053}00053\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00054}00054\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00055}00055\ \textcolor{comment}{\ *\ @brief\ Writes\ the\ timer\ text\ to\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00056}00056\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00057}00057\ \textcolor{comment}{\ *\ @param[in]\ remaining\_time\ The\ remaining\ time\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00058}00058\ \textcolor{comment}{\ *\ @param[in]\ total\_time\ The\ total\ time\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00059}00059\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00060}00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae4fe2414f32031d11e9c73b538bf1343}{ui\_displayTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00061}00061\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00062}00062\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00063}00063\ \textcolor{comment}{\ *\ @brief\ Updates\ the\ time\ on\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00064}00064\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00065}00065\ \textcolor{comment}{\ *\ @param[in]\ remaining\_time\ The\ remaining\ time\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00066}00066\ \textcolor{comment}{\ *\ @param[in]\ total\_time\ The\ total\ time\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00067}00067\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00068}00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aeb1f8edc41404d3650def3e0c4b8d700}{ui\_updateTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00069}00069\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00070}00070\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00071}00071\ \textcolor{comment}{\ *\ @brief\ Writes\ the\ turn\ text\ to\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00072}00072\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00073}00073\ \textcolor{comment}{\ *\ @param[in]\ current\_turn\ The\ current\ turn\ number.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00074}00074\ \textcolor{comment}{\ *\ @param[in]\ player\ The\ player\ whose\ turn\ it\ is\ (Circle\ or\ Cross).}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00075}00075\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00076}00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a2b115d6ebc0e14751195c93efd7aafdb}{ui\_displayTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00077}00077\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00078}00078\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @brief\ Updates\ the\ turn\ number\ on\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00080}00080\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00081}00081\ \textcolor{comment}{\ *\ @param[in]\ current\_turn\ The\ current\ turn\ number.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00082}00082\ \textcolor{comment}{\ *\ @param[in]\ player\ The\ player\ whose\ turn\ it\ is\ (Circle\ or\ Cross).}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00083}00083\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00084}00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a358e03c0e369343f9beab07d771f0bcb}{ui\_updateTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00085}00085\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00086}00086\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00087}00087\ \textcolor{comment}{\ *\ @brief\ Displays\ the\ starting\ player\ and\ mode.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00088}00088\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00089}00089\ \textcolor{comment}{\ *\ @param[in]\ starting\_player\ The\ player\ who\ starts\ the\ game.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00090}00090\ \textcolor{comment}{\ *\ @param[in]\ mode\ The\ game\ mode\ (e.g.,\ PVE\ or\ PVP).}}
 \DoxyCodeLine{\Hypertarget{ui_8h_source_l00091}00091\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00092}00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aa7c37f269bcee19a98aea573289d9877}{ui\_gameOver}}();}
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00093}00093\ }
-\DoxyCodeLine{\Hypertarget{ui_8h_source_l00094}00094\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ UI\_H}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00092}00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae1c1dad8845af014a8e35894e8842fb5}{ui\_printStartingPlayer}}(\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ starting\_player,\ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ mode);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00093}00093\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00094}00094\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00095}00095\ \textcolor{comment}{\ *\ @brief\ Prints\ the\ game\ heading\ to\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00096}00096\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00097}00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00098}00098\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00099}00099\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00100}00100\ \textcolor{comment}{\ *\ @brief\ Displays\ the\ "{}Game\ Over"{}\ message\ on\ the\ screen.}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00101}00101\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00102}00102\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aa7c37f269bcee19a98aea573289d9877}{ui\_gameOver}}();}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00104}00104\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ UI\_H}}
 
 \end{DoxyCode}

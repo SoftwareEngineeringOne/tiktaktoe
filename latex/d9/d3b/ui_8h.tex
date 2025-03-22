@@ -30,7 +30,7 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 \#define \mbox{\hyperlink{ui_8h_adbeef5f5002bcfc3cbed2deb88012cc4}{TURN\+\_\+\+ROW}}~1 + \mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{HEADING\+\_\+\+LINES}}
 \begin{DoxyCompactList}\small\item\em Row position for displaying the turn text. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{ui_8h_a12e7933404f476fb69061fc8a8a705ff}{TIMER\+\_\+\+ROW}}~    \mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\+\_\+\+HEIGHT}} + (\mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\+\_\+\+HEIGHT}} \% 2) -\/ 1 + \mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{HEADING\+\_\+\+LINES}}
+\#define \mbox{\hyperlink{ui_8h_a12e7933404f476fb69061fc8a8a705ff}{TIMER\+\_\+\+ROW}}
 \begin{DoxyCompactList}\small\item\em Row position for displaying the timer. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{ui_8h_acd01ff06f7444e97abb6ebb5a293166d}{FULL\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}~"{}-\/"{}
 \begin{DoxyCompactList}\small\item\em Full progress bar element. \end{DoxyCompactList}\item 
@@ -87,7 +87,7 @@ Empty progress bar element.
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00041}{41}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00051}{51}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 \Hypertarget{ui_8h_acd01ff06f7444e97abb6ebb5a293166d}\index{ui.h@{ui.h}!FULL\_PROGRESS\_ELEMENT@{FULL\_PROGRESS\_ELEMENT}}
 \index{FULL\_PROGRESS\_ELEMENT@{FULL\_PROGRESS\_ELEMENT}!ui.h@{ui.h}}
@@ -101,7 +101,7 @@ Full progress bar element.
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00039}{39}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00049}{49}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 \Hypertarget{ui_8h_ac2b3fd518c50122858e86bd5bd8b25f8}\index{ui.h@{ui.h}!HALF\_PROGRESS\_ELEMENT@{HALF\_PROGRESS\_ELEMENT}}
 \index{HALF\_PROGRESS\_ELEMENT@{HALF\_PROGRESS\_ELEMENT}!ui.h@{ui.h}}
@@ -115,21 +115,27 @@ Half progress bar element.
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00040}{40}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00050}{50}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 \Hypertarget{ui_8h_a12e7933404f476fb69061fc8a8a705ff}\index{ui.h@{ui.h}!TIMER\_ROW@{TIMER\_ROW}}
 \index{TIMER\_ROW@{TIMER\_ROW}!ui.h@{ui.h}}
 \doxysubsubsection{\texorpdfstring{TIMER\_ROW}{TIMER\_ROW}}
 {\footnotesize\ttfamily \label{ui_8h_a12e7933404f476fb69061fc8a8a705ff} 
-\#define TIMER\+\_\+\+ROW~    \mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\+\_\+\+HEIGHT}} + (\mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\+\_\+\+HEIGHT}} \% 2) -\/ 1 + \mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{HEADING\+\_\+\+LINES}}}
+\#define TIMER\+\_\+\+ROW}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}}\ ==\ 2\ ?\ \mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\_HEIGHT}}\ +\ (\mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\_HEIGHT}}\ \%\ 2)\ +\ 1\ +\ \mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{HEADING\_LINES}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\_HEIGHT}}\ +\ (\mbox{\hyperlink{cell_8h_a90b3ddaf01d4c39af0567b4500e9c4c6}{FIELD\_HEIGHT}}\ \%\ 2)\ -\/\ 1\ +\ \mbox{\hyperlink{ascii__art_8h_a3d608ee461c1ea111d66823ded42c14e}{HEADING\_LINES}})}
+
+\end{DoxyCode}
 
 
 Row position for displaying the timer. 
 
+The timer row position is calculated based on the number of cells per column. If the number of cells per column is 2, the calculation has to be adjusted 
 
-
-Definition at line \mbox{\hyperlink{ui_8h_source_l00031}{31}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00040}{40}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 \Hypertarget{ui_8h_adbeef5f5002bcfc3cbed2deb88012cc4}\index{ui.h@{ui.h}!TURN\_ROW@{TURN\_ROW}}
 \index{TURN\_ROW@{TURN\_ROW}!ui.h@{ui.h}}
@@ -171,7 +177,7 @@ Definition at line \mbox{\hyperlink{ui_8c_source_l00024}{24}} of file \mbox{\hyp
 
 
 
-References \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00033}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00031}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00034}{ui\+\_\+update\+Timer()}}.
+References \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00033}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00040}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8c_source_l00034}{ui\+\_\+update\+Timer()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -246,7 +252,7 @@ Definition at line \mbox{\hyperlink{ui_8c_source_l00114}{114}} of file \mbox{\hy
 
 
 
-References \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00016}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8h_source_l00070}{ERASE\+\_\+\+LINE\+\_\+\+FROM\+\_\+\+CURSOR}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00031}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8h_source_l00030}{TURN\+\_\+\+ROW}}.
+References \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8c_source_l00016}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{style_8h_source_l00070}{ERASE\+\_\+\+LINE\+\_\+\+FROM\+\_\+\+CURSOR}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00040}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{ui_8h_source_l00030}{TURN\+\_\+\+ROW}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -362,7 +368,7 @@ Definition at line \mbox{\hyperlink{ui_8c_source_l00034}{34}} of file \mbox{\hyp
 
 
 
-References \mbox{\hyperlink{style_8h_source_l00056}{BOLD}}, \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8h_source_l00058}{DIM}}, \mbox{\hyperlink{ui_8h_source_l00041}{EMPTY\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{style_8h_source_l00070}{ERASE\+\_\+\+LINE\+\_\+\+FROM\+\_\+\+CURSOR}}, \mbox{\hyperlink{style_8h_source_l00044}{FG\+\_\+\+GREEN}}, \mbox{\hyperlink{style_8h_source_l00042}{FG\+\_\+\+RED}}, \mbox{\hyperlink{style_8h_source_l00046}{FG\+\_\+\+YELLOW}}, \mbox{\hyperlink{ui_8h_source_l00039}{FULL\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{time_8c_source_l00019}{g\+\_\+timer}}, \mbox{\hyperlink{ui_8h_source_l00040}{HALF\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{time_8h_source_l00034}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{style_8c_source_l00033}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00060}{println\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00031}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{uart_8c_source_l00054}{uart\+\_\+write\+Byte()}}.
+References \mbox{\hyperlink{style_8h_source_l00056}{BOLD}}, \mbox{\hyperlink{cursor_8c_source_l00034}{cursor\+\_\+move\+To()}}, \mbox{\hyperlink{style_8h_source_l00058}{DIM}}, \mbox{\hyperlink{ui_8h_source_l00051}{EMPTY\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{style_8h_source_l00070}{ERASE\+\_\+\+LINE\+\_\+\+FROM\+\_\+\+CURSOR}}, \mbox{\hyperlink{style_8h_source_l00044}{FG\+\_\+\+GREEN}}, \mbox{\hyperlink{style_8h_source_l00042}{FG\+\_\+\+RED}}, \mbox{\hyperlink{style_8h_source_l00046}{FG\+\_\+\+YELLOW}}, \mbox{\hyperlink{ui_8h_source_l00049}{FULL\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{time_8c_source_l00019}{g\+\_\+timer}}, \mbox{\hyperlink{ui_8h_source_l00050}{HALF\+\_\+\+PROGRESS\+\_\+\+ELEMENT}}, \mbox{\hyperlink{time_8h_source_l00034}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{style_8c_source_l00033}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00053}{print\+\_\+styled()}}, \mbox{\hyperlink{print_8c_source_l00060}{println\+\_\+styled()}}, \mbox{\hyperlink{ui_8h_source_l00040}{TIMER\+\_\+\+ROW}}, and \mbox{\hyperlink{uart_8c_source_l00054}{uart\+\_\+write\+Byte()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

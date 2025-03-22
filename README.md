@@ -15,6 +15,15 @@
 
 A TikTakToe game written for the `nRF-51` microcontroller with an `arm-cortex-m0` CPU.
 
+<div class="hidden">
+
+> [!TIP]
+> We recommend viewing this and any other markdown file using our
+> [documentation page](https://tiktaktoe.episko.de) which provides 
+> improved formatting!
+
+</div>
+
 ## ✨ Features
 
 - 🎮 **PVP and PVE modes**
@@ -62,9 +71,8 @@ which can be found under [dependencies](#dependencies) are required.
     qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio
     ```
 
-    @warning
-        Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
-        are disabled when building with the MinGW generator!
+    **Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
+    are disabled when building with the MinGW generator!**
 
 </div>
 
@@ -218,15 +226,15 @@ These can be set by:
 - <b class="tab-title"> Windows </b>
 
     - [CMake](https://cmake.org/download/)
-      ```pwsh
-      # Using Winget
-      winget install CMake.CMake
+    ```pwsh
+    # Using Winget
+    winget install CMake.CMake
 
-      # Using Chocolatey
-      choco install cmake --pre 
+    # Using Chocolatey
+    choco install cmake --pre 
 
-      # Or manually using the link above
-      ```
+    # Or manually using the link above
+    ```
 
     - MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available)
         1. Install [MSYS2](https://www.msys2.org/#installation)
@@ -245,6 +253,7 @@ These can be set by:
     - [GNU Toolchain for arm-eabi](https://gnutoolchains.com/arm-eabi/)
         1. Install from link above
         2. Ensure installation location is added to `PATH`
+
 </div>
 
 ## 🏗️ Architecture

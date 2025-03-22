@@ -39,7 +39,7 @@
  This is a weak symbol that can be overridden by a user-defined handler.
 
  */
-void Default_Handler(void)
+void Default_Handler (void)
 {
 }
 /**
@@ -50,7 +50,7 @@ void Default_Handler(void)
  This is a weak symbol that can be overridden by a user-defined handler.
 
  */
-void HardFault_Handler(void)
+void HardFault_Handler (void)
 {
 }
 /**
@@ -62,7 +62,7 @@ void HardFault_Handler(void)
  and `.data` sections and then calls the `main` function.
 
  */
-void Reset_Handler(void)
+void Reset_Handler (void)
 {
 }
 /**
@@ -79,7 +79,7 @@ void Reset_Handler(void)
  @endcode
 
  */
-void Set_Default_Handler(void)
+void Set_Default_Handler (void)
 {
 }
 /**
@@ -91,7 +91,7 @@ void Set_Default_Handler(void)
  from the load address in flash to the execution address in RAM.
 
  */
-void copyData(void)
+void copyData (void)
 {
 }
 /**
@@ -103,7 +103,7 @@ void copyData(void)
  various exceptions and interrupts.
 
  */
-void g_pfnVectors(void)
+void g_pfnVectors (void)
 {
 }
 /**
@@ -114,6 +114,6 @@ void g_pfnVectors(void)
  This function sets all bytes in the `.bss` section to zero.
 
  */
-void zeroBss(void)
+void zeroBss (void)
 {
 }

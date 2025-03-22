@@ -1,0 +1,131 @@
+.TH "hal/system.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal/system.h \- System control interface for hardware abstraction layer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSYS_AIRCR\fP   0xE000ED0C"
+.br
+.RI "Address of the Application Interrupt and Reset Control Register\&. "
+.ti -1c
+.RI "#define \fBSYS_VECTKEY\fP   (0x5FA << 16)"
+.br
+.RI "Key required to write to SYS_AIRCR\&. "
+.ti -1c
+.RI "#define \fBSYS_SYSRESETREQ\fP   (1 << 2)"
+.br
+.RI "Bit mask to trigger a system reset\&. "
+.ti -1c
+.RI "#define \fBSYS_POWER\fP   0x40000000"
+.br
+.RI "Base address for power control registers\&. "
+.ti -1c
+.RI "#define \fBSYS_SYSTEMOFF\fP   0x500"
+.br
+.RI "Offset for the system off mode register\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsystem_softReset\fP ()"
+.br
+.RI "Trigger a soft reset of the system\&. "
+.ti -1c
+.RI "void \fBsystem_offMode\fP ()"
+.br
+.RI "Triggers 'off' mode of the system\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+System control interface for hardware abstraction layer\&. 
+
+This file contains macros and function declarations for controlling system-level operations such as soft reset and power-off mode\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBsystem\&.c\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBsystem\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SYS_AIRCR   0xE000ED0C"
+
+.PP
+Address of the Application Interrupt and Reset Control Register\&. 
+.PP
+Definition at line \fB27\fP of file \fBsystem\&.h\fP\&.
+.SS "#define SYS_POWER   0x40000000"
+
+.PP
+Base address for power control registers\&. 
+.PP
+Definition at line \fB45\fP of file \fBsystem\&.h\fP\&.
+.SS "#define SYS_SYSRESETREQ   (1 << 2)"
+
+.PP
+Bit mask to trigger a system reset\&. 
+.PP
+Definition at line \fB39\fP of file \fBsystem\&.h\fP\&.
+.SS "#define SYS_SYSTEMOFF   0x500"
+
+.PP
+Offset for the system off mode register\&. 
+.PP
+Definition at line \fB51\fP of file \fBsystem\&.h\fP\&.
+.SS "#define SYS_VECTKEY   (0x5FA << 16)"
+
+.PP
+Key required to write to SYS_AIRCR\&. 
+.PP
+Definition at line \fB33\fP of file \fBsystem\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void system_offMode ()"
+
+.PP
+Triggers 'off' mode of the system\&. 
+.PP
+\fBNote\fP
+.RS 4
+\fBNever returns\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB26\fP of file \fBsystem\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBSYS_POWER\fP, and \fBSYS_SYSTEMOFF\fP\&.
+.SS "void system_softReset ()"
+
+.PP
+Trigger a soft reset of the system\&. 
+.PP
+\fBNote\fP
+.RS 4
+\fBNever returns\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB18\fP of file \fBsystem\&.c\fP\&.
+.PP
+References \fBregister_write()\fP, \fBSYS_AIRCR\fP, \fBSYS_SYSRESETREQ\fP, and \fBSYS_VECTKEY\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

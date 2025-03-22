@@ -1,20 +1,16 @@
 /**
- * @file
+ * @file ui.c
  *
- * @author
+ * @brief Implements functions for the in-game user interface.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see ui.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "presentation/ui.h"
 
 #include "hal/uart.h"
@@ -86,6 +82,7 @@ void ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time)
     print(ERASE_LINE_FROM_CURSOR);
     uart_writeByte('\n');
 }
+
 void ui_displayTurn(const uint8_t current_turn, const Player player)
 {
     cursor_moveTo(1, TURN_ROW);

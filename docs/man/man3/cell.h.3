@@ -1,0 +1,279 @@
+.TH "presentation/cell.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/cell.h \- Contains functions and definitions for managing the presentation of cells\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'logic/game\&.h'\fP
+.br
+\fR#include 'presentation/field\&.h'\fP
+.br
+\fR#include <stdint\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCellSize\fP"
+.br
+.RI "Struct representing the dimensions of a cell\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNUM_OF_SIZES\fP   3"
+.br
+.RI "Number of available cell sizes\&. "
+.ti -1c
+.RI "#define \fBINITIAL_INDEX\fP   1"
+.br
+.RI "Initial index for cell size\&. "
+.ti -1c
+.RI "#define \fBINITIAL_WIDTH\fP   8"
+.br
+.RI "Initial width of a cell\&. "
+.ti -1c
+.RI "#define \fBINITIAL_HEIGHT\fP   5"
+.br
+.RI "Initial height of a cell\&. "
+.ti -1c
+.RI "#define \fBINITIAL_SIZE\fP   \fBMedium\fP"
+.br
+.RI "Initial size of a cell\&. "
+.ti -1c
+.RI "#define \fBFIELD_HEIGHT\fP       (\fBCELLS_PER_COL\fP * g_cell_size\&.height)"
+.br
+.RI "Height of the field based on cell size\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSize\fP { \fBSmall\fP = 0, \fBMedium\fP = 1, \fBLarge\fP = 2 }"
+.br
+.RI "Enum representing the available cell sizes\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcell_redraw\fP (const \fBCell\fP *cell)"
+.br
+.RI "Redraws the given cell\&. "
+.ti -1c
+.RI "void \fBcell_redraw_withModifier\fP (const \fBCell\fP *cell, const char *modifier)"
+.br
+.RI "Redraws the given cell with a modifier\&. "
+.ti -1c
+.RI "void \fBcell_redrawAll\fP (\fBCell\fP all_cells[][\fBCELLS_PER_ROW\fP], const char *modifier)"
+.br
+.RI "Redraws the entire field of cells\&. "
+.ti -1c
+.RI "void \fBcell_select\fP (const \fBCell\fP *cell)"
+.br
+.RI "Selects the given cell\&. "
+.ti -1c
+.RI "void \fBcell_increaseSize\fP ()"
+.br
+.RI "Increases the size of the cells\&. "
+.ti -1c
+.RI "void \fBcell_decreaseSize\fP ()"
+.br
+.RI "Decreases the size of the cells\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBCellSize\fP \fBg_cell_size\fP"
+.br
+.RI "Global variable representing the current cell size\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains functions and definitions for managing the presentation of cells\&. 
+
+This file provides functions to redraw cells, manage cell selection, and adjust cell sizes\&. It also defines the \fR\fBCellSize\fP\fP struct and \fRSize\fP enum for handling cell dimensions\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBcell\&.c\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcell\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FIELD_HEIGHT       (\fBCELLS_PER_COL\fP * g_cell_size\&.height)"
+
+.PP
+Height of the field based on cell size\&. 
+.PP
+Definition at line \fB33\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_HEIGHT   5"
+
+.PP
+Initial height of a cell\&. 
+.PP
+Definition at line \fB31\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_INDEX   1"
+
+.PP
+Initial index for cell size\&. 
+.PP
+Definition at line \fB29\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_SIZE   \fBMedium\fP"
+
+.PP
+Initial size of a cell\&. 
+.PP
+Definition at line \fB32\fP of file \fBcell\&.h\fP\&.
+.SS "#define INITIAL_WIDTH   8"
+
+.PP
+Initial width of a cell\&. 
+.PP
+Definition at line \fB30\fP of file \fBcell\&.h\fP\&.
+.SS "#define NUM_OF_SIZES   3"
+
+.PP
+Number of available cell sizes\&. 
+.PP
+Definition at line \fB28\fP of file \fBcell\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBSize\fP"
+
+.PP
+Enum representing the available cell sizes\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISmall \fP\fP
+Small cell size\&. 
+.TP
+\fB\fIMedium \fP\fP
+Medium cell size\&. 
+.TP
+\fB\fILarge \fP\fP
+Large cell size\&. 
+.PP
+Definition at line \fB39\fP of file \fBcell\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cell_decreaseSize ()"
+
+.PP
+Decreases the size of the cells\&. 
+.PP
+Definition at line \fB160\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBCellSize::size\fP, \fBSmall\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_increaseSize ()"
+
+.PP
+Increases the size of the cells\&. 
+.PP
+Definition at line \fB149\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBg_cell_size\fP, \fBCellSize::height\fP, \fBLarge\fP, \fBCellSize::size\fP, \fBVALID_SIZES\fP, and \fBCellSize::width\fP\&.
+.SS "void cell_redraw (const \fBCell\fP * cell)"
+
+.PP
+Redraws the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to redraw\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redraw_withModifier (const \fBCell\fP * cell, const char * modifier)"
+
+.PP
+Redraws the given cell with a modifier\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to redraw\&. 
+.br
+\fImodifier\fP Modifier to apply during redraw\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB106\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_redrawAll (\fBCell\fP all_cells[][CELLS_PER_ROW], const char * modifier)"
+
+.PP
+Redraws the entire field of cells\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIall_cells\fP 2D array of cells representing the field\&. 
+.br
+\fImodifier\fP Modifier to apply during redraw\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB136\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCELLS_PER_COL\fP, \fBCELLS_PER_ROW\fP, \fBCell::col\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SS "void cell_select (const \fBCell\fP * cell)"
+
+.PP
+Selects the given cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP \fBCell\fP to select\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB111\fP of file \fBcell\&.c\fP\&.
+.PP
+References \fBCell::col\fP, \fBINVERSE\fP, \fBCell::marked_by\fP, \fBredrawCell()\fP, and \fBCell::row\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBCellSize\fP g_cell_size\fR [extern]\fP"
+
+.PP
+Global variable representing the current cell size\&. Initialized with default values for size, height, and width\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBVALID_SIZES\fP 
+.PP
+\fBINITIAL_SIZE\fP 
+.PP
+\fBINITIAL_HEIGHT\fP 
+.PP
+\fBINITIAL_WIDTH\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBcell\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

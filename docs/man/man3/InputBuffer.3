@@ -1,0 +1,58 @@
+.TH "InputBuffer" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InputBuffer \- RingBuffer for fixed memory footprint\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <input_buf\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBdata\fP [\fBINPUT_BUF_SIZE\fP]"
+.br
+.RI "Buffer data storage\&. "
+.ti -1c
+.RI "volatile uint16_t \fBhead\fP"
+.br
+.RI "Index of the head (write position) "
+.ti -1c
+.RI "volatile uint16_t \fBtail\fP"
+.br
+.RI "Index of the tail (read position) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+RingBuffer for fixed memory footprint\&. 
+
+This struct represents a ring buffer with a fixed size, used for storing input data in a circular manner\&. 
+.PP
+Definition at line \fB37\fP of file \fBinput_buf\&.h\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "uint8_t InputBuffer::data[\fBINPUT_BUF_SIZE\fP]"
+
+.PP
+Buffer data storage\&. 
+.PP
+Definition at line \fB39\fP of file \fBinput_buf\&.h\fP\&.
+.SS "volatile uint16_t InputBuffer::head"
+
+.PP
+Index of the head (write position) 
+.PP
+Definition at line \fB40\fP of file \fBinput_buf\&.h\fP\&.
+.SS "volatile uint16_t InputBuffer::tail"
+
+.PP
+Index of the tail (read position) 
+.PP
+Definition at line \fB41\fP of file \fBinput_buf\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

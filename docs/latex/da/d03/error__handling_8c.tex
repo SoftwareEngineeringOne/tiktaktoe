@@ -1,0 +1,119 @@
+\doxysection{util/error\+\_\+handling.c File Reference}
+\hypertarget{error__handling_8c}{}\label{error__handling_8c}\index{util/error\_handling.c@{util/error\_handling.c}}
+{\ttfamily \#include "{}util/error\+\_\+handling.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ui.\+h"{}}\newline
+{\ttfamily \#include "{}hal/system.\+h"{}}\newline
+{\ttfamily \#include "{}hal/uart.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+Include dependency graph for error\+\_\+handling.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/db3/error__handling_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}{handle\+Error}} (const char \texorpdfstring{$\ast$}{*}hint)
+\begin{DoxyCompactList}\small\item\em Handles error messages and resets the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}{Hard\+Fault\+\_\+\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles hard faults. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}{Default\+\_\+\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles unexpected interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51}\label{error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51} 
+\index{error\_handling.c@{error\_handling.c}!Default\_Handler@{Default\_Handler}}
+\index{Default\_Handler@{Default\_Handler}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{Default\_Handler()}{Default\_Handler()}}
+{\footnotesize\ttfamily void Default\+\_\+\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles unexpected interrupts. 
+
+This function is triggered when an unexpected interrupt occurs. It provides a mechanism to handle the interrupt and display an appropriate message. 
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00031}{31}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00037}{handle\+Error()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a678d0aa1dbbf42119a8358cc68140b51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c}\label{error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c} 
+\index{error\_handling.c@{error\_handling.c}!handleError@{handleError}}
+\index{handleError@{handleError}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{handleError()}{handleError()}}
+{\footnotesize\ttfamily static void handle\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles error messages and resets the system. 
+
+This function clears the console, displays an error message, and waits for user input before attempting a soft reset of the system.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em hint} & A message providing details about the error.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Depending on the error, the system may not be able to recover or even execute this function properly. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00037}{37}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{style_8h_source_l00056}{BOLD}}, \mbox{\hyperlink{style_8h_source_l00058}{DIM}}, \mbox{\hyperlink{style_8h_source_l00042}{FG\+\_\+\+RED}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00020}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00041}{println()}}, \mbox{\hyperlink{style_8h_source_l00040}{RESET}}, \mbox{\hyperlink{system_8c_source_l00018}{system\+\_\+soft\+Reset()}}, \mbox{\hyperlink{uart_8c_source_l00062}{uart\+\_\+read\+Byte()}}, and \mbox{\hyperlink{ui_8c_source_l00124}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{da/d03/error__handling_8c_a0805cfdbb794a5ba0d8d0411c746556c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e}\label{error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e} 
+\index{error\_handling.c@{error\_handling.c}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!error\_handling.c@{error\_handling.c}}
+\doxysubsubsection{\texorpdfstring{HardFault\_Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles hard faults. 
+
+This function is triggered when a hard fault occurs. It provides a mechanism to handle the fault and display an appropriate message. 
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00025}{25}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00037}{handle\+Error()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d03/error__handling_8c_a2af56a8bf3197b2f06cac4c0b84ffc3e_cgraph}
+\end{center}
+\end{figure}

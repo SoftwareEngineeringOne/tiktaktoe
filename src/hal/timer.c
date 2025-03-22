@@ -45,10 +45,7 @@ void timer_init(Timer const timer)
     timer_start(timer);
 }
 
-void timer_init_detailed(
-    Timer const timer,
-    uint8_t const prescaler,
-    TimerBitMode const bitMode)
+void timer_init_detailed(Timer const timer, uint8_t const prescaler, TimerBitMode const bitMode)
 {
     const uint32_t timerBase = TimerBase[timer];
     // Instance[0] of the Timer uses Peripheral ID: 8

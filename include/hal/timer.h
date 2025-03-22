@@ -1,7 +1,12 @@
 /**
- * @file timer.h
+ * @file
+ *
+ * @ingroup HAL
  *
  * @brief Contains constants and abstraction functions for the COUNTER device
+ *
+ * @note
+ * Based on version by Thomas Vogt
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -74,7 +79,7 @@
 typedef enum Timer
 {
     TIMER0,
-    TIMER1, // unused
+    TIMER1,// unused
     TIMER2 // unused
 } Timer;
 
@@ -112,7 +117,7 @@ void timer_init(Timer timer);
  *   value 0..9 is valid ==> 2^0 .. 2^9
  * @param[in] bitmode Bit Mode.
  **/
-void timer_init_detailed(Timer timer, uint8_t prescaler,  TimerBitMode bitMode);
+void timer_init_detailed(Timer timer, uint8_t prescaler, TimerBitMode bitMode);
 
 /**
  * @brief Set the Capture/ Compare Register of the Timer.

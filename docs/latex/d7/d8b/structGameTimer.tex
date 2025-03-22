@@ -1,0 +1,88 @@
+\doxysection{Game\+Timer Struct Reference}
+\hypertarget{structGameTimer}{}\label{structGameTimer}\index{GameTimer@{GameTimer}}
+
+
+Time information of the current game.  
+
+
+
+
+{\ttfamily \#include $<$time.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Timer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d3/dc8/structGameTimer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{structGameTimer_ad3003c430a09647532fad2d9615adbcc}{is\+\_\+running}}
+\begin{DoxyCompactList}\small\item\em Indicates if the timer is currently running. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}{ticks\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total ticks since the game started. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}{ticks\+\_\+turn}}
+\begin{DoxyCompactList}\small\item\em Ticks elapsed during the current turn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Time information of the current game. 
+
+This struct tracks whether the timer is running and the number of ticks elapsed in total and during the current turn. 
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00032}{32}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structGameTimer_ad3003c430a09647532fad2d9615adbcc}\label{structGameTimer_ad3003c430a09647532fad2d9615adbcc} 
+\index{GameTimer@{GameTimer}!is\_running@{is\_running}}
+\index{is\_running@{is\_running}!GameTimer@{GameTimer}}
+\doxysubsubsection{\texorpdfstring{is\_running}{is\_running}}
+{\footnotesize\ttfamily \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} Game\+Timer\+::is\+\_\+running}
+
+
+
+Indicates if the timer is currently running. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00034}{34}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+
+\Hypertarget{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7}\label{structGameTimer_a7c1b8ea1aa87bdcf80dd5e73972d39c7} 
+\index{GameTimer@{GameTimer}!ticks\_total@{ticks\_total}}
+\index{ticks\_total@{ticks\_total}!GameTimer@{GameTimer}}
+\doxysubsubsection{\texorpdfstring{ticks\_total}{ticks\_total}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t Game\+Timer\+::ticks\+\_\+total}
+
+
+
+Total ticks since the game started. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00035}{35}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+
+\Hypertarget{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc}\label{structGameTimer_a4059f8e2311e2eb9050fb7925ef405fc} 
+\index{GameTimer@{GameTimer}!ticks\_turn@{ticks\_turn}}
+\index{ticks\_turn@{ticks\_turn}!GameTimer@{GameTimer}}
+\doxysubsubsection{\texorpdfstring{ticks\_turn}{ticks\_turn}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t Game\+Timer\+::ticks\+\_\+turn}
+
+
+
+Ticks elapsed during the current turn. 
+
+
+
+Definition at line \mbox{\hyperlink{time_8h_source_l00036}{36}} of file \mbox{\hyperlink{time_8h_source}{time.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logic/\mbox{\hyperlink{time_8h}{time.\+h}}\end{DoxyCompactItemize}

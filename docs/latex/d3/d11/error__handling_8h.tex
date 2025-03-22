@@ -1,0 +1,97 @@
+\doxysection{util/error\+\_\+handling.h File Reference}
+\hypertarget{error__handling_8h}{}\label{error__handling_8h}\index{util/error\_handling.h@{util/error\_handling.h}}
+
+
+Contains functions to react on errors.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{db/d03/error__handling_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5}{Hard\+Fault\+\_\+\+Handler}} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((interrupt))
+\begin{DoxyCompactList}\small\item\em Handles hard faults. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17}{Default\+\_\+\+Handler}} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((interrupt))
+\begin{DoxyCompactList}\small\item\em Handles unexpected interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions to react on errors. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{error__handling_8c}{error\+\_\+handling.\+c}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{error__handling_8h_source}{error\+\_\+handling.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17}\label{error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17} 
+\index{error\_handling.h@{error\_handling.h}!Default\_Handler@{Default\_Handler}}
+\index{Default\_Handler@{Default\_Handler}!error\_handling.h@{error\_handling.h}}
+\doxysubsubsection{\texorpdfstring{Default\_Handler()}{Default\_Handler()}}
+{\footnotesize\ttfamily void Default\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Handles unexpected interrupts. 
+
+This function is triggered when an unexpected interrupt occurs. It provides a mechanism to handle the interrupt and display an appropriate message.
+
+Handles unexpected interrupts.
+
+This is a weak symbol that can be overridden by a user-\/defined handler. 
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00031}{31}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00037}{handle\+Error()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d11/error__handling_8h_a3c235ec4fcd11b5122f4fd56b9679b17_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5}\label{error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5} 
+\index{error\_handling.h@{error\_handling.h}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!error\_handling.h@{error\_handling.h}}
+\doxysubsubsection{\texorpdfstring{HardFault\_Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Handles hard faults. 
+
+This function is triggered when a hard fault occurs. It provides a mechanism to handle the fault and display an appropriate message.
+
+Handles hard faults.
+
+This is a weak symbol that can be overridden by a user-\/defined handler. 
+
+Definition at line \mbox{\hyperlink{error__handling_8c_source_l00025}{25}} of file \mbox{\hyperlink{error__handling_8c_source}{error\+\_\+handling.\+c}}.
+
+
+
+References \mbox{\hyperlink{error__handling_8c_source_l00037}{handle\+Error()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d11/error__handling_8h_a143c30fa1037d6e6fda946559ecda6d5_cgraph}
+\end{center}
+\end{figure}

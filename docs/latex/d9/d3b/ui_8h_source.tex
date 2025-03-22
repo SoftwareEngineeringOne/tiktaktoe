@@ -1,0 +1,44 @@
+\doxysection{ui.\+h}
+\hypertarget{ui_8h_source}{}\label{ui_8h_source}\index{presentation/ui.h@{presentation/ui.h}}
+\mbox{\hyperlink{ui_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00022}00022\ \textcolor{preprocessor}{\#ifndef\ UI\_H}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ UI\_H}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ascii__art_8h}{presentation/ascii\_art.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cell_8h}{presentation/cell.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00030}\mbox{\hyperlink{ui_8h_adbeef5f5002bcfc3cbed2deb88012cc4}{00030}}\ \textcolor{preprocessor}{\#define\ TURN\_ROW\ 1\ +\ HEADING\_LINES}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00031}\mbox{\hyperlink{ui_8h_a12e7933404f476fb69061fc8a8a705ff}{00031}}\ \textcolor{preprocessor}{\#define\ TIMER\_ROW\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ FIELD\_HEIGHT\ +\ (FIELD\_HEIGHT\ \%\ 2)\ -\/\ 1\ +\ HEADING\_LINES}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifdef\ ENABLE\_UNICODE}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}█"{}\ }}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}▆"{}\ }}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}▁"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00038}00038\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00039}\mbox{\hyperlink{ui_8h_acd01ff06f7444e97abb6ebb5a293166d}{00039}}\ \textcolor{preprocessor}{\#define\ FULL\_PROGRESS\_ELEMENT\ "{}-\/"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00040}\mbox{\hyperlink{ui_8h_ac2b3fd518c50122858e86bd5bd8b25f8}{00040}}\ \textcolor{preprocessor}{\#define\ HALF\_PROGRESS\_ELEMENT\ "{}\_"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00041}\mbox{\hyperlink{ui_8h_ad7d5e58bd1b7c4066f87d8dd9cf9eb68}{00041}}\ \textcolor{preprocessor}{\#define\ EMPTY\_PROGRESS\_ELEMENT\ "{}"{}}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00050}00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae4fe2414f32031d11e9c73b538bf1343}{ui\_displayTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aeb1f8edc41404d3650def3e0c4b8d700}{ui\_updateTimer}}(uint16\_t\ remaining\_time,\ uint16\_t\ total\_time);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00066}00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a2b115d6ebc0e14751195c93efd7aafdb}{ui\_displayTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00074}00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_a358e03c0e369343f9beab07d771f0bcb}{ui\_updateTurn}}(uint8\_t\ current\_turn,\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ player);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ae1c1dad8845af014a8e35894e8842fb5}{ui\_printStartingPlayer}}(\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ starting\_player,\ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}\ mode);}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00087}00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_ad7ec4b5965543c400031e14183eee496}{ui\_printHeading}}();}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00092}00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ui_8h_aa7c37f269bcee19a98aea573289d9877}{ui\_gameOver}}();}
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{ui_8h_source_l00094}00094\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//\ UI\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,205 @@
+.TH "presentation/style.c" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/style.c \- Implements predefined styles for terminal output\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'presentation/style\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_BOLD\fP"
+.br
+.RI "Default style with bold font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_ITALIC\fP"
+.br
+.RI "Default style with italic font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_DIM\fP"
+.br
+.RI "Default style with dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_DIM\fP"
+.br
+.RI "\fBStyle\fP combining bold and dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBITALIC_DIM\fP"
+.br
+.RI "\fBStyle\fP combining italic and dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_CIRCLE\fP"
+.br
+.RI "Default style for circles with magenta foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_CIRCLE\fP"
+.br
+.RI "Bold style for circles with magenta foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_CROSS\fP"
+.br
+.RI "Default style for crosses with green foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_CROSS\fP"
+.br
+.RI "Bold style for crosses with green foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBHEADING_STYLE\fP"
+.br
+.RI "\fBStyle\fP for headings with blue foreground and bold font\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implements predefined styles for terminal output\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBstyle\&.h\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBstyle\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBStyle\fP BOLD_CIRCLE"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.fg_color = FG_MAGENTA,
+    \&.font_style = BOLD,
+}
+.fi
+
+.PP
+Bold style for circles with magenta foreground\&. 
+.PP
+Definition at line \fB42\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP BOLD_CROSS"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.fg_color = FG_GREEN,
+    \&.font_style = BOLD,
+}
+.fi
+
+.PP
+Bold style for crosses with green foreground\&. 
+.PP
+Definition at line \fB51\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP BOLD_DIM"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.font_style = BOLD,
+    \&.fg_color = DIM,
+}
+.fi
+
+.PP
+\fBStyle\fP combining bold and dim font\&. 
+.PP
+Definition at line \fB28\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_BOLD"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.font_style = BOLD,
+}
+.fi
+
+.PP
+Default style with bold font\&. 
+.PP
+Definition at line \fB16\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_CIRCLE"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.fg_color = FG_MAGENTA,
+}
+.fi
+
+.PP
+Default style for circles with magenta foreground\&. 
+.PP
+Definition at line \fB38\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_CROSS"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.fg_color = FG_GREEN,
+}
+.fi
+
+.PP
+Default style for crosses with green foreground\&. 
+.PP
+Definition at line \fB47\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_DIM"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.font_style = DIM,
+}
+.fi
+
+.PP
+Default style with dim font\&. 
+.PP
+Definition at line \fB24\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_ITALIC"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.font_style = ITALIC,
+}
+.fi
+
+.PP
+Default style with italic font\&. 
+.PP
+Definition at line \fB20\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP HEADING_STYLE"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.fg_color = FG_BLUE,
+    \&.font_style = BOLD,
+}
+.fi
+
+.PP
+\fBStyle\fP for headings with blue foreground and bold font\&. 
+.PP
+Definition at line \fB56\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP ITALIC_DIM"
+\fBInitial value:\fP.PP
+.nf
+= {
+    \&.font_style = ITALIC,
+    \&.fg_color = DIM,
+}
+.fi
+
+.PP
+\fBStyle\fP combining italic and dim font\&. 
+.PP
+Definition at line \fB33\fP of file \fBstyle\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

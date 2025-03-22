@@ -1,0 +1,11 @@
+<map id="hal/timer.h" name="hal/timer.h">
+<area shape="rect" id="Node000001" title="Contains constants and abstraction functions for the COUNTER device." alt="" coords="209,5,300,33"/>
+<area shape="rect" id="Node000002" href="$d8/d22/interrupts_8c.html" title="Implements the interrupt handlers for UART and Timer interrupts." alt="" coords="5,81,125,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,42,100,83,98,78,205,37"/>
+<area shape="rect" id="Node000003" href="$df/d41/timer_8c.html" title=" " alt="" coords="149,81,240,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,47,207,82,203,79,232,44"/>
+<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="264,81,368,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="277,43,307,79,303,82,273,47"/>
+<area shape="rect" id="Node000005" href="$df/d73/time_8c.html" title="Implements time&#45;related functionality for the game." alt="" coords="392,81,490,109"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="303,37,409,78,407,83,301,42"/>
+</map>

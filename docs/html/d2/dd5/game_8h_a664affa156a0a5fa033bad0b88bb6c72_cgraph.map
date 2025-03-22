@@ -1,0 +1,18 @@
+<map id="game_onTimeOut" name="game_onTimeOut">
+<area shape="rect" id="Node000001" title="Automatically end a turn in case the turn time is over." alt="" coords="5,55,143,82"/>
+<area shape="rect" id="Node000002" href="$df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark a random unmarked cell on the game board." alt="" coords="191,27,353,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,56,175,51,175,57,143,61"/>
+<area shape="rect" id="Node000007" href="$d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="214,80,330,108"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="143,74,199,82,198,87,143,80"/>
+<area shape="rect" id="Node000003" href="$dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="Get the Random Value from the generator by polling and waiting." alt="" coords="401,15,561,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,37,385,36,385,42,354,42"/>
+<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="818,29,925,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="562,17,609,10,690,3,770,10,819,21,818,27,769,15,690,8,610,15,562,22"/>
+<area shape="rect" id="Node000005" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="634,24,745,52"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="561,35,618,35,618,40,561,40"/>
+<area shape="rect" id="Node000006" href="$dc/de5/random_8c.html#ade0d5a07f6403292f21ff2b5f200f11f" title="Get the Random Value from the generator immediately." alt="" coords="609,75,770,120"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="562,58,595,68,594,73,560,63"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="765,72,808,59,809,64,767,77"/>
+<area shape="rect" id="Node000008" href="$df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="421,84,541,112"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="330,92,405,94,405,99,330,97"/>
+</map>

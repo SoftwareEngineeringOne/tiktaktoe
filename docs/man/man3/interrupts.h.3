@@ -1,0 +1,80 @@
+.TH "hal/interrupts.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+hal/interrupts.h \- Contains the relevant interrupt handlers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInterrupt2_Handler\fP ()"
+.br
+.RI "UART interrupt handler\&. "
+.ti -1c
+.RI "void \fBInterrupt8_Handler\fP ()"
+.br
+.RI "Timer interrupt handler\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the relevant interrupt handlers\&. 
+
+This file declares the interrupt handler functions for UART and Timer interrupts\&. These handlers are triggered by specific hardware events and perform the necessary actions to handle the interrupts\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBinterrupts\&.c\fP
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Ensure the corresponding peripherals are properly configured before enabling these interrupts\&.
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBinterrupts\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void Interrupt2_Handler ()"
+
+.PP
+UART interrupt handler\&. This function is triggered when a UART interrupt occurs\&. It reads a byte from the UART peripheral and processes it using the input buffer\&. The interrupt pending bit is cleared after handling the interrupt\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBuart_readByte\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBinput_onInterrupt()\fP, \fBInterrupt_ICPR\fP, \fBInterrupt_ID2\fP, \fBregister_write()\fP, and \fBuart_readByte()\fP\&.
+.SS "void Interrupt8_Handler ()"
+
+.PP
+Timer interrupt handler\&. This function is triggered when a timer interrupt occurs\&. It resets the timer compare register and clears the interrupt pending bit\&. Additionally, it notifies the time module about the interrupt event\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBtime_onInterrupt\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fBinterrupts\&.c\fP\&.
+.PP
+References \fBInterrupt_ICPR\fP, \fBInterrupt_ID8\fP, \fBregister_write()\fP, \fBtime_onInterrupt()\fP, \fBTIMER0_BASE_ADDRESS\fP, and \fBTIMER_COMPARE_0\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

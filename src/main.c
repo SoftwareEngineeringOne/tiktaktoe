@@ -1,23 +1,20 @@
 /**
- * @file
+ * @file main.c
  *
- * @author
+ * @brief Entry point for the TikTakToe game.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @details
+ * This file contains the main function, which initializes the system, handles
+ * the main menu, and manages the game flow based on user input.
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "def.h"
 #include "hal/nvic.h"
-#include "hal/random.h"
 #include "hal/uart.h"
 #include "presentation/print.h"
 #include "presentation/style.h"
@@ -27,7 +24,17 @@
 #include "hal/system.h"
 #include "presentation/menu.h"
 
-int main(void)
+/**
+ * @brief Main function for the Tic-Tac-Toe application.
+ *
+ * @details
+ * Initializes the UART and input buffer, displays the main menu, and handles
+ * user input to either reset the game or exit. If the game is reset, the system
+ * performs a soft reset. If the user exits, the system enters off mode.
+ *
+ * @return void
+ */
+int main()
 {
     uart_init(true);
     input_init(&g_input_buf);

@@ -1,0 +1,7 @@
+<map id="time_resume" name="time_resume">
+<area shape="rect" id="Node000001" title="Resume the timer when paused." alt="" coords="5,5,113,33"/>
+<area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="161,5,254,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,16,145,16,145,22,113,22"/>
+<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="302,5,413,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,16,286,16,286,22,255,22"/>
+</map>

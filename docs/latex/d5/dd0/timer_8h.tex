@@ -1,0 +1,1032 @@
+\doxysection{hal/timer.h File Reference}
+\hypertarget{timer_8h}{}\label{timer_8h}\index{hal/timer.h@{hal/timer.h}}
+
+
+Contains constants and abstraction functions for the COUNTER device.  
+
+
+{\ttfamily \#include "{}def.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for timer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d4/d2e/timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d89/timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{timer_8h_aab97a79d2c8636d2f8b240d1618d2609}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}~0x40008000
+\item 
+\#define \mbox{\hyperlink{timer_8h_a654bed0d7f299c179d5eb1c6ed75051c}{TIMER1\+\_\+\+BASE\+\_\+\+ADDRESS}}~0x40009000
+\item 
+\#define \mbox{\hyperlink{timer_8h_ad0ebc0362cdc269ac1b8f4f572c30c56}{TIMER2\+\_\+\+BASE\+\_\+\+ADDRESS}}~0x4000\+A000
+\item 
+\#define \mbox{\hyperlink{timer_8h_a0534322773d9344f3d4c858e409ef175}{TIMER\+\_\+\+START}}~0x000
+\item 
+\#define \mbox{\hyperlink{timer_8h_a0666ee279358c12cdaed9f1770bd20bc}{TIMER\+\_\+\+STOP}}~0x004
+\item 
+\#define \mbox{\hyperlink{timer_8h_ae10e24241b3ab84cdb376c3b307c757d}{TIMER\+\_\+\+COUNT}}~0x008
+\item 
+\#define \mbox{\hyperlink{timer_8h_a6cfd530c706865652e9c376cf01337d4}{TIMER\+\_\+\+CLEAR}}~0x00C
+\item 
+\#define \mbox{\hyperlink{timer_8h_a83c40c62051ed14801927bc9a849c915}{TIMER\+\_\+\+SHUTDOWN}}~0x010
+\item 
+\#define \mbox{\hyperlink{timer_8h_a6d82faf3ea6e21fe66f1e0f027d6b582}{TIMER\+\_\+\+CAPTURE\+\_\+0}}~0x040
+\item 
+\#define \mbox{\hyperlink{timer_8h_a78b8ded5d5b07f2d4ef5bb4bf3d46d07}{TIMER\+\_\+\+CAPTURE\+\_\+1}}~0x044
+\item 
+\#define \mbox{\hyperlink{timer_8h_a2e505a26c8a1ba9b462f4faaf0e08563}{TIMER\+\_\+\+CAPTURE\+\_\+2}}~0x048
+\item 
+\#define \mbox{\hyperlink{timer_8h_ac34e6e77a93777d268d47c194f9a8ca1}{TIMER\+\_\+\+CAPTURE\+\_\+3}}~0x04C
+\item 
+\#define \mbox{\hyperlink{timer_8h_a6563c1b8c53087e6b57075ddaecf48b6}{TIMER\+\_\+\+COMPARE\+\_\+0}}~0x140
+\item 
+\#define \mbox{\hyperlink{timer_8h_a01c9aabe0c692a112b1d8fba91cf3952}{TIMER\+\_\+\+COMPARE\+\_\+1}}~0x144
+\item 
+\#define \mbox{\hyperlink{timer_8h_a7321745e8dda15faac60912491fbd466}{TIMER\+\_\+\+COMPARE\+\_\+2}}~0x148
+\item 
+\#define \mbox{\hyperlink{timer_8h_ac166d8594dc1b14f6fa46577775f72c6}{TIMER\+\_\+\+COMPARE\+\_\+3}}~0x14C
+\item 
+\#define \mbox{\hyperlink{timer_8h_a894d16aaa4c8700effcf503119b2b951}{TIMER\+\_\+\+SHORTS}}~0x200
+\item 
+\#define \mbox{\hyperlink{timer_8h_a6375a0c7dd7b0d6f95364a45f330f643}{TIMER\+\_\+\+INTENSET}}~0x304
+\item 
+\#define \mbox{\hyperlink{timer_8h_ac1d369e5fd7ab6b10ed0e4409e73d094}{TIMER\+\_\+\+INTENCLR}}~0x308
+\item 
+\#define \mbox{\hyperlink{timer_8h_af2a9f923fe45bcba36e26b19886d9d81}{TIMER\+\_\+\+MODE}}~0x504
+\item 
+\#define \mbox{\hyperlink{timer_8h_a7fcd2179172a76af95e8b8710d287d71}{TIMER\+\_\+\+BITMODE}}~0x508
+\item 
+\#define \mbox{\hyperlink{timer_8h_aa7914b8d7fd0bae056b85acb5062676b}{TIMER\+\_\+\+PRESCALER}}~0x510
+\item 
+\#define \mbox{\hyperlink{timer_8h_af8c5efd7a68cb34998a957806cb72c84}{TIMER\+\_\+\+CC\+\_\+0}}~0x540
+\item 
+\#define \mbox{\hyperlink{timer_8h_a1d9b5cf974f963e84f7521055ec039f9}{TIMER\+\_\+\+CC\+\_\+1}}~0x544
+\item 
+\#define \mbox{\hyperlink{timer_8h_a09a0950170b5f9980ea025401e9f8f50}{TIMER\+\_\+\+CC\+\_\+2}}~0x548
+\item 
+\#define \mbox{\hyperlink{timer_8h_a7120850580ef665388fc907b2044735d}{TIMER\+\_\+\+CC\+\_\+3}}~0x54C
+\item 
+\#define \mbox{\hyperlink{timer_8h_acafb820f48cca47a26386b1648db017e}{TIMER\+\_\+\+TASK\+\_\+\+START}}~1
+\item 
+\#define \mbox{\hyperlink{timer_8h_affeb98e6c53599879a714fe1748ce5ed}{TIMER\+\_\+\+EVENT\+\_\+\+TRIGGER}}~1
+\item 
+\#define \mbox{\hyperlink{timer_8h_a8c03292bc5ec12d510de0d5c4115f876}{TIMER\+\_\+\+EVENT\+\_\+\+CLEAR}}~0
+\item 
+\#define \mbox{\hyperlink{timer_8h_af953eeba6d9ae7f783cec0271e33691a}{SHORTS\+\_\+\+COMPARE0\+\_\+\+CLEAR\+\_\+\+ENABLE}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a23af10bc395f613bec64b78c7498d5ba}{SHORTS\+\_\+\+COMPARE0\+\_\+\+CLEAR\+\_\+\+DISABLE}}~(0 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a1cab2363747f10009d52327a2fd47aa9}{SHORTS\+\_\+\+COMPARE1\+\_\+\+CLEAR\+\_\+\+ENABLE}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a25735eb0883069ab89eea3958ea22827}{SHORTS\+\_\+\+COMPARE1\+\_\+\+CLEAR\+\_\+\+DISABLE}}~(0 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a320bf0cb37f3bbb3ec51f70c9a344f4d}{SHORTS\+\_\+\+COMPARE0\+\_\+\+STOP\+\_\+\+ENABLE}}~(1 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a950f33533c69d4951c4ea3d71347650d}{SHORTS\+\_\+\+COMPARE0\+\_\+\+STOP\+\_\+\+DISABLE}}~(0 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a942df469ca4301126791245e3bf18b54}{SHORTS\+\_\+\+COMPARE1\+\_\+\+STOP\+\_\+\+ENABLE}}~(1 $<$$<$ 9)
+\item 
+\#define \mbox{\hyperlink{timer_8h_a90ef6f04d6a66ef82022cb4886ce947e}{SHORTS\+\_\+\+COMPARE1\+\_\+\+STOP\+\_\+\+DISABLE}}~(0 $<$$<$ 9)
+\item 
+\#define \mbox{\hyperlink{timer_8h_adbbb71fbbf71d4f065a8d28b9fd81e85}{INT\+\_\+\+COMPARE0}}~(1 $<$$<$ 16)
+\item 
+\#define \mbox{\hyperlink{timer_8h_ade2a05c4b1bde730546513a041c80745}{INT\+\_\+\+COMPARE1}}~(1 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{timer_8h_aa88583b4ea1f98d9cddc8c1b9c306549}{INT\+\_\+\+COMPARE2}}~(1 $<$$<$ 18)
+\item 
+\#define \mbox{\hyperlink{timer_8h_aa8a63367003c1dd6c7f514996f3a0ede}{INT\+\_\+\+COMPARE3}}~(1 $<$$<$ 19)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} \mbox{\hyperlink{timer_8h_af8cf9d70b85ea1747f68c4757c1468c1}{Timer}}
+\item 
+typedef enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} \mbox{\hyperlink{timer_8h_a59a6ed66aaab8746a0fe10b53289c107}{Timer\+Bit\+Mode}}
+\item 
+typedef enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} \mbox{\hyperlink{timer_8h_a223d79ecc71d716cb0d5ad443c546f6e}{Timer\+Capture\+Compare}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} \{ \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80aa73b8bf071cada8f26f46555396534e0}{TIMER0}}
+, \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a78900d10bb4d349f1403fbd090e66cd6}{TIMER1}}
+, \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a9fdce91e07a880b720491a6667122d5d}{TIMER2}}
+ \}
+\item 
+enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} \{ \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87a0310bef551ea851239fe8155cad989fe}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+16}} = 0
+, \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87a4e4f604380772cc410f3d990364757fd}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+8}} = 1
+, \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87ad0c28e39f66e30e64f294371341f81d2}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+24}} = 2
+, \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87a36ef516aaf304a33997dacbffa90e4f7}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} \{ \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345cab61a20b001910a69d13a43db87c01daf}{CC0}}
+, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345cae8a9ed8cc68662182ac3717e34f8404f}{CC1}}
+, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345caa8511a0643f5f4f0ad954387595f99e3}{CC2}}
+, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345ca2d96bc4e698089023040e454c3adee6f}{CC3}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timer_8h_a250fd88bd3fef522cbe9c8acf61f2001}{timer\+\_\+init}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Default Initialisation of Timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_a41416d2d4a6d6b4611a7ae03d8db3653}{timer\+\_\+init\+\_\+detailed}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer, uint8\+\_\+t prescaler, \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} bit\+Mode)
+\begin{DoxyCompactList}\small\item\em Initialises the Timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_a187b2c6fb447a488c951f169c63288ca}{timer\+\_\+capture\+Compare\+Set}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} capture\+Compare, uint32\+\_\+t value, \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} shortcut\+Clear)
+\begin{DoxyCompactList}\small\item\em Set the Capture/ Compare Register of the Timer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{timer_8h_a27edd6464c2ccbb04bcdc372c79d53c5}{timer\+\_\+capture\+Compare\+Get}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} capture\+Compare)
+\begin{DoxyCompactList}\small\item\em Gets the Capture Compare Register of Timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_a6eadb1a33087d2d06c24c0f832de0d72}{timer\+\_\+start}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Starts the given timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_a8202b2148c7d8dd25e367ffd7b4f113d}{timer\+\_\+stop}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Stops the given timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_af979b016721acb0b47a5118e1ea8fd93}{timer\+\_\+count}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Activate counting on the given timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_ae4072eb0e60429d2f79012b9910e4ff3}{timer\+\_\+clear}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Clear the time of the given timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_aeead0154b3b62864306f110bf0a4c6e3}{timer\+\_\+capture}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer, \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} capture)
+\begin{DoxyCompactList}\small\item\em Capture the time of the given timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer_8h_a4f5363f092c0a32120cc8ea1947f3c07}{timer\+\_\+clear\+Compare\+Event}} (\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} timer)
+\begin{DoxyCompactList}\small\item\em Clears the Compare Event for CC\mbox{[}0\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains constants and abstraction functions for the COUNTER device. 
+
+\begin{DoxyNote}{Note}
+Based on version by Thomas Vogt
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{timer_8h_adbbb71fbbf71d4f065a8d28b9fd81e85}\label{timer_8h_adbbb71fbbf71d4f065a8d28b9fd81e85} 
+\index{timer.h@{timer.h}!INT\_COMPARE0@{INT\_COMPARE0}}
+\index{INT\_COMPARE0@{INT\_COMPARE0}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{INT\_COMPARE0}{INT\_COMPARE0}}
+{\footnotesize\ttfamily \#define INT\+\_\+\+COMPARE0~(1 $<$$<$ 16)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00074}{74}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ade2a05c4b1bde730546513a041c80745}\label{timer_8h_ade2a05c4b1bde730546513a041c80745} 
+\index{timer.h@{timer.h}!INT\_COMPARE1@{INT\_COMPARE1}}
+\index{INT\_COMPARE1@{INT\_COMPARE1}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{INT\_COMPARE1}{INT\_COMPARE1}}
+{\footnotesize\ttfamily \#define INT\+\_\+\+COMPARE1~(1 $<$$<$ 17)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00075}{75}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aa88583b4ea1f98d9cddc8c1b9c306549}\label{timer_8h_aa88583b4ea1f98d9cddc8c1b9c306549} 
+\index{timer.h@{timer.h}!INT\_COMPARE2@{INT\_COMPARE2}}
+\index{INT\_COMPARE2@{INT\_COMPARE2}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{INT\_COMPARE2}{INT\_COMPARE2}}
+{\footnotesize\ttfamily \#define INT\+\_\+\+COMPARE2~(1 $<$$<$ 18)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00076}{76}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aa8a63367003c1dd6c7f514996f3a0ede}\label{timer_8h_aa8a63367003c1dd6c7f514996f3a0ede} 
+\index{timer.h@{timer.h}!INT\_COMPARE3@{INT\_COMPARE3}}
+\index{INT\_COMPARE3@{INT\_COMPARE3}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{INT\_COMPARE3}{INT\_COMPARE3}}
+{\footnotesize\ttfamily \#define INT\+\_\+\+COMPARE3~(1 $<$$<$ 19)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00077}{77}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a23af10bc395f613bec64b78c7498d5ba}\label{timer_8h_a23af10bc395f613bec64b78c7498d5ba} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE0\_CLEAR\_DISABLE@{SHORTS\_COMPARE0\_CLEAR\_DISABLE}}
+\index{SHORTS\_COMPARE0\_CLEAR\_DISABLE@{SHORTS\_COMPARE0\_CLEAR\_DISABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE0\_CLEAR\_DISABLE}{SHORTS\_COMPARE0\_CLEAR\_DISABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE0\+\_\+\+CLEAR\+\_\+\+DISABLE~(0 $<$$<$ 0)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00065}{65}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_af953eeba6d9ae7f783cec0271e33691a}\label{timer_8h_af953eeba6d9ae7f783cec0271e33691a} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE0\_CLEAR\_ENABLE@{SHORTS\_COMPARE0\_CLEAR\_ENABLE}}
+\index{SHORTS\_COMPARE0\_CLEAR\_ENABLE@{SHORTS\_COMPARE0\_CLEAR\_ENABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE0\_CLEAR\_ENABLE}{SHORTS\_COMPARE0\_CLEAR\_ENABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE0\+\_\+\+CLEAR\+\_\+\+ENABLE~(1 $<$$<$ 0)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00064}{64}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a950f33533c69d4951c4ea3d71347650d}\label{timer_8h_a950f33533c69d4951c4ea3d71347650d} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE0\_STOP\_DISABLE@{SHORTS\_COMPARE0\_STOP\_DISABLE}}
+\index{SHORTS\_COMPARE0\_STOP\_DISABLE@{SHORTS\_COMPARE0\_STOP\_DISABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE0\_STOP\_DISABLE}{SHORTS\_COMPARE0\_STOP\_DISABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE0\+\_\+\+STOP\+\_\+\+DISABLE~(0 $<$$<$ 8)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00070}{70}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a320bf0cb37f3bbb3ec51f70c9a344f4d}\label{timer_8h_a320bf0cb37f3bbb3ec51f70c9a344f4d} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE0\_STOP\_ENABLE@{SHORTS\_COMPARE0\_STOP\_ENABLE}}
+\index{SHORTS\_COMPARE0\_STOP\_ENABLE@{SHORTS\_COMPARE0\_STOP\_ENABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE0\_STOP\_ENABLE}{SHORTS\_COMPARE0\_STOP\_ENABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE0\+\_\+\+STOP\+\_\+\+ENABLE~(1 $<$$<$ 8)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00069}{69}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a25735eb0883069ab89eea3958ea22827}\label{timer_8h_a25735eb0883069ab89eea3958ea22827} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE1\_CLEAR\_DISABLE@{SHORTS\_COMPARE1\_CLEAR\_DISABLE}}
+\index{SHORTS\_COMPARE1\_CLEAR\_DISABLE@{SHORTS\_COMPARE1\_CLEAR\_DISABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE1\_CLEAR\_DISABLE}{SHORTS\_COMPARE1\_CLEAR\_DISABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE1\+\_\+\+CLEAR\+\_\+\+DISABLE~(0 $<$$<$ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00067}{67}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a1cab2363747f10009d52327a2fd47aa9}\label{timer_8h_a1cab2363747f10009d52327a2fd47aa9} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE1\_CLEAR\_ENABLE@{SHORTS\_COMPARE1\_CLEAR\_ENABLE}}
+\index{SHORTS\_COMPARE1\_CLEAR\_ENABLE@{SHORTS\_COMPARE1\_CLEAR\_ENABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE1\_CLEAR\_ENABLE}{SHORTS\_COMPARE1\_CLEAR\_ENABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE1\+\_\+\+CLEAR\+\_\+\+ENABLE~(1 $<$$<$ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00066}{66}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a90ef6f04d6a66ef82022cb4886ce947e}\label{timer_8h_a90ef6f04d6a66ef82022cb4886ce947e} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE1\_STOP\_DISABLE@{SHORTS\_COMPARE1\_STOP\_DISABLE}}
+\index{SHORTS\_COMPARE1\_STOP\_DISABLE@{SHORTS\_COMPARE1\_STOP\_DISABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE1\_STOP\_DISABLE}{SHORTS\_COMPARE1\_STOP\_DISABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE1\+\_\+\+STOP\+\_\+\+DISABLE~(0 $<$$<$ 9)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00072}{72}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a942df469ca4301126791245e3bf18b54}\label{timer_8h_a942df469ca4301126791245e3bf18b54} 
+\index{timer.h@{timer.h}!SHORTS\_COMPARE1\_STOP\_ENABLE@{SHORTS\_COMPARE1\_STOP\_ENABLE}}
+\index{SHORTS\_COMPARE1\_STOP\_ENABLE@{SHORTS\_COMPARE1\_STOP\_ENABLE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{SHORTS\_COMPARE1\_STOP\_ENABLE}{SHORTS\_COMPARE1\_STOP\_ENABLE}}
+{\footnotesize\ttfamily \#define SHORTS\+\_\+\+COMPARE1\+\_\+\+STOP\+\_\+\+ENABLE~(1 $<$$<$ 9)}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00071}{71}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aab97a79d2c8636d2f8b240d1618d2609}\label{timer_8h_aab97a79d2c8636d2f8b240d1618d2609} 
+\index{timer.h@{timer.h}!TIMER0\_BASE\_ADDRESS@{TIMER0\_BASE\_ADDRESS}}
+\index{TIMER0\_BASE\_ADDRESS@{TIMER0\_BASE\_ADDRESS}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER0\_BASE\_ADDRESS}{TIMER0\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS~0x40008000}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00024}{24}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a654bed0d7f299c179d5eb1c6ed75051c}\label{timer_8h_a654bed0d7f299c179d5eb1c6ed75051c} 
+\index{timer.h@{timer.h}!TIMER1\_BASE\_ADDRESS@{TIMER1\_BASE\_ADDRESS}}
+\index{TIMER1\_BASE\_ADDRESS@{TIMER1\_BASE\_ADDRESS}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER1\_BASE\_ADDRESS}{TIMER1\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define TIMER1\+\_\+\+BASE\+\_\+\+ADDRESS~0x40009000}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00025}{25}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ad0ebc0362cdc269ac1b8f4f572c30c56}\label{timer_8h_ad0ebc0362cdc269ac1b8f4f572c30c56} 
+\index{timer.h@{timer.h}!TIMER2\_BASE\_ADDRESS@{TIMER2\_BASE\_ADDRESS}}
+\index{TIMER2\_BASE\_ADDRESS@{TIMER2\_BASE\_ADDRESS}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER2\_BASE\_ADDRESS}{TIMER2\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define TIMER2\+\_\+\+BASE\+\_\+\+ADDRESS~0x4000\+A000}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00026}{26}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a7fcd2179172a76af95e8b8710d287d71}\label{timer_8h_a7fcd2179172a76af95e8b8710d287d71} 
+\index{timer.h@{timer.h}!TIMER\_BITMODE@{TIMER\_BITMODE}}
+\index{TIMER\_BITMODE@{TIMER\_BITMODE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_BITMODE}{TIMER\_BITMODE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+BITMODE~0x508}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00052}{52}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a6d82faf3ea6e21fe66f1e0f027d6b582}\label{timer_8h_a6d82faf3ea6e21fe66f1e0f027d6b582} 
+\index{timer.h@{timer.h}!TIMER\_CAPTURE\_0@{TIMER\_CAPTURE\_0}}
+\index{TIMER\_CAPTURE\_0@{TIMER\_CAPTURE\_0}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CAPTURE\_0}{TIMER\_CAPTURE\_0}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CAPTURE\+\_\+0~0x040}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00036}{36}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a78b8ded5d5b07f2d4ef5bb4bf3d46d07}\label{timer_8h_a78b8ded5d5b07f2d4ef5bb4bf3d46d07} 
+\index{timer.h@{timer.h}!TIMER\_CAPTURE\_1@{TIMER\_CAPTURE\_1}}
+\index{TIMER\_CAPTURE\_1@{TIMER\_CAPTURE\_1}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CAPTURE\_1}{TIMER\_CAPTURE\_1}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CAPTURE\+\_\+1~0x044}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00037}{37}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a2e505a26c8a1ba9b462f4faaf0e08563}\label{timer_8h_a2e505a26c8a1ba9b462f4faaf0e08563} 
+\index{timer.h@{timer.h}!TIMER\_CAPTURE\_2@{TIMER\_CAPTURE\_2}}
+\index{TIMER\_CAPTURE\_2@{TIMER\_CAPTURE\_2}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CAPTURE\_2}{TIMER\_CAPTURE\_2}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CAPTURE\+\_\+2~0x048}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00038}{38}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ac34e6e77a93777d268d47c194f9a8ca1}\label{timer_8h_ac34e6e77a93777d268d47c194f9a8ca1} 
+\index{timer.h@{timer.h}!TIMER\_CAPTURE\_3@{TIMER\_CAPTURE\_3}}
+\index{TIMER\_CAPTURE\_3@{TIMER\_CAPTURE\_3}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CAPTURE\_3}{TIMER\_CAPTURE\_3}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CAPTURE\+\_\+3~0x04C}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00039}{39}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_af8c5efd7a68cb34998a957806cb72c84}\label{timer_8h_af8c5efd7a68cb34998a957806cb72c84} 
+\index{timer.h@{timer.h}!TIMER\_CC\_0@{TIMER\_CC\_0}}
+\index{TIMER\_CC\_0@{TIMER\_CC\_0}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CC\_0}{TIMER\_CC\_0}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CC\+\_\+0~0x540}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00054}{54}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a1d9b5cf974f963e84f7521055ec039f9}\label{timer_8h_a1d9b5cf974f963e84f7521055ec039f9} 
+\index{timer.h@{timer.h}!TIMER\_CC\_1@{TIMER\_CC\_1}}
+\index{TIMER\_CC\_1@{TIMER\_CC\_1}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CC\_1}{TIMER\_CC\_1}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CC\+\_\+1~0x544}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00055}{55}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a09a0950170b5f9980ea025401e9f8f50}\label{timer_8h_a09a0950170b5f9980ea025401e9f8f50} 
+\index{timer.h@{timer.h}!TIMER\_CC\_2@{TIMER\_CC\_2}}
+\index{TIMER\_CC\_2@{TIMER\_CC\_2}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CC\_2}{TIMER\_CC\_2}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CC\+\_\+2~0x548}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00056}{56}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a7120850580ef665388fc907b2044735d}\label{timer_8h_a7120850580ef665388fc907b2044735d} 
+\index{timer.h@{timer.h}!TIMER\_CC\_3@{TIMER\_CC\_3}}
+\index{TIMER\_CC\_3@{TIMER\_CC\_3}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CC\_3}{TIMER\_CC\_3}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CC\+\_\+3~0x54C}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00057}{57}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a6cfd530c706865652e9c376cf01337d4}\label{timer_8h_a6cfd530c706865652e9c376cf01337d4} 
+\index{timer.h@{timer.h}!TIMER\_CLEAR@{TIMER\_CLEAR}}
+\index{TIMER\_CLEAR@{TIMER\_CLEAR}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CLEAR}{TIMER\_CLEAR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CLEAR~0x00C}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00033}{33}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a6563c1b8c53087e6b57075ddaecf48b6}\label{timer_8h_a6563c1b8c53087e6b57075ddaecf48b6} 
+\index{timer.h@{timer.h}!TIMER\_COMPARE\_0@{TIMER\_COMPARE\_0}}
+\index{TIMER\_COMPARE\_0@{TIMER\_COMPARE\_0}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COMPARE\_0}{TIMER\_COMPARE\_0}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COMPARE\+\_\+0~0x140}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00042}{42}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a01c9aabe0c692a112b1d8fba91cf3952}\label{timer_8h_a01c9aabe0c692a112b1d8fba91cf3952} 
+\index{timer.h@{timer.h}!TIMER\_COMPARE\_1@{TIMER\_COMPARE\_1}}
+\index{TIMER\_COMPARE\_1@{TIMER\_COMPARE\_1}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COMPARE\_1}{TIMER\_COMPARE\_1}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COMPARE\+\_\+1~0x144}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00043}{43}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a7321745e8dda15faac60912491fbd466}\label{timer_8h_a7321745e8dda15faac60912491fbd466} 
+\index{timer.h@{timer.h}!TIMER\_COMPARE\_2@{TIMER\_COMPARE\_2}}
+\index{TIMER\_COMPARE\_2@{TIMER\_COMPARE\_2}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COMPARE\_2}{TIMER\_COMPARE\_2}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COMPARE\+\_\+2~0x148}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00044}{44}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ac166d8594dc1b14f6fa46577775f72c6}\label{timer_8h_ac166d8594dc1b14f6fa46577775f72c6} 
+\index{timer.h@{timer.h}!TIMER\_COMPARE\_3@{TIMER\_COMPARE\_3}}
+\index{TIMER\_COMPARE\_3@{TIMER\_COMPARE\_3}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COMPARE\_3}{TIMER\_COMPARE\_3}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COMPARE\+\_\+3~0x14C}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00045}{45}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ae10e24241b3ab84cdb376c3b307c757d}\label{timer_8h_ae10e24241b3ab84cdb376c3b307c757d} 
+\index{timer.h@{timer.h}!TIMER\_COUNT@{TIMER\_COUNT}}
+\index{TIMER\_COUNT@{TIMER\_COUNT}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_COUNT}{TIMER\_COUNT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+COUNT~0x008}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00032}{32}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a8c03292bc5ec12d510de0d5c4115f876}\label{timer_8h_a8c03292bc5ec12d510de0d5c4115f876} 
+\index{timer.h@{timer.h}!TIMER\_EVENT\_CLEAR@{TIMER\_EVENT\_CLEAR}}
+\index{TIMER\_EVENT\_CLEAR@{TIMER\_EVENT\_CLEAR}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_EVENT\_CLEAR}{TIMER\_EVENT\_CLEAR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+EVENT\+\_\+\+CLEAR~0}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00062}{62}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_affeb98e6c53599879a714fe1748ce5ed}\label{timer_8h_affeb98e6c53599879a714fe1748ce5ed} 
+\index{timer.h@{timer.h}!TIMER\_EVENT\_TRIGGER@{TIMER\_EVENT\_TRIGGER}}
+\index{TIMER\_EVENT\_TRIGGER@{TIMER\_EVENT\_TRIGGER}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_EVENT\_TRIGGER}{TIMER\_EVENT\_TRIGGER}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+EVENT\+\_\+\+TRIGGER~1}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00061}{61}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_ac1d369e5fd7ab6b10ed0e4409e73d094}\label{timer_8h_ac1d369e5fd7ab6b10ed0e4409e73d094} 
+\index{timer.h@{timer.h}!TIMER\_INTENCLR@{TIMER\_INTENCLR}}
+\index{TIMER\_INTENCLR@{TIMER\_INTENCLR}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTENCLR}{TIMER\_INTENCLR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTENCLR~0x308}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00050}{50}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a6375a0c7dd7b0d6f95364a45f330f643}\label{timer_8h_a6375a0c7dd7b0d6f95364a45f330f643} 
+\index{timer.h@{timer.h}!TIMER\_INTENSET@{TIMER\_INTENSET}}
+\index{TIMER\_INTENSET@{TIMER\_INTENSET}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_INTENSET}{TIMER\_INTENSET}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+INTENSET~0x304}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00049}{49}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_af2a9f923fe45bcba36e26b19886d9d81}\label{timer_8h_af2a9f923fe45bcba36e26b19886d9d81} 
+\index{timer.h@{timer.h}!TIMER\_MODE@{TIMER\_MODE}}
+\index{TIMER\_MODE@{TIMER\_MODE}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MODE}{TIMER\_MODE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MODE~0x504}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00051}{51}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aa7914b8d7fd0bae056b85acb5062676b}\label{timer_8h_aa7914b8d7fd0bae056b85acb5062676b} 
+\index{timer.h@{timer.h}!TIMER\_PRESCALER@{TIMER\_PRESCALER}}
+\index{TIMER\_PRESCALER@{TIMER\_PRESCALER}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PRESCALER}{TIMER\_PRESCALER}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PRESCALER~0x510}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00053}{53}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a894d16aaa4c8700effcf503119b2b951}\label{timer_8h_a894d16aaa4c8700effcf503119b2b951} 
+\index{timer.h@{timer.h}!TIMER\_SHORTS@{TIMER\_SHORTS}}
+\index{TIMER\_SHORTS@{TIMER\_SHORTS}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SHORTS}{TIMER\_SHORTS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SHORTS~0x200}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00048}{48}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a83c40c62051ed14801927bc9a849c915}\label{timer_8h_a83c40c62051ed14801927bc9a849c915} 
+\index{timer.h@{timer.h}!TIMER\_SHUTDOWN@{TIMER\_SHUTDOWN}}
+\index{TIMER\_SHUTDOWN@{TIMER\_SHUTDOWN}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SHUTDOWN}{TIMER\_SHUTDOWN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SHUTDOWN~0x010}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00034}{34}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a0534322773d9344f3d4c858e409ef175}\label{timer_8h_a0534322773d9344f3d4c858e409ef175} 
+\index{timer.h@{timer.h}!TIMER\_START@{TIMER\_START}}
+\index{TIMER\_START@{TIMER\_START}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_START}{TIMER\_START}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+START~0x000}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00030}{30}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_a0666ee279358c12cdaed9f1770bd20bc}\label{timer_8h_a0666ee279358c12cdaed9f1770bd20bc} 
+\index{timer.h@{timer.h}!TIMER\_STOP@{TIMER\_STOP}}
+\index{TIMER\_STOP@{TIMER\_STOP}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_STOP}{TIMER\_STOP}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+STOP~0x004}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00031}{31}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_acafb820f48cca47a26386b1648db017e}\label{timer_8h_acafb820f48cca47a26386b1648db017e} 
+\index{timer.h@{timer.h}!TIMER\_TASK\_START@{TIMER\_TASK\_START}}
+\index{TIMER\_TASK\_START@{TIMER\_TASK\_START}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TASK\_START}{TIMER\_TASK\_START}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TASK\+\_\+\+START~1}
+
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00060}{60}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{timer_8h_af8cf9d70b85ea1747f68c4757c1468c1}\label{timer_8h_af8cf9d70b85ea1747f68c4757c1468c1} 
+\index{timer.h@{timer.h}!Timer@{Timer}}
+\index{Timer@{Timer}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{Timer}{Timer}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}} \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}
+
+\Hypertarget{timer_8h_a59a6ed66aaab8746a0fe10b53289c107}\label{timer_8h_a59a6ed66aaab8746a0fe10b53289c107} 
+\index{timer.h@{timer.h}!TimerBitMode@{TimerBitMode}}
+\index{TimerBitMode@{TimerBitMode}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TimerBitMode}{TimerBitMode}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}} \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}}}
+
+\Hypertarget{timer_8h_a223d79ecc71d716cb0d5ad443c546f6e}\label{timer_8h_a223d79ecc71d716cb0d5ad443c546f6e} 
+\index{timer.h@{timer.h}!TimerCaptureCompare@{TimerCaptureCompare}}
+\index{TimerCaptureCompare@{TimerCaptureCompare}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TimerCaptureCompare}{TimerCaptureCompare}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}} \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}\label{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80} 
+\index{timer.h@{timer.h}!Timer@{Timer}}
+\index{Timer@{Timer}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{Timer}{Timer}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER0@{TIMER0}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER0@{TIMER0}}}\Hypertarget{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80aa73b8bf071cada8f26f46555396534e0}\label{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80aa73b8bf071cada8f26f46555396534e0} 
+TIMER0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER1@{TIMER1}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER1@{TIMER1}}}\Hypertarget{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a78900d10bb4d349f1403fbd090e66cd6}\label{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a78900d10bb4d349f1403fbd090e66cd6} 
+TIMER1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER2@{TIMER2}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER2@{TIMER2}}}\Hypertarget{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a9fdce91e07a880b720491a6667122d5d}\label{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80a9fdce91e07a880b720491a6667122d5d} 
+TIMER2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00079}{79}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aa805d56fa8da58e88601dc3c20550e87}\label{timer_8h_aa805d56fa8da58e88601dc3c20550e87} 
+\index{timer.h@{timer.h}!TimerBitMode@{TimerBitMode}}
+\index{TimerBitMode@{TimerBitMode}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TimerBitMode}{TimerBitMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_BIT\_MODE\_16@{TIMER\_BIT\_MODE\_16}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_BIT\_MODE\_16@{TIMER\_BIT\_MODE\_16}}}\Hypertarget{timer_8h_aa805d56fa8da58e88601dc3c20550e87a0310bef551ea851239fe8155cad989fe}\label{timer_8h_aa805d56fa8da58e88601dc3c20550e87a0310bef551ea851239fe8155cad989fe} 
+TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_BIT\_MODE\_8@{TIMER\_BIT\_MODE\_8}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_BIT\_MODE\_8@{TIMER\_BIT\_MODE\_8}}}\Hypertarget{timer_8h_aa805d56fa8da58e88601dc3c20550e87a4e4f604380772cc410f3d990364757fd}\label{timer_8h_aa805d56fa8da58e88601dc3c20550e87a4e4f604380772cc410f3d990364757fd} 
+TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_BIT\_MODE\_24@{TIMER\_BIT\_MODE\_24}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_BIT\_MODE\_24@{TIMER\_BIT\_MODE\_24}}}\Hypertarget{timer_8h_aa805d56fa8da58e88601dc3c20550e87ad0c28e39f66e30e64f294371341f81d2}\label{timer_8h_aa805d56fa8da58e88601dc3c20550e87ad0c28e39f66e30e64f294371341f81d2} 
+TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+24&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMER\_BIT\_MODE\_32@{TIMER\_BIT\_MODE\_32}!timer.h@{timer.h}}\index{timer.h@{timer.h}!TIMER\_BIT\_MODE\_32@{TIMER\_BIT\_MODE\_32}}}\Hypertarget{timer_8h_aa805d56fa8da58e88601dc3c20550e87a36ef516aaf304a33997dacbffa90e4f7}\label{timer_8h_aa805d56fa8da58e88601dc3c20550e87a36ef516aaf304a33997dacbffa90e4f7} 
+TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00086}{86}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+\Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345c}\label{timer_8h_aad6999cf3031d2856b75621dfc23345c} 
+\index{timer.h@{timer.h}!TimerCaptureCompare@{TimerCaptureCompare}}
+\index{TimerCaptureCompare@{TimerCaptureCompare}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{TimerCaptureCompare}{TimerCaptureCompare}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CC0@{CC0}!timer.h@{timer.h}}\index{timer.h@{timer.h}!CC0@{CC0}}}\Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345cab61a20b001910a69d13a43db87c01daf}\label{timer_8h_aad6999cf3031d2856b75621dfc23345cab61a20b001910a69d13a43db87c01daf} 
+CC0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CC1@{CC1}!timer.h@{timer.h}}\index{timer.h@{timer.h}!CC1@{CC1}}}\Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345cae8a9ed8cc68662182ac3717e34f8404f}\label{timer_8h_aad6999cf3031d2856b75621dfc23345cae8a9ed8cc68662182ac3717e34f8404f} 
+CC1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CC2@{CC2}!timer.h@{timer.h}}\index{timer.h@{timer.h}!CC2@{CC2}}}\Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345caa8511a0643f5f4f0ad954387595f99e3}\label{timer_8h_aad6999cf3031d2856b75621dfc23345caa8511a0643f5f4f0ad954387595f99e3} 
+CC2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CC3@{CC3}!timer.h@{timer.h}}\index{timer.h@{timer.h}!CC3@{CC3}}}\Hypertarget{timer_8h_aad6999cf3031d2856b75621dfc23345ca2d96bc4e698089023040e454c3adee6f}\label{timer_8h_aad6999cf3031d2856b75621dfc23345ca2d96bc4e698089023040e454c3adee6f} 
+CC3&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{timer_8h_source_l00094}{94}} of file \mbox{\hyperlink{timer_8h_source}{timer.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{timer_8h_aeead0154b3b62864306f110bf0a4c6e3}\label{timer_8h_aeead0154b3b62864306f110bf0a4c6e3} 
+\index{timer.h@{timer.h}!timer\_capture@{timer\_capture}}
+\index{timer\_capture@{timer\_capture}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_capture()}{timer\_capture()}}
+{\footnotesize\ttfamily void timer\+\_\+capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer,  }\item[{\mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}]{capture }\end{DoxyParamCaption})}
+
+
+
+Capture the time of the given timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Number of the timer \\
+\hline
+\mbox{\texttt{ in}}  & {\em capture} & Number of the Capture Compare \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00120}{120}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00060}{TIMER\+\_\+\+TASK\+\_\+\+START}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00037}{Timer\+Capture\+Task\+Offset}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d5/dd0/timer_8h_aeead0154b3b62864306f110bf0a4c6e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a27edd6464c2ccbb04bcdc372c79d53c5}\label{timer_8h_a27edd6464c2ccbb04bcdc372c79d53c5} 
+\index{timer.h@{timer.h}!timer\_captureCompareGet@{timer\_captureCompareGet}}
+\index{timer\_captureCompareGet@{timer\_captureCompareGet}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_captureCompareGet()}{timer\_captureCompareGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t timer\+\_\+capture\+Compare\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer,  }\item[{\mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}]{capture\+Compare }\end{DoxyParamCaption})}
+
+
+
+Gets the Capture Compare Register of Timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer \\
+\hline
+{\em capture\+Compare} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00084}{84}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00029}{register\+\_\+read()}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00030}{Timer\+CCOffset}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d5/dd0/timer_8h_a27edd6464c2ccbb04bcdc372c79d53c5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a187b2c6fb447a488c951f169c63288ca}\label{timer_8h_a187b2c6fb447a488c951f169c63288ca} 
+\index{timer.h@{timer.h}!timer\_captureCompareSet@{timer\_captureCompareSet}}
+\index{timer\_captureCompareSet@{timer\_captureCompareSet}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_captureCompareSet()}{timer\_captureCompareSet()}}
+{\footnotesize\ttfamily void timer\+\_\+capture\+Compare\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer,  }\item[{\mbox{\hyperlink{timer_8h_aad6999cf3031d2856b75621dfc23345c}{Timer\+Capture\+Compare}}}]{capture\+Compare,  }\item[{uint32\+\_\+t}]{value,  }\item[{\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}}}]{shortcut\+Clear }\end{DoxyParamCaption})}
+
+
+
+Set the Capture/ Compare Register of the Timer. 
+
+It also enables the shortcut between CC\mbox{[}0\mbox{]} and CLEAR, so that the timer is cleared, when the compared value is reached.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Timer \\
+\hline
+\mbox{\texttt{ in}}  & {\em capture\+Compare} & Capture Compare Register \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & New Value \\
+\hline
+\mbox{\texttt{ in}}  & {\em shortcut\+Clear} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00067}{67}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00029}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00048}{TIMER\+\_\+\+SHORTS}}, \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}, and \mbox{\hyperlink{timer_8c_source_l00030}{Timer\+CCOffset}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{d5/dd0/timer_8h_a187b2c6fb447a488c951f169c63288ca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd0/timer_8h_a187b2c6fb447a488c951f169c63288ca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_ae4072eb0e60429d2f79012b9910e4ff3}\label{timer_8h_ae4072eb0e60429d2f79012b9910e4ff3} 
+\index{timer.h@{timer.h}!timer\_clear@{timer\_clear}}
+\index{timer\_clear@{timer\_clear}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_clear()}{timer\_clear()}}
+{\footnotesize\ttfamily void timer\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Clear the time of the given timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Number of the timer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00113}{113}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00033}{TIMER\+\_\+\+CLEAR}}, \mbox{\hyperlink{timer_8h_source_l00060}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{d5/dd0/timer_8h_ae4072eb0e60429d2f79012b9910e4ff3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a4f5363f092c0a32120cc8ea1947f3c07}\label{timer_8h_a4f5363f092c0a32120cc8ea1947f3c07} 
+\index{timer.h@{timer.h}!timer\_clearCompareEvent@{timer\_clearCompareEvent}}
+\index{timer\_clearCompareEvent@{timer\_clearCompareEvent}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_clearCompareEvent()}{timer\_clearCompareEvent()}}
+{\footnotesize\ttfamily void timer\+\_\+clear\+Compare\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Clears the Compare Event for CC\mbox{[}0\mbox{]}. 
+
+This could be useful for stopping the timer from pulling the interrupt-\/line. 
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00128}{128}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00042}{TIMER\+\_\+\+COMPARE\+\_\+0}}, \mbox{\hyperlink{timer_8h_source_l00062}{TIMER\+\_\+\+EVENT\+\_\+\+CLEAR}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{d5/dd0/timer_8h_a4f5363f092c0a32120cc8ea1947f3c07_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_af979b016721acb0b47a5118e1ea8fd93}\label{timer_8h_af979b016721acb0b47a5118e1ea8fd93} 
+\index{timer.h@{timer.h}!timer\_count@{timer\_count}}
+\index{timer\_count@{timer\_count}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_count()}{timer\_count()}}
+{\footnotesize\ttfamily void timer\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Activate counting on the given timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Number of the timer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00106}{106}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00032}{TIMER\+\_\+\+COUNT}}, \mbox{\hyperlink{timer_8h_source_l00060}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d5/dd0/timer_8h_af979b016721acb0b47a5118e1ea8fd93_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a250fd88bd3fef522cbe9c8acf61f2001}\label{timer_8h_a250fd88bd3fef522cbe9c8acf61f2001} 
+\index{timer.h@{timer.h}!timer\_init@{timer\_init}}
+\index{timer\_init@{timer\_init}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_init()}{timer\_init()}}
+{\footnotesize\ttfamily void timer\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Default Initialisation of Timer. 
+
+Initializes the Timer Peripheral to a value \texorpdfstring{$\sim$}{\string~}4sek. This is just for demonstration and could be changed to your needs 
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00040}{40}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{timer_8h_source_l00096}{CC0}}, \mbox{\hyperlink{timer_8h_source_l00091}{TIMER\+\_\+\+BIT\+\_\+\+MODE\+\_\+32}}, \mbox{\hyperlink{timer_8c_source_l00067}{timer\+\_\+capture\+Compare\+Set()}}, \mbox{\hyperlink{timer_8c_source_l00048}{timer\+\_\+init\+\_\+detailed()}}, and \mbox{\hyperlink{timer_8c_source_l00092}{timer\+\_\+start()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd0/timer_8h_a250fd88bd3fef522cbe9c8acf61f2001_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a41416d2d4a6d6b4611a7ae03d8db3653}\label{timer_8h_a41416d2d4a6d6b4611a7ae03d8db3653} 
+\index{timer.h@{timer.h}!timer\_init\_detailed@{timer\_init\_detailed}}
+\index{timer\_init\_detailed@{timer\_init\_detailed}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_init\_detailed()}{timer\_init\_detailed()}}
+{\footnotesize\ttfamily void timer\+\_\+init\+\_\+detailed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer,  }\item[{uint8\+\_\+t}]{prescaler,  }\item[{\mbox{\hyperlink{timer_8h_aa805d56fa8da58e88601dc3c20550e87}{Timer\+Bit\+Mode}}}]{bit\+Mode }\end{DoxyParamCaption})}
+
+
+
+Initialises the Timer. 
+
+Compare Value set is for CC\mbox{[}0\mbox{]}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prescaler} & Register value according to {\ttfamily Table 147\+: PRESCALER}. value 0..9 is valid ==\texorpdfstring{$>$}{>} 2\texorpdfstring{$^\wedge$}{\string^}0 .. 2\texorpdfstring{$^\wedge$}{\string^}9 \\
+\hline
+\mbox{\texttt{ in}}  & {\em bitmode} & Bit Mode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00048}{48}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{timer_8h_source_l00074}{INT\+\_\+\+COMPARE0}}, \mbox{\hyperlink{nvic_8h_source_l00045}{Interrupt\+\_\+\+ID8}}, \mbox{\hyperlink{nvic_8h_source_l00041}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00024}{TIMER0\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{timer_8h_source_l00052}{TIMER\+\_\+\+BITMODE}}, \mbox{\hyperlink{timer_8h_source_l00049}{TIMER\+\_\+\+INTENSET}}, \mbox{\hyperlink{timer_8h_source_l00053}{TIMER\+\_\+\+PRESCALER}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{d5/dd0/timer_8h_a41416d2d4a6d6b4611a7ae03d8db3653_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd0/timer_8h_a41416d2d4a6d6b4611a7ae03d8db3653_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a6eadb1a33087d2d06c24c0f832de0d72}\label{timer_8h_a6eadb1a33087d2d06c24c0f832de0d72} 
+\index{timer.h@{timer.h}!timer\_start@{timer\_start}}
+\index{timer\_start@{timer\_start}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_start()}{timer\_start()}}
+{\footnotesize\ttfamily void timer\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Starts the given timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Timer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00092}{92}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00030}{TIMER\+\_\+\+START}}, \mbox{\hyperlink{timer_8h_source_l00060}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{d5/dd0/timer_8h_a6eadb1a33087d2d06c24c0f832de0d72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd0/timer_8h_a6eadb1a33087d2d06c24c0f832de0d72_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer_8h_a8202b2148c7d8dd25e367ffd7b4f113d}\label{timer_8h_a8202b2148c7d8dd25e367ffd7b4f113d} 
+\index{timer.h@{timer.h}!timer\_stop@{timer\_stop}}
+\index{timer\_stop@{timer\_stop}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_stop()}{timer\_stop()}}
+{\footnotesize\ttfamily void timer\+\_\+stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timer_8h_a6e0035edd58cc6ca8c94b5f9723a0d80}{Timer}}}]{timer }\end{DoxyParamCaption})}
+
+
+
+Stops the given timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timer} & Number of the timer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{timer_8c_source_l00099}{99}} of file \mbox{\hyperlink{timer_8c_source}{timer.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{timer_8h_source_l00031}{TIMER\+\_\+\+STOP}}, \mbox{\hyperlink{timer_8h_source_l00060}{TIMER\+\_\+\+TASK\+\_\+\+START}}, and \mbox{\hyperlink{timer_8c_source_l00025}{Timer\+Base}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d5/dd0/timer_8h_a8202b2148c7d8dd25e367ffd7b4f113d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd0/timer_8h_a8202b2148c7d8dd25e367ffd7b4f113d_icgraph}
+\end{center}
+\end{figure}

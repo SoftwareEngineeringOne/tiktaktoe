@@ -1,20 +1,16 @@
 /**
- * @file
+ * @file cell.c
  *
- * @author
+ * @brief Implements functions for managing the presentation of cells.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see cell.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "presentation/cell.h"
 
 #include "logic/game.h"
@@ -30,20 +26,19 @@ CellSize g_cell_size = (CellSize){
 };
 
 /**
- * @brief Redraw one cell
- * @param [in] row
- * Y-Position
- * @param [in] col
- * X-Position
- * @param [in] modifier
- * @param [in] marked_by
- * Player to mark by
+ * @brief Redraws a single cell at the specified position.
+ *
+ * @param[in] row Y-position of the cell.
+ * @param[in] col X-position of the cell.
+ * @param[in] modifier Modifier to apply during redraw.
+ * @param[in] marked_by Player marking the cell.
+ *
+ * @internal
  */
 static void redrawCell(uint8_t row, uint8_t col, const char *modifier, Player marked_by);
 
-static char *SMALL_X[1][3] = {{" ", "X", " "}};
-
-static char *SMALL_O[1][3] = {{" ", "O", " "}};
+static char *SMALL_X[1][3] = {{" ", "X", " "}};///< Representation of a small 'X'.
+static char *SMALL_O[1][3] = {{" ", "O", " "}};///< Representation of a small 'O'.
 
 static char *MEDIUM_X[3][7] = {
     {" ", " ", DIAGONAL_BW, " ", DIAGONAL_FW, " ", " "},
@@ -89,6 +84,14 @@ static char *LARGE_O[5][9] = {
      " "},
 };
 
+/**
+ * @brief Array of valid cell sizes.
+ *
+ * @details
+ * Each entry contains the width and height for a specific size.
+ *
+ * @internal
+ */
 static CellSize VALID_SIZES[] = {
     {.width = 4, .height = 3},
     {.width = 8, .height = 5},
@@ -153,6 +156,7 @@ void cell_increaseSize()
     g_cell_size.width = VALID_SIZES[g_cell_size.size].width;
     g_cell_size.height = VALID_SIZES[g_cell_size.size].height;
 }
+
 void cell_decreaseSize()
 {
     if(g_cell_size.size - 1 < Small)
@@ -182,7 +186,7 @@ redrawCell(const uint8_t row, const uint8_t col, const char *modifier, const Pla
             switch(marked_by)
             {
                 case Cross:
-                    printStyle(&DEFAULT_CROSS);
+                    print_style(&DEFAULT_CROSS);
                     print(modifier);
                     switch(g_cell_size.size)
                     {
@@ -198,7 +202,7 @@ redrawCell(const uint8_t row, const uint8_t col, const char *modifier, const Pla
                     }
                     break;
                 case Circle:
-                    printStyle(&DEFAULT_CIRCLE);
+                    print_style(&DEFAULT_CIRCLE);
                     print(modifier);
                     switch(g_cell_size.size)
                     {

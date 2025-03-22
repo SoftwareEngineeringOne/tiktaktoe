@@ -1,0 +1,331 @@
+.TH "presentation/style.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+presentation/style.h \- Contains several constants to simplify the styling of output\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBStyle\fP"
+.br
+.RI "Represents a style with foreground color, background color, and font style\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCLEAR_SCREEN\fP   '\\e[1;1H\\e[2J'"
+.br
+.RI "Escape sequence to clear the terminal screen\&. "
+.ti -1c
+.RI "#define \fBDEFAULT\fP   ''"
+.br
+.RI "Default style with no attributes\&. "
+.ti -1c
+.RI "#define \fBRESET\fP   '\\e[0m'"
+.br
+.RI "Escape sequence to reset all styling attributes\&. "
+.ti -1c
+.RI "#define \fBFG_RED\fP   '\\e[31m'"
+.br
+.RI "Escape sequence to set the foreground color to red\&. "
+.ti -1c
+.RI "#define \fBFG_GREEN\fP   '\\e[32m'"
+.br
+.RI "Escape sequence to set the foreground color to green\&. "
+.ti -1c
+.RI "#define \fBFG_YELLOW\fP   '\\e[33m'"
+.br
+.RI "Escape sequence to set the foreground color to yellow\&. "
+.ti -1c
+.RI "#define \fBFG_BLUE\fP   '\\e[34m'"
+.br
+.RI "Escape sequence to set the foreground color to blue\&. "
+.ti -1c
+.RI "#define \fBFG_MAGENTA\fP   '\\e[35m'"
+.br
+.RI "Escape sequence to set the foreground color to magenta\&. "
+.ti -1c
+.RI "#define \fBBG_GREEN\fP   '\\e[42m'"
+.br
+.RI "Escape sequence to set the background color to green\&. "
+.ti -1c
+.RI "#define \fBBG_YELLOW\fP   '\\e[43m'"
+.br
+.RI "Escape sequence to set the background color to yellow\&. "
+.ti -1c
+.RI "#define \fBBOLD\fP   '\\e[1m'"
+.br
+.RI "Escape sequence to apply bold font style\&. "
+.ti -1c
+.RI "#define \fBDIM\fP   '\\e[2m'"
+.br
+.RI "Escape sequence to apply dim font style\&. "
+.ti -1c
+.RI "#define \fBITALIC\fP   '\\e[3m'"
+.br
+.RI "Escape sequence to apply italic font style\&. "
+.ti -1c
+.RI "#define \fBINVERSE\fP   '\\e[7m'"
+.br
+.RI "Escape sequence to apply inverse font style\&. "
+.ti -1c
+.RI "#define \fBHIDDEN\fP   '\\e[8m'"
+.br
+.RI "Escape sequence to apply hidden font style\&. "
+.ti -1c
+.RI "#define \fBHIDE_CURSOR\fP   '\\e[?25l'"
+.br
+.RI "Escape sequence to hide the terminal cursor\&. "
+.ti -1c
+.RI "#define \fBSHOW_CURSOR\fP   '\\e[?25h'"
+.br
+.RI "Escape sequence to show the terminal cursor\&. "
+.ti -1c
+.RI "#define \fBERASE_LINE_FROM_CURSOR\fP   '\\e[0K'"
+.br
+.RI "Escape sequence to erase the line from the cursor\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_BOLD\fP"
+.br
+.RI "Default style with bold font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_ITALIC\fP"
+.br
+.RI "Default style with italic font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_DIM\fP"
+.br
+.RI "Default style with dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_DIM\fP"
+.br
+.RI "\fBStyle\fP combining bold and dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBITALIC_DIM\fP"
+.br
+.RI "\fBStyle\fP combining italic and dim font\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_CIRCLE\fP"
+.br
+.RI "Default style for circles with magenta foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_CIRCLE\fP"
+.br
+.RI "Bold style for circles with magenta foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBDEFAULT_CROSS\fP"
+.br
+.RI "Default style for crosses with green foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBBOLD_CROSS\fP"
+.br
+.RI "Bold style for crosses with green foreground\&. "
+.ti -1c
+.RI "const \fBStyle\fP \fBHEADING_STYLE\fP"
+.br
+.RI "\fBStyle\fP for headings with blue foreground and bold font\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains several constants to simplify the styling of output\&. 
+
+This file defines macros for terminal styling, a \fR\fBStyle\fP\fP struct for grouping style attributes, and several predefined style constants\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBstyle\&.c\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBstyle\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BG_GREEN   '\\e[42m'"
+
+.PP
+Escape sequence to set the background color to green\&. 
+.PP
+Definition at line \fB52\fP of file \fBstyle\&.h\fP\&.
+.SS "#define BG_YELLOW   '\\e[43m'"
+
+.PP
+Escape sequence to set the background color to yellow\&. 
+.PP
+Definition at line \fB54\fP of file \fBstyle\&.h\fP\&.
+.SS "#define BOLD   '\\e[1m'"
+
+.PP
+Escape sequence to apply bold font style\&. 
+.PP
+Definition at line \fB56\fP of file \fBstyle\&.h\fP\&.
+.SS "#define CLEAR_SCREEN   '\\e[1;1H\\e[2J'"
+
+.PP
+Escape sequence to clear the terminal screen\&. 
+.PP
+Definition at line \fB36\fP of file \fBstyle\&.h\fP\&.
+.SS "#define DEFAULT   ''"
+
+.PP
+Default style with no attributes\&. 
+.PP
+Definition at line \fB38\fP of file \fBstyle\&.h\fP\&.
+.SS "#define DIM   '\\e[2m'"
+
+.PP
+Escape sequence to apply dim font style\&. 
+.PP
+Definition at line \fB58\fP of file \fBstyle\&.h\fP\&.
+.SS "#define ERASE_LINE_FROM_CURSOR   '\\e[0K'"
+
+.PP
+Escape sequence to erase the line from the cursor\&. 
+.PP
+Definition at line \fB70\fP of file \fBstyle\&.h\fP\&.
+.SS "#define FG_BLUE   '\\e[34m'"
+
+.PP
+Escape sequence to set the foreground color to blue\&. 
+.PP
+Definition at line \fB48\fP of file \fBstyle\&.h\fP\&.
+.SS "#define FG_GREEN   '\\e[32m'"
+
+.PP
+Escape sequence to set the foreground color to green\&. 
+.PP
+Definition at line \fB44\fP of file \fBstyle\&.h\fP\&.
+.SS "#define FG_MAGENTA   '\\e[35m'"
+
+.PP
+Escape sequence to set the foreground color to magenta\&. 
+.PP
+Definition at line \fB50\fP of file \fBstyle\&.h\fP\&.
+.SS "#define FG_RED   '\\e[31m'"
+
+.PP
+Escape sequence to set the foreground color to red\&. 
+.PP
+Definition at line \fB42\fP of file \fBstyle\&.h\fP\&.
+.SS "#define FG_YELLOW   '\\e[33m'"
+
+.PP
+Escape sequence to set the foreground color to yellow\&. 
+.PP
+Definition at line \fB46\fP of file \fBstyle\&.h\fP\&.
+.SS "#define HIDDEN   '\\e[8m'"
+
+.PP
+Escape sequence to apply hidden font style\&. 
+.PP
+Definition at line \fB64\fP of file \fBstyle\&.h\fP\&.
+.SS "#define HIDE_CURSOR   '\\e[?25l'"
+
+.PP
+Escape sequence to hide the terminal cursor\&. 
+.PP
+Definition at line \fB66\fP of file \fBstyle\&.h\fP\&.
+.SS "#define INVERSE   '\\e[7m'"
+
+.PP
+Escape sequence to apply inverse font style\&. 
+.PP
+Definition at line \fB62\fP of file \fBstyle\&.h\fP\&.
+.SS "#define ITALIC   '\\e[3m'"
+
+.PP
+Escape sequence to apply italic font style\&. 
+.PP
+Definition at line \fB60\fP of file \fBstyle\&.h\fP\&.
+.SS "#define RESET   '\\e[0m'"
+
+.PP
+Escape sequence to reset all styling attributes\&. 
+.PP
+Definition at line \fB40\fP of file \fBstyle\&.h\fP\&.
+.SS "#define SHOW_CURSOR   '\\e[?25h'"
+
+.PP
+Escape sequence to show the terminal cursor\&. 
+.PP
+Definition at line \fB68\fP of file \fBstyle\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBStyle\fP BOLD_CIRCLE\fR [extern]\fP"
+
+.PP
+Bold style for circles with magenta foreground\&. 
+.PP
+Definition at line \fB42\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP BOLD_CROSS\fR [extern]\fP"
+
+.PP
+Bold style for crosses with green foreground\&. 
+.PP
+Definition at line \fB51\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP BOLD_DIM\fR [extern]\fP"
+
+.PP
+\fBStyle\fP combining bold and dim font\&. 
+.PP
+Definition at line \fB28\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_BOLD\fR [extern]\fP"
+
+.PP
+Default style with bold font\&. 
+.PP
+Definition at line \fB16\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_CIRCLE\fR [extern]\fP"
+
+.PP
+Default style for circles with magenta foreground\&. 
+.PP
+Definition at line \fB38\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_CROSS\fR [extern]\fP"
+
+.PP
+Default style for crosses with green foreground\&. 
+.PP
+Definition at line \fB47\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_DIM\fR [extern]\fP"
+
+.PP
+Default style with dim font\&. 
+.PP
+Definition at line \fB24\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP DEFAULT_ITALIC\fR [extern]\fP"
+
+.PP
+Default style with italic font\&. 
+.PP
+Definition at line \fB20\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP HEADING_STYLE\fR [extern]\fP"
+
+.PP
+\fBStyle\fP for headings with blue foreground and bold font\&. 
+.PP
+Definition at line \fB56\fP of file \fBstyle\&.c\fP\&.
+.SS "const \fBStyle\fP ITALIC_DIM\fR [extern]\fP"
+
+.PP
+\fBStyle\fP combining italic and dim font\&. 
+.PP
+Definition at line \fB33\fP of file \fBstyle\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

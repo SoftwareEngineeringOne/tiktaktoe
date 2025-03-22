@@ -1,0 +1,88 @@
+\doxysection{Input\+Buffer Struct Reference}
+\hypertarget{structInputBuffer}{}\label{structInputBuffer}\index{InputBuffer@{InputBuffer}}
+
+
+Ring\+Buffer for fixed memory footprint.  
+
+
+
+
+{\ttfamily \#include $<$input\+\_\+buf.\+h$>$}
+
+
+
+Collaboration diagram for Input\+Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{d3/de9/structInputBuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structInputBuffer_aa5f88492a54fcb88dcdb92e17a0ee37f}{data}} \mbox{[}\mbox{\hyperlink{input__buf_8h_a8f53190540130db759820c0d9ab78f60}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Buffer data storage. \end{DoxyCompactList}\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{structInputBuffer_a0f312d29fb9925a12849950e3d1dbaf0}{head}}
+\begin{DoxyCompactList}\small\item\em Index of the head (write position) \end{DoxyCompactList}\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{structInputBuffer_ad2253db99c19c5f92aa00750a0897866}{tail}}
+\begin{DoxyCompactList}\small\item\em Index of the tail (read position) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ring\+Buffer for fixed memory footprint. 
+
+This struct represents a ring buffer with a fixed size, used for storing input data in a circular manner. 
+
+Definition at line \mbox{\hyperlink{input__buf_8h_source_l00037}{37}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structInputBuffer_aa5f88492a54fcb88dcdb92e17a0ee37f}\label{structInputBuffer_aa5f88492a54fcb88dcdb92e17a0ee37f} 
+\index{InputBuffer@{InputBuffer}!data@{data}}
+\index{data@{data}!InputBuffer@{InputBuffer}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t Input\+Buffer\+::data\mbox{[}\mbox{\hyperlink{input__buf_8h_a8f53190540130db759820c0d9ab78f60}{INPUT\+\_\+\+BUF\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+Buffer data storage. 
+
+
+
+Definition at line \mbox{\hyperlink{input__buf_8h_source_l00039}{39}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
+
+\Hypertarget{structInputBuffer_a0f312d29fb9925a12849950e3d1dbaf0}\label{structInputBuffer_a0f312d29fb9925a12849950e3d1dbaf0} 
+\index{InputBuffer@{InputBuffer}!head@{head}}
+\index{head@{head}!InputBuffer@{InputBuffer}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Input\+Buffer\+::head}
+
+
+
+Index of the head (write position) 
+
+
+
+Definition at line \mbox{\hyperlink{input__buf_8h_source_l00040}{40}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
+
+\Hypertarget{structInputBuffer_ad2253db99c19c5f92aa00750a0897866}\label{structInputBuffer_ad2253db99c19c5f92aa00750a0897866} 
+\index{InputBuffer@{InputBuffer}!tail@{tail}}
+\index{tail@{tail}!InputBuffer@{InputBuffer}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t Input\+Buffer\+::tail}
+
+
+
+Index of the tail (read position) 
+
+
+
+Definition at line \mbox{\hyperlink{input__buf_8h_source_l00041}{41}} of file \mbox{\hyperlink{input__buf_8h_source}{input\+\_\+buf.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+util/\mbox{\hyperlink{input__buf_8h}{input\+\_\+buf.\+h}}\end{DoxyCompactItemize}

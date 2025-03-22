@@ -1,26 +1,21 @@
 /**
- * @file
+ * @file print.c
  *
- * @author
+ * @brief Implementation of high-level printing functions for UART
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see print.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "presentation/print.h"
 
 #include "hal/uart.h"
 #include "presentation/style.h"
 #include "util/conversion.h"
-
 
 void print_clearConsole()
 {
@@ -57,7 +52,7 @@ void println_int(const uint32_t number)
 
 void print_styled(const char *string, const Style *style)
 {
-    printStyle(style);
+    print_style(style);
     print(string);
     print(RESET);
 }
@@ -68,7 +63,7 @@ void println_styled(const char *string, const Style *style)
     uart_writeByte(LINE_SEPERATOR);
 }
 
-void printStyle(const Style *style)
+void print_style(const Style *style)
 {
     // assuming the if checks are cheaper then printing if NULL
     if(style->fg_color != NULL)

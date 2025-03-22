@@ -1,20 +1,16 @@
 /**
- * @file
+ * @file field.c
  *
- * @author
+ * @brief Implements the rendering of the TikTakToe field.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see field.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "presentation/field.h"
 
 #include "presentation/cell.h"
@@ -27,10 +23,12 @@
 #include <stdint.h>
 
 /**
- * @brief Print one row
- * @param [in] row String to print
- * @param [in] row_length Length of string
+ * @brief Print one row of the field.
  *
+ * @param[in] row Array of strings representing the row to print.
+ * @param[in] row_length Length of the row array.
+ *
+ * @internal
  */
 static void printRow(char **row, size_t row_length);
 

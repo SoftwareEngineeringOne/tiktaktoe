@@ -1,5 +1,0 @@
-<map id="winning_checkForWinner" name="winning_checkForWinner">
-<area shape="rect" id="Node000001" title="Checks at the end of the round if someone has won." alt="" coords="5,5,189,33"/>
-<area shape="rect" id="Node000002" href="$d0/dfd/winning_8c.html#a8cb661cf3adab5e96933f0673b163eed" title="Checks if the given player has won." alt="" coords="237,5,374,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,16,221,16,221,22,189,22"/>
-</map>

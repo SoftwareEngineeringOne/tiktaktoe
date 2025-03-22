@@ -1,7 +1,0 @@
-<map id="input_onInterrupt" name="input_onInterrupt">
-<area shape="rect" id="Node000001" title="Function to call in case of UART input interrupt." alt="" coords="5,5,139,33"/>
-<area shape="rect" id="Node000002" href="$d7/dec/input__buf_8c.html#ab3e24b09253fed6492359ce7aa936407" title="Put the next byte into the buffer." alt="" coords="187,5,276,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,171,16,171,22,139,22"/>
-<area shape="rect" id="Node000003" href="$d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="324,5,419,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,16,308,16,308,22,277,22"/>
-</map>

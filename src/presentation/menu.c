@@ -91,7 +91,7 @@ void menu_showGameOver(const GameState *game_info)
     cursor_moveTo(1, (CELLS_PER_COL * g_cell_size.height + HEADING_LINES) + 1);
     print(ERASE_LINE_FROM_CURSOR);
 
-    cursor_moveTo(1, CELLS_PER_COL * g_cell_size.height + HEADING_LINES);
+    cursor_moveTo(1, TIMER_ROW);
     printWinnerBanner(game_info);
 
     menu_anyKeyToContinue("\nPress any key to see the summary...");

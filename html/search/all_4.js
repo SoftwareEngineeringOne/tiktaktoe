@@ -14,9 +14,8 @@ var searchData=
   ['diagonal_5ffw_11',['DIAGONAL_FW',['../d5/d5a/field_8h.html#ac9c1b0854e686f913b965d0e95e4d4b4',1,'field.h']]],
   ['diagonal_5fmid_12',['DIAGONAL_MID',['../d5/d5a/field_8h.html#a59d7c6c494fd93262d5c3bbffbfa0245',1,'field.h']]],
   ['dim_13',['DIM',['../de/d12/style_8h.html#ac25189db92959bff3c6c2adf4c34b50a',1,'style.h']]],
-  ['disable_5ftimer_14',['DISABLE_TIMER',['../db/d16/config_8h.html#a45d3b44b047894a423767a205f8cfd96',1,'config.h']]],
-  ['docker_15',['🐳 Using Docker',['../index.html#autotoc_md26',1,'']]],
-  ['dockerhub_16',['☁️ Use Dockerhub',['../index.html#autotoc_md27',1,'']]],
-  ['documentation_17',['Documentation',['../index.html#autotoc_md22',1,'📚 Documentation'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19',1,'📝 Documentation']]],
-  ['documentation_20templates_18',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20',1,'']]]
+  ['docker_14',['🐳 Using Docker',['../index.html#autotoc_md26',1,'']]],
+  ['dockerhub_15',['☁️ Use Dockerhub',['../index.html#autotoc_md27',1,'']]],
+  ['documentation_16',['Documentation',['../index.html#autotoc_md22',1,'📚 Documentation'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19',1,'📝 Documentation']]],
+  ['documentation_20templates_17',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20',1,'']]]
 ];

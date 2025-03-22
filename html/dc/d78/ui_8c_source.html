@@ -154,7 +154,7 @@ $(function(){initNavTree('dc/d78/ui_8c_source.html','../../'); initResizable(tru
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e">print</a>(<a class="code hl_define" href="../../de/d12/style_8h.html#aeeff9504ff19f1ffcaf6d728c50b162c">ERASE_LINE_FROM_CURSOR</a>);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e">print</a>(<a class="code hl_define" href="../../de/d12/style_8h.html#a26cdbb1a00213c810caccf21cd33a631">BOLD</a>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">    #ifndef DISABLE_TIMER</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#ifndef DISABLE_TIMER</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">static</span> <a class="code hl_struct" href="../../de/df7/structStyle.html">Style</a> style;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> uint8_t percent = ((float)remaining_time / (float)total_time) * 100;<span class="comment">// NOLINT</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="../../df/d73/time_8c.html#a5c31952f8992f7d8f3d22c625761e217">g_timer</a>.<a class="code hl_variable" href="../../d7/d8b/structGameTimer.html#ad3003c430a09647532fad2d9615adbcc">is_running</a>)</div>
@@ -197,9 +197,9 @@ $(function(){initNavTree('dc/d78/ui_8c_source.html','../../'); initResizable(tru
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_function" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e">print</a>(<a class="code hl_define" href="../../de/d12/style_8h.html#aeeff9504ff19f1ffcaf6d728c50b162c">ERASE_LINE_FROM_CURSOR</a>);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="../../d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44">print_styled</a>(<span class="stringliteral">&quot;Timer disabled&quot;</span>, &amp;<a class="code hl_variable" href="../../d9/de8/style_8c.html#adf22a9f4586b51943e85588d102ffa3f">ITALIC_DIM</a>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea">uart_writeByte</a>(<span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 </div>

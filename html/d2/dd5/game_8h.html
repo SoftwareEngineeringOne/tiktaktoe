@@ -384,7 +384,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dcb/game_8c_source.html#l00169">169</a> of file <a class="el" href="../../d1/dcb/game_8c_source.html">game.c</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00048">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00049">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00078">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00077">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00038">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00101">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00100">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00075">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00037">PVE</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00076">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00099">CellState::selected</a>, and <a class="el" href="../../df/d73/time_8c_source.html#l00081">time_finishTurn()</a>.</p>
+<p class="reference">References <a class="el" href="../../d1/dcb/game_8c_source.html#l00040">cell_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00048">Circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00049">Cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00078">GameState::current_player</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00077">GameState::fields_marked</a>, <a class="el" href="../../d1/dcb/game_8c_source.html#l00038">game_state</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00101">CellState::last_circle</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00100">CellState::last_cross</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00075">GameState::mode</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00037">PVE</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00076">GameState::round</a>, <a class="el" href="../../d2/dd5/game_8h_source.html#l00099">CellState::selected</a>, and <a class="el" href="../../df/d73/time_8c_source.html#l00043">time_finishTurn()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -400,17 +400,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph.png" border="0" usemap="#ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph" alt=""/></div>
 <map name="ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph" id="ad2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph">
-<area shape="rect" title="Finish the current turn." alt="" coords="769,31,876,56"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatically end a turn in case the turn time is over." alt="" coords="597,5,721,31"/>
-<area shape="poly" title=" " alt="" coords="753,36,721,30,722,25,754,30"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="605,55,713,80"/>
-<area shape="poly" title=" " alt="" coords="754,56,714,62,713,57,753,51"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="428,55,549,80"/>
-<area shape="poly" title=" " alt="" coords="589,70,549,70,549,65,589,65"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="302,55,380,80"/>
-<area shape="poly" title=" " alt="" coords="413,70,381,70,381,65,413,65"/>
+<area shape="rect" title="Finish the current turn." alt="" coords="819,31,926,56"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a664affa156a0a5fa033bad0b88bb6c72" title="Automatically end a turn in case the turn time is over." alt="" coords="647,5,771,31"/>
+<area shape="poly" title=" " alt="" coords="803,36,771,30,772,25,804,30"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="655,55,763,80"/>
+<area shape="poly" title=" " alt="" coords="804,56,764,62,763,57,803,51"/>
+<area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="481,5,596,31"/>
+<area shape="poly" title=" " alt="" coords="631,21,596,21,596,16,631,16"/>
+<area shape="rect" href="../../d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317" title="Timer interrupt handler." alt="" coords="302,5,430,31"/>
+<area shape="poly" title=" " alt="" coords="465,21,430,21,430,16,465,16"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="478,55,599,80"/>
+<area shape="poly" title=" " alt="" coords="639,70,599,70,599,65,639,65"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="327,55,405,80"/>
+<area shape="poly" title=" " alt="" coords="463,70,406,70,406,65,463,65"/>
 <area shape="rect" href="../../d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="103,55,254,80"/>
-<area shape="poly" title=" " alt="" coords="286,70,254,70,254,65,286,65"/>
+<area shape="poly" title=" " alt="" coords="311,70,254,70,254,65,311,65"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,55,55,80"/>
 <area shape="poly" title=" " alt="" coords="87,70,55,70,55,65,87,65"/>
 </map>
@@ -462,6 +466,18 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="304,89,373,90,373,96,304,94"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph.png" border="0" usemap="#ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph" alt=""/></div>
+<map name="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph" id="ad2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph">
+<area shape="rect" title="Automatically end a turn in case the turn time is over." alt="" coords="345,5,469,31"/>
+<area shape="rect" href="../../df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="182,5,297,31"/>
+<area shape="poly" title=" " alt="" coords="330,21,298,21,298,16,330,16"/>
+<area shape="rect" href="../../d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317" title="Timer interrupt handler." alt="" coords="5,5,134,31"/>
+<area shape="poly" title=" " alt="" coords="166,21,134,21,134,16,166,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -497,201 +513,213 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_cgraph.png" border="0" usemap="#ad2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_cgraph" alt=""/></div>
 <map name="ad2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_cgraph" id="ad2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_cgraph">
-<area shape="rect" title="Start the main game." alt="" coords="5,624,84,650"/>
-<area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark a random unmarked cell on the game board." alt="" coords="575,157,720,183"/>
-<area shape="poly" title=" " alt="" coords="43,623,44,567,54,484,64,437,80,391,101,348,130,308,175,267,227,234,283,209,342,191,401,178,459,170,559,164,559,170,459,175,402,183,344,196,285,214,229,239,178,271,134,312,106,350,85,393,69,439,59,485,49,567,48,623"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a518b849acc5ec6c771aa17706ac9c3b3" title="Calculates game summary statistics." alt="" coords="149,323,278,348"/>
-<area shape="poly" title=" " alt="" coords="43,623,46,574,58,503,68,464,83,426,104,389,130,358,134,354,138,358,134,361,108,392,88,428,73,466,63,504,51,575,48,624"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#abd511bd7897b645ef9cb3a62583959e6" title="Redraws the given cell with a modifier." alt="" coords="132,372,295,398"/>
-<area shape="poly" title=" " alt="" coords="44,623,50,582,64,524,89,461,107,432,130,407,133,404,137,408,134,411,112,436,94,464,69,525,55,583,49,624"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the entire field of cells." alt="" coords="596,525,699,551"/>
-<area shape="poly" title=" " alt="" coords="84,625,131,616,323,586,516,558,581,547,582,552,517,563,324,591,132,621,85,631"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="606,373,689,399"/>
-<area shape="poly" title=" " alt="" coords="51,622,81,576,103,551,130,531,184,504,231,490,276,484,319,483,408,481,458,474,515,457,568,433,613,405,616,410,571,437,517,462,460,479,409,486,319,488,276,489,233,495,185,509,133,535,107,555,85,580,55,625"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a02793d13c56663addd9878f851e1a525" title="Handles the presentation update, when a move is forced due to timeout." alt="" coords="343,523,516,548"/>
-<area shape="poly" title=" " alt="" coords="56,621,87,592,108,577,131,565,179,549,230,538,327,530,328,535,231,544,181,554,133,570,111,582,91,596,59,625"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="811,473,914,499"/>
-<area shape="poly" title=" " alt="" coords="84,641,225,665,416,687,514,693,603,691,678,681,707,672,729,660,744,646,752,631,756,597,758,561,764,542,777,523,801,504,805,508,781,527,769,544,763,562,761,598,757,632,748,649,732,664,709,677,679,686,604,697,514,698,416,692,224,670,84,647"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes relevant things at the game start." alt="" coords="194,421,233,447"/>
-<area shape="poly" title=" " alt="" coords="46,623,56,591,72,549,97,504,130,464,153,449,178,439,180,444,156,453,133,468,101,507,77,551,61,593,52,625"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="386,624,474,650"/>
-<area shape="poly" title=" " alt="" coords="84,634,370,634,370,640,84,640"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#ab07153d30b3acd0a53ca9d4043e27160" title="Updates the time on the screen." alt="" coords="808,1081,918,1107"/>
-<area shape="poly" title=" " alt="" coords="53,649,82,712,105,749,134,783,212,848,298,904,390,952,483,991,574,1023,658,1048,793,1080,792,1085,656,1053,572,1028,481,996,388,957,296,909,208,853,130,787,101,752,77,714,48,651"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#a3e03a367ae13ea8f68021a964efbef90" title="Get the next byte from the buffer." alt="" coords="1017,1635,1118,1660"/>
-<area shape="poly" title=" " alt="" coords="48,650,48,743,56,897,67,988,82,1082,104,1177,134,1268,162,1349,183,1426,204,1499,227,1563,257,1618,276,1640,297,1659,323,1675,353,1686,388,1693,428,1696,649,1696,745,1692,841,1682,1001,1658,1002,1663,842,1688,746,1697,649,1701,428,1701,387,1698,352,1691,321,1679,294,1664,272,1644,252,1621,222,1566,199,1501,178,1428,156,1350,129,1270,99,1178,77,1083,61,989,51,898,43,743,43,650"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="153,1231,274,1256"/>
-<area shape="poly" title=" " alt="" coords="50,650,59,747,76,897,102,1052,117,1115,134,1161,156,1193,183,1219,180,1223,152,1196,129,1163,112,1117,96,1053,71,898,53,747,44,650"/>
-<area shape="rect" href="../../d0/dfd/winning_8c.html#af938c2e846f22abb47204c30c0bc316c" title="Checks at the end of the round if someone has won." alt="" coords="564,1180,731,1206"/>
-<area shape="poly" title=" " alt="" coords="49,650,54,742,67,882,78,954,92,1021,111,1074,122,1095,133,1110,164,1128,207,1141,259,1150,315,1155,429,1160,517,1166,562,1174,561,1179,516,1171,429,1165,315,1160,258,1155,205,1146,161,1133,130,1113,117,1098,106,1077,87,1022,73,955,61,883,48,743,44,650"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#ab82b49f40989dd1c5b11264bca838492" title="Displays the game over screen and game summary." alt="" coords="570,879,725,904"/>
-<area shape="poly" title=" " alt="" coords="61,648,93,676,133,704,251,762,372,809,485,846,577,872,576,877,484,851,371,814,249,766,130,708,89,680,58,652"/>
-<area shape="rect" href="../../df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="1477,1660,1559,1686"/>
-<area shape="poly" title=" " alt="" coords="49,650,53,845,67,1169,78,1337,93,1486,111,1600,122,1639,134,1662,166,1696,197,1719,229,1735,262,1743,336,1748,428,1746,1246,1746,1309,1741,1371,1726,1428,1708,1474,1690,1476,1695,1429,1713,1373,1732,1310,1746,1246,1751,428,1751,336,1753,261,1749,227,1740,194,1724,162,1700,129,1665,117,1641,106,1602,87,1487,73,1337,62,1169,48,845,43,650"/>
-<area shape="rect" href="../../dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="Get the Random Value from the generator by polling and waiting." alt="" coords="790,156,936,197"/>
-<area shape="poly" title=" " alt="" coords="721,170,775,171,775,177,721,175"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="1196,187,1293,212"/>
-<area shape="poly" title=" " alt="" coords="936,178,1181,193,1181,198,936,184"/>
-<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="1760,781,1859,807"/>
-<area shape="poly" title=" " alt="" coords="906,154,970,127,1053,98,1147,75,1195,69,1243,66,1520,66,1549,73,1576,91,1603,120,1627,158,1673,253,1712,366,1746,486,1773,600,1806,765,1801,766,1768,601,1741,487,1707,368,1668,255,1623,160,1598,123,1573,95,1547,78,1519,71,1243,71,1196,74,1148,81,1055,103,972,132,908,158"/>
-<area shape="rect" href="../../dc/de5/random_8c.html#ade0d5a07f6403292f21ff2b5f200f11f" title="Get the Random Value from the generator immediately." alt="" coords="995,207,1140,248"/>
-<area shape="poly" title=" " alt="" coords="937,192,981,203,979,208,935,197"/>
-<area shape="poly" title=" " alt="" coords="1140,213,1181,207,1181,212,1141,219"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209" title="Redraws a single cell at the specified position." alt="" coords="822,372,904,398"/>
-<area shape="poly" title=" " alt="" coords="277,369,293,359,304,347,310,334,315,307,320,280,328,267,341,256,365,243,386,236,426,235,517,256,593,276,650,301,706,329,780,358,808,367,806,372,778,363,704,333,648,306,592,281,516,261,425,240,387,241,367,248,345,260,332,271,325,282,320,308,315,336,308,350,297,363,280,374"/>
-<area shape="rect" href="../../dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="1012,475,1123,500"/>
-<area shape="poly" title=" " alt="" coords="904,396,948,414,1035,464,1032,468,946,419,902,401"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="1495,828,1541,854"/>
-<area shape="poly" title=" " alt="" coords="904,371,952,361,1011,352,1076,350,1141,357,1234,377,1273,388,1307,402,1339,420,1370,443,1400,474,1431,514,1454,551,1473,592,1499,676,1513,753,1518,812,1513,813,1508,754,1494,677,1468,594,1450,554,1427,517,1396,478,1366,447,1336,424,1305,407,1271,393,1233,382,1140,362,1076,355,1012,358,953,366,905,376"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a9e731fe6687d1daac66269c94765a45b" title="Prints the given style attributes." alt="" coords="1349,803,1429,828"/>
-<area shape="poly" title=" " alt="" coords="904,376,986,370,1038,371,1093,375,1149,385,1205,401,1257,426,1303,460,1320,485,1335,520,1360,613,1377,711,1387,787,1382,788,1372,711,1355,614,1330,522,1315,487,1299,464,1254,431,1203,406,1148,390,1092,380,1038,376,986,376,904,382"/>
-<area shape="rect" href="../../d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="1207,576,1282,602"/>
-<area shape="poly" title=" " alt="" coords="1119,499,1142,509,1167,531,1190,555,1206,566,1203,570,1187,559,1163,535,1139,514,1117,503"/>
-<area shape="poly" title=" " alt="" coords="1121,498,1206,525,1302,561,1372,589,1401,606,1431,635,1462,679,1486,728,1503,774,1513,812,1508,814,1498,776,1481,730,1458,682,1427,639,1397,611,1370,594,1300,566,1205,530,1119,504"/>
-<area shape="rect" href="../../dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="1188,475,1301,500"/>
-<area shape="poly" title=" " alt="" coords="1124,485,1173,485,1173,490,1124,490"/>
-<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="1607,1319,1712,1344"/>
-<area shape="poly" title=" " alt="" coords="1526,853,1653,1303,1648,1305,1521,855"/>
-<area shape="poly" title=" " alt="" coords="1662,1318,1798,821,1803,823,1667,1319"/>
-<area shape="poly" title=" " alt="" coords="1430,821,1480,831,1479,836,1429,826"/>
-<area shape="poly" title=" " alt="" coords="660,523,719,464,777,415,806,400,808,405,780,419,723,468,664,527"/>
-<area shape="poly" title=" " alt="" coords="689,383,806,383,806,388,689,389"/>
-<area shape="poly" title=" " alt="" coords="483,520,515,501,531,481,538,460,545,438,563,416,590,399,593,404,566,420,550,441,543,462,535,484,518,506,486,524"/>
-<area shape="poly" title=" " alt="" coords="503,519,564,510,796,488,796,493,565,515,504,525"/>
-<area shape="poly" title=" " alt="" coords="915,484,997,484,997,490,915,489"/>
-<area shape="poly" title=" " alt="" coords="903,470,980,450,1081,435,1136,432,1193,434,1248,443,1302,460,1353,489,1395,530,1430,578,1458,630,1480,683,1496,733,1515,812,1510,813,1491,734,1475,685,1453,632,1426,581,1391,533,1349,494,1300,465,1247,448,1192,439,1136,437,1081,440,981,456,905,475"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a351314bfb5d5cfeaac8ffaea06ca6e8c" title="Prints the given integer." alt="" coords="1034,524,1101,550"/>
-<area shape="poly" title=" " alt="" coords="915,496,1020,522,1018,528,914,501"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="1201,853,1288,879"/>
-<area shape="poly" title=" " alt="" coords="889,497,1022,579,1094,628,1142,668,1175,711,1201,758,1236,838,1231,840,1197,760,1170,714,1138,672,1091,632,1019,583,886,502"/>
-<area shape="poly" title=" " alt="" coords="1103,544,1193,571,1191,576,1101,549"/>
-<area shape="poly" title=" " alt="" coords="1103,546,1142,567,1156,579,1166,591,1175,602,1190,612,1224,626,1255,633,1312,634,1340,635,1369,639,1399,649,1431,669,1462,702,1485,740,1502,779,1513,812,1508,813,1497,781,1480,743,1458,705,1427,674,1397,654,1368,644,1340,640,1312,640,1254,638,1222,631,1187,616,1172,605,1162,594,1153,583,1139,571,1101,551"/>
-<area shape="poly" title=" " alt="" coords="1289,859,1479,842,1480,847,1289,865"/>
-<area shape="poly" title=" " alt="" coords="1283,850,1335,831,1337,836,1284,855"/>
-<area shape="poly" title=" " alt="" coords="233,431,264,425,280,418,293,408,307,390,315,372,318,336,321,297,327,277,341,256,398,198,454,157,511,132,570,118,633,113,702,113,862,117,1246,117,1281,119,1311,126,1336,138,1358,154,1395,199,1431,258,1451,306,1468,371,1494,533,1510,696,1518,812,1513,813,1505,696,1489,533,1463,372,1446,307,1427,261,1391,202,1354,158,1334,143,1309,131,1281,125,1246,122,861,122,701,118,633,118,571,123,513,137,457,162,401,202,345,260,332,279,326,298,323,336,320,374,312,393,297,412,282,423,265,430,234,436"/>
-<area shape="poly" title=" " alt="" coords="232,429,262,422,294,408,308,395,316,382,325,368,342,357,375,346,409,340,478,340,543,351,598,365,596,371,542,356,478,345,409,346,376,351,344,362,329,372,320,385,312,399,296,412,264,427,234,434"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#a9bb68967ad751f4b307afa735a3501ff" title="Initialize the given InputBuffer." alt="" coords="393,421,466,447"/>
-<area shape="poly" title=" " alt="" coords="233,432,378,432,378,437,233,437"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#aa1dd7679332aa803a3febb63dc5dd825" title="Clear the whole terminal." alt="" coords="799,1283,927,1308"/>
-<area shape="poly" title=" " alt="" coords="217,447,222,522,239,639,255,706,277,773,307,838,345,896,733,1116,746,1138,753,1158,755,1197,759,1234,766,1251,781,1270,787,1275,784,1279,777,1273,762,1254,753,1235,750,1197,747,1159,741,1140,729,1120,341,900,302,840,272,775,250,707,234,640,217,523,212,448"/>
-<area shape="poly" title=" " alt="" coords="229,445,345,559,404,612,400,616,341,563,226,449"/>
-<area shape="rect" href="../../dc/de5/random_8c.html#a892aefef3ee12161a32838eb5c6e3087" title="Enables the generation of random numbers." alt="" coords="1628,5,1691,31"/>
-<area shape="poly" title=" " alt="" coords="233,431,264,425,280,419,293,408,313,380,321,353,322,325,319,297,316,268,316,239,323,208,341,177,406,100,437,72,471,50,507,34,547,23,593,17,646,16,1390,16,1612,16,1612,21,1390,21,646,21,593,23,548,29,508,39,473,55,441,76,409,104,345,180,328,210,321,239,321,268,325,296,327,325,326,353,317,383,297,412,283,423,266,431,234,436"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a03d584df138a0aa6e9c8f1e013f2073e" title="Randomly determines the starting player." alt="" coords="380,271,480,296"/>
-<area shape="poly" title=" " alt="" coords="232,430,263,424,293,408,310,386,317,363,323,338,341,314,364,299,367,303,345,317,328,340,322,364,315,388,297,412,265,429,233,435"/>
-<area shape="rect" href="../../df/d73/time_8c.html#a04352ea8ee003992baa1d4e993b50dae" title="Initializes the timer." alt="" coords="394,372,465,398"/>
-<area shape="poly" title=" " alt="" coords="232,427,379,394,380,399,233,433"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#ae1c1dad8845af014a8e35894e8842fb5" title="Displays the starting player and mode." alt="" coords="575,928,720,954"/>
-<area shape="poly" title=" " alt="" coords="220,447,231,502,255,583,292,676,317,720,345,762,395,818,442,854,496,882,565,914,578,920,576,925,563,919,493,887,440,858,392,822,341,765,312,723,287,678,250,585,226,503,214,448"/>
-<area shape="poly" title=" " alt="" coords="926,1306,949,1317,964,1331,972,1346,981,1360,996,1370,1037,1382,1091,1387,1153,1387,1220,1381,1285,1369,1344,1354,1393,1333,1427,1310,1448,1277,1466,1228,1480,1167,1491,1101,1506,968,1513,869,1518,869,1511,968,1496,1101,1485,1168,1471,1229,1453,1279,1431,1313,1396,1338,1346,1359,1286,1375,1220,1386,1154,1392,1091,1392,1036,1387,994,1375,977,1363,968,1349,960,1335,945,1322,924,1311"/>
-<area shape="poly" title=" " alt="" coords="473,622,515,603,529,592,538,581,548,571,563,560,581,552,583,557,566,564,552,575,542,585,532,596,518,607,475,627"/>
-<area shape="poly" title=" " alt="" coords="450,621,483,595,514,559,525,540,530,521,534,486,540,452,548,435,563,416,590,398,593,402,566,420,553,437,545,454,539,487,536,522,530,542,519,562,486,599,453,626"/>
-<area shape="poly" title=" " alt="" coords="455,648,488,674,505,692,519,712,534,748,540,782,536,845,534,874,536,904,545,933,566,964,585,981,605,989,648,992,691,995,712,1004,733,1022,753,1054,761,1086,761,1118,757,1149,752,1179,752,1209,760,1239,781,1270,787,1276,784,1280,777,1273,755,1242,747,1210,747,1179,751,1148,756,1117,756,1087,748,1056,729,1025,710,1009,690,1001,647,998,604,994,583,985,562,968,541,936,531,905,528,874,531,844,534,782,529,750,514,714,501,695,485,678,451,652"/>
-<area shape="rect" href="../../dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="818,323,908,348"/>
-<area shape="poly" title=" " alt="" coords="445,622,514,559,538,534,563,511,608,480,647,460,685,441,729,409,743,396,752,383,761,370,777,357,802,346,804,351,780,362,765,374,756,386,747,399,732,414,687,445,649,465,611,484,566,515,542,538,518,563,448,626"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#a7eb2f23a2c01049cc1c90f987f506424" title="Writes the timer text to the screen." alt="" coords="592,776,703,802"/>
-<area shape="poly" title=" " alt="" coords="452,648,617,765,614,769,449,653"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#a5bca51cc044ff3d5ae62598e420cc159" title="Writes the turn text to the screen." alt="" coords="595,624,700,650"/>
-<area shape="poly" title=" " alt="" coords="474,634,580,634,580,640,474,640"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#ad7ec4b5965543c400031e14183eee496" title="Prints the game heading to the screen." alt="" coords="807,777,918,803"/>
-<area shape="poly" title=" " alt="" coords="452,648,485,675,519,711,533,741,538,768,546,791,553,802,566,812,582,818,605,822,664,821,730,813,792,803,793,808,730,819,664,827,605,827,581,824,563,816,549,806,541,794,533,769,528,743,514,714,481,679,448,652"/>
-<area shape="poly" title=" " alt="" coords="910,341,948,357,980,381,1008,408,1051,460,1047,463,1004,412,977,385,946,362,908,346"/>
-<area shape="rect" href="../../dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row of the field." alt="" coords="1353,272,1425,298"/>
-<area shape="poly" title=" " alt="" coords="908,326,995,314,1184,296,1337,285,1337,291,1184,302,995,319,909,331"/>
-<area shape="poly" title=" " alt="" coords="1414,296,1431,315,1449,358,1465,417,1490,561,1508,707,1517,813,1512,813,1502,707,1485,562,1460,418,1444,360,1427,318,1410,300"/>
-<area shape="poly" title=" " alt="" coords="702,776,729,759,745,735,752,712,753,688,751,664,750,640,751,616,759,591,777,567,807,552,863,535,996,501,997,506,864,540,809,557,780,571,764,594,756,617,755,640,757,664,759,688,757,713,750,738,733,763,705,781"/>
-<area shape="poly" title=" " alt="" coords="689,773,730,758,753,747,778,738,877,720,961,709,1037,705,1107,707,1178,717,1252,734,1430,788,1461,801,1488,817,1485,822,1458,806,1428,793,1251,739,1177,722,1107,713,1037,710,962,714,877,726,779,743,755,752,732,763,691,778"/>
-<area shape="poly" title=" " alt="" coords="703,774,790,760,901,752,962,753,1023,759,1083,770,1141,789,1185,813,1221,841,1217,845,1182,818,1139,794,1082,776,1022,764,961,758,902,757,791,765,704,779"/>
-<area shape="poly" title=" " alt="" coords="669,800,702,828,733,865,751,906,757,942,763,977,781,1017,805,1046,832,1070,828,1074,801,1049,776,1020,758,978,752,943,746,908,728,868,698,831,666,804"/>
-<area shape="poly" title=" " alt="" coords="884,1079,917,1053,932,1036,945,1017,958,970,963,909,961,760,960,684,962,614,972,554,981,530,993,510,997,505,1001,509,997,513,986,532,977,555,968,614,965,684,966,760,969,909,963,971,949,1019,937,1039,921,1057,888,1083"/>
-<area shape="poly" title=" " alt="" coords="916,1105,965,1114,1021,1119,1081,1118,1140,1106,1197,1084,1252,1055,1304,1023,1353,987,1436,918,1493,863,1496,867,1440,922,1357,991,1307,1027,1255,1060,1199,1089,1141,1111,1082,1123,1021,1125,964,1119,915,1110"/>
-<area shape="poly" title=" " alt="" coords="899,1105,1026,1153,1189,1209,1410,1270,1593,1314,1592,1319,1409,1275,1188,1214,1024,1158,897,1110"/>
-<area shape="poly" title=" " alt="" coords="919,1099,969,1102,1027,1098,1086,1086,1113,1075,1139,1060,1159,1043,1176,1024,1204,978,1223,932,1235,893,1240,895,1228,934,1209,981,1181,1027,1163,1047,1142,1064,1116,1079,1087,1091,1028,1104,969,1107,918,1105"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a02a20f9ab0165b4cbac365bb9e9aa823" title="Prints the given string with a predefined style and a new line character." alt="" coords="1019,1335,1116,1360"/>
-<area shape="poly" title=" " alt="" coords="882,1106,915,1136,949,1175,965,1199,974,1219,997,1263,1045,1322,1041,1325,993,1266,969,1222,960,1202,945,1178,911,1140,878,1110"/>
-<area shape="poly" title=" " alt="" coords="1081,1359,1125,1405,1155,1429,1189,1448,1291,1487,1334,1499,1376,1506,1417,1506,1460,1499,1506,1484,1558,1461,1588,1440,1612,1413,1631,1384,1645,1357,1649,1360,1635,1387,1616,1416,1591,1444,1561,1466,1508,1489,1461,1504,1417,1511,1375,1511,1333,1504,1289,1492,1187,1453,1152,1433,1121,1409,1078,1363"/>
-<area shape="poly" title=" " alt="" coords="1071,1333,1231,892,1236,894,1076,1335"/>
-<area shape="poly" title=" " alt="" coords="699,628,715,621,729,611,743,593,749,574,750,534,752,495,760,476,777,459,807,442,839,433,873,430,907,432,972,446,1026,465,1024,470,971,451,906,437,873,436,840,438,809,447,780,463,764,479,757,496,755,534,754,575,747,595,733,615,718,625,701,632"/>
-<area shape="poly" title=" " alt="" coords="699,626,729,611,746,589,753,565,759,541,777,516,795,503,798,508,781,520,764,543,758,567,751,591,732,615,701,631"/>
-<area shape="poly" title=" " alt="" coords="700,637,788,647,902,667,963,682,1025,701,1085,725,1142,755,1168,773,1192,795,1228,838,1224,842,1188,799,1165,777,1139,759,1083,730,1023,707,961,687,900,672,788,652,700,642"/>
-<area shape="poly" title=" " alt="" coords="872,775,906,724,945,656,957,614,961,579,969,545,978,528,993,510,997,506,1000,510,997,513,983,531,974,547,966,580,963,615,949,658,911,727,876,778"/>
-<area shape="poly" title=" " alt="" coords="919,789,1023,798,1082,807,1141,820,1205,844,1203,849,1140,825,1082,812,1022,803,919,795"/>
-<area shape="poly" title=" " alt="" coords="1693,29,1714,49,1728,76,1741,110,1762,196,1778,298,1791,408,1805,620,1810,766,1805,766,1800,620,1785,408,1773,299,1757,197,1736,112,1723,78,1710,52,1690,33"/>
-<area shape="poly" title=" " alt="" coords="480,269,774,196,776,201,481,274"/>
-<area shape="poly" title=" " alt="" coords="689,952,732,973,747,985,756,997,765,1007,780,1016,813,1025,857,1033,961,1040,1064,1035,1107,1028,1139,1016,1172,991,1198,958,1218,924,1231,893,1236,895,1223,926,1203,961,1176,995,1142,1021,1108,1033,1065,1041,961,1046,857,1038,812,1031,778,1021,762,1011,752,1000,743,989,729,978,686,957"/>
-<area shape="poly" title=" " alt="" coords="707,952,733,971,756,1011,764,1049,762,1087,756,1124,749,1161,748,1197,757,1233,781,1270,787,1276,783,1280,777,1273,752,1235,743,1197,744,1160,750,1123,757,1086,759,1050,751,1013,729,975,704,956"/>
-<area shape="poly" title=" " alt="" coords="707,925,729,915,744,903,754,892,777,864,834,811,837,815,781,868,758,895,748,907,732,919,710,930"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#aa8ce93493c2adb2ce4240b95e852793c" title="Waits for any key press to continue." alt="" coords="779,1233,947,1259"/>
-<area shape="poly" title=" " alt="" coords="707,952,733,971,752,1003,761,1034,761,1064,757,1094,754,1123,754,1153,762,1182,781,1212,793,1223,789,1227,777,1216,757,1184,749,1153,748,1123,752,1093,755,1064,755,1034,748,1005,729,975,704,956"/>
-<area shape="poly" title=" " alt="" coords="925,1257,948,1268,964,1279,973,1290,983,1302,997,1313,1018,1326,1016,1330,993,1318,979,1305,969,1294,960,1283,946,1272,922,1262"/>
-<area shape="poly" title=" " alt="" coords="934,1257,949,1268,961,1288,975,1323,1007,1422,1062,1619,1057,1620,1002,1424,970,1325,956,1290,945,1272,931,1262"/>
-<area shape="rect" href="../../d7/dec/input__buf_8c.html#aaec1348b29929f537c59bc6b5718bd4e" title="Check if the buffer is empty." alt="" coords="1193,1635,1296,1660"/>
-<area shape="poly" title=" " alt="" coords="1119,1645,1178,1645,1178,1650,1119,1650"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#ac37a7db30665215c6cafea5b9b0d6788" title="Decreases the size of the cells." alt="" coords="366,1181,493,1207"/>
-<area shape="poly" title=" " alt="" coords="272,1227,354,1208,356,1214,274,1233"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#ab9e31dcd2aaecf6c26bba4fc29a2e882" title="Increases the size of the cells." alt="" coords="368,1231,491,1256"/>
-<area shape="poly" title=" " alt="" coords="274,1241,353,1241,353,1246,274,1246"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a309f3d06b02c506feb7a2454b76e25e7" title="Handles escape sequences for navigation." alt="" coords="350,1507,510,1532"/>
-<area shape="poly" title=" " alt="" coords="227,1255,411,1493,407,1496,223,1258"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title="Handles pausing and resuming the game." alt="" coords="358,1280,502,1306"/>
-<area shape="poly" title=" " alt="" coords="274,1254,356,1273,354,1279,272,1260"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="376,725,484,751"/>
-<area shape="poly" title=" " alt="" coords="218,1229,414,765,419,767,223,1232"/>
-<area shape="rect" href="../../d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title="Opens the controls menu." alt="" coords="381,1329,478,1355"/>
-<area shape="poly" title=" " alt="" coords="235,1254,284,1285,344,1316,367,1324,365,1329,342,1321,281,1289,232,1259"/>
-<area shape="poly" title=" " alt="" coords="472,1530,607,1571,693,1594,779,1613,897,1630,1002,1641,1001,1646,896,1636,778,1618,691,1599,606,1576,470,1535"/>
-<area shape="poly" title=" " alt="" coords="501,1279,514,1267,530,1241,540,1208,547,1168,549,1124,546,1024,538,916,529,808,527,707,529,662,535,622,546,588,562,560,581,546,584,550,566,564,551,590,541,623,534,663,532,707,535,807,543,915,552,1024,555,1124,552,1169,545,1209,535,1243,518,1271,504,1283"/>
-<area shape="rect" href="../../df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="603,1280,692,1306"/>
-<area shape="poly" title=" " alt="" coords="502,1290,588,1290,588,1296,502,1296"/>
-<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer when paused." alt="" coords="599,1329,696,1355"/>
-<area shape="poly" title=" " alt="" coords="490,1304,585,1325,583,1331,489,1309"/>
-<area shape="poly" title=" " alt="" coords="451,723,485,697,501,680,514,661,533,619,543,583,548,549,548,516,547,446,551,406,562,360,595,269,630,196,634,198,600,271,567,362,557,407,553,446,553,516,553,549,549,584,538,621,519,663,505,683,488,701,455,727"/>
-<area shape="poly" title=" " alt="" coords="450,723,483,696,514,661,533,622,541,589,547,554,562,512,593,456,625,410,629,413,598,459,567,514,552,555,546,590,538,624,519,664,487,700,453,727"/>
-<area shape="poly" title=" " alt="" coords="484,746,541,752,606,751,639,746,672,737,702,723,729,704,747,683,755,661,757,639,755,615,754,566,760,541,777,516,795,502,799,506,781,520,765,544,759,567,760,615,762,639,760,663,751,686,732,708,705,728,674,742,641,751,607,756,541,758,484,752"/>
-<area shape="rect" href="../../db/dcc/cell_8c.html#a3945952c9b76c87175d1ae905f01b07a" title="Redraws the given cell." alt="" coords="604,575,691,600"/>
-<area shape="poly" title=" " alt="" coords="445,723,514,660,537,633,547,621,563,609,588,598,590,602,566,614,551,625,541,637,518,664,448,727"/>
-<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="594,1131,701,1156"/>
-<area shape="poly" title=" " alt="" coords="439,750,490,858,567,1009,631,1116,627,1119,562,1011,485,860,435,753"/>
-<area shape="poly" title=" " alt="" coords="434,751,437,824,443,876,454,935,470,997,493,1059,525,1117,566,1167,569,1169,565,1173,562,1171,521,1120,489,1061,465,999,448,936,438,877,432,824,428,751"/>
-<area shape="poly" title=" " alt="" coords="691,580,711,573,729,562,743,544,750,527,753,491,756,453,763,434,777,415,805,396,808,400,781,419,767,437,761,455,758,491,755,528,747,547,732,565,714,578,692,586"/>
-<area shape="rect" href="../../df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="808,1332,918,1358"/>
-<area shape="poly" title=" " alt="" coords="703,1148,719,1155,733,1166,748,1185,755,1205,757,1244,759,1282,766,1301,781,1319,796,1330,793,1334,777,1323,762,1303,754,1283,752,1244,750,1206,743,1188,729,1169,716,1160,701,1153"/>
-<area shape="rect" href="../../d0/dfd/winning_8c.html#a8cb661cf3adab5e96933f0673b163eed" title="Checks if the given player has won." alt="" coords="800,1381,926,1407"/>
-<area shape="poly" title=" " alt="" coords="669,1204,701,1231,733,1266,748,1295,754,1321,762,1345,781,1368,787,1373,784,1378,777,1372,757,1347,749,1322,743,1297,728,1269,697,1235,666,1208"/>
-<area shape="poly" title=" " alt="" coords="478,1329,588,1303,589,1309,479,1334"/>
-<area shape="poly" title=" " alt="" coords="479,1340,584,1340,584,1345,479,1345"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#a23ef48917f29c7ba37351342e66a636f" title="Displays the controls menu." alt="" coords="578,1405,717,1431"/>
-<area shape="poly" title=" " alt="" coords="470,1353,595,1397,593,1402,468,1358"/>
-<area shape="poly" title=" " alt="" coords="677,1429,724,1448,779,1464,976,1500,1061,1511,1140,1513,1215,1502,1251,1491,1286,1475,1321,1454,1356,1428,1392,1396,1427,1358,1449,1320,1466,1264,1481,1197,1492,1123,1507,976,1513,869,1518,869,1512,977,1498,1123,1486,1198,1472,1266,1453,1322,1431,1361,1395,1400,1360,1432,1324,1459,1289,1480,1253,1496,1216,1507,1141,1518,1061,1516,975,1505,778,1469,723,1453,675,1434"/>
-<area shape="poly" title=" " alt="" coords="695,1429,791,1449,850,1456,913,1457,976,1452,1037,1437,1092,1411,1116,1393,1138,1371,1160,1334,1179,1280,1196,1214,1209,1141,1228,998,1238,894,1244,894,1234,999,1214,1142,1201,1215,1184,1281,1165,1336,1142,1374,1120,1397,1095,1416,1038,1442,977,1457,913,1463,850,1461,790,1454,694,1434"/>
-<area shape="poly" title=" " alt="" coords="672,1402,729,1365,752,1340,762,1329,777,1317,786,1312,789,1317,780,1322,765,1333,756,1344,732,1370,675,1407"/>
-<area shape="poly" title=" " alt="" coords="718,1426,769,1431,827,1432,887,1428,946,1417,996,1395,1038,1368,1041,1372,999,1400,948,1422,888,1434,827,1438,769,1436,718,1432"/>
-<area shape="poly" title=" " alt="" coords="684,1402,709,1387,729,1366,747,1332,760,1299,768,1267,771,1237,769,1178,759,1121,748,1063,743,1002,750,937,760,902,776,865,799,834,826,810,829,814,802,838,781,867,765,904,755,938,748,1002,753,1062,764,1120,774,1178,777,1237,773,1268,765,1300,752,1334,733,1369,712,1391,686,1407"/>
-<area shape="poly" title=" " alt="" coords="678,1402,704,1387,729,1366,744,1341,750,1316,758,1292,777,1268,781,1265,784,1269,781,1272,762,1295,756,1318,749,1343,733,1369,707,1391,680,1407"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a" title="Prints the given string with a new line character." alt="" coords="1361,1533,1417,1559"/>
-<area shape="poly" title=" " alt="" coords="658,1430,675,1460,702,1497,737,1534,758,1550,780,1562,856,1589,936,1603,1018,1607,1097,1604,1173,1595,1241,1583,1345,1557,1347,1562,1242,1588,1174,1600,1098,1609,1018,1612,935,1608,855,1594,778,1567,755,1554,733,1538,697,1501,670,1462,653,1433"/>
-<area shape="poly" title=" " alt="" coords="1392,1532,1409,1480,1426,1412,1458,1252,1482,1095,1511,869,1516,869,1488,1095,1463,1253,1432,1413,1414,1481,1397,1533"/>
-<area shape="poly" title=" " alt="" coords="1418,1545,1449,1545,1486,1540,1523,1530,1558,1512,1592,1478,1618,1436,1637,1394,1649,1359,1654,1360,1642,1396,1623,1439,1596,1481,1561,1516,1525,1535,1487,1545,1449,1550,1418,1551"/>
-<area shape="poly" title=" " alt="" coords="662,876,729,812,840,695,945,573,966,539,977,524,993,509,999,506,1002,510,997,514,981,528,971,542,949,576,844,699,733,816,665,880"/>
-<area shape="poly" title=" " alt="" coords="719,903,733,914,751,940,758,967,758,994,754,1021,751,1047,752,1072,761,1095,780,1118,825,1147,866,1164,906,1169,946,1165,1033,1145,1083,1133,1140,1125,1231,1113,1268,1105,1301,1094,1333,1079,1363,1058,1394,1030,1427,995,1452,963,1473,928,1503,867,1508,869,1477,931,1456,966,1431,999,1398,1034,1366,1062,1335,1083,1303,1099,1270,1110,1232,1119,1141,1130,1084,1139,1034,1150,946,1171,905,1174,864,1169,822,1152,777,1121,756,1098,747,1073,746,1047,749,1020,752,994,752,968,746,942,729,917,715,907"/>
-<area shape="poly" title=" " alt="" coords="706,875,778,864,880,854,959,851,1140,857,1185,859,1185,864,1140,862,959,857,880,859,779,869,707,881"/>
-<area shape="poly" title=" " alt="" coords="720,903,733,914,749,937,761,960,767,982,770,1005,767,1050,757,1094,748,1138,744,1182,747,1204,753,1225,764,1248,781,1270,787,1276,783,1280,777,1273,760,1250,748,1227,742,1205,739,1182,742,1137,752,1093,761,1049,765,1005,762,983,756,962,745,940,729,917,716,907"/>
-<area shape="poly" title=" " alt="" coords="719,903,733,914,754,945,762,977,762,1008,758,1039,754,1070,753,1100,761,1131,781,1162,800,1179,819,1188,860,1192,903,1196,926,1204,949,1219,967,1243,974,1267,981,1290,997,1314,1012,1325,1009,1329,993,1317,976,1292,969,1268,962,1245,945,1223,924,1208,902,1201,860,1198,818,1193,797,1183,777,1165,756,1133,748,1101,748,1070,753,1039,757,1008,757,978,749,948,729,917,716,907"/>
-<area shape="poly" title=" " alt="" coords="687,876,729,856,753,838,777,820,805,807,808,811,780,824,756,842,732,860,689,880"/>
-<area shape="poly" title=" " alt="" coords="719,903,733,914,757,952,766,990,765,1027,759,1064,752,1101,751,1137,758,1175,781,1213,792,1223,788,1227,777,1216,753,1176,745,1138,747,1100,754,1063,760,1027,761,990,752,954,729,917,716,907"/>
-<area shape="rect" href="../../d6/db1/print_8c.html#a5ec3fe142f65005eea1c8400632aae78" title="Prints the given integer with a new line character." alt="" coords="824,980,902,1006"/>
-<area shape="poly" title=" " alt="" coords="709,903,732,913,747,925,757,936,766,947,780,959,811,974,808,979,777,963,762,951,753,939,744,928,729,918,706,907"/>
-<area shape="rect" href="../../d2/d0a/menu_8c.html#ae6016a73419a07574f6693644b4172f7" title="Prints the winner banner based on the game state." alt="" coords="1004,980,1131,1006"/>
-<area shape="poly" title=" " alt="" coords="705,902,997,973,996,979,704,908"/>
-<area shape="rect" href="../../dc/d78/ui_8c.html#aa7c37f269bcee19a98aea573289d9877" title="Displays the &quot;Game Over&quot; message on the screen." alt="" coords="814,879,912,904"/>
-<area shape="poly" title=" " alt="" coords="725,889,798,889,798,894,725,894"/>
-<area shape="poly" title=" " alt="" coords="900,1004,1175,1113,1367,1192,1560,1278,1621,1309,1619,1314,1558,1283,1365,1197,1173,1118,898,1009"/>
-<area shape="poly" title=" " alt="" coords="882,977,914,951,945,915,971,869,993,821,1027,721,1048,631,1060,565,1065,566,1053,632,1032,722,998,823,975,872,949,918,918,955,886,981"/>
-<area shape="poly" title=" " alt="" coords="1085,978,1211,886,1214,890,1089,982"/>
-<area shape="poly" title=" " alt="" coords="884,876,916,850,932,833,945,814,961,771,967,732,965,694,960,658,955,622,957,586,968,549,993,510,997,505,1001,509,997,513,973,551,962,587,961,622,965,657,970,694,972,732,967,773,949,817,936,836,920,854,887,880"/>
-<area shape="poly" title=" " alt="" coords="912,892,1084,898,1192,897,1300,889,1365,877,1428,860,1479,847,1481,853,1430,865,1366,882,1301,894,1192,902,1084,904,912,898"/>
-<area shape="poly" title=" " alt="" coords="912,886,1185,867,1185,873,913,891"/>
-<area shape="poly" title=" " alt="" coords="1528,1658,1564,1611,1613,1539,1666,1451,1709,1356,1734,1280,1754,1202,1783,1048,1798,914,1804,822,1810,823,1803,914,1788,1048,1759,1203,1739,1282,1714,1358,1670,1453,1618,1542,1568,1614,1532,1661"/>
+<area shape="rect" title="Start the main game." alt="" coords="5,832,84,858"/>
+<area shape="rect" href="../../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f" title="Mark a random unmarked cell on the game board." alt="" coords="575,376,720,402"/>
+<area shape="poly" title=" " alt="" coords="43,831,47,737,59,594,70,520,85,452,104,397,116,377,130,362,157,342,186,327,249,308,316,301,383,306,449,317,509,333,605,367,603,372,508,338,448,322,383,311,316,307,250,313,189,331,160,346,133,365,121,380,109,400,90,454,75,521,64,594,52,737,49,832"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a518b849acc5ec6c771aa17706ac9c3b3" title="Calculates game summary statistics." alt="" coords="149,376,278,402"/>
+<area shape="poly" title=" " alt="" coords="44,831,52,749,68,626,94,503,110,453,130,419,142,408,146,412,134,423,115,456,99,504,73,627,57,749,50,832"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#abd511bd7897b645ef9cb3a62583959e6" title="Redraws the given cell with a modifier." alt="" coords="132,680,295,706"/>
+<area shape="poly" title=" " alt="" coords="53,830,85,788,130,741,172,712,175,716,133,746,89,792,57,833"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#a58542af15ec3ebf1a4e50c34789aa317" title="Redraws the entire field of cells." alt="" coords="596,881,699,907"/>
+<area shape="poly" title=" " alt="" coords="85,855,200,889,271,906,343,918,430,925,516,918,581,908,582,913,517,923,430,930,343,923,270,911,198,894,83,860"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#a457332dae4bea1ebce89e8d8379dd3ab" title="Selects the given cell." alt="" coords="606,731,689,756"/>
+<area shape="poly" title=" " alt="" coords="84,839,270,817,393,799,516,777,590,758,592,763,517,782,393,805,271,822,84,844"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a02793d13c56663addd9878f851e1a525" title="Handles the presentation update, when a move is forced due to timeout." alt="" coords="343,629,516,655"/>
+<area shape="poly" title=" " alt="" coords="45,831,53,797,68,751,93,704,110,683,130,665,178,641,230,628,283,624,332,625,332,630,283,629,231,633,180,646,133,670,114,686,97,707,73,753,58,798,50,832"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#ab109b310e2462d1f3317b8099c7063b4" title="Updates the turn number on the screen." alt="" coords="811,629,914,655"/>
+<area shape="poly" title=" " alt="" coords="44,832,49,785,62,717,88,642,106,605,130,572,177,524,223,496,275,479,342,462,391,452,430,449,469,452,517,462,564,476,611,494,700,536,776,581,832,618,829,622,773,585,698,541,609,499,563,481,516,467,468,457,430,454,392,457,344,467,277,484,225,501,181,529,134,576,111,608,93,644,67,718,54,786,49,832"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a0348f26575dbcf092995319044ada2be" title="Initializes relevant things at the game start." alt="" coords="194,756,233,782"/>
+<area shape="poly" title=" " alt="" coords="74,829,179,781,181,786,76,834"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a72e489aa1ddb47b58c5b1f29ccf1eb13" title="Refreshes the whole UI." alt="" coords="386,984,474,1010"/>
+<area shape="poly" title=" " alt="" coords="53,857,81,910,104,939,133,963,161,977,192,987,255,1000,316,1003,370,1001,370,1007,316,1009,254,1005,190,992,159,982,130,967,101,943,77,913,49,859"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#ab07153d30b3acd0a53ca9d4043e27160" title="Updates the time on the screen." alt="" coords="808,728,918,754"/>
+<area shape="poly" title=" " alt="" coords="44,831,48,790,61,733,72,703,87,674,106,647,130,625,173,597,215,577,255,562,293,554,331,552,368,554,441,572,516,601,596,638,683,677,780,714,799,721,797,726,778,719,680,682,593,643,514,606,440,577,367,560,331,557,294,560,256,568,217,581,176,602,133,630,110,651,92,676,77,705,66,734,54,791,49,832"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#a3e03a367ae13ea8f68021a964efbef90" title="Get the next byte from the buffer." alt="" coords="1030,1888,1132,1914"/>
+<area shape="poly" title=" " alt="" coords="48,858,51,946,62,1093,72,1179,87,1270,108,1360,134,1448,161,1540,180,1630,197,1715,217,1791,230,1825,245,1856,264,1883,286,1905,313,1924,345,1937,384,1946,428,1949,649,1949,749,1945,849,1935,1015,1911,1016,1916,850,1941,750,1950,649,1954,428,1954,383,1951,344,1942,311,1928,283,1909,260,1886,241,1858,225,1827,212,1793,192,1716,175,1631,156,1541,129,1450,103,1362,82,1271,67,1180,56,1093,46,946,43,858"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="153,1411,274,1436"/>
+<area shape="poly" title=" " alt="" coords="49,858,53,961,67,1120,78,1204,92,1282,111,1346,134,1390,145,1401,141,1404,130,1393,106,1348,87,1283,72,1205,61,1121,48,961,44,858"/>
+<area shape="rect" href="../../df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="822,1989,904,2015"/>
+<area shape="poly" title=" " alt="" coords="48,858,50,1071,60,1429,70,1614,85,1779,106,1903,119,1944,134,1968,170,1999,210,2024,253,2043,298,2058,345,2068,393,2074,490,2076,584,2068,672,2053,748,2035,808,2018,809,2023,749,2040,673,2058,585,2073,490,2082,392,2079,344,2073,297,2063,251,2048,208,2028,167,2003,130,1972,114,1947,101,1905,80,1779,65,1614,54,1429,45,1071,43,858"/>
+<area shape="rect" href="../../d0/dfd/winning_8c.html#af938c2e846f22abb47204c30c0bc316c" title="Checks at the end of the round if someone has won." alt="" coords="564,1459,731,1484"/>
+<area shape="poly" title=" " alt="" coords="50,857,59,903,75,969,99,1046,134,1120,180,1195,221,1250,272,1296,344,1345,368,1358,390,1365,429,1372,470,1377,518,1396,533,1406,542,1417,566,1437,591,1450,589,1455,563,1442,539,1420,529,1410,515,1401,468,1383,428,1377,388,1370,366,1363,342,1350,269,1300,217,1254,175,1198,129,1122,94,1047,69,971,53,904,45,858"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#ab82b49f40989dd1c5b11264bca838492" title="Displays the game over screen and game summary." alt="" coords="570,1208,725,1234"/>
+<area shape="poly" title=" " alt="" coords="52,857,61,888,78,928,102,971,134,1008,182,1048,236,1082,292,1112,350,1137,462,1177,558,1202,556,1207,460,1182,348,1142,290,1117,233,1087,179,1052,130,1012,97,974,73,930,56,889,47,859"/>
+<area shape="rect" href="../../dc/de5/random_8c.html#a0cc8207c13dfa65a8279450efa1751d3" title="Get the Random Value from the generator by polling and waiting." alt="" coords="790,258,936,298"/>
+<area shape="poly" title=" " alt="" coords="686,373,729,354,816,305,819,310,732,359,688,378"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="1223,208,1320,234"/>
+<area shape="poly" title=" " alt="" coords="936,256,995,244,1108,229,1208,221,1208,227,1108,234,995,249,937,261"/>
+<area shape="rect" href="../../d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="1790,157,1889,183"/>
+<area shape="poly" title=" " alt="" coords="901,255,945,234,994,216,1070,193,1130,178,1191,170,1270,168,1537,168,1774,168,1774,173,1537,173,1270,173,1192,175,1131,183,1071,198,996,221,947,239,904,260"/>
+<area shape="rect" href="../../dc/de5/random_8c.html#ade0d5a07f6403292f21ff2b5f200f11f" title="Get the Random Value from the generator immediately." alt="" coords="1008,258,1154,298"/>
+<area shape="poly" title=" " alt="" coords="936,276,993,276,993,281,936,281"/>
+<area shape="poly" title=" " alt="" coords="1150,255,1211,236,1213,241,1152,260"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209" title="Redraws a single cell at the specified position." alt="" coords="822,679,904,704"/>
+<area shape="poly" title=" " alt="" coords="295,690,806,689,806,694,295,695"/>
+<area shape="rect" href="../../dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="1026,880,1137,906"/>
+<area shape="poly" title=" " alt="" coords="905,694,928,701,949,713,968,736,977,759,983,783,997,809,1025,841,1054,868,1050,872,1021,844,993,812,978,785,972,761,964,739,945,718,926,706,904,699"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="1512,905,1559,931"/>
+<area shape="poly" title=" " alt="" coords="904,681,946,665,959,656,969,646,979,636,994,628,1043,613,1086,604,1124,600,1161,602,1236,617,1328,644,1400,666,1428,683,1458,711,1488,755,1510,804,1524,851,1533,890,1528,891,1519,852,1505,806,1484,758,1454,715,1425,687,1398,671,1327,649,1235,622,1160,607,1124,606,1086,609,1044,618,996,633,982,640,972,649,963,660,948,670,905,686"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a9e731fe6687d1daac66269c94765a45b" title="Prints the given style attributes." alt="" coords="1376,881,1456,907"/>
+<area shape="poly" title=" " alt="" coords="905,700,948,713,1186,800,1370,873,1368,878,1184,805,946,718,904,705"/>
+<area shape="rect" href="../../d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="1234,728,1309,754"/>
+<area shape="poly" title=" " alt="" coords="1097,877,1240,761,1244,766,1101,881"/>
+<area shape="poly" title=" " alt="" coords="1130,877,1195,863,1278,852,1368,851,1413,856,1457,866,1484,878,1508,893,1506,898,1482,883,1455,871,1412,862,1367,857,1278,858,1196,868,1131,882"/>
+<area shape="rect" href="../../dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="1215,880,1328,906"/>
+<area shape="poly" title=" " alt="" coords="1137,890,1200,890,1200,895,1137,895"/>
+<area shape="rect" href="../../d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="1626,1157,1731,1183"/>
+<area shape="poly" title=" " alt="" coords="1547,930,1665,1143,1660,1145,1542,933"/>
+<area shape="poly" title=" " alt="" coords="1679,1156,1831,198,1836,199,1685,1157"/>
+<area shape="poly" title=" " alt="" coords="1457,900,1498,908,1496,913,1456,905"/>
+<area shape="poly" title=" " alt="" coords="698,885,715,878,729,868,743,850,750,831,752,793,754,753,762,733,777,713,805,697,808,701,780,718,766,736,759,754,757,793,755,832,748,852,733,872,717,883,700,890"/>
+<area shape="poly" title=" " alt="" coords="689,731,806,702,807,707,690,736"/>
+<area shape="poly" title=" " alt="" coords="461,653,605,721,603,726,458,658"/>
+<area shape="poly" title=" " alt="" coords="517,640,796,640,796,645,517,645"/>
+<area shape="poly" title=" " alt="" coords="916,646,933,653,949,664,964,682,973,700,978,734,982,770,987,789,997,809,1023,841,1052,868,1048,872,1019,845,993,812,982,790,977,771,973,735,967,701,959,685,945,668,931,658,914,651"/>
+<area shape="poly" title=" " alt="" coords="894,626,941,609,994,596,1088,582,1162,580,1236,588,1328,609,1400,625,1428,639,1458,666,1478,692,1494,721,1517,783,1530,843,1536,890,1530,890,1525,843,1512,785,1490,724,1474,695,1454,669,1425,644,1398,630,1327,614,1235,593,1162,585,1089,588,996,601,942,614,896,631"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a351314bfb5d5cfeaac8ffaea06ca6e8c" title="Prints the given integer." alt="" coords="1048,677,1115,703"/>
+<area shape="poly" title=" " alt="" coords="915,651,1033,677,1032,682,914,656"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="1228,1083,1315,1108"/>
+<area shape="poly" title=" " alt="" coords="916,650,948,664,964,676,974,688,997,713,1045,743,1087,760,1128,780,1148,796,1169,818,1196,865,1223,934,1265,1067,1260,1069,1218,936,1191,867,1165,821,1145,800,1125,784,1085,765,1042,748,993,718,970,691,960,680,946,668,914,655"/>
+<area shape="poly" title=" " alt="" coords="1116,696,1220,724,1218,730,1114,702"/>
+<area shape="poly" title=" " alt="" coords="1115,684,1159,683,1214,685,1272,694,1329,713,1361,731,1391,752,1445,800,1488,850,1519,891,1515,894,1484,853,1441,804,1388,756,1358,735,1327,718,1271,699,1213,690,1159,688,1115,690"/>
+<area shape="poly" title=" " alt="" coords="1291,1080,1501,938,1504,942,1294,1084"/>
+<area shape="poly" title=" " alt="" coords="1276,1081,1310,1006,1339,960,1374,916,1375,915,1379,919,1378,920,1343,963,1315,1009,1280,1083"/>
+<area shape="poly" title=" " alt="" coords="232,759,263,742,293,716,309,690,315,665,322,640,341,615,381,596,465,566,707,488,950,416,1080,384,1273,384,1314,388,1350,401,1382,421,1411,448,1435,479,1456,515,1489,596,1512,682,1526,764,1536,890,1531,890,1520,765,1507,683,1484,598,1452,518,1431,482,1407,451,1379,425,1348,406,1312,393,1273,389,1080,389,952,421,708,493,467,571,383,601,345,619,327,642,320,666,314,692,297,720,266,746,234,763"/>
+<area shape="poly" title=" " alt="" coords="233,767,352,772,434,771,516,766,591,754,592,759,517,771,434,776,352,777,233,773"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#a9bb68967ad751f4b307afa735a3501ff" title="Initialize the given InputBuffer." alt="" coords="393,731,466,756"/>
+<area shape="poly" title=" " alt="" coords="233,764,377,747,378,752,233,769"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#aa1dd7679332aa803a3febb63dc5dd825" title="Clear the whole terminal." alt="" coords="799,1585,927,1611"/>
+<area shape="poly" title=" " alt="" coords="218,782,223,852,241,962,257,1024,280,1086,308,1146,345,1200,366,1221,386,1234,429,1248,473,1262,496,1275,518,1295,536,1324,541,1351,548,1376,555,1388,566,1400,587,1414,607,1420,648,1421,689,1422,711,1429,732,1444,746,1460,753,1477,757,1510,761,1542,768,1557,781,1572,787,1578,784,1582,777,1576,763,1560,756,1543,752,1510,748,1478,742,1463,729,1448,708,1434,689,1427,648,1426,607,1425,585,1419,563,1404,550,1391,543,1378,536,1352,531,1325,514,1299,492,1279,471,1267,427,1254,384,1239,362,1225,341,1204,304,1149,275,1088,252,1025,236,963,218,853,212,782"/>
+<area shape="poly" title=" " alt="" coords="227,780,276,842,345,919,402,972,399,976,341,923,272,845,223,784"/>
+<area shape="rect" href="../../dc/de5/random_8c.html#a892aefef3ee12161a32838eb5c6e3087" title="Enables the generation of random numbers." alt="" coords="1504,5,1567,31"/>
+<area shape="poly" title=" " alt="" coords="232,760,264,744,280,732,293,717,316,670,327,628,328,588,324,549,319,508,318,466,323,420,340,369,395,235,419,175,447,122,480,78,522,44,548,32,577,23,609,17,646,16,1273,16,1488,16,1488,21,1273,21,646,21,610,23,578,28,550,37,525,49,484,82,451,125,424,177,400,237,346,371,329,421,323,466,325,508,329,548,333,588,332,629,321,672,297,720,284,736,267,748,234,765"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a03d584df138a0aa6e9c8f1e013f2073e" title="Randomly determines the starting player." alt="" coords="380,477,480,503"/>
+<area shape="poly" title=" " alt="" coords="232,760,264,743,280,731,293,717,307,691,314,666,314,618,313,594,315,570,324,546,341,520,364,503,367,508,345,524,328,548,320,571,318,595,319,618,319,667,312,693,297,720,283,735,266,748,234,764"/>
+<area shape="rect" href="../../df/d73/time_8c.html#a04352ea8ee003992baa1d4e993b50dae" title="Initializes the timer." alt="" coords="828,157,898,183"/>
+<area shape="poly" title=" " alt="" coords="232,760,264,743,280,731,293,717,310,683,318,651,318,621,316,591,313,561,314,530,322,498,341,463,391,404,451,352,515,308,582,270,649,239,711,213,812,180,814,185,713,218,651,243,585,275,518,312,454,357,395,408,345,466,327,500,319,531,318,561,321,591,324,621,323,652,315,685,297,720,283,735,267,748,234,765"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#ae1c1dad8845af014a8e35894e8842fb5" title="Displays the starting player and mode." alt="" coords="575,1257,720,1283"/>
+<area shape="poly" title=" " alt="" coords="222,781,267,884,303,953,345,1021,454,1134,566,1244,574,1248,572,1253,563,1248,450,1138,341,1024,298,956,262,887,217,783"/>
+<area shape="poly" title=" " alt="" coords="927,1592,1045,1577,1116,1562,1191,1541,1266,1511,1337,1473,1401,1425,1429,1397,1454,1366,1471,1332,1485,1284,1508,1164,1522,1039,1530,946,1535,947,1528,1040,1513,1164,1490,1286,1476,1334,1458,1369,1433,1401,1404,1429,1340,1478,1268,1516,1192,1546,1117,1567,1045,1582,928,1598"/>
+<area shape="poly" title=" " alt="" coords="473,982,515,963,529,951,538,939,548,928,563,916,580,907,583,912,566,920,551,931,542,943,533,955,518,967,475,987"/>
+<area shape="poly" title=" " alt="" coords="448,981,481,955,514,919,530,893,538,869,546,846,562,818,588,789,615,764,618,768,592,792,567,821,551,848,543,871,535,895,518,922,485,958,452,986"/>
+<area shape="poly" title=" " alt="" coords="439,1009,519,1201,530,1244,534,1279,543,1310,566,1343,586,1359,607,1367,648,1370,690,1374,712,1383,733,1400,748,1423,756,1445,757,1489,758,1531,765,1552,781,1572,787,1578,784,1582,777,1576,760,1554,753,1532,751,1489,751,1446,744,1425,729,1404,709,1388,689,1380,648,1376,605,1372,584,1363,562,1347,538,1312,529,1280,525,1245,514,1203,434,1011"/>
+<area shape="rect" href="../../dd/da6/field_8c.html#a3d0c2012ab22c49c338449956fc0dd68" title="Redraw the whole 2D field." alt="" coords="818,880,908,906"/>
+<area shape="poly" title=" " alt="" coords="451,1008,503,1041,537,1058,576,1074,616,1084,656,1088,694,1083,729,1065,744,1051,752,1035,755,999,757,962,763,942,777,923,802,905,805,910,781,927,768,944,762,963,760,1000,757,1036,749,1054,732,1070,695,1088,656,1094,615,1090,574,1079,535,1063,500,1045,448,1012"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#a7eb2f23a2c01049cc1c90f987f506424" title="Writes the timer text to the screen." alt="" coords="592,980,703,1006"/>
+<area shape="poly" title=" " alt="" coords="474,993,576,991,576,997,474,999"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#a5bca51cc044ff3d5ae62598e420cc159" title="Writes the turn text to the screen." alt="" coords="595,1029,700,1055"/>
+<area shape="poly" title=" " alt="" coords="475,1003,581,1026,580,1031,473,1009"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#ad7ec4b5965543c400031e14183eee496" title="Prints the game heading to the screen." alt="" coords="807,1132,918,1158"/>
+<area shape="poly" title=" " alt="" coords="446,1008,496,1051,529,1074,565,1093,623,1113,683,1126,792,1140,791,1145,682,1132,622,1118,563,1098,527,1079,493,1055,443,1012"/>
+<area shape="poly" title=" " alt="" coords="908,890,1010,890,1010,895,908,895"/>
+<area shape="rect" href="../../dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row of the field." alt="" coords="1380,931,1452,956"/>
+<area shape="poly" title=" " alt="" coords="909,900,995,916,1200,933,1365,940,1364,945,1200,939,995,921,908,905"/>
+<area shape="poly" title=" " alt="" coords="1452,933,1497,924,1498,929,1453,939"/>
+<area shape="poly" title=" " alt="" coords="702,982,729,967,742,949,748,931,750,893,752,856,761,838,777,821,799,808,820,799,840,795,859,795,900,805,948,821,964,829,974,839,983,849,996,859,1024,872,1022,876,994,863,979,853,970,842,960,833,946,826,899,810,859,801,840,800,821,804,802,812,780,826,765,841,757,857,755,894,754,932,747,952,732,971,705,987"/>
+<area shape="poly" title=" " alt="" coords="703,984,717,977,729,967,745,945,755,923,761,901,764,880,760,836,750,792,741,748,738,704,740,681,747,659,759,637,777,615,802,593,826,578,850,571,875,568,929,570,995,569,1068,559,1133,547,1194,537,1250,531,1303,534,1355,548,1406,577,1458,624,1482,655,1500,690,1514,727,1524,764,1535,835,1538,890,1532,890,1530,835,1519,765,1509,728,1495,692,1477,658,1454,628,1403,582,1353,553,1302,539,1250,537,1194,542,1134,552,1068,564,995,574,929,575,875,574,851,576,828,583,805,597,781,619,764,640,752,661,746,683,743,704,746,747,756,791,765,835,769,880,767,902,760,925,749,948,733,971,720,981,705,989"/>
+<area shape="poly" title=" " alt="" coords="704,994,909,1014,1038,1033,1168,1058,1222,1074,1221,1080,1167,1063,1038,1038,908,1020,703,999"/>
+<area shape="poly" title=" " alt="" coords="702,983,717,976,729,967,746,943,753,920,755,896,753,872,751,847,752,822,760,797,777,771,792,758,796,762,781,775,765,799,758,823,756,847,758,872,760,896,759,921,750,946,733,971,719,981,705,988"/>
+<area shape="poly" title=" " alt="" coords="917,752,949,771,966,794,973,816,980,838,997,859,1015,871,1012,875,993,863,976,840,968,818,962,796,945,775,914,757"/>
+<area shape="poly" title=" " alt="" coords="917,727,946,715,960,702,968,688,977,674,994,662,1042,644,1084,633,1123,629,1160,631,1197,638,1236,649,1329,681,1369,695,1400,710,1427,729,1458,759,1482,791,1502,826,1528,889,1523,891,1498,828,1478,794,1454,763,1424,733,1397,714,1367,700,1327,686,1235,655,1196,643,1159,637,1123,635,1085,639,1043,649,996,667,981,678,972,691,964,705,948,719,920,732"/>
+<area shape="poly" title=" " alt="" coords="917,729,945,715,955,705,961,694,967,671,974,648,982,637,994,628,1058,594,1118,572,1175,561,1230,561,1285,572,1340,593,1397,624,1458,665,1487,690,1514,717,1559,779,1596,846,1625,916,1646,984,1661,1047,1677,1141,1672,1142,1656,1048,1641,986,1620,918,1591,849,1555,782,1510,721,1483,694,1454,670,1395,629,1338,598,1284,577,1230,566,1175,566,1119,577,1060,599,996,632,985,641,979,650,972,672,966,696,960,708,949,719,920,734"/>
+<area shape="poly" title=" " alt="" coords="888,752,937,779,996,808,1045,822,1087,828,1127,838,1147,849,1169,866,1191,888,1209,914,1238,969,1257,1023,1268,1067,1263,1069,1252,1025,1233,971,1205,917,1187,892,1166,869,1144,853,1125,843,1086,833,1044,828,994,813,935,784,885,757"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a02a20f9ab0165b4cbac365bb9e9aa823" title="Prints the given string with a predefined style and a new line character." alt="" coords="1032,1488,1130,1514"/>
+<area shape="poly" title=" " alt="" coords="878,753,914,800,934,832,949,867,966,918,976,964,982,1042,984,1122,988,1168,998,1222,1036,1364,1073,1473,1067,1475,1031,1366,992,1223,983,1169,978,1122,976,1043,971,964,961,920,945,868,929,835,910,803,874,756"/>
+<area shape="poly" title=" " alt="" coords="1130,1504,1220,1508,1275,1506,1335,1501,1396,1491,1456,1474,1514,1449,1566,1416,1590,1393,1610,1366,1641,1306,1661,1247,1671,1198,1676,1199,1666,1248,1646,1308,1615,1369,1594,1397,1569,1420,1516,1454,1458,1479,1397,1496,1335,1506,1276,1512,1220,1513,1130,1509"/>
+<area shape="poly" title=" " alt="" coords="1129,1489,1149,1480,1165,1467,1196,1426,1220,1381,1238,1333,1251,1284,1265,1192,1268,1124,1273,1124,1270,1193,1256,1285,1243,1334,1225,1383,1200,1429,1169,1471,1152,1485,1131,1494"/>
+<area shape="poly" title=" " alt="" coords="699,1033,715,1026,729,1016,742,998,749,979,750,940,752,901,760,882,777,865,795,857,819,853,879,854,947,862,1011,874,1010,879,946,867,879,859,819,858,796,862,780,870,765,885,757,902,755,940,754,980,747,1001,733,1020,718,1031,701,1038"/>
+<area shape="poly" title=" " alt="" coords="699,1034,715,1027,729,1016,745,994,756,973,764,929,761,886,752,843,743,799,739,755,749,710,760,687,777,664,795,650,798,655,781,668,765,690,754,712,745,755,748,798,757,842,767,885,770,930,761,974,749,997,733,1020,718,1032,701,1039"/>
+<area shape="poly" title=" " alt="" coords="700,1044,1212,1088,1212,1093,700,1049"/>
+<area shape="poly" title=" " alt="" coords="918,1133,945,1119,969,1097,991,1072,1027,1017,1052,963,1069,919,1074,921,1057,965,1031,1020,995,1075,973,1101,949,1123,920,1138"/>
+<area shape="poly" title=" " alt="" coords="919,1135,995,1125,1212,1099,1212,1105,995,1130,919,1140"/>
+<area shape="poly" title=" " alt="" coords="1568,12,1605,11,1650,14,1698,23,1743,41,1771,63,1795,89,1828,142,1824,145,1791,93,1768,67,1740,46,1696,28,1650,19,1605,16,1568,18"/>
+<area shape="poly" title=" " alt="" coords="480,483,534,476,598,462,666,442,729,412,830,308,834,311,732,416,667,447,599,468,535,481,481,489"/>
+<area shape="rect" href="../../df/d41/timer_8c.html#a6bb9bef52a6d01f72cbbb032d00f4929" title="Set the Capture/ Compare Register of the Timer." alt="" coords="995,107,1167,132"/>
+<area shape="poly" title=" " alt="" coords="898,160,1007,134,1008,139,899,165"/>
+<area shape="rect" href="../../df/d41/timer_8c.html#ac628cc278108107135dc67d231b1f234" title="Initialises the Timer." alt="" coords="1615,56,1742,82"/>
+<area shape="poly" title=" " alt="" coords="880,155,929,122,961,105,994,92,1070,72,1130,65,1270,66,1417,66,1600,66,1600,72,1417,72,1270,71,1131,70,1071,77,996,97,963,110,932,127,883,159"/>
+<area shape="rect" href="../../df/d41/timer_8c.html#aa898170d23f3665396d10739d1e2bb0a" title="Starts the given timer." alt="" coords="1040,323,1123,348"/>
+<area shape="poly" title=" " alt="" coords="882,181,949,244,963,263,971,279,981,294,996,308,1026,322,1023,327,994,312,977,297,967,282,958,266,945,248,878,185"/>
+<area shape="poly" title=" " alt="" coords="1109,131,1234,198,1231,203,1106,135"/>
+<area shape="poly" title=" " alt="" coords="1168,117,1414,117,1537,117,1601,120,1665,128,1775,151,1774,156,1664,133,1600,125,1537,122,1414,122,1168,122"/>
+<area shape="poly" title=" " alt="" coords="1709,80,1743,99,1811,146,1808,150,1740,103,1707,85"/>
+<area shape="poly" title=" " alt="" coords="1123,326,1253,310,1333,304,1414,301,1537,301,1577,298,1617,289,1694,260,1760,223,1808,190,1811,194,1762,228,1696,264,1619,294,1578,303,1537,306,1415,306,1333,309,1253,315,1124,332"/>
+<area shape="poly" title=" " alt="" coords="702,1281,732,1292,756,1307,780,1320,891,1347,938,1355,983,1357,1026,1352,1070,1339,1116,1317,1166,1285,1185,1269,1203,1249,1230,1205,1249,1160,1261,1122,1266,1124,1254,1162,1235,1208,1207,1252,1189,1273,1169,1290,1118,1322,1071,1344,1027,1357,983,1362,938,1360,890,1353,778,1325,753,1312,729,1297,701,1286"/>
+<area shape="poly" title=" " alt="" coords="719,1282,733,1292,756,1328,764,1364,763,1400,757,1435,751,1469,750,1504,758,1538,781,1572,787,1578,783,1582,777,1576,753,1540,745,1504,746,1469,752,1434,758,1399,759,1365,751,1330,729,1296,716,1286"/>
+<area shape="poly" title=" " alt="" coords="704,1254,729,1244,788,1206,835,1166,839,1171,791,1210,732,1249,706,1259"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#aa8ce93493c2adb2ce4240b95e852793c" title="Waits for any key press to continue." alt="" coords="779,1487,947,1512"/>
+<area shape="poly" title=" " alt="" coords="718,1281,733,1292,749,1314,757,1336,758,1380,759,1423,766,1444,781,1466,794,1477,791,1481,777,1469,761,1447,754,1424,753,1380,752,1337,744,1317,729,1296,715,1286"/>
+<area shape="poly" title=" " alt="" coords="948,1497,1017,1498,1017,1503,948,1503"/>
+<area shape="poly" title=" " alt="" coords="933,1511,949,1522,984,1562,1013,1608,1035,1657,1052,1707,1073,1801,1081,1872,1076,1873,1067,1802,1047,1709,1030,1659,1008,1610,980,1565,945,1525,930,1515"/>
+<area shape="rect" href="../../d7/dec/input__buf_8c.html#aaec1348b29929f537c59bc6b5718bd4e" title="Check if the buffer is empty." alt="" coords="1220,1888,1323,1914"/>
+<area shape="poly" title=" " alt="" coords="1132,1898,1205,1898,1205,1904,1132,1904"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#ac37a7db30665215c6cafea5b9b0d6788" title="Decreases the size of the cells." alt="" coords="366,1411,493,1436"/>
+<area shape="poly" title=" " alt="" coords="274,1421,351,1421,351,1426,274,1426"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#ab9e31dcd2aaecf6c26bba4fc29a2e882" title="Increases the size of the cells." alt="" coords="368,1460,491,1486"/>
+<area shape="poly" title=" " alt="" coords="274,1434,356,1453,354,1459,272,1440"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a309f3d06b02c506feb7a2454b76e25e7" title="Handles escape sequences for navigation." alt="" coords="350,1761,510,1787"/>
+<area shape="poly" title=" " alt="" coords="225,1435,415,1746,410,1749,221,1438"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a03559a576d12d8f279698c1a7d33a772" title="Handles pausing and resuming the game." alt="" coords="358,1309,502,1335"/>
+<area shape="poly" title=" " alt="" coords="242,1408,386,1339,388,1344,244,1412"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a98b27236b0483cfefce1c2c133ae7925" title="Handles marking a cell during the game." alt="" coords="376,883,484,908"/>
+<area shape="poly" title=" " alt="" coords="213,1410,222,1339,243,1227,259,1162,281,1096,308,1031,341,970,365,940,393,916,397,920,369,944,345,973,312,1033,286,1098,264,1164,248,1228,227,1340,218,1411"/>
+<area shape="rect" href="../../d1/d06/input_8c.html#a3b7f9c3d0c05d977365279bbf54ee25f" title="Opens the controls menu." alt="" coords="381,1560,478,1586"/>
+<area shape="poly" title=" " alt="" coords="235,1435,398,1549,395,1553,232,1439"/>
+<area shape="poly" title=" " alt="" coords="472,1785,608,1825,693,1847,779,1866,904,1884,1015,1894,1014,1900,904,1890,778,1871,692,1853,606,1831,471,1790"/>
+<area shape="poly" title=" " alt="" coords="432,1308,492,1099,531,981,548,939,562,916,580,904,583,909,566,920,553,942,536,983,497,1100,437,1310"/>
+<area shape="rect" href="../../df/d73/time_8c.html#a5ad5fe91a14f332c6acc40870c980fae" title="Pause the timer." alt="" coords="603,1635,692,1660"/>
+<area shape="poly" title=" " alt="" coords="454,1334,488,1360,519,1397,533,1429,538,1460,536,1516,535,1542,537,1568,547,1595,566,1622,590,1637,587,1641,562,1625,542,1597,532,1570,529,1543,531,1516,533,1460,528,1431,514,1400,484,1364,451,1338"/>
+<area shape="rect" href="../../df/d73/time_8c.html#aa626af1fe4486ff2f05529894b807e5a" title="Resume the timer when paused." alt="" coords="599,931,696,956"/>
+<area shape="poly" title=" " alt="" coords="429,1309,437,1247,457,1155,474,1104,497,1054,526,1007,563,965,584,952,587,957,566,970,531,1010,502,1056,479,1106,462,1156,442,1248,435,1309"/>
+<area shape="poly" title=" " alt="" coords="659,1659,781,1867,847,1975,843,1978,776,1870,654,1662"/>
+<area shape="poly" title=" " alt="" coords="904,1995,1064,1982,1270,1974,1537,1974,1553,1970,1569,1957,1585,1937,1601,1909,1631,1831,1659,1731,1685,1610,1708,1474,1750,1173,1783,861,1808,573,1834,198,1839,199,1813,573,1788,862,1755,1174,1714,1475,1690,1611,1664,1732,1636,1833,1606,1911,1590,1940,1573,1961,1556,1975,1537,1979,1270,1979,1064,1987,905,2001"/>
+<area shape="poly" title=" " alt="" coords="695,937,714,930,729,918,749,889,762,861,770,834,773,807,769,752,756,698,743,643,737,586,739,557,745,528,758,498,777,467,801,439,830,415,862,395,896,378,964,354,1024,341,1025,346,965,359,898,383,865,400,833,419,805,443,781,470,762,500,750,529,744,558,742,586,748,642,761,697,774,751,779,807,775,835,767,863,753,892,733,921,716,934,697,942"/>
+<area shape="poly" title=" " alt="" coords="440,881,475,832,514,768,557,669,592,569,637,416,642,418,598,571,562,671,519,770,480,835,444,884"/>
+<area shape="poly" title=" " alt="" coords="483,880,515,861,531,840,538,819,545,796,563,774,590,757,593,761,566,777,550,799,543,820,536,843,518,866,486,884"/>
+<area shape="poly" title=" " alt="" coords="475,880,515,861,529,850,538,839,548,828,563,817,587,806,610,800,650,796,689,790,708,782,729,767,740,755,746,743,752,717,758,690,765,677,777,664,796,653,798,657,780,668,769,680,763,692,757,718,751,744,744,758,732,771,711,786,690,795,651,801,611,805,589,811,566,822,552,832,542,843,533,854,518,866,477,885"/>
+<area shape="rect" href="../../db/dcc/cell_8c.html#a3945952c9b76c87175d1ae905f01b07a" title="Redraws the given cell." alt="" coords="604,832,691,858"/>
+<area shape="poly" title=" " alt="" coords="484,880,588,856,589,861,485,886"/>
+<area shape="rect" href="../../d1/dcb/game_8c.html#a729e60fc5298c74e80423c136d1f6a5a" title="Finish the current turn." alt="" coords="594,1307,701,1332"/>
+<area shape="poly" title=" " alt="" coords="455,907,489,933,505,950,519,970,537,1017,542,1061,539,1102,533,1141,528,1179,529,1216,540,1254,566,1294,581,1305,578,1310,562,1297,535,1256,524,1217,523,1178,528,1140,534,1101,537,1061,532,1018,514,973,501,954,485,937,452,911"/>
+<area shape="poly" title=" " alt="" coords="455,907,489,933,505,950,519,970,541,1023,551,1070,553,1113,551,1155,547,1197,546,1241,552,1289,567,1344,595,1400,628,1445,623,1448,591,1403,562,1346,546,1290,541,1241,542,1197,545,1155,548,1113,546,1071,536,1024,514,973,501,954,485,937,452,911"/>
+<area shape="poly" title=" " alt="" coords="691,832,711,823,729,811,746,787,752,763,758,738,777,713,805,698,808,703,780,718,763,740,757,764,750,789,733,815,714,828,693,837"/>
+<area shape="rect" href="../../df/d73/time_8c.html#a90e96cefd66715b9740be8f0dbab0042" title="Resets the ticks." alt="" coords="808,1536,918,1562"/>
+<area shape="poly" title=" " alt="" coords="703,1330,719,1338,733,1350,748,1372,755,1395,756,1439,758,1482,765,1502,781,1523,796,1534,792,1538,777,1527,760,1505,752,1483,751,1439,750,1396,743,1375,729,1353,716,1342,701,1334"/>
+<area shape="rect" href="../../d0/dfd/winning_8c.html#a8cb661cf3adab5e96933f0673b163eed" title="Checks if the given player has won." alt="" coords="800,1635,926,1660"/>
+<area shape="poly" title=" " alt="" coords="661,1483,726,1562,780,1621,788,1626,785,1630,777,1626,722,1565,657,1486"/>
+<area shape="poly" title=" " alt="" coords="465,1584,565,1621,589,1629,588,1634,563,1626,463,1589"/>
+<area shape="poly" title=" " alt="" coords="453,1557,486,1532,502,1516,514,1497,522,1475,528,1448,533,1384,530,1228,528,1148,530,1074,540,1012,550,986,562,966,583,950,586,955,566,969,554,989,545,1013,535,1074,533,1148,535,1228,539,1384,533,1449,527,1477,519,1499,506,1519,490,1536,456,1562"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#a23ef48917f29c7ba37351342e66a636f" title="Displays the controls menu." alt="" coords="578,1585,717,1611"/>
+<area shape="poly" title=" " alt="" coords="479,1576,563,1586,562,1591,478,1581"/>
+<area shape="poly" title=" " alt="" coords="716,1609,732,1620,745,1634,752,1648,757,1676,762,1703,769,1716,780,1728,818,1756,852,1775,885,1788,918,1795,990,1798,1080,1797,1273,1797,1289,1795,1304,1789,1334,1767,1361,1732,1386,1686,1409,1631,1429,1569,1464,1429,1490,1282,1510,1143,1530,946,1535,947,1515,1144,1496,1283,1469,1430,1434,1570,1414,1633,1391,1689,1366,1735,1338,1771,1307,1794,1290,1800,1273,1802,1080,1802,990,1804,917,1800,884,1793,850,1780,815,1760,777,1732,764,1719,757,1705,752,1677,747,1650,740,1637,729,1624,713,1614"/>
+<area shape="poly" title=" " alt="" coords="714,1609,732,1620,749,1641,756,1663,763,1683,780,1700,823,1719,861,1723,899,1715,946,1700,1021,1670,1075,1636,1119,1591,1165,1525,1194,1472,1216,1416,1234,1359,1247,1302,1262,1198,1267,1123,1272,1124,1267,1199,1252,1302,1239,1360,1221,1418,1198,1475,1170,1528,1123,1594,1078,1640,1023,1674,948,1705,901,1720,861,1728,822,1724,777,1704,758,1686,751,1665,745,1644,729,1624,711,1614"/>
+<area shape="poly" title=" " alt="" coords="717,1596,783,1596,783,1601,717,1601"/>
+<area shape="poly" title=" " alt="" coords="710,1609,732,1620,747,1633,756,1648,765,1660,780,1670,825,1687,863,1694,901,1688,946,1670,968,1657,988,1641,1022,1602,1048,1562,1066,1526,1071,1529,1053,1564,1026,1606,991,1645,971,1662,948,1675,903,1693,863,1699,824,1693,777,1675,761,1664,752,1650,743,1637,729,1624,707,1614"/>
+<area shape="poly" title=" " alt="" coords="661,1583,695,1546,713,1522,728,1496,741,1464,749,1435,754,1385,758,1333,765,1304,776,1270,806,1214,839,1168,843,1172,811,1217,781,1273,770,1305,763,1334,759,1385,754,1436,746,1465,733,1498,718,1525,699,1549,665,1587"/>
+<area shape="poly" title=" " alt="" coords="667,1582,716,1552,778,1521,793,1515,795,1520,780,1526,719,1557,670,1587"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a0955e0c88609d4769ade150a1834b22a" title="Prints the given string with a new line character." alt="" coords="1388,1837,1444,1863"/>
+<area shape="poly" title=" " alt="" coords="718,1609,733,1620,750,1646,757,1672,758,1698,755,1723,752,1748,753,1772,762,1795,780,1816,800,1829,826,1839,892,1854,973,1863,1061,1866,1238,1861,1372,1852,1372,1857,1238,1867,1061,1871,972,1868,891,1859,824,1844,798,1833,777,1820,757,1797,748,1773,747,1748,749,1723,752,1697,752,1672,745,1648,729,1624,715,1614"/>
+<area shape="poly" title=" " alt="" coords="1438,1835,1454,1817,1468,1783,1481,1741,1501,1635,1515,1509,1524,1374,1532,1118,1532,947,1537,947,1537,1118,1530,1375,1520,1510,1506,1635,1486,1742,1473,1785,1458,1820,1442,1838"/>
+<area shape="poly" title=" " alt="" coords="1436,1835,1454,1817,1504,1734,1547,1645,1582,1554,1611,1464,1651,1305,1671,1198,1676,1199,1656,1306,1616,1466,1587,1556,1552,1647,1509,1736,1458,1820,1440,1839"/>
+<area shape="poly" title=" " alt="" coords="656,1206,704,1143,739,1104,777,1068,844,1018,914,974,1035,910,1038,915,917,979,847,1023,780,1072,742,1108,708,1146,660,1209"/>
+<area shape="poly" title=" " alt="" coords="714,1232,732,1243,749,1263,756,1284,763,1304,780,1320,856,1357,926,1380,991,1389,1055,1386,1118,1371,1183,1345,1252,1310,1326,1267,1369,1238,1400,1211,1425,1179,1454,1135,1480,1086,1500,1034,1526,946,1531,947,1506,1035,1485,1088,1458,1138,1430,1182,1404,1215,1373,1242,1329,1271,1254,1315,1185,1350,1119,1376,1055,1391,991,1394,925,1385,854,1362,777,1324,759,1307,751,1286,744,1266,729,1247,711,1237"/>
+<area shape="poly" title=" " alt="" coords="725,1208,926,1176,1047,1152,1167,1125,1215,1111,1217,1116,1168,1130,1048,1157,927,1181,726,1213"/>
+<area shape="poly" title=" " alt="" coords="719,1232,733,1243,748,1264,759,1286,768,1328,765,1369,757,1410,749,1451,746,1491,755,1532,765,1552,781,1572,787,1578,783,1582,777,1576,761,1555,750,1533,741,1492,744,1450,752,1409,760,1368,763,1328,754,1287,744,1267,729,1247,716,1236"/>
+<area shape="poly" title=" " alt="" coords="717,1232,732,1243,746,1258,753,1274,758,1304,763,1334,769,1349,781,1364,807,1388,836,1409,899,1444,962,1469,1018,1485,1017,1490,960,1474,896,1449,833,1414,803,1392,777,1368,765,1352,758,1336,753,1305,748,1275,741,1261,729,1247,714,1237"/>
+<area shape="poly" title=" " alt="" coords="685,1205,809,1161,810,1166,687,1210"/>
+<area shape="poly" title=" " alt="" coords="718,1232,733,1243,749,1264,759,1285,763,1326,765,1369,770,1391,781,1415,806,1448,834,1475,830,1478,802,1451,776,1418,765,1393,759,1369,758,1327,753,1287,745,1267,729,1247,715,1236"/>
+<area shape="rect" href="../../d6/db1/print_8c.html#a5ec3fe142f65005eea1c8400632aae78" title="Prints the given integer with a new line character." alt="" coords="824,1083,902,1108"/>
+<area shape="poly" title=" " alt="" coords="660,1206,709,1163,742,1138,777,1117,808,1105,810,1110,780,1122,745,1143,713,1167,664,1210"/>
+<area shape="rect" href="../../d2/d0a/menu_8c.html#ae6016a73419a07574f6693644b4172f7" title="Prints the winner banner based on the game state." alt="" coords="1018,1184,1145,1210"/>
+<area shape="poly" title=" " alt="" coords="725,1219,830,1217,947,1212,1002,1206,1003,1211,947,1217,830,1223,725,1224"/>
+<area shape="rect" href="../../dc/d78/ui_8c.html#aa7c37f269bcee19a98aea573289d9877" title="Displays the &quot;Game Over&quot; message on the screen." alt="" coords="814,1284,912,1310"/>
+<area shape="poly" title=" " alt="" coords="699,1232,732,1242,780,1262,813,1276,811,1281,778,1267,730,1247,697,1237"/>
+<area shape="poly" title=" " alt="" coords="903,1097,927,1104,949,1117,961,1131,967,1145,972,1172,977,1198,984,1210,997,1220,1036,1242,1078,1258,1122,1270,1167,1277,1259,1280,1350,1271,1436,1254,1515,1231,1634,1187,1636,1192,1517,1236,1438,1259,1350,1276,1259,1285,1166,1282,1121,1275,1077,1263,1034,1247,993,1224,980,1213,972,1200,967,1173,962,1146,956,1134,945,1122,925,1109,901,1102"/>
+<area shape="poly" title=" " alt="" coords="869,1081,1063,715,1068,718,874,1083"/>
+<area shape="poly" title=" " alt="" coords="1123,1181,1166,1162,1205,1139,1240,1116,1243,1120,1208,1144,1169,1167,1125,1186"/>
+<area shape="poly" title=" " alt="" coords="872,1282,905,1233,945,1169,1016,1029,1066,918,1071,920,1021,1031,949,1171,910,1236,876,1285"/>
+<area shape="poly" title=" " alt="" coords="913,1303,967,1308,1031,1310,1100,1303,1166,1285,1229,1253,1288,1212,1342,1165,1390,1115,1468,1017,1517,943,1521,946,1472,1021,1394,1119,1346,1169,1291,1217,1232,1258,1168,1290,1101,1308,1031,1315,966,1314,912,1308"/>
+<area shape="poly" title=" " alt="" coords="912,1292,967,1285,1033,1273,1102,1252,1166,1220,1194,1198,1218,1172,1254,1120,1258,1123,1222,1175,1197,1202,1169,1224,1104,1257,1034,1278,968,1291,913,1297"/>
 </map>
 </div>
 <div class="dynheader">

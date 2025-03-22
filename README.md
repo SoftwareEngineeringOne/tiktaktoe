@@ -16,7 +16,7 @@ A TikTakToe game written for the `nRF-51` microcontroller with an `arm-cortex-m0
 
 > [!TIP]
 > We recommend viewing this and any other markdown file using our
-> [documentation page](https://tiktaktoe.episko.de) which provides 
+> [documentation page](https://tiktaktoe.episko.de) which provides
 > improved formatting!
 
 <div style="visibility:hidden">[TOC]</div>
@@ -68,8 +68,10 @@ which can be found under [dependencies](#dependencies) are required.
     qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio
     ```
 
-    **Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
-    are disabled when building with the MinGW generator!**
+    > [!NOTE]
+    > Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
+    > are disabled when building with the MinGW generator!
+
 
 </div>
 
@@ -124,9 +126,9 @@ docker build -t [TAGNAME] .
 docker run -it [TAGNAME]
 ```
 
-@warning
-  In either case the `-it` flags are required to properly
-  capture input from stdin!
+> [!IMPORTANT]
+> In either case the `-it` flags are required to properly
+> capture input from stdin!
 
 ### 🍎 MacOS
 
@@ -146,9 +148,9 @@ The project has a few options that can be changed before compilation.
 - Unicode support (default is "ON")
 - ASCII Art (default is "ON", may look broken on small screens)
 
-@warning
-    No restrictions have been set on any of the configurations. Beware that extrem
-    deviation from the default values, may result in a degraded playing experience
+> [!CAUTION]
+> No restrictions have been set on any of the configurations. Beware that extrem
+> deviation from the default values, may result in a degraded playing experience
 
 These can be set by:
 

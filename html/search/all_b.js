@@ -1,7 +1,7 @@
 var searchData=
 [
   ['macos_0',['🍎 MacOS',['../index.html#autotoc_md29',1,'']]],
-  ['macros_1',['Macros',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18',1,'']]],
+  ['macros_1',['Macros',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19',1,'']]],
   ['main_2',['main',['../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
   ['main_2ec_3',['main.c',['../d0/d29/main_8c.html',1,'']]],
   ['makefile_4',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],

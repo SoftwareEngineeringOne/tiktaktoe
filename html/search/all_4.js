@@ -16,6 +16,6 @@ var searchData=
   ['dim_13',['DIM',['../de/d12/style_8h.html#ac25189db92959bff3c6c2adf4c34b50a',1,'style.h']]],
   ['docker_14',['🐳 Using Docker',['../index.html#autotoc_md26',1,'']]],
   ['dockerhub_15',['☁️ Use Dockerhub',['../index.html#autotoc_md27',1,'']]],
-  ['documentation_16',['Documentation',['../index.html#autotoc_md22',1,'📚 Documentation'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19',1,'📝 Documentation']]],
-  ['documentation_20templates_17',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20',1,'']]]
+  ['documentation_16',['Documentation',['../index.html#autotoc_md20',1,'📚 Documentation'],['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21',1,'📝 Documentation']]],
+  ['documentation_20templates_17',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md22',1,'']]]
 ];

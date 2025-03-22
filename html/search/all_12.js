@@ -5,7 +5,7 @@ var searchData=
   ['t_5fright_2',['T_RIGHT',['../d5/d5a/field_8h.html#a48ea18560db4a70426c206991b60081f',1,'field.h']]],
   ['t_5ftop_3',['T_TOP',['../d5/d5a/field_8h.html#aa827cfcd68461caf5a60b728f4032f22',1,'field.h']]],
   ['tail_4',['tail',['../d7/d21/structInputBuffer.html#ad2253db99c19c5f92aa00750a0897866',1,'InputBuffer']]],
-  ['templates_5',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md22',1,'']]],
+  ['templates_5',['Documentation templates',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20',1,'']]],
   ['the_20provided_20makefile_6',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],
   ['tick_5fspeed_7',['TICK_SPEED',['../db/d16/config_8h.html#a7fc9eee9e9d18a32a09278686843798e',1,'config.h']]],
   ['ticks_5fper_5fturn_8',['TICKS_PER_TURN',['../db/d16/config_8h.html#a61db32789eaf2d2642e3b16723284f0c',1,'config.h']]],

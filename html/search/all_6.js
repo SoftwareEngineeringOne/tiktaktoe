@@ -1,7 +1,7 @@
 var searchData=
 [
   ['false_0',['false',['../d4/da4/def_8h.html#a65e9886d74aaee76545e83dd09011727',1,'def.h']]],
-  ['features_1',['✨ Features',['../index.html#autotoc_md17',1,'']]],
+  ['features_1',['✨ Features',['../index.html#autotoc_md21',1,'']]],
   ['fg_5fblue_2',['FG_BLUE',['../de/d12/style_8h.html#a4e411f6bd6ac8d6c2bd23d866c097e91',1,'style.h']]],
   ['fg_5fcolor_3',['fg_color',['../de/df7/structStyle.html#a44181360e9685ee6833c9595c8356514',1,'Style']]],
   ['fg_5fgreen_4',['FG_GREEN',['../de/d12/style_8h.html#a0af1e03653ace4d21aebf3b2e03a6535',1,'style.h']]],

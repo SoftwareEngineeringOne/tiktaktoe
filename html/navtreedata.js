@@ -42,11 +42,11 @@ var NAVTREE =
       [ "💬 Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md14", [
         [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md15", null ],
         [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md16", null ],
-        [ "Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18", null ],
-        [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", null ]
+        [ "Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md17", null ],
+        [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18", null ]
       ] ],
-      [ "📝 Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md21", [
-        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md22", null ]
+      [ "📝 Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", [
+        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20", null ]
       ] ]
     ] ],
     [ "Topics", "topics.html", "topics" ],

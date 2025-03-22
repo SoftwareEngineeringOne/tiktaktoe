@@ -1,7 +1,7 @@
 var index =
 [
-    [ "✨ Features", "index.html#autotoc_md17", null ],
-    [ "📚 Documentation", "index.html#autotoc_md20", null ],
+    [ "✨ Features", "index.html#autotoc_md21", null ],
+    [ "📚 Documentation", "index.html#autotoc_md22", null ],
     [ "🛠️ Build and Run", "index.html#autotoc_md23", [
       [ "🖥️ Using CMake and qemu", "index.html#autotoc_md24", null ],
       [ "🛠️ Using the provided Makefile", "index.html#autotoc_md25", null ],

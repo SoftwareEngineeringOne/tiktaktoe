@@ -163,7 +163,6 @@ These can be set by:
 
 
 ## 📦 Dependencies 
-(TODO: CHECK CORRECT)
 <div class="tabbed">
 
 - <b class="tab-title"> Ubuntu/Debian </b>

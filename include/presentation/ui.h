@@ -28,8 +28,18 @@
 #include <stdint.h>
 
 #define TURN_ROW 1 + HEADING_LINES///< Row position for displaying the turn text.
+/**
+ * @def TIMER_ROW
+ *
+ * @brief Row position for displaying the timer.
+ *
+ * @details
+ * The timer row position is calculated based on the number of cells per column.
+ * If the number of cells per column is 2, the calculation has to be adjusted
+ */
 #define TIMER_ROW \
-    FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES///< Row position for displaying the timer.
+    (CELLS_PER_COL == 2 ? FIELD_HEIGHT + (FIELD_HEIGHT % 2) + 1 + HEADING_LINES \
+                        : FIELD_HEIGHT + (FIELD_HEIGHT % 2) - 1 + HEADING_LINES)
 
 #ifdef ENABLE_UNICODE
 #define FULL_PROGRESS_ELEMENT "█" ///< Full progress bar element

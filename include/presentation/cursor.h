@@ -1,7 +1,14 @@
 /**
  * @file cursor.h
  *
- * @brief Contains function for moving the presentation of the cursor
+ * @brief Contains functions for moving the presentation of the cursor.
+ *
+ * @details
+ * This file provides the interface for cursor movement in the presentation layer.
+ *
+ * @ingroup Presentation
+ *
+ * @see cursor.c
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -14,13 +21,19 @@
 #include <stdint.h>
 
 /**
- * @brief Move cursor to the given coordinates
- * @param [in] x
- * X-Position
- * @param [in] y
- * Y-Position
+ * @brief Move the cursor to the given coordinates.
+ *
+ * @details
+ * This function generates an escape sequence to move the cursor to the specified
+ * (x, y) position on the terminal.
+ *
+ * @param[in] x X-coordinate of the cursor position.
+ * @param[in] y Y-coordinate of the cursor position.
+ *
+ * @note
+ * This function can be improved by using new functions found in the conversion module
+ * and directly writing the string representation of the number to the target buffer.
  */
 void cursor_moveTo(uint8_t x, uint8_t y);
-
 
 #endif// CURSOR_H

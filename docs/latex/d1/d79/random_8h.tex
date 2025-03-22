@@ -1,0 +1,374 @@
+\doxysection{hal/random.h File Reference}
+\hypertarget{random_8h}{}\label{random_8h}\index{hal/random.h@{hal/random.h}}
+
+
+Header file for the RNG HAL.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for random.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{db/dfa/random_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{d0/d46/random_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{random_8h_a543998e94cc5358bc493194aac4a62de}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}~0x4000\+D000
+\begin{DoxyCompactList}\small\item\em Base address of the RNG peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_ac883ee232640738847b8bf0dfdb80c13}{RNG\+\_\+\+START}}~0x000
+\begin{DoxyCompactList}\small\item\em Task starting the random number generator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a9454d7d2c7c9e72d8d597a99f4eb50f2}{RNG\+\_\+\+STOP}}~0x004
+\begin{DoxyCompactList}\small\item\em Task stopping the random number generator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_ab3aae99df44746d954a4f64faa569d9c}{RNG\+\_\+\+VALRDY}}~0x100
+\begin{DoxyCompactList}\small\item\em Event generated when new number is read. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_acd6fbca3838c5dc6c80d98ad159a13bd}{RNG\+\_\+\+SHORTS}}~0x200
+\begin{DoxyCompactList}\small\item\em Shortcut register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a8401d6cb5af5f53f0eb5bf15b44979e3}{RNG\+\_\+\+INTEN}}~0x300
+\begin{DoxyCompactList}\small\item\em Enable or disable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_ab99809e1ee0ccf7fa5d84f3da6b4de6e}{RNG\+\_\+\+INTENSET}}~0x304
+\begin{DoxyCompactList}\small\item\em Enable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a9a132dbcaf91f3bdbb4612d8bc1fcfce}{RNG\+\_\+\+INTENCLR}}~0x308
+\begin{DoxyCompactList}\small\item\em Disable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a7e7a01e5f2cb8cd4aafedb178f459484}{RNG\+\_\+\+CONFIG}}~0x504
+\begin{DoxyCompactList}\small\item\em Configuration register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_aa6807bb4557dbb6e07850699d7400f8f}{RNG\+\_\+\+VALUE}}~0x508
+\begin{DoxyCompactList}\small\item\em Output random number. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_aef5776807f90514343d80c42845795d7}{RNG\+\_\+\+TASK\+\_\+\+START}}~1
+\begin{DoxyCompactList}\small\item\em Value for starting a Task. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a8d24eaf6f936a4ae01fe003c935c35fe}{RNG\+\_\+\+EVENT\+\_\+\+TRIGGER}}~1
+\begin{DoxyCompactList}\small\item\em Value for setting/starting an Event. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{random_8h_a26bdf6449c74427e8dcd50690be41557}{RNG\+\_\+\+EVENT\+\_\+\+CLEAR}}~0
+\begin{DoxyCompactList}\small\item\em Value for clearing/stopping an Event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{random_8h_a892aefef3ee12161a32838eb5c6e3087}{rng\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Enables the generation of random numbers. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{random_8h_ade0d5a07f6403292f21ff2b5f200f11f}{rng\+\_\+get\+Random\+Value\+\_\+immediately}} ()
+\begin{DoxyCompactList}\small\item\em Get the Random Value from the generator immediately. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{random_8h_a0cc8207c13dfa65a8279450efa1751d3}{rng\+\_\+get\+Random\+Value\+\_\+waiting}} ()
+\begin{DoxyCompactList}\small\item\em Get the Random Value from the generator by polling and waiting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the RNG HAL. 
+
+This file contains the declarations and macros for interacting with the RNG peripheral, including initialization and random number retrieval.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{random_8c}{random.\+c}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Based on version by Thomas Vogt
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{random_8h_a543998e94cc5358bc493194aac4a62de}\label{random_8h_a543998e94cc5358bc493194aac4a62de} 
+\index{random.h@{random.h}!RNG\_BASE\_ADDRESS@{RNG\_BASE\_ADDRESS}}
+\index{RNG\_BASE\_ADDRESS@{RNG\_BASE\_ADDRESS}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_BASE\_ADDRESS}{RNG\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+BASE\+\_\+\+ADDRESS~0x4000\+D000}
+
+
+
+Base address of the RNG peripheral. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00028}{28}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a7e7a01e5f2cb8cd4aafedb178f459484}\label{random_8h_a7e7a01e5f2cb8cd4aafedb178f459484} 
+\index{random.h@{random.h}!RNG\_CONFIG@{RNG\_CONFIG}}
+\index{RNG\_CONFIG@{RNG\_CONFIG}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_CONFIG}{RNG\_CONFIG}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+CONFIG~0x504}
+
+
+
+Configuration register. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00043}{43}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a26bdf6449c74427e8dcd50690be41557}\label{random_8h_a26bdf6449c74427e8dcd50690be41557} 
+\index{random.h@{random.h}!RNG\_EVENT\_CLEAR@{RNG\_EVENT\_CLEAR}}
+\index{RNG\_EVENT\_CLEAR@{RNG\_EVENT\_CLEAR}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_EVENT\_CLEAR}{RNG\_EVENT\_CLEAR}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+EVENT\+\_\+\+CLEAR~0}
+
+
+
+Value for clearing/stopping an Event. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00049}{49}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a8d24eaf6f936a4ae01fe003c935c35fe}\label{random_8h_a8d24eaf6f936a4ae01fe003c935c35fe} 
+\index{random.h@{random.h}!RNG\_EVENT\_TRIGGER@{RNG\_EVENT\_TRIGGER}}
+\index{RNG\_EVENT\_TRIGGER@{RNG\_EVENT\_TRIGGER}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_EVENT\_TRIGGER}{RNG\_EVENT\_TRIGGER}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+EVENT\+\_\+\+TRIGGER~1}
+
+
+
+Value for setting/starting an Event. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00048}{48}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a8401d6cb5af5f53f0eb5bf15b44979e3}\label{random_8h_a8401d6cb5af5f53f0eb5bf15b44979e3} 
+\index{random.h@{random.h}!RNG\_INTEN@{RNG\_INTEN}}
+\index{RNG\_INTEN@{RNG\_INTEN}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_INTEN}{RNG\_INTEN}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+INTEN~0x300}
+
+
+
+Enable or disable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00040}{40}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a9a132dbcaf91f3bdbb4612d8bc1fcfce}\label{random_8h_a9a132dbcaf91f3bdbb4612d8bc1fcfce} 
+\index{random.h@{random.h}!RNG\_INTENCLR@{RNG\_INTENCLR}}
+\index{RNG\_INTENCLR@{RNG\_INTENCLR}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_INTENCLR}{RNG\_INTENCLR}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+INTENCLR~0x308}
+
+
+
+Disable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00042}{42}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_ab99809e1ee0ccf7fa5d84f3da6b4de6e}\label{random_8h_ab99809e1ee0ccf7fa5d84f3da6b4de6e} 
+\index{random.h@{random.h}!RNG\_INTENSET@{RNG\_INTENSET}}
+\index{RNG\_INTENSET@{RNG\_INTENSET}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_INTENSET}{RNG\_INTENSET}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+INTENSET~0x304}
+
+
+
+Enable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00041}{41}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_acd6fbca3838c5dc6c80d98ad159a13bd}\label{random_8h_acd6fbca3838c5dc6c80d98ad159a13bd} 
+\index{random.h@{random.h}!RNG\_SHORTS@{RNG\_SHORTS}}
+\index{RNG\_SHORTS@{RNG\_SHORTS}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_SHORTS}{RNG\_SHORTS}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+SHORTS~0x200}
+
+
+
+Shortcut register. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00039}{39}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_ac883ee232640738847b8bf0dfdb80c13}\label{random_8h_ac883ee232640738847b8bf0dfdb80c13} 
+\index{random.h@{random.h}!RNG\_START@{RNG\_START}}
+\index{RNG\_START@{RNG\_START}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_START}{RNG\_START}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+START~0x000}
+
+
+
+Task starting the random number generator. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00032}{32}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_a9454d7d2c7c9e72d8d597a99f4eb50f2}\label{random_8h_a9454d7d2c7c9e72d8d597a99f4eb50f2} 
+\index{random.h@{random.h}!RNG\_STOP@{RNG\_STOP}}
+\index{RNG\_STOP@{RNG\_STOP}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_STOP}{RNG\_STOP}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+STOP~0x004}
+
+
+
+Task stopping the random number generator. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00033}{33}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_aef5776807f90514343d80c42845795d7}\label{random_8h_aef5776807f90514343d80c42845795d7} 
+\index{random.h@{random.h}!RNG\_TASK\_START@{RNG\_TASK\_START}}
+\index{RNG\_TASK\_START@{RNG\_TASK\_START}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_TASK\_START}{RNG\_TASK\_START}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+TASK\+\_\+\+START~1}
+
+
+
+Value for starting a Task. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00047}{47}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_ab3aae99df44746d954a4f64faa569d9c}\label{random_8h_ab3aae99df44746d954a4f64faa569d9c} 
+\index{random.h@{random.h}!RNG\_VALRDY@{RNG\_VALRDY}}
+\index{RNG\_VALRDY@{RNG\_VALRDY}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_VALRDY}{RNG\_VALRDY}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+VALRDY~0x100}
+
+
+
+Event generated when new number is read. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00036}{36}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+\Hypertarget{random_8h_aa6807bb4557dbb6e07850699d7400f8f}\label{random_8h_aa6807bb4557dbb6e07850699d7400f8f} 
+\index{random.h@{random.h}!RNG\_VALUE@{RNG\_VALUE}}
+\index{RNG\_VALUE@{RNG\_VALUE}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{RNG\_VALUE}{RNG\_VALUE}}
+{\footnotesize\ttfamily \#define RNG\+\_\+\+VALUE~0x508}
+
+
+
+Output random number. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8h_source_l00044}{44}} of file \mbox{\hyperlink{random_8h_source}{random.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{random_8h_ade0d5a07f6403292f21ff2b5f200f11f}\label{random_8h_ade0d5a07f6403292f21ff2b5f200f11f} 
+\index{random.h@{random.h}!rng\_getRandomValue\_immediately@{rng\_getRandomValue\_immediately}}
+\index{rng\_getRandomValue\_immediately@{rng\_getRandomValue\_immediately}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{rng\_getRandomValue\_immediately()}{rng\_getRandomValue\_immediately()}}
+{\footnotesize\ttfamily uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+immediately (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Random Value from the generator immediately. 
+
+The function does not wait for the next value to be generated. It reads the current value from the RNG peripheral.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t A random byte. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00027}{27}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00029}{register\+\_\+read()}}, \mbox{\hyperlink{random_8h_source_l00028}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{random_8h_source_l00044}{RNG\+\_\+\+VALUE}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{d1/d79/random_8h_ade0d5a07f6403292f21ff2b5f200f11f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d79/random_8h_ade0d5a07f6403292f21ff2b5f200f11f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{random_8h_a0cc8207c13dfa65a8279450efa1751d3}\label{random_8h_a0cc8207c13dfa65a8279450efa1751d3} 
+\index{random.h@{random.h}!rng\_getRandomValue\_waiting@{rng\_getRandomValue\_waiting}}
+\index{rng\_getRandomValue\_waiting@{rng\_getRandomValue\_waiting}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{rng\_getRandomValue\_waiting()}{rng\_getRandomValue\_waiting()}}
+{\footnotesize\ttfamily uint8\+\_\+t rng\+\_\+get\+Random\+Value\+\_\+waiting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Random Value from the generator by polling and waiting. 
+
+This function blocks until the RNG peripheral indicates that a new random value is ready. It then retrieves and returns the random byte.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t A random byte. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00036}{36}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00029}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{random_8h_source_l00028}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{random_8h_source_l00049}{RNG\+\_\+\+EVENT\+\_\+\+CLEAR}}, \mbox{\hyperlink{random_8c_source_l00027}{rng\+\_\+get\+Random\+Value\+\_\+immediately()}}, and \mbox{\hyperlink{random_8h_source_l00036}{RNG\+\_\+\+VALRDY}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d79/random_8h_a0cc8207c13dfa65a8279450efa1751d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d79/random_8h_a0cc8207c13dfa65a8279450efa1751d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{random_8h_a892aefef3ee12161a32838eb5c6e3087}\label{random_8h_a892aefef3ee12161a32838eb5c6e3087} 
+\index{random.h@{random.h}!rng\_init@{rng\_init}}
+\index{rng\_init@{rng\_init}!random.h@{random.h}}
+\doxysubsubsection{\texorpdfstring{rng\_init()}{rng\_init()}}
+{\footnotesize\ttfamily void rng\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the generation of random numbers. 
+
+
+
+Definition at line \mbox{\hyperlink{random_8c_source_l00021}{21}} of file \mbox{\hyperlink{random_8c_source}{random.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{random_8h_source_l00028}{RNG\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{random_8h_source_l00032}{RNG\+\_\+\+START}}, and \mbox{\hyperlink{random_8h_source_l00047}{RNG\+\_\+\+TASK\+\_\+\+START}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d1/d79/random_8h_a892aefef3ee12161a32838eb5c6e3087_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d79/random_8h_a892aefef3ee12161a32838eb5c6e3087_icgraph}
+\end{center}
+\end{figure}

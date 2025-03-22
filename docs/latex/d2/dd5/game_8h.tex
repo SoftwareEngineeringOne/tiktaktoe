@@ -1,0 +1,273 @@
+\doxysection{logic/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{logic/game.h@{logic/game.h}}
+
+
+Contains the game logic.  
+
+
+{\ttfamily \#include "{}presentation/field.\+h"{}}\newline
+{\ttfamily \#include "{}util/input\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for game.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d10/game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcc/game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCell}{Cell}}
+\begin{DoxyCompactList}\small\item\em One cell on the field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structGameState}{Game\+State}}
+\begin{DoxyCompactList}\small\item\em The current game state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCellState}{Cell\+State}}
+\begin{DoxyCompactList}\small\item\em The current state of the cells. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game_8h_a2870851feea96bc5bf8d094323fcfd44}{REMAINING\+\_\+\+TIME}}~(\mbox{\hyperlink{config_8h_a61db32789eaf2d2642e3b16723284f0c}{TICKS\+\_\+\+PER\+\_\+\+TURN}} -\/ g\+\_\+timer.\+ticks\+\_\+turn)
+\begin{DoxyCompactList}\small\item\em Remaining time for the current turn. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{game_8h_a30f65389443e4dac0837d0a8260f216c}{FIRST\+\_\+\+ROUND}}~1
+\begin{DoxyCompactList}\small\item\em Constant representing the first round of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} \{ \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}{PVE}}
+, \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}{PVP}}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible game modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} \{ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}{Circle}} = 0
+, \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}{Cross}} = 1
+, \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Enum describing a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8h_a99a6ceced9c8b9648cc11a086603d66e}{game\+\_\+run}} (const \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Start the main game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a664affa156a0a5fa033bad0b88bb6c72}{game\+\_\+on\+Time\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Automatically end a turn in case the turn time is over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a729e60fc5298c74e80423c136d1f6a5a}{game\+\_\+end\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Finish the current turn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the game logic. 
+
+This file contains the core logic for the Tik\+Tak\+Toe game, including game state management, player handling, and cell state tracking.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{game_8c}{game.\+c}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{game_8h_a30f65389443e4dac0837d0a8260f216c}\label{game_8h_a30f65389443e4dac0837d0a8260f216c} 
+\index{game.h@{game.h}!FIRST\_ROUND@{FIRST\_ROUND}}
+\index{FIRST\_ROUND@{FIRST\_ROUND}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{FIRST\_ROUND}{FIRST\_ROUND}}
+{\footnotesize\ttfamily \#define FIRST\+\_\+\+ROUND~1}
+
+
+
+Constant representing the first round of the game. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00028}{28}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a2870851feea96bc5bf8d094323fcfd44}\label{game_8h_a2870851feea96bc5bf8d094323fcfd44} 
+\index{game.h@{game.h}!REMAINING\_TIME@{REMAINING\_TIME}}
+\index{REMAINING\_TIME@{REMAINING\_TIME}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{REMAINING\_TIME}{REMAINING\_TIME}}
+{\footnotesize\ttfamily \#define REMAINING\+\_\+\+TIME~(\mbox{\hyperlink{config_8h_a61db32789eaf2d2642e3b16723284f0c}{TICKS\+\_\+\+PER\+\_\+\+TURN}} -\/ g\+\_\+timer.\+ticks\+\_\+turn)}
+
+
+
+Remaining time for the current turn. 
+
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00027}{27}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}\label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911} 
+\index{game.h@{game.h}!Mode@{Mode}}
+\index{Mode@{Mode}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}
+
+
+
+Possible game modes. 
+
+The game can be played in Player vs Computer (PVE) or Player vs Player (PVP) mode. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PVE@{PVE}!game.h@{game.h}}\index{game.h@{game.h}!PVE@{PVE}}}\Hypertarget{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3}\label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3} 
+PVE&Player vs Computer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PVP@{PVP}!game.h@{game.h}}\index{game.h@{game.h}!PVP@{PVP}}}\Hypertarget{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f}\label{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f} 
+PVP&Player vs Player. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00035}{35}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+\Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9}\label{game_8h_a9c8780378078e51e7c9041cbac392db9} 
+\index{game.h@{game.h}!Player@{Player}}
+\index{Player@{Player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}}
+
+
+
+Enum describing a player. 
+
+Represents the two players (Circle and Cross) and an unmarked state (None). \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!game.h@{game.h}}\index{game.h@{game.h}!Circle@{Circle}}}\Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489}\label{game_8h_a9c8780378078e51e7c9041cbac392db9ad3ce82743a8255ccd69f5b67d257c489} 
+Circle&Player Circle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cross@{Cross}!game.h@{game.h}}\index{game.h@{game.h}!Cross@{Cross}}}\Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3}\label{game_8h_a9c8780378078e51e7c9041cbac392db9a4b0b165fdbfa58669b15c867754396d3} 
+Cross&Player Cross. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!game.h@{game.h}}\index{game.h@{game.h}!None@{None}}}\Hypertarget{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}\label{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af} 
+None&No player (unmarked) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{game_8h_source_l00046}{46}} of file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8h_a729e60fc5298c74e80423c136d1f6a5a}\label{game_8h_a729e60fc5298c74e80423c136d1f6a5a} 
+\index{game.h@{game.h}!game\_endTurn@{game\_endTurn}}
+\index{game\_endTurn@{game\_endTurn}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_endTurn()}{game\_endTurn()}}
+{\footnotesize\ttfamily void game\+\_\+end\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finish the current turn. 
+
+Updates the game state and switches to the next player or round. 
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00169}{169}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00048}{Circle}}, \mbox{\hyperlink{game_8h_source_l00049}{Cross}}, \mbox{\hyperlink{game_8h_source_l00078}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00077}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00038}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00101}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00100}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00075}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00037}{PVE}}, \mbox{\hyperlink{game_8h_source_l00076}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00099}{Cell\+State\+::selected}}, and \mbox{\hyperlink{time_8c_source_l00042}{time\+\_\+finish\+Turn()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a729e60fc5298c74e80423c136d1f6a5a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a664affa156a0a5fa033bad0b88bb6c72}\label{game_8h_a664affa156a0a5fa033bad0b88bb6c72} 
+\index{game.h@{game.h}!game\_onTimeOut@{game\_onTimeOut}}
+\index{game\_onTimeOut@{game\_onTimeOut}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_onTimeOut()}{game\_onTimeOut()}}
+{\footnotesize\ttfamily void game\+\_\+on\+Time\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Automatically end a turn in case the turn time is over. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{time_8c_ac55568b0a64c8b18a2d2ffc7d50eacaa}{time\+\_\+on\+Interrupt} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00149}{149}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00098}{Cell\+State\+::all}}, \mbox{\hyperlink{bot_8c_source_l00020}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00048}{Circle}}, \mbox{\hyperlink{game_8h_source_l00049}{Cross}}, \mbox{\hyperlink{game_8h_source_l00078}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8c_source_l00036}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{game_8c_source_l00169}{game\+\_\+end\+Turn()}}, \mbox{\hyperlink{game_8c_source_l00038}{game\+\_\+state}}, \mbox{\hyperlink{game_8h_source_l00101}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00100}{Cell\+State\+::last\+\_\+cross}}, \mbox{\hyperlink{game_8h_source_l00075}{Game\+State\+::mode}}, and \mbox{\hyperlink{game_8h_source_l00037}{PVE}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a664affa156a0a5fa033bad0b88bb6c72_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a99a6ceced9c8b9648cc11a086603d66e}\label{game_8h_a99a6ceced9c8b9648cc11a086603d66e} 
+\index{game.h@{game.h}!game\_run@{game\_run}}
+\index{game\_run@{game\_run}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_run()}{game\_run()}}
+{\footnotesize\ttfamily void game\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{game_8h_a46c8a310cf4c094f8c80e1cb8dc1f911}{Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Start the main game. 
+
+Initializes the game and enters the main game loop.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mode} & Which mode the game should be played in. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00082}{82}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00058}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{game_8h_source_l00098}{Cell\+State\+::all}}, \mbox{\hyperlink{style_8h_source_l00056}{BOLD}}, \mbox{\hyperlink{bot_8c_source_l00020}{bot\+\_\+mark\+Random\+Cell()}}, \mbox{\hyperlink{game_8c_source_l00246}{calculate\+Summary()}}, \mbox{\hyperlink{cell_8c_source_l00106}{cell\+\_\+redraw\+\_\+with\+Modifier()}}, \mbox{\hyperlink{cell_8c_source_l00136}{cell\+\_\+redraw\+All()}}, \mbox{\hyperlink{cell_8c_source_l00111}{cell\+\_\+select()}}, \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00060}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00051}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00048}{Circle}}, \mbox{\hyperlink{game_8h_source_l00049}{Cross}}, \mbox{\hyperlink{game_8h_source_l00078}{Game\+State\+::current\+\_\+player}}, \mbox{\hyperlink{game_8h_source_l00077}{Game\+State\+::fields\+\_\+marked}}, \mbox{\hyperlink{game_8c_source_l00036}{force\+\_\+ui\+\_\+update}}, \mbox{\hyperlink{input__buf_8c_source_l00024}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{time_8c_source_l00019}{g\+\_\+timer}}, \mbox{\hyperlink{game_8c_source_l00038}{game\+\_\+state}}, \mbox{\hyperlink{game_8c_source_l00286}{handle\+Forced\+Move\+Update()}}, \mbox{\hyperlink{game_8c_source_l00198}{init()}}, \mbox{\hyperlink{input__buf_8c_source_l00067}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{input_8c_source_l00079}{input\+\_\+handle\+Byte()}}, \mbox{\hyperlink{time_8h_source_l00034}{Game\+Timer\+::is\+\_\+running}}, \mbox{\hyperlink{game_8h_source_l00101}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{math_8h_source_l00052}{max}}, \mbox{\hyperlink{menu_8c_source_l00086}{menu\+\_\+show\+Game\+Over()}}, \mbox{\hyperlink{game_8h_source_l00075}{Game\+State\+::mode}}, \mbox{\hyperlink{game_8h_source_l00050}{None}}, \mbox{\hyperlink{game_8h_source_l00037}{PVE}}, \mbox{\hyperlink{game_8c_source_l00275}{redraw\+Field()}}, \mbox{\hyperlink{game_8h_source_l00027}{REMAINING\+\_\+\+TIME}}, \mbox{\hyperlink{game_8h_source_l00076}{Game\+State\+::round}}, \mbox{\hyperlink{game_8h_source_l00099}{Cell\+State\+::selected}}, \mbox{\hyperlink{config_8h_source_l00069}{TICKS\+\_\+\+PER\+\_\+\+TURN}}, \mbox{\hyperlink{timer_8h_source_l00081}{TIMER0}}, \mbox{\hyperlink{timer_8c_source_l00099}{timer\+\_\+stop()}}, \mbox{\hyperlink{ui_8c_source_l00034}{ui\+\_\+update\+Timer()}}, \mbox{\hyperlink{ui_8c_source_l00096}{ui\+\_\+update\+Turn()}}, \mbox{\hyperlink{game_8h_source_l00074}{Game\+State\+::winner}}, and \mbox{\hyperlink{winning_8c_source_l00046}{winning\+\_\+check\+For\+Winner()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a99a6ceced9c8b9648cc11a086603d66e_icgraph}
+\end{center}
+\end{figure}

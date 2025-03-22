@@ -1,0 +1,11 @@
+<map id="handleEscapeSequence" name="handleEscapeSequence">
+<area shape="rect" id="Node000001" title="Handles escape sequences for navigation." alt="" coords="641,5,815,33"/>
+<area shape="rect" id="Node000002" href="$d1/d06/input_8c.html#a3082ccbda618aa1099677e2e7ac9d5f6" title="Handles an input byte and updates game and cell states." alt="" coords="457,5,593,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="625,22,593,22,593,16,625,16"/>
+<area shape="rect" id="Node000003" href="$d1/dcb/game_8c.html#a99a6ceced9c8b9648cc11a086603d66e" title="Start the main game." alt="" coords="323,5,409,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,22,410,22,410,16,442,16"/>
+<area shape="rect" id="Node000004" href="$d2/d0a/menu_8c.html#a1692d3cd85ed442706f90d6b6f60613f" title="Displays the main menu and handles user input." alt="" coords="108,5,275,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="308,22,275,22,275,16,308,16"/>
+<area shape="rect" id="Node000005" href="$d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic&#45;Tac&#45;Toe application." alt="" coords="5,5,60,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="92,22,60,22,60,16,92,16"/>
+</map>

@@ -93,12 +93,12 @@ These can be set by:
 ### Directly passing to CMake
 When configuring the project the default command `cmake --preset arm-cortex-m0-{unix/mingw}` can be
 appended by:
-- for the number of rows: `[...] --DCELLS_PER_COL=$(NUMBER)`
-- for the number of cols: `[...] --DCELLS_PER_ROW=$(NUMBER)`
-- for ticks per turn: `[...] --DTICKS_PER_TURN=$(NUMBER)`
-- for tick speed: `[...] --DTICK_SPEED=$(NUMBER)`
-- for unicode: `[...] --DENABLE_UNICODE=$(ON/OFF)`
-- for ascii art: `[...] --DENABLE_ASCII_ART=$(ON/OFF)`
+- for the number of rows: `[...] -DCELLS_PER_COL=$(NUMBER)`
+- for the number of cols: `[...] -DCELLS_PER_ROW=$(NUMBER)`
+- for ticks per turn: `[...] -DTICKS_PER_TURN=$(NUMBER)`
+- for tick speed: `[...] -DTICK_SPEED=$(NUMBER)`
+- for unicode: `[...] -DENABLE_UNICODE=$(ON/OFF)`
+- for ascii art: `[...] -DENABLE_ASCII_ART=$(ON/OFF)`
 _All options can be combined._
 
 

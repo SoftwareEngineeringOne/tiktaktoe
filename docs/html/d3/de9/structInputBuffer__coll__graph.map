@@ -1,0 +1,7 @@
+<map id="InputBuffer" name="InputBuffer">
+<area shape="rect" id="Node000001" title="RingBuffer for fixed memory footprint." alt="" coords="38,115,132,143"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,72,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,46,82,114,77,116,48,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,5,170,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,49,106,92,95,116,90,113,101,90,120,46"/>
+</map>

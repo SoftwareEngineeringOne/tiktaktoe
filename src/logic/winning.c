@@ -1,33 +1,40 @@
+/**
+ * @file winning.c
+ *
+ * @brief Implements the function for checking if someone has won
+ *
+ * @details
+ * This file contains the implementation of the logic for determining if a player
+ * has won in the game. It includes the main function and helper functions for
+ * evaluating the game state.
+ *
+ * @see winning.h
+ *
+ * @copyright
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
 #include "logic/winning.h"
 
 /**
  * @brief Checks if the given player has won
  *
  * @details
- * VICTORY ALGORITHM
- * Vertical / Horizontal:
- * The algorithm starts at the border and iterates to the other side. It goes in 2 different
- * directions and counts on 2 axes. It runs in one of the directions till a cell is reached that
- * is not marked by our player. Diagonal: The algorithm starts at the given cell coordinates. It
- * goes in 4 different direction and counts on 2 axes. Every step in one of the directions
- * increments the dedicated axis until a cell is reached that is not marked by our player.
+ * This function evaluates the game board to determine if the specified player has won.
+ * It checks vertical, horizontal, and diagonal lines originating from the last marked
+ * cell of the player. If a winning condition is met, the relevant cells are written
+ * to the provided buffer.
  *
- * The return value is true when one axis or more axes has / have reached the win condition
- * (line to the other side).
- *  UP      UP     UP          | axis       | direction 1 | direction 2 |
- * LEFT           RIGHT        |------------+-------------+-------------|
- *        \ | /                | vertical   | down        |             |
- * LEFT  ---+---> RIGHT        | horizontal | right       |             |
- *        / | \                | diagonal_1 | up right    | down left   |
- * DOWN     v     DOWN         | diagonal_2 | up left     | down right  |
- * LEFT    DOWN   RIGHT
+ * @param[in] cell Last marked cell of the player
+ * @param[in] player Player it is looking for
+ * @param[in] cell_state Current state of the game board
+ * @param[out] winner_cells Buffer to store the cells forming the winning line
  *
- * @param [in] cell Last marked cell of the player
- * @param [in] player Player it is looking for
- * @param [in] cell_state
- * @param [out] winner_cells
+ * @return True if the player has won, false otherwise
  *
- * @return True if player won
+ * @internal
  */
 static bool checkIfPlayerWon(
     const Cell *cell,

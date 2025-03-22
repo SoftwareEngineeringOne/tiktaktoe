@@ -1,0 +1,58 @@
+.TH "GameTimer" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameTimer \- Time information of the current game\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <time\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBis_running\fP"
+.br
+.RI "Indicates if the timer is currently running\&. "
+.ti -1c
+.RI "volatile uint32_t \fBticks_total\fP"
+.br
+.RI "Total ticks since the game started\&. "
+.ti -1c
+.RI "volatile uint32_t \fBticks_turn\fP"
+.br
+.RI "Ticks elapsed during the current turn\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Time information of the current game\&. 
+
+This struct tracks whether the timer is running and the number of ticks elapsed in total and during the current turn\&. 
+.PP
+Definition at line \fB32\fP of file \fBtime\&.h\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBbool\fP GameTimer::is_running"
+
+.PP
+Indicates if the timer is currently running\&. 
+.PP
+Definition at line \fB34\fP of file \fBtime\&.h\fP\&.
+.SS "volatile uint32_t GameTimer::ticks_total"
+
+.PP
+Total ticks since the game started\&. 
+.PP
+Definition at line \fB35\fP of file \fBtime\&.h\fP\&.
+.SS "volatile uint32_t GameTimer::ticks_turn"
+
+.PP
+Ticks elapsed during the current turn\&. 
+.PP
+Definition at line \fB36\fP of file \fBtime\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

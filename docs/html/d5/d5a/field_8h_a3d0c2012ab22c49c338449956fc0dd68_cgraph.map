@@ -1,0 +1,18 @@
+<map id="field_redraw" name="field_redraw">
+<area shape="rect" id="Node000001" title="Redraw the whole 2D field." alt="" coords="5,84,107,112"/>
+<area shape="rect" id="Node000002" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="155,57,274,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,87,138,81,139,86,107,92"/>
+<area shape="rect" id="Node000008" href="$dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a" title="Print one row of the field." alt="" coords="175,109,254,137"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="107,103,160,112,159,117,107,109"/>
+<area shape="rect" id="Node000003" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="342,5,424,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="261,54,326,34,328,39,263,59"/>
+<area shape="rect" id="Node000004" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="357,109,408,137"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="263,83,343,108,341,113,261,88"/>
+<area shape="rect" id="Node000007" href="$dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="322,57,443,85"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="275,68,306,68,306,74,275,74"/>
+<area shape="rect" id="Node000005" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="491,109,609,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="409,120,476,120,476,126,409,126"/>
+<area shape="rect" id="Node000006" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="657,109,768,137"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="609,120,641,120,641,126,609,126"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="255,120,341,120,341,126,255,126"/>
+</map>

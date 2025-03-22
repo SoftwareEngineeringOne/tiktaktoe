@@ -1,0 +1,70 @@
+.TH "logic/input.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logic/input.h \- Contains the input handling of the game\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'def\&.h'\fP
+.br
+\fR#include 'logic/game\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbool\fP \fBinput_handleByte\fP (const uint8_t *byte, \fBGameState\fP *\fBgame_state\fP, \fBCellState\fP *\fBcell_state\fP)"
+.br
+.RI "Handles an input byte and updates game and cell states\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the input handling of the game\&. 
+
+This file provides the interface for handling user input during the game, including processing key presses and updating game and cell states\&.
+.PP
+\fBSee also\fP
+.RS 4
+\fBinput\&.c\fP
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBinput\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBbool\fP input_handleByte (const uint8_t * byte, \fBGameState\fP * game_state, \fBCellState\fP * cell_state)"
+
+.PP
+Handles an input byte and updates game and cell states\&. Processes the input byte to determine the appropriate action, such as marking a cell, navigating the board, or pausing the game\&. Updates the game state and cell state accordingly\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIbyte\fP The input byte to process\&. 
+.br
+\fIgame_state\fP Pointer to the current game state\&. 
+.br
+\fIcell_state\fP Pointer to the current cell state\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if a field redraw is needed, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB79\fP of file \fBinput\&.c\fP\&.
+.PP
+References \fBcell_decreaseSize()\fP, \fBcell_increaseSize()\fP, \fBcell_state\fP, \fBg_timer\fP, \fBgame_state\fP, \fBhandleEscapeSequence()\fP, \fBhandlePauseResume()\fP, \fBhandleSetMark()\fP, \fBGameTimer::is_running\fP, and \fBopenControls()\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

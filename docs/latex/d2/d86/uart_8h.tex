@@ -1,0 +1,634 @@
+\doxysection{hal/uart.h File Reference}
+\hypertarget{uart_8h}{}\label{uart_8h}\index{hal/uart.h@{hal/uart.h}}
+
+
+Contains constants and abstraction functions for the UART device.  
+
+
+{\ttfamily \#include "{}def.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for uart.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d5/d4e/uart_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d48/uart_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8h_a0c9e0649d549fffb69c5f2dd11792a50}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}~0x40002000
+\begin{DoxyCompactList}\small\item\em Base address for UART registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a2e5856627fda6759e7bf18140cf33bc9}{UART\+\_\+\+STARTRX}}~0x000
+\begin{DoxyCompactList}\small\item\em Start UART receiver. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a1cef388fd95709520e4d199ea62f7b4d}{UART\+\_\+\+STOPRX}}~0x004
+\begin{DoxyCompactList}\small\item\em Stop UART receiver. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aba22845d60f423ea9e2d41071e7ff992}{UART\+\_\+\+STARTTX}}~0x008
+\begin{DoxyCompactList}\small\item\em Start UART transmitter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a286911205b396bd2f0076db6e5f45d96}{UART\+\_\+\+STOPTX}}~0x00C
+\begin{DoxyCompactList}\small\item\em Stop UART transmitter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a7aa5af25376c5d34c8a83913c4d35bbd}{UART\+\_\+\+SUSPEND}}~0x01C
+\begin{DoxyCompactList}\small\item\em Suspend UART. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a5bc79c66a459104df30ee65f45f90ccb}{UART\+\_\+\+CTS}}~0x100
+\begin{DoxyCompactList}\small\item\em CTS is activated (set low). Clear To Send. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aac3f33057926204bfee77bb6526bfbe9}{UART\+\_\+\+NCTS}}~0x104
+\begin{DoxyCompactList}\small\item\em CTS is deactivated (set high). Not Clear To Send. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a53cef6d14ac8edc7cc0c3799882ef08d}{UART\+\_\+\+RXDRDY}}~0x108
+\begin{DoxyCompactList}\small\item\em Data received in RXD. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_adb34fbd67b19b7888bebc8079903eb9b}{UART\+\_\+\+TXDRDY}}~0x11C
+\begin{DoxyCompactList}\small\item\em Data sent from TXD. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a7e3562e7931cf51b41a32d8109072251}{UART\+\_\+\+ERROR}}~0x124
+\begin{DoxyCompactList}\small\item\em Error detected. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a607cba7979bafd90a119ba16a17a880c}{UART\+\_\+\+RXTO}}~0x144
+\begin{DoxyCompactList}\small\item\em Receiver timeout. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a98eda3507a244bf3c420da55d0d4891f}{UART\+\_\+\+INTEN}}~0x300
+\begin{DoxyCompactList}\small\item\em Enable or disable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_ac02520a24ed985dc1c73cd402db10f9c}{UART\+\_\+\+INTENSET}}~0x304
+\begin{DoxyCompactList}\small\item\em Enable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a5767ccf2003948119bc7135026689631}{UART\+\_\+\+INTENCLR}}~0x308
+\begin{DoxyCompactList}\small\item\em Disable interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aad83c771db123703c81d3bfc95027749}{UART\+\_\+\+ERRORSRC}}~0x480
+\begin{DoxyCompactList}\small\item\em Error source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\+\_\+\+ENABLE}}~0x500
+\begin{DoxyCompactList}\small\item\em Enable UART. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a72cf6b73351bcfc27a4a48fc2183df2c}{UART\+\_\+\+PSELRTS}}~0x508
+\begin{DoxyCompactList}\small\item\em Pin select for RTS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a4d6e18ad6cefe93d80e17c8c37d73b1a}{UART\+\_\+\+PSELTXD}}~0x50C
+\begin{DoxyCompactList}\small\item\em Pin select for TXD. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a397709cb1934aacfd4e70d297a569117}{UART\+\_\+\+PSELCTS}}~0x510
+\begin{DoxyCompactList}\small\item\em Pin select for CTS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a4bf4b4bcca5cc6675839754ad527dc64}{UART\+\_\+\+PSELRXD}}~0x514
+\begin{DoxyCompactList}\small\item\em Pin select for RXD. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a89e30ef9081c8bdc9c7799990a57c133}{UART\+\_\+\+RXD}}~0x518
+\begin{DoxyCompactList}\small\item\em RXD register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a92a783385325f2ce25693bc5beafc49c}{UART\+\_\+\+TXD}}~0x51C
+\begin{DoxyCompactList}\small\item\em TXD register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a2c7ed0283bd6f2f9d791860d6254ef4f}{UART\+\_\+\+BAUDRATE}}~0x524
+\begin{DoxyCompactList}\small\item\em Baud rate. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_acd8bb09dd5fa3c053ab3473d094b6dd1}{UART\+\_\+\+CONFIG}}~0x56C
+\begin{DoxyCompactList}\small\item\em Configuration of parity and hardware flow control. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a09c2bf120db802296753dc07a78d559c}{UART\+\_\+\+TASK\+\_\+\+START}}~1
+\begin{DoxyCompactList}\small\item\em Value for starting a Task. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a18ee312d0b2a815b51a05be85a7eef93}{UART\+\_\+\+EVENT\+\_\+\+TRIGGER}}~1
+\begin{DoxyCompactList}\small\item\em Value for setting/starting an Event. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a6ae1781451737df3d86cac06e68ecc82}{UART\+\_\+\+EVENT\+\_\+\+CLEAR}}~0
+\begin{DoxyCompactList}\small\item\em Value for clearing/stopping an Event. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{uart_8h_a4bd4af56cdc06cc4636939d48ca9e3f6}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}~(1 $<$$<$ 2)
+\begin{DoxyCompactList}\small\item\em Interrupt bit for RXDRDY event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8h_a3606fcc4d5cdadc08d4b6e7df7f34f69}{uart\+\_\+init}} (\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} with\+\_\+interrupts)
+\begin{DoxyCompactList}\small\item\em Initializes the UART with the following settings\+: 115200-\/8-\/N-\/1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a71bfcaa34f4c6ac6233d39ed5f8c87b5}{uart\+\_\+write\+Byte}} (uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Writes/\+Sends a byte over the serial port. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab}{uart\+\_\+read\+Byte}} ()
+\begin{DoxyCompactList}\small\item\em Reads/\+Receives a byte from the serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains constants and abstraction functions for the UART device. 
+
+This file provides macros for UART register offsets, tasks, events, and other configurations. It also declares functions for initializing the UART, sending, and receiving data.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{uart_8c}{uart.\+c}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Based on version by Thomas Vogt
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{uart_8h_a0c9e0649d549fffb69c5f2dd11792a50}\label{uart_8h_a0c9e0649d549fffb69c5f2dd11792a50} 
+\index{uart.h@{uart.h}!UART\_BASE\_ADDRESS@{UART\_BASE\_ADDRESS}}
+\index{UART\_BASE\_ADDRESS@{UART\_BASE\_ADDRESS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_BASE\_ADDRESS}{UART\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+BASE\+\_\+\+ADDRESS~0x40002000}
+
+
+
+Base address for UART registers. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00031}{31}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a2c7ed0283bd6f2f9d791860d6254ef4f}\label{uart_8h_a2c7ed0283bd6f2f9d791860d6254ef4f} 
+\index{uart.h@{uart.h}!UART\_BAUDRATE@{UART\_BAUDRATE}}
+\index{UART\_BAUDRATE@{UART\_BAUDRATE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_BAUDRATE}{UART\_BAUDRATE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+BAUDRATE~0x524}
+
+
+
+Baud rate. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00061}{61}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_acd8bb09dd5fa3c053ab3473d094b6dd1}\label{uart_8h_acd8bb09dd5fa3c053ab3473d094b6dd1} 
+\index{uart.h@{uart.h}!UART\_CONFIG@{UART\_CONFIG}}
+\index{UART\_CONFIG@{UART\_CONFIG}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG}{UART\_CONFIG}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG~0x56C}
+
+
+
+Configuration of parity and hardware flow control. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00062}{62}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a5bc79c66a459104df30ee65f45f90ccb}\label{uart_8h_a5bc79c66a459104df30ee65f45f90ccb} 
+\index{uart.h@{uart.h}!UART\_CTS@{UART\_CTS}}
+\index{UART\_CTS@{UART\_CTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CTS}{UART\_CTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CTS~0x100}
+
+
+
+CTS is activated (set low). Clear To Send. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00042}{42}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_aaaf6c77e3b8fec12ad625225a08c4f28}\label{uart_8h_aaaf6c77e3b8fec12ad625225a08c4f28} 
+\index{uart.h@{uart.h}!UART\_ENABLE@{UART\_ENABLE}}
+\index{UART\_ENABLE@{UART\_ENABLE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_ENABLE}{UART\_ENABLE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+ENABLE~0x500}
+
+
+
+Enable UART. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00054}{54}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a7e3562e7931cf51b41a32d8109072251}\label{uart_8h_a7e3562e7931cf51b41a32d8109072251} 
+\index{uart.h@{uart.h}!UART\_ERROR@{UART\_ERROR}}
+\index{UART\_ERROR@{UART\_ERROR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_ERROR}{UART\_ERROR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+ERROR~0x124}
+
+
+
+Error detected. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00046}{46}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_aad83c771db123703c81d3bfc95027749}\label{uart_8h_aad83c771db123703c81d3bfc95027749} 
+\index{uart.h@{uart.h}!UART\_ERRORSRC@{UART\_ERRORSRC}}
+\index{UART\_ERRORSRC@{UART\_ERRORSRC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_ERRORSRC}{UART\_ERRORSRC}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+ERRORSRC~0x480}
+
+
+
+Error source. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00053}{53}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a6ae1781451737df3d86cac06e68ecc82}\label{uart_8h_a6ae1781451737df3d86cac06e68ecc82} 
+\index{uart.h@{uart.h}!UART\_EVENT\_CLEAR@{UART\_EVENT\_CLEAR}}
+\index{UART\_EVENT\_CLEAR@{UART\_EVENT\_CLEAR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_EVENT\_CLEAR}{UART\_EVENT\_CLEAR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+EVENT\+\_\+\+CLEAR~0}
+
+
+
+Value for clearing/stopping an Event. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00067}{67}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a18ee312d0b2a815b51a05be85a7eef93}\label{uart_8h_a18ee312d0b2a815b51a05be85a7eef93} 
+\index{uart.h@{uart.h}!UART\_EVENT\_TRIGGER@{UART\_EVENT\_TRIGGER}}
+\index{UART\_EVENT\_TRIGGER@{UART\_EVENT\_TRIGGER}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_EVENT\_TRIGGER}{UART\_EVENT\_TRIGGER}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+EVENT\+\_\+\+TRIGGER~1}
+
+
+
+Value for setting/starting an Event. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00066}{66}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a4bd4af56cdc06cc4636939d48ca9e3f6}\label{uart_8h_a4bd4af56cdc06cc4636939d48ca9e3f6} 
+\index{uart.h@{uart.h}!UART\_INT\_RXDRDY@{UART\_INT\_RXDRDY}}
+\index{UART\_INT\_RXDRDY@{UART\_INT\_RXDRDY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_RXDRDY}{UART\_INT\_RXDRDY}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+RXDRDY~(1 $<$$<$ 2)}
+
+
+
+Interrupt bit for RXDRDY event. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00069}{69}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a98eda3507a244bf3c420da55d0d4891f}\label{uart_8h_a98eda3507a244bf3c420da55d0d4891f} 
+\index{uart.h@{uart.h}!UART\_INTEN@{UART\_INTEN}}
+\index{UART\_INTEN@{UART\_INTEN}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INTEN}{UART\_INTEN}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INTEN~0x300}
+
+
+
+Enable or disable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00050}{50}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a5767ccf2003948119bc7135026689631}\label{uart_8h_a5767ccf2003948119bc7135026689631} 
+\index{uart.h@{uart.h}!UART\_INTENCLR@{UART\_INTENCLR}}
+\index{UART\_INTENCLR@{UART\_INTENCLR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INTENCLR}{UART\_INTENCLR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INTENCLR~0x308}
+
+
+
+Disable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00052}{52}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_ac02520a24ed985dc1c73cd402db10f9c}\label{uart_8h_ac02520a24ed985dc1c73cd402db10f9c} 
+\index{uart.h@{uart.h}!UART\_INTENSET@{UART\_INTENSET}}
+\index{UART\_INTENSET@{UART\_INTENSET}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INTENSET}{UART\_INTENSET}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INTENSET~0x304}
+
+
+
+Enable interrupt. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00051}{51}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_aac3f33057926204bfee77bb6526bfbe9}\label{uart_8h_aac3f33057926204bfee77bb6526bfbe9} 
+\index{uart.h@{uart.h}!UART\_NCTS@{UART\_NCTS}}
+\index{UART\_NCTS@{UART\_NCTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_NCTS}{UART\_NCTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+NCTS~0x104}
+
+
+
+CTS is deactivated (set high). Not Clear To Send. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00043}{43}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a397709cb1934aacfd4e70d297a569117}\label{uart_8h_a397709cb1934aacfd4e70d297a569117} 
+\index{uart.h@{uart.h}!UART\_PSELCTS@{UART\_PSELCTS}}
+\index{UART\_PSELCTS@{UART\_PSELCTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_PSELCTS}{UART\_PSELCTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PSELCTS~0x510}
+
+
+
+Pin select for CTS. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00057}{57}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a72cf6b73351bcfc27a4a48fc2183df2c}\label{uart_8h_a72cf6b73351bcfc27a4a48fc2183df2c} 
+\index{uart.h@{uart.h}!UART\_PSELRTS@{UART\_PSELRTS}}
+\index{UART\_PSELRTS@{UART\_PSELRTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_PSELRTS}{UART\_PSELRTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PSELRTS~0x508}
+
+
+
+Pin select for RTS. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00055}{55}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a4bf4b4bcca5cc6675839754ad527dc64}\label{uart_8h_a4bf4b4bcca5cc6675839754ad527dc64} 
+\index{uart.h@{uart.h}!UART\_PSELRXD@{UART\_PSELRXD}}
+\index{UART\_PSELRXD@{UART\_PSELRXD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_PSELRXD}{UART\_PSELRXD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PSELRXD~0x514}
+
+
+
+Pin select for RXD. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00058}{58}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a4d6e18ad6cefe93d80e17c8c37d73b1a}\label{uart_8h_a4d6e18ad6cefe93d80e17c8c37d73b1a} 
+\index{uart.h@{uart.h}!UART\_PSELTXD@{UART\_PSELTXD}}
+\index{UART\_PSELTXD@{UART\_PSELTXD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_PSELTXD}{UART\_PSELTXD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PSELTXD~0x50C}
+
+
+
+Pin select for TXD. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00056}{56}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a89e30ef9081c8bdc9c7799990a57c133}\label{uart_8h_a89e30ef9081c8bdc9c7799990a57c133} 
+\index{uart.h@{uart.h}!UART\_RXD@{UART\_RXD}}
+\index{UART\_RXD@{UART\_RXD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXD}{UART\_RXD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXD~0x518}
+
+
+
+RXD register. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00059}{59}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a53cef6d14ac8edc7cc0c3799882ef08d}\label{uart_8h_a53cef6d14ac8edc7cc0c3799882ef08d} 
+\index{uart.h@{uart.h}!UART\_RXDRDY@{UART\_RXDRDY}}
+\index{UART\_RXDRDY@{UART\_RXDRDY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXDRDY}{UART\_RXDRDY}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXDRDY~0x108}
+
+
+
+Data received in RXD. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00044}{44}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a607cba7979bafd90a119ba16a17a880c}\label{uart_8h_a607cba7979bafd90a119ba16a17a880c} 
+\index{uart.h@{uart.h}!UART\_RXTO@{UART\_RXTO}}
+\index{UART\_RXTO@{UART\_RXTO}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXTO}{UART\_RXTO}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXTO~0x144}
+
+
+
+Receiver timeout. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00047}{47}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a2e5856627fda6759e7bf18140cf33bc9}\label{uart_8h_a2e5856627fda6759e7bf18140cf33bc9} 
+\index{uart.h@{uart.h}!UART\_STARTRX@{UART\_STARTRX}}
+\index{UART\_STARTRX@{UART\_STARTRX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_STARTRX}{UART\_STARTRX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+STARTRX~0x000}
+
+
+
+Start UART receiver. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00035}{35}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_aba22845d60f423ea9e2d41071e7ff992}\label{uart_8h_aba22845d60f423ea9e2d41071e7ff992} 
+\index{uart.h@{uart.h}!UART\_STARTTX@{UART\_STARTTX}}
+\index{UART\_STARTTX@{UART\_STARTTX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_STARTTX}{UART\_STARTTX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+STARTTX~0x008}
+
+
+
+Start UART transmitter. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00037}{37}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a1cef388fd95709520e4d199ea62f7b4d}\label{uart_8h_a1cef388fd95709520e4d199ea62f7b4d} 
+\index{uart.h@{uart.h}!UART\_STOPRX@{UART\_STOPRX}}
+\index{UART\_STOPRX@{UART\_STOPRX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_STOPRX}{UART\_STOPRX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+STOPRX~0x004}
+
+
+
+Stop UART receiver. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00036}{36}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a286911205b396bd2f0076db6e5f45d96}\label{uart_8h_a286911205b396bd2f0076db6e5f45d96} 
+\index{uart.h@{uart.h}!UART\_STOPTX@{UART\_STOPTX}}
+\index{UART\_STOPTX@{UART\_STOPTX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_STOPTX}{UART\_STOPTX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+STOPTX~0x00C}
+
+
+
+Stop UART transmitter. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00038}{38}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a7aa5af25376c5d34c8a83913c4d35bbd}\label{uart_8h_a7aa5af25376c5d34c8a83913c4d35bbd} 
+\index{uart.h@{uart.h}!UART\_SUSPEND@{UART\_SUSPEND}}
+\index{UART\_SUSPEND@{UART\_SUSPEND}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_SUSPEND}{UART\_SUSPEND}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+SUSPEND~0x01C}
+
+
+
+Suspend UART. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00039}{39}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a09c2bf120db802296753dc07a78d559c}\label{uart_8h_a09c2bf120db802296753dc07a78d559c} 
+\index{uart.h@{uart.h}!UART\_TASK\_START@{UART\_TASK\_START}}
+\index{UART\_TASK\_START@{UART\_TASK\_START}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TASK\_START}{UART\_TASK\_START}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+TASK\+\_\+\+START~1}
+
+
+
+Value for starting a Task. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00065}{65}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_a92a783385325f2ce25693bc5beafc49c}\label{uart_8h_a92a783385325f2ce25693bc5beafc49c} 
+\index{uart.h@{uart.h}!UART\_TXD@{UART\_TXD}}
+\index{UART\_TXD@{UART\_TXD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TXD}{UART\_TXD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+TXD~0x51C}
+
+
+
+TXD register. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00060}{60}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+\Hypertarget{uart_8h_adb34fbd67b19b7888bebc8079903eb9b}\label{uart_8h_adb34fbd67b19b7888bebc8079903eb9b} 
+\index{uart.h@{uart.h}!UART\_TXDRDY@{UART\_TXDRDY}}
+\index{UART\_TXDRDY@{UART\_TXDRDY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TXDRDY}{UART\_TXDRDY}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+TXDRDY~0x11C}
+
+
+
+Data sent from TXD. 
+
+
+
+Definition at line \mbox{\hyperlink{uart_8h_source_l00045}{45}} of file \mbox{\hyperlink{uart_8h_source}{uart.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{uart_8h_a3606fcc4d5cdadc08d4b6e7df7f34f69}\label{uart_8h_a3606fcc4d5cdadc08d4b6e7df7f34f69} 
+\index{uart.h@{uart.h}!uart\_init@{uart\_init}}
+\index{uart\_init@{uart\_init}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_init()}{uart\_init()}}
+{\footnotesize\ttfamily void uart\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}}}]{with\+\_\+interrupts }\end{DoxyParamCaption})}
+
+
+
+Initializes the UART with the following settings\+: 115200-\/8-\/N-\/1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em with\+\_\+interrupts} & Whether or not interrupts should be triggered. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00020}{20}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00044}{Interrupt\+\_\+\+ID2}}, \mbox{\hyperlink{nvic_8h_source_l00041}{Interrupt\+\_\+\+Set\+\_\+\+Enable}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00054}{UART\+\_\+\+ENABLE}}, \mbox{\hyperlink{uart_8h_source_l00069}{UART\+\_\+\+INT\+\_\+\+RXDRDY}}, \mbox{\hyperlink{uart_8h_source_l00051}{UART\+\_\+\+INTENSET}}, \mbox{\hyperlink{uart_8h_source_l00035}{UART\+\_\+\+STARTRX}}, \mbox{\hyperlink{uart_8h_source_l00037}{UART\+\_\+\+STARTTX}}, and \mbox{\hyperlink{uart_8h_source_l00065}{UART\+\_\+\+TASK\+\_\+\+START}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{d2/d86/uart_8h_a3606fcc4d5cdadc08d4b6e7df7f34f69_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{d2/d86/uart_8h_a3606fcc4d5cdadc08d4b6e7df7f34f69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab}\label{uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab} 
+\index{uart.h@{uart.h}!uart\_readByte@{uart\_readByte}}
+\index{uart\_readByte@{uart\_readByte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_readByte()}{uart\_readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t uart\+\_\+read\+Byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads/\+Receives a byte from the serial port. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Received byte or 0 (zero) if nothing was received. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00062}{62}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00029}{register\+\_\+read()}}, \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, \mbox{\hyperlink{uart_8h_source_l00067}{UART\+\_\+\+EVENT\+\_\+\+CLEAR}}, \mbox{\hyperlink{uart_8h_source_l00059}{UART\+\_\+\+RXD}}, and \mbox{\hyperlink{uart_8h_source_l00044}{UART\+\_\+\+RXDRDY}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{d2/d86/uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d86/uart_8h_a991a6e99e9369a11dcf02bdf1d1ba6ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a71bfcaa34f4c6ac6233d39ed5f8c87b5}\label{uart_8h_a71bfcaa34f4c6ac6233d39ed5f8c87b5} 
+\index{uart.h@{uart.h}!uart\_writeByte@{uart\_writeByte}}
+\index{uart\_writeByte@{uart\_writeByte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_writeByte()}{uart\_writeByte()}}
+{\footnotesize\ttfamily void uart\+\_\+write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes/\+Sends a byte over the serial port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Byte to send. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00054}{54}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+
+
+References \mbox{\hyperlink{register__access_8c_source_l00020}{register\+\_\+write()}}, \mbox{\hyperlink{uart_8h_source_l00031}{UART\+\_\+\+BASE\+\_\+\+ADDRESS}}, and \mbox{\hyperlink{uart_8h_source_l00060}{UART\+\_\+\+TXD}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d2/d86/uart_8h_a71bfcaa34f4c6ac6233d39ed5f8c87b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d86/uart_8h_a71bfcaa34f4c6ac6233d39ed5f8c87b5_icgraph}
+\end{center}
+\end{figure}

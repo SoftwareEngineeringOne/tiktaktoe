@@ -1,0 +1,28 @@
+\doxysection{bot.\+c}
+\hypertarget{bot_8c_source}{}\label{bot_8c_source}\index{logic/bot.c@{logic/bot.c}}
+\mbox{\hyperlink{bot_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bot_8h}{logic/bot.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{random_8h}{hal/random.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{logic/game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00020}\mbox{\hyperlink{bot_8c_a35e54b11b140786344c2cf1a75251f5f}{00020}}\ \mbox{\hyperlink{structCell}{Cell}}\ *\mbox{\hyperlink{bot_8c_a35e54b11b140786344c2cf1a75251f5f}{bot\_markRandomCell}}(\mbox{\hyperlink{structCell}{Cell}}\ cells[\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}}][\mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}}],\ \textcolor{keyword}{const}\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}\ marked\_by)}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ col\ =\ \mbox{\hyperlink{random_8c_a0cc8207c13dfa65a8279450efa1751d3}{rng\_getRandomValue\_waiting}}()\ \%\ \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\_PER\_ROW}};}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ row\ =\ \mbox{\hyperlink{random_8c_a0cc8207c13dfa65a8279450efa1751d3}{rng\_getRandomValue\_waiting}}()\ \%\ \mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\_PER\_COL}};}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(cells[row][col].marked\_by\ ==\ \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9ac9d3e887722f2bc482bcca9d41c512af}{None}})}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ cells[row][col].marked\_by\ =\ marked\_by;}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCell}{Cell}}\ *cell\ =\ \&cells[row][col];}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ cell\_redraw(cell);\ */}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cell;}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{bot_8c_source_l00035}00035\ \}}
+
+\end{DoxyCode}

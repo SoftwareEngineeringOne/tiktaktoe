@@ -951,6 +951,7 @@ WARN_LOGFILE           =
 
 INPUT                  = src \
                          include \
+                         entry \
                          README.md \
                          Architecture.md \
                          Conventions.md
@@ -1043,7 +1044,9 @@ FILE_PATTERNS          = *.c \
                          *.vhdl \
                          *.ucf \
                          *.qsf \
-                         *.ice
+                         *.ice \
+                         *.S \
+                         *.ld
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.

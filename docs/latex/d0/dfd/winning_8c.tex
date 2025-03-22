@@ -1,0 +1,127 @@
+\doxysection{logic/winning.c File Reference}
+\hypertarget{winning_8c}{}\label{winning_8c}\index{logic/winning.c@{logic/winning.c}}
+
+
+Implements the function for checking if someone has won.  
+
+
+{\ttfamily \#include "{}logic/winning.\+h"{}}\newline
+Include dependency graph for winning.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d32/winning_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} \mbox{\hyperlink{winning_8c_a8cb661cf3adab5e96933f0673b163eed}{check\+If\+Player\+Won}} (const \mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}cell, \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} player, \mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}}, \mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}winner\+\_\+cells\mbox{[}\mbox{\hyperlink{math_8h_affe776513b24d84b39af8ab0930fef7f}{max}}(\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\+\_\+\+PER\+\_\+\+ROW}})\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} \mbox{\hyperlink{winning_8c_af938c2e846f22abb47204c30c0bc316c}{winning\+\_\+check\+For\+Winner}} (\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_a6d775e66faffca9c94176dacd93a7e26}{cell\+\_\+state}}, \mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}winner\+\_\+cells\mbox{[}\mbox{\hyperlink{math_8h_affe776513b24d84b39af8ab0930fef7f}{max}}(\mbox{\hyperlink{config_8h_a3747fdaf04721d720705ef97c22908cd}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_a07b4f852ff896fc9831e6e4d3a8e9b60}{CELLS\+\_\+\+PER\+\_\+\+ROW}})\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks at the end of the round if someone has won. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the function for checking if someone has won. 
+
+This file contains the implementation of the logic for determining if a player has won in the game. It includes the main function and helper functions for evaluating the game state.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{winning_8h}{winning.\+h}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{winning_8c_source}{winning.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{winning_8c_a8cb661cf3adab5e96933f0673b163eed}\label{winning_8c_a8cb661cf3adab5e96933f0673b163eed} 
+\index{winning.c@{winning.c}!checkIfPlayerWon@{checkIfPlayerWon}}
+\index{checkIfPlayerWon@{checkIfPlayerWon}!winning.c@{winning.c}}
+\doxysubsubsection{\texorpdfstring{checkIfPlayerWon()}{checkIfPlayerWon()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{def_8h_ad5c9d4ba3dc37783a528b0925dc981a0}{bool}} check\+If\+Player\+Won (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}}]{cell,  }\item[{\mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}}}]{player,  }\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state,  }\item[{\mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}}]{winner\+\_\+cells\mbox{[}max(\+CELLS\+\_\+\+PER\+\_\+\+COL, CELLS\+\_\+\+PER\+\_\+\+ROW)\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if the given player has won. 
+
+This function evaluates the game board to determine if the specified player has won. It checks vertical, horizontal, and diagonal lines originating from the last marked cell of the player. If a winning condition is met, the relevant cells are written to the provided buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cell} & Last marked cell of the player \\
+\hline
+\mbox{\texttt{ in}}  & {\em player} & Player it is looking for \\
+\hline
+\mbox{\texttt{ in}}  & {\em cell\+\_\+state} & Current state of the game board \\
+\hline
+\mbox{\texttt{ out}}  & {\em winner\+\_\+cells} & Buffer to store the cells forming the winning line\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the player has won, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{winning_8c_source_l00062}{62}} of file \mbox{\hyperlink{winning_8c_source}{winning.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8h_source_l00098}{Cell\+State\+::all}}, \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{config_8h_source_l00060}{CELLS\+\_\+\+PER\+\_\+\+COL}}, \mbox{\hyperlink{config_8h_source_l00051}{CELLS\+\_\+\+PER\+\_\+\+ROW}}, \mbox{\hyperlink{game_8h_source_l00060}{Cell\+::col}}, \mbox{\hyperlink{game_8h_source_l00062}{Cell\+::marked\+\_\+by}}, \mbox{\hyperlink{math_8h_source_l00052}{max}}, \mbox{\hyperlink{math_8h_source_l00036}{min}}, and \mbox{\hyperlink{game_8h_source_l00061}{Cell\+::row}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dfd/winning_8c_a8cb661cf3adab5e96933f0673b163eed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{winning_8c_af938c2e846f22abb47204c30c0bc316c}\label{winning_8c_af938c2e846f22abb47204c30c0bc316c} 
+\index{winning.c@{winning.c}!winning\_checkForWinner@{winning\_checkForWinner}}
+\index{winning\_checkForWinner@{winning\_checkForWinner}!winning.c@{winning.c}}
+\doxysubsubsection{\texorpdfstring{winning\_checkForWinner()}{winning\_checkForWinner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a9c8780378078e51e7c9041cbac392db9}{Player}} winning\+\_\+check\+For\+Winner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCellState}{Cell\+State}} \texorpdfstring{$\ast$}{*}}]{cell\+\_\+state,  }\item[{\mbox{\hyperlink{structCell}{Cell}} \texorpdfstring{$\ast$}{*}}]{winner\+\_\+cells\mbox{[}max(\+CELLS\+\_\+\+PER\+\_\+\+COL, CELLS\+\_\+\+PER\+\_\+\+ROW)\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Checks at the end of the round if someone has won. 
+
+This function evaluates the current state of the game board to determine if a player has won. If a player has won, the relevant cells are written to the provided buffer.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cell\+\_\+state} & Current state of the cells \\
+\hline
+\mbox{\texttt{ out}}  & {\em winner\+\_\+cells} & If a player won, the relevant cells will be written to this buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The player who won, or {\ttfamily None} if no player has won 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{winning_8c_source_l00046}{46}} of file \mbox{\hyperlink{winning_8c_source}{winning.\+c}}.
+
+
+
+References \mbox{\hyperlink{game_8c_source_l00040}{cell\+\_\+state}}, \mbox{\hyperlink{winning_8c_source_l00062}{check\+If\+Player\+Won()}}, \mbox{\hyperlink{game_8h_source_l00048}{Circle}}, \mbox{\hyperlink{game_8h_source_l00049}{Cross}}, \mbox{\hyperlink{game_8h_source_l00101}{Cell\+State\+::last\+\_\+circle}}, \mbox{\hyperlink{game_8h_source_l00100}{Cell\+State\+::last\+\_\+cross}}, and \mbox{\hyperlink{game_8h_source_l00050}{None}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dfd/winning_8c_af938c2e846f22abb47204c30c0bc316c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dfd/winning_8c_af938c2e846f22abb47204c30c0bc316c_icgraph}
+\end{center}
+\end{figure}

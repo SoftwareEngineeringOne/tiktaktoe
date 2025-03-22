@@ -1,31 +1,33 @@
 /**
- * @file
+ * @file cursor.c
  *
- * @author
+ * @brief Implements cursor movement functionality for the presentation layer.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see cursor.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
-#include "presentation/cursor.h"
 
+#include "presentation/cursor.h"
 #include "presentation/print.h"
 #include "util/conversion.h"
 
 /**
- * @brief TODO: ?????
- * @param num
- * @param num_buf
- * @param buf
- * @param buf_pos
+ * @brief Write a numeric value to a buffer.
+ *
+ * @details
+ * This function writes the string representation of a numeric value to a buffer
+ * while maintaining the current position in the buffer.
+ *
+ * @param[in] num The numeric value to write.
+ * @param[in] num_buf A buffer containing the string representation of the number.
+ * @param[out] buf The target buffer to write to.
+ * @param[inout] buf_pos Pointer to the current position in the target buffer.
+ *
+ * @internal
  */
 static void writeNumToBuf(uint8_t num, const char *num_buf, char *buf, uint8_t *buf_pos);
 

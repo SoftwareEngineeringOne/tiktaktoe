@@ -1,20 +1,16 @@
 /**
- * @file
+ * @file input.c
  *
- * @author
+ * @brief Implements input handling for the game.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see input.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "logic/input.h"
 
 #include "config.h"
@@ -28,10 +24,55 @@
 #include "presentation/ui.h"
 #include "util/input_buf.h"
 
+/**
+ * @brief Handles escape sequences for navigation.
+ *
+ * @details
+ * Processes escape sequences to move the selected cell up, down, left, or right
+ * based on arrow key input.
+ *
+ * @param[inout] cell_state Pointer to the current cell state.
+ *
+ * @internal
+ */
 static void handleEscapeSequence(CellState *cell_state);
 
+/**
+ * @brief Handles marking a cell during the game.
+ *
+ * @details
+ * Marks the currently selected cell based on the game mode and updates the
+ * game state. Handles special cases for player vs. computer (PVE) mode.
+ *
+ * @param[inout] game_state Pointer to the current game state.
+ * @param[inout] cell_state Pointer to the current cell state.
+ *
+ * @internal
+ */
 static void handleSetMark(GameState *game_state, CellState *cell_state);
+
+/**
+ * @brief Opens the controls menu.
+ *
+ * @details
+ * Displays the controls menu to the user. Pauses the game timer if it is running.
+ *
+ * @internal
+ */
 static void openControls();
+
+/**
+ * @brief Handles pausing and resuming the game.
+ *
+ * @details
+ * Toggles the game timer and redraws the cells as hidden when paused.
+ *
+ * @param[inout] cell_state Pointer to the current cell state.
+ *
+ * @return True if the game is resumed, false otherwise.
+ *
+ * @internal
+ */
 static bool handlePauseResume(CellState *cell_state);
 
 

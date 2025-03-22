@@ -1,0 +1,271 @@
+\doxysection{presentation/style.c File Reference}
+\hypertarget{style_8c}{}\label{style_8c}\index{presentation/style.c@{presentation/style.c}}
+
+
+Implements predefined styles for terminal output.  
+
+
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+Include dependency graph for style.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d8/da6/style_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a90f113db0341b3df7fba02479d15d812}{DEFAULT\+\_\+\+BOLD}}
+\begin{DoxyCompactList}\small\item\em Default style with bold font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a2d507a6a0b6c6c98acce772b8da4406c}{DEFAULT\+\_\+\+ITALIC}}
+\begin{DoxyCompactList}\small\item\em Default style with italic font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a8b30b6f8b1ec5cd889d6075b5edbd7ee}{DEFAULT\+\_\+\+DIM}}
+\begin{DoxyCompactList}\small\item\em Default style with dim font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_aeaf2130cbde9f475dd349a4026d94bc1}{BOLD\+\_\+\+DIM}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structStyle}{Style} combining bold and dim font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_adf22a9f4586b51943e85588d102ffa3f}{ITALIC\+\_\+\+DIM}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structStyle}{Style} combining italic and dim font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_af9701c3d8075079cd9c2a55c1a2043ce}{DEFAULT\+\_\+\+CIRCLE}}
+\begin{DoxyCompactList}\small\item\em Default style for circles with magenta foreground. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a538a323c88b0e289825201c9264d3bd0}{BOLD\+\_\+\+CIRCLE}}
+\begin{DoxyCompactList}\small\item\em Bold style for circles with magenta foreground. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a24d680a54d499effe2f19d9798739613}{DEFAULT\+\_\+\+CROSS}}
+\begin{DoxyCompactList}\small\item\em Default style for crosses with green foreground. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a15ca4b464989469fd7225ad828ac164a}{BOLD\+\_\+\+CROSS}}
+\begin{DoxyCompactList}\small\item\em Bold style for crosses with green foreground. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structStyle}{Style}} \mbox{\hyperlink{style_8c_a5759b41dab5745b9016e1237f7f59228}{HEADING\+\_\+\+STYLE}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structStyle}{Style} for headings with blue foreground and bold font. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements predefined styles for terminal output. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{style_8h}{style.\+h}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{style_8c_a538a323c88b0e289825201c9264d3bd0}\label{style_8c_a538a323c88b0e289825201c9264d3bd0} 
+\index{style.c@{style.c}!BOLD\_CIRCLE@{BOLD\_CIRCLE}}
+\index{BOLD\_CIRCLE@{BOLD\_CIRCLE}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{BOLD\_CIRCLE}{BOLD\_CIRCLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} BOLD\+\_\+\+CIRCLE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_aacf8f7d7b2a3f4ba0d0a131fcd1f1933}{FG\_MAGENTA}},}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Bold style for circles with magenta foreground. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00042}{42}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a15ca4b464989469fd7225ad828ac164a}\label{style_8c_a15ca4b464989469fd7225ad828ac164a} 
+\index{style.c@{style.c}!BOLD\_CROSS@{BOLD\_CROSS}}
+\index{BOLD\_CROSS@{BOLD\_CROSS}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{BOLD\_CROSS}{BOLD\_CROSS}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} BOLD\+\_\+\+CROSS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_a0af1e03653ace4d21aebf3b2e03a6535}{FG\_GREEN}},}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Bold style for crosses with green foreground. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00051}{51}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_aeaf2130cbde9f475dd349a4026d94bc1}\label{style_8c_aeaf2130cbde9f475dd349a4026d94bc1} 
+\index{style.c@{style.c}!BOLD\_DIM@{BOLD\_DIM}}
+\index{BOLD\_DIM@{BOLD\_DIM}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{BOLD\_DIM}{BOLD\_DIM}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} BOLD\+\_\+\+DIM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}},}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_ac25189db92959bff3c6c2adf4c34b50a}{DIM}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{structStyle}{Style} combining bold and dim font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00028}{28}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a90f113db0341b3df7fba02479d15d812}\label{style_8c_a90f113db0341b3df7fba02479d15d812} 
+\index{style.c@{style.c}!DEFAULT\_BOLD@{DEFAULT\_BOLD}}
+\index{DEFAULT\_BOLD@{DEFAULT\_BOLD}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_BOLD}{DEFAULT\_BOLD}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} DEFAULT\+\_\+\+BOLD}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Default style with bold font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00016}{16}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_af9701c3d8075079cd9c2a55c1a2043ce}\label{style_8c_af9701c3d8075079cd9c2a55c1a2043ce} 
+\index{style.c@{style.c}!DEFAULT\_CIRCLE@{DEFAULT\_CIRCLE}}
+\index{DEFAULT\_CIRCLE@{DEFAULT\_CIRCLE}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_CIRCLE}{DEFAULT\_CIRCLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} DEFAULT\+\_\+\+CIRCLE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_aacf8f7d7b2a3f4ba0d0a131fcd1f1933}{FG\_MAGENTA}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Default style for circles with magenta foreground. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00038}{38}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a24d680a54d499effe2f19d9798739613}\label{style_8c_a24d680a54d499effe2f19d9798739613} 
+\index{style.c@{style.c}!DEFAULT\_CROSS@{DEFAULT\_CROSS}}
+\index{DEFAULT\_CROSS@{DEFAULT\_CROSS}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_CROSS}{DEFAULT\_CROSS}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} DEFAULT\+\_\+\+CROSS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_a0af1e03653ace4d21aebf3b2e03a6535}{FG\_GREEN}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Default style for crosses with green foreground. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00047}{47}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a8b30b6f8b1ec5cd889d6075b5edbd7ee}\label{style_8c_a8b30b6f8b1ec5cd889d6075b5edbd7ee} 
+\index{style.c@{style.c}!DEFAULT\_DIM@{DEFAULT\_DIM}}
+\index{DEFAULT\_DIM@{DEFAULT\_DIM}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DIM}{DEFAULT\_DIM}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} DEFAULT\+\_\+\+DIM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_ac25189db92959bff3c6c2adf4c34b50a}{DIM}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Default style with dim font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00024}{24}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a2d507a6a0b6c6c98acce772b8da4406c}\label{style_8c_a2d507a6a0b6c6c98acce772b8da4406c} 
+\index{style.c@{style.c}!DEFAULT\_ITALIC@{DEFAULT\_ITALIC}}
+\index{DEFAULT\_ITALIC@{DEFAULT\_ITALIC}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_ITALIC}{DEFAULT\_ITALIC}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} DEFAULT\+\_\+\+ITALIC}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_af706885b9b3eb2821dff28f8e7f7bb3f}{ITALIC}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Default style with italic font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00020}{20}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_a5759b41dab5745b9016e1237f7f59228}\label{style_8c_a5759b41dab5745b9016e1237f7f59228} 
+\index{style.c@{style.c}!HEADING\_STYLE@{HEADING\_STYLE}}
+\index{HEADING\_STYLE@{HEADING\_STYLE}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{HEADING\_STYLE}{HEADING\_STYLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} HEADING\+\_\+\+STYLE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_a4e411f6bd6ac8d6c2bd23d866c097e91}{FG\_BLUE}},}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_a26cdbb1a00213c810caccf21cd33a631}{BOLD}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{structStyle}{Style} for headings with blue foreground and bold font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00056}{56}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+
+\Hypertarget{style_8c_adf22a9f4586b51943e85588d102ffa3f}\label{style_8c_adf22a9f4586b51943e85588d102ffa3f} 
+\index{style.c@{style.c}!ITALIC\_DIM@{ITALIC\_DIM}}
+\index{ITALIC\_DIM@{ITALIC\_DIM}!style.c@{style.c}}
+\doxysubsubsection{\texorpdfstring{ITALIC\_DIM}{ITALIC\_DIM}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structStyle}{Style}} ITALIC\+\_\+\+DIM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ .font\_style\ =\ \mbox{\hyperlink{style_8h_af706885b9b3eb2821dff28f8e7f7bb3f}{ITALIC}},}
+\DoxyCodeLine{\ \ \ \ .fg\_color\ =\ \mbox{\hyperlink{style_8h_ac25189db92959bff3c6c2adf4c34b50a}{DIM}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{structStyle}{Style} combining italic and dim font. 
+
+
+
+Definition at line \mbox{\hyperlink{style_8c_source_l00033}{33}} of file \mbox{\hyperlink{style_8c_source}{style.\+c}}.
+

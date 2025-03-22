@@ -1,42 +1,50 @@
 /**
- * @file
+ * @file input_buf.c
  *
- * @author
+ * @brief Implementation of the input buffer functions.
  *
- * @date
+ * @details
+ * This file contains the implementation of functions for managing the input
+ * buffer, including initialization, checking buffer state, and handling UART
+ * input interrupts.
  *
- * @brief
- *
- * @see
+ * @see input_buf.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "util/input_buf.h"
 
 #include "presentation/print.h"
+#include "util/error_handling.h"
 
 volatile InputBuffer g_input_buf;
 
 /**
- * @brief Put the next byte into the buffer
- * @param[inout] ib
- * InputBuffer
- * @param[out] byte
- * Next Byte
- * @return False if full
+ * @brief Put the next byte into the buffer.
+ *
+ * @details
+ * This function writes a byte into the input buffer if there is space
+ * available.
+ *
+ * @param[inout] ib InputBuffer to write to.
+ * @param[in] byte Byte to write into the buffer.
+ * @return False if the buffer is full, true otherwise.
+ *
+ * @internal
  */
-static bool putIntoBuf(volatile InputBuffer *ib, uint8_t byte);
+static bool putIntoBuf(volatile InputBuffer *ib, const uint8_t byte);
 
 void input_onInterrupt(const uint8_t input)
 {
     if(!putIntoBuf(&g_input_buf, input))
     {
-        //!TODO Handle error better
-        print("INPUT BUFFER OVERFLOW");
+        // Triggering a hardfault is not the best way to handle this, but it is
+        // better than silently dropping input.
+        __asm volatile("udf #0");
     }
 }
 

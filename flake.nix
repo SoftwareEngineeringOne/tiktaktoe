@@ -20,6 +20,7 @@
             entr
             doxygen
             graphviz
+            perl
           ];
           nativeBuildInputs = with pkgs; [
             gcc-arm-embedded

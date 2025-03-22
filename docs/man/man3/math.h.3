@@ -1,0 +1,95 @@
+.TH "util/math.h" 3 "Tue Jan 1 1980 00:00:00" "Version 1.0.0" "TikTakToe" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+util/math.h \- Contains several different simple and independent math functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBmin\fP(a,  b)   a < b ? a : b"
+.br
+.RI "Get the minimum of two values\&. "
+.ti -1c
+.RI "#define \fBmax\fP(a,  b)   a > b ? a : b"
+.br
+.RI "Get the maximum of two values\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains several different simple and independent math functions\&. 
+
+This file provides utility macros for basic mathematical operations, such as finding the minimum or maximum of two values\&.
+.PP
+\fBSee also\fP
+.RS 4
+math\&.c
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+This Source Code Form is subject to the terms of the Mozilla Public License, v2\&.0\&. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmath\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define max(a, b)   a > b ? a : b"
+
+.PP
+Get the maximum of two values\&. This macro evaluates to the larger of the two provided values\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The first value\&. 
+.br
+\fIb\fP The second value\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The larger of the two values\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This macro does not perform type checking and may evaluate its arguments multiple times\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB52\fP of file \fBmath\&.h\fP\&.
+.SS "#define min(a, b)   a < b ? a : b"
+
+.PP
+Get the minimum of two values\&. This macro evaluates to the smaller of the two provided values\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The first value\&. 
+.br
+\fIb\fP The second value\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The smaller of the two values\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This macro does not perform type checking and may evaluate its arguments multiple times\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB36\fP of file \fBmath\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for TikTakToe from the source code\&.

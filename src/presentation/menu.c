@@ -1,13 +1,9 @@
 /**
- * @file
+ * @file menu.c
  *
- * @author
+ * @brief Implements menu presentation functions.
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see menu.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -27,8 +23,20 @@
 #include "util/input_buf.h"
 
 
+/**
+ * @brief Prints the winner banner based on the game state.
+ *
+ * @param[in] game_info Pointer to the game state containing the winner information.
+ *
+ * @internal
+ */
 static void printWinnerBanner(const GameState *game_info);
 
+/**
+ * @brief Prints the main menu options to the console.
+ *
+ * @internal
+ */
 static void printMainMenu();
 
 bool menu_showMainMenu()
@@ -155,7 +163,7 @@ void menu_showCredits()
     println_styled("Mozilla Public License 2.0.", &ITALIC_DIM);
     println("");
     println_styled(
-"If a copy of the MPL was not distributed with this project,\n\
+        "If a copy of the MPL was not distributed with this project,\n\
 you can obtain one at http://mozilla.org/MPL/2.0/.",
         &ITALIC_DIM);
 

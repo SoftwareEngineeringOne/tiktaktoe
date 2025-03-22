@@ -1,73 +1,49 @@
 /**
- * @file
+ * @file random.c
  *
- * @author
+ * @brief Implementation of the RNG HAL for random number generation.
  *
- * @date
+ * @see random.h
  *
- * @brief
- *
- * @see
+ * @note
+ * Based on version by Thomas Vogt
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "hal/random.h"
-
 #include "hal/register_access.h"
-
 #include <stdint.h>
 
-/**
- * @brief Enables the generation of random numbers
- *
- * This is done by writing a `1` to the `START_TASK` of the RNG peripheral.
- */
-void rng_init(void)
+void rng_init()
 {
     // Write a '1' to the Start Task, to start the generation of random numbers
     register_write(RNG_BASE_ADDRESS | RNG_START, RNG_TASK_START);
 }
 
-
-/**
- * @brief Get the Random Value from the generator immediately.
- *
- * The function is **NOT** waiting until the next value is generated!
- *
- * @return uint8_t random byte
- */
-uint8_t rng_getRandomValue_immediately(void)
+uint8_t rng_getRandomValue_immediately()
 {
     // Read 32-Bit Register containing the RNG Value
     const uint32_t randomValue = register_read(RNG_BASE_ADDRESS | RNG_VALUE);
 
-    // its actual just 8-Bit, so cast it.
-    return randomValue;
+    // It's actually just 8-Bit, so cast it.
+    return (uint8_t)randomValue;
 }
 
-/**
- * @brief # THIS FUNCTION IS A STUB! #
- *
- * TODO: Implement it, if you need it
- *
- * Things it should do here:
- * - Get the Random Value from the generator by polling and waiting.
- * - The function should be **blocking** until the next value is generated
- * - it should return the random byte
- *
- * @return uint8_t (curently) always `0`
- **/
 uint8_t rng_getRandomValue_waiting()
 {
+    // Wait until the Value Ready event is set
     while(register_read(RNG_BASE_ADDRESS | RNG_VALRDY) == 0)
     {
         // Wait until the Value is ready
     }
-    register_write(RNG_BASE_ADDRESS | RNG_VALRDY, 0);
 
+    // Clear the Value Ready event
+    register_write(RNG_BASE_ADDRESS | RNG_VALRDY, RNG_EVENT_CLEAR);
+
+    // Return the random value
     return rng_getRandomValue_immediately();
 }

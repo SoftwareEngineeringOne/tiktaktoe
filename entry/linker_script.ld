@@ -1,13 +1,10 @@
 /**
- * @file 
+ * @file linker_script.ld
  *
- * @author Thomas Vogt
+ * @brief ARM Cortex-M0 Linker Script.
  *
- * @date 
- *
- * @brief ARM Cortex-M4 Linker Script.
- *
- * @see 
+ * @note
+ * Based on version by Thomas Vogt and Sven Reis
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -47,10 +44,14 @@ MEMORY
 
 SECTIONS
 {
+    /* Interrupt Vector Table */
+    .isr_vectors : {
+        KEEP(*(.isr_vectors))
+    } > FLASH
+
     /* Executable Code */
     .text :
     {
-        KEEP(*(.isr_vectors))
         *(.text*)
     } > FLASH
 

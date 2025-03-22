@@ -1,0 +1,14 @@
+<map id="printWinnerBanner" name="printWinnerBanner">
+<area shape="rect" id="Node000001" title="Prints the winner banner based on the game state." alt="" coords="5,5,149,33"/>
+<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#a334f851ea1e7bad8e04d74dbb5e6ed44" title="Prints the given string with a predefined style." alt="" coords="197,5,295,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,16,181,16,181,22,149,22"/>
+<area shape="rect" id="Node000003" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="481,5,533,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,16,466,16,466,22,295,22"/>
+<area shape="rect" id="Node000006" href="$d6/db1/print_8c.html#a9e731fe6687d1daac66269c94765a45b" title="Prints the given style attributes." alt="" coords="343,31,433,58"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="296,25,328,31,327,36,295,31"/>
+<area shape="rect" id="Node000004" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="581,5,698,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="533,16,565,16,565,22,533,22"/>
+<area shape="rect" id="Node000005" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="746,5,857,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="698,16,730,16,730,22,698,22"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="433,32,466,25,467,30,434,38"/>
+</map>

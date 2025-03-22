@@ -1,0 +1,75 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+
+
+Entry point for the Tik\+Tak\+Toe game.  
+
+
+{\ttfamily \#include "{}def.\+h"{}}\newline
+{\ttfamily \#include "{}hal/nvic.\+h"{}}\newline
+{\ttfamily \#include "{}hal/uart.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/print.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/style.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/ui.\+h"{}}\newline
+{\ttfamily \#include "{}util/input\+\_\+buf.\+h"{}}\newline
+{\ttfamily \#include "{}hal/system.\+h"{}}\newline
+{\ttfamily \#include "{}presentation/menu.\+h"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d10/main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function for the Tic-\/\+Tac-\/\+Toe application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the Tik\+Tak\+Toe game. 
+
+This file contains the main function, which initializes the system, handles the main menu, and manages the game flow based on user input.
+
+\begin{DoxyCopyright}{Copyright}
+This Source Code Form is subject to the terms of the Mozilla Public License, v2.\+0. If a copy of the MPL was not distributed with this file, You can obtain one at \href{http://mozilla.org/MPL/2.0/}{\texttt{ http\+://mozilla.\+org/\+MPL/2.\+0/}}. 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function for the Tic-\/\+Tac-\/\+Toe application. 
+
+Initializes the UART and input buffer, displays the main menu, and handles user input to either reset the game or exit. If the game is reset, the system performs a soft reset. If the user exits, the system enters off mode.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00037}{37}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+References \mbox{\hyperlink{nvic_8h_source_l00058}{\+\_\+\+\_\+\+WFI}}, \mbox{\hyperlink{style_8c_source_l00016}{DEFAULT\+\_\+\+BOLD}}, \mbox{\hyperlink{input__buf_8c_source_l00024}{g\+\_\+input\+\_\+buf}}, \mbox{\hyperlink{input__buf_8c_source_l00067}{input\+\_\+get\+Next()}}, \mbox{\hyperlink{input__buf_8c_source_l00051}{input\+\_\+init()}}, \mbox{\hyperlink{style_8c_source_l00033}{ITALIC\+\_\+\+DIM}}, \mbox{\hyperlink{menu_8c_source_l00042}{menu\+\_\+show\+Main\+Menu()}}, \mbox{\hyperlink{print_8c_source_l00025}{print()}}, \mbox{\hyperlink{print_8c_source_l00020}{print\+\_\+clear\+Console()}}, \mbox{\hyperlink{print_8c_source_l00060}{println\+\_\+styled()}}, \mbox{\hyperlink{style_8h_source_l00068}{SHOW\+\_\+\+CURSOR}}, \mbox{\hyperlink{system_8c_source_l00026}{system\+\_\+off\+Mode()}}, \mbox{\hyperlink{system_8c_source_l00018}{system\+\_\+soft\+Reset()}}, \mbox{\hyperlink{uart_8c_source_l00020}{uart\+\_\+init()}}, and \mbox{\hyperlink{ui_8c_source_l00124}{ui\+\_\+print\+Heading()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d29/main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

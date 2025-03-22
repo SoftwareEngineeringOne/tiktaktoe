@@ -1,20 +1,16 @@
 /**
- * @file
+ * @file game.c
  *
- * @author
+ * @brief Implements the core game logic for Tic-Tac-Toe
  *
- * @date
- *
- * @brief
- *
- * @see
+ * @see game.h
  *
  * @copyright
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
  */
+
 #include "logic/game.h"
 
 #include "config.h"
@@ -36,28 +32,50 @@
 #include <stdint.h>
 
 
+/// @brief Force an update of the UI
 volatile bool force_ui_update = false;
+/// @brief GameState of the current game
 static GameState game_state;
+/// @brief CellState of the current game
 static CellState cell_state;
 
 /**
- * @brief Initializes several things at the game start
+ * @brief Initializes relevant things at the game start
+ *
+ * @details
+ * Sets up the game/cell state, initializes the input buffer, and prepares the UI.
+ *
+ * @param[in] mode The game mode (PVE or PVP).
  */
 static void init(Mode mode);
 
 /**
- * @brief Handles the presentation update in case of a automatic round
+ * @brief Handles the presentation update, when a move is forced due to timeout
  */
 static void handleForcedMoveUpdate();
 
 /**
  * @brief Refreshes the whole UI
+ *
+ * @details
+ * Clears the console and redraws the game field and UI elements.
  */
 static void redrawField();
 
-
+/**
+ * @brief Calculates game summary statistics
+ *
+ * @details
+ * Computes total and average ticks for each player and the game overall.
+ *
+ * @note Statistics are written to the game_state struct.
+ * @see game_state
+ */
 static void calculateSummary();
 
+/**
+ * @brief Randomly determines the starting player
+ */
 static Player startingPlayer();
 
 

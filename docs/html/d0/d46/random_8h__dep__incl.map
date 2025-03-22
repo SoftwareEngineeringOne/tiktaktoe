@@ -1,9 +1,0 @@
-<map id="hal/random.h" name="hal/random.h">
-<area shape="rect" id="Node000001" title="Header file for the RNG HAL." alt="" coords="126,5,234,33"/>
-<area shape="rect" id="Node000002" href="$dc/de5/random_8c.html" title="Implementation of the RNG HAL for random number generation." alt="" coords="5,81,112,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,44,81,83,79,78,144,39"/>
-<area shape="rect" id="Node000003" href="$df/d98/bot_8c.html" title="Implementation of bot logic for Tic&#45;Tac&#45;Toe game." alt="" coords="136,81,224,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,49,182,81,177,81,177,49"/>
-<area shape="rect" id="Node000004" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="248,81,352,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,39,280,78,277,83,213,44"/>
-</map>

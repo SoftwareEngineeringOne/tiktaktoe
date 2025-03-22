@@ -1,7 +1,0 @@
-<map id="uart_readByte" name="uart_readByte">
-<area shape="rect" id="Node000001" title="Reads/Receives a byte from the serial port." alt="" coords="5,32,119,60"/>
-<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a5a3f22e14522fbf55469425a4a48a5cc" title="Read a value from a hardware register." alt="" coords="169,5,276,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,34,153,28,154,33,119,39"/>
-<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="167,57,278,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,52,152,57,151,63,118,57"/>
-</map>

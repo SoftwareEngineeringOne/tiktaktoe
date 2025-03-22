@@ -1,7 +1,0 @@
-<map id="game_onTimeOut" name="game_onTimeOut">
-<area shape="rect" id="Node000001" title="Automatically end a turn in case the turn time is over." alt="" coords="375,5,512,33"/>
-<area shape="rect" id="Node000002" href="$df/d73/time_8c.html#ac55568b0a64c8b18a2d2ffc7d50eacaa" title="Increments the ticks and can finish the round." alt="" coords="197,5,327,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,22,327,22,327,16,360,16"/>
-<area shape="rect" id="Node000003" href="$d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317" title="Timer interrupt handler." alt="" coords="5,5,149,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,22,149,22,149,16,181,16"/>
-</map>

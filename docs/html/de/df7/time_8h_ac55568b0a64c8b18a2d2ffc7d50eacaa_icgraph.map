@@ -1,5 +1,0 @@
-<map id="time_onInterrupt" name="time_onInterrupt">
-<area shape="rect" id="Node000001" title="Increments the ticks and can finish the round." alt="" coords="197,5,327,33"/>
-<area shape="rect" id="Node000002" href="$d8/d22/interrupts_8c.html#a3e5a7488b98d542bdcb0e42adc2cf317" title="Timer interrupt handler." alt="" coords="5,5,149,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,22,149,22,149,16,181,16"/>
-</map>

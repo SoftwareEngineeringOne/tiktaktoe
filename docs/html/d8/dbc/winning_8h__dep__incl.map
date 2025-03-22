@@ -1,9 +1,0 @@
-<map id="logic/winning.h" name="logic/winning.h">
-<area shape="rect" id="Node000001" title="Contains the function for checking if someone has won." alt="" coords="124,5,244,33"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,81,110,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,43,81,83,79,78,147,39"/>
-<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="134,81,234,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,49,187,81,182,81,182,49"/>
-<area shape="rect" id="Node000004" href="$d0/dfd/winning_8c.html" title="Implements the function for checking if someone has won." alt="" coords="258,81,377,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,38,295,78,293,83,220,43"/>
-</map>

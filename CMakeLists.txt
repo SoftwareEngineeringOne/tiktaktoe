@@ -22,6 +22,13 @@ set(TICK_SPEED 12 CACHE STRING "Speed of each tick in milliseconds")
 option(ENABLE_UNICODE "Enable Unicode support" ON)
 option(ENABLE_ASCII_ART "Enable ASCII Art" ON)
 
+if(CMAKE_GENERATOR MATCHES "MinGW")
+    option(DISABLE_TIMER "Disable timer for MinGW" ON)
+    message(WARNING "Timer is disabled for MinGW builds")
+else()
+    option(DISABLE_TIMER "Disable timer for MinGW" OFF)
+endif()
+
 # --- Configure Files ---
 configure_file(
     ${CMAKE_SOURCE_DIR}/include/config.h.in

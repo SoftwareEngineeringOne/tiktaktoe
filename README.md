@@ -51,7 +51,20 @@ which can be found under [dependencies] are required.
 
 - <b class="tab-title"> 🪟 Windows </b>
 
-    !TODO!
+    ```pwsh
+    # 1. Configure the cmake project
+    cmake --preset arm-cortex-m0-mingw
+
+    # 2. Build the project
+    cmake --build --preset arm-cortex-m0-mingw
+
+    # 3. Run the project
+    qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio
+    ```
+
+    @warning
+        Due to a problem with the `TIMER` device on Windows, functionality regarding turn time limits
+        are disabled when building with the MinGW generator!
 
 </div>
 
@@ -80,7 +93,8 @@ which can be found under [dependencies] are required.
 
 - <b class="tab-title"> 🪟 Windows </b>
 
-    !TODO!
+    The provided [Makefile](Makefile) was created with Linux in mind, while it may be possible
+    to use it on Windows with small modifications, we recomend using CMake directly!
 
 </div>
 
@@ -108,6 +122,13 @@ docker run -it [TAGNAME]
 @warning
   In either case the `-it` flags are required to properly
   capture input from stdin!
+
+### 🍎 MacOS
+
+We are currently unable to test the game under MacOS. Since it's unix based, it's assumed that,
+provided all dependencies are available, you can proceed as described in the Linux sections.
+
+However no guarantees regarding functionality or possible bugs can be made.
 
 ## ⚙️ Configuration
 
@@ -153,7 +174,7 @@ These can be set by:
   - for unicode: `make UNICODE=$(ON/OFF)`
   - for ascii art: `make ASCII_ART=$(ON/OFF)`
 
-  _All options can be combined._ 
+  _All options can be combined._
 
   Due to the way the Makefile is structured, these may also be passed when using e.g. `make run`.
   However please note, that in order for changes to take affect the build directory may have to be deleted.
@@ -196,8 +217,34 @@ These can be set by:
 
 - <b class="tab-title"> Windows </b>
 
-    !TODO!
+    - [CMake](https://cmake.org/download/)
+      ```pwsh
+      # Using Winget
+      winget install CMake.CMake
 
+      # Using Chocolatey
+      choco install cmake --pre 
+
+      # Or manually using the link above
+      ```
+
+    - MinGW Makefiles (we recommend using MSYS2, but other prebuilt options are available)
+        1. Install [MSYS2](https://www.msys2.org/#installation)
+        2. Open `MSYS2 UCRT64` shell
+        3. Install Make `pacman -S mingw-w64-ucrt-x86_64-make`
+        4. Ensure `C:\msys64\ucrt64\bin` is added to `PATH`
+            - _Directory may differ based on your choice during installation_
+
+    - [Qemu](https://www.qemu.org/download/#windows)
+        1. Install [MSYS2](https://www.msys2.org/#installation)
+        2. Open `MSYS2 UCRT64` shell
+        3. Install Make `pacman -S mingw-w64-ucrt-x86_64-qemu`
+        4. Ensure `C:\msys64\ucrt64\bin` is added to `PATH`
+            - _Directory may differ based on your choice during installation_
+
+    - [GNU Toolchain for arm-eabi](https://gnutoolchains.com/arm-eabi/)
+        1. Install from link above
+        2. Ensure installation location is added to `PATH`
 </div>
 
 ## 🏗️ Architecture

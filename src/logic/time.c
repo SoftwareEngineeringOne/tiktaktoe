@@ -22,6 +22,7 @@ GameTimer g_timer = (GameTimer){
     .is_running = true,
 };
 
+#ifndef DISABLE_TIMER
 void time_init()
 {
     timer_init_detailed(TIMER0, TICK_SPEED, TIMER_BIT_MODE_32);
@@ -66,3 +67,26 @@ void time_resume()
     timer_start(TIMER0);
     g_timer.is_running = true;
 }
+
+#else
+
+void time_init()
+{
+}
+
+void time_onInterrupt()
+{
+}
+
+void time_finishTurn(GameState *game_state)
+{
+}
+
+void time_pause()
+{
+}
+
+void time_resume()
+{
+}
+#endif

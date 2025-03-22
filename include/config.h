@@ -30,7 +30,7 @@
  * If defined, the game will use Unicode characters for rendering.
  * If not defined, ASCII characters will be used instead.
  */
-#define ENABLE_UNICODE
+/* #undef ENABLE_UNICODE */
 
 /**
  * @def ENABLE_ASCII_ART
@@ -42,13 +42,22 @@
 #define ENABLE_ASCII_ART
 
 /**
+ * @def DISABLE_TIMER
+ * @brief Disable timer for MinGW builds.
+ *
+ * @details
+ * If defined, the timer will be disabled.
+ */
+#define DISABLE_TIMER
+
+/**
  * @def CELLS_PER_ROW
  * @brief Number of cells per row in the game grid.
  *
  * @details
  * This macro defines the horizontal size of the game grid.
  */
-#define CELLS_PER_ROW 3
+#define CELLS_PER_ROW 4
 
 /**
  * @def CELLS_PER_COL
@@ -57,7 +66,7 @@
  * @details
  * This macro defines the vertical size of the game grid.
  */
-#define CELLS_PER_COL 2
+#define CELLS_PER_COL 4
 
 /**
  * @def TICKS_PER_TURN

@@ -37,7 +37,7 @@ void ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time)
     print(ERASE_LINE_FROM_CURSOR);
     print(BOLD);
 
-
+    #ifndef DISABLE_TIMER
     static Style style;
     const uint8_t percent = ((float)remaining_time / (float)total_time) * 100;// NOLINT
     if(!g_timer.is_running)
@@ -80,6 +80,9 @@ void ui_updateTimer(const uint16_t remaining_time, const uint16_t total_time)
         return;
     }
     print(ERASE_LINE_FROM_CURSOR);
+    #else
+    print_styled("Timer disabled", &ITALIC_DIM);
+    #endif
     uart_writeByte('\n');
 }
 

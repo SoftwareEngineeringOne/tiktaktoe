@@ -42,6 +42,15 @@
 #cmakedefine ENABLE_ASCII_ART
 
 /**
+ * @def DISABLE_TIMER
+ * @brief Disable timer for MinGW builds.
+ *
+ * @details
+ * If defined, the timer will be disabled.
+ */
+#cmakedefine DISABLE_TIMER
+
+/**
  * @def CELLS_PER_ROW
  * @brief Number of cells per row in the game grid.
  *

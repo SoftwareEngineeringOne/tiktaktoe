@@ -115,49 +115,49 @@ $(function(){initNavTree('d7/d5e/md__2github_2workspace_2Architecture.html','../
 <div class="toc"><h3>Table of Contents</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md5">🚪 Entry Module</a>
+    <a href="#autotoc_md4">🚪 Entry Module</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md6">📟 Hardware Abstraction Layer</a>
+    <a href="#autotoc_md5">📟 Hardware Abstraction Layer</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md7">🧩 Logic Layer</a>
+    <a href="#autotoc_md6">🧩 Logic Layer</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md8">🖥️ Presentation Layer</a>
+    <a href="#autotoc_md7">🖥️ Presentation Layer</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md9">🛠️ Utility Layer</a>
+    <a href="#autotoc_md8">🛠️ Utility Layer</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md10">➕ Other relevant files</a>
+    <a href="#autotoc_md9">➕ Other relevant files</a>
   </li>
 </ul>
 </div>
 <div class="textblock"><p><a class="anchor" id="autotoc_md3"></a></p>
 <div style="visibility:hidden"></div><p>This project is an embedded application, designed to run on an <code>nRF51</code> microcontroller with an <code>arm-cortex-m0</code> CPU. The architecture is seperated into three main layers; the hardware abstraction layer, the logic layer and the presentation layer. Additionally modules for the entry process and utility functions exist. This encapsulation allows for a flexible design.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 🚪 Entry Module</h1>
 <p><em>files: <a class="el" href="../../de/d20/entry_8S.html" title="Entry point and initialization routines for the Tic-Tac-Toe project.">entry/entry.S</a>, entry/linker_script.ls</em></p>
 <p>This module is responsible for the startup process of the microcontroller. Here important elements, such as the entry point, interrupt vector table and memory regions are defined and actions such as copying data from ROM to RAM are performed.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 📟 Hardware Abstraction Layer</h1>
 <p><em>files: include/hal/*.h, src/hal/*.c</em></p>
 <p>The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 🧩 Logic Layer</h1>
 <p><em>files: include/logic/*.h, src/logic/*.c</em></p>
 <p>Within this layer, the game itself resides. The whole logic is based here.</p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 🖥️ Presentation Layer</h1>
 <p><em>files: include/presentation/*.h, src/presentation/*.c</em></p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 🛠️ Utility Layer</h1>
 <p><em>files: include/util/*.h, src/util/*.c</em></p>
 <p>!TODO!</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 ➕ Other relevant files</h1>
 <ul>
 <li>config.h.in / <a class="el" href="../../db/d16/config_8h.html">config.h</a><ul>

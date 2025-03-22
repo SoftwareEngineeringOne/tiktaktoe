@@ -11,6 +11,6 @@ var searchData=
   ['bot_2ec_8',['bot.c',['../df/d98/bot_8c.html',1,'']]],
   ['bot_2eh_9',['bot.h',['../da/de8/bot_8h.html',1,'']]],
   ['bot_5fmarkrandomcell_10',['bot_markRandomCell',['../df/d98/bot_8c.html#a35e54b11b140786344c2cf1a75251f5f',1,'bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], const Player marked_by):&#160;bot.c'],['../da/de8/bot_8h.html#a54e3d0f1283055e089a09213936f5c43',1,'bot_markRandomCell(Cell cells[CELLS_PER_COL][CELLS_PER_ROW], Player marked_by):&#160;bot.c']]],
-  ['build_20and_20run_11',['🛠️ Build and Run',['../index.html#autotoc_md14',1,'']]],
-  ['build_20locally_12',['🏗️ Build locally',['../index.html#autotoc_md25',1,'']]]
+  ['build_20and_20run_11',['🛠️ Build and Run',['../index.html#autotoc_md13',1,'']]],
+  ['build_20locally_12',['🏗️ Build locally',['../index.html#autotoc_md18',1,'']]]
 ];

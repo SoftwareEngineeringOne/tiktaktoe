@@ -121,44 +121,44 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
     <a href="#autotoc_md12">📚 Documentation</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md14">🛠️ Build and Run</a>
+    <a href="#autotoc_md13">🛠️ Build and Run</a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md16">🖥️ Using CMake and qemu</a>
+        <a href="#autotoc_md14">🖥️ Using CMake and qemu</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md18">🛠️ Using the provided Makefile</a>
+        <a href="#autotoc_md15">🛠️ Using the provided Makefile</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md22">🐳 Using Docker</a>
+        <a href="#autotoc_md16">🐳 Using Docker</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md23">☁️ Use Dockerhub</a>
+            <a href="#autotoc_md17">☁️ Use Dockerhub</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md25">🏗️ Build locally</a>
+            <a href="#autotoc_md18">🏗️ Build locally</a>
           </li>
         </ul>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md27">⚙️ Configuration</a>
+    <a href="#autotoc_md19">⚙️ Configuration</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md30">📦 Dependencies</a>
+    <a href="#autotoc_md20">📦 Dependencies</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md31">🏗️ Architecture</a>
+    <a href="#autotoc_md21">🏗️ Architecture</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md32">📜 Conventions</a>
+    <a href="#autotoc_md22">📜 Conventions</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md33">👥 Authors</a>
+    <a href="#autotoc_md23">👥 Authors</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md34">🙏 Acknowledgements</a>
+    <a href="#autotoc_md24">🙏 Acknowledgements</a>
   </li>
 </ul>
 </div>
@@ -176,9 +176,9 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <h1><a class="anchor" id="autotoc_md12"></a>
 📚 Documentation</h1>
 <p>Check out our <a href="https://tiktaktoe.episko.de">documentation</a> to learn more about the code and for an improved version of this file!</p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 🛠️ Build and Run</h1>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 🖥️ Using CMake and qemu</h2>
 <p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required.</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -196,7 +196,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p class="startli">!TODO!</p>
 </li>
 </ul>
-</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md18"></a>
+</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md15"></a>
 🛠️ Using the provided Makefile</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title"> 🐧 Linux </b></p>
@@ -217,21 +217,21 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p class="startli">!TODO!</p>
 </li>
 </ul>
-</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md22"></a>
+</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md16"></a>
 🐳 Using Docker</h2>
 <p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options:</p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 ☁️ Use Dockerhub</h3>
 <div class="fragment"><div class="line"># Using DockerHub</div>
 <div class="line">docker run -it definitelynotsimon13/tiktaktoe:latest</div>
 <div class="line"># Using GitHub Container Registry</div>
 <div class="line">docker run -it ghcr.io/softwareengineeringone/tiktaktoe:latest</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
 🏗️ Build locally</h3>
 <div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
 <div class="line">docker run -it [TAGNAME]</div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>In either case the <code>-it</code> flags are required to properly capture input from stdin!</dd></dl>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 ⚙️ Configuration</h1>
 <p>The project has a few options that can be changed before compilation.</p>
 <ul>
@@ -269,7 +269,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p class="startli">Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
 </li>
 </ul>
-</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md30"></a>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md20"></a>
 📦 Dependencies</h1>
 <p>(TODO: CHECK CORRECT) </p><div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title"> Ubuntu/Debian </b></p>
@@ -291,13 +291,13 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <p class="startli">!TODO!</p>
 </li>
 </ul>
-</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md31"></a>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md21"></a>
 🏗️ Architecture</h1>
 <p>To learn more about the the architecture we used to create this game check out <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a>!</p>
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 📜 Conventions</h1>
 <p>If you want to know about the coding convection we used when creating code check out <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a>!</p>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 👥 Authors</h1>
 <ul>
 <li><a href="https://www.github.com/DefinitelyNotSimon13">Simon Blum</a></li>
@@ -305,7 +305,7 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 <li><a href="https://github.com/DosKobold">Paul Stöckle</a></li>
 <li><a href="https://github.com/MaxRodler">Max Rodler</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md34"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 🙏 Acknowledgements</h1>
 <ul>
 <li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> - Base template used for the project </li>

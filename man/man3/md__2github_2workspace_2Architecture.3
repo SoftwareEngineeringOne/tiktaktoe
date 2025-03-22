@@ -27,31 +27,41 @@ The hardware abstraction layer, short hal, abstracts low level operations such a
 \fIfiles: include/logic/*\&.h, src/logic/*\&.c\fP
 
 .PP
-Within this layer, the game itself resides\&. The whole logic is based here\&.
-
-.PP
-!TODO!
+Within this layer, the game logic itself resides\&. Here you can find the main game loop, the timer and the game state\&.
 .SH "🖥️ Presentation Layer"
 .PP
 \fIfiles: include/presentation/*\&.h, src/presentation/*\&.c\fP
 
 .PP
-!TODO!
+This layer contains everything used to display a pretty output to the user\&. Menus, ui and styling can all be found here\&.
+
+.PP
+The seperation from the logic layer allows for flexible configuration, such as changing field sizes during the game\&.
 .SH "🛠️ Utility Layer"
 .PP
 \fIfiles: include/util/*\&.h, src/util/*\&.c\fP
 
 .PP
-!TODO!
+Modules used throughout the layer, or which can't be directly assigned to one certain layer can be found here\&.
 .SH "➕ Other relevant files"
 .PP
 .IP "\(bu" 2
 config\&.h\&.in / \fBconfig\&.h\fP
 .IP "  \(bu" 4
-!TODO!
+The \fRconfig\&.h\&.in\fP file is used for the compile time configurations and is processed into \fR\fBconfig\&.h\fP\fP by CMake
 .PP
 
 .IP "\(bu" 2
-!TODO! 
+\fBentry-S\&.c\fP
+.IP "  \(bu" 4
+Since Doxygen can't parse assembly files, the \fR\fBentry\&.S\fP\fP file is converted to stubbed C file by a helper script, which can then be parsed\&.
+.PP
+
+.IP "\(bu" 2
+\fBmain\&.c\fP
+.IP "  \(bu" 4
+The main file for the game itself, containing the \fR\fBmain()\fP\fP function which is invoked by the \fRReset_Handler\fP 
+.PP
+
 .PP
 

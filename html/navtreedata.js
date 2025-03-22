@@ -35,18 +35,18 @@ var NAVTREE =
       [ "➕ Other relevant files", "d7/d5e/md__2github_2workspace_2Architecture.html#autotoc_md9", null ]
     ] ],
     [ "🤝 Coding Conventions", "d8/d50/md__2github_2workspace_2Conventions.html", [
-      [ "📄 File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md25", [
-        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md26", null ],
-        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md27", null ]
+      [ "📄 File structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md11", [
+        [ "Header file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md12", null ],
+        [ "Source file structure", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md13", null ]
       ] ],
-      [ "💬 Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md28", [
-        [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md29", null ],
-        [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md30", null ],
-        [ "Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md31", null ],
-        [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32", null ]
+      [ "💬 Naming", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md14", [
+        [ "Files", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md15", null ],
+        [ "Functions", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md16", null ],
+        [ "Variables", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md17", null ],
+        [ "Macros", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18", null ]
       ] ],
-      [ "📝 Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md33", [
-        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md34", null ]
+      [ "📝 Documentation", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md19", [
+        [ "Documentation templates", "d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md20", null ]
       ] ]
     ] ],
     [ "Topics", "topics.html", "topics" ],

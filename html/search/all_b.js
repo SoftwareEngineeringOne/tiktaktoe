@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['macros_0',['Macros',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md32',1,'']]],
+  ['macros_0',['Macros',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md18',1,'']]],
   ['main_1',['main',['../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
   ['main_2ec_2',['main.c',['../d0/d29/main_8c.html',1,'']]],
-  ['makefile_3',['🛠️ Using the provided Makefile',['../index.html#autotoc_md15',1,'']]],
+  ['makefile_3',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],
   ['marked_5fby_4',['marked_by',['../df/df1/structCell.html#aff8c5b2510befa854230104cca89cb77',1,'Cell']]],
   ['math_2eh_5',['math.h',['../df/db1/math_8h.html',1,'']]],
   ['max_6',['max',['../df/db1/math_8h.html#affe776513b24d84b39af8ab0930fef7f',1,'math.h']]],

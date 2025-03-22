@@ -15,20 +15,27 @@ This module is responsible for the startup process of the microcontroller. Here 
 The hardware abstraction layer, short hal, abstracts low level operations such as register access and encapsulates these operations, allowing the layers above to refrain from interacting with any of the peripherals directly.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md6}{}\doxysection{\texorpdfstring{🧩 Logic Layer}{🧩 Logic Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md6}
 {\itshape files\+: include/logic/\texorpdfstring{$\ast$}{*}.h, src/logic/\texorpdfstring{$\ast$}{*}.c}
 
-Within this layer, the game itself resides. The whole logic is based here.
-
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md7}{}\doxysection{\texorpdfstring{🖥️ Presentation Layer}{🖥️ Presentation Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md7}
+Within this layer, the game logic itself resides. Here you can find the main game loop, the timer and the game state.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md7}{}\doxysection{\texorpdfstring{🖥️ Presentation Layer}{🖥️ Presentation Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md7}
 {\itshape files\+: include/presentation/\texorpdfstring{$\ast$}{*}.h, src/presentation/\texorpdfstring{$\ast$}{*}.c}
 
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md8}{}\doxysection{\texorpdfstring{🛠️ Utility Layer}{🛠️ Utility Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md8}
+This layer contains everything used to display a pretty output to the user. Menus, ui and styling can all be found here.
+
+The seperation from the logic layer allows for flexible configuration, such as changing field sizes during the game.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md8}{}\doxysection{\texorpdfstring{🛠️ Utility Layer}{🛠️ Utility Layer}}\label{md__2github_2workspace_2Architecture_autotoc_md8}
 {\itshape files\+: include/util/\texorpdfstring{$\ast$}{*}.h, src/util/\texorpdfstring{$\ast$}{*}.c}
 
-!\+TODO!\hypertarget{md__2github_2workspace_2Architecture_autotoc_md9}{}\doxysection{\texorpdfstring{➕ Other relevant files}{➕ Other relevant files}}\label{md__2github_2workspace_2Architecture_autotoc_md9}
+Modules used throughout the layer, or which can\textquotesingle{}t be directly assigned to one certain layer can be found here.\hypertarget{md__2github_2workspace_2Architecture_autotoc_md9}{}\doxysection{\texorpdfstring{➕ Other relevant files}{➕ Other relevant files}}\label{md__2github_2workspace_2Architecture_autotoc_md9}
 
 \begin{DoxyItemize}
 \item config.\+h.\+in / \doxylink{config_8h}{config.\+h}
 \begin{DoxyItemize}
-\item !\+TODO!
+\item The {\ttfamily config.\+h.\+in} file is used for the compile time configurations and is processed into {\ttfamily \doxylink{config_8h}{config.\+h}} by CMake
 \end{DoxyItemize}
-\item !\+TODO! 
+\item \doxylink{entry-S_8c}{entry-\/\+S.\+c}
+\begin{DoxyItemize}
+\item Since Doxygen can\textquotesingle{}t parse assembly files, the {\ttfamily \doxylink{entry_8S}{entry.\+S}} file is converted to stubbed C file by a helper script, which can then be parsed.
+\end{DoxyItemize}
+\item \doxylink{main_8c}{main.\+c}
+\begin{DoxyItemize}
+\item The main file for the game itself, containing the {\ttfamily \doxylink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} function which is invoked by the {\ttfamily Reset\+\_\+\+Handler} 
+\end{DoxyItemize}
 \end{DoxyItemize}

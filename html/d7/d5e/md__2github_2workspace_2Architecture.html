@@ -147,24 +147,31 @@ $(function(){initNavTree('d7/d5e/md__2github_2workspace_2Architecture.html','../
 <h1><a class="anchor" id="autotoc_md6"></a>
 🧩 Logic Layer</h1>
 <p><em>files: include/logic/*.h, src/logic/*.c</em></p>
-<p>Within this layer, the game itself resides. The whole logic is based here.</p>
-<p>!TODO!</p>
+<p>Within this layer, the game logic itself resides. Here you can find the main game loop, the timer and the game state.</p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 🖥️ Presentation Layer</h1>
 <p><em>files: include/presentation/*.h, src/presentation/*.c</em></p>
-<p>!TODO!</p>
+<p>This layer contains everything used to display a pretty output to the user. Menus, ui and styling can all be found here.</p>
+<p>The seperation from the logic layer allows for flexible configuration, such as changing field sizes during the game.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 🛠️ Utility Layer</h1>
 <p><em>files: include/util/*.h, src/util/*.c</em></p>
-<p>!TODO!</p>
+<p>Modules used throughout the layer, or which can't be directly assigned to one certain layer can be found here.</p>
 <h1><a class="anchor" id="autotoc_md9"></a>
 ➕ Other relevant files</h1>
 <ul>
 <li>config.h.in / <a class="el" href="../../db/d16/config_8h.html">config.h</a><ul>
-<li>!TODO!</li>
+<li>The <code>config.h.in</code> file is used for the compile time configurations and is processed into <code><a class="el" href="../../db/d16/config_8h.html">config.h</a></code> by CMake</li>
 </ul>
 </li>
-<li>!TODO! </li>
+<li><a class="el" href="../../dd/d8c/entry-S_8c.html" title="entry.S">entry-S.c</a><ul>
+<li>Since Doxygen can't parse assembly files, the <code><a class="el" href="../../de/d20/entry_8S.html" title="Entry point and initialization routines for the Tic-Tac-Toe project.">entry.S</a></code> file is converted to stubbed C file by a helper script, which can then be parsed.</li>
+</ul>
+</li>
+<li><a class="el" href="../../d0/d29/main_8c.html" title="Entry point for the TikTakToe game.">main.c</a><ul>
+<li>The main file for the game itself, containing the <code><a class="el" href="../../d0/d29/main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function for the Tic-Tac-Toe application.">main()</a></code> function which is invoked by the <code>Reset_Handler</code> </li>
+</ul>
+</li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

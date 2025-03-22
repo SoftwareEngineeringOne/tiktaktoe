@@ -16,7 +16,7 @@ var searchData=
   ['printmainmenu_13',['printMainMenu',['../d2/d0a/menu_8c.html#ab7df6333ff61c8bfcb1209aba9ee0237',1,'menu.c']]],
   ['printrow_14',['printRow',['../dd/da6/field_8c.html#a1b9c763dcae98750455d20a27f4f1a4a',1,'field.c']]],
   ['printwinnerbanner_15',['printWinnerBanner',['../d2/d0a/menu_8c.html#ae6016a73419a07574f6693644b4172f7',1,'menu.c']]],
-  ['provided_20makefile_16',['🛠️ Using the provided Makefile',['../index.html#autotoc_md15',1,'']]],
+  ['provided_20makefile_16',['🛠️ Using the provided Makefile',['../index.html#autotoc_md25',1,'']]],
   ['putintobuf_17',['putIntoBuf',['../d7/dec/input__buf_8c.html#ab3e24b09253fed6492359ce7aa936407',1,'input_buf.c']]],
   ['pve_18',['PVE',['../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911a25938db0399dc5ea2c527887acac7fc3',1,'game.h']]],
   ['pvp_19',['PVP',['../d2/dd5/game_8h.html#a46c8a310cf4c094f8c80e1cb8dc1f911addbe5c6516ef695946446c87fd2dd69f',1,'game.h']]]

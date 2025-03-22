@@ -1,6 +1,5 @@
 # 🎮 TikTakToe
 
-<div style="visibility:hidden">[TOC]</div>
 
 [![MPL-2.0 License](https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe
 )](https://choosealicense.com/licenses/mpl-2.0/)
@@ -15,14 +14,12 @@
 
 A TikTakToe game written for the `nRF-51` microcontroller with an `arm-cortex-m0` CPU.
 
-<div class="hidden">
-
 > [!TIP]
 > We recommend viewing this and any other markdown file using our
 > [documentation page](https://tiktaktoe.episko.de) which provides 
 > improved formatting!
 
-</div>
+<div style="visibility:hidden">[TOC]</div>
 
 ## ✨ Features
 

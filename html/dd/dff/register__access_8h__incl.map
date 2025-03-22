@@ -1,5 +1,5 @@
 <map id="hal/register_access.h" name="hal/register_access.h">
-<area shape="rect" id="Node000001" title="Register Access Interface." alt="" coords="5,5,164,33"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="49,81,120,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,34,87,65,82,65,82,34"/>
+<area shape="rect" id="Node000001" title="Register Access Interface." alt="" coords="5,5,150,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,79,109,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,31,80,63,75,63,75,31"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="logic/input.h" name="logic/input.h">
-<area shape="rect" id="Node000001" title="Contains the input handling of the game." alt="" coords="70,5,171,33"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,81,110,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,47,71,82,67,79,97,43"/>
-<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="134,81,234,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,43,175,79,171,82,140,47"/>
+<area shape="rect" id="Node000001" title="Contains the input handling of the game." alt="" coords="65,5,155,31"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,79,100,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,45,64,80,60,77,89,41"/>
+<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="123,79,214,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,41,161,77,157,80,127,45"/>
 </map>

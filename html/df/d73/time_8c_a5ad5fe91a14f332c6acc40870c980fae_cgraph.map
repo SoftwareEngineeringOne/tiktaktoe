@@ -1,7 +1,7 @@
 <map id="time_pause" name="time_pause">
-<area shape="rect" id="Node000001" title="Pause the timer." alt="" coords="5,5,103,33"/>
-<area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="151,5,242,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,16,135,16,135,22,103,22"/>
-<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="290,5,401,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,16,274,16,274,22,242,22"/>
+<area shape="rect" id="Node000001" title="Pause the timer." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$df/d41/timer_8c.html#a6324e112e3cd853e8aafb3f4bb704bbd" title="Stops the given timer." alt="" coords="142,5,224,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
+<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="272,5,371,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,16,256,16,256,21,225,21"/>
 </map>

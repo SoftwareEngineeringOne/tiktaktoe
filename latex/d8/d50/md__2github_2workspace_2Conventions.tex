@@ -1,9 +1,6 @@
-\chapter{Coding Conventions}
-\hypertarget{md__2github_2workspace_2Conventions}{}\label{md__2github_2workspace_2Conventions}\index{Coding Conventions@{Coding Conventions}}
-\label{md__2github_2workspace_2Conventions_autotoc_md35}%
-\Hypertarget{md__2github_2workspace_2Conventions_autotoc_md35}%
-
-
+\chapter{Conventions}
+\hypertarget{md__2github_2workspace_2Conventions}{}\label{md__2github_2workspace_2Conventions}\index{Conventions@{Conventions}}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md10}{}\doxysection{\texorpdfstring{Coding Conventions}{Coding Conventions}}\label{md__2github_2workspace_2Conventions_autotoc_md10}
 
 \begin{DoxyItemize}
 \item Conventional Commits (\href{https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}{\texttt{ https\+://gist.\+github.\+com/qoomon/5dfcdf8eec66a051ecd85625518cfd13}})
@@ -15,8 +12,8 @@
 \item Private functions should therefore not be called from outside
 \item Private functions should be defined in the beginning of the source files
 \item Private functions should be implemented in the source file, following the public functions
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md36}{}\doxysection{\texorpdfstring{File structure}{File structure}}\label{md__2github_2workspace_2Conventions_autotoc_md36}
-All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md37}{}\doxysubsection{\texorpdfstring{Header file structure}{Header file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md37}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md11}{}\doxysubsection{\texorpdfstring{File structure}{File structure}}\label{md__2github_2workspace_2Conventions_autotoc_md11}
+All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Header file structure}{Header file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md12}
 
 \begin{DoxyEnumerate}
 \item Module comment
@@ -25,7 +22,7 @@ All files should follow a common structure as defined below. Exceptions may be m
 \item global variables
 \item structs
 \item public function prototypes
-\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md38}{}\doxysubsection{\texorpdfstring{Source file structure}{Source file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md38}
+\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Source file structure}{Source file structure}}\label{md__2github_2workspace_2Conventions_autotoc_md13}
 
 \begin{DoxyEnumerate}
 \item Module comment (may reference header comment and add information if needed)
@@ -34,15 +31,15 @@ All files should follow a common structure as defined below. Exceptions may be m
 \item private function prototypes
 \item public function implementations
 \item private function implementations
-\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md39}{}\doxysubsection{\texorpdfstring{Naming}{Naming}}\label{md__2github_2workspace_2Conventions_autotoc_md39}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md40}{}\doxysubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md40}
+\end{DoxyEnumerate}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Naming}{Naming}}\label{md__2github_2workspace_2Conventions_autotoc_md14}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md15}{}\doxysubsubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md15}
 
 \begin{DoxyItemize}
 \item public functions should be prefixed with "{}\`{}module\+\_\+\mbox{[}...\mbox{]}\`{}"{}
 \item private functions should be marked as {\ttfamily static} and prefixed with "{}\`{}\+\_\+\mbox{[}...\mbox{]}\`{}"{}
 \item the function name itself should be written in {\ttfamily camel\+Case}
 \item a specialization may follow as a suffix, such as "{}\`{}\mbox{[}...\mbox{]}\+\_\+waiting\`{}"{}
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md41}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{md__2github_2workspace_2Conventions_autotoc_md41}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md16}{}\doxysubsection{\texorpdfstring{Documentation}{Documentation}}\label{md__2github_2workspace_2Conventions_autotoc_md16}
 
 \begin{DoxyItemize}
 \item All files should contain a top level comment.
@@ -52,22 +49,22 @@ All files should follow a common structure as defined below. Exceptions may be m
 \item All global variables should be documented.
 \item All "{}complicated"{} macros should be documented.
 \item All typedefs should be documented.
-\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md42}{}\doxysubsection{\texorpdfstring{Documentation templates}{Documentation templates}}\label{md__2github_2workspace_2Conventions_autotoc_md42}
-To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md43}{}\doxysubsubsection{\texorpdfstring{Files}{Files}}\label{md__2github_2workspace_2Conventions_autotoc_md43}
+\end{DoxyItemize}\hypertarget{md__2github_2workspace_2Conventions_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Documentation templates}{Documentation templates}}\label{md__2github_2workspace_2Conventions_autotoc_md17}
+To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.\hypertarget{md__2github_2workspace_2Conventions_autotoc_md18}{}\doxysubsubsubsection{\texorpdfstring{Files}{Files}}\label{md__2github_2workspace_2Conventions_autotoc_md18}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
 \DoxyCodeLine{}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md44}{}\doxysubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md44}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md19}{}\doxysubsubsubsection{\texorpdfstring{Functions}{Functions}}\label{md__2github_2workspace_2Conventions_autotoc_md19}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
 \DoxyCodeLine{}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md45}{}\doxysubsubsection{\texorpdfstring{Structs}{Structs}}\label{md__2github_2workspace_2Conventions_autotoc_md45}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md20}{}\doxysubsubsubsection{\texorpdfstring{Structs}{Structs}}\label{md__2github_2workspace_2Conventions_autotoc_md20}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
@@ -78,7 +75,7 @@ To ensure a uniform documentation all doc comments, should be loosely based on t
 \DoxyCodeLine{\}\ ExampleStruct;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md46}{}\doxysubsubsection{\texorpdfstring{Enums}{Enums}}\label{md__2github_2workspace_2Conventions_autotoc_md46}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md21}{}\doxysubsubsubsection{\texorpdfstring{Enums}{Enums}}\label{md__2github_2workspace_2Conventions_autotoc_md21}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
@@ -90,21 +87,21 @@ To ensure a uniform documentation all doc comments, should be loosely based on t
 \DoxyCodeLine{\}\ ExampleEnum;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md47}{}\doxysubsubsection{\texorpdfstring{Typedefs}{Typedefs}}\label{md__2github_2workspace_2Conventions_autotoc_md47}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md22}{}\doxysubsubsubsection{\texorpdfstring{Typedefs}{Typedefs}}\label{md__2github_2workspace_2Conventions_autotoc_md22}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ExampleType;}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md48}{}\doxysubsubsection{\texorpdfstring{Macros}{Macros}}\label{md__2github_2workspace_2Conventions_autotoc_md48}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md23}{}\doxysubsubsubsection{\texorpdfstring{Macros}{Macros}}\label{md__2github_2workspace_2Conventions_autotoc_md23}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{preprocessor}{\#define\ EXAMPLE\_MACRO\ 42}}
 
 \end{DoxyCode}
-\hypertarget{md__2github_2workspace_2Conventions_autotoc_md49}{}\doxysubsubsection{\texorpdfstring{Global Variables}{Global Variables}}\label{md__2github_2workspace_2Conventions_autotoc_md49}
+\hypertarget{md__2github_2workspace_2Conventions_autotoc_md24}{}\doxysubsubsubsection{\texorpdfstring{Global Variables}{Global Variables}}\label{md__2github_2workspace_2Conventions_autotoc_md24}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{}

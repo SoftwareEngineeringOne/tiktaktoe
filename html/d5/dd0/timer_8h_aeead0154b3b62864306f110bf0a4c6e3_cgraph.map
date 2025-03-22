@@ -1,5 +1,5 @@
 <map id="timer_capture" name="timer_capture">
-<area shape="rect" id="Node000001" title="Capture the time of the given timer." alt="" coords="5,5,118,33"/>
-<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="166,5,277,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,16,150,16,150,22,118,22"/>
+<area shape="rect" id="Node000001" title="Capture the time of the given timer." alt="" coords="5,5,106,31"/>
+<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="154,5,253,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
 </map>

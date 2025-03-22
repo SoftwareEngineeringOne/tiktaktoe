@@ -1,24 +1,24 @@
 <map id="logic/winning.c" name="logic/winning.c">
-<area shape="rect" id="Node000001" title="Implements the function for checking if someone has won." alt="" coords="388,5,506,33"/>
-<area shape="rect" id="Node000002" href="$d7/df5/winning_8h.html" title="Contains the function for checking if someone has won." alt="" coords="387,81,506,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,34,450,65,444,65,444,34"/>
-<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="333,157,438,184"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,111,408,147,404,143,434,108"/>
-<area shape="rect" id="Node000011" href="$df/db1/math_8h.html" title="Contains several different simple and independent math functions." alt="" coords="462,157,554,184"/>
-<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="460,108,490,143,486,147,456,111"/>
-<area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="128,232,275,260"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="354,187,249,229,247,224,352,182"/>
-<area shape="rect" id="Node000008" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="326,232,445,260"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="388,185,388,217,383,217,383,185"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="444,316,514,344"/>
-<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="408,182,435,203,458,231,473,266,480,301,474,302,468,268,454,234,431,207,405,187"/>
-<area shape="rect" id="Node000005" href="$db/d16/config_8h.html" title=" " alt="" coords="5,316,78,344"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="177,263,82,311,80,307,175,258"/>
-<area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title="Contains ASCII art constants for the TikTakToe game." alt="" coords="102,308,240,353"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="199,262,187,294,182,292,194,260"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="264,316,337,344"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="219,259,275,305,272,309,216,263"/>
-<area shape="rect" id="Node000009" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="362,316,415,344"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="389,261,390,301,385,301,383,261"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="402,259,455,304,451,308,399,263"/>
+<area shape="rect" id="Node000001" title="Implements the function for checking if someone has won." alt="" coords="360,5,466,31"/>
+<area shape="rect" id="Node000002" href="$d7/df5/winning_8h.html" title="Contains the function for checking if someone has won." alt="" coords="360,79,466,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,31,415,63,410,63,410,31"/>
+<area shape="rect" id="Node000003" href="$d2/dd5/game_8h.html" title="Contains the game logic." alt="" coords="310,153,404,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,107,378,142,373,139,401,103"/>
+<area shape="rect" id="Node000011" href="$df/db1/math_8h.html" title="Contains several different simple and independent math functions." alt="" coords="428,153,509,178"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="424,103,452,139,448,142,420,107"/>
+<area shape="rect" id="Node000004" href="$d5/d5a/field_8h.html" title="Contains constants and one function to draw the whole field." alt="" coords="123,226,252,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="329,181,231,222,229,217,327,176"/>
+<area shape="rect" id="Node000008" href="$db/db3/input__buf_8h.html" title="Contains everything for the input buffer." alt="" coords="304,226,409,252"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="359,179,359,211,354,211,354,179"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="413,308,476,333"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="377,177,402,197,424,225,438,259,445,292,440,293,433,260,420,228,398,201,373,181"/>
+<area shape="rect" id="Node000005" href="$db/d16/config_8h.html" title=" " alt="" coords="5,308,71,333"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="166,255,75,302,73,298,163,250"/>
+<area shape="rect" id="Node000006" href="$d2/d5a/ascii__art_8h.html" title="Contains ASCII art constants for the TikTakToe game." alt="" coords="95,300,218,341"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="185,253,172,286,167,284,180,251"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="243,308,310,333"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="203,250,253,295,250,299,199,254"/>
+<area shape="rect" id="Node000009" href="$d4/da4/def_8h.html" title="Contains very basic and general definitions." alt="" coords="335,308,384,333"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="360,252,361,292,356,292,354,253"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="372,250,422,295,418,299,368,254"/>
 </map>

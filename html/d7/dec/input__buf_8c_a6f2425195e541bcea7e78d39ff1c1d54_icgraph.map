@@ -1,5 +1,5 @@
 <map id="input_onInterrupt" name="input_onInterrupt">
-<area shape="rect" id="Node000001" title="Function to call in case of UART input interrupt." alt="" coords="197,5,330,33"/>
-<area shape="rect" id="Node000002" href="$d8/d22/interrupts_8c.html#a0c135cb06b41d4db1ff45f59fd28dfb6" title="UART interrupt handler." alt="" coords="5,5,149,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,22,149,22,149,16,181,16"/>
+<area shape="rect" id="Node000001" title="Function to call in case of UART input interrupt." alt="" coords="182,5,300,31"/>
+<area shape="rect" id="Node000002" href="$d8/d22/interrupts_8c.html#a0c135cb06b41d4db1ff45f59fd28dfb6" title="UART interrupt handler." alt="" coords="5,5,134,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,21,134,21,134,16,166,16"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="timer_count" name="timer_count">
-<area shape="rect" id="Node000001" title="Activate counting on the given timer." alt="" coords="5,5,105,33"/>
-<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="153,5,264,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,16,137,16,137,22,105,22"/>
+<area shape="rect" id="Node000001" title="Activate counting on the given timer." alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="143,5,242,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
 </map>

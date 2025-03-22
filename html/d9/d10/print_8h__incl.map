@@ -1,7 +1,7 @@
 <map id="presentation/print.h" name="presentation/print.h">
-<area shape="rect" id="Node000001" title="Contains several different high level functions for printing to UART." alt="" coords="73,5,222,33"/>
-<area shape="rect" id="Node000002" href="$de/d12/style_8h.html" title="Contains several constants to simplify the styling of output." alt="" coords="5,81,157,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,35,105,71,101,68,134,32"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="180,81,251,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,32,195,68,191,71,158,35"/>
+<area shape="rect" id="Node000001" title="Contains several different high level functions for printing to UART." alt="" coords="68,5,199,31"/>
+<area shape="rect" id="Node000002" href="$de/d12/style_8h.html" title="Contains several constants to simplify the styling of output." alt="" coords="5,79,139,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,33,94,69,90,65,121,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="163,79,226,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,29,176,65,172,69,141,33"/>
 </map>

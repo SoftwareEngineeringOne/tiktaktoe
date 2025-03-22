@@ -1,21 +1,21 @@
 <map id="cell_select" name="cell_select">
-<area shape="rect" id="Node000001" title="Selects the given cell." alt="" coords="5,108,96,136"/>
-<area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209" title="Redraws a single cell at the specified position." alt="" coords="144,108,235,136"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,119,128,119,128,124,96,124"/>
-<area shape="rect" id="Node000003" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="283,57,402,85"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,105,283,88,285,93,234,110"/>
-<area shape="rect" id="Node000005" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="485,109,537,137"/>
-<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="235,119,470,120,470,126,235,125"/>
-<area shape="rect" id="Node000009" href="$d6/db1/print_8c.html#a9e731fe6687d1daac66269c94765a45b" title="Prints the given style attributes." alt="" coords="298,159,388,186"/>
-<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="234,134,285,151,283,156,233,139"/>
-<area shape="rect" id="Node000004" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="470,5,552,33"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,54,455,34,456,39,391,59"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="391,83,471,108,470,113,389,88"/>
-<area shape="rect" id="Node000008" href="$dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="450,57,572,85"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="403,68,435,68,435,74,403,74"/>
-<area shape="rect" id="Node000006" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="620,109,737,137"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="537,120,604,120,604,126,537,126"/>
-<area shape="rect" id="Node000007" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="785,109,896,137"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="737,120,769,120,769,126,737,126"/>
-<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="388,157,469,132,471,138,389,162"/>
+<area shape="rect" id="Node000001" title="Selects the given cell." alt="" coords="5,104,89,130"/>
+<area shape="rect" id="Node000002" href="$db/dcc/cell_8c.html#a09cfcadedb8a21e79770e0409f9e6209" title="Redraws a single cell at the specified position." alt="" coords="137,104,219,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,114,121,114,121,120,89,120"/>
+<area shape="rect" id="Node000003" href="$dd/dfa/cursor_8c.html#a599725458bf000c7fc08432a74602fac" title="Move the cursor to the given coordinates." alt="" coords="267,53,378,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,101,269,82,271,87,218,106"/>
+<area shape="rect" id="Node000005" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="459,104,506,130"/>
+<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="219,114,444,114,444,120,219,120"/>
+<area shape="rect" id="Node000009" href="$d6/db1/print_8c.html#a9e731fe6687d1daac66269c94765a45b" title="Prints the given style attributes." alt="" coords="282,155,363,180"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="218,128,271,147,269,152,216,133"/>
+<area shape="rect" id="Node000004" href="$d8/d2f/conversion_8c.html#a10b90e654db54d6aad3fb7c1ba84b5db" title="Converts an integer to a string." alt="" coords="445,5,520,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="367,50,429,31,430,36,369,55"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="367,77,445,102,444,108,365,82"/>
+<area shape="rect" id="Node000008" href="$dd/dfa/cursor_8c.html#a57bbc852bc29fb220c4d95404ee482dc" title="Write a numeric value to a buffer." alt="" coords="426,55,539,80"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="379,64,411,64,411,70,379,69"/>
+<area shape="rect" id="Node000006" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="587,104,691,130"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="506,114,571,114,571,120,506,120"/>
+<area shape="rect" id="Node000007" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="739,104,838,130"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="692,114,723,114,723,120,692,120"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="362,152,444,126,445,131,364,157"/>
 </map>

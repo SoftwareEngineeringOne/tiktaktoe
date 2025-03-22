@@ -1,15 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- HTML header for doxygen 1.10.0-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: Coding Conventions</title>
+<title>TikTakToe: Conventions</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
 <script type="text/javascript" src="../../clipboard.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
@@ -28,9 +39,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="../../DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TikTakToe<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">TikTakToe
    </div>
   </td>
  </tr>
@@ -99,10 +109,70 @@ $(function(){initNavTree('d8/d50/md__2github_2workspace_2Conventions.html','../.
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Coding Conventions</div></div>
+  <div class="headertitle"><div class="title">Conventions</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md35"></a></p>
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md10">Coding Conventions</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md11">File structure</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md12">Header file structure</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md13">Source file structure</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md14">Naming</a>
+            <ul>
+              <li class="level4">
+                <a href="#autotoc_md15">Functions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md16">Documentation</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md17">Documentation templates</a>
+            <ul>
+              <li class="level4">
+                <a href="#autotoc_md18">Files</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md19">Functions</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md20">Structs</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md21">Enums</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md22">Typedefs</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md23">Macros</a>
+              </li>
+              <li class="level4">
+                <a href="#autotoc_md24">Global Variables</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md10"></a>
+Coding Conventions</h1>
 <ul>
 <li>Conventional Commits (<a href="https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13">https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13</a>)</li>
 <li>The architecture is documented in this README</li>
@@ -114,11 +184,11 @@ $(function(){initNavTree('d8/d50/md__2github_2workspace_2Conventions.html','../.
 <li>Private functions should be defined in the beginning of the source files</li>
 <li>Private functions should be implemented in the source file, following the public functions</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md36"></a>
-File structure</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+File structure</h2>
 <p>All files should follow a common structure as defined below. Exceptions may be made, however these should be explicitely explained.</p>
-<h2><a class="anchor" id="autotoc_md37"></a>
-Header file structure</h2>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Header file structure</h3>
 <ol type="1">
 <li>Module comment</li>
 <li>Defines</li>
@@ -127,8 +197,8 @@ Header file structure</h2>
 <li>structs</li>
 <li>public function prototypes</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md38"></a>
-Source file structure</h2>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Source file structure</h3>
 <ol type="1">
 <li>Module comment (may reference header comment and add information if needed)</li>
 <li>module constants</li>
@@ -137,18 +207,18 @@ Source file structure</h2>
 <li>public function implementations</li>
 <li>private function implementations</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md39"></a>
-Naming</h2>
-<h3><a class="anchor" id="autotoc_md40"></a>
-Functions</h3>
+<h3><a class="anchor" id="autotoc_md14"></a>
+Naming</h3>
+<h4><a class="anchor" id="autotoc_md15"></a>
+Functions</h4>
 <ul>
 <li>public functions should be prefixed with "`module_[...]`"</li>
 <li>private functions should be marked as <code>static</code> and prefixed with "`_[...]`"</li>
 <li>the function name itself should be written in <code>camelCase</code></li>
 <li>a specialization may follow as a suffix, such as "`[...]_waiting`"</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md41"></a>
-Documentation</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Documentation</h2>
 <ul>
 <li>All files should contain a top level comment.</li>
 <li>All public functions should be documented in the header file.</li>
@@ -158,27 +228,27 @@ Documentation</h1>
 <li>All "complicated" macros should be documented.</li>
 <li>All typedefs should be documented.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md42"></a>
-Documentation templates</h2>
+<h3><a class="anchor" id="autotoc_md17"></a>
+Documentation templates</h3>
 <p>To ensure a uniform documentation all doc comments, should be loosely based on the following templates. Irrelevant fields can and should be ommited to avoid bloat.</p>
-<h3><a class="anchor" id="autotoc_md43"></a>
-Files</h3>
+<h4><a class="anchor" id="autotoc_md18"></a>
+Files</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"> </div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md44"></a>
-Functions</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md19"></a>
+Functions</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"> </div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md45"></a>
-Structs</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md20"></a>
+Structs</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"> <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line">    <span class="keywordtype">int</span> member1; </div>
 <div class="line">    <span class="keywordtype">float</span> member2; </div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">} ExampleStruct;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md46"></a>
-Enums</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md21"></a>
+Enums</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"> <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
 <div class="line">    ENUM_VALUE1; </div>
@@ -186,16 +256,16 @@ Enums</h3>
 <div class="line">    ENUM_VALUE3; </div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">} ExampleEnum;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md47"></a>
-Typedefs</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md22"></a>
+Typedefs</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ExampleType;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md48"></a>
-Macros</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md23"></a>
+Macros</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"><span class="preprocessor">#define EXAMPLE_MACRO 42</span></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md49"></a>
-Global Variables</h3>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md24"></a>
+Global Variables</h4>
 <div class="fragment"><div class="line"> </div>
 <div class="line"><span class="keyword">extern</span> <span class="keywordtype">int</span> g_exampleGlobal;</div>
 </div><!-- fragment --> </div></div><!-- contents -->
@@ -204,7 +274,7 @@ Global Variables</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

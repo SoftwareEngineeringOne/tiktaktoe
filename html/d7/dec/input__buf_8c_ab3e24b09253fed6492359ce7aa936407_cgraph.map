@@ -1,5 +1,5 @@
 <map id="putIntoBuf" name="putIntoBuf">
-<area shape="rect" id="Node000001" title="Put the next byte into the buffer." alt="" coords="5,5,95,33"/>
-<area shape="rect" id="Node000002" href="$d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="143,5,238,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,127,16,127,22,95,22"/>
+<area shape="rect" id="Node000001" title="Put the next byte into the buffer." alt="" coords="5,5,87,31"/>
+<area shape="rect" id="Node000002" href="$d7/dec/input__buf_8c.html#a4401e9499819daae58c72b265d521374" title="Check if the buffer is full." alt="" coords="135,5,222,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,16,119,16,119,21,87,21"/>
 </map>

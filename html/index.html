@@ -1,15 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- HTML header for doxygen 1.10.0-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TikTakToe: TikTakToe</title>
+<title>TikTakToe: 🎮 TikTakToe</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -28,9 +39,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="DHBW-Logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">TikTakToe<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">TikTakToe
    </div>
   </td>
  </tr>
@@ -99,33 +109,80 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">TikTakToe </div></div>
+  <div class="headertitle"><div class="title">🎮 TikTakToe </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a></p>
-<p><a href="https://choosealicense.com/licenses/mpl-2.0/"><img src="https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe" alt="MPL-2.0 License" class="inline"/></a></p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-TikTakToe</h1>
-<p>A TikTakToe game written for the <code>arm-cortex-m0</code> microcontroller.</p>
-<p>Authors: Simon Blum, Max Rodler, Ben Oeckl, Paul Stöckle</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Acknowledgements</h2>
+<div class="toc"><h3>Table of Contents</h3>
 <ul>
-<li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> </li>
+  <li class="level1">
+    <a href="#autotoc_md25">✨ Features</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md26">📚 Documentation</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md27">🛠️ Build and Run</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md28">🖥️ Using CMake and qemu</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md29">🛠️ Using the provided Makefile</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md30">🐳 Using Docker</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md31">☁️ Use Dockerhub</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md32">🏗️ Build locally</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md33">⚙️ Configuration</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md34">📦 Dependencies</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md35">🏗️ Architecture</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md36">📜 Conventions</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md37">👥 Authors</a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md38">🙏 Acknowledgements</a>
+  </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Architecture</h2>
-<p>See <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a> </p>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Documentation</h2>
-<p>[Documentation](TODO)</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Build and run the project</h2>
-<h3><a class="anchor" id="autotoc_md7"></a>
-Using CMake and qemu directly</h3>
-<p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required. </p>
-<h4><a class="anchor" id="autotoc_md8"></a>
-Linux</h4>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a></p>
+<div style="visibility:hidden"></div><p><a href="https://choosealicense.com/licenses/mpl-2.0/"><img src="https://img.shields.io/github/license/SoftwareEngineeringOne/tiktaktoe" alt="MPL-2.0 License" class="inline"/></a> <img src="https://img.shields.io/badge/microcontroller-nRF51-blue?logo=nordicsemiconductor" alt="microcontroller" class="inline"/> <img src="https://img.shields.io/badge/cpu-cortex--m0-darkgreen?logo=arm" alt="cpu" class="inline"/> <img src="https://img.shields.io/github/v/release/SoftwareEngineeringOne/tiktaktoe" alt="Release" class="inline"/> <img src="https://img.shields.io/docker/image-size/definitelynotsimon13/tiktaktoe" alt="Image Size" class="inline"/></p>
+<p>A TikTakToe game written for the <code>nRF-51</code> microcontroller with an <code>arm-cortex-m0</code> CPU.</p>
+<h1><a class="anchor" id="autotoc_md25"></a>
+✨ Features</h1>
+<ul>
+<li>🎮 <b>PVP and PVE modes</b></li>
+<li>🖥️ <b>Cross-Platform Compatibility</b></li>
+<li>⚙️ <b>Highly Customizable</b></li>
+<li>🐳 <b>Docker Support for 0 dependency execution</b></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md26"></a>
+📚 Documentation</h1>
+<p>Check out our <a href="https://tiktaktoe.episko.de">documentation</a> to learn more about the code and for an improved version of this file!</p>
+<h1><a class="anchor" id="autotoc_md27"></a>
+🛠️ Build and Run</h1>
+<h2><a class="anchor" id="autotoc_md28"></a>
+🖥️ Using CMake and qemu</h2>
+<p>To build the project using CMake and qemu some dependencies, which can be found under [dependencies] are required.</p>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title"> 🐧 Linux </b></p>
 <div class="fragment"><div class="line"># 1. Configure the cmake project</div>
 <div class="line">cmake --preset arm-cortex-m0-unix</div>
 <div class="line"> </div>
@@ -134,14 +191,17 @@ Linux</h4>
 <div class="line"> </div>
 <div class="line"># 3. Run the project</div>
 <div class="line">qemu-system-arm -M microbit -device loader,file=build-cortex-m0/TikTakToe.elf -nographic -s -serial mon:stdio</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md9"></a>
-Windows</h4>
-<p>!TODO!</p>
-<h3><a class="anchor" id="autotoc_md10"></a>
-Using the provided Makefile</h3>
-<h4><a class="anchor" id="autotoc_md11"></a>
-Linux</h4>
-<p>The provided [Makefile](Makefile) can be used to easily build and run the project using a single command. </p><div class="fragment"><div class="line"># Configure, build and run the project</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> 🪟 Windows </b></p>
+<p class="startli">!TODO!</p>
+</li>
+</ul>
+</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md29"></a>
+🛠️ Using the provided Makefile</h2>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title"> 🐧 Linux </b></p>
+<p class="startli">The provided [Makefile](Makefile) can be used to easily build and run the project using a single command.</p>
+<div class="fragment"><div class="line"># Configure, build and run the project</div>
 <div class="line">make run</div>
 <div class="line"> </div>
 <div class="line"># Configure and build the project</div>
@@ -152,26 +212,29 @@ Linux</h4>
 <div class="line"> </div>
 <div class="line"># Generate doxygen documentation (requires doxygen installed)</div>
 <div class="line">make generate_documentation</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md12"></a>
-Windows</h4>
-<p>!TODO!</p>
-<h3><a class="anchor" id="autotoc_md13"></a>
-Using Docker</h3>
-<p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options: </p>
-<h4><a class="anchor" id="autotoc_md14"></a>
-Use the image from Dockerhub</h4>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> 🪟 Windows </b></p>
+<p class="startli">!TODO!</p>
+</li>
+</ul>
+</div><div class="tabbed"></div><h2><a class="anchor" id="autotoc_md30"></a>
+🐳 Using Docker</h2>
+<p>Docker can be used to build and run the application without the need for external dependencies. For this you have to options:</p>
+<h3><a class="anchor" id="autotoc_md31"></a>
+☁️ Use Dockerhub</h3>
 <div class="fragment"><div class="line"># Using DockerHub</div>
 <div class="line">docker run -it definitelynotsimon13/tiktaktoe:latest</div>
 <div class="line"># Using GitHub Container Registry</div>
 <div class="line">docker run -it ghcr.io/softwareengineeringone/tiktaktoe:latest</div>
-</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md15"></a>
-Build the image locally</h4>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md32"></a>
+🏗️ Build locally</h3>
 <div class="fragment"><div class="line">docker build -t [TAGNAME] .</div>
 <div class="line">docker run -it [TAGNAME]</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In either case the <code>-it</code> flags are required to properly capture input from STDIN! </dd></dl>
-<h2><a class="anchor" id="autotoc_md16"></a>
-Compile time configurations</h2>
-<p>The project has a few options that can be changed before compilation.</p><ul>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>In either case the <code>-it</code> flags are required to properly capture input from stdin!</dd></dl>
+<h1><a class="anchor" id="autotoc_md33"></a>
+⚙️ Configuration</h1>
+<p>The project has a few options that can be changed before compilation.</p>
+<ul>
 <li>Number of rows (default is 4)</li>
 <li>Number of columns (default is 4)</li>
 <li>Ticks per turn (default is 20)</li>
@@ -179,72 +242,73 @@ Compile time configurations</h2>
 <li>Unicode support (default is "ON")</li>
 <li>ASCII Art (default is "ON", may look broken on small screens)</li>
 </ul>
-<p>These can be set by: </p>
-<h3><a class="anchor" id="autotoc_md17"></a>
-Directly passing to CMake</h3>
-<p>When configuring the project the default command <code>cmake --preset arm-cortex-m0-{unix/mingw}</code> can be appended by:</p><ul>
+<p>These can be set by:</p>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title"> Using CMake </b></p>
+<p class="startli">When configuring the project the default command <code>cmake --preset arm-cortex-m0-{unix/mingw}</code> can be appended by:</p><ul>
 <li>for the number of rows: <code>[...] -DCELLS_PER_COL=$(NUMBER)</code></li>
 <li>for the number of cols: <code>[...] -DCELLS_PER_ROW=$(NUMBER)</code></li>
 <li>for ticks per turn: <code>[...] -DTICKS_PER_TURN=$(NUMBER)</code></li>
 <li>for tick speed: <code>[...] -DTICK_SPEED=$(NUMBER)</code></li>
 <li>for unicode: <code>[...] -DENABLE_UNICODE=$(ON/OFF)</code></li>
-<li>for ascii art: <code>[...] -DENABLE_ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
+<li>for ascii art: <code>[...] -DENABLE_ASCII_ART=$(ON/OFF)</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md18"></a>
-Using the included Makefile</h3>
-<p>When using the Makefile to configure/build the project variables can be passed like this:</p><ul>
+<p class="startli"><em>All options can be combined.</em></p>
+</li>
+<li><p class="startli"><b class="tab-title"> Using the Makefile </b></p>
+<p class="startli">When using the Makefile to configure/build the project variables can be passed like this:</p><ul>
 <li>for the number of rows: <code>make ROWS=$(NUMBER)</code></li>
 <li>for the number of cols: <code>make COLS=$(NUMBER)</code></li>
 <li>for ticks per turn: <code>make TICKS_PER_TURN=$(NUMBER)</code></li>
 <li>for tick speed: <code>make TICK_SPEED=$(NUMBER)</code></li>
 <li>for unicode: <code>make UNICODE=$(ON/OFF)</code></li>
-<li>for ascii art: <code>make ASCII_ART=$(ON/OFF)</code> <em>All options can be combined.</em></li>
+<li>for ascii art: <code>make ASCII_ART=$(ON/OFF)</code></li>
 </ul>
-<p>Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
-<h2><a class="anchor" id="autotoc_md19"></a>
-Features</h2>
-<ul>
-<li>Light/dark mode toggle</li>
-<li>Live previews</li>
-<li>Fullscreen mode</li>
-<li>Cross platform</li>
+<p class="startli"><em>All options can be combined.</em></p>
+<p class="startli">Due to the way the Makefile is structured, these may also be passed when using e.g. <code>make run</code>. However please note, that in order for changes to take affect the build directory may have to be deleted. This can be done using <code>make clean</code> or by manually deleting the directory.</p>
+</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md20"></a>
-Dependencies (TODO: CHECK CORRECT)</h2>
-<h3><a class="anchor" id="autotoc_md21"></a>
-Ubuntu/Debian</h3>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md34"></a>
+📦 Dependencies</h1>
+<p>(TODO: CHECK CORRECT) </p><div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title"> Ubuntu/Debian </b></p>
 <div class="fragment"><div class="line">sudo apt install gcc-arm-none-eabi cmake qemu-system-arm</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md22"></a>
-Arch</h3>
-<div class="fragment"><div class="line"># Using yay</div>
-<div class="line">yay -S gcc-arm-none-eabi-bin cmake qemu-system-arm</div>
-<div class="line"># Using paru</div>
-<div class="line">paru -S gcc-arm-none-eabi-bin cmake qemu-system-arm</div>
-<div class="line"># Using pacman</div>
-<div class="line">sudo pacman -S ?GCC? cmake qemu-system-arm</div>
-</div><!-- fragment --><p> !TODO - gcc for arm gotta be in the main repo? </p>
-<h3><a class="anchor" id="autotoc_md23"></a>
-Nix / NixOS</h3>
-<p>You can either use the provided <a href="flake.nix">Flake</a>, or add the following packages: </p><div class="fragment"><div class="line">gcc-arm-embedded</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Nix / NixOS </b></p>
+<p class="startli">You can either use the provided <a href="flake.nix">Flake</a>, or add the following packages:</p>
+<div class="fragment"><div class="line">gcc-arm-embedded</div>
 <div class="line">cmake</div>
 <div class="line">qemu</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md24"></a>
-macOS</h3>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Arch </b></p>
+<div class="fragment"><div class="line">sudo pacman -S arm-none-eabi-gcc cmake qemu-system-arm</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> MacOS </b></p>
 <div class="fragment"><div class="line">brew install gcc-arm-embedded cmake qemu</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md25"></a>
-Windows</h3>
-<p>TODO/CHECK</p>
-<h2><a class="anchor" id="autotoc_md26"></a>
-Authors</h2>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title"> Windows </b></p>
+<p class="startli">!TODO!</p>
+</li>
+</ul>
+</div><div class="tabbed"></div><h1><a class="anchor" id="autotoc_md35"></a>
+🏗️ Architecture</h1>
+<p>To learn more about the the architecture we used to create this game check out <a class="el" href="d7/d5e/md__2github_2workspace_2Architecture.html">Architecture.md</a>!</p>
+<h1><a class="anchor" id="autotoc_md36"></a>
+📜 Conventions</h1>
+<p>If you want to know about the coding convection we used when creating code check out <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a>!</p>
+<h1><a class="anchor" id="autotoc_md37"></a>
+👥 Authors</h1>
 <ul>
 <li><a href="https://www.github.com/DefinitelyNotSimon13">Simon Blum</a></li>
 <li><a href="https://github.com/benoeckl">Ben Oeckl</a></li>
 <li><a href="https://github.com/DosKobold">Paul Stöckle</a></li>
 <li><a href="https://github.com/MaxRodler">Max Rodler</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md27"></a>
-Conventions</h2>
-<p>See <a class="el" href="d8/d50/md__2github_2workspace_2Conventions.html">Conventions.md</a> </p>
+<h1><a class="anchor" id="autotoc_md38"></a>
+🙏 Acknowledgements</h1>
+<ul>
+<li><a href="https://github.com/infohoschie/arm-cortex-m0-cmake-start">arm-cortex-m0-cmake-start</a> - Base template used for the project </li>
+</ul>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
@@ -252,7 +316,7 @@ Conventions</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 22 2025 15:19:14 for TikTakToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

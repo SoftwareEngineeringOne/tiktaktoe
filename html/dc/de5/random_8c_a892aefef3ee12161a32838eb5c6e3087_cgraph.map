@@ -1,5 +1,5 @@
 <map id="rng_init" name="rng_init">
-<area shape="rect" id="Node000001" title="Enables the generation of random numbers." alt="" coords="5,5,76,33"/>
-<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="124,5,235,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,16,108,16,108,22,76,22"/>
+<area shape="rect" id="Node000001" title="Enables the generation of random numbers." alt="" coords="5,5,69,31"/>
+<area shape="rect" id="Node000002" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="117,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,16,101,16,101,21,69,21"/>
 </map>

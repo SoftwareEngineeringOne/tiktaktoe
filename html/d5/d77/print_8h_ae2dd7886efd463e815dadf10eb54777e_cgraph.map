@@ -1,7 +1,7 @@
 <map id="print" name="print">
-<area shape="rect" id="Node000001" title="Prints the given string." alt="" coords="5,5,57,33"/>
-<area shape="rect" id="Node000002" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="105,5,222,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,16,89,16,89,22,57,22"/>
-<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="270,5,381,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,16,254,16,254,22,222,22"/>
+<area shape="rect" id="Node000001" title="Prints the given string." alt="" coords="5,5,52,31"/>
+<area shape="rect" id="Node000002" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="100,5,204,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,16,84,16,84,21,52,21"/>
+<area shape="rect" id="Node000003" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="252,5,351,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,16,236,16,236,21,205,21"/>
 </map>

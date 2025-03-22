@@ -1,36 +1,36 @@
 <map id="presentation/style.h" name="presentation/style.h">
-<area shape="rect" id="Node000001" title="Contains several constants to simplify the styling of output." alt="" coords="511,5,662,33"/>
-<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,157,110,184"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="511,39,332,84,201,123,96,159,94,154,200,118,330,78,510,34"/>
-<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="843,81,944,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="657,35,843,79,842,84,656,40"/>
-<area shape="rect" id="Node000004" href="$d0/d29/main_8c.html" title="Entry point for the TikTakToe game." alt="" coords="134,157,200,184"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="534,41,410,84,201,159,199,154,409,78,532,36"/>
-<area shape="rect" id="Node000005" href="$db/dcc/cell_8c.html" title="Implements functions for managing the presentation of cells." alt="" coords="224,157,366,184"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="549,43,322,159,319,154,547,38"/>
-<area shape="rect" id="Node000006" href="$d2/d0a/menu_8c.html" title="Implements menu presentation functions." alt="" coords="389,157,544,184"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="569,47,479,158,475,154,565,43"/>
-<area shape="rect" id="Node000007" href="$d6/db1/print_8c.html" title="Implementation of high&#45;level printing functions for UART." alt="" coords="569,157,717,184"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="570,47,556,77,555,93,559,108,569,122,582,135,612,154,609,158,579,139,565,126,554,110,549,93,551,76,565,45"/>
-<area shape="rect" id="Node000008" href="$d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="568,81,718,109"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="608,44,635,79,631,82,604,47"/>
-<area shape="rect" id="Node000011" href="$dc/d78/ui_8c.html" title="Implements functions for the in&#45;game user interface." alt="" coords="1235,157,1365,184"/>
-<area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="634,37,731,79,759,94,788,106,852,122,907,133,1003,140,1100,143,1223,154,1235,156,1234,161,1223,159,1099,148,1003,146,906,138,851,128,786,111,756,99,728,83,632,42"/>
-<area shape="rect" id="Node000012" href="$da/d03/error__handling_8c.html" title=" " alt="" coords="1390,157,1541,184"/>
-<area shape="poly" id="edge20_Node000001_Node000012" title=" " alt="" coords="651,35,713,55,779,79,805,94,832,106,912,127,981,138,1043,144,1101,145,1223,144,1294,147,1378,154,1390,155,1389,161,1377,159,1294,152,1223,150,1101,150,1043,149,981,144,911,132,830,111,803,98,776,83,712,60,650,40"/>
-<area shape="rect" id="Node000014" href="$d9/de8/style_8c.html" title="Implements predefined styles for terminal output." alt="" coords="968,81,1118,109"/>
-<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="678,32,967,79,967,84,678,38"/>
-<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="553,107,355,128,122,159,111,161,110,156,121,154,354,123,553,102"/>
-<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="553,108,394,128,213,159,200,162,199,157,212,154,393,123,552,103"/>
-<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="566,115,358,159,357,153,565,110"/>
-<area shape="poly" id="edge13_Node000008_Node000006" title=" " alt="" coords="598,117,499,159,497,154,596,113"/>
-<area shape="poly" id="edge14_Node000008_Node000007" title=" " alt="" coords="646,124,646,156,640,156,640,124"/>
-<area shape="rect" id="Node000009" href="$dd/dfa/cursor_8c.html" title="Implements cursor movement functionality for the presentation layer." alt="" coords="742,157,899,184"/>
-<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="690,113,790,154,788,159,688,117"/>
-<area shape="rect" id="Node000010" href="$dd/da6/field_8c.html" title="Implements the rendering of the TikTakToe field." alt="" coords="923,157,1069,184"/>
-<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="722,110,933,153,932,159,721,115"/>
-<area shape="poly" id="edge15_Node000008_Node000011" title=" " alt="" coords="733,106,736,106,980,129,1086,138,1223,154,1235,156,1234,161,1222,159,1086,144,979,134,736,111,732,111"/>
-<area shape="poly" id="edge16_Node000008_Node000012" title=" " alt="" coords="733,101,787,106,1083,127,1212,137,1378,154,1390,155,1389,161,1377,159,1211,143,1082,133,787,111,733,107"/>
-<area shape="rect" id="Node000013" href="$d7/dec/input__buf_8c.html" title="Implementation of the input buffer functions." alt="" coords="1094,157,1211,184"/>
-<area shape="poly" id="edge17_Node000008_Node000013" title=" " alt="" coords="733,106,1082,154,1094,156,1093,161,1081,159,732,111"/>
+<area shape="rect" id="Node000001" title="Contains several constants to simplify the styling of output." alt="" coords="467,5,600,31"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html" title="Implements the core game logic for Tic&#45;Tac&#45;Toe." alt="" coords="5,153,100,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,38,316,82,89,155,87,150,314,76,471,33"/>
+<area shape="rect" id="Node000003" href="$d1/d06/input_8c.html" title="Implements input handling for the game." alt="" coords="777,79,867,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="598,33,777,77,775,82,597,38"/>
+<area shape="rect" id="Node000004" href="$d0/d29/main_8c.html" title="Entry point for the TikTakToe game." alt="" coords="124,153,184,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="489,39,185,155,183,150,487,34"/>
+<area shape="rect" id="Node000005" href="$db/dcc/cell_8c.html" title="Implements functions for managing the presentation of cells." alt="" coords="208,153,334,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="500,41,295,154,292,150,497,36"/>
+<area shape="rect" id="Node000006" href="$d2/d0a/menu_8c.html" title="Implements menu presentation functions." alt="" coords="358,153,496,178"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="518,45,438,154,434,151,514,42"/>
+<area shape="rect" id="Node000007" href="$d6/db1/print_8c.html" title="Implementation of high&#45;level printing functions for UART." alt="" coords="520,153,652,178"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="519,45,508,74,507,89,511,104,521,118,533,131,561,150,558,154,530,135,516,121,506,106,502,90,503,73,514,44"/>
+<area shape="rect" id="Node000008" href="$d5/d77/print_8h.html" title="Contains several different high level functions for printing to UART." alt="" coords="520,79,652,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="553,42,579,77,575,80,549,45"/>
+<area shape="rect" id="Node000011" href="$dc/d78/ui_8c.html" title="Implements functions for the in&#45;game user interface." alt="" coords="1125,153,1241,178"/>
+<area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="575,35,721,102,829,126,916,135,1003,139,1114,150,1125,152,1124,157,1114,155,1002,144,915,140,829,131,720,107,573,40"/>
+<area shape="rect" id="Node000012" href="$da/d03/error__handling_8c.html" title=" " alt="" coords="1266,153,1399,178"/>
+<area shape="poly" id="edge20_Node000001_Node000012" title=" " alt="" coords="591,34,714,77,739,90,765,102,838,120,899,131,1007,139,1116,140,1254,150,1266,152,1265,157,1254,155,1115,145,1007,144,899,136,836,125,764,107,737,95,711,81,589,39"/>
+<area shape="rect" id="Node000014" href="$d9/de8/style_8c.html" title="Implements predefined styles for terminal output." alt="" coords="891,79,1024,105"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="616,31,891,77,890,82,616,36"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="505,104,325,126,113,155,101,157,100,152,112,150,324,120,504,99"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="505,106,361,126,197,155,185,158,183,153,196,150,360,121,504,100"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="518,111,325,155,324,149,517,106"/>
+<area shape="poly" id="edge13_Node000008_Node000006" title=" " alt="" coords="546,114,455,154,453,150,544,109"/>
+<area shape="poly" id="edge14_Node000008_Node000007" title=" " alt="" coords="588,120,588,152,583,152,583,120"/>
+<area shape="rect" id="Node000009" href="$dd/dfa/cursor_8c.html" title="Implements cursor movement functionality for the presentation layer." alt="" coords="676,153,818,178"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="628,109,721,150,719,155,626,114"/>
+<area shape="rect" id="Node000010" href="$dd/da6/field_8c.html" title="Implements the rendering of the TikTakToe field." alt="" coords="842,153,972,178"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="656,106,853,149,852,155,655,111"/>
+<area shape="poly" id="edge15_Node000008_Node000011" title=" " alt="" coords="667,102,670,102,892,125,1114,150,1125,152,1124,157,1113,155,892,130,670,107,666,107"/>
+<area shape="poly" id="edge16_Node000008_Node000012" title=" " alt="" coords="667,97,1254,150,1266,151,1265,157,1254,155,666,103"/>
+<area shape="rect" id="Node000013" href="$d7/dec/input__buf_8c.html" title="Implementation of the input buffer functions." alt="" coords="996,153,1101,178"/>
+<area shape="poly" id="edge17_Node000008_Node000013" title=" " alt="" coords="667,102,985,150,996,152,995,157,984,155,666,107"/>
 </map>

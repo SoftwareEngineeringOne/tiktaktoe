@@ -1,5 +1,5 @@
 <map id="hal/random.h" name="hal/random.h">
-<area shape="rect" id="Node000001" title="Header file for the RNG HAL." alt="" coords="5,5,113,33"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="24,81,94,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,34,62,65,56,65,56,34"/>
+<area shape="rect" id="Node000001" title="Header file for the RNG HAL." alt="" coords="5,5,101,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="21,79,85,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,31,56,63,50,63,50,31"/>
 </map>

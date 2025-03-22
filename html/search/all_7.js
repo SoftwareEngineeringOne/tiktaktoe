@@ -12,5 +12,5 @@ var searchData=
   ['game_5fstate_9',['game_state',['../d1/dcb/game_8c.html#ab8c8a2816ae974e5a2df22ec1e87fa51',1,'game.c']]],
   ['gamestate_10',['GameState',['../d2/d3d/structGameState.html',1,'']]],
   ['gametimer_11',['GameTimer',['../d7/d8b/structGameTimer.html',1,'']]],
-  ['global_20variables_12',['Global Variables',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md49',1,'']]]
+  ['global_20variables_12',['Global Variables',['../d8/d50/md__2github_2workspace_2Conventions.html#autotoc_md24',1,'']]]
 ];

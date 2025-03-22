@@ -1,10 +1,10 @@
 <map id="println" name="println">
-<area shape="rect" id="Node000001" title="Prints the given string with a new line character." alt="" coords="5,31,69,58"/>
-<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="117,5,168,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,34,101,26,102,32,70,39"/>
-<area shape="rect" id="Node000003" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="216,31,333,58"/>
-<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="69,42,200,42,200,47,69,47"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,21,201,28,200,33,168,27"/>
-<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="381,31,493,58"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="334,42,365,42,365,47,334,47"/>
+<area shape="rect" id="Node000001" title="Prints the given string with a new line character." alt="" coords="5,31,62,56"/>
+<area shape="rect" id="Node000002" href="$d6/db1/print_8c.html#ae2dd7886efd463e815dadf10eb54777e" title="Prints the given string." alt="" coords="110,5,156,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,34,94,25,96,30,63,39"/>
+<area shape="rect" id="Node000003" href="$d1/d87/uart_8c.html#ac0cdef9b393ad8c650295aba6aa5a7ea" title="Writes/Sends a byte over the serial port." alt="" coords="204,31,308,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="62,41,188,41,188,46,62,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,20,189,27,188,32,156,25"/>
+<area shape="rect" id="Node000004" href="$d2/d9f/register__access_8c.html#a53fb0d9bb1b0c3e72ab6760c69cad891" title="Write a value to a hardware register." alt="" coords="356,31,456,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="309,41,341,41,341,46,309,46"/>
 </map>

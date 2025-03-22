@@ -1,9 +1,9 @@
 <map id="CellState" name="CellState">
-<area shape="rect" id="Node000001" title="The current state of the cells." alt="" coords="48,259,128,286"/>
-<area shape="rect" id="Node000002" href="$df/df1/structCell.html" title="One cell on the field." alt="" coords="65,115,111,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,158,90,258,85,258,85,158"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,80,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,47,85,114,80,116,52,49"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="103,5,166,33"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="125,48,96,116,91,114,120,46"/>
+<area shape="rect" id="Node000001" title="The current state of the cells." alt="" coords="44,243,119,268"/>
+<area shape="rect" id="Node000002" href="$df/df1/structCell.html" title="One cell on the field." alt="" coords="60,109,103,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,150,84,242,79,242,79,150"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,73,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,44,79,107,74,110,47,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,5,154,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,46,89,110,84,107,112,44"/>
 </map>
